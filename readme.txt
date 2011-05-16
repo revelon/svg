@@ -1,0 +1,1 @@
+svg.kvalitne.cz description
