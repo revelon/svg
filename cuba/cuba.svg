@@ -1,0 +1,1037 @@
+<!DOCTYPE svg [
+ <!ENTITY tileDur "1.02s">
+ <!ENTITY offsetDur "0.5s">
+ <!ENTITY cameraDur "46.5s">
+ <!ENTITY iniState "none">
+ <!ENTITY strw "4">
+ <!ENTITY clickFill "none">
+ <!ENTITY strCol "url(#tileGrad)">
+ <!ENTITY strShad "#000">
+ <!ENTITY shadOff "2">
+ <!ENTITY tileZoom "2.3; 1">
+ <!ENTITY presDur "2000">
+ <!ENTITY preload "3000">
+ <!ENTITY tileRot "1 1; 0 1; 1 1">
+]>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="-450 -300 900 600" xmlns:html="http://www.w3.org/1999/xhtml">
+<title>Vacation on Cuba SVG Demo ver. 0.91</title>
+<desc>by Marek Raida, marek.raida@gmail.com</desc>
+<defs>
+<g id="glass" transform="translate(-440,50) scale(0.04)" stroke="none">
+  <path fill="#ec441e" transform="translate(-145,-42)" d="m343,526c4.63-17.1-17.9-25.5-24.8-39.1-15.3-17.5-30.8-35-46.2-52.4,11.6-13.4-36.2-23.9-11.6-28.7,40.5-3.67,80.4,17.4,121,5.94,27.8-7.27,57.1-8.88,85.4-4.26,8.98,12.3-14.6,20.2-25.2,17.1-9.79,11.9,20.5,10.7,4.41,21.3-16.3,24.2-32,48.8-49.3,72.2-15.4-0.29-42.2-4.26-50.2,8.2,1.93,1.48,4.92,2.55-3.21-0.313z"/>
+  <path fill="#000" d="m201,835c-35.4-6.49-88.7,5.45-111-24.9,20.5-20.4,55.8-13.7,82.7-18.9,23.9-3.2,60.7,6.63,48.5-30.3,0.121-63.8,1.17-128-0.632-191-57-78-124-146-184-219,21,17.9,38,41,58.9,59.6,49.5,52.7,95.1,109,140,166,47.9-70.8,94.8-143,151-208,22.1-31.3-8.91,19.4-18.3,29.3-40.1,55.2-80.2,110-117,168-5.21,66.8,0.725,134-2.46,201-1.42,35.3,41.3,18.7,63.4,24.3,24.5,3.03,54,1.75,73.9,16.6-2.03,28.6-49.5,19.6-71.6,25.1-37.5,2.45-75.1,2.45-113,2.19zm92-8.17c25.7-2.94,70.6-0.609,83.1-15.6-27.6-15.2-61.3-10.1-91.7-13.6-28.2,6.44-46.3-20.7-68.7-2.07-34.4,3.31-69.5,3-103,10.4-32.4,14.3,34.1,17.4,48.9,19.8,43.9,2.41,88,3.11,132,1.15zm-53-120c1.39-41.6,2.09-83.3,1.24-125-28.4,19.9-3.67,62.5-11.4,91.7-1.34,5.68-0.993,55,10.2,33.3zm-9.4-139c-12.2-14.5-17.6-27.9-3.78-4.86,17.3,18.3,29.2-29.3,35.4-36.6-18.3,3.79-25.8,31.3-41.7,14.8-17.7,5.83-3.92-15.8-20.8-21.6-24-27.5,22.7,36.4-1.9,4.87-49-58-99.1-117-153-171,32.9,29,60.7,63.5,90.2,96,17,19.6,33.7,39.5,51.1,58.7,0.93-29.7-33.6-46.8-48.2-70.5-22-26.1-46.5-50.3-69.2-75.6,12.1-13.7,46.8,2.28,67.2-5.57,26.5,1.09,48.6,13.8,78.8,12.7,35-3.56,69.8-16.9,105-11.2,19.6,11.7-27.1,1.14-37.2,3.82-36.1,2.72-71.6,17.9-108,6.93-15.1-1.7-63.9-18.8-60.7,4.47,23.7,20.4,36.2,50.2,61.5,71.6,13.5,16.7,37.3,31.2,15.7,50.1,14.2-22.3,39.7-15.8,63.1-22.6,27.3-23.7,40.5-61.9,64.1-90.2,6.84-14.4,36.8-47.7,1.54-37.1-95.8,2.16-192,2.98-288-5.64-22.6-2.68-18.8-23.6,4.19-19.4,35.3-0.447-28.2,9.61,5.49,13,101,8.29,203,8.61,305,3.71,46.9-68.7,92.2-139,140-207,27.2-17.8-7.15,28.8-12.9,36.9-37.7,56.4-76.1,112-113,169,12.8-1.99,56.2-0.921,47.2-10.3-12.2-1.22-37.3-9.22-9.05-6.47,19.5-6.76,45.6,18.8,11.3,18.6-22.2,7.76-54.2-5.43-65.4,20.3,15.7-17.3-6.1-19.1-10-0.202,8.15-11.1,18.4-17,7.81,1.04,0.649,14.3,41.5-10.2,24.8,14.5-34.5,33.1-59.6,74.3-87.9,112,7.53,29.3-18.6,42.7-29.2,67.8-5.74,3.16-12.2,31.5-18.8,15zm-14.2-27.8c9.43-9.76,0.624-1.64,16.4-6.93,17.7-2.21-34.8-5.26-16.4,6.93zm35.9-14.2c48.2-12.2-0.563-67.7-33.2-47.2-31.5,6.75,15.2,22.6-5.69,39.9-3.86,17.4,29.6,8.36,38.9,7.25zm-27.4,1.44c-4.18-14.6,10.5-37.6-9.33-46.2,29.8-20,86.9,26.3,37,43.6-8.81,3.21-18.4,3.99-27.7,2.62zm-9.45-16.8zm58.8-19.2c-23.9-20.4,13.5-41.6,21.1-61.7,15.5-22.3,31.3-44.5,44.9-68-27.2,38-53.3,76.8-78.4,116,20-37.3,46.5-70.8,69.5-106,8.9-27.3-22.2,23.9-29.1,34.3-12.4,25.7-37.4,45.1-46.3,71.6,5.51,3.52,12.7,11,18.3,13.7zm-2.43-3c-10.5-7.48-5.71-7.09,0.826-0.008l-0.826,0.008zm84-153c46.3-69.9,94.6-139,140-209-30.2,12.9-37.4,51.3-59.1,74.1-30.4,45.4-61.8,90.3-91.1,136,3.2,2.2,7.51,0.363,10.4-1.34zm-3.23-6.88c16.5-19.6-2.15,16.3-1.63,2.56l0.925-1.45,0.704-1.1zm10.4-15c41.5-60.9,80.9-123,124-183-1.5,15.2-31.6,48.2-43.5,69.9-25.4,37.9-50.6,76-76.9,113-0.661,0.292-4.33,1.9-4-0.485zm-84.6,191c33.3-50.6,70.3-98.6,108-146-10.4-6.89,12.7,7.71-5.24,9.43-37,43.4-68.6,91-103,137zm-91-11.6c2.73-5.49,15-13.2,4.62-3.72l-4.62,3.72zm110-98.9zm-96.9-26.8c5.22-0.857,17.2,0.516,4.98,0.266l-4.98-0.266zm145-5.83zm-55.2-7.17z"/>
+</g>
+</defs>
+<rect x="-900" y="-600" width="1800" height="1200" fill="url(#bcg)"/>
+
+<!--text x="-200" y="-150" id="debug">dbg</text-->
+
+
+<g>
+  <text x="0" y="0" fill="none" stroke="white" stroke-width="1" font-family="sans-serif" font-weigh="bold" font-size="166px" id="progress" text-anchor="middle">...loading...</text>
+  <use id="gl1" xlink:href="#glass" transform="translate(0,0)" fill-opacity="0.25"/>
+  <use id="gl2" xlink:href="#glass" transform="translate(25,0)" fill-opacity="0.25"/>
+  <use id="gl3" xlink:href="#glass" transform="translate(50,0)" fill-opacity="0.25"/>
+  <use id="gl4" xlink:href="#glass" transform="translate(75,0)" fill-opacity="0.25"/>
+  <use id="gl5" xlink:href="#glass" transform="translate(100,0)" fill-opacity="0.25"/>
+  <use id="gl6" xlink:href="#glass" transform="translate(125,0)" fill-opacity="0.25"/>
+  <use id="gl7" xlink:href="#glass" transform="translate(150,0)" fill-opacity="0.25"/>
+  <use id="gl8" xlink:href="#glass" transform="translate(175,0)" fill-opacity="0.25"/>
+  <use id="gl9" xlink:href="#glass" transform="translate(200,0)" fill-opacity="0.25"/>
+  <use id="gl10" xlink:href="#glass" transform="translate(225,0)" fill-opacity="0.25"/>
+  <use id="gl11" xlink:href="#glass" transform="translate(250,0)" fill-opacity="0.25"/>
+  <use id="gl12" xlink:href="#glass" transform="translate(275,0)" fill-opacity="0.25"/>
+  <use id="gl13" xlink:href="#glass" transform="translate(300,0)" fill-opacity="0.25"/>
+  <use id="gl14" xlink:href="#glass" transform="translate(325,0)" fill-opacity="0.25"/>
+  <use id="gl15" xlink:href="#glass" transform="translate(350,0)" fill-opacity="0.25"/>
+  <use id="gl16" xlink:href="#glass" transform="translate(375,0)" fill-opacity="0.25"/>
+  <use id="gl17" xlink:href="#glass" transform="translate(400,0)" fill-opacity="0.25"/>
+  <use id="gl18" xlink:href="#glass" transform="translate(425,0)" fill-opacity="0.25"/>
+  <use id="gl19" xlink:href="#glass" transform="translate(450,0)" fill-opacity="0.25"/>
+  <use id="gl20" xlink:href="#glass" transform="translate(475,0)" fill-opacity="0.25"/>
+  <use id="gl21" xlink:href="#glass" transform="translate(500,0)" fill-opacity="0.25"/>
+  <use id="gl22" xlink:href="#glass" transform="translate(525,0)" fill-opacity="0.25"/>
+  <use id="gl23" xlink:href="#glass" transform="translate(550,0)" fill-opacity="0.25"/>
+  <use id="gl24" xlink:href="#glass" transform="translate(575,0)" fill-opacity="0.25"/>
+  <use id="gl25" xlink:href="#glass" transform="translate(600,0)" fill-opacity="0.25"/>
+  <use id="gl26" xlink:href="#glass" transform="translate(625,0)" fill-opacity="0.25"/>
+  <use id="gl27" xlink:href="#glass" transform="translate(650,0)" fill-opacity="0.25"/>
+  <use id="gl28" xlink:href="#glass" transform="translate(675,0)" fill-opacity="0.25"/>
+  <use id="gl29" xlink:href="#glass" transform="translate(700,0)" fill-opacity="0.25"/>
+  <use id="gl30" xlink:href="#glass" transform="translate(725,0)" fill-opacity="0.25"/>
+  <use id="gl31" xlink:href="#glass" transform="translate(750,0)" fill-opacity="0.25"/>
+  <use id="gl32" xlink:href="#glass" transform="translate(775,0)" fill-opacity="0.25"/>
+  <use id="gl33" xlink:href="#glass" transform="translate(800,0)" fill-opacity="0.25"/>
+  <use id="gl34" xlink:href="#glass" transform="translate(825,0)" fill-opacity="0.25"/>
+  <use id="gl35" xlink:href="#glass" transform="translate(850,0)" fill-opacity="0.25"/>
+  <animate id="loading" attributeName="opacity" begin="indefinite" dur="&preload;ms" from="1" to="0" repeatCount="1" fill="freeze"/>
+  <set attributeName="display" to="none" begin="movingCamera.begin"/>
+</g>
+
+<script type="text/javascript">
+  var xlinkns = "http://www.w3.org/1999/xlink";
+  var current = null;
+  var image = "";
+  var lock = false;
+  var objectCounter = 0;
+  var imageCounter = 0;
+  var imagesTotal = 31;
+  var sounds = new Array();
+  var desc = new Array();
+  desc["cubav1.jpg"] = "Exit from subterranean Indiana caves near Vinales";
+  desc["cubav2.jpg"] = "Guide on tobacco plantation, close to San Juan y Martinez";
+  desc["cubav3.jpg"] = "Beaches of Varadero are indeed very photogenic...";
+  desc["cubav4.jpg"] = "Hundreds of funny small lizards are everywhere...";
+  desc["cubav5.jpg"] = "Grand theatre and coco-taxi parking, Havana";
+  desc["cubav6.jpg"] = "Ernest Hemingway in his favorite Floridita bar, Havana";
+  desc["cubav7.jpg"] = "Lovely Cuban little girl in front of pharmacy, Cienfuegos";
+  desc["cubav8.jpg"] = "Beautiful view from our accommodation on La Gorda, Cienfuegos";
+  desc["cubav9.jpg"] = "Cock fighting is quite popular sport, El Nicho";
+  desc["cubav10.jpg"] = "Cigars, bulls, old peasants and very hot sun, Quantanamo";
+  desc["cubav11.jpg"] = "Watchtower for slaveholders over sugar cane fields, Trinidad";
+  desc["cubav12.jpg"] = "Cuba's national bird, Tocorroro, El Ranchon Cubano";
+  desc["cubav13.jpg"] = "Very interesting fish sculpture, Gibara";
+  desc["cubav14.jpg"] = "Meat reselling places are just like this..., Holguin";
+  desc["cubav15.jpg"] = "Day is beginning slowly in the streets of Trinidad...";
+  desc["cubav16.jpg"] = "Cacao fruit in national park, Barracoa";
+  desc["cubav17.jpg"] = "Heavily fortified citadel El Morro, Santiago de Cuba";
+  desc["cubav18.jpg"] = "Capitol and its lively surroundings, Havana";
+  desc["cubav19.jpg"] = "Santeria church and its bright wall painting, Havana";
+  desc["cubah1.jpg"] = "Countryside road near picturesque Vinales";
+  desc["cubah2.jpg"] = "Common way of public transport, Vinales";
+  desc["cubah3.jpg"] = "World-famous and really beautiful Caribbean seashore, Varadero";
+  desc["cubah4.jpg"] = "Rapidly growing mangrove trees, Cayo Las Brujas";
+  desc["cubah5.jpg"] = "One of many gorgeous Cuban cars, Holguin";
+  desc["cubah6.jpg"] = "Waiting for public bus is finally over, Playa La Herradura";
+  desc["cubah7.jpg"] = "Beach is for everyone, including horses, pigs..., Playa La Herradura";
+  desc["cubah8.jpg"] = "On the top of mysterious table mountain El Yunque, Barracoa";
+  desc["cubah9.jpg"] = "Flourishing crocodile farm near Playa Larga";
+  desc["cubah10.jpg"] = "Ancient but fully working train near Remedios";  
+  desc["cubah11.jpg"] = "Xanadu manor golf course park, Varadero";
+  desc["cubah12.jpg"] = "Grown-up iguana in fort El Morro, Santiago de Cuba";
+  
+  // sound manipulation method
+  function sound(what) {
+    var s = document.getElementById(what).cloneNode(true);
+    if (s.play) {
+      s.play();
+      sounds.push(s);
+    }
+  }
+
+  // resource preloading and demo starting method
+  function checkme() {
+    objectCounter++;
+    if (objectCounter &lt;= 35) document.getElementById("gl"+objectCounter).setAttribute("fill-opacity", 1);
+    if (objectCounter == 35) {
+      //window.setTimeout(imageShow, &preload;);
+      document.getElementById("loading").beginElement();
+      document.getElementById("progress").firstChild.data = "...starting...";
+      window.setTimeout(function() {
+                          document.getElementById("musicSound").play();
+                          document.getElementById("movingCamera").beginElement();
+                          } , &preload;);
+    }
+  }
+
+  // method playing initial domino tiles sounds; not using genuine SMIL events because of Webkit does not supports them yet
+  function imageShow() {
+    imageCounter++;
+    //document.getElementById("debug").firstChild.data = imageCounter;
+    sound("tileSound");
+    //if (imageCounter &lt; imagesTotal) window.setTimeout(imageShow, 1490); // we expect some script slowdown
+  }
+
+  // method for showing / changing image details and descriptions
+  function zoom(img, type, over) {
+    if (imagesTotal != imageCounter || lock || (img == image)) return;
+    if (current) {
+      if (current == 1) {
+        document.getElementById("carOut").beginElement();
+        sound("carSound");
+      } else if (current == 2){
+        document.getElementById("colibriOut").beginElement();
+        sound("colibriSound");
+      }
+      lock = true;
+      window.setTimeout(function(){lock = false; zoom(img, type);}, &presDur;);
+      current = null;
+      return;
+    }
+    
+    if (type == 1) {
+      document.getElementById("carPresenter").setAttributeNS(xlinkns, 'href', img);
+      document.getElementById("carIn").beginElement();
+      document.getElementById("description").firstChild.data = desc[img];
+      sound("carSound");
+    } else if (type == 2) {
+      document.getElementById("colibriPresenter").setAttributeNS(xlinkns, 'href', img);
+      document.getElementById("colibriIn").beginElement();
+      document.getElementById("description").firstChild.data = desc[img];
+      sound("colibriSound");
+    }
+    image = img;
+    current = type;
+    lock = true;
+    window.setTimeout(function(){lock = false;}, &presDur;);
+  }
+  
+</script>
+
+<defs>
+  <radialGradient id="bcg" gradientUnits="objectBoundingBox" cx="0.4" cy="0.4">
+    <stop offset="0" stop-color="#5a7"/>
+    <stop offset="1" stop-color="#dff"/>
+  </radialGradient>
+
+  <linearGradient id="gr1" gradientUnits="objectBoundingBox" x1="0" y1="0.4" x2="1" y2="0.3">
+    <stop offset="0" stop-color="#f00"/>
+    <stop offset="0.5" stop-color="#ffca00"/>
+    <stop offset="1" stop-color="#f00"/>
+  </linearGradient>
+  
+  <linearGradient id="gr2" gradientUnits="objectBoundingBox" x1="0" y1="0.4" x2="1" y2="0.3">
+    <stop offset="0.2" stop-color="#84fc00"/>
+    <stop offset="1" stop-color="#0a8800"/>
+  </linearGradient>
+  
+  <linearGradient id="gr3" gradientUnits="objectBoundingBox" x1="0" y1="0.4" x2="1" y2="0.3">
+    <stop offset="0" stop-color="#31cbd7"/>
+    <stop offset="1" stop-color="#0aaa00"/>
+  </linearGradient>
+
+  <linearGradient id="tileGrad" gradientUnits="objectBoundingBox" x1="0" y1="0.4" x2="1" y2="0.3">
+    <stop offset="0" stop-color="#fff"/>
+    <stop offset="0.6" stop-color="brown"/>
+    <stop offset="1" stop-color="#fff"/>
+  </linearGradient>
+
+  <g id="dot6">
+    <circle cx="75" cy="-25" r="8"/>
+    <circle cx="75" cy="25" r="8"/>
+    <circle cx="50" cy="-25" r="8"/>
+    <circle cx="50" cy="25" r="8"/>
+    <circle cx="25" cy="-25" r="8"/>
+    <circle cx="25" cy="25" r="8"/>
+  </g>
+
+  <g id="dot5">
+    <circle cx="75" cy="-25" r="8"/>
+    <circle cx="75" cy="25" r="8"/>
+    <circle cx="50" cy="0" r="8"/>
+    <circle cx="25" cy="-25" r="8"/>
+    <circle cx="25" cy="25" r="8"/>
+  </g>
+
+  <g id="dot4">
+    <circle cx="75" cy="-25" r="8"/>
+    <circle cx="75" cy="25" r="8"/>
+    <circle cx="25" cy="-25" r="8"/>
+    <circle cx="25" cy="25" r="8"/>
+  </g>
+
+  <g id="dot3">
+    <circle cx="75" cy="-25" r="8"/>
+    <circle cx="50" cy="0" r="8"/>
+    <circle cx="25" cy="25" r="8"/>
+  </g>
+
+  <g id="dot2">
+    <circle cx="75" cy="-25" r="8"/>
+    <circle cx="25" cy="25" r="8"/>
+  </g>
+
+  <g id="dot1">
+    <circle cx="50" cy="0" r="8"/>
+  </g>
+
+  <g id="outline">
+    <rect x="-97" y="-47" width="194" height="94" rx="4"/>
+    <rect x="-0.5" y="-40" width="1" height="80"/>
+  </g>
+
+  <g id="tile10" fill="none" stroke-width="&strw;">
+    <use xlink:href="#outline"/>
+    <use xlink:href="#dot1"/>
+  </g>
+
+  <g id="tile11" fill="none" stroke-width="&strw;">
+    <use xlink:href="#outline"/>
+    <use xlink:href="#dot1" transform="translate(-100)"/>
+    <use xlink:href="#dot1"/>
+  </g>
+
+  <g id="tile12" fill="none" stroke-width="&strw;">
+    <use xlink:href="#outline"/>
+    <use xlink:href="#dot1" transform="translate(-100)"/>
+    <use xlink:href="#dot2"/>
+  </g>
+
+  <g id="tile13" fill="none" stroke-width="&strw;">
+    <use xlink:href="#outline"/>
+    <use xlink:href="#dot1" transform="translate(-100)"/>
+    <use xlink:href="#dot3"/>
+  </g>
+
+  <g id="tile14" fill="none" stroke-width="&strw;">
+    <use xlink:href="#outline"/>
+    <use xlink:href="#dot1" transform="translate(-100)"/>
+    <use xlink:href="#dot4"/>
+  </g>
+
+  <g id="tile15" fill="none" stroke-width="&strw;">
+    <use xlink:href="#outline"/>
+    <use xlink:href="#dot1" transform="translate(-100)"/>
+    <use xlink:href="#dot5"/>
+  </g>
+
+  <g id="tile16" fill="none" stroke-width="&strw;">
+    <use xlink:href="#outline"/>
+    <use xlink:href="#dot1" transform="translate(-100)"/>
+    <use xlink:href="#dot6"/>
+  </g>
+
+  <g id="tile22" fill="none" stroke-width="&strw;">
+    <use xlink:href="#outline"/>
+    <use xlink:href="#dot2" transform="translate(-100)"/>
+    <use xlink:href="#dot2"/>
+  </g>
+
+  <g id="tile23" fill="none" stroke-width="&strw;">
+    <use xlink:href="#outline"/>
+    <use xlink:href="#dot2" transform="translate(-100)"/>
+    <use xlink:href="#dot3"/>
+  </g>
+
+  <g id="tile24" fill="none" stroke-width="&strw;">
+    <use xlink:href="#outline"/>
+    <use xlink:href="#dot2" transform="translate(-100)"/>
+    <use xlink:href="#dot4"/>
+  </g>
+
+  <g id="tile25" fill="none" stroke-width="&strw;">
+    <use xlink:href="#outline"/>
+    <use xlink:href="#dot2" transform="translate(-100)"/>
+    <use xlink:href="#dot5"/>
+  </g>
+
+  <g id="tile26" fill="none" stroke-width="&strw;">
+    <use xlink:href="#outline"/>
+    <use xlink:href="#dot2" transform="translate(-100)"/>
+    <use xlink:href="#dot6"/>
+  </g>
+
+  <g id="tile33" fill="none" stroke-width="&strw;">
+    <use xlink:href="#outline"/>
+    <use xlink:href="#dot3" transform="translate(-100)"/>
+    <use xlink:href="#dot3"/>
+  </g>
+
+  <g id="tile34" fill="none" stroke-width="&strw;">
+    <use xlink:href="#outline"/>
+    <use xlink:href="#dot3" transform="translate(-100)"/>
+    <use xlink:href="#dot4"/>
+  </g>
+
+  <g id="tile35" fill="none" stroke-width="&strw;">
+    <use xlink:href="#outline"/>
+    <use xlink:href="#dot3" transform="translate(-100)"/>
+    <use xlink:href="#dot5"/>
+  </g>
+
+  <g id="tile36" fill="none" stroke-width="&strw;">
+    <use xlink:href="#outline"/>
+    <use xlink:href="#dot3" transform="translate(-100)"/>
+    <use xlink:href="#dot6"/>
+  </g>
+
+  <g id="tile44" fill="none" stroke-width="&strw;">
+    <use xlink:href="#outline"/>
+    <use xlink:href="#dot4" transform="translate(-100)"/>
+    <use xlink:href="#dot4"/>
+  </g>
+
+  <g id="tile45" fill="none" stroke-width="&strw;">
+    <use xlink:href="#outline"/>
+    <use xlink:href="#dot4" transform="translate(-100)"/>
+    <use xlink:href="#dot5"/>
+  </g>
+
+  <g id="tile46" fill="none" stroke-width="&strw;">
+    <use xlink:href="#outline"/>
+    <use xlink:href="#dot4" transform="translate(-100)"/>
+    <use xlink:href="#dot6"/>
+  </g>
+
+  <g id="tile55" fill="none" stroke-width="&strw;">
+    <use xlink:href="#outline"/>
+    <use xlink:href="#dot5" transform="translate(-100)"/>
+    <use xlink:href="#dot5"/>
+  </g>
+
+  <g id="tile56" fill="none" stroke-width="&strw;">
+    <use xlink:href="#outline"/>
+    <use xlink:href="#dot5" transform="translate(-100)"/>
+    <use xlink:href="#dot6"/>
+  </g>
+
+  <g id="tile66" fill="none" stroke-width="&strw;">
+    <use xlink:href="#outline"/>
+    <use xlink:href="#dot6" transform="translate(-100)"/>
+    <use xlink:href="#dot6"/>
+  </g>
+
+  <g id="tile60" fill="none" stroke-width="&strw;">
+    <use xlink:href="#outline"/>
+    <use xlink:href="#dot6"/>
+  </g>
+</defs>
+
+<g transform="scale(1.4)">
+  <animateTransform id="iniZoomer" attributeName="transform" type="scale" begin="movingCamera.end+0.5s" dur="2s" repeatCount="1" from="1" to="0.23" additive="sum" fill="freeze"/>
+  <animateTransform attributeName="transform" type="translate" begin="iniZoomer.begin" dur="2s" repeatCount="1" by="800 0" additive="sum" fill="freeze"/>
+  <animateTransform id="iniPosition" attributeName="transform" type="translate" begin="iniZoomer.end+2s" dur="1s" repeatCount="1" by="-420 -410" additive="sum" fill="freeze"/>
+
+  <g font-size="29px" font-weight="bolder" font-family="sans-serif">
+    <text x="-494" y="140" display="&iniState;">&#169; 2011 Marek Raida &amp; Jana Hubackova
+      <set attributeName="display" to="block" begin="iniZoomer.end+1s"/>
+    </text>
+  
+    <text x="-1450" y="140" display="&iniState;">...click on some domino tile to show picture detail...
+      <set attributeName="display" to="block" begin="iniPosition.end+0.5s"/>
+      <animate attributeName="fill" begin="0s" dur="3s" values="white; black; red; black; white" repeatCount="indefinite"/>
+    </text>
+
+    <text x="-1555" y="244" font-size="40px" id="description" font-style="italic" opacity="0">
+      <animate attributeName="opacity" begin="colibriIn.begin;carIn.begin" dur="&presDur;ms" from="0" to="1" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" begin="colibriOut.begin;carOut.begin" dur="&presDur;ms" from="1" to="0" repeatCount="1" fill="freeze"/>
+    </text>
+
+  </g>
+
+<!--g transform="scale(0.5) translate(-880 -300)" id="dominos" cursor="pointer"-->
+<!--g transform="scale(0.23) translate(-1280 -850)" id="dominos" cursor="pointer"-->
+<g cursor="pointer" id="dominos">
+
+  <animateTransform attributeName="transform" type="translate" begin="indefinite" dur="&cameraDur;" repeatCount="1" fill="freeze" id="movingCamera" values="
+    -150 -50; 0 0 ; 50 -150; 50 -350; 0 -500; -200 -500; 
+    -350 -450; -350 -250; -350 -50; -500 -500; -650 -450; -650 -250; -650 -50; -800 -500;
+    -850 -350; -900 -200; -850 -50; -1000 0; -1150 -50; -1100 -200; -1150 -350; -1000 -500; -1200 -500;
+    -1350 -450; -1350 -250; -1500 -200; -1350 -50; -1500 0; -1650 -50; -1650 -250; -1650 -450"/>
+
+  <g id="cc1" transform="translate(150 50)" onclick="zoom('cubav1.jpg', 1)">
+    <g id="c1" display="&iniState;">
+      <image xlink:href="cubav1.jpg" x="-48" y="-98" width="96" height="196" onload="checkme()"/>
+      <use xlink:href="#tile13" transform="rotate(90) translate(&shadOff;,&shadOff;)" stroke="&strShad;"/>
+      <use xlink:href="#tile13" transform="rotate(90)" stroke="&strCol;"/>
+    </g>
+    <rect x="-45" y="-95" width="90" height="190" fill="&clickFill;" pointer-events="all"/>
+  </g>
+  
+  <g id="cc2" transform="translate(0 0)" onclick="zoom('cubah1.jpg', 2)">
+    <g id="c2" display="&iniState;">
+      <image xlink:href="cubah1.jpg" x="-98" y="-48" width="196" height="96" onload="checkme()"/>
+      <use xlink:href="#tile14" transform="rotate(180) translate(&shadOff;,-&shadOff;)" stroke="&strShad;"/>
+      <use xlink:href="#tile14" transform="rotate(180)" stroke="&strCol;"/>
+    </g>
+    <rect y="-45" x="-95" height="90" width="190" fill="&clickFill;" pointer-events="all"/>
+  </g>
+
+  <g id="cc3" transform="translate(-50 150)" onclick="zoom('cubav2.jpg', 1)">
+    <g id="c3" display="&iniState;">
+      <image xlink:href="cubav2.jpg" x="-48" y="-98" width="96" height="196" onload="checkme()"/>
+      <use xlink:href="#tile24" transform="rotate(270) translate(-&shadOff;,-&shadOff;)" stroke="&strShad;"/>
+      <use xlink:href="#tile24" transform="rotate(270)" stroke="&strCol;"/>
+    </g>
+    <rect x="-45" y="-95" width="90" height="190" fill="&clickFill;" pointer-events="all"/>
+  </g>
+  
+  <g id="cc4" transform="translate(-50 350)" onclick="zoom('cubav3.jpg', 1)">
+    <g id="c4" display="&iniState;">
+      <image xlink:href="cubav3.jpg" x="-48" y="-98" width="96" height="196" onload="checkme()"/>
+      <use xlink:href="#tile25" transform="rotate(90) translate(&shadOff;,&shadOff;)" stroke="&strShad;"/>
+      <use xlink:href="#tile25" transform="rotate(90)" stroke="&strCol;"/>
+    </g>
+    <rect x="-45" y="-95" width="90" height="190" fill="&clickFill;" pointer-events="all"/>
+  </g>
+  
+  <g id="cc5" transform="translate(0 500)" onclick="zoom('cubah2.jpg', 2)">
+  <g id="c5" display="&iniState;">
+      <image xlink:href="cubah2.jpg" x="-98" y="-48" width="196" height="96" onload="checkme()"/>
+      <use xlink:href="#tile35" transform="rotate(180) translate(&shadOff;,-&shadOff;)" stroke="&strShad;"/>
+      <use xlink:href="#tile35" transform="rotate(180)" stroke="&strCol;"/>
+    </g>
+    <rect y="-45" x="-95" height="90" width="190" fill="&clickFill;" pointer-events="all"/>
+  </g>
+
+  <g id="cc6" transform="translate(200 500)" onclick="zoom('cubah3.jpg', 2)">
+    <g id="c6" display="&iniState;">
+      <image xlink:href="cubah3.jpg" x="-98" y="-48" width="196" height="96" onload="checkme()"/>
+      <use xlink:href="#tile33" transform="translate(-&shadOff;,&shadOff;)" stroke="&strShad;"/>
+      <use xlink:href="#tile33" stroke="&strCol;"/>
+    </g>
+    <rect y="-45" x="-95" height="90" width="190" fill="&clickFill;" pointer-events="all"/>
+  </g>
+
+
+  <g id="uu1" transform="translate(350 450)" onclick="zoom('cubav4.jpg', 1)">
+    <g id="u1" display="&iniState;">
+      <image xlink:href="cubav4.jpg" x="-48" y="-98" width="96" height="196" onload="checkme()"/>
+      <use xlink:href="#tile13" transform="rotate(90) translate(&shadOff;,&shadOff;)" stroke="&strShad;"/>
+      <use xlink:href="#tile13" transform="rotate(90)" stroke="&strCol;"/>
+    </g>
+    <rect x="-45" y="-95" width="90" height="190" fill="&clickFill;" pointer-events="all"/>
+  </g>
+
+  <g id="uu2" transform="translate(350 250)" onclick="zoom('cubav5.jpg', 1)">
+    <g id="u2" display="&iniState;">
+      <image xlink:href="cubav5.jpg" x="-48" y="-98" width="96" height="196" onload="checkme()"/>
+      <use xlink:href="#tile16" transform="rotate(270) translate(-&shadOff;,-&shadOff;)" stroke="&strShad;"/>
+      <use xlink:href="#tile16" transform="rotate(270)" stroke="&strCol;"/>
+    </g>
+    <rect x="-45" y="-95" width="90" height="190" fill="&clickFill;" pointer-events="all"/>
+  </g>
+
+  <g id="uu3" transform="translate(350 50)" onclick="zoom('cubav6.jpg', 1)">
+    <g id="u3" display="&iniState;">
+      <image xlink:href="cubav6.jpg" x="-48" y="-98" width="96" height="196" onload="checkme()"/>
+      <use xlink:href="#tile60" transform="rotate(90) translate(&shadOff;,&shadOff;)" stroke="&strShad;"/>
+      <use xlink:href="#tile60" transform="rotate(90)" stroke="&strCol;"/>
+    </g>
+    <rect x="-45" y="-95" width="90" height="190" fill="&clickFill;" pointer-events="all"/>
+  </g>
+
+  <g id="uu4" transform="translate(500 500)" onclick="zoom('cubah4.jpg', 2)">
+    <g id="u4" display="&iniState;">
+      <image xlink:href="cubah4.jpg" x="-98" y="-48" width="196" height="96" onload="checkme()"/>
+      <use xlink:href="#tile23" transform="rotate(180) translate(&shadOff;,-&shadOff;)" stroke="&strShad;"/>
+      <use xlink:href="#tile23" transform="rotate(180)" stroke="&strCol;"/>
+    </g>
+    <rect y="-45" x="-95" height="90" width="190" fill="&clickFill;" pointer-events="all"/>
+  </g>
+
+  <g id="uu5" transform="translate(650 450)" onclick="zoom('cubav7.jpg', 1)">
+    <g id="u5" display="&iniState;">
+      <image xlink:href="cubav7.jpg" x="-48" y="-98" width="96" height="196" onload="checkme()"/>
+      <use xlink:href="#tile24" transform="rotate(270) translate(-&shadOff;,-&shadOff;)" stroke="&strShad;"/>
+      <use xlink:href="#tile24" transform="rotate(270)" stroke="&strCol;"/>
+    </g>
+    <rect x="-45" y="-95" width="90" height="190" fill="&clickFill;" pointer-events="all"/>
+  </g>
+  
+  <g id="uu6" transform="translate(650 250)" onclick="zoom('cubav8.jpg', 1)">
+    <g id="u6" display="&iniState;">
+      <image xlink:href="cubav8.jpg" x="-48" y="-98" width="96" height="196" onload="checkme()"/>
+      <use xlink:href="#tile14" transform="rotate(90) translate(&shadOff;,&shadOff;)" stroke="&strShad;"/>
+      <use xlink:href="#tile14" transform="rotate(90)" stroke="&strCol;"/>
+    </g>
+    <rect x="-45" y="-95" width="90" height="190" fill="&clickFill;" pointer-events="all"/>
+  </g>
+
+  <g id="uu7" transform="translate(650 50)" onclick="zoom('cubav9.jpg', 1)">
+    <g id="u7" display="&iniState;">
+      <image xlink:href="cubav9.jpg" x="-48" y="-98" width="96" height="196" onload="checkme()"/>
+      <use xlink:href="#tile10" transform="rotate(90) translate(&shadOff;,&shadOff;)" stroke="&strShad;"/>
+      <use xlink:href="#tile10" transform="rotate(90)" stroke="&strCol;"/>
+    </g>
+    <rect x="-45" y="-95" width="90" height="190" fill="&clickFill;" pointer-events="all"/>
+  </g>
+
+  <g id="uu8" transform="translate(800 500)" onclick="zoom('cubah5.jpg', 2)">
+    <g id="u8" display="&iniState;">
+      <image xlink:href="cubah5.jpg" x="-98" y="-48" width="196" height="96" onload="checkme()"/>
+      <use xlink:href="#tile25" transform="translate(-&shadOff;,&shadOff;)" stroke="&strShad;"/>
+      <use xlink:href="#tile25" stroke="&strCol;"/>
+    </g>
+    <rect y="-45" x="-95" height="90" width="190" fill="&clickFill;" pointer-events="all"/>
+  </g>
+
+  
+  <g id="bb1" transform="translate(850 350)" onclick="zoom('cubav10.jpg', 1)">
+    <g id="b1" display="&iniState;">
+      <image xlink:href="cubav10.jpg" x="-48" y="-98" width="96" height="196" onload="checkme()"/>
+      <use xlink:href="#tile15" transform="rotate(90) translate(&shadOff;,&shadOff;)" stroke="&strShad;"/>
+      <use xlink:href="#tile15" transform="rotate(90)" stroke="&strCol;"/>
+    </g>
+    <rect x="-45" y="-95" width="90" height="190" fill="&clickFill;" pointer-events="all"/>
+  </g>
+
+  <g id="bb2" transform="translate(900 200)" onclick="zoom('cubah6.jpg', 2)">
+    <g id="b2" display="&iniState;">
+      <image xlink:href="cubah6.jpg" x="-98" y="-48" width="196" height="96" onload="checkme()"/>
+      <use xlink:href="#tile13" transform="translate(-&shadOff;,&shadOff;)" stroke="&strShad;"/>
+      <use xlink:href="#tile13" stroke="&strCol;"/>
+    </g>
+    <rect y="-45" x="-95" height="90" width="190" fill="&clickFill;" pointer-events="all"/>
+  </g>
+
+  <g id="bb3" transform="translate(850 50)" onclick="zoom('cubav11.jpg', 1)">
+    <g id="b3" display="&iniState;">
+      <image xlink:href="cubav11.jpg" x="-48" y="-98" width="96" height="196" onload="checkme()"/>
+      <use xlink:href="#tile16" transform="rotate(270) translate(-&shadOff;,-&shadOff;)" stroke="&strShad;"/>
+      <use xlink:href="#tile16" transform="rotate(270)" stroke="&strCol;"/>
+    </g>
+    <rect x="-45" y="-95" width="90" height="190" fill="&clickFill;" pointer-events="all"/>
+  </g>
+
+  <g id="bb4" transform="translate(1000 0)" onclick="zoom('cubah7.jpg', 2)">
+    <g id="b4" display="&iniState;">
+      <image xlink:href="cubah7.jpg" x="-98" y="-48" width="196" height="96" onload="checkme()"/>
+      <use xlink:href="#tile66" transform="translate(-&shadOff;,&shadOff;)" stroke="&strShad;"/>
+      <use xlink:href="#tile66" stroke="&strCol;"/>
+    </g>
+    <rect y="-45" x="-95" height="90" width="190" fill="&clickFill;" pointer-events="all"/>
+  </g>
+
+  <g id="bb5" transform="translate(1150 50)" onclick="zoom('cubav12.jpg', 1)">
+    <g id="b5" display="&iniState;">
+      <image xlink:href="cubav12.jpg" x="-48" y="-98" width="96" height="196" onload="checkme()"/>
+      <use xlink:href="#tile46" transform="rotate(270) translate(-&shadOff;,-&shadOff;)" stroke="&strShad;"/>
+      <use xlink:href="#tile46" transform="rotate(270)" stroke="&strCol;"/>
+    </g>
+    <rect x="-45" y="-95" width="90" height="190" fill="&clickFill;" pointer-events="all"/>
+  </g>
+
+  <g id="bb6" transform="translate(1100 200)" onclick="zoom('cubah8.jpg', 2)">
+    <g id="b6" display="&iniState;">
+      <image xlink:href="cubah8.jpg" x="-98" y="-48" width="196" height="96" onload="checkme()"/>
+      <use xlink:href="#tile34" transform="translate(-&shadOff;,&shadOff;)" stroke="&strShad;"/>
+      <use xlink:href="#tile34" stroke="&strCol;"/>
+    </g>
+    <rect y="-45" x="-95" height="90" width="190" fill="&clickFill;" pointer-events="all"/>
+  </g>
+
+  <g id="bb7" transform="translate(1150 350)" onclick="zoom('cubav13.jpg', 1)">
+    <g id="b7" display="&iniState;">
+      <image xlink:href="cubav13.jpg" x="-48" y="-98" width="96" height="196" onload="checkme()"/>
+      <use xlink:href="#tile24" transform="rotate(270) translate(-&shadOff;,-&shadOff;)" stroke="&strShad;"/>
+      <use xlink:href="#tile24" transform="rotate(270)" stroke="&strCol;"/>
+    </g>
+    <rect x="-45" y="-95" width="90" height="190" fill="&clickFill;" pointer-events="all"/>
+  </g>
+
+  <g id="bb8" transform="translate(1000 500)" onclick="zoom('cubah9.jpg', 2)">
+    <g id="b8" display="&iniState;">
+      <image xlink:href="cubah9.jpg" x="-98" y="-48" width="196" height="96" onload="checkme()"/>
+      <use xlink:href="#tile25" transform="rotate(180) translate(&shadOff;,-&shadOff;)" stroke="&strShad;"/>
+      <use xlink:href="#tile25" transform="rotate(180)" stroke="&strCol;"/>
+    </g>
+    <rect y="-45" x="-95" height="90" width="190" fill="&clickFill;" pointer-events="all"/>
+  </g>
+
+  <g id="bb9" transform="translate(1200 500)" onclick="zoom('cubah10.jpg', 2)">
+    <g id="b9" display="&iniState;">
+      <image xlink:href="cubah10.jpg" x="-98" y="-48" width="196" height="96" onload="checkme()"/>
+      <use xlink:href="#tile12" transform="rotate(180) translate(&shadOff;,-&shadOff;)" stroke="&strShad;"/>
+      <use xlink:href="#tile12" transform="rotate(180)" stroke="&strCol;"/>
+    </g>
+    <rect y="-45" x="-95" height="90" width="190" fill="&clickFill;" pointer-events="all"/>
+  </g>
+
+
+  <g id="aaa1" transform="translate(1350 450)" onclick="zoom('cubav14.jpg', 1)">
+    <g id="a1" display="&iniState;">
+      <image xlink:href="cubav14.jpg" x="-48" y="-98" width="96" height="196" onload="checkme()"/>
+      <use xlink:href="#tile13" transform="rotate(270) translate(-&shadOff;,-&shadOff;)" stroke="&strShad;"/>
+      <use xlink:href="#tile13" transform="rotate(270)" stroke="&strCol;"/>
+    </g>
+    <rect x="-45" y="-95" width="90" height="190" fill="&clickFill;" pointer-events="all"/>
+  </g>
+
+  <g id="aaa2" transform="translate(1350 250)" onclick="zoom('cubav15.jpg', 1)">
+    <g id="a2" display="&iniState;">
+      <image xlink:href="cubav15.jpg" x="-48" y="-98" width="96" height="196" onload="checkme()"/>
+      <use xlink:href="#tile35" transform="rotate(270) translate(-&shadOff;,-&shadOff;)" stroke="&strShad;"/>
+      <use xlink:href="#tile35" transform="rotate(270)" stroke="&strCol;"/>
+    </g>
+    <rect x="-45" y="-95" width="90" height="190" fill="&clickFill;" pointer-events="all"/>
+  </g>
+
+  <g id="aaa3" transform="translate(1500 200)" onclick="zoom('cubah11.jpg', 2)">
+    <g id="a3" display="&iniState;">
+      <image xlink:href="cubah11.jpg" x="-98" y="-48" width="196" height="96" onload="checkme()"/>
+      <use xlink:href="#tile15" transform="rotate(180) translate(&shadOff;,-&shadOff;)" stroke="&strShad;"/>
+      <use xlink:href="#tile15" transform="rotate(180)" stroke="&strCol;"/>
+    </g>
+    <rect y="-45" x="-95" height="90" width="190" fill="&clickFill;" pointer-events="all"/>
+  </g>
+
+  <g id="aaa4" transform="translate(1350 50)" onclick="zoom('cubav16.jpg', 1)">
+    <g id="a4" display="&iniState;">
+      <image xlink:href="cubav16.jpg" x="-48" y="-98" width="96" height="196" onload="checkme()"/>
+      <use xlink:href="#tile25" transform="rotate(90) translate(&shadOff;,&shadOff;)" stroke="&strShad;"/>
+      <use xlink:href="#tile25" transform="rotate(90)" stroke="&strCol;"/>
+    </g>
+    <rect x="-45" y="-95" width="90" height="190" fill="&clickFill;" pointer-events="all"/>
+  </g>
+
+  <g id="aaa5" transform="translate(1500 0)" onclick="zoom('cubah12.jpg', 2)">
+  <g id="a5" display="&iniState;">
+      <image xlink:href="cubah12.jpg" x="-98" y="-48" width="196" height="96" onload="checkme()"/>
+      <use xlink:href="#tile24" transform="translate(-&shadOff;,&shadOff;)" stroke="&strShad;"/>
+      <use xlink:href="#tile24" stroke="&strCol;"/>
+    </g>
+    <rect y="-45" x="-95" height="90" width="190" fill="&clickFill;" pointer-events="all"/>
+  </g>
+
+  <g id="aaa6" transform="translate(1650 50)" onclick="zoom('cubav17.jpg', 1)">
+    <g id="a6" display="&iniState;">
+      <image xlink:href="cubav17.jpg" x="-48" y="-98" width="96" height="196" onload="checkme()"/>
+      <use xlink:href="#tile14" transform="rotate(270) translate(-&shadOff;,-&shadOff;)" stroke="&strShad;"/>
+      <use xlink:href="#tile14" transform="rotate(270)" stroke="&strCol;"/>
+    </g>
+    <rect x="-45" y="-95" width="90" height="190" fill="&clickFill;" pointer-events="all"/>
+  </g>
+
+  <g id="aaa7" transform="translate(1650 250)" onclick="zoom('cubav18.jpg', 1)">
+    <g id="a7" display="&iniState;">
+      <image xlink:href="cubav18.jpg" x="-48" y="-98" width="96" height="196" onload="checkme()"/>
+      <use xlink:href="#tile16" transform="rotate(90) translate(&shadOff;,&shadOff;)" stroke="&strShad;"/>
+      <use xlink:href="#tile16" transform="rotate(90)" stroke="&strCol;"/>
+    </g>
+    <rect x="-45" y="-95" width="90" height="190" fill="&clickFill;" pointer-events="all"/>
+  </g>
+
+  <g id="aaa8" transform="translate(1650 450)" onclick="zoom('cubav19.jpg', 1)">
+    <g id="a8" display="&iniState;">
+      <image xlink:href="cubav19.jpg" x="-48" y="-98" width="96" height="196" onload="checkme()"/>
+      <use xlink:href="#tile56" transform="rotate(270) translate(-&shadOff;,-&shadOff;)" stroke="&strShad;"/>
+      <use xlink:href="#tile56" transform="rotate(270)" stroke="&strCol;"/>
+    </g>
+    <rect x="-45" y="-95" width="90" height="190" fill="&clickFill;" pointer-events="all"/>
+  </g>
+
+
+</g>
+</g>
+
+
+<g id="dominoEvents">
+<animateTransform xlink:href="#c1" id="ac1" attributeName="transform" type="scale" begin="movingCamera.begin" dur="&tileDur;" values="&tileZoom;" repeatCount="1" fill="freeze" additive="sum"/>
+<set xlink:href="#c1" attributeName="display" to="block" begin="ac1.begin"/>
+<animateTransform xlink:href="#c1" attributeName="transform" type="scale" begin="cc1.mouseover" restart="whenNotActive" dur="&tileDur;" values="&tileRot;" repeatCount="1" additive="sum"/>
+
+<animateTransform xlink:href="#c2" id="ac2" attributeName="transform" type="scale" begin="ac1.end+&offsetDur;" dur="&tileDur;" values="&tileZoom;" repeatCount="1" fill="freeze" additive="sum"/>
+<set xlink:href="#c2" attributeName="display" to="block" begin="ac2.begin"/>
+<animateTransform xlink:href="#c2" attributeName="transform" type="scale" begin="cc2.mouseover" restart="whenNotActive" dur="&tileDur;" values="&tileRot;" repeatCount="1" additive="sum"/>
+
+<animateTransform xlink:href="#c3" id="ac3" attributeName="transform" type="scale" begin="ac2.end+&offsetDur;" dur="&tileDur;" values="&tileZoom;" repeatCount="1" fill="freeze" additive="sum"/>
+<set xlink:href="#c3" attributeName="display" to="block" begin="ac3.begin"/>
+<animateTransform xlink:href="#c3" attributeName="transform" type="scale" begin="cc3.mouseover" restart="whenNotActive" dur="&tileDur;" values="&tileRot;" repeatCount="1" additive="sum"/>
+
+<animateTransform xlink:href="#c4" id="ac4" attributeName="transform" type="scale" begin="ac3.end+&offsetDur;" dur="&tileDur;" values="&tileZoom;" repeatCount="1" fill="freeze" additive="sum"/>
+<set xlink:href="#c4" attributeName="display" to="block" begin="ac4.begin"/>
+<animateTransform xlink:href="#c4" attributeName="transform" type="scale" begin="cc4.mouseover" restart="whenNotActive" dur="&tileDur;" values="&tileRot;" repeatCount="1" additive="sum"/>
+
+<animateTransform xlink:href="#c5" id="ac5" attributeName="transform" type="scale" begin="ac4.end+&offsetDur;" dur="&tileDur;" values="&tileZoom;" repeatCount="1" fill="freeze" additive="sum"/>
+<set xlink:href="#c5" attributeName="display" to="block" begin="ac5.begin"/>
+<animateTransform xlink:href="#c5" attributeName="transform" type="scale" begin="cc5.mouseover" restart="whenNotActive" dur="&tileDur;" values="&tileRot;" repeatCount="1" additive="sum"/>
+
+<animateTransform xlink:href="#c6" id="ac6" attributeName="transform" type="scale" begin="ac5.end+&offsetDur;" dur="&tileDur;" values="&tileZoom;" repeatCount="1" fill="freeze" additive="sum"/>
+<set xlink:href="#c6" attributeName="display" to="block" begin="ac6.begin"/>
+<animateTransform xlink:href="#c6" attributeName="transform" type="scale" begin="cc6.mouseover" restart="whenNotActive" dur="&tileDur;" values="&tileRot;" repeatCount="1" additive="sum"/>
+
+
+
+<animateTransform xlink:href="#u1" id="au1" attributeName="transform" type="scale" begin="ac6.end+&offsetDur;" dur="&tileDur;" values="&tileZoom;" repeatCount="1" fill="freeze" additive="sum"/>
+<set xlink:href="#u1" attributeName="display" to="block" begin="au1.begin"/>
+<animateTransform xlink:href="#u1" attributeName="transform" type="scale" begin="uu1.mouseover" restart="whenNotActive" dur="&tileDur;" values="&tileRot;" repeatCount="1" additive="sum"/>
+
+<animateTransform xlink:href="#u2" id="au2" attributeName="transform" type="scale" begin="au1.end+&offsetDur;" dur="&tileDur;" values="&tileZoom;" repeatCount="1" fill="freeze" additive="sum"/>
+<set xlink:href="#u2" attributeName="display" to="block" begin="au2.begin"/>
+<animateTransform xlink:href="#u2" attributeName="transform" type="scale" begin="uu2.mouseover" restart="whenNotActive" dur="&tileDur;" values="&tileRot;" repeatCount="1" additive="sum"/>
+
+<animateTransform xlink:href="#u3" id="au3" attributeName="transform" type="scale" begin="au2.end+&offsetDur;" dur="&tileDur;" values="&tileZoom;" repeatCount="1" fill="freeze" additive="sum"/>
+<set xlink:href="#u3" attributeName="display" to="block" begin="au3.begin"/>
+<animateTransform xlink:href="#u3" attributeName="transform" type="scale" begin="uu3.mouseover" restart="whenNotActive" dur="&tileDur;" values="&tileRot;" repeatCount="1" additive="sum"/>
+
+<animateTransform xlink:href="#u4" id="au4" attributeName="transform" type="scale" begin="au3.end+&offsetDur;" dur="&tileDur;" values="&tileZoom;" repeatCount="1" fill="freeze" additive="sum"/>
+<set xlink:href="#u4" attributeName="display" to="block" begin="au4.begin"/>
+<animateTransform xlink:href="#u4" attributeName="transform" type="scale" begin="uu4.mouseover" restart="whenNotActive" dur="&tileDur;" values="&tileRot;" repeatCount="1" additive="sum"/>
+
+<animateTransform xlink:href="#u5" id="au5" attributeName="transform" type="scale" begin="au4.end+&offsetDur;" dur="&tileDur;" values="&tileZoom;" repeatCount="1" fill="freeze" additive="sum"/>
+<set xlink:href="#u5" attributeName="display" to="block" begin="au5.begin"/>
+<animateTransform xlink:href="#u5" attributeName="transform" type="scale" begin="uu5.mouseover" restart="whenNotActive" dur="&tileDur;" values="&tileRot;" repeatCount="1" additive="sum"/>
+
+<animateTransform xlink:href="#u6" id="au6" attributeName="transform" type="scale" begin="au5.end+&offsetDur;" dur="&tileDur;" values="&tileZoom;" repeatCount="1" fill="freeze" additive="sum"/>
+<set xlink:href="#u6" attributeName="display" to="block" begin="au6.begin"/>
+<animateTransform xlink:href="#u6" attributeName="transform" type="scale" begin="uu6.mouseover" restart="whenNotActive" dur="&tileDur;" values="&tileRot;" repeatCount="1" additive="sum"/>
+
+<animateTransform xlink:href="#u7" id="au7" attributeName="transform" type="scale" begin="au6.end+&offsetDur;" dur="&tileDur;" values="&tileZoom;" repeatCount="1" fill="freeze" additive="sum"/>
+<set xlink:href="#u7" attributeName="display" to="block" begin="au7.begin"/>
+<animateTransform xlink:href="#u7" attributeName="transform" type="scale" begin="uu7.mouseover" restart="whenNotActive" dur="&tileDur;" values="&tileRot;" repeatCount="1" additive="sum"/>
+
+<animateTransform xlink:href="#u8" id="au8" attributeName="transform" type="scale" begin="au7.end+&offsetDur;" dur="&tileDur;" values="&tileZoom;" repeatCount="1" fill="freeze" additive="sum"/>
+<set xlink:href="#u8" attributeName="display" to="block" begin="au8.begin"/>
+<animateTransform xlink:href="#u8" attributeName="transform" type="scale" begin="uu8.mouseover" restart="whenNotActive" dur="&tileDur;" values="&tileRot;" repeatCount="1" additive="sum"/>
+
+
+
+<animateTransform xlink:href="#b1" id="ab1" attributeName="transform" type="scale" begin="au8.end+&offsetDur;" dur="&tileDur;" values="&tileZoom;" repeatCount="1" fill="freeze" additive="sum"/>
+<set xlink:href="#b1" attributeName="display" to="block" begin="ab1.begin"/>
+<animateTransform xlink:href="#b1" attributeName="transform" type="scale" begin="bb1.mouseover" restart="whenNotActive" dur="&tileDur;" values="&tileRot;" repeatCount="1" additive="sum"/>
+
+<animateTransform xlink:href="#b2" id="ab2" attributeName="transform" type="scale" begin="ab1.end+&offsetDur;" dur="&tileDur;" values="&tileZoom;" repeatCount="1" fill="freeze" additive="sum"/>
+<set xlink:href="#b2" attributeName="display" to="block" begin="ab2.begin"/>
+<animateTransform xlink:href="#b2" attributeName="transform" type="scale" begin="bb2.mouseover" restart="whenNotActive" dur="&tileDur;" values="&tileRot;" repeatCount="1" additive="sum"/>
+
+<animateTransform xlink:href="#b3" id="ab3" attributeName="transform" type="scale" begin="ab2.end+&offsetDur;" dur="&tileDur;" values="&tileZoom;" repeatCount="1" fill="freeze" additive="sum"/>
+<set xlink:href="#b3" attributeName="display" to="block" begin="ab3.begin"/>
+<animateTransform xlink:href="#b3" attributeName="transform" type="scale" begin="bb3.mouseover" restart="whenNotActive" dur="&tileDur;" values="&tileRot;" repeatCount="1" additive="sum"/>
+
+<animateTransform xlink:href="#b4" id="ab4" attributeName="transform" type="scale" begin="ab3.end+&offsetDur;" dur="&tileDur;" values="&tileZoom;" repeatCount="1" fill="freeze" additive="sum"/>
+<set xlink:href="#b4" attributeName="display" to="block" begin="ab4.begin"/>
+<animateTransform xlink:href="#b4" attributeName="transform" type="scale" begin="bb4.mouseover" restart="whenNotActive" dur="&tileDur;" values="&tileRot;" repeatCount="1" additive="sum"/>
+
+<animateTransform xlink:href="#b5" id="ab5" attributeName="transform" type="scale" begin="ab4.end+&offsetDur;" dur="&tileDur;" values="&tileZoom;" repeatCount="1" fill="freeze" additive="sum"/>
+<set xlink:href="#b5" attributeName="display" to="block" begin="ab5.begin"/>
+<animateTransform xlink:href="#b5" attributeName="transform" type="scale" begin="bb5.mouseover" restart="whenNotActive" dur="&tileDur;" values="&tileRot;" repeatCount="1" additive="sum"/>
+
+<animateTransform xlink:href="#b6" id="ab6" attributeName="transform" type="scale" begin="ab5.end+&offsetDur;" dur="&tileDur;" values="&tileZoom;" repeatCount="1" fill="freeze" additive="sum"/>
+<set xlink:href="#b6" attributeName="display" to="block" begin="ab6.begin"/>
+<animateTransform xlink:href="#b6" attributeName="transform" type="scale" begin="bb6.mouseover" restart="whenNotActive" dur="&tileDur;" values="&tileRot;" repeatCount="1" additive="sum"/>
+
+<animateTransform xlink:href="#b7" id="ab7" attributeName="transform" type="scale" begin="ab6.end+&offsetDur;" dur="&tileDur;" values="&tileZoom;" repeatCount="1" fill="freeze" additive="sum"/>
+<set xlink:href="#b7" attributeName="display" to="block" begin="ab7.begin"/>
+<animateTransform xlink:href="#b7" attributeName="transform" type="scale" begin="bb7.mouseover" restart="whenNotActive" dur="&tileDur;" values="&tileRot;" repeatCount="1" additive="sum"/>
+
+<animateTransform xlink:href="#b8" id="ab8" attributeName="transform" type="scale" begin="ab7.end+&offsetDur;" dur="&tileDur;" values="&tileZoom;" repeatCount="1" fill="freeze" additive="sum"/>
+<set xlink:href="#b8" attributeName="display" to="block" begin="ab8.begin"/>
+<animateTransform xlink:href="#b8" attributeName="transform" type="scale" begin="bb8.mouseover" restart="whenNotActive" dur="&tileDur;" values="&tileRot;" repeatCount="1" additive="sum"/>
+
+<animateTransform xlink:href="#b9" id="ab9" attributeName="transform" type="scale" begin="ab8.end+&offsetDur;" dur="&tileDur;" values="&tileZoom;" repeatCount="1" fill="freeze" additive="sum"/>
+<set xlink:href="#b9" attributeName="display" to="block" begin="ab9.begin"/>
+<animateTransform xlink:href="#b9" attributeName="transform" type="scale" begin="bb9.mouseover" restart="whenNotActive" dur="&tileDur;" values="&tileRot;" repeatCount="1" additive="sum"/>
+
+
+
+<animateTransform xlink:href="#a1" id="aa1" attributeName="transform" type="scale" begin="ab9.end+&offsetDur;" dur="&tileDur;" values="&tileZoom;" repeatCount="1" fill="freeze" additive="sum"/>
+<set xlink:href="#a1" attributeName="display" to="block" begin="aa1.begin"/>
+<animateTransform xlink:href="#a1" attributeName="transform" type="scale" begin="aaa1.mouseover" restart="whenNotActive" dur="&tileDur;" values="&tileRot;" repeatCount="1" additive="sum"/>
+
+<animateTransform xlink:href="#a2" id="aa2" attributeName="transform" type="scale" begin="aa1.end+&offsetDur;" dur="&tileDur;" values="&tileZoom;" repeatCount="1" fill="freeze" additive="sum"/>
+<set xlink:href="#a2" attributeName="display" to="block" begin="aa2.begin"/>
+<animateTransform xlink:href="#a2" attributeName="transform" type="scale" begin="aaa2.mouseover" restart="whenNotActive" dur="&tileDur;" values="&tileRot;" repeatCount="1" additive="sum"/>
+
+<animateTransform xlink:href="#a3" id="aa3" attributeName="transform" type="scale" begin="aa2.end+&offsetDur;" dur="&tileDur;" values="&tileZoom;" repeatCount="1" fill="freeze" additive="sum"/>
+<set xlink:href="#a3" attributeName="display" to="block" begin="aa3.begin"/>
+<animateTransform xlink:href="#a3" attributeName="transform" type="scale" begin="aaa3.mouseover" restart="whenNotActive" dur="&tileDur;" values="&tileRot;" repeatCount="1" additive="sum"/>
+
+<animateTransform xlink:href="#a4" id="aa4" attributeName="transform" type="scale" begin="aa3.end+&offsetDur;" dur="&tileDur;" values="&tileZoom;" repeatCount="1" fill="freeze" additive="sum"/>
+<set xlink:href="#a4" attributeName="display" to="block" begin="aa4.begin"/>
+<animateTransform xlink:href="#a4" attributeName="transform" type="scale" begin="aaa4.mouseover" restart="whenNotActive" dur="&tileDur;" values="&tileRot;" repeatCount="1" additive="sum"/>
+
+<animateTransform xlink:href="#a5" id="aa5" attributeName="transform" type="scale" begin="aa4.end+&offsetDur;" dur="&tileDur;" values="&tileZoom;" repeatCount="1" fill="freeze" additive="sum"/>
+<set xlink:href="#a5" attributeName="display" to="block" begin="aa5.begin"/>
+<animateTransform xlink:href="#a5" attributeName="transform" type="scale" begin="aaa5.mouseover" restart="whenNotActive" dur="&tileDur;" values="&tileRot;" repeatCount="1" additive="sum"/>
+
+<animateTransform xlink:href="#a6" id="aa6" attributeName="transform" type="scale" begin="aa5.end+&offsetDur;" dur="&tileDur;" values="&tileZoom;" repeatCount="1" fill="freeze" additive="sum"/>
+<set xlink:href="#a6" attributeName="display" to="block" begin="aa6.begin"/>
+<animateTransform xlink:href="#a6" attributeName="transform" type="scale" begin="aaa6.mouseover" restart="whenNotActive" dur="&tileDur;" values="&tileRot;" repeatCount="1" additive="sum"/>
+
+<animateTransform xlink:href="#a7" id="aa7" attributeName="transform" type="scale" begin="aa6.end+&offsetDur;" dur="&tileDur;" values="&tileZoom;" repeatCount="1" fill="freeze" additive="sum"/>
+<set xlink:href="#a7" attributeName="display" to="block" begin="aa7.begin"/>
+<animateTransform xlink:href="#a7" attributeName="transform" type="scale" begin="aaa7.mouseover" restart="whenNotActive" dur="&tileDur;" values="&tileRot;" repeatCount="1" additive="sum"/>
+
+<animateTransform xlink:href="#a8" id="aa8" attributeName="transform" type="scale" begin="aa7.end+&offsetDur;" dur="&tileDur;" values="&tileZoom;" repeatCount="1" fill="freeze" additive="sum"/>
+<set xlink:href="#a8" attributeName="display" to="block" begin="aa8.begin"/>
+<animateTransform xlink:href="#a8" attributeName="transform" type="scale" begin="aaa8.mouseover" restart="whenNotActive" dur="&tileDur;" values="&tileRot;" repeatCount="1" additive="sum"/>
+</g>
+
+
+<g id="wholeCar" transform="translate(1000 -50)">
+
+<g transform="scale(0.7) translate(310 30) rotate(10)">
+<path d="M87.9,31.4c-17.2-2.8-21.9,16.7-27.2,32.6-4.4-4.4-8.5-9-12.7-13.6-3-3.3-3.6-9.2-2.2-14,1-3.5,6.4-5.2,6.3-8.6-0.2-5.3-9-3.9-11.9-2.1-3.1,2-3.1,5.3-6.4,4.6-3.9-0.9-8.7-8.8-11.7-11.5-1.7-1.7-9.7-8.1-11-3.7-0.926,3.23,3.08,5.76,4.4,8.38-2.53-0.659-13.5-7.61-15.4-3.05-1.15,2.76,7.12,7.88,8.63,9.48-1.91,0.137-6.11-0.416-7.62,1.02-2.48,2.36-0.209,4.99,2.88,5.5,10.9,1.81,17.2,9.98,26.7,14.5,10.6,4.98,14.5,18,20.9,27.4,2.68,3.89-12.9,9.19-15.6,9.33-6.6,0.4-12.2-2.3-16.9-6.5,3.4,10.6,12.2,16.2,22.3,19.9-3.63,1.63-7.96,1.76-11.7,0.338,5.08,14.5,23.3,30.8,38.4,20.3,0.031,3.4-3.72,5.92-5.75,8.29,3.53,1.7,7.18,3.01,11,3.89,3.9,0.899,7.68-0.294,7.02,4.32-0.293,2.06-0.793,5.1,0.17,7.02,1.32,2.64,6.61,3.73,9.33,5.82,5.03,3.87,9.99,16.1,0.654,18.2-3.64,0.806-7.04-1.26-10.6-1.61-2.52,29.9,27.4,34.4,49.6,23.4-3-2-4-6-4-11,0.076-1.84,0.303-4.68,1.35-6.26,1.89-2.84,2.89-1.75,5.75-3.55,9.4-5.92,0.424-14.8,3.56-20.6,1.64-3.05,5.68-5.25,8.71-6.6,4.16-1.85,0.732-2.46-0.762-4.74-0.689-1.05-1.93-1.64-2.37-3.04-0.211-0.681,2.29-1.61,1.27-3.3-1.23-2.05-3.24-3.39-2.79-6,9.68,6.06,19.8,2.37,27.9-4.4-2.67-2.91-6.23-4.96-8.46-8.29,11,1.38,22.5-0.958,28.9-10.8-6.22,1.62-12.9,0.559-18.6-2.3-3.1-1.55-14-8.2-12.9-12.6,3.17-12.3,6.69-24.6,11.1-36.5,5-13.6,9.42-22.3,23.3-28.4,2.35-1.03,14.5-4.52,14.2-6.26-0.26-1.74-4.62-2.59-5.92-2.88,1.2-1.31,6.07-3.4,3.81-5.67-2.39-2.4-7.21,0.423-10.2-0.085,3.44-3.55,4.14-5.89-2.03-5.92-5.51-0.03-10.4,3.03-15.1,5.58-6.58,3.6-8.15-0.427-14.5-3.3-5.52-2.51-11.6,1.14-6.35,6.34,4.74,4.74,8.89,13.7,7.11,20.5-3.13,11.8-11,22.2-16.6,33-2.88-5.46-6.84-10.4-11.2-14.7-1.84-1.83-5.95-3.68-7.25-5.73-1.59-2.5-12.1-8.45-22.3-5.57-4.1,1.16-5.87-1.49-10.8-2.88"/>
+<path fill="#ffd4aa" d="M172,11.2c-2-1.22-15-12-16-6.12-0.008,0.078,3.84,3.44,4.23,4.15,1.26,2.3,1.52,4.6,2.37,7.02,0.799,2.29,1.54,4.86,3.38,6.52,1.65,1.48-0.6,5.23-1.35,7.19-3.67,9.53-9.13,18.3-13.7,27.4-2.66,5.32-3.8,7.5-1.54,13.1,1.65,4.09,3.42,8.25,5.75,12,5.9-13.1,7.79-27.5,13.2-40.8,6.44-15.8,19.4-23.5,35.9-26.4-5.95-3.52-12.7,1.23-19,0.846,5.16-2.87,13.1-4.04,16.8-8.8-6.27-1.45-14.7,2-20.6,4.23,2.1-2.13,15.7-8.57,11.5-9.98-4.64-1.55-18.2,7.27-21.5,9.64"/>
+<path d="m171,19.8c1.74-0.295,6.75-3,10.2-3.38-3-2.5-8,0.2-10,3.4"/>
+<path fill="#ffd4aa" d="M23,29.1c-7.2-1.8-12.6-7.7-20.4-7.9,2.4,2.94,6.46,7.54,9.48,9.65,2.13,1.49,5.19,1.75,7.45,3.38-5.9-0.4-11.2-3-17.3-2.2,4.11,4.55,10.7,4.72,15.6,8.12,2.81,1.98,4.96,4.48,8.12,6.09,2.67,1.36,7.21,1.59,9.47,3.22,4.62,3.32,8.54,12.4,11.5,17.3,3.58,5.85,7,11.8,10.7,17.6,2.18-2.93,3.94-6.06,5.75-9.22,2.3-4.2-6.5-12-9.3-15.2-3.9-4.3-10-9.5-10.5-14.7-0.352-3.57-0.066-9.99,2.03-13,1.19-1.72,4.4-2.47,4.4-4.91,0-5.48-11.1,1.85-12.5,3.13-2.83,2.47-2.48,2.67-5.58,1.1-2.23-1.13-4.24-4.45-5.92-6.26-4.02-4.33-7.86-7.88-13.5-9.82,2.34,5.05,7.39,9.74,10.5,13.7"/>
+<path fill="#FF0" d="m74.6,39.8c-4.72,4.64-7.25,11.1-9.09,17.4-1.72,5.87-3.92,8.05-0.049,12.9,0.547-0.841,1.61-1.47,2.03-2.37-0.389,5.68-4.1,10.5-6.09,15.7,11.8-5.66,18-18.3,25-28.6,2.71,2.82,0.545,7.52,2.03,11,3.5-6.68,6.86-13.3,10.7-19.8,14.9,11.2,26.9,25.1,31.9,43.7,0.656-5.89-0.424-12.1,0.17-17.8,0.711-6.76,6.96-5.14,9.98,0,1.97,3.34,0.875,7.25,2.54,9.82,1.82,2.81,5.16,3.89,6.09,7.61,1.7,6.82-4.02,7.91-8.8,4.57,0.938,9.02-5.37,14.2-7.11,22.2-1.79,8.27-2.92,13.5-12.4,14.6,3.44,4.58,9.97,3.77,14.8,2.46,5.88-1.6,0.184-5.6,1.44-9.98,1.33-4.64,9.06,1.3,12.5,1.78,5.84,0.806,11-1.27,15.1-5.42-4.37-1.78-10.4-6.71-8.97-12,9.99,3.76,19.1,3.01,27.6-3.72-13.4,0-22.8-5.2-29.7-17-6-11-9-24.7-17-34.2-7-8.9-18-18.3-31-14.8-4,1.2-11.3-3.7-16.4-4.2-5.9-0.7-11.4,1.9-15,6"/>
+<path fill="#ffd4aa" d="m25,36c3.51,1.66,7.61,3.43,9.14,7.28,0.402-4.93-5.09-7-9.14-7.28"/>
+<path fill="#ffd4aa" d="M99.3,50.1c-4.8,5.7-6.7,13-11.5,18.6-1.6-2.6-1.8-5.8-2.4-8.8-3.88,4.9-6.52,10.8-10.7,15.5-3.15,3.54,2.62,12.3,4.99,15,1.76,2.01,0.604,8.25,1.51,11.1,1.41,4.38,3.29,8.1,5.77,12,3.52,5.49,11.2,10.4,17.7,11,8.54,0.826,17.7,8.05,24.8-0.39,3.36-4.04,4.43-13.2,6.14-18.4,2.35-7.04,3.72-14.6,0.371-21.6,9.23-1.36,5.17-14.4-2.37-15.2-0.732,8.22,1.64,16.9-2.88,24.4-3-10.3-6-18.4-12-25.9-5-7.7-14-12.4-19.7-18.6"/>
+<path d="m96.9,61.1c3.68-0.97,6.7,1.23,9.81,2.88-1.89-2.8-7.63-7.06-9.81-2.88"/>
+<path d="m103,70.4c-12.2,1.62-1.34,19.7,5.94,21.7,10.6,2.81,6.09-10.7,3.7-15.2-2.26-4.26-1.58-5.01-1.35-9.65-0.387,1.13-2.13,4.38-3.72,4.06-1.53-0.304-0.906-3.36-1.35-4.74-0.676,1.68-1.95,3.3-3.21,3.89"/>
+<path d="m79.1,79.5c0.244-3.11-0.064-6.7,3.22-8.29-5.28-2.16-4.74,5.49-3.22,8.29"/>
+<path fill="#FFF" d="m99.9,73.4c3.24,1.46,7.11,4.24,7.11,8.29,0,2.53-3.26,4.24-2.71,6.26,0.287,1.05,4.09,2.71,5.08,2.88,15.4,2.67-6.5-27.9-9.48-17.4"/>
+<path d="m134,77.3c-0.176,0.777-0.256,1.49,0.168,2.2,1.35-1.01,1.94-1.51,3.72-1.35-2.96-0.854-3.15-3.13-1.01-5.42-2.2,0.426-2.8,2.85-2.88,4.57"/>
+<path fill="#00F" d="m98.9,76c-0.068,3.47,4.81,14,6.43,6.26,0.642-3.09-3.5-8.22-6.43-6.26"/>
+<path fill="#ffd4aa" d="m60,86.5c2.32,3.66,2.83,7.9,4.74,11.7,2.18,4.31,6.33,6.72,9.58,10.2,6.35,6.84,11.6,15.2,16.3,23.3,1.08-2.46,1.59-4.91,2.12-7.53,0.541-2.69-9.41-11.4-11.1-15.1-2.71-6.04-2.2-13.1-4.4-18.8-1.53-3.92-3.96-7.97-5.75-11.8-3.56,2.84-7.76,6.57-11.5,8.12"/>
+<path d="m82,84.8c-0.703-0.031-1.54,0.169-2.2,0.169,2.98,1.67,2.47,3.62-0.678,3.21,2.9,2.21,3.65,2.66,6.26,5.92,1.56,1.94,3.15,4.06,5.42,5.25,3.1,1.62,5.39-0.208,7.95,0.507,2.25,0.628,1.41,4.04,5.24,2.12,2.23-1.12,3.36-3.64,3.72-6.01-0.775,1.53-2.38,4.51-4.23,4.91-3.58,0.763-2.58-1.87-3.38-4.4-2.02-6.4-11.6-23.2-18.1-11.7"/>
+<path fill="#FF0" d="M23.6,86.1c5.5,7.7,13.9,11.7,22.9,13.9-2.95,3.95-8.81,3.8-13.2,4.91,5.29,6.82,12.5,14.5,21.1,16.8,7,1.84,10.7-1.07,16.6-4.28,1.55,4.39-3.22,8.35-4.91,12,5.31,0.509,13.3,6.45,15.9-0.086,2.7-7-4.9-16-9.2-21-3.3-3-7.4-5-9.7-9.2-2.3-4.3-3.4-7.9-6.3-11.5-0.096-0.12-1.27,1.06-1.69,0.507-0.553-0.735,0.695-1.39,0.508-1.69-0.383-0.629-1.06-3.65-2.2-5.24-7.2,8.14-20.8,10.8-29.8,4.23"/>
+<path fill="#FF0" d="m142,82.7c0.689,1,4.89,5.43,3.72,6.6-1.97,1.96-5.01-4.01-5.58-5.25-2.69,2.79,2.3,11.1,6.6,10.3,6.59-1.26-1.53-12.6-4.74-11.7"/>
+<path fill="#FFF" d="m87.8,82.6c2.69,2.05,4.71,5.32,3.89,8.8-0.914,3.88-4.62,5.14,1.01,7.28,11.3,4.3,1.9-14.2-4.9-16.1"/>
+<path d="m121,95.4c-1.09,3.59-3.05,4.62-6.26,5.75-1.91,0.673-3.8,0.335-5.5,1.69-0.826,0.66-1.65,1.42-1.94,2.45-0.383,1.34-1.4-0.035-2.37,0.422-1.21,0.567-2.94,0.93-4.23,1.52-1.45,0.667-1.64,2.2-3.55,2.2-2.61,0-7.15-2.91-9.14-4.4,4.16,5.28,12.5,8.16,17.9,12,3.96,2.8,13.8,11,18.8,6.09,7.48-7.36-0.813-30.2,0.17-39.6-3,3.7-4,9.1-5,12"/>
+<path fill="#00F" d="m83.7,85.1c-0.1,3.46,4.34,13.6,6.6,6.09,1.1-3.65-3.99-9.94-6.6-6.09"/>
+<path fill="#F00" d="m122,118c-5.71,4.05-12.1-1.72-17.6-3.22,5.03,3.11,16.7,14.1,19.8,3.39,2.04-7.13-0.572-15-1.52-22.2-1.32,7.31,1.85,14.8-0.676,22"/>
+<path fill="#F00" d="m108,108c-2.74-1.79-5.81-0.414-7.61,2.03,7.1,1.02,15.7-0.092,18.1-8.29-4,0.373-9.73,1.54-10.5,6.26"/>
+<path fill="#FFF" d="m106,113c2.45,2.05,7.92,5.48,11.3,4.91,6.94-1.17,4.1-9.92,3.04-14.6-2.67,5.56-8.19,9.31-14.4,9.64"/>
+<path fill="#F00" d="m86.4,147c5.95,2.58,11.7,8.32,11.7,15.2,0,9.02-11.3,11.1-17.9,7.47-1.38,4.91,1.48,16.9,8.29,11.8,4.2-3.14-3.56-8.6-4.91-3.13-0.705-1.35-1.87-4.21-0.592-5.5,1.75-1.76,9.31,6.22,10.9,7.53,9.65,7.89,19.8,12.9,32.3,10.2-1.81-4.41-2.44-8.47-1.86-13.2,0.219-1.78,0.387-5.07,1.35-6.6,1.67-2.63,3.02-2.01,6.07-3.54,8.37-4.19,2.72-17-3.53-20,1.62-0.437,3.05,0.238,4.4,1.52,2.55-4.16,7.15-6.86,11.3-9.14-4.62-4.45-4.83-4.29-10.7-3.21-3.79,0.694-7.62,1.06-11.4,0.168,0.904,6.1,4.76,14.6,1.01,20.3-2.7-5.72-5.82-11.5-9.81-16.4-0.354,1.79-0.414,3.65-1.52,5.08,1.47-9.5-7.27-19.4-16.4-20.8-1.92,7.44-2.47,17.4-8.63,22.3"/>
+<path fill="#ff4000" d="m82,144c3.97,2.16,8.2-5.63,7.78-8.97-0.277-2.21-3.59-6.01-5.08-7.61-2.33,5.07-3.36,11.3-2.71,16.6"/>
+<path fill="#ffd9e7" d="m111,131c2,7.89,8.16,13.8,11.7,21,1.12-5.19-2.82-28.5-11.7-21"/>
+<path d="m102,156c-0.66,5.84,0.111,12,7.02,12.9,5.59,0.796,9.24-3.8,14.1-3.3-3.71-2.58-9.01,2.52-13.6,0.678-6.14-2.45-6.17-7.05-6.17-12.9-0.655,0.774-1.04,1.63-1.36,2.54"/>
+
+<animateTransform attributeName="transform" type="translate" values="0 0; 0 -10; 0 0" dur="1.3s" begin="0s" repeatCount="indefinite" additive="sum"/>
+</g>
+
+<g>
+<path d="m94.7,136c-21-1.07-42.9-3.42-63.3,2.63-12-4.82,15.7-9.31-3.49-13.8-13.4-3.7-12.2,6.02-8.35,13.5-16.3,9.85-8.64,34.6-11.1,51.2,5.81,20.1-15.8,32.8-5.91,52.9,5.86,17.6,29.4,20.5,43.4,15.2,9.89,10,12.9,41.6,35.4,45.3,21,6.91,40.3-8.66,48.9-26.7,36.5,6.75,74,4.57,111,3.8,16.1-7.6,7.03,20.3,24.5,22.5,16.5,11.2,41.6,10.5,53.3-7.39,7.6-11.1,7.32-24.5,24.3-17.5,11.6-1.16,37.1,17.4,28.3-3.26,10.2-12-8.96-6.63-7.13-11,10.6-10,23.2-36.6,2.75-42.5-9.81-1.69-17.3,1.31-11.2-10.7-6.58-20.5,20.4-33,10-54.1-9.74-11.7-37.1-1.79-34.8-18.9-18-10.7-37.1,7.15-56.4,3.59-17.6,5.68-37.3,2.42-56.7,3.08-20-1-40-1-60-1-14-16-8-34-3-53.5,5-17.2-29-5.8-32,6.2-10,12.3-19,26.3-28.3,39.3z"/>
+<path fill="#d0ccc8" d="m152,84.7c-19.7-3.29-29.8,15.9-40.1,28.9-12.3,12-17.7,29.2,5.91,27.3,5.77-21.4,21-39,34.2-56.2z"/>
+<path fill="#d0ccc8" d="m124,140c13,0.876,8.71,4.35-0.828,3.38l0.828-3.38z"/>
+<path fill="#c0c0c0" d="m144,133c-7.91,10.7-26.7,6.31-15-8.32,3.63-7.51,13.4-33,19.5-26.7,0.361,17.8-7.76,27-18,38.7,3.18,3.52,13.8-16.8,13.5-3.6z"/>
+<path fill="#128080" d="m270,145c14.4-1.67,30-3.72,44.5-8.02,14.1-6.69,21,14.2,3.41,10.7-15.7-3.87-33.4,3.9-47.9-2.7z"/>
+<path fill="#2cb0cf" d="m97,138c-22.1,0.0799-44.3-2.21-66.3,1.33-2.13,14.8,23.7,13.5,18.5,31.5,6.61-2.98,28.8-17.6,44.3-12.1,8.14-0.679,20,10.7,4.71,4-23.9-7.54-48.3,9.23-57.5,31.1-6.9,10.4-8.97,19.8,6.14,20.6,11.2,11.1,3.45,33,1.81,41.7,19.8-2.13,7.39-30.2,14-43.3,4.98-17,30.8-28.7,43.7-13.6,6.17,19.4,8.56,40.3,12.7,60.3,6.31,21.9,34.3,15,51.5,18,26.5,1.43,53.2,1.82,79.5-1.53,21.6-6.23,20.2-32.7,27.1-50,1.1-16.7,23.6-37.5,36-18.2,10.5,16.7,2.67,38.5,11.5,55.6,9.09,5.06,12.3,2.62,2.67-4.15-6.73-15.2,0.555-34.7,17.8-38.3,14.8-9.73,3.8-34.3,7.39-50.1,5.24-28.1-25.6-20.4-42.1-21.6-16.4,0.618-32.9,2.3-48.9-2.39-69.2-0.21-139-2.22-208,1.57-8.72,2.62-17.1,0.0274-2.77-1.68,21.5-2.31,43.1-3.6,64.7-2.96-6.29-1.91-12.6-3.82-18.9-5.76z"/>
+<path fill="#2cb0cf" d="m35,195c0.502,9.84-9.49,24.8-8.29,6.68-4.86-6.09,6.91-0.292,8.29-6.68z"/>
+<path fill="#c0c0c0" d="m18.8,210c16.8,0.995-5.4-33.7-1.66-8.59,0.325,2.9,0.925,5.77,1.66,8.59z"/>
+<path fill="#c0c0c0" d="m32.6,194c17.9-7.13,16-45.3,0.324-41.3,3.3,13.5,3.3,27.9-0.324,41.3z"/>
+<path fill="#c0c0c0" d="m22.9,149c5.96,12.6-0.397,41.2,6.71,45.5,1.2-14.1,10.5-39.9-6.37-46.5l-0.3,1z"/>
+<path fill="#f7f619" d="m21,151c-7.48,9.27-9.91,42.1,2.66,39.6,0.3-14,2.5-28-2.7-40z"/>
+<path fill="#c0c0c0" d="m21.3,139c-4.24,12.3,17.1,5.91,4.21-0.494l-4.21,0.494z"/>
+<path fill="#c0c0c0" d="M13.9,212c-18.3,7-10.8,43,8.7,44,23.6,11,36.8-30,17.6-40-8.3-4-17.4-4-26.3-4z"/>
+<path fill="#c0c0c0" d="m339,227c-17.7,11.3-9.73,45,14.1,37.7,17.5-0.952,32-39.3,8.01-40.6-7.25-0.328-16-2.49-22.1,2.84z"/>
+<path fill="#c0c0c0" d="m329,268c11.9,2.39,32.6-2.41,38.8,2.18-1.85,9.75,5.73,13.4-6.74,8.57-8.1-5.68-36.1,0.481-32-10.7z"/>
+<path fill="#404040" d="m54.8,258c0.999,19.1,12.6,40.2,33,43.6,17.5,3.88,52-21.6,30.2-34.9-6.68-18.9-5.27-40.5-11.9-59.9-9.01-24.6-43.5-5.71-42,15.6-2.68,11.4,4.02,29.5-9.22,35.7z"/>
+<path fill="#404040" d="m255,278c-2.01,20.7,24.8,32.1,42.6,28.3,17.4-3.87,27.5-22.9,27.1-39.8-12.3-10.8-4.69-30.7-8.76-45.2,1.31-25.5-32.7-22.8-34.2-0.0673-7.42,15.7-4.49,35.6-17.6,48.6-2.77,3.01-5.11,6.94-9.25,8.26z"/>
+<path d="m145,113c-13.7-2.05-14.6,17.7-13,25.1,18.5,7.06,10.7-14.7,13-25.1z"/>
+<path fill="#e2b79c" d="m133,133c5.86,3.26,15,4.54,1.44,5.04-3.33,0.647-5.91-6.14-1.44-5.04z"/>
+<path fill="#e2b79c" d="m138,115c-6.79,10.7,9.12,16,4.61,1.3-0.737-1.76-3.12-1.75-4.61-1.3z"/>
+<path fill="#e2b79c" d="m135,124c9.84,6.01,3.59,13.2-2.31,2.26-1.5-1.6,1-3.32,2.31-2.26z"/>
+
+<path d="m168,82.1c-8.08,20,17.7,49.5,28.2,20.5,1.05-13,10-27.8,7.65-38.7-13.1-0.0288,12.5-8.16-2.35-6.78,5.96-3.73,9.7-6.55-0.288-6.16,21.2-3.6-17.4-1.47,1.7-4.46,9.58,0.141-7.22-1.18,3.77-2.71-11.5-4.17-25.8-11.3-35.1,0.99-7.22,9.74-2.05,16.2-5.73,25,3.19,3.75,2.2,7.68,2.16,12.3z"/>
+<path fill="#e2b79c" d="m170,75.1c-3.44,20.3,26.9-1.62,24.5-1.17-0.809,10.6-5.63,44.8-18.1,21.9-11.2-29.4-8.65,26.1,10.6,14.9,13.1-8.56,10.8-30.5,17-44-5.92-3.52-12-4.32-17,3.35-7.42,1.19-9.72-11-11.8,1.56-9.58,10.2,16.4-3.27,4.44,6.62-6.07,6.97-7.49-3.01-9.57-3.14z"/>
+<path fill="#FFF" d="m175,86.9c0.546,13.1,14.4,19.7,14.4,2.3,4.21-12.3,0.749-10.9-7.93-3.74l-3.73,1.45-2.75-0.0086z"/>
+<path fill="#e2b79c" d="m172,60.6c8.3,3.89,14.7-7.07,24-0.576-0.216-11.3-11.1-11.9-21.8-10.8-4.46,3.84-7.46,4.64-2.16,11.3z"/>
+<path fill="brown" d="m170,50.8c5.1-5.15,26.1-16.9,6.88-9.61-2.85,2.48-6.53,5.56-6.88,9.61z"/>
+<path fill="brown" d="m176,48.2c3.53-11.8,34.6-5.91,10.8-5.44-4.73,0.39-5.96,6.72-10.8,5.44z"/>
+<path fill="brown" d="m183,47.4c6.63-7.18,30.4-4.32,10.5,0.666-1.81,3.55-7.29-1.03-10.5-0.666z"/>
+<path fill="brown" d="m196,53.6c8.31-2.27,7.76-1.86,3.28,4.14,8.13,1.6-7.77,7.12-3.28-4.14z"/>
+<path fill="#a16121" d="m181,61.2c0.0326,17.7,19.4-3.78,3.89-2.02l-2.35,0.738-1.54,1.28z"/>
+<path fill="#a16121" d="m173,62.8c-15,3.87,5.73,17.1,2.99,0.576l-1.33-0.626-1.66,0.0495z"/>
+<path fill="#fb0f0c" d="m355,170c-1.01,20.1,12.8,8.16,8.33-4.89-2.6-15.6-9.25-3.52-8.33,4.89z"/>
+
+<g stroke="#000" stroke-width="2.5">
+<line x1="350" y1="200" x2="600" y2="180"/>
+
+  <path d="m153,132c12.5,4.57-3.89,18.9-1.01,3.02l1.01-3.02z" fill="#e2b79c"/>
+  <path d="m159,143c3.75-14.8,4.3-37,22-37.5,11.8-8.21,24-28.9,33.6-12.5-8.42,14.9-6.51,38.3-16.2,49.7-13.1,0.372-26.2,0.397-39.3,0.329z" fill="#f7f619"/>
+  <path d="m208,116c-7.63,5.52,1.76-7.48-5.58-4.46,5.29-5.55,3.34-4.48,2.85-12.3,9.67-0.866,2.61,11.9,2.73,16.7z" fill="#fb0f0c"/>
+  <path d="m190,121c-3.3-8.14,9.36-10.9,2.45-1.4,10.3-2.72,1.23,7.42,1.22,12-1.71-6.15-13,6.24-5.69-5.22-8.8-3.06-5.82-13.9,2.02-5.33z" fill="#fb0f0c"/>
+  <path d="m172,124c-4.53,10.9-6.59,1.15-4.46,0.482-5.19-4.65,3.89-5.93,5.25-10.1-0.766,5.93,12.4-1.23,2.66,6.12,5.88,5.49-0.222,13.1-3.46,3.53z" fill="#fb0f0c"/>
+  <path d="m162,144c-8.09-9.08,7.59-0.902,2.92-9.29,7.03,6.13,4.49,3.04,12.5,0.58,2.72,11.6-8.5,8.24-15.4,8.71z" fill="#fb0f0c"/>
+  <path d="m200,135c2.14,8.46-10,11.2-12.8,5.62,8.46,0.769-3.96-11,6.3-5.76-1.14-7.98,4.97-4.85,6.48,0.144z" fill="#fb0f0c"/>
+  
+  <g transform="translate(90,242)" id="wheel">
+    <path transform="translate(-95,-242)" d="m84.3,242c-5.58,27.1,34.7,15,22.5-6.53-6-21-24.9-12-22.7,7z" fill="#c0c0c0"/>
+    <animateTransform attributeName="transform" type="rotate" values="0; 360" dur="1.5s" begin="0s" repeatCount="indefinite" additive="sum"/>
+  </g>
+  <use xlink:href="#wheel" transform="translate(206,0)"/>
+  
+  <path d="m204,84.4c0.756,1.01,1.76,1.73,3.02,2.45,1.22,0.576,2.7,1.15,4.43,1.44,0.432-4.43,1.44-9.22,3.31-14.4,1.8-5.36,4.93-11.7,7.45-16.7,2.38-5.11,4.86-10.2,6.91-13,1.8-2.77,2.95-2.63,4.86-3.74,1.94-1.26,5.58-2.41,6.88-3.6,1.19-1.3,1.19-3.28,0.576-3.85-0.756-0.648-2.56,0-4.43,0.432-2.02,0.432-6.41,2.81-6.77,2.12-0.396-0.792,3.31-4.61,4.9-6.73,1.51-2.27,4.1-4.97,4.46-6.3,0.252-1.48-0.936-2.38-2.45-1.73-1.55,0.684-4.82,3.56-6.34,5.72-1.62,1.98-2.2,6.08-2.84,6.48-0.72,0.324-1.66-1.62-1.15-4.32,0.468-2.84,2.92-9.18,3.85-12.3,0.864-3.35,1.3-6.16,1.15-7.02-0.288-0.9-1.33-0.18-2.56,1.87-1.26,2.02-3.82,8.78-4.9,10-1.15,1.01-1.55-0.144-1.73-3.02-0.36-2.92,0.756-12.1,0.288-14.1-0.576-1.91-2.41-0.36-3.17,2.3-0.792,2.56-1.12,7.74-1.55,12.8-0.54,4.86-0.972,10.4-1.44,16.6-1.44-2.23-2.74-3.82-3.74-5.29-1.04-1.51-1.91-2.84-2.59-3.17-0.828-0.36-2.2-0.072-2.3,1.3-0.144,1.33,0.288,4.5,1.44,6.44,1.15,1.84,2.74,3.28,5.18,4.46-0.468,3.1-1.48,8.32-3.31,15.8-1.8,7.52-4.28,17-7.45,29z" fill="#e2b79c">
+    <animateTransform attributeName="transform" type="rotate" values="5 200 100; 20 200 100; 5 200 100" dur="1s" begin="0s" repeatCount="indefinite"/>
+  </path>
+  
+  <g transform="translate(440,238)">
+    <path transform="translate(-440,-238)" d="m440,238c-12.1-1.41-7.15-10.7,2.09-10.5-4.45-8.09,2.76-14.6,8.46-5.98-7.75-14.5,12.4-16,9.47-0.827-2.69,10.6-1.71,25.7-12.9,28.1-4.31,12-17.9-4.07-7.09-10.7z" fill="#c0c0c0"/>
+    <animateTransform attributeName="transform" type="scale" values="0.5; 1.2; 0.5" dur="1s" begin="0s" repeatCount="indefinite" additive="sum"/>
+  </g>
+  
+  <g transform="translate(449,266)">
+  <path transform="translate(-449,-266)" d="m449,266c-1.36-17.6,26.7-2.75,13.2,9.62-0.873,1.64-10.6,19.8-11.9,4.75,1.34-5.57-15.8-5.17-4.6-12.2l3.26-2.2z" fill="#c0c0c0"/>
+    <animateTransform attributeName="transform" type="scale" values="0.5; 1.3; 0.5" dur="1.6s" begin="0.25s" repeatCount="indefinite" additive="sum"/>
+  </g>
+  
+  <g transform="translate(396,258)">
+  <path transform="translate(-396,-258)" d="m396,258c-10-5.38-20.8,8.11-5.94,10.5-12.8,8.78-1.12,17.3,9.68,12.7,14.6,13.3,9.67-9.66,20.8-12.7,9.83-13.3-18-2.6-4.32-13.2,5.34-19.6-15.8-0.276-25.3-8.27-5.29,3.49,2.41,8.72,5.09,10.9z" fill="#c0c0c0"/>
+    <animateTransform attributeName="transform" type="scale" values="0.5; 1.2; 0.5" dur="1.3s" begin="0.5s" repeatCount="indefinite" additive="sum"/>
+  </g>
+</g>
+  <animateTransform attributeName="transform" type="translate" values="0 0; 0 5; 0 0" dur="0.8s" begin="0s" repeatCount="indefinite" additive="sum"/>
+</g>
+
+  <image id="carPresenter" xlink:href="ver.jpg" x="500" y="-250" width="300" height="600"/>
+  
+  <animateTransform id="carIn" attributeName="transform" type="translate" values="900 -50; -355 -50" dur="&presDur;ms" begin="indefinite" repeatCount="1" fill="freeze"/>
+  <animateTransform id="carOut" attributeName="transform" type="translate" values="-355 -50; -1400 -50" dur="&presDur;ms" begin="indefinite" repeatCount="1" fill="freeze"/>
+  <set attributeName="display" to="none" begin="carOut.end"/>
+  <set attributeName="display" to="block" begin="carIn.begin"/>
+</g>
+
+
+<g id="colibri" transform="translate(0 -1200)" display="none">
+
+  <image id="colibriPresenter" xlink:href="hor.jpg" x="70" y="565" width="600" height="300"/>
+
+  <g transform="translate(404,173) rotate(-20)">
+    <g>
+      <g transform="translate(-320,-300) rotate(20)">
+        <path id="rearWing" fill="#ffe300" d="m503.9,456.7c17.98,9.777,24.6-16.07,36-24.86,25.34-28.04,58.8-50.42,73.73-86.48,0.325,29.01-24.29,50.05-44.67,67.27-7.268,5.786-21,14.98-5.028,4.879,19-12.47,36.57-27.85,48.86-47.15-2.97,20.95-23.44,33.19-39.26,44.51-6.347,4.419-27.12,15.41-8.862,6.198,15.67-6.258,38.15-28.63,45.2-29.5-12.44,18.7-34.99,27.12-54.4,36.77,18.44-8.381,36.88-17.16,53.53-28.8-7.501,18.02-28.6,24.15-45.41,30.44-17.13,4.861,13.38-2.965,19.19-3.541,7.836-1.769,24.96-5.199,9.076,3.074-11.29,5.226-23.95,6.443-36.24,6.708,11.73,3.166,31.29-1.877,37.91,3.174-4.24,13.6-39.13,5.155-34.8,7.009,7.963,2.698,42.18,4.918,24.75,13.8-7.465,2.941-32.25-7.137-28.02-4.959,6.943,3.788,27.39,12.02,23.97,15.35-9.099-0.3614-39.67-21.98-18.57-7.022,9.206,4.12,24.86,25.13,5.928,11.8-7.806-5.405-24.29-22.21-8.566-6.379,6.426,5.264,22.18,27.58,6.133,13.86-6.896-5.314-24.52-23.41-9.019-7.513,6.434,4.291,19.46,28.01,4.082,13.57-6.563-5.79-21.67-23.18-8.036-7.864,7.274,6.34,16.96,24.67,2.008,10.68-5.807-4.804-20.64-21.32-6.899-6.873,6.137,5.831,18.09,25.92,4.008,12.44-5.19-4.277-22.09-24.07-8.689-9.048,5.878,5.07,19.16,27.24,4.539,13.09-13.48-15.48-25.16-32.97-42.45-44.64z"/>
+      </g>
+    <animateTransform begin="0s" repeatCount="indefinite" attributeName="transform" values="1 1; -1 1; 1 1" dur="0.4s" type="scale"/>
+    </g>
+  </g>
+
+  <use xlink:href="#claw" transform="translate(45,130) rotate(-6) scale(0.85)"/>
+  <path id="claw" transform="translate(455,530) rotate(-20)" fill="#800f10" d="m20,53c2.4-0.8,9.3-2.9,8.8-4.2-3,1.3-6.7,1.5-8.8,4.2zm12-4.7c-1.6-2.9,1.6-9.7-2.9-10,0.024,3.5-0.47,8,2.9,10zm-29,8.6c1.5-6.1,2.9-12,4.4-18,2.6,5.2-1,10-2.5,15-0.69,0.74-0.34,6.5-1.9,3zm4-17c7.9-1.5,16-3.1,24-4.6-0.23,5.9-7.8,4.6-12,4.6-3.6-0.028-9.8,4-12,0.05zm-6.3,15c1.5-6.1,2.9-12,4.4-18,2.6,5.2-1,10-2.5,15-0.69,0.74-0.34,6.5-1.9,3zm4-17c7.9-1.5,16-3.1,24-4.6-0.23,5.9-7.8,4.5-12,4.6-3.6-0.027-9.7,4-12,0.042zm21-2.7c16-21,11-14,27-34,6,0.87,12-0.59,7,2-10,10-4,5.2-14,16-5.3,6-11,12-16,18-1.4-0.84-2.7-1.7-4.1-2.5z"/>
+  <rect width="40" height="3" transform="translate(400,444) rotate(-20)" fill="black"/>
+  <path id="tail" fill="url(#gr2)" d="m542.1,547.1c13.58-19.34-13.76-43.48-21.94-61.57-10.75-13.65-22.37-59.58-5.974-57.51,13.48,3.13,54.75,65.33,56.78,74.34,18.56,61.59,17.76,126.7,18.37,190.5,0.0148,13.06-1.33-15.7-2.124-21.72-3.604-33.42-4.922-68.1-18.19-99.42-5.17-11.95-17.22-17.13-26.92-24.57z"/>
+  <path id="belly" fill="url(#gr1)" d="m470.7,393.7c22.83,0.688,38.75,20.3,50.1,37.98,6.565,23.72-2.782,20.04,7.327,46.9,10.36,16.13,32.07,39.57,23.27,62.7-5.885,20.07-25.48-10.7-36.67-16.22-24.01-20.37-42.85-45.99-57.47-73.74-3.051-15.39-29.3-11.31-30.93-16.48-1.714-9.465,0.6441-18.65,11.03-25.62,8.947-8.613,20.56-15.62,33.34-15.52z"/>
+  <path id="lowerStripe" fill="url(#gr3)" d="m517.6,527.9c-25.1-20.79-45.46-46.78-60.44-75.67,2.324-8.316,29.89,1.936,33.68,14.06,11.03,19.58,13.76,42.94,26.76,61.61z"/>
+  <path id="upperStripe" fill="url(#gr2)" d="m470.7,393.2c22.83,0.688,38.75,20.3,50.1,37.98-14.93-20.33-39.46-40.08-66.22-32.43-19.8,8.391,4.025-6.012,12.49-5.375l3.634-0.1652z"/>
+  <path id="beak" transform="translate(65,-55) rotate(8)" fill="#ffe300" d="m425.9,421.7c8.925,10.77-6.599,16.93-13.94,22.36-18.02,13.62-34.58,29.07-50.25,45.31,19.58-24.19,41.39-46.52,64.19-67.67z"/>
+  <circle cx="450" cy="420" r="5" stroke-width="3" fill="white" stroke="#222"/>
+  <circle cx="448" cy="422" r="3" fill="#222"/>
+  
+  <g transform="translate(404,173) rotate(-20)">
+    <g>
+      <path transform="translate(-320,-300) rotate(20)" id="frontWing" fill="#ffe300" d="m726.1,350.5c-7.028,21.6-30.5,30.97-49.28,40.2-22.89,9.943-46.79,17.44-70.99,23.46,38.33-7.785,76.8-18.89,110.4-39.39-10.23,16.65-31.34,21.22-48.58,27.54-20.04,6.108-40.53,10.69-61.16,14.31,34.3-4.401,67.83-13.58,100.5-24.76-15.34,14.82-39.04,15.7-58.8,20.9-8.476,1.801-34.65,5.69-34.31,5.586,28.45-3.759,56.91-7.655,85.12-12.98-16.58,13.08-39.55,12.61-59.58,15.65-7.478,1.088-42.62,2.467-20.31,1.865,19.82-0.298,39.65-0.8826,59.47-0.2712-23.58,10.56-50.61,6.568-75.6,4.555,19.99,3.841,40.12,7.42,60.49,8.447-12.25,13.58-34.37,5.043-50.49,3.72-7.892-1.43-20.34-4.561-5.655-0.7997,14.98,4.054,29.99,8.154,44.54,13.61-15.58,10.68-36.1-2.738-51.96-7.57,10.44,5.294,30.97,14.01,31.85,21.65-13.39-1.972-33.3-14.95-40.33-18.71,8.564,6.573,33.33,20.46,28.34,26.98-9.588-1.633-30.98-21.45-28.58-18.74,6.439,6.092,23.72,22.26,18.45,24.92-7.273-3.468-26.79-21.97-23.38-18.32,8.571,5.339,25.18,33.19,6.204,17.92-6.476-4.947-22.48-22.17-9.246-7.574,7.105,6.125,15.55,24.05,0.7374,10.77-5.991-4.54-16.69-16.5-6.41-3.823,4.644,5.628,11.58,19.5,0.0574,9.134-7.023-5.185-19.4-19.57-7.604-4.726,8.723,10.02,4.219,13.73-4.837,3.619-6.033-5.303-13.17-15.3-4.705-2.806,4.774,6.504,7.834,16.87-1.442,6.712-12.62-10.96-23.96-24.79-27.58-41.48-0.4453-10.27,54.11-32.38,60.51-35.17,45.7-19.24,92.94-36.22,134.1-64.43z"/>
+      <animateTransform begin="0s" repeatCount="indefinite" attributeName="transform" values="1 1; -1 1; 1 1" dur="0.4s" type="scale"/>
+    </g>
+  </g>
+
+  <animateTransform id="colibriIn" attributeName="transform" type="translate" values="0 -1200; -225 -570" dur="&presDur;ms" begin="indefinite" repeatCount="1" fill="freeze"/>
+  <animateTransform id="colibriOut" attributeName="transform" type="translate" values="-225 -570; -700 -1200" dur="&presDur;ms" begin="indefinite" repeatCount="1" fill="freeze"/>
+  <set attributeName="display" to="none" begin="colibriOut.end"/>
+  <set attributeName="display" to="block" begin="colibriIn.begin"/>
+</g>
+
+
+<html:audio id="musicSound" preload="true" oncanplaythrough="checkme()" onended="this.play()">
+  <html:source src="chanchan6.ogg" type="audio/ogg"/>
+  <html:source src="chanchan6.mp3" type="audio/mp3"/>
+</html:audio>
+<html:audio id="colibriSound" preload="true" oncanplaythrough="checkme()">
+  <html:source src="bird.ogg" type="audio/ogg"/>
+  <html:source src="bird.mp3" type="audio/mp3"/>
+</html:audio>
+<html:audio id="carSound" preload="true" oncanplaythrough="checkme()">
+  <html:source src="car.ogg" type="audio/ogg"/>
+  <html:source src="car.mp3" type="audio/mp3"/>
+</html:audio>
+<html:audio id="tileSound" preload="true" oncanplaythrough="checkme()">
+  <html:source src="whip.ogg" type="audio/ogg"/>
+  <html:source src="whip.mp3" type="audio/mp3"/>
+</html:audio>
+
+
+<script type="text/javascript">
+  // Gecko load event workaround
+  var pageImages = document.getElementById("dominos").getElementsByTagName("image");
+  for (var i in pageImages) if (pageImages[i].addEventListener) pageImages[i].addEventListener("load", checkme, false);
+
+  try { // Windows Safari without QuickTime audio/video canplaythrough event workaround
+    new Audio();
+  } catch (e) {
+    checkme();
+    checkme();
+    checkme();
+    checkme();
+  }
+
+  var sets = document.getElementById("dominoEvents").getElementsByTagName("set");
+  for (var i in sets) {
+    if (sets[i].addEventListener) sets[i].addEventListener("beginEvent", imageShow, false);
+  }
+  
+  window.setTimeout(function(){if (objectCounter &lt; 35) { objectCounter = 34; checkme();}}, 10000); // Gecko audio event workaround, do not wait any longer :-(
+</script>
+
+</svg>
