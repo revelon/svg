@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>Pacman 6, by marek.raida@gmail.com</title>
+<script type="text/ecmascript" xlink:href="../fakesmile/smil.user.js"/>
+
+<g transform="translate(70 70) scale(0.6)">
+  <circle r="50" fill="none" stroke="#22f" stroke-width="99" stroke-dasharray="300,2" transform="rotate(15)">
+    <animate attributeName="stroke-dasharray" dur="1s" repeatCount="indefinite" values="280,40; 300,0; 280,40"/>
+  </circle>
+  <circle cy="-40" r="8" fill="#000" stroke="white" stroke-width="4"/>
+</g>
+
+</svg>

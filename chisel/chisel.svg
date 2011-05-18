@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
+  <title>SVG Chisel TEXT</title>
+  <desc>by Marek Raida, marek.raida@gmail.com</desc>
+
+  <script type="text/ecmascript" xlink:href="../fakesmile/smil.user.js"/>
+
+  <defs>
+    <linearGradient id="grad1" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop stop-color="#406666" offset="0%"/>
+      <stop stop-color="#fcfcfc" offset="25%"/>
+      <stop stop-color="#406666" offset="50%"/>
+      <stop stop-color="#fcfcfc" offset="80%"/>
+      <stop stop-color="#507676" offset="100%"/>
+      <animate attributeName="y2" begin="0s" dur="8s" values="1;.4;1" repeatCount="indefinite"/>
+    </linearGradient>
+    <linearGradient id="grad2" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop stop-color="#fcfcfc" offset="0%"/>
+      <stop stop-color="#406666" offset="25%"/>
+      <stop stop-color="#fcfcfc" offset="50%"/>
+      <stop stop-color="#406666" offset="80%"/>
+      <stop stop-color="#fcfcfc" offset="100%"/>
+      <animate attributeName="y1" begin="0s" dur="10s" values="0;.1;0" repeatCount="indefinite"/>
+    </linearGradient>
+    <linearGradient id="grad3" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop stop-color="#222" offset="0%"/>
+      <stop stop-color="#888" offset="55%"/>
+      <stop stop-color="#000" offset="100%"/>
+    </linearGradient>
+  </defs>
+
+  <g font-size="120px" font-family="sans-serif" font-weight="bold" text-anchor="middle">
+    <g>
+      <text x="600" y="100" fill="white" stroke-width="9" stroke="url(#grad3)" id="t1">MAREK RAIDA</text>
+      <animate attributeName="opacity" begin="0s" dur="2s" values="1;0.3;1" repeatCount="indefinite"/>
+    </g>
+    <text x="600" y="100" fill="url(#grad1)" stroke-width="6" stroke="url(#grad2)" id="t2">MAREK RAIDA</text>
+  </g>
+  
+  <script type="text/javascript">
+    var svgns = "http://www.w3.org/2000/svg";
+    var texts = new Array("WELCOME", "TO THE", "AWESOME", "SVG CHISEL", "TEXT EFFECT", "BE AWARE OF", "THE POWER", "OF PURE SVG", "AND USE IT...", "USE IT A LOT");
+    var t1 = document.getElementById("t1");
+    var t2 = document.getElementById("t2");
+    var pos = 0;
+    
+    function changeText() {
+      if (pos == texts.length) pos = 0;
+      t1.firstChild.data = texts[pos];
+      t2.firstChild.data = texts[pos];
+      pos++;
+    }
+    window.setInterval("changeText()", 1500);
+  </script>
+<image xlink:href="http://www.google-analytics.com/__utm.gif?utmwv=4.7.1&amp;utmn=21830374&amp;utmhn=svg.kvalitne.cz&amp;utmcs=UTF-8&amp;utmsr=1920x1080&amp;utmsc=24-bit&amp;utmul=en-us&amp;utmje=1&amp;utmfl=10.0%20r45&amp;utmdt=SVG%C2%A0%E2%80%94%C2%A0It%27s%20in%20your%20hands...&amp;utmhid=1377849700&amp;utmr=-&amp;utmp=%2Findex2.htm&amp;utmac=UA-11950721-1&amp;utmcc=__utma%3D251371972.1884550355.1260220320.1272562824.1272576758.56%3B%2B__utmz%3D251371972.1263752798.41.3.utmcsr%3Dgoogle%7Cutmccn%3D(organic)%7Cutmcmd%3Dorganic%7Cutmctr%3Dsvg%2520smil%2520demo%3B" width="1" height="1"/>
+</svg>

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg">
+
+  <rect x="0" y="0" width="200" height="160" style="fill:none;stroke:blue;stroke-width:1px"/>
+  <g style="fill-opacity:0.7; stroke:black; stroke-width:0.05cm;" transform="translate(0 -45)">
+    <circle cx="3cm" cy="0cm" r="40" style="fill:blue;" transform="translate(-45,95)" />
+    <circle cx="3cm" cy="0cm" r="40" style="fill:green;" transform="translate(-15,150)" />
+    <circle cx="3cm" cy="0cm" r="40" style="fill:red;" transform="translate(-70,150)"/>
+  </g>
+  <ellipse cx="155" cy="30" rx="40" ry="20" fill="green" stroke="black" stroke-width="0.5"/>
+  <ellipse cx="165" cy="80" rx="20" ry="50" fill="gray" stroke="white" stroke-width="5px"/>
+
+</svg>

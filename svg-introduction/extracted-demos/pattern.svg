@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<script type="text/ecmascript" xlink:href="smil.user.js"/>
+
+<pattern id="back" patternUnits="userSpaceOnUse" x="0" y="0" width="60" height="60">
+  <g transform="translate(30 30)">
+    <ellipse rx="30" ry="8" fill="red">
+      <animateTransform attributeName="transform" type="rotate" begin="0s" dur="8s" from="0" to="360" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse rx="30" ry="8" fill="green">
+      <animateTransform attributeName="transform" type="rotate" begin="4s" dur="8s" from="0" to="-360" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse rx="30" ry="8" fill="blue">
+      <animateTransform attributeName="transform" type="rotate" begin="1s" dur="8s" from="0" to="360" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse rx="30" ry="8" fill="yellow">
+      <animateTransform attributeName="transform" type="rotate" begin="5s" dur="8s" from="0" to="-360" repeatCount="indefinite"/>
+    </ellipse>
+  </g>
+</pattern>
+
+<pattern id="back2" patternUnits="userSpaceOnUse" x="0" y="0" width="17" height="17">
+  <rect x="-30" y="-30" width="60" height="60" fill="deepskyblue" stroke="none"/>
+  <rect width="12" height="12" fill="none" stroke="white" stroke-width="0.5" transform="rotate(45) translate(6 -6)">
+    <animate attributeName="stroke-width" begin="0s" dur="8s" values="0.25; 2; 0.25" repeatCount="indefinite"/>
+  </rect>
+</pattern>
+
+<ellipse cx="220" cy="140" rx="185" ry="100" fill="url(#back)" stroke="url(#back2)" stroke-width="40"/>
+
+</svg>

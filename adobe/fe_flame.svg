@@ -1,0 +1,57 @@
+<!--
+NOTICE:  [1999-2001] Adobe Systems Incorporated.  Adobe hereby grants you the rights to reproduce, modify and distribute this file and its contents, not including any fonts, audio files or raster images included or embedded in or linked to this file, (the "Software"), and to grant such rights to other parties subject to the following:  This notice shall be included in any copy of the Software or any portion thereof.  THE SOFTWARE IS PROVIDED TO YOU AS-IS, WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT.  IN NO EVENT SHALL ADOBE BE LIABLE TO YOU OR ANY OTHER PARTY FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE.
+Modified by  Marek Raida
+-->
+<svg height="80" width="300" xml:space="preserve" viewBox="0 0 300 80"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>fe_flame.svg</title> 
+<desc>text rendered with "flaming" filter effect</desc>
+
+	<defs>
+
+		<filter id="MyFilter" filterUnits="objectBoundingBox" x="-5%" y="-40%" width="110%" height="140%">
+
+			<feMorphology result="a" radius="1.2" operator="dilate" in="SourceAlpha"/>
+
+			<feMorphology result="b" radius="1.2" operator="dilate" in="a"/>
+
+			<feOffset result="b1" dy="-4" in="b"/>
+
+			<feTurbulence result="b2" type="fractalNoise" numOctaves="5" baseFrequency=".2" in="b1"/>
+
+			<feDisplacementMap result="b3" yChannelSelector="A" xChannelSelector="R" scale="3" in2="b2" in="b1"/>
+
+			<feColorMatrix result="b3" values="0 0 0 1 0  0 0 0 1 0  0 0 0 0 0  0 0 0 1 0" type="matrix" in="b3"/>
+
+			<feGaussianBlur result="b3" in="b3" stdDeviation="1"/>
+
+			<feOffset result="c1" dy="-8" in="b"/>
+
+			<feTurbulence result="c2" type="fractalNoise" numOctaves="10" baseFrequency=".05" in="c1"/>
+
+			<feDisplacementMap result="c3" yChannelSelector="A" xChannelSelector="R" scale="8" in2="c2" in="c1"/>
+
+			<feColorMatrix result="c3" values="0 0 0 1 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 0.9" type="matrix" in="c3"/>
+
+			<feGaussianBlur result="c3" in="c3" stdDeviation="1"/>
+
+			<feMerge>
+
+				<feMergeNode in="c3"/>
+
+				<feMergeNode in="b3"/>
+
+				<feMergeNode in="a"/>
+
+			</feMerge>
+
+		</filter>
+
+	</defs>
+
+<rect height="80" width="300" y="0" x="0"/>
+
+<text style="fill:green;font-size:30px;filter:url(#MyFilter)" y="45" x="25">Blazing SVG!</text>
+
+<image xlink:href="http://www.google-analytics.com/__utm.gif?utmwv=4.7.1&amp;utmn=21830374&amp;utmhn=svg.kvalitne.cz&amp;utmcs=UTF-8&amp;utmsr=1920x1080&amp;utmsc=24-bit&amp;utmul=en-us&amp;utmje=1&amp;utmfl=10.0%20r45&amp;utmdt=SVG%C2%A0%E2%80%94%C2%A0It%27s%20in%20your%20hands...&amp;utmhid=1377849700&amp;utmr=-&amp;utmp=%2Findex2.htm&amp;utmac=UA-11950721-1&amp;utmcc=__utma%3D251371972.1884550355.1260220320.1272562824.1272576758.56%3B%2B__utmz%3D251371972.1263752798.41.3.utmcsr%3Dgoogle%7Cutmccn%3D(organic)%7Cutmcmd%3Dorganic%7Cutmctr%3Dsvg%2520smil%2520demo%3B" width="1" height="1"/>
+
+</svg>

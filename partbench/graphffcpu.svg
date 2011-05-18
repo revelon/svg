@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" font-family="Helvetica, sans-serif" font-size="11px">
+<title>Graph of CPU load caused by different Firefox versions / rendering ways</title>
+<rect width="300" height="300" fill="lightgray"/>
+<line x1="50" x2="50" y1="10" y2="290" stroke="gray" stroke-width="1"/><line x1="150" x2="150" y1="10" y2="290" stroke="gray" stroke-width="1"/><line x1="250" x2="250" y1="10" y2="290" stroke="gray" stroke-width="1"/>
+<text x="42" y="295">50 particles</text><text x="138" y="295">500 particles</text><text x="232" y="295">2500 particles</text>
+<line x1="40" x2="260" y1="280" y2="280" stroke="gray" stroke-width="1"/><line x1="40" x2="260" y1="230" y2="230" stroke="gray" stroke-width="1"/><line x1="40" x2="260" y1="180" y2="180" stroke="gray" stroke-width="1"/><line x1="40" x2="260" y1="130" y2="130" stroke="gray" stroke-width="1"/><line x1="40" x2="260" y1="80" y2="80" stroke="gray" stroke-width="1"/><line x1="40" x2="260" y1="30" y2="30" stroke="gray" stroke-width="1"/>
+<text x="3" y="280">0% CPU</text><text x="3" y="230">25% CPU</text><text x="3" y="180">50% CPU</text><text x="3" y="130">75% CPU</text><text x="3" y="80">100%CPU</text>
+<g transform="scale(1 -1) translate(0 -279)">
+  <polyline stroke="orange" fill="none" stroke-width="2" points="50,118 150,126 250,152"/>
+  <polyline stroke="orange" fill="none" stroke-width="2" points="50,118 150,122 250,144"/>
+  <polyline stroke="orange" fill="none" stroke-width="2" points="50,116 150,108 250,102"/>
+
+  <polyline stroke="#00377f" fill="none" stroke-width="2" points="50,42 150,156 250,156"/>
+  <polyline stroke="#00377f" fill="none" stroke-width="2" points="50,18 150,154 250,152"/>
+  <polyline stroke="#00377f" fill="none" stroke-width="2" points="50,12 150,108 250,104"/>
+
+  <polyline stroke="gray" fill="none" stroke-width="2" points="50,112 150,128 250,152"/>
+  <polyline stroke="gray" fill="none" stroke-width="2" points="50,110 150,124 250,144"/>
+  <polyline stroke="gray" fill="none" stroke-width="2" points="50,108 150,104 250,104"/>
+
+  <polyline stroke="magenta" fill="none" stroke-width="2" points="50,14 150,152 250,156"/>
+  <polyline stroke="magenta" fill="none" stroke-width="2" points="50,10 150,142 250,156"/>
+  <polyline stroke="magenta" fill="none" stroke-width="2" points="50,10 150,54 250,104"/>
+</g>
+<text x="108" y="40" font-size="33px">FIREFOX</text>
+<text x="76" y="76" font-size="33px">COMPARISON</text>
+<text x="120" y="112" font-size="33px">OF CPU</text>
+</svg>

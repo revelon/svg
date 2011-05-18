@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg">
+
+  <rect x="0" y="0" width="200" height="80" fill="none" stroke="blue" stroke-width="1"/>
+  <rect x="10" y="10" width="60" height="60" rx="5" fill="red"/>
+  <rect x="0" y="0" width="80" height="30" rx="5" ry="5" fill="none" stroke="darkgreen" 
+        stroke-width="3" transform="translate(110 5) rotate(30)"/>
+
+</svg>

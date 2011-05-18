@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>Pacman 9, by marek.raida@gmail.com</title>
+<script type="text/ecmascript" xlink:href="../fakesmile/smil.user.js"/>
+
+<mask id="pac11">
+  <rect x="-100" y="0" width="200" height="70" fill="white"/>
+</mask>
+<g transform="translate(80 80)">
+  <circle r="70" fill="lightgreen" mask="url(#pac11)">
+    <animateTransform attributeName="transform" type="rotate" begin="0s" dur="1s" values="0; 30; 0" repeatCount="indefinite"/>
+  </circle>
+  <g>
+    <circle r="70" fill="lightgreen" mask="url(#pac11)" transform="rotate(180)"/>
+    <animateTransform attributeName="transform" type="rotate" begin="0s" dur="1s" values="0; -30; 0" repeatCount="indefinite"/>  
+  </g>
+  <circle cy="-35" r="6" fill="#000" stroke="white" stroke-width="3"/>
+</g>
+
+</svg>

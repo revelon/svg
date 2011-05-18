@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" onload="startup(evt)"> 
+<script type="text/javascript" xlink:href="replicator4.js"/>
+
+<linearGradient id="f" x1="1" y1="0.45" x2="0.11" y2="0.9">
+  <stop offset="0" stop-color="#ff6"/>
+  <stop offset=".3" stop-color="#000"/>
+  <stop offset="1" stop-color="#cf8"/>
+</linearGradient>
+
+<circle fill="url(#f)" stroke="none" cx="560" cy="300">
+  <replicate repeatCount="30">
+    <replicateAttribute attributeName="r" values="70;2"/>
+  </replicate>
+</circle>
+
+<circle fill="url(#f)" stroke="none">
+  <replicate repeatCount="70">
+    <replicateAttribute attributeName="cx" values="500;400"/>
+    <replicateAttribute attributeName="cy" values="300;300"/>
+    <replicateAttribute attributeName="r" values="40;60"/>
+  </replicate>
+</circle>
+
+<circle fill="url(#f)" stroke="none">
+  <replicate repeatCount="70">
+    <replicateAttribute attributeName="cx" values="560;560"/>
+    <replicateAttribute attributeName="cy" values="360;460"/>
+    <replicateAttribute attributeName="r" values="40;70"/>
+  </replicate>
+</circle>
+
+<circle fill="url(#f)" stroke="none">
+  <replicate repeatCount="70">
+    <replicateAttribute attributeName="cx" values="620;720"/>
+    <replicateAttribute attributeName="cy" values="300;300"/>
+    <replicateAttribute attributeName="r" values="40;80"/>
+  </replicate>
+</circle>
+
+<circle fill="url(#f)" stroke="none">
+  <replicate repeatCount="70">
+    <replicateAttribute attributeName="cx" values="560;560"/>
+    <replicateAttribute attributeName="cy" values="240;140"/>
+    <replicateAttribute attributeName="r" values="40;90"/>
+  </replicate>
+</circle>
+
+</svg>

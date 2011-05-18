@@ -1,0 +1,21 @@
+<svg width="400" height="400" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 400 400">
+  <script type="text/ecmascript" xlink:href="smil.user.js"/>
+  <g transform="scale(.7)">
+  <rect width="600" height="600" fill="black"/>
+  <g transform="translate(300, 300)">
+    <image x="-75" y="-75" width="150" height="150" xlink:href="../files/sun.jpg"/>
+    <g transform="rotate(0)">
+      <g transform="translate(-200,0)">
+        <image x="-25" y="-25" width="50" height="50" xlink:href="../files/earth.jpg"/>
+        <g transform="rotate(0)">
+          <g transform="translate(55,0)">
+            <image x="-10" y="-10" width="20" height="20" xlink:href="../files/moon.jpg"/>
+          </g>
+          <animateTransform attributeName="transform" type="rotate" from="0" to="359" dur="3s" repeatCount="indefinite"/>
+        </g>
+      </g>
+      <animateTransform attributeName="transform" type="rotate" from="0" to="359" dur="39.1s" repeatCount="indefinite"/>
+    </g>
+  </g>
+  </g>
+</svg>

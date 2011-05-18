@@ -1,0 +1,21 @@
+<svg width="310" height="300" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<script type="text/ecmascript" xlink:href="smil.user.js"/>
+<g transform="scale(.5)">
+<text x="150" y="75" style="text-anchor:middle;font-size:24px">calcMode="discrete"</text>
+<circle cx="150" cy="250" r="125" fill="red">
+<animate attributeName="fill" values="red;blue;yellow;red" calcMode="discrete" dur="4s" begin="0s" repeatDur="indefinite"/>
+</circle>
+<text x="450" y="75" style="text-anchor:middle;font-size:24px">calcMode="linear"</text>
+<circle cx="450" cy="250" r="125" fill="red">
+<animate attributeName="fill" values="red;blue;yellow;red" calcMode="linear" dur="4s" begin="0s" repeatDur="indefinite"/>
+</circle>
+<rect x="0" y="425" width="300" height="30" fill="cyan">
+<animateTransform attributeName="transform" type="translate" values="0,0;0,30;0,60;0,90" calcMode="discrete" dur="4s" begin="0s" repeatDur="indefinite"/>
+</rect>
+<text style="text-anchor:middle;font-size:24px"><tspan x="150" y="450">red</tspan><tspan x="150" y="480">blue</tspan><tspan x="150" y="510">yellow</tspan><tspan x="150" y="540">red</tspan></text>
+<rect x="300" y="425" width="300" height="30" fill="cyan">
+<animateTransform attributeName="transform" type="translate" values="0,0;0,30;0,60;0,90" calcMode="linear" dur="4s" begin="0s" repeatDur="indefinite"/>
+</rect>
+<text style="text-anchor:middle;font-size:24px"><tspan x="450" y="450">red</tspan><tspan x="450" y="480">blue</tspan><tspan x="450" y="510">yellow</tspan><tspan x="450" y="540">red</tspan></text>
+</g>
+</svg>

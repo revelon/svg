@@ -1,0 +1,191 @@
+<svg width="160px" height="220px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<style type="text/css">
+	.css_bee_pattes {stroke:#000000;stroke-width:4;fill:#884400}
+	.css_bee_bouche {stroke:#000000;stroke-width:4;fill:white}
+	.css_bee_ventre {stroke:#000000;stroke-width:4;fill:#FFCC00}
+	.css_bee_ailes  {stroke:#000000;stroke-width:4;fill:#eeeeee}
+</style>
+
+<title><!-- [bee] animation by Philippe Elsass - copyright (c) 2001 --></title>
+
+<g transform="translate(36,100) scale(0.5)">
+
+<g transform="translate(-20,10)" >
+<desc><!-- [bee_ant2] animation - frame #1 --></desc>
+<path id="bee_ant2" class="css_bee_ant" d="
+M6,-56C4,-86 -3,-98 -19,-111C-35,-124 -45,-122 -45,-114C-45,-106 -28,-105 -17,-91C-6,-77 -5,-77 -2,-49"
+  />
+<desc><!-- [bee_ant2] animation - from #1 to #2 --></desc>
+<animate id="bee_ant2_frame1" xlink:href="#bee_ant2" begin="0s;bee_ant2_frame2.end" dur="0.6s"
+  attributeName="d" attributeType="XML" fill="freeze"
+  from="
+M6,-56C4,-86 -3,-98 -19,-111C-35,-124 -45,-122 -45,-114C-45,-106 -28,-105 -17,-91C-6,-77 -5,-77 -2,-49"
+  to="
+M6,-56C1,-86 -2,-101 -20,-106C-38,-111 -48,-100 -43,-92C-38,-84 -32,-102 -19,-93C-6,-84 -7,-77 -2,-49"
+  />
+<desc><!-- [bee_ant2] animation - from #2 to #1 --></desc>
+<animate id="bee_ant2_frame2" xlink:href="#bee_ant2" begin="bee_ant2_frame1.end" dur="0.6s"
+  attributeName="d" attributeType="XML" fill="freeze"
+  from="
+M6,-56C1,-86 -2,-101 -20,-106C-38,-111 -48,-100 -43,-92C-38,-84 -32,-102 -19,-93C-6,-84 -7,-77 -2,-49"
+  to="
+M6,-56C4,-86 -3,-98 -19,-111C-35,-124 -45,-122 -45,-114C-45,-106 -28,-105 -17,-91C-6,-77 -5,-77 -2,-49"
+  />
+</g>
+  
+<g transform="translate(-25,-5)" >
+<desc><!-- [bee_ailes2] animation - frame #1 --></desc>
+<path id="bee_ailes2" class="css_bee_ailes" d="
+M100,-30C97,-75 81,-111 97,-154C113,-197 173,-173 168,-130C163,-87 120,-47 115,-22
+M123,-18C142,-55 157,-104 185,-116C213,-128 243,-90 214,-54C185,-18 147,-20 131,-8"
+  />
+<desc><!-- [bee_ailes2] animation - from #1 to #2 --></desc>
+<animate id="bee_ailes2_frame1" xlink:href="#bee_ailes2" begin="0s;bee_ailes2_frame2.end" dur="0.3s"
+  attributeName="d" attributeType="XML" fill="freeze"
+  from="
+M100,-30C97,-75 81,-111 97,-154C113,-197 173,-173 168,-130C163,-87 120,-47 115,-22
+M123,-18C142,-55 157,-104 185,-116C213,-128 243,-90 214,-54C185,-18 147,-20 131,-8"
+  to="
+M100,-30C112,-71 93,-136 124,-157C155,-178 194,-173 189,-130C184,-87 127,-32 115,-22
+M123,-18C154,-39 172,-92 198,-108C224,-124 262,-82 227,-45C192,-8 144,-8 131,-8"
+  />
+<desc><!-- [bee_ailes2] animation - from #2 to #1 --></desc>
+<animate id="bee_ailes2_frame2" xlink:href="#bee_ailes2" begin="bee_ailes2_frame1.end" dur="0.3s"
+  attributeName="d" attributeType="XML" fill="freeze"
+  from="
+M100,-30C112,-71 93,-136 124,-157C155,-178 194,-173 189,-130C184,-87 127,-32 115,-22
+M123,-18C154,-39 172,-92 198,-108C224,-124 262,-82 227,-45C192,-8 144,-8 131,-8"
+  to="
+M100,-30C97,-75 81,-111 97,-154C113,-197 173,-173 168,-130C163,-87 120,-47 115,-22
+M123,-18C142,-55 157,-104 185,-116C213,-128 243,-90 214,-54C185,-18 147,-20 131,-8"
+  />
+</g>
+
+<g transform="translate(-20,-10)" >
+<desc><!-- [bee_pattes2] animation - frame #1 --></desc>
+<path id="bee_pattes2" class="css_bee_pattes" d="
+M41,125C46,158 24,182 29,204C34,226 50,227 45,205C40,183 58,159 54,129
+M80,144C80,172 97,198 117,208C137,218 148,201 131,198C114,195 94,165 90,144
+M8,98C0,126 -24,132 -28,156C-32,180 -20,187 -16,166C-12,145 10,123 16,104"
+  />
+<desc><!-- [bee_pattes2] animation - from #1 to #2 --></desc>
+<animate id="bee_pattes2_frame1" xlink:href="#bee_pattes2" begin="0s;bee_pattes2_frame2.end" dur="1s"
+  attributeName="d" attributeType="XML" fill="freeze"
+  from="
+M41,125C46,158 24,182 29,204C34,226 50,227 45,205C40,183 58,159 54,129
+M80,144C80,172 97,198 117,208C137,218 148,201 131,198C114,195 94,165 90,144
+M8,98C0,126 -24,132 -28,156C-32,180 -20,187 -16,166C-12,145 10,123 16,104"
+  to="
+M41,125C35,165 22,151 19,186C16,221 32,214 34,188C36,162 50,161 53,129
+M80,144C83,182 81,203 92,220C103,237 114,226 103,207C92,188 94,167 90,144
+M8,98C-4,116 -30,105 -38,133C-46,161 -30,164 -26,143C-22,122 8,120 16,104"
+  />
+<desc><!-- [bee_pattes2] animation - from #2 to #1 --></desc>
+<animate id="bee_pattes2_frame2" xlink:href="#bee_pattes2" begin="bee_pattes2_frame1.end" dur="1s"
+  attributeName="d" attributeType="XML" fill="freeze"
+  from="
+M41,125C35,165 22,151 19,186C16,221 32,214 34,188C36,162 50,161 53,129
+M80,144C83,182 81,203 92,220C103,237 114,226 103,207C92,188 94,167 90,144
+M8,98C-4,116 -30,105 -38,133C-46,161 -30,164 -26,143C-22,122 8,120 16,104"
+  to="
+M41,125C46,158 24,182 29,204C34,226 50,227 45,205C40,183 58,159 54,129
+M80,144C80,172 97,198 117,208C137,218 148,201 131,198C114,195 94,165 90,144
+M8,98C0,126 -24,132 -28,156C-32,180 -20,187 -16,166C-12,145 10,123 16,104"
+  />
+</g>
+
+<desc><!-- [bee_ventre] animation - frame #1 --></desc>
+<path id="bee_ventre" class="css_bee_ventre" d="
+M-49,6C-48,-57 -14,-71 -3,-74C8,-77 53,-79 109,-41C165,-3 203,24 191,82C179,140 133,182 61,163
+C-11,144 -50,69 -49,6z"
+  />
+
+<desc><!-- [bee_ant] animation - frame #1 --></desc>
+<path id="bee_ant" class="css_bee_ant" d="
+M6,-56C4,-86 -3,-98 -19,-111C-35,-124 -45,-122 -45,-114C-45,-106 -28,-105 -17,-91C-6,-77 -5,-77 -2,-49"
+  />
+<desc><!-- [bee_ant] animation - from #1 to #2 --></desc>
+<animate id="bee_ant_frame1" xlink:href="#bee_ant" begin="0s;bee_ant_frame2.end" dur="0.6s"
+  attributeName="d" attributeType="XML" fill="freeze"
+  from="
+M6,-56C4,-86 -3,-98 -19,-111C-35,-124 -45,-122 -45,-114C-45,-106 -28,-105 -17,-91C-6,-77 -5,-77 -2,-49"
+  to="
+M6,-56C1,-86 -2,-101 -20,-106C-38,-111 -48,-100 -43,-92C-38,-84 -32,-102 -19,-93C-6,-84 -7,-77 -2,-49"
+  />
+<desc><!-- [bee_ant] animation - from #2 to #1 --></desc>
+<animate id="bee_ant_frame2" xlink:href="#bee_ant" begin="bee_ant_frame1.end" dur="0.6s"
+  attributeName="d" attributeType="XML" fill="freeze"
+  from="
+M6,-56C1,-86 -2,-101 -20,-106C-38,-111 -48,-100 -43,-92C-38,-84 -32,-102 -19,-93C-6,-84 -7,-77 -2,-49"
+  to="
+M6,-56C4,-86 -3,-98 -19,-111C-35,-124 -45,-122 -45,-114C-45,-106 -28,-105 -17,-91C-6,-77 -5,-77 -2,-49"
+  />
+  
+<desc><!-- [bee_yeux] animation - frame #1 --></desc>
+<path id="bee_yeux" class="css_bee_pattes" d="
+M-60,-7C-67,25 -22,53 -11,9C0,-35 -53,-39 -60,-7z" />
+<path id="bee_yeux" class="css_bee_pattes" d="
+M-29,-13C-36,28 12,45 23,1C34,-43 -22,-54 -29,-13z" />
+<path id="bee_bouche" class="css_bee_bouche" d="
+M-20,50C-20,62 22,60 38,41C54,22 67,-9 57,-12C47,-15 46,12 26,32
+C6,52 -20,38 -20,50z" />
+
+<desc><!-- [bee_ailes] animation - frame #1 --></desc>
+<path id="bee_ailes" class="css_bee_ailes" d="
+M100,-30C97,-75 81,-111 97,-154C113,-197 173,-173 168,-130C163,-87 120,-47 115,-22
+M123,-18C142,-55 157,-104 185,-116C213,-128 243,-90 214,-54C185,-18 147,-20 131,-8"
+  />
+<desc><!-- [bee_ailes] animation - from #1 to #2 --></desc>
+<animate id="bee_ailes_frame1" xlink:href="#bee_ailes" begin="0s;bee_ailes_frame2.end" dur="0.3s"
+  attributeName="d" attributeType="XML" fill="freeze"
+  from="
+M100,-30C97,-75 81,-111 97,-154C113,-197 173,-173 168,-130C163,-87 120,-47 115,-22
+M123,-18C142,-55 157,-104 185,-116C213,-128 243,-90 214,-54C185,-18 147,-20 131,-8"
+  to="
+M100,-30C112,-71 93,-136 124,-157C155,-178 194,-173 189,-130C184,-87 127,-32 115,-22
+M123,-18C154,-39 172,-92 198,-108C224,-124 262,-82 227,-45C192,-8 144,-8 131,-8"
+  />
+<desc><!-- [bee_ailes] animation - from #2 to #1 --></desc>
+<animate id="bee_ailes_frame2" xlink:href="#bee_ailes" begin="bee_ailes_frame1.end" dur="0.3s"
+  attributeName="d" attributeType="XML" fill="freeze"
+  from="
+M100,-30C112,-71 93,-136 124,-157C155,-178 194,-173 189,-130C184,-87 127,-32 115,-22
+M123,-18C154,-39 172,-92 198,-108C224,-124 262,-82 227,-45C192,-8 144,-8 131,-8"
+  to="
+M100,-30C97,-75 81,-111 97,-154C113,-197 173,-173 168,-130C163,-87 120,-47 115,-22
+M123,-18C142,-55 157,-104 185,-116C213,-128 243,-90 214,-54C185,-18 147,-20 131,-8"
+  />
+
+<desc><!-- [bee_pattes] animation - frame #1 --></desc>
+<path id="bee_pattes" class="css_bee_pattes" d="
+M41,125C46,158 24,182 29,204C34,226 50,227 45,205C40,183 58,159 54,129
+M80,144C80,172 97,198 117,208C137,218 148,201 131,198C114,195 94,165 90,144
+M8,98C0,126 -24,132 -28,156C-32,180 -20,187 -16,166C-12,145 10,123 16,104"
+  />
+<desc><!-- [bee_pattes] animation - from #1 to #2 --></desc>
+<animate id="bee_pattes_frame1" xlink:href="#bee_pattes" begin="0s;bee_pattes_frame2.end" dur="1s"
+  attributeName="d" attributeType="XML" fill="freeze"
+  from="
+M41,125C46,158 24,182 29,204C34,226 50,227 45,205C40,183 58,159 54,129
+M80,144C80,172 97,198 117,208C137,218 148,201 131,198C114,195 94,165 90,144
+M8,98C0,126 -24,132 -28,156C-32,180 -20,187 -16,166C-12,145 10,123 16,104"
+  to="
+M41,125C35,165 22,151 19,186C16,221 32,214 34,188C36,162 50,161 53,129
+M80,144C83,182 81,203 92,220C103,237 114,226 103,207C92,188 94,167 90,144
+M8,98C-4,116 -30,105 -38,133C-46,161 -30,164 -26,143C-22,122 8,120 16,104"
+  />
+<desc><!-- [bee_pattes] animation - from #2 to #1 --></desc>
+<animate id="bee_pattes_frame2" xlink:href="#bee_pattes" begin="bee_pattes_frame1.end" dur="1s"
+  attributeName="d" attributeType="XML" fill="freeze"
+  from="
+M41,125C35,165 22,151 19,186C16,221 32,214 34,188C36,162 50,161 53,129
+M80,144C83,182 81,203 92,220C103,237 114,226 103,207C92,188 94,167 90,144
+M8,98C-4,116 -30,105 -38,133C-46,161 -30,164 -26,143C-22,122 8,120 16,104"
+  to="
+M41,125C46,158 24,182 29,204C34,226 50,227 45,205C40,183 58,159 54,129
+M80,144C80,172 97,198 117,208C137,218 148,201 131,198C114,195 94,165 90,144
+M8,98C0,126 -24,132 -28,156C-32,180 -20,187 -16,166C-12,145 10,123 16,104"
+  />
+</g><desc><!-- [bee] animation by Philippe Elsass - copyright (c) 2001 --></desc>
+<image xlink:href="http://www.google-analytics.com/__utm.gif?utmwv=4.7.1&amp;utmn=21830374&amp;utmhn=svg.kvalitne.cz&amp;utmcs=UTF-8&amp;utmsr=1920x1080&amp;utmsc=24-bit&amp;utmul=en-us&amp;utmje=1&amp;utmfl=10.0%20r45&amp;utmdt=SVG%C2%A0%E2%80%94%C2%A0It%27s%20in%20your%20hands...&amp;utmhid=1377849700&amp;utmr=-&amp;utmp=%2Findex2.htm&amp;utmac=UA-11950721-1&amp;utmcc=__utma%3D251371972.1884550355.1260220320.1272562824.1272576758.56%3B%2B__utmz%3D251371972.1263752798.41.3.utmcsr%3Dgoogle%7Cutmccn%3D(organic)%7Cutmcmd%3Dorganic%7Cutmctr%3Dsvg%2520smil%2520demo%3B" width="1" height="1"/>
+</svg>

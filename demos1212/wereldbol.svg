@@ -1,0 +1,42 @@
+<svg width="300px" height="320px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>Nieuw in SVG 1.2 working draft 2</title>
+<g>
+<defs>
+<clipPath id="clip1">
+<circle cx="130" cy="120" r="100" />
+</clipPath>
+</defs>
+<rect x="0" y="0" width="100%" height="100%" fill="#336699" />
+<g clip-path="url(#clip1)">
+<path d="M115,21C86,28 52,57 99,86C120,94 175,96 185,63C184,50 185,32 148,20 M59,47C11,147 252,147 200,46 M41,69C10,188 260,171 217,70 M29,104C31,207 234,205 230,104 M34,144C46,214 203,228 227,142 M46,176C78,222 171,237 213,177" fill="none" stroke="#99CCFF" stroke-width="1px" />
+<g fill="none" stroke="#99CCFF" stroke-width="1px">
+<path d="M130,40C128,27 116,22 111,20"><animate attributeName="d" from="M130,40C128,27 116,22 111,20" to="M130,40C120,27 107,23 97,25" begin="2s" dur="3s" repeatCount="indefinite" /></path>
+<path d="M130,40C120,27 107,23 97,25"><animate attributeName="d" from="M130,40C120,27 107,23 97,25" to="M130,40C111,28 90,28 81,32" begin="2s" dur="3s" repeatCount="indefinite" /></path>
+<path d="M130,40C111,28 90,28 81,32"><animate attributeName="d" from="M130,40C111,28 90,28 81,32" to="M130,40C90,31 78,37 59,48" begin="2s" dur="3s" repeatCount="indefinite" /></path>
+<path d="M130,40C90,31 78,37 59,48"><animate attributeName="d" from="M130,40C90,31 78,37 59,48" to="M130,40C78,40 57,50 41,71" begin="2s" dur="3s" repeatCount="indefinite" /></path>
+<path d="M130,40C78,40 57,50 41,71"><animate attributeName="d" from="M130,40C78,40 57,50 41,71" to="M130,40C76,46 41,63 28,105" begin="2s" dur="3s" repeatCount="indefinite" /></path>
+<path d="M130,40C76,46 41,63 28,105"><animate attributeName="d" from="M130,40C76,46 41,63 28,105" to="M130,40C71,59 24,87 31,143" begin="2s" dur="3s" repeatCount="indefinite" /></path>
+<path d="M130,40C71,59 24,87 31,143"><animate attributeName="d" from="M130,40C71,59 24,87 31,143" to="M130,40C56,84 22,127 44,179" begin="2s" dur="3s" repeatCount="indefinite" /></path>
+<path d="M130,40C56,84 22,127 44,179"><animate attributeName="d" from="M130,40C56,84 22,127 44,179" to="M130,40C86,72 25,158 64,199" begin="2s" dur="3s" repeatCount="indefinite" /></path>
+<path d="M130,40C86,72 25,158 64,199"><animate attributeName="d" from="M130,40C86,72 25,158 64,199" to="M130,40C82,106 56,178 84,215" begin="2s" dur="3s" repeatCount="indefinite" /></path>
+<path d="M130,40C82,106 56,178 84,215"><animate attributeName="d" from="M130,40C82,106 56,178 84,215" to="M130,40C102,124 95,188 105,222" begin="2s" dur="3s" repeatCount="indefinite" /></path>
+<path d="M130,40C102,124 95,188 105,222"><animate attributeName="d" from="M130,40C102,124 95,188 105,222" to="M130,40C131,162 130,193 130,220" begin="2s" dur="3s" repeatCount="indefinite" /></path>
+<path d="M130,40C131,162 130,193 130,220"><animate attributeName="d" from="M130,40C131,162 130,193 130,220" to="M130,40C162,131 169,197 153,221" begin="2s" dur="3s" repeatCount="indefinite" /></path>
+<path d="M130,40C162,131 169,197 153,221"><animate attributeName="d" from="M130,40C162,131 169,197 153,221" to="M130,40C165,89 210,162 176,216 " begin="2s" dur="3s" repeatCount="indefinite" /></path>
+<path d="M130,40C165,89 210,162 176,216"><animate attributeName="d" from="M130,40C165,89 210,162 176,216" to="M130,40C181,74 230,148 197,198" begin="2s" dur="3s" repeatCount="indefinite" /></path>
+<path d="M130,40C181,74 230,148 197,198"><animate attributeName="d" from="M130,40C181,74 230,148 197,198" to="M130,40C195,69 241,130 216,177" begin="2s" dur="3s" repeatCount="indefinite" /></path>
+<path d="M130,40C195,69 241,130 216,177"><animate attributeName="d" from="M130,40C195,69 241,130 216,177" to="M130,40C173,49 241,87 229,144" begin="2s" dur="3s" repeatCount="indefinite" /></path>
+<path d="M130,40C173,49 241,87 229,144"><animate attributeName="d" from="M130,40C173,49 241,87 229,144" to="M130,40C171,41 229,62 231,109" begin="2s" dur="3s" repeatCount="indefinite" /></path>
+<path d="M130,40C171,41 229,62 231,109"><animate attributeName="d" from="M130,40C171,41 229,62 231,109" to="M130,40C160,36 200,44 215,69" begin="2s" dur="3s" repeatCount="indefinite" /></path>
+<path d="M130,40C160,36 200,44 215,69"><animate attributeName="d" from="M130,40C160,36 200,44 215,69" to="M130,40C160,33 184,33 203,48" begin="2s" dur="3s" repeatCount="indefinite" /></path>
+<path d="M130,40C160,33 184,33 203,48"><animate attributeName="d" from="M130,40C160,33 184,33 203,48" to="M130,40C157,26 172,27 180,33" begin="2s" dur="3s" repeatCount="indefinite" /></path>
+<path d="M130,40C157,26 172,27 180,33"><animate attributeName="d" from="M130,40C157,26 172,27 180,33" to="M130,40C136,28 141,23 145,20" begin="2s" dur="3s" repeatCount="indefinite" /></path>
+<path d="M130,40C136,28 141,23 145,20"><animate attributeName="d" from="M130,40C136,28 141,23 145,20" to="M130,40C128,27 116,22 111,20" begin="2s" dur="3s" repeatCount="indefinite" /></path>
+</g>
+<ellipse cx="130" cy="40" rx="30" ry="13" fill="none" stroke="#99CCFF" stroke-width="1px" />
+</g>
+<circle cx="130" cy="120" r="100" fill="none" stroke="#99CCFF" stroke-width="1px" />
+</g>
+<text style="font-size: 30px; font-family: Comic Sans MS; fill: #99CCFF;"><tspan x="40" y="300">Animated globe</tspan></text>
+<image xlink:href="http://www.google-analytics.com/__utm.gif?utmwv=4.7.1&amp;utmn=21830374&amp;utmhn=svg.kvalitne.cz&amp;utmcs=UTF-8&amp;utmsr=1920x1080&amp;utmsc=24-bit&amp;utmul=en-us&amp;utmje=1&amp;utmfl=10.0%20r45&amp;utmdt=SVG%C2%A0%E2%80%94%C2%A0It%27s%20in%20your%20hands...&amp;utmhid=1377849700&amp;utmr=-&amp;utmp=%2Findex2.htm&amp;utmac=UA-11950721-1&amp;utmcc=__utma%3D251371972.1884550355.1260220320.1272562824.1272576758.56%3B%2B__utmz%3D251371972.1263752798.41.3.utmcsr%3Dgoogle%7Cutmccn%3D(organic)%7Cutmcmd%3Dorganic%7Cutmctr%3Dsvg%2520smil%2520demo%3B" width="1" height="1"/>
+</svg>

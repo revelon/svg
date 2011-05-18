@@ -1,0 +1,64 @@
+<svg width="320px" height="192px"
+  viewBox="-120 0 320 192" font-family="sans-serif"
+  shape-rendering="optimizeSpeed" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>A10.2 - Scriptable mask - 2 masks</title>
+<desc>
+  Priklad animuje masku aplikovanou na obraz 
+  a ukazuje jak snadno muzete v SVG vyrobit 
+  tuto Flashovou animaci (bez skriptu!).
+  Autor: Martin Hejral
+</desc>
+<defs>
+<!-- z anim. objektu vyrobime orez -->
+<clipPath id="orez" x="0" y="0" width="200" height="192"
+          shape-rendering="optimizeSpeed">
+  <!-- animovane prouzky-->
+  <rect x="0" y="0"   width="300" height="16" />
+  <rect x="0" y="32"  width="300" height="16" />
+  <rect x="0" y="64"  width="300" height="16" />
+  <rect x="0" y="96"  width="300" height="16" />
+  <rect x="0" y="128" width="300" height="16" />
+  <rect x="0" y="160" width="300" height="16" />
+  <!-- dve animace vytvari efekt 'shora-dolu' -->
+  <animateTransform attributeName="transform" 
+    type="translate" values="-100;-60;320" dur="4s" 
+    fill="freeze" additive="sum" repeatCount="indefinite" />
+  <animateTransform attributeName="transform" 
+    type="rotate" values="90 280 -80;0 320 0;0 320 0" dur="4s" 
+    fill="freeze" additive="sum" repeatCount="indefinite" />
+</clipPath>
+<!-- 2. anim. orezova cesta -->
+<clipPath id="orez180" x="0" y="0" width="200" height="192"
+          shape-rendering="optimizeSpeed">
+  <!-- animovane prouzky-->
+  <rect x="0" y="0"   width="300" height="16" />
+  <rect x="0" y="32"  width="300" height="16" />
+  <rect x="0" y="64"  width="300" height="16" />
+  <rect x="0" y="96"  width="300" height="16" />
+  <rect x="0" y="128" width="300" height="16" />
+  <rect x="0" y="160" width="300" height="16" />
+  <!-- 2 anim. vytvari efekt 'zdola-nahoru' -->
+  <animateTransform attributeName="transform" 
+    type="translate" values="0 16;-40 16;-420 16" dur="4s" 
+    fill="freeze" additive="sum" repeatCount="indefinite" />
+  <animateTransform attributeName="transform" 
+    type="rotate" values="90 40 272;0 0 192;0 0 192" dur="4s" 
+    fill="freeze" additive="sum" repeatCount="indefinite" />
+</clipPath>
+</defs>
+<!-- nastavime 1. animovanou masku -->
+<image clip-path="url(#orez)" width="200" height="200" xlink:href="a10.jpg" />
+<!-- nastavime 2. animovanou masku -->
+<image clip-path="url(#orez180)" width="200" height="200" xlink:href="a10.jpg" />
+<!-- hotovo - jak proste mily Watsone -->
+<!-- grafika leveho okraje -->
+<rect x="-120" y="0" width="120" height="192" fill="#8cd"/>
+<text font-family="Helvetica" font-size="15" 
+  x="-100" y="186" transform="rotate(-90,-100,186)">
+  SVG demo pro Interval.CZ
+</text>
+<!-- obrys platna -->
+<rect x="-120" y="0" width="319" height="191" 
+      fill="none" stroke="blue" />
+<image xlink:href="http://www.google-analytics.com/__utm.gif?utmwv=4.7.1&amp;utmn=21830374&amp;utmhn=svg.kvalitne.cz&amp;utmcs=UTF-8&amp;utmsr=1920x1080&amp;utmsc=24-bit&amp;utmul=en-us&amp;utmje=1&amp;utmfl=10.0%20r45&amp;utmdt=SVG%C2%A0%E2%80%94%C2%A0It%27s%20in%20your%20hands...&amp;utmhid=1377849700&amp;utmr=-&amp;utmp=%2Findex2.htm&amp;utmac=UA-11950721-1&amp;utmcc=__utma%3D251371972.1884550355.1260220320.1272562824.1272576758.56%3B%2B__utmz%3D251371972.1263752798.41.3.utmcsr%3Dgoogle%7Cutmccn%3D(organic)%7Cutmcmd%3Dorganic%7Cutmctr%3Dsvg%2520smil%2520demo%3B" width="1" height="1"/>
+</svg>

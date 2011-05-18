@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>Pacman 2, by marek.raida@gmail.com</title>
+<script type="text/ecmascript" xlink:href="../fakesmile/smil.user.js"/>
+
+<g transform="translate(-20 -875)">
+  <path fill="gold" d="m 193.78828,981.8922 a 83.490173,83.490173 0 1 1 0,-28.99583 l -82.22177,14.49792 z">
+    <animate id="xto" begin="0s; xfro.end" dur="0.5s" attributeName="d" 
+      from="m 193.78828,981.8922 a 83.490173,83.490173 0 1 1 0,-28.99583 l -82.22177,14.49792 z"
+      to="m 175.5237,1021.0607 a 83.490173,83.490173 0 1 1 0,-107.33286 l -63.95719,53.66645 z"/>
+    <animate id="xfro" begin="xto.end" dur="0.5s" attributeName="d" 
+      to="m 193.78828,981.8922 a 83.490173,83.490173 0 1 1 0,-28.99583 l -82.22177,14.49792 z"
+      from="m 175.5237,1021.0607 a 83.490173,83.490173 0 1 1 0,-107.33286 l -63.95719,53.66645 z"/>
+  </path>
+  <circle cy="930" cx="110" r="6" fill="#000" stroke="white" stroke-width="3"/>
+</g>
+
+</svg>

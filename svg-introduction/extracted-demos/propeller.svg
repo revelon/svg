@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>Propeller, by marek.raida@gmail.com</title>
+<script type="text/ecmascript" xlink:href="smil.user.js"/>
+<g>
+<rect x="150" y="50" width="15" height="120" rx="3"/>
+<polygon points="100,100 450,85 450,100 90,220" fill="steelblue"/>
+<ellipse cx="170" cy="140" rx="120" ry="80" fill="steelblue"/>
+<ellipse cx="140" cy="110" rx="55" ry="30" fill="white" opacity=".5"/>
+<g transform="translate(130 0) scale(3 1) skewX(10)" id="bb">
+  <g>
+  <polygon points="-5,0 5,100 -5,100 5,0" id="aa"/>
+  <use xlink:href="#aa" transform="rotate(90 0 50)"/>
+  <use xlink:href="#aa" transform="rotate(45 0 50)" fill="gray"/>
+  <use xlink:href="#aa" transform="rotate(135 0 50)" fill="gray"/>
+  <animateTransform attributeName="transform" type="rotate" dur="4s" from="0 0 50" to="360 0 50" repeatCount="indefinite"/>
+  </g>
+</g>
+<use xlink:href="#bb" transform="scale(.2) rotate(90 1000 1300) translate(10 10)"/>
+<animateTransform attributeName="transform" type="translate" dur="14s" values="0 0; 20 100; 50 20; 0 0" repeatCount="indefinite"/>
+</g>
+</svg>

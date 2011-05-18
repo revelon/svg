@@ -1,0 +1,152 @@
+<!-- ================================================================= -->
+<!--                                                                   -->
+<!--	BallAndChain	       						   -->
+<!--  NOTICE:  [1999-2001] Adobe Systems Incorporated.  Adobe hereby grants you the rights to reproduce, modify and distribute this file and its contents, not including any fonts, audio files or raster images included or embedded in or linked to this file, (the "Software"), and to grant such rights to other parties subject to the following:  This notice shall be included in any copy of the Software or any portion thereof.  THE SOFTWARE IS PROVIDED TO YOU AS-IS, WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT.  IN NO EVENT SHALL ADOBE BE LIABLE TO YOU OR ANY OTHER PARTY FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE.
+-->
+<!--											   -->
+<!--	A simple simulation of swinging a ball on a chain.             -->
+<!--											   -->
+<!--	If this works, it was written by Ric Wright, Adobe Systems	   -->
+<!--	If it doesn't, I don't know who wrote it...			   -->
+<!--	Modified by  Marek Raida -->
+<!-- ================================================================= -->
+
+<svg xml:space="preserve" width="1500" height="1500" onload="on_load(evt)" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>BallAndChain.svg</title> 
+<desc>mouse moves one ball; other ball tied to it with elastic</desc>
+	<defs> 
+		<script><![CDATA[
+			var	doc;
+			var	gEllipse;
+			var	eEllipse;
+			var style;
+			var	bInit = 1;
+			var ballX = 0;
+			var	ballY = 0;
+			var	oldBallX = 0;
+			var	oldBally = 0;
+			var ballVX = 0;
+			var ballVY = 0;
+			var	bMouseDown = 0;
+			var	chainLen = 50;
+			var	friction = 0.95;
+			var	damping  = 50.0;
+			var intervalID;
+			var x = 100;
+			var	y = 100;
+
+			function on_load(evt)
+			{	
+				// This makes the next_update function available to JavaScript functions
+				// defined outside of the SVG document. This is needed so that the
+				// setInterval function can find and call next_update when needed.
+				window.BallAndChain_DoUpdate = DoUpdate;
+
+				window.BallAndChain_svgdoc = document;
+
+				Init();
+
+				intervalID = window.setInterval('BallAndChain_DoUpdate()', 5);
+			}
+
+			function Init()
+			{
+				var doc  = document;
+				gHandle  = doc.getElementById("gHandle");
+				eHandle  = doc.getElementById("eHandle");
+				sHandle  = eHandle.style;
+				gStroke  = doc.getElementById("gStroke");
+				eStroke  = doc.getElementById("eStroke");
+				gBall    = doc.getElementById("gBall");
+				eBall    = doc.getElementById("eBall");
+				sBall    = eBall.style;
+				bInit    = 0;
+
+				oldX     = 100;
+				oldY     = 100;
+				ballX    = 100;
+				ballY    = 200;
+				oldBallX = 100;
+				oldBallY = 200;
+			}
+
+			function mouseMove(evt) 
+			{
+				if (!bMouseDown)
+					return;
+
+				x  = evt.clientX;
+				y  = evt.clientY;
+			}
+
+			function DoUpdate() 
+			{
+				var	dX    = x - oldBallX;
+				var	dY    = y - oldBallY;
+				var angle = Math.atan2( dY, dX );
+
+				// alert('angle = ' + angle);
+
+				dChainX = Math.cos( angle ) * chainLen;
+				dChainY = Math.sin( angle ) * chainLen;
+
+				// alert('dChainX,Y = ' + dChainX + ' ' + dChainY);
+
+				dCX = (dX - dChainX) / damping;
+				dCY = (dY - dChainY) / damping;
+
+				var tx = "matrix(1 0 0 1 " + x + " " + y + ")";
+
+				gHandle.setAttribute("transform", tx );
+
+				ballX = oldBallX + dCX + ballVX;
+				ballY = oldBallY + dCY + ballVY;
+
+				gHandle.setAttribute("cx", x );
+				gHandle.setAttribute("cy", y );
+
+				eBall.setAttribute("cx", ballX );
+				eBall.setAttribute("cy", ballY );
+
+				eStroke.setAttribute("x1", x );
+				eStroke.setAttribute("y1", y );
+				eStroke.setAttribute("x2", ballX );
+				eStroke.setAttribute("y2", ballY );
+
+				ballVX = (ballX - oldBallX) * friction;
+				ballVY = (ballY - oldBallY) * friction;
+				oldBallX = ballX;
+				oldBallY = ballY;
+			}
+
+			function mouseDown(evt) 
+			{
+				bMouseDown = 1;
+			}
+
+			function mouseUp(evt) 
+			{
+				bMouseDown = 0;
+			}
+
+		]]>
+		</script>
+	</defs> 
+
+	<g id="gStroke" >
+		<line id="eStroke" x1="100" y1="100" x2="100" y2="200" style="fill:none;stroke:red;"/>
+	</g> 
+
+	<g id="gBall" >
+		<ellipse id="eBall" cx="100" cy="200" rx="20" ry="20" style="fill:green;"/>
+	</g> 
+
+	<g id="gHandle" transform="matrix(1 0 0 1 100 100)" >
+		<ellipse id="eHandle" cx="0" cy="0" rx="10" ry="10" style="fill:brown;"/>
+	</g> 
+
+	<rect id="canvas" onmousemove="mouseMove(evt)" onmousedown="mouseDown(evt)" onmouseup="mouseUp(evt)" width="1500" height="1500" style="opacity:0" />
+
+<image xlink:href="http://www.google-analytics.com/__utm.gif?utmwv=4.7.1&amp;utmn=21830374&amp;utmhn=svg.kvalitne.cz&amp;utmcs=UTF-8&amp;utmsr=1920x1080&amp;utmsc=24-bit&amp;utmul=en-us&amp;utmje=1&amp;utmfl=10.0%20r45&amp;utmdt=SVG%C2%A0%E2%80%94%C2%A0It%27s%20in%20your%20hands...&amp;utmhid=1377849700&amp;utmr=-&amp;utmp=%2Findex2.htm&amp;utmac=UA-11950721-1&amp;utmcc=__utma%3D251371972.1884550355.1260220320.1272562824.1272576758.56%3B%2B__utmz%3D251371972.1263752798.41.3.utmcsr%3Dgoogle%7Cutmccn%3D(organic)%7Cutmcmd%3Dorganic%7Cutmctr%3Dsvg%2520smil%2520demo%3B" width="1" height="1"/>
+
+</svg> 

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<HEAD>
+<TITLE>Adobe Floor Plan Data</TITLE>
+<META NAME="author" CONTENT="Glen H. Gersten">
+</HEAD>
+
+<body onload="pageInit()">
+<SCRIPT LANGUAGE="JavaScript">
+function pageInit() {
+	if (parent.checkCaller()) parent.checkCaller()
+}
+
+parent.floorNum = "09"
+parent.floorStr = "usa.CA-WestTower-09"
+parent.fTitle = "9th Floor, West Tower, San Jose"
+parent.confs = new Array("Dare", "Doris", "Deep", "Dreamy", "Daisy", "Duck")
+
+parent.Rm = new parent.makeArray(630)
+
+parent.Rm[1] = new parent.confRm('Daisy', '408-555-1212', 'seats 10')
+parent.Rm[2] = new parent.confRm('Dare', '408-555-1212', 'seats 8')
+parent.Rm[3] = new parent.confRm('Deep', '408-555-1212', 'seats 16')
+parent.Rm[4] = new parent.confRm('Doris', '408-555-1212', 'seats 10')
+parent.Rm[5] = new parent.confRm('Dreamy', '408-555-1212', 'seats 16')
+parent.Rm[6] = new parent.confRm('Duck', '408-555-1212', 'seats 8')
+parent.Rm[111] = new parent.occupant("Nicholas Heck%NHeck%408-555-1212%Adobe PageMaker Quality Assurance")
+parent.Rm[210] = new parent.occupant("Jessica Littlefield%JLittlefield%408-555-1212%Adobe LiveMotion Quality Assurance")
+parent.Rm[211] = new parent.occupant("Brandon Appel%BAppel%408-555-1212%Adobe Acrobat InProduction Management")
+parent.Rm[212] = new parent.occupant("Jennifer Terrell%JTerrell%408-555-1212%Adobe Illustrator Quality Assurance")
+parent.Rm[213] = new parent.occupant("Melissa Juliard%MJuliard%408-555-1212%Adobe Acrobat Human Resources")
+parent.Rm[214] = new parent.occupant("Dylan Schechter%DSchechter%408-555-1212%Adobe Illustrator Marketing")
+parent.Rm[215] = new parent.occupant("Ethan Elliott%EElliott%408-555-1212%Adobe Acrobat Human Resources")
+parent.Rm[216] = new parent.occupant("Natalie Cotton%NCotton%408-555-1212%Adobe SVG Viewer Marketing")
+parent.Rm[217] = new parent.occupant("Noah Corder%NCorder%408-555-1212%Adobe PhotoDeluxe Marketing")
+parent.Rm[218] = new parent.occupant("Cody Maitland%CMaitland%408-555-1212%Adobe Acrobat InProduction Quality Assurance")
+parent.Rm[219] = new parent.occupant("Charles Rogers%CRogers%408-555-1212%Adobe Studio Development")
+parent.Rm[220] = new parent.occupant("Savannah Perry%SPerry%408-555-1212%Adobe LiveMotion Development")
+parent.Rm[221] = new parent.occupant("Devin Embery%DEmbery%408-555-1212%Adobe Acrobat Quality Assurance")
+parent.Rm[222] = new parent.occupant("Luke Heck%LHeck%408-555-1212%Adobe InScope Quality Assurance")
+parent.Rm[223] = new parent.occupant("Michelle Barrington%MBarrington%408-555-1212%Adobe Photoshop Quality Assurance")
+parent.Rm[225] = new parent.occupant("Zachary Ulmer%ZUlmer%408-555-1212%Adobe Acrobat InProduction Marketing")
+parent.Rm[226] = new parent.occupant("James Fritz%JFritz%408-555-1212%Adobe SVG Viewer Development")
+parent.Rm[227] = new parent.occupant("Lucas Scheidtz%LScheidtz%408-555-1212%Adobe Studio Development")
+parent.Rm[228] = new parent.occupant("Jason Murdock%JMurdock%408-555-1212%Adobe GoLive Quality Assurance")
+parent.Rm[229] = new parent.occupant("Brian Hibbard%BHibbard%408-555-1212%Adobe InDesign Management")
+parent.Rm[230] = new parent.occupant("Tanner McQuaig%TMcQuaig%408-555-1212%Adobe Acrobat InProduction Human Resources")
+parent.Rm[231] = new parent.occupant("Richard Copeland%RCopeland%408-555-1212%Adobe Premiere Marketing")
+parent.Rm[233] = new parent.occupant("Mariah Key%MKey%408-555-1212%Adobe InDesign Development")
+parent.Rm[236] = new parent.occupant("Jake Kesterson%JKesterson%408-555-1212%Adobe PhotoDeluxe Human Resources")
+parent.Rm[237] = new parent.occupant("Trevor Wilson%TWilson%408-555-1212%Adobe GoLive Marketing")
+parent.Rm[240] = new parent.occupant("Savannah Pillsbury%SPillsbury%408-555-1212%Adobe GoLive Human Resources")
+parent.Rm[241] = new parent.occupant("Elijah Carpenter%ECarpenter%408-555-1212%Adobe Studio Quality Assurance")
+parent.Rm[244] = new parent.occupant("Isabel Vass%IVass%408-555-1212%Adobe Premiere Human Resources")
+parent.Rm[245] = new parent.occupant("Amanda Gough%AGough%408-555-1212%Adobe Studio Quality Assurance")
+parent.Rm[247] = new parent.occupant("Paige Tullos%PTullos%408-555-1212%Adobe PhotoDeluxe Marketing")
+parent.Rm[248] = new parent.occupant("Isaac Veale%IVeale%408-555-1212%Adobe Studio Marketing")
+parent.Rm[251] = new parent.occupant("William Hogarth%WHogarth%408-555-1212%Adobe SVG Viewer Quality Assurance")
+parent.Rm[252] = new parent.occupant("Ryan Salisbury%RSalisbury%408-555-1212%Adobe Streamline Development")
+parent.Rm[254] = new parent.occupant("Alexa Wyatt%AWyatt%408-555-1212%Adobe InCopy Human Resources")
+parent.Rm[255] = new parent.occupant("Destiny Whitelock%DWhitelock%408-555-1212%Adobe InScope Quality Assurance")
+parent.Rm[258] = new parent.occupant("Connor Ready%CReady%408-555-1212%Adobe Streamline Marketing")
+parent.Rm[262] = new parent.occupant("Elizabeth Northrop%ENorthrop%408-555-1212%Adobe Studio Human Resources")
+parent.Rm[263] = new parent.occupant("Christopher McMurtry%CMcMurtry%408-555-1212%Adobe InCopy Marketing")
+parent.Rm[266] = new parent.occupant("Jacob Burney%JBurney%408-555-1212%Adobe After Effects Marketing")
+parent.Rm[267] = new parent.occupant("Brandon Wien%BWien%408-555-1212%Adobe LiveMotion Marketing")
+parent.Rm[270] = new parent.occupant("Tyler Turner%TTurner%408-555-1212%Adobe After Effects Marketing")
+parent.Rm[271] = new parent.occupant("Christina Atnip%CAtnip%408-555-1212%Adobe Studio Marketing")
+parent.Rm[274] = new parent.occupant("Jesus Vidal%JVidal%408-555-1212%Adobe After Effects Marketing")
+parent.Rm[275] = new parent.occupant("Cody Martinez%CMartinez%408-555-1212%Adobe Acrobat Human Resources")
+parent.Rm[276] = new parent.occupant("Christopher Varn%CVarn%408-555-1212%Adobe Acrobat Marketing")
+parent.Rm[277] = new parent.occupant("Garrett Davies%GDavies%408-555-1212%Adobe Acrobat InProduction Quality Assurance")
+parent.Rm[278] = new parent.occupant("Madeline Kincaid%MKincaid%408-555-1212%Adobe Acrobat InProduction Marketing")
+parent.Rm[279] = new parent.occupant("Christian McCracken%CMcCracken%408-555-1212%Adobe FrameMaker Development")
+parent.Rm[280] = new parent.occupant("Alexandria Rogers%ARogers%408-555-1212%Adobe InDesign Management")
+parent.Rm[281] = new parent.occupant("Marissa McArdle%MMcArdle%408-555-1212%Adobe Acrobat InProduction Human Resources")
+parent.Rm[282] = new parent.occupant("Savannah Whitelock%SWhitelock%408-555-1212%Adobe Acrobat Human Resources")
+parent.Rm[283] = new parent.occupant("Sophia Hatfield%SHatfield%408-555-1212%Adobe Studio Marketing")
+
+parent.loaded = "yes"
+</SCRIPT>
+
+
+</body>
+</HTML>
+

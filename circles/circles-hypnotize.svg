@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" stroke-width="6" fill="none" viewBox="0 0 900 900">
+<title>SVG + SMIL Hypnotize Circles Demo, by Marek Raida</title>
+<rect x="-1000" width="3000" y="-1000" height="3000" fill="black"/>
+<g id="root" transform="translate(444 444)">
+  <set attributeName="fill-opacity" to="1" begin="indefinite" id="starter"/>
+</g>
+<image xlink:href="http://www.google-analytics.com/__utm.gif?utmwv=4.7.1&amp;utmn=21830374&amp;utmhn=svg.kvalitne.cz&amp;utmcs=UTF-8&amp;utmsr=1920x1080&amp;utmsc=24-bit&amp;utmul=en-us&amp;utmje=1&amp;utmfl=10.0%20r45&amp;utmdt=SVG%C2%A0%E2%80%94%C2%A0It%27s%20in%20your%20hands...&amp;utmhid=1377849700&amp;utmr=-&amp;utmp=%2Findex2.htm&amp;utmac=UA-11950721-1&amp;utmcc=__utma%3D251371972.1884550355.1260220320.1272562824.1272576758.56%3B%2B__utmz%3D251371972.1263752798.41.3.utmcsr%3Dgoogle%7Cutmccn%3D(organic)%7Cutmcmd%3Dorganic%7Cutmctr%3Dsvg%2520smil%2520demo%3B" width="1" height="1"/>
+<script>
+var root = document.getElementById("root");
+var svgns = "http://www.w3.org/2000/svg";
+var circles = 86;
+
+for (var x = 0; x &lt; circles; x++) {
+    var c = document.createElementNS(svgns, "circle");
+    var col = 255 - Math.round(x*1.9);
+    c.setAttribute("r", 5*x);
+    c.setAttribute("stroke", "rgb("+col+","+col+","+col+")");
+    c.setAttribute("stroke-dasharray", ((x % 2) == 0) ? "15,15" : "5,15");
+    var a = document.createElementNS(svgns, "animateTransform");
+    a.setAttribute("attributeName", "transform");
+    a.setAttribute("type", "rotate");
+    a.setAttribute("dur", 25);
+    a.setAttribute("keySplines", "0.7 0.1 0.3 0.9");
+    a.setAttribute("calcMode", "spline");
+    a.setAttribute("by", ((x % 2) == 0) ? 360 : -360);
+    a.setAttribute("begin", "starter.begin + " + x/4 + "s");
+    a.setAttribute("repeatCount", 1);
+    root.appendChild(c);
+    c.appendChild(a);
+}
+document.getElementById("starter").beginElement();
+</script>
+
+</svg>

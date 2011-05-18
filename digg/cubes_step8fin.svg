@@ -1,0 +1,194 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 665 250" xml:space="preserve">
+
+<script type="text/ecmascript" xlink:href="../fakesmile/smil.user.js"/>
+
+  <title>SVG Animation - Cube Demonstration v 1.1</title>
+  <desc>
+    Original by Antoine Quint (http://www.xml.com/pub/a/2002/01/23/svg/), modified by Marek Raida, marek.raida@gmail.com
+  </desc>
+
+  <defs>
+    <symbol id="cube" style="stroke: #000000; stroke-width: 0.5; stroke-linejoin: bevel">
+      <path style="fill: #333333;" d="M0.112,26.271l25.032,12.485V25.164L0.112,12.68V26.271z"/>
+      <path style="fill: #666666" d="M25.144,38.756l25.033-12.485H50.12V12.708L25.144,25.164V38.756z"/>
+      <path style="fill: #cccccc" d="M50.12,12.708l0.057-0.028L25.144,0.224L0.112,12.68l25.032,12.484L50.12,12.708z"/>
+    </symbol>
+  </defs>
+
+  <rect width="100%" height="100%" style="fill: #999999; stroke: none;" />
+
+  <use xlink:href="#cube" transform="translate(300, 50)" x="0" y="0">
+    <animate attributeName="y" begin="mouseover" restart="whenNotActive" dur="2s" calcMode="spline"
+             keySplines="0 .75 .5 1; .5 0 1 .25; 0 .25 .25 1; .5 0 1 .5; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1"
+             values="  0;    -45;      0;     16;      0;     -7;      0;      3;      0;     -2;      0;      1; 0"
+             keyTimes="0; 0.2564; 0.5128; 0.6154; 0.6923; 0.7436; 0.7949; 0.8462; 0.8974; 0.9231; 0.9487; 0.9744; 1" />
+  </use>
+
+
+  <use xlink:href="#cube" transform="translate(275, 62.5)">
+    <animate attributeName="y" begin="mouseover" restart="whenNotActive" dur="2s" calcMode="spline"
+             keySplines="0 .75 .5 1; .5 0 1 .25; 0 .25 .25 1; .5 0 1 .5; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1"
+             values="  0;    -45;      0;     16;      0;     -7;      0;      3;      0;     -2;      0;      1; 0"
+             keyTimes="0; 0.2564; 0.5128; 0.6154; 0.6923; 0.7436; 0.7949; 0.8462; 0.8974; 0.9231; 0.9487; 0.9744; 1" />
+  </use>
+  <use xlink:href="#cube" transform="translate(325, 62.5)">
+    <animate attributeName="y" begin="mouseover" restart="whenNotActive" dur="2s" calcMode="spline"
+             keySplines="0 .75 .5 1; .5 0 1 .25; 0 .25 .25 1; .5 0 1 .5; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1"
+             values="  0;    -45;      0;     16;      0;     -7;      0;      3;      0;     -2;      0;      1; 0"
+             keyTimes="0; 0.2564; 0.5128; 0.6154; 0.6923; 0.7436; 0.7949; 0.8462; 0.8974; 0.9231; 0.9487; 0.9744; 1" />
+  </use>
+
+
+  <use xlink:href="#cube" transform="translate(250, 75)">
+    <animate attributeName="y" begin="mouseover" restart="whenNotActive" dur="2s" calcMode="spline"
+             keySplines="0 .75 .5 1; .5 0 1 .25; 0 .25 .25 1; .5 0 1 .5; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1"
+             values="  0;    -45;      0;     16;      0;     -7;      0;      3;      0;     -2;      0;      1; 0"
+             keyTimes="0; 0.2564; 0.5128; 0.6154; 0.6923; 0.7436; 0.7949; 0.8462; 0.8974; 0.9231; 0.9487; 0.9744; 1" />
+  </use>
+  <use xlink:href="#cube" transform="translate(300, 75)">
+    <animate attributeName="y" begin="mouseover" restart="whenNotActive" dur="2s" calcMode="spline"
+             keySplines="0 .75 .5 1; .5 0 1 .25; 0 .25 .25 1; .5 0 1 .5; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1"
+             values="  0;    -45;      0;     16;      0;     -7;      0;      3;      0;     -2;      0;      1; 0"
+             keyTimes="0; 0.2564; 0.5128; 0.6154; 0.6923; 0.7436; 0.7949; 0.8462; 0.8974; 0.9231; 0.9487; 0.9744; 1" />
+  </use>
+  <use xlink:href="#cube" transform="translate(350, 75)">
+    <animate attributeName="y" begin="mouseover" restart="whenNotActive" dur="2s" calcMode="spline"
+             keySplines="0 .75 .5 1; .5 0 1 .25; 0 .25 .25 1; .5 0 1 .5; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1"
+             values="  0;    -45;      0;     16;      0;     -7;      0;      3;      0;     -2;      0;      1; 0"
+             keyTimes="0; 0.2564; 0.5128; 0.6154; 0.6923; 0.7436; 0.7949; 0.8462; 0.8974; 0.9231; 0.9487; 0.9744; 1" />
+  </use>
+
+
+  <use xlink:href="#cube" transform="translate(225, 87.5)">
+    <animate attributeName="y" begin="mouseover" restart="whenNotActive" dur="2s" calcMode="spline"
+             keySplines="0 .75 .5 1; .5 0 1 .25; 0 .25 .25 1; .5 0 1 .5; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1"
+             values="  0;    -45;      0;     16;      0;     -7;      0;      3;      0;     -2;      0;      1; 0"
+             keyTimes="0; 0.2564; 0.5128; 0.6154; 0.6923; 0.7436; 0.7949; 0.8462; 0.8974; 0.9231; 0.9487; 0.9744; 1" />
+  </use>
+  <use xlink:href="#cube" transform="translate(275, 87.5)">
+    <animate attributeName="y" begin="mouseover" restart="whenNotActive" dur="2s" calcMode="spline"
+             keySplines="0 .75 .5 1; .5 0 1 .25; 0 .25 .25 1; .5 0 1 .5; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1"
+             values="  0;    -45;      0;     16;      0;     -7;      0;      3;      0;     -2;      0;      1; 0"
+             keyTimes="0; 0.2564; 0.5128; 0.6154; 0.6923; 0.7436; 0.7949; 0.8462; 0.8974; 0.9231; 0.9487; 0.9744; 1" />
+  </use>
+  <use xlink:href="#cube" transform="translate(325, 87.5)">
+    <animate attributeName="y" begin="mouseover" restart="whenNotActive" dur="2s" calcMode="spline"
+             keySplines="0 .75 .5 1; .5 0 1 .25; 0 .25 .25 1; .5 0 1 .5; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1"
+             values="  0;    -45;      0;     16;      0;     -7;      0;      3;      0;     -2;      0;      1; 0"
+             keyTimes="0; 0.2564; 0.5128; 0.6154; 0.6923; 0.7436; 0.7949; 0.8462; 0.8974; 0.9231; 0.9487; 0.9744; 1" />
+  </use>
+  <use xlink:href="#cube" transform="translate(375, 87.5)">
+    <animate attributeName="y" begin="mouseover" restart="whenNotActive" dur="2s" calcMode="spline"
+             keySplines="0 .75 .5 1; .5 0 1 .25; 0 .25 .25 1; .5 0 1 .5; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1"
+             values="  0;    -45;      0;     16;      0;     -7;      0;      3;      0;     -2;      0;      1; 0"
+             keyTimes="0; 0.2564; 0.5128; 0.6154; 0.6923; 0.7436; 0.7949; 0.8462; 0.8974; 0.9231; 0.9487; 0.9744; 1" />
+  </use>
+
+
+
+  <use xlink:href="#cube" transform="translate(200, 100)">
+    <animate attributeName="y" begin="mouseover" restart="whenNotActive" dur="2s" calcMode="spline"
+             keySplines="0 .75 .5 1; .5 0 1 .25; 0 .25 .25 1; .5 0 1 .5; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1"
+             values="  0;    -45;      0;     16;      0;     -7;      0;      3;      0;     -2;      0;      1; 0"
+             keyTimes="0; 0.2564; 0.5128; 0.6154; 0.6923; 0.7436; 0.7949; 0.8462; 0.8974; 0.9231; 0.9487; 0.9744; 1" />
+  </use>
+  <use xlink:href="#cube" transform="translate(250, 100)">
+    <animate attributeName="y" begin="mouseover" restart="whenNotActive" dur="2s" calcMode="spline"
+             keySplines="0 .75 .5 1; .5 0 1 .25; 0 .25 .25 1; .5 0 1 .5; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1"
+             values="  0;    -45;      0;     16;      0;     -7;      0;      3;      0;     -2;      0;      1; 0"
+             keyTimes="0; 0.2564; 0.5128; 0.6154; 0.6923; 0.7436; 0.7949; 0.8462; 0.8974; 0.9231; 0.9487; 0.9744; 1" />
+  </use>
+  <use xlink:href="#cube" transform="translate(300, 100)">
+    <animate attributeName="y" begin="mouseover" restart="whenNotActive" dur="2s" calcMode="spline"
+             keySplines="0 .75 .5 1; .5 0 1 .25; 0 .25 .25 1; .5 0 1 .5; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1"
+             values="  0;    -45;      0;     16;      0;     -7;      0;      3;      0;     -2;      0;      1; 0"
+             keyTimes="0; 0.2564; 0.5128; 0.6154; 0.6923; 0.7436; 0.7949; 0.8462; 0.8974; 0.9231; 0.9487; 0.9744; 1" />
+  </use>
+  <use xlink:href="#cube" transform="translate(350, 100)">
+    <animate attributeName="y" begin="mouseover" restart="whenNotActive" dur="2s" calcMode="spline"
+             keySplines="0 .75 .5 1; .5 0 1 .25; 0 .25 .25 1; .5 0 1 .5; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1"
+             values="  0;    -45;      0;     16;      0;     -7;      0;      3;      0;     -2;      0;      1; 0"
+             keyTimes="0; 0.2564; 0.5128; 0.6154; 0.6923; 0.7436; 0.7949; 0.8462; 0.8974; 0.9231; 0.9487; 0.9744; 1" />
+  </use>
+  <use xlink:href="#cube" transform="translate(400, 100)">
+    <animate attributeName="y" begin="mouseover" restart="whenNotActive" dur="2s" calcMode="spline"
+             keySplines="0 .75 .5 1; .5 0 1 .25; 0 .25 .25 1; .5 0 1 .5; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1"
+             values="  0;    -45;      0;     16;      0;     -7;      0;      3;      0;     -2;      0;      1; 0"
+             keyTimes="0; 0.2564; 0.5128; 0.6154; 0.6923; 0.7436; 0.7949; 0.8462; 0.8974; 0.9231; 0.9487; 0.9744; 1" />
+  </use>
+
+
+
+  <use xlink:href="#cube" transform="translate(225, 112.5)">
+    <animate attributeName="y" begin="mouseover" restart="whenNotActive" dur="2s" calcMode="spline"
+             keySplines="0 .75 .5 1; .5 0 1 .25; 0 .25 .25 1; .5 0 1 .5; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1"
+             values="  0;    -45;      0;     16;      0;     -7;      0;      3;      0;     -2;      0;      1; 0"
+             keyTimes="0; 0.2564; 0.5128; 0.6154; 0.6923; 0.7436; 0.7949; 0.8462; 0.8974; 0.9231; 0.9487; 0.9744; 1" />
+  </use>
+  <use xlink:href="#cube" transform="translate(275, 112.5)">
+    <animate attributeName="y" begin="mouseover" restart="whenNotActive" dur="2s" calcMode="spline"
+             keySplines="0 .75 .5 1; .5 0 1 .25; 0 .25 .25 1; .5 0 1 .5; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1"
+             values="  0;    -45;      0;     16;      0;     -7;      0;      3;      0;     -2;      0;      1; 0"
+             keyTimes="0; 0.2564; 0.5128; 0.6154; 0.6923; 0.7436; 0.7949; 0.8462; 0.8974; 0.9231; 0.9487; 0.9744; 1" />
+  </use>
+  <use xlink:href="#cube" transform="translate(325, 112.5)">
+    <animate attributeName="y" begin="mouseover" restart="whenNotActive" dur="2s" calcMode="spline"
+             keySplines="0 .75 .5 1; .5 0 1 .25; 0 .25 .25 1; .5 0 1 .5; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1"
+             values="  0;    -45;      0;     16;      0;     -7;      0;      3;      0;     -2;      0;      1; 0"
+             keyTimes="0; 0.2564; 0.5128; 0.6154; 0.6923; 0.7436; 0.7949; 0.8462; 0.8974; 0.9231; 0.9487; 0.9744; 1" />
+  </use>
+  <use xlink:href="#cube" transform="translate(375, 112.5)">
+    <animate attributeName="y" begin="mouseover" restart="whenNotActive" dur="2s" calcMode="spline"
+             keySplines="0 .75 .5 1; .5 0 1 .25; 0 .25 .25 1; .5 0 1 .5; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1"
+             values="  0;    -45;      0;     16;      0;     -7;      0;      3;      0;     -2;      0;      1; 0"
+             keyTimes="0; 0.2564; 0.5128; 0.6154; 0.6923; 0.7436; 0.7949; 0.8462; 0.8974; 0.9231; 0.9487; 0.9744; 1" />
+  </use>
+
+
+
+  <use xlink:href="#cube" transform="translate(250, 125)">
+    <animate attributeName="y" begin="mouseover" restart="whenNotActive" dur="2s" calcMode="spline"
+             keySplines="0 .75 .5 1; .5 0 1 .25; 0 .25 .25 1; .5 0 1 .5; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1"
+             values="  0;    -45;      0;     16;      0;     -7;      0;      3;      0;     -2;      0;      1; 0"
+             keyTimes="0; 0.2564; 0.5128; 0.6154; 0.6923; 0.7436; 0.7949; 0.8462; 0.8974; 0.9231; 0.9487; 0.9744; 1" />
+  </use>
+  <use xlink:href="#cube" transform="translate(300, 125)">
+    <animate attributeName="y" begin="mouseover" restart="whenNotActive" dur="2s" calcMode="spline"
+             keySplines="0 .75 .5 1; .5 0 1 .25; 0 .25 .25 1; .5 0 1 .5; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1"
+             values="  0;    -45;      0;     16;      0;     -7;      0;      3;      0;     -2;      0;      1; 0"
+             keyTimes="0; 0.2564; 0.5128; 0.6154; 0.6923; 0.7436; 0.7949; 0.8462; 0.8974; 0.9231; 0.9487; 0.9744; 1" />
+  </use>
+  <use xlink:href="#cube" transform="translate(350, 125)">
+    <animate attributeName="y" begin="mouseover" restart="whenNotActive" dur="2s" calcMode="spline"
+             keySplines="0 .75 .5 1; .5 0 1 .25; 0 .25 .25 1; .5 0 1 .5; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1"
+             values="  0;    -45;      0;     16;      0;     -7;      0;      3;      0;     -2;      0;      1; 0"
+             keyTimes="0; 0.2564; 0.5128; 0.6154; 0.6923; 0.7436; 0.7949; 0.8462; 0.8974; 0.9231; 0.9487; 0.9744; 1" />
+  </use>
+  
+
+
+  <use xlink:href="#cube" transform="translate(275, 137.5)">
+    <animate attributeName="y" begin="mouseover" restart="whenNotActive" dur="2s" calcMode="spline"
+             keySplines="0 .75 .5 1; .5 0 1 .25; 0 .25 .25 1; .5 0 1 .5; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1"
+             values="  0;    -45;      0;     16;      0;     -7;      0;      3;      0;     -2;      0;      1; 0"
+             keyTimes="0; 0.2564; 0.5128; 0.6154; 0.6923; 0.7436; 0.7949; 0.8462; 0.8974; 0.9231; 0.9487; 0.9744; 1" />
+  </use>
+  <use xlink:href="#cube" transform="translate(325, 137.5)">
+    <animate attributeName="y" begin="mouseover" restart="whenNotActive" dur="2s" calcMode="spline"
+             keySplines="0 .75 .5 1; .5 0 1 .25; 0 .25 .25 1; .5 0 1 .5; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1"
+             values="  0;    -45;      0;     16;      0;     -7;      0;      3;      0;     -2;      0;      1; 0"
+             keyTimes="0; 0.2564; 0.5128; 0.6154; 0.6923; 0.7436; 0.7949; 0.8462; 0.8974; 0.9231; 0.9487; 0.9744; 1" />
+  </use>
+
+
+
+  <use xlink:href="#cube" transform="translate(300, 150)">
+    <animate attributeName="y" begin="mouseover" restart="whenNotActive" dur="2s" calcMode="spline"
+             keySplines="0 .75 .5 1; .5 0 1 .25; 0 .25 .25 1; .5 0 1 .5; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1; 0 0 1 1"
+             values="  0;    -45;      0;     16;      0;     -7;      0;      3;      0;     -2;      0;      1; 0"
+             keyTimes="0; 0.2564; 0.5128; 0.6154; 0.6923; 0.7436; 0.7949; 0.8462; 0.8974; 0.9231; 0.9487; 0.9744; 1" />
+  </use>
+
+<image xlink:href="http://www.google-analytics.com/__utm.gif?utmwv=4.7.1&amp;utmn=21830374&amp;utmhn=svg.kvalitne.cz&amp;utmcs=UTF-8&amp;utmsr=1920x1080&amp;utmsc=24-bit&amp;utmul=en-us&amp;utmje=1&amp;utmfl=10.0%20r45&amp;utmdt=SVG%C2%A0%E2%80%94%C2%A0It%27s%20in%20your%20hands...&amp;utmhid=1377849700&amp;utmr=-&amp;utmp=%2Findex2.htm&amp;utmac=UA-11950721-1&amp;utmcc=__utma%3D251371972.1884550355.1260220320.1272562824.1272576758.56%3B%2B__utmz%3D251371972.1263752798.41.3.utmcsr%3Dgoogle%7Cutmccn%3D(organic)%7Cutmcmd%3Dorganic%7Cutmctr%3Dsvg%2520smil%2520demo%3B" width="1" height="1"/>
+
+</svg>

@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="300" height="300" onload="InitSMIL(evt)">
+
+<defs>
+  <g id="bubble1" fill-opacity=".6">
+    <circle cx="100" cy="100" r="30" fill="#699BCE" stroke="#303972" stroke-width="1"/>
+    <ellipse cx="106" cy="90" rx="15" ry="10" fill="#415AB5"/>
+    <ellipse cx="110" cy="88" rx="5" ry="3" fill="white"/>
+    <ellipse cx="100" cy="121" rx="13" ry="4" fill="#BCDAF5"/>
+  </g>
+
+  <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+    <stop offset="0" stop-color="#201331"/>
+		<stop offset="1" stop-color="#9FC3E7"/>
+	</linearGradient>
+</defs>
+
+<script type="text/ecmascript" xlink:href="smilScript.js" />
+
+<rect x="0" y="0" width="300" height="300" rx="30" stroke="none" fill="url(#bg)"/>
+
+  <use xlink:href="#bubble1" transform="translate(80,270)">
+    <animate attributeName="y" begin="0s" dur="4s" from="0" to="-400" repeatCount="indefinite"/>
+  </use>
+
+  <use xlink:href="#bubble1" transform="translate(60,270)">
+    <animate attributeName="y" begin="1s" dur="6s" from="0" to="-400" repeatCount="indefinite"/>
+  </use>
+
+
+  <use xlink:href="#bubble1" transform="translate(50,270) scale(0.5,0.5)">
+    <animate attributeName="y" begin="0s" dur="4s" from="0" to="-670" repeatCount="indefinite"/>
+  </use>
+
+  <use xlink:href="#bubble1" transform="translate(60,270) scale(0.5,0.5)">
+    <animate attributeName="y" begin=".5s" dur="3.5s" from="0" to="-670" repeatCount="indefinite"/>
+  </use>
+
+  <use xlink:href="#bubble1" transform="translate(80,270) scale(0.5,0.5)">
+    <animate attributeName="y" begin="1.5s" dur="5s" from="0" to="-670" repeatCount="indefinite"/>
+  </use>
+
+
+  <use xlink:href="#bubble1" transform="translate(60,300) scale(0.2,0.2)">
+    <animate attributeName="y" begin="0s" dur="3.5s" from="0" to="-1600" repeatCount="indefinite"/>
+  </use>
+
+  <use xlink:href="#bubble1" transform="translate(70,300) scale(0.2,0.2)">
+    <animate attributeName="y" begin=".5s" dur="5s" from="0" to="-1600" repeatCount="indefinite"/>
+  </use>
+
+  <use xlink:href="#bubble1" transform="translate(100,300) scale(0.2,0.2)">
+    <animate attributeName="y" begin=".5s" dur="3s" from="0" to="-1600" repeatCount="indefinite"/>
+  </use>
+
+  <use xlink:href="#bubble1" transform="translate(110,300) scale(0.2,0.2)">
+    <animate attributeName="y" begin=".5s" dur="2s" from="0" to="-1600" repeatCount="indefinite"/>
+  </use>
+
+  <use xlink:href="#bubble1" transform="translate(160,300) scale(0.2,0.2)">
+    <animate attributeName="y" begin=".5s" dur="4s" from="0" to="-1600" repeatCount="indefinite"/>
+  </use>
+
+
+  <text x="60" y="100" font-weight="bold" font-size="33px" font-family="sans-serif" fill="white" visibility="hidden">SVG proud 
+    <tspan y="150" x="40">v komunikaci</tspan>
+    <tspan y="275" x="240">VF</tspan>
+  	<set attributeName="visibility" to="visible" begin="5s" />
+  </text>
+
+<image xlink:href="http://www.google-analytics.com/__utm.gif?utmwv=4.7.1&amp;utmn=21830374&amp;utmhn=svg.kvalitne.cz&amp;utmcs=UTF-8&amp;utmsr=1920x1080&amp;utmsc=24-bit&amp;utmul=en-us&amp;utmje=1&amp;utmfl=10.0%20r45&amp;utmdt=SVG%C2%A0%E2%80%94%C2%A0It%27s%20in%20your%20hands...&amp;utmhid=1377849700&amp;utmr=-&amp;utmp=%2Findex2.htm&amp;utmac=UA-11950721-1&amp;utmcc=__utma%3D251371972.1884550355.1260220320.1272562824.1272576758.56%3B%2B__utmz%3D251371972.1263752798.41.3.utmcsr%3Dgoogle%7Cutmccn%3D(organic)%7Cutmcmd%3Dorganic%7Cutmctr%3Dsvg%2520smil%2520demo%3B" width="1" height="1"/>
+
+</svg>

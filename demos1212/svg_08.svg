@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" font-family="Helvetica, sans-serif"
+	 width="929.285" height="799.257" viewBox="0 0 929.285 799.257" overflow="visible" enable-background="new 0 0 929.285 799.257"
+	 xml:space="preserve" onload="initsvg(evt)">
+
+<script xlink:href="svg_08.js" type="text/javascript" />
+<title>Simple 3D engine - Limiting the zoom and adding text to the endpoints of each line.</title>
+	<g id="Ebene_1">
+		<path fill="#336699" stroke="#000000" d="M768.5,574.5H0.5V0.5h768V574.5z"/>
+		<path fill="#106662" stroke="#94B9D3" stroke-width="4" d="M416.95,561.8H18.485V392.398H416.95V561.8z"/>
+	</g>
+	<g id="points">
+		<text transform="matrix(1 0 0 1 30 30)">
+		<tspan id="values" x="0" y="0" fill="#FFFFFF" font-family="'Myriad-Roman'" font-size="16.3697px"> </tspan>
+		<tspan id="ptrack" x="0" y="20" fill="#FFFFFF" font-family="'Myriad-Roman'" font-size="16.3697px"> </tspan>
+		<tspan id="frames" x="0" y="40" fill="#FFFFFF" font-family="'Myriad-Roman'" font-size="16.3697px"> </tspan>
+
+		</text>
+	</g>
+	<g id="world" transform="translate(200, 100)">
+
+
+	</g>
+
+	<g id="labels">
+		<text transform="matrix(1 0 0 1 335.4102 547.2168)"><tspan x="0" y="0" fill="#94B9D3" font-family="'Myriad-Roman'" font-size="21.3697px">ZOOM </tspan></text>
+		<text transform="matrix(1 0 0 1 246.3457 547.4092)"><tspan x="0" y="0" fill="#94B9D3" font-family="'Myriad-Roman'" font-size="21.3697px">Z Axis  </tspan></text>
+		<text transform="matrix(1 0 0 1 142.5342 548.4746)"><tspan x="0" y="0" fill="#94B9D3" font-family="'Myriad-Roman'" font-size="21.3697px">Y Axis  </tspan></text>
+		<text transform="matrix(1 0 0 1 39.7515 548.4746)"><tspan x="0" y="0" fill="#94B9D3" font-family="'Myriad-Roman'" font-size="21.3697px">X Axis </tspan></text>
+	</g>
+	<g id="B_zoomIn" onmouseover="setEvent('callZoomIn')" onmouseout="setEvent('nothing')" >
+		<path fill="#196361" stroke="#94B9D3" stroke-width="5" d="M387.521,442.574c0,4.252-3.446,7.698-7.698,7.698h-26.3
+			c-4.252,0-7.698-3.446-7.698-7.698v-26.3c0-4.252,3.446-7.698,7.698-7.698h26.3c4.252,0,7.698,3.446,7.698,7.698V442.574z"/>
+		<path fill="#94B9D3" d="M369.815,442.749h-6.284V416.1h6.284V442.749z"/>
+		<path fill="#94B9D3" d="M380.918,431.983H352.43v-5.119h28.488V431.983z"/>
+	</g>
+	<g id="B_zoomOut" onmouseover="setEvent('callZoomOut')" onmouseout="setEvent('nothing')" >
+		<path fill="#196361" stroke="#94B9D3" stroke-width="5" d="M387.521,508.046c0,4.252-3.446,7.698-7.698,7.698h-26.3
+			c-4.252,0-7.698-3.446-7.698-7.698v-26.3c0-4.252,3.446-7.698,7.698-7.698h26.3c4.252,0,7.698,3.446,7.698,7.698V508.046z"/>
+		<path fill="#94B9D3" d="M380.918,497.456H352.43v-5.119h28.488V497.456z"/>
+	</g>
+	<g id="B_Zplus" onmouseover="setEvent('callZmax')" onmouseout="setEvent('nothing')" >
+		<path fill="#196361" stroke="#94B9D3" stroke-width="5" d="M298.105,442.767c0,4.252-3.446,7.698-7.698,7.698h-26.3
+			c-4.252,0-7.698-3.446-7.698-7.698v-26.3c0-4.252,3.446-7.698,7.698-7.698h26.3c4.252,0,7.698,3.446,7.698,7.698V442.767z"/>
+		<path fill="none" stroke="#94B9D3" stroke-width="2" d="M287.013,434.578l-9.923-9.923l-9.588,9.588"/>
+	</g>
+	<g id="B_Zminus" onmouseover="setEvent('callZmin')" onmouseout="setEvent('nothing')" >
+		<path fill="#196361" stroke="#94B9D3" stroke-width="5" d="M298.105,508.238c0,4.252-3.446,7.698-7.698,7.698h-26.3
+			c-4.252,0-7.698-3.446-7.698-7.698v-26.3c0-4.252,3.446-7.698,7.698-7.698h26.3c4.252,0,7.698,3.446,7.698,7.698V508.238z"/>
+		<path fill="none" stroke="#94B9D3" stroke-width="2" d="M267.546,490.172l9.835,9.834l9.588-9.588"/>
+	</g>
+	<g id="B_Yminus" onmouseover="setEvent('callYmin')" onmouseout="setEvent('nothing')" >
+		<path fill="#196361" stroke="#94B9D3" stroke-width="5" d="M194.165,509.304c0,4.252-3.446,7.698-7.698,7.698h-26.3
+			c-4.252,0-7.698-3.446-7.698-7.698v-26.3c0-4.252,3.446-7.698,7.698-7.698h26.3c4.252,0,7.698,3.446,7.698,7.698V509.304z"/>
+		<path fill="none" stroke="#94B9D3" stroke-width="2" d="M163.605,491.237l9.835,9.834l9.588-9.588"/>
+	</g>
+	<g id="B_Yplus" onmouseover="setEvent('callYmax')" onmouseout="setEvent('nothing')" >
+		<path fill="#196361" stroke="#94B9D3" stroke-width="5" d="M194.165,443.832c0,4.252-3.446,7.698-7.698,7.698h-26.3
+			c-4.252,0-7.698-3.446-7.698-7.698v-26.3c0-4.252,3.446-7.698,7.698-7.698h26.3c4.252,0,7.698,3.446,7.698,7.698V443.832z"/>
+		<path fill="none" stroke="#94B9D3" stroke-width="2" d="M183.072,435.644l-9.923-9.923l-9.588,9.588"/>
+	</g>
+	<g id="B_Xplus" onmouseover="setEvent('callXmax')" onmouseout="setEvent('nothing')" >
+		<path fill="#196361" stroke="#94B9D3" stroke-width="5" d="M89.438,443.832c0,4.252-3.446,7.698-7.698,7.698h-26.3
+			c-4.252,0-7.698-3.446-7.698-7.698v-26.3c0-4.252,3.446-7.698,7.698-7.698h26.3c4.252,0,7.698,3.446,7.698,7.698V443.832z"/>
+		<path fill="none" stroke="#94B9D3" stroke-width="2" d="M78.345,435.644l-9.923-9.923l-9.588,9.588"/>
+	</g>
+	<g id="B_Xminus" onmouseover="setEvent('callXmin')" onmouseout="setEvent('nothing')" >
+		<path fill="#196361" stroke="#94B9D3" stroke-width="5" d="M89.438,509.304c0,4.252-3.446,7.698-7.698,7.698h-26.3
+			c-4.252,0-7.698-3.446-7.698-7.698v-26.3c0-4.252,3.446-7.698,7.698-7.698h26.3c4.252,0,7.698,3.446,7.698,7.698V509.304z"/>
+		<path fill="none" stroke="#94B9D3" stroke-width="2" d="M58.878,491.237l9.835,9.834l9.588-9.588"/>
+	</g>
+<image xlink:href="http://www.google-analytics.com/__utm.gif?utmwv=4.7.1&amp;utmn=21830374&amp;utmhn=svg.kvalitne.cz&amp;utmcs=UTF-8&amp;utmsr=1920x1080&amp;utmsc=24-bit&amp;utmul=en-us&amp;utmje=1&amp;utmfl=10.0%20r45&amp;utmdt=SVG%C2%A0%E2%80%94%C2%A0It%27s%20in%20your%20hands...&amp;utmhid=1377849700&amp;utmr=-&amp;utmp=%2Findex2.htm&amp;utmac=UA-11950721-1&amp;utmcc=__utma%3D251371972.1884550355.1260220320.1272562824.1272576758.56%3B%2B__utmz%3D251371972.1263752798.41.3.utmcsr%3Dgoogle%7Cutmccn%3D(organic)%7Cutmcmd%3Dorganic%7Cutmctr%3Dsvg%2520smil%2520demo%3B" width="1" height="1"/>
+</svg>

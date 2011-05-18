@@ -1,0 +1,401 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 1000 500" preserveAspectRatio="xMinYMin slice">
+<title>01_faith.svg</title> 
+<desc>reflections/faith screen in English</desc>
+<script><![CDATA[
+
+	var SVGDoc = null
+		
+	function getObj(mouseEvent) {
+		SVGDoc = document
+	}
+		
+	// change the filter effect of an element
+	function elemFilter(mouseEvent, elemName, value) {
+		// get the proper SVG object
+		getObj(mouseEvent)
+	
+		// get the element we want to change
+		var thisElem = SVGDoc.getElementById(elemName).style
+	
+		// perform the filter effect change
+		thisElem.setProperty('filter', value, '')
+	}
+		
+	// change the display of an element
+	function elemDisplay(mouseEvent, elemName, value) {
+		// get the proper SVG object
+		getObj(mouseEvent)
+	
+		// get the element we want to change
+		var thisElem = SVGDoc.getElementById(elemName).style
+	
+		// perform the display change
+		thisElem.setProperty('display', value, '')
+	}
+		
+	]]>
+	
+</script>
+	<defs>
+		<filter id="Reverse" filterUnits="objectBoundingBox" x="0" y="0" width="100%" height="100%">
+			<feBlend mode="lighten" in2="BackgroundImage" in="SourceGraphic" result="Comp1"/>
+			<feBlend mode="darken" in2="BackgroundImage" in="SourceGraphic" result="Comp2"/>
+			<feComposite in="Comp1" in2="Comp2" result="FinalComp" operator="arithmetic" k1="0" k2="-.75" k3=".75" k4="1"/>
+		</filter>
+		<filter id="MidGlow" filterUnits="objectBoundingBox" x="0" y="0" width="100%" height="100%">
+			<feGaussianBlur in="BackgroundImage" stdDeviation="6.5" result="GlowSrc"/>
+			<feComponentTransfer in="GlowSrc"  result="GlowingGraphic">
+				<feFuncA type="linear" slope="3"/>
+			</feComponentTransfer>
+		</filter>
+		<filter id="PhatPixels" filterUnits="objectBoundingBox" x="0" y="0" width="100%" height="100%" filterRes="10 5">
+			<feColorMatrix in="BackgroundImage" type="luminanceToAlpha" result="GetLower"/>
+			<feColorMatrix in="GetLower" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -1000 900" result="Lower"/>
+			<feGaussianBlur in="Lower" stdDeviation="10" result="BlurredMask"/>
+			<feFlood flood-color="white" result="FloodColor"/>
+			<feComposite in="FloodColor" in2="BlurredMask" operator="in" result="BlendColor"/>
+			<feBlend in="BackgroundImage" in2="BlendColor" mode="darken" result="Final"/>
+		</filter>
+	</defs>
+	
+	<g enable-background="new">
+	<g id="P130ead0" transform="matrix(1 0 0 1 0 0)">
+		<defs>
+			<image width="1000" height="500" id="B130e6d0" xlink:href="faith.jpg"  transform="matrix(1 0 0 1 0 0)"/>
+		</defs>
+		<use xlink:href="#B130e6d0" id="background"/>
+		<rect id="filter_area1" x="0" y="50%" width="100%" height="50%" fill="none"/>
+		<rect id="filter_area2" x="0" y="0" width="100%" height="50%" fill="none"/>
+	</g>
+	<g id="P130f890" transform="matrix(1 0 0 1 50 327)" style="opacity:0.18;">
+		<defs>
+			<text id="B130f480" transform="matrix(1.0089 0 0 -1 0 0)" style="font-family:'Impact'; font-size:71px;">REFLECTIONS . WINTER 2001</text>
+		</defs>
+		<use xlink:href="#B130f480"  id="U130bf10" style="fill:#FFFFFF;"/>
+	</g>
+	<g id="P12f8370" transform="matrix(1 0 0 1 -2 400)">
+		<defs>
+			<path id="B12f8ee0" style="fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;" d="M0,0q735.25,0,735.25,0"/>
+		</defs>
+		<use xlink:href="#B12f8ee0"  id="U13020e0" style="fill:none;stroke:#FFFFFF;"/>
+	</g>
+	<g id="P13045e0" transform="matrix(1 0 0 1 -2 379)">
+		<defs>
+			<path id="B13041e0" style="fill:none;stroke-width:0.75;stroke-linecap:round;stroke-linejoin:round;" d="M0,0q808.25,0,808.25,0"/>
+		</defs>
+		<use xlink:href="#B13041e0"  id="U1301650" style="fill:none;stroke:#FFFFFF;"/>
+	</g>
+	<g id="P1307610" transform="matrix(1 0 1 1 716 388)">
+		<defs>
+			<rect id="B1307210" transform="matrix(-1 0 0 1 80 -12)" width="161" height="25"/> 
+		</defs>
+		<use xlink:href="#B1307210"  id="U1303bb0" style="fill:#FFFFFF;"/>
+	</g>
+	<g id="P1302f70" transform="matrix(1 0 1 1 586 388)">
+		<defs>
+			<rect id="B1302bc0" transform="matrix(1 0 0 1 -38 -12)" width="76" height="25"/> 
+		</defs>
+		<use xlink:href="#B1302bc0"  id="U1306bc0" style="fill:#FFFFFF;"/>
+	</g>
+	<g id="P12fbdb0" transform="matrix(1 0 1 1 427 388)">
+		<defs>
+			<rect id="B12fb9a0" transform="matrix(1 0 0 1 -5 -11)" width="10" height="23"/> 
+		</defs>
+		<use xlink:href="#B12fb9a0"  id="U12ec290" style="fill:#FFFFFF;"/>
+	</g>
+	<g id="P12fea90" transform="matrix(1 0 0 1 130 376)">
+		<defs>
+			<text id="B12fe700" transform="matrix(1 0 0 1 0 0)" style="font-family:'Impact'; font-size:35px;text-rendering:geometricPrecision"><tspan>R</tspan><tspan rotate="180" x="33" y="-27.6">E</tspan><tspan x="32" y="0">FLECTIONS</tspan></text>
+		</defs>
+		<use xlink:href="#B12fe700"  id="U12fa850" style="fill:#FFFFFF;"/>
+	</g>
+	<g id="P12f3880" transform="matrix(1 0 0 1 322 376)">
+		<defs>
+			<text id="B12f4430" transform="matrix(1.0331 0 0 1 0 0)" style="font-family:'Impact'; font-size:17px;text-rendering:geometricPrecision">REPUBLIK ONE . ADOBE . WINTER 2001</text>
+		</defs>
+		<use xlink:href="#B12f4430"  id="U12f0f10" style="fill:#FFFFFF;"/>
+	</g>
+<!-- LINKS -->
+	<a xlink:href="http://www.republikone.com"><rect x="320" y="360" width="100" height="18" style="fill-opacity:0"/></a>
+	<a xlink:href="http://www.adobe.com/svg"><rect x="425" y="360" width="50" height="18" style="fill-opacity:0"/></a>
+<!-- END LINKS -->
+	<g id="P12f74a0" transform="matrix(1 0 0 1 -2 489)">
+		<defs>
+			<path id="B12f7090" style="fill:none;stroke-width:0.75;stroke-linecap:round;stroke-linejoin:round;" d="M0,0q901.25,0,901.25,0"/>
+		</defs>
+		<use xlink:href="#B12f7090"  id="U12f3070" style="fill:none;stroke:#FFFFFF;"/>
+	</g>
+	<g id="P12f60a0" transform="matrix(1 0 0 1 0 493)">
+		<defs>
+			<path id="B12f7c80" style="fill:none;stroke-width:1.25;stroke-linecap:round;stroke-linejoin:round;" d="M0,0q891.25,0,891.25,0"/>
+		</defs>
+		<use xlink:href="#B12f7c80"  id="U12f57c0" style="fill:none;stroke:#FFFFFF;"/>
+	</g>
+	<g id="P12dca90" transform="matrix(1 0 0 1 492 375)">
+		<defs>
+			<rect id="B12ee240" transform="matrix(1 0 0 1 -491 -1)" width="982" height="3"/> 
+		</defs>
+		<use xlink:href="#B12ee240"  id="U12e84c0" style="fill:#FFFFFF;"/>
+	</g>
+
+	<text transform="matrix(1 0 0 1 660 411)" style="font-family:'Verdana,Arial,Helvetica,SunSans-Regular'; font-size:9px;stroke:none;text-rendering:geometricPrecision">&gt;&gt;</text>
+<!-- BEGIN ENGLISH TEXT -->
+	<g id="e_text">
+	<g id="P12ee4b0" transform="matrix(1 0 0 1 680 411)">
+				<defs>
+					<text id="B12ee0a0" transform="matrix(1 0 0 1 0 0)" style="font-family:'Verdana,Arial,Helvetica,SunSans-Regular'; font-size:9px;text-rendering:geometricPrecision">Wishes  / hopes / dreams / trust /      faith
+						<tspan x="0" y="10.8">Best intentions //
+						</tspan>
+						<tspan x="0" y="21.6">None of these things can make you a leader
+						</tspan>
+						<tspan x="0" y="43.2">	         What can?
+						</tspan>
+						<tspan x="0" y="54">	                      If I knew the answer to that, I would be a 
+						</tspan>
+						<tspan x="78" y="64.8">	better man than I am today.
+						</tspan>
+					</text>
+				</defs>
+				<use xlink:href="#B12ee0a0"  id="U12ea650"/>
+			</g>
+	</g>
+<!-- END ENGLISH TEXT -->
+	
+<!-- BEGIN JAPANESE TEXT -->	
+	<g id="j_text" style="fill-rule:nonzero;clip-rule:nonzero;stroke:#000000;stroke-miterlimit:4; font-family:'HeiseiKakuGo-W3-83pv-RKSJ-H'; font-size:10px;display:none">
+		<text transform="matrix(1 0 0 1 680 412)" style="stroke:none;"><tspan x="0" y="0">希望 ／ 夢 ／ </tspan><tspan x="90" y="0">信念 ／ </tspan><tspan x="140" y="0">真実 ／ </tspan><tspan x="190" y="0">運命</tspan><tspan x="0" y="14.5">そんなものは君をリーダーにはしない</tspan><tspan x="30" y="43.5">何ができるって</tspan><tspan x="70" y="58">僕にもわからない。わかっていたら . . .</tspan></text>
+	</g>
+<!-- END JAPANESE TEXT -->
+	<rect id="filter_area3" x="0" y="40%" width="100%" height="20%" fill="red" display="none"/>
+
+	</g>
+
+<!-- NAV AND INTERACTIVITY BUTTONS -->
+
+<svg viewBox="0 0 1000 40" x="0" y="0" preserveAspectRatio="xMinYMin" xml:space="preserve">
+	<g id="nav_layer">
+	<g id="P12e5c30" transform="matrix(1 0 0 1 859 15)">
+		<defs>
+			<text id="B12e5820" transform="matrix(1 0 0 1 0 0)" style="font-family:'Verdana,Arial,Helvetica,SunSans-Regular'; font-size:9px;letter-spacing:0.1em;text-rendering:geometricPrecision">reflections &gt;&gt;</text>
+		</defs>
+		<use xlink:href="#B12e5820"  id="U12e7750"/>
+	</g>
+	<g id="P12d51e0" transform="matrix(1 0 0 1 985 11)">
+		<a id="renewal_link" xlink:href="03_renewal.svg">
+		<defs>
+			<rect id="B12d47c0" transform="matrix(1 0 0 1 -7 -7)" style="fill:#FFFFFF;stroke-width:1.25;" width="13" height="13"/> 
+		</defs>
+		<use xlink:href="#B12d47c0"  id="U12d3b20" style="fill:none;stroke:#000000;"/>
+		</a>
+	</g>
+	<g id="P12de710" transform="matrix(1 0 0 1 965 11)">
+		<a id="snow_link" xlink:href="02_snow.svg">
+		<defs>
+			<rect id="B12de310" transform="matrix(1 0 0 1 -7 -7)" style="fill:#FFFFFF;stroke-width:1.25;" width="13" height="13"/> 
+		</defs>
+		<use xlink:href="#B12de310"  id="U12d97f0" style="fill:none;stroke:#000000;"/>
+		</a>
+	</g>
+	<g id="P12dd210" transform="matrix(1 0 0 1 944 11)">
+		<defs>
+			<rect id="B12db3b0" transform="matrix(1 0 0 1 -7 -7)" style="fill:#FFFFFF;stroke-width:1.25;" width="13" height="13"/> 
+		</defs>
+		<use xlink:href="#B12db3b0"  id="U12dfcd0" style="fill:none;stroke:#000000;"/>
+	</g>
+	<g id="G5c56c80" transform="matrix(1 0 0 1 937 89)">
+		<g id="S5c57290">
+			<g id="P5c55290" style="opacity:0;">
+				<defs>
+					<text id="B12cf3a0" transform="matrix(1.0184 0 0 1 0 0)" style="font-family:'Verdana,Arial,Helvetica,SunSans-Regular'; font-size:8px;letter-spacing:0.1em;text-rendering:geometricPrecision">3 // renewal</text>
+				</defs>
+				<use xlink:href="#B12cf3a0"  id="U12d78a0"/>
+				<animate xlink:href="#P5c55290" attributeName="opacity" attributeType="CSS"  begin="P12d51e0.mouseover" dur="1s" fill="freeze" values="0;1" />
+				<animate xlink:href="#P5c55290" attributeName="opacity" attributeType="CSS"  begin="P12d51e0.mouseout" dur="0.6667s" fill="freeze" values="1;0" />
+			</g>
+		</g>
+	</g>
+	<g id="G5bc5c50" transform="matrix(1 0 0 1 949 73)">
+		<g id="S5ba4bc0">
+			<g id="P5ba66c0" style="opacity:0;">
+				<defs>
+					<text id="B12d4240" transform="matrix(1.0328 0 0 1 0 0)" style="font-family:'Verdana,Arial,Helvetica,SunSans-Regular'; font-size:8px;letter-spacing:0.1em;text-rendering:geometricPrecision">2 // snow</text>
+				</defs>
+				<use xlink:href="#B12d4240"  id="U12d2de0"/>
+				<animate xlink:href="#P5ba66c0" attributeName="opacity" attributeType="CSS"  begin="P12de710.mouseover" dur="1s" fill="freeze" values="0;1" />
+				<animate xlink:href="#P5ba66c0" attributeName="opacity" attributeType="CSS"  begin="P12de710.mouseout" dur="0.6667s" fill="freeze" values="1;0" />
+			</g>
+		</g>
+	</g>
+	<g id="G5c298d0" transform="matrix(1 0 0 1 952 56)">
+		<g id="S5c29c00">
+			<g id="P5c2ce20" style="opacity:0;">
+				<defs>
+					<text id="B5beeee0" transform="matrix(1.0318 0 0 1 0 0)" style="font-family:'Verdana,Arial,Helvetica,SunSans-Regular'; font-size:8px;letter-spacing:0.1em;text-rendering:geometricPrecision">1 // faith</text>
+				</defs>
+				<use xlink:href="#B5beeee0"  id="U12af9f0"/>
+				<animate xlink:href="#P5c2ce20" attributeName="opacity" attributeType="CSS"  begin="P12dd210.mouseover" dur="1s" fill="freeze" values="0;1" />
+				<animate xlink:href="#P5c2ce20" attributeName="opacity" attributeType="CSS"  begin="P12dd210.mouseout" dur="0.6667s" fill="freeze" values="1;0" />
+			</g>
+		</g>
+	</g>
+	<g id="G6edf2b0" transform="matrix(1 0 0 1 729 15)">
+		<g id="S6ee1380">
+			<g id="P6ee62a0" transform="matrix(1 0 0 1 105 -13)">
+				<defs>
+					<path id="B5bf9010" style="fill:none;stroke-width:0.75;stroke-linecap:round;stroke-linejoin:round;" d="M0,0q0,19,0,19"/>
+				</defs>
+				<use xlink:href="#B5bf9010"  id="U5bf9ae0" style="fill:none;stroke:#000000;"/>
+			</g>
+			<g id="P6ee6ac0">
+				<defs>
+					<text id="B5bb63a0" style="font-family:'Verdana,Arial,Helvetica,SunSans-Regular'; font-size:9px;letter-spacing:0.1em;text-rendering:geometricPrecision">&lt;&lt; introspections</text>
+				</defs>
+				<use xlink:href="#B5bb63a0"  id="U5bb6e70"/>
+			</g>
+			<g transform="translate(-20)">
+			<g id="P6ee9999" transform="matrix(1 0 0 1 1 -4)">
+				<defs>
+					<rect id="B5ba9999" transform="matrix(1 0 0 1 -7 -7)" style="stroke-width:1.25;" width="13" height="13"/> 
+				</defs>
+				<use xlink:href="#B5ba9999"  id="U5ba9999" style="fill:#FFFFFF;stroke:#000000;"  onclick="elemDisplay(evt, 'filter_area3', 'inline');elemFilter(evt, 'filter_area3', 'url(#Reverse)')"/>
+			</g>
+			<g id="P6ee7400" transform="matrix(1 0 0 1 -19 -4)">
+				<defs>
+					<rect id="B5ba0510" transform="matrix(1 0 0 1 -7 -7)" style="stroke-width:1.25;" width="13" height="13"/> 
+				</defs>
+				<use xlink:href="#B5ba0510"  id="U5ba5050" style="fill:#FFFFFF;stroke:#000000;"  onclick="elemFilter(evt, 'filter_area2', 'url(#MidGlow)');"/>
+			</g>
+			<g id="P6ee7f70"  transform="matrix(1 0 0 1 -39 -4)">
+				<defs>
+					<rect id="B5ba6c60" transform="matrix(1 0 0 1 -7 -7)" style="stroke-width:1.25;" width="13" height="13"/> 
+				</defs>
+				<use xlink:href="#B5ba6c60"  id="U5ba3a10" style="fill:#FFFFFF;stroke:#000000;" onclick="elemFilter(evt, 'filter_area1', 'url(#PhatPixels)')"/>
+			</g>
+			<g id="P6ee4a00" transform="matrix(1 0 0 1 -60 -4)">
+				<defs>
+					<rect id="B5ba20f0" transform="matrix(1 0 0 1 -7 -7)" style="stroke-width:1.25;" width="13" height="13"/> 
+				</defs>
+				<use xlink:href="#B5ba20f0"  id="U5ba7440" style="fill:#FFFFFF;stroke:#000000;" onclick="elemFilter(evt, 'filter_area1', 'url(#none)');elemFilter(evt, 'filter_area2', 'url(#none)');elemDisplay(evt, 'filter_area3', 'none');elemFilter(evt, 'filter_area3', 'url(#none)')"/>
+			</g>
+			<g id="P6ee2240" transform="matrix(1 0 0 1 -76 -13)">
+				<defs>
+					<path id="B5bbda20" style="fill:none;stroke-width:0.75;stroke-linecap:round;stroke-linejoin:round;" d="M0,0q0,19.25,0,19.25"/>
+				</defs>
+				<use xlink:href="#B5bbda20"  id="U5bbc210" style="fill:none;stroke:#000000;"/>
+			</g>
+			<g id="P6ee2e20" transform="matrix(1 0 0 1 -93 -4)">
+				<defs>
+					<rect id="B5c29aa0" transform="matrix(1 0 0 1 -7 -7)" style="stroke-width:1.25;" width="13" height="13"/> 
+				</defs>
+				<use xlink:href="#B5c29aa0"  id="U5b90b30" style="fill:#FFFFFF;stroke:#000000;"/>
+				<set xlink:href="#j_text" attributeName="display" to="inline" begin="U5b90b30.click" dur="indefinite" fill="freeze"/>
+				<set xlink:href="#e_text" attributeName="display" to="none" begin="U5b90b30.click" dur="indefinite" fill="freeze"/>
+				<set xlink:href="#snow_link" attributeName="xlink:href" to="02_snow_j.svg" begin="U5b90b30.click" dur="indefinite" fill="freeze"/>
+				<set xlink:href="#renewal_link" attributeName="xlink:href" to="03_renewal_j.svg" begin="U5b90b30.click" dur="indefinite" fill="freeze"/>
+			</g>
+			<g id="P6ee5c50" transform="matrix(1 0 0 1 -114 -4)">
+				<defs>
+					<rect id="B5c2a870" transform="matrix(1 0 0 1 -7 -7)" style="stroke-width:1.25;" width="13" height="13"/> 
+				</defs>
+				<use xlink:href="#B5c2a870"  id="U5c290f0" style="fill:#FFFFFF;stroke:#000000;"/>
+				<set xlink:href="#e_text" attributeName="display" to="inline" begin="U5c290f0.click" dur="indefinite" fill="freeze"/>
+				<set xlink:href="#j_text" attributeName="display" to="none" begin="U5c290f0.click" dur="indefinite" fill="freeze"/>
+				<set xlink:href="#snow_link" attributeName="xlink:href" to="02_snow.svg" begin="U5c290f0.click" dur="indefinite" fill="freeze"/>
+				<set xlink:href="#renewal_link" attributeName="xlink:href" to="03_renewal.svg" begin="U5c290f0.click" dur="indefinite" fill="freeze"/>
+			</g>
+			</g>
+		</g>
+	</g>
+	<g transform="translate(-30)" text-rendering="geometricPrecision">
+	<g transform="matrix(1 0 0 1 730 33)">
+		<g>
+			<g id="P6eda999" style="opacity:0;">
+				<defs>
+					<text id="B12fa999" style="font-family:'Verdana,Arial,Helvetica,SunSans-Regular'; font-size:9px;letter-spacing:0.1em;">filter 3</text>
+				</defs>
+				<use xlink:href="#B12fa999" x="2"/>
+				<animate xlink:href="#P6eda999" attributeName="opacity" attributeType="CSS"  begin="U5ba9999.mouseout" dur="0.5s" fill="freeze" values="1;0" />
+				<animate xlink:href="#P6eda999" attributeName="opacity" attributeType="CSS"  begin="U5ba9999.mouseover" dur="0.6667s" fill="freeze" values="0;1" />
+			</g>
+		</g>
+	</g>
+	<g id="G6edd8c0" transform="matrix(1 0 0 1 703 33)">
+		<g id="S6ed9c00">
+			<g id="P6eda600" style="opacity:0;">
+				<defs>
+					<text id="B12fa8e0" style="font-family:'Verdana,Arial,Helvetica,SunSans-Regular'; font-size:9px;letter-spacing:0.1em;">filter 2</text>
+				</defs>
+				<use xlink:href="#B12fa8e0"  id="U12fad90"/>
+				<animate xlink:href="#P6eda600" attributeName="opacity" attributeType="CSS"  begin="U5ba5050.mouseout" dur="0.5s" fill="freeze" values="1;0" />
+				<animate xlink:href="#P6eda600" attributeName="opacity" attributeType="CSS"  begin="U5ba5050.mouseover" dur="0.6667s" fill="freeze" values="0;1" />
+			</g>
+		</g>
+	</g>
+	<g id="G6eee680" transform="matrix(1 0 0 1 678 33)">
+		<g id="S6eeb960">
+			<g id="P6eeb2b0" style="opacity:0;">
+				<defs>
+					<text id="B12c6bf0" style="font-family:'Verdana,Arial,Helvetica,SunSans-Regular'; font-size:9px;letter-spacing:0.1em;">filter 1</text>
+				</defs>
+				<use xlink:href="#B12c6bf0"  id="U12c4270"/>
+				<animate xlink:href="#P6eeb2b0" attributeName="opacity" attributeType="CSS"  begin="U5ba3a10.mouseout" dur="0.5s" fill="freeze" values="1;0" />
+				<animate xlink:href="#P6eeb2b0" attributeName="opacity" attributeType="CSS"  begin="U5ba3a10.mouseover" dur="0.6667s" fill="freeze" values="0;1" />
+				<!--set xlink:href="#filter1" attributeName="fill" begin="U5ba3a10.click" dur="indefinite" fill="freeze" to="blue" /-->
+			</g>
+		</g>
+	</g>
+	<g id="G6f07f40" transform="matrix(1 0 0 1 645 33)">
+		<g id="S6f06850">
+			<g id="P6f02070" style="opacity:0;">
+				<defs>
+					<text id="B6ed6750" style="font-family:'Verdana,Arial,Helvetica,SunSans-Regular'; font-size:9px;letter-spacing:0.1em;">original</text>
+				</defs>
+				<use xlink:href="#B6ed6750"  id="U6ed5b00"/>
+				<animate xlink:href="#P6f02070" attributeName="opacity" attributeType="CSS"  begin="U5ba7440.mouseout" dur="0.5s" fill="freeze" values="1;0" />
+				<animate xlink:href="#P6f02070" attributeName="opacity" attributeType="CSS"  begin="U5ba7440.mouseover" dur="0.6667s" fill="freeze" values="0;1" />
+			</g>
+		</g>
+	</g>
+	<g id="G6f16cb0" transform="matrix(1 0 0 1 639 33)">
+		<g id="S6f17510">
+			<g id="P6f11510" style="opacity:0;">
+				<defs>
+					<text id="B5c71b30" style="fill-rule:nonzero;clip-rule:nonzero;stroke:none;fill:#000000; font-family:'HeiseiKakuGo-W3-83pv-RKSJ-H'; font-size:12px">日本語</text>
+				</defs>
+				<use xlink:href="#B5c71b30"  id="U5c720d0"/>
+				<animate xlink:href="#P6f11510" attributeName="opacity" attributeType="CSS"  begin="U5b90b30.mouseout" dur="0.5s" fill="freeze" values="1;0" />
+				<animate xlink:href="#P6f11510" attributeName="opacity" attributeType="CSS"  begin="U5b90b30.mouseover" dur="0.6667s" fill="freeze" values="0;1" />
+			</g>
+		</g>
+	</g>
+	<g id="G6ecda80" transform="matrix(1 0 0 1 594 33)">
+		<g id="S6ece620">
+			<g id="P6ece200" style="opacity:0;">
+				<defs>
+					<text id="B5b90320" style="font-family:'Verdana,Arial,Helvetica,SunSans-Regular'; font-size:9px;letter-spacing:0.1em;">english</text>
+				</defs>
+				<use xlink:href="#B5b90320"  id="U5c06670"/>
+				<animate xlink:href="#P6ece200" attributeName="opacity" attributeType="CSS"  begin="U5c290f0.mouseout" dur="0.5s" fill="freeze" values="1;0" />
+				<animate xlink:href="#P6ece200" attributeName="opacity" attributeType="CSS"  begin="U5c290f0.mouseover" dur="0.6667s" fill="freeze" values="0;1" />
+			</g>
+		</g>
+	</g>
+	</g>
+	</g>
+		
+</svg>
+<!-- END NAV AND INTERACTIVITY BUTTONS -->
+
+<!-- BEGIN RESIZE LABEL -->
+	<svg viewBox="0 0 1000 500" preserveAspectRatio="xMaxYMax slice" xml:space="preserve">
+		<path id="label" d="M945, 500 v-13h42L1000,500" style="fill:white;stroke:gray"/>
+		<text style="font-family:'Verdana,Arial,Helvetica,SunSans-Regular';font-size:8px" x="950" y="497">!  resize</text>
+		<path d="M983,492L989,498" style="stroke:gray"/>
+		<path d="M985,498h4v-4" style="stroke:gray;fill:none"/>
+		<animate xlink:href="#label" attributeName="fill" values="white;red;white" dur="1s" begin="0s" end="3s" repeatCount="3"/>
+	</svg>
+<!-- END RESIZE LABEL -->
+
+<image xlink:href="http://www.google-analytics.com/__utm.gif?utmwv=4.7.1&amp;utmn=21830374&amp;utmhn=svg.kvalitne.cz&amp;utmcs=UTF-8&amp;utmsr=1920x1080&amp;utmsc=24-bit&amp;utmul=en-us&amp;utmje=1&amp;utmfl=10.0%20r45&amp;utmdt=SVG%C2%A0%E2%80%94%C2%A0It%27s%20in%20your%20hands...&amp;utmhid=1377849700&amp;utmr=-&amp;utmp=%2Findex2.htm&amp;utmac=UA-11950721-1&amp;utmcc=__utma%3D251371972.1884550355.1260220320.1272562824.1272576758.56%3B%2B__utmz%3D251371972.1263752798.41.3.utmcsr%3Dgoogle%7Cutmccn%3D(organic)%7Cutmcmd%3Dorganic%7Cutmctr%3Dsvg%2520smil%2520demo%3B" width="1" height="1"/>
+
+</svg>

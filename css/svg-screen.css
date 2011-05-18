@@ -1,0 +1,64 @@
+/* css for svg.kvalitne.cz */
+body {
+   background: #EEEEEE;
+   font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+   font-size: 0.9em;
+}
+
+/* links */
+a:link, a:active, a:visited {
+   color: black;
+}
+a:hover {
+   color: Maroon;
+}
+
+h1 span {
+  font-size: 0.5em; 
+}
+
+h2 {
+   margin-bottom: 5px;
+}
+
+.date {
+   font-size: 0.9em;
+   color: Gray;
+}
+
+
+/* footer */
+#footer {
+   background: #696969;
+   border-top: 5px solid gray;
+}
+
+#footer h4 {
+   font-size: 0.9em;
+   color: white;
+   text-align: center;
+   margin: 0;
+   padding: 10px 0;
+}
+
+
+/* other */
+hr {
+   border: none;
+   background: #BBBBBB;
+}
+
+th.desc {background-color: beige}
+th.sf {background-color: black; color: white}
+th.op {background-color: red}
+th.cr {background-color: #0c0}
+th.ie {background-color: #009ad9}
+th.iesw {background-color: #fff}
+th.ff {background-color: orange}
+th.ff4 {background-color: #00377f}
+th.ff4sw {background-color: gray}
+th.ff4raf {background-color: magenta}
+th.ff4rafsw {background-color: lightgray}
+table.partbench td {background-color: #cfc}
+tr.partbenchko td, table.partbench td.ko {background-color: #fcc}
+th.hh {color: red; font: bolder 16px Verdana, Helvetica, sans-serif}

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="250" height="130">
+  <g transform="scale(0.5) translate(-230 -70)">
+    <polygon fill="gold" points="850,75  958,137.5 958,262.5 850,325 742,262.6 742,137.5" transform="translate(-320)" stroke="red" stroke-width="3"/>
+    <polygon fill="lime" points="350, 75 379,161 469,161 397,215 423,301 350,250 277,301 303,215 231,161 321,161" stroke="black" stroke-width="8" stroke-dasharray="8,2" stroke-opacity=".7"/>
+  </g>
+</svg>

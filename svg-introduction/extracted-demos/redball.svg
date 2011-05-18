@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="260" height="260">
+<title>Red Ball, by marek.raida@gmail.com</title>
+<script type="text/ecmascript" xlink:href="smil.user.js"/>
+<radialGradient id="gradred" cx="0.2" cy="0.2" r="1" fx="0.3" fy="0.3">
+  <stop stop-color="white" offset="0"/>
+  <stop stop-color="red" offset="0.25"/>
+  <stop stop-color="rgb(192,0,0)" offset="0.5"/>
+  <stop stop-color="rgb(127,0,0)" offset="0.7"/>
+  <stop stop-color="rgb(64,0,0)" offset="0.85"/>
+  <stop stop-color="rgb(0,0,0)" offset="1"/>
+</radialGradient>
+
+<g transform="translate(130 130)">
+  <g>
+    <rect x="-100" y="-100" width="200" height="200" fill="none" stroke="gray" stroke-width="5" rx="33"/>
+    <circle r="4" fill="#555" stroke="#222" stroke-width="3" stroke-dasharray="3,3"/>
+
+    <circle id="mc" cx="-67" cy="67" r="30" fill="url(#gradred)">
+      <animate id="ball1" attributeName="cy" begin="rot2.begin+1s" dur="0.75s" from="67" to="-67" repeatCount="1" fill="freeze" calcMode="spline" keySplines="0.62, 0.0, 1.0, 1.0" keyTimes="0;1"/>
+      <animate id="ball2" attributeName="cy" begin="rot4.begin+1s" dur="0.75s" from="-67" to="67" repeatCount="1" fill="freeze" calcMode="spline" keySplines="0.62, 0.0, 1.0, 1.0" keyTimes="0;1"/>
+      <animate id="ball3" attributeName="r" begin="rotoy.end+4s" dur="3.5s" from="30" to="500" repeatCount="1" calcMode="spline" keySplines="0.42, 0.0, 1.0, 1.0" keyTimes="0;1"/>
+    </circle>
+
+    <animateTransform id="rot1" attributeName="transform" type="rotate" begin="0.5s; ending.end+0.5s" dur="2s" from="0" to="-90" repeatCount="1" fill="freeze"/>
+    <animateTransform id="rot2" attributeName="transform" type="rotate" begin="rot1.end+0.5s" dur="2s" from="-90" to="-180" repeatCount="1" fill="freeze"/>
+    <animateTransform id="rot3" attributeName="transform" type="rotate" begin="rot2.end+0.5s" dur="2s" from="-180" to="-90" repeatCount="1" fill="freeze"/>
+    <animateTransform id="rot4" attributeName="transform" type="rotate" begin="rot3.end+0.5s" dur="2s" from="-90" to="0" repeatCount="1" fill="freeze"/>
+
+    <animateTransform id="rotox" attributeName="transform" type="rotate" begin="rot4.end+0.5s" dur="1.8s" by="-360" repeatCount="1" calcMode="spline" keySplines="0.42, 0.0, 1.0, 1.0" keyTimes="0;1"/>
+    <animateTransform id="rotoy" attributeName="transform" type="rotate" begin="rotox.end" dur="1.2s" by="-360" repeatCount="1"/>
+    <animateTransform attributeName="transform" type="rotate" begin="rotoy.end" dur="0.8s" by="-360" repeatCount="8"/>
+
+    <animate id="ending" attributeName="opacity" begin="ball3.begin+1s" dur="2.5s" from="1" to="0" repeatCount="1"/>
+  </g>
+</g>
+
+</svg>

@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="180" height="200" xmlns="http://www.w3.org/2000/svg">
+<script>function beweeg(evt) {
+evt.target.ownerDocument.getElementById("oog1").setAttribute("cx",76+(evt.clientX/14));
+evt.target.ownerDocument.getElementById("oog2").setAttribute("cx",54+(evt.clientX/14));
+evt.target.ownerDocument.getElementById("oog1").setAttribute("cy",30+(evt.clientY/14));
+evt.target.ownerDocument.getElementById("oog2").setAttribute("cy",32+(evt.clientY/14));
+}</script>
+<g transform="translate(10,10)">
+  <path d="M54,174C68,170 95,170 101,174L138,127C139,109 131,82 115,68C115,68 107,54 105,36C105,
+  36 107,16 93,6C93,6 72,-16 50,14C50,14 45,32 51,58C51,58 46,74 33,85C11,139 28,100 18,134C28,
+  100 13,149 27,157C23,147 37,163 40,169" />
+  <path fill="white" d="M50,153C55,168 89,165 101,149C108,133 120,116 104,83C93,61 93,41 65,50C56,
+  56 55,67 47,81C41,95 34,111 34,126" />
+  <path d="M50,151C60,152 61,144 51,137L27,115L24,133" />
+  <path fill="white" d="M75,39C73,30 82,18 91,30C91,37 95,46 81,46" />
+  <path fill="white" d="M58,47C50,37 58,18 66,29C68,33 66,45 65,50" />
+  <ellipse id="oog1" fill="black" cx="82" cy="36" rx="4" ry="6" />
+  <ellipse id="oog2" fill="black" cx="60" cy="38" rx="4" ry="6" />
+  <path fill="#f6bf03" d="M54,53C65,71 75,66 91,53C93,43 81,42 72,38C64,40 57,46 54,51" />
+  <path fill="#f6bf03" d="M0,166C38,178 59,191 58,162L37,130C16,104 24,147 0,135C2,146 2,155 1,162" />
+  <path fill="#f6bf03" d="M102,148C91,200 127,177 140,162C140,162 156,157 153,149C142,146 137,
+  141 140,130C132,125 127,134 119,137C113,135 112,121 103,126" />
+  <circle cx="78" cy="42" r="1" />
+  <circle cx="68" cy="42" r="1" />
+  <path fill="none" stroke="black" stroke-width="1" d="M54,52C63,59 73,59 88,49" />
+</g>
+  <rect x="0" y="0" width="99%" height="99%" fill="yellow" fill-opacity="0.05" stroke="blue"
+  stroke-width="1px" onmousemove="beweeg(evt)"/>
+</svg>

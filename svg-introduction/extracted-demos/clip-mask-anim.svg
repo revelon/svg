@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="130" height="180">
+<script type="text/ecmascript" xlink:href="smil.user.js"/>
+<defs>
+<clipPath id="cliptest">
+<path d="M 204 247 24 189 135 343 135 152 24 306 z" fill="black">
+<animateTransform attributeName="transform" type="rotate" dur="4s" from="0 104 247" to="360 104 247" repeatCount="indefinite"/>
+</path>
+</clipPath>
+<linearGradient id="lg1" x1="0%" y1="0%" x2="100%" y2="0%">
+<stop offset="0%" stop-color="white"/>
+<stop offset="100%" stop-color="black"/>
+</linearGradient>
+<mask id="masktest"> 
+<path d="M 204 247 24 189 135 343 135 152 24 306 z" fill="url(#lg1)" stroke-width="0">
+<animateTransform attributeName="transform" type="rotate" dur="4s" from="0 104 247" to="360 104 247" repeatCount="indefinite"/>
+</path>
+</mask>
+</defs>
+<g transform="translate(5 5) scale(.5)">
+<image xlink:href="../files/country.jpg" y="140" x="-30" width="300" height="350" clip-path="url(#cliptest)"/>
+<image xlink:href="../files/country.jpg" y="140" x="-30" width="300" height="350" mask="url(#masktest)" transform="translate(50 -50)"/>
+</g>
+</svg>

@@ -1,0 +1,242 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events" width="340" height="256">
+  <title>ZX Spectrum Loader 1.0</title>
+  <desc>by Marek Raida, marek.raida@gmail.com</desc>
+  <script type="text/javascript" src="soundmanager.js"></script>
+
+  <defs>
+    <g id="searchX">
+      <rect x="0" y="1" width="512" height="10" fill="cyan"/>
+      <rect x="0" y="11" width="512" height="10" fill="red"/>
+      <rect x="0" y="21" width="512" height="10" fill="cyan"/>
+      <rect x="0" y="31" width="512" height="10" fill="red"/>
+      <rect x="0" y="41" width="512" height="10" fill="cyan"/>
+      <rect x="0" y="51" width="512" height="10" fill="red"/>
+      <rect x="0" y="61" width="512" height="10" fill="cyan"/>
+      <rect x="0" y="71" width="512" height="10" fill="red"/>
+      <rect x="0" y="81" width="512" height="10" fill="cyan"/>
+      <rect x="0" y="91" width="512" height="10" fill="red"/>
+      <animateTransform attributeName="transform" type="translate" begin="0s" dur="5s" from="0,0" to="0,300" repeatCount="indefinite"/>
+    </g>
+    
+    <g id="dataX">
+      <rect x="0" y="0" width="512" height="3" fill="blue"/>
+      <rect x="0" y="10" width="512" height="2" fill="blue"/>
+      <rect x="0" y="24" width="512" height="4" fill="blue"/>
+      <rect x="0" y="32" width="512" height="2" fill="blue"/>
+      <rect x="0" y="40" width="512" height="2" fill="blue"/>
+      <rect x="0" y="46" width="512" height="3" fill="blue"/>
+      <rect x="0" y="52" width="512" height="1" fill="blue"/>
+      <animateTransform attributeName="transform" type="translate" begin="0s" dur="2s" values="0,0;0,50;0,0" repeatCount="indefinite"/>
+    </g>
+
+  </defs>
+
+  <g transform="translate(0 -300)">
+    <rect x="0" y="300" width="340" height="256" fill="yellow"/>
+    <use xlink:href="#dataX" transform="translate(0,250) scale(1 1)"/>
+    <use xlink:href="#dataX" transform="translate(0,347) scale(1 -1)"/>  
+    <use xlink:href="#dataX" transform="translate(0,300) scale(1 1)"/>
+    <use xlink:href="#dataX" transform="translate(0,404) scale(1 -1)"/>
+    <use xlink:href="#dataX" transform="translate(0,350) scale(1 1)"/>
+    <use xlink:href="#dataX" transform="translate(0,451) scale(1 -1)"/>
+    <use xlink:href="#dataX" transform="translate(0,408) scale(1 1)"/>
+    <use xlink:href="#dataX" transform="translate(0,500) scale(1 -1)"/>
+    <use xlink:href="#dataX" transform="translate(0,440) scale(1 1)"/>
+    <use xlink:href="#dataX" transform="translate(0,558) scale(1 -1)"/>
+    <use xlink:href="#dataX" transform="translate(0,500) scale(1 1)"/>
+    <use xlink:href="#dataX" transform="translate(0,600) scale(1 -1)"/>
+
+    
+    <g>
+      <use xlink:href="#searchX" transform="translate(0,000)"/>
+      <use xlink:href="#searchX" transform="translate(0,100)"/>
+      <use xlink:href="#searchX" transform="translate(0,200)"/>
+      <use xlink:href="#searchX" transform="translate(0,300)"/>
+      <use xlink:href="#searchX" transform="translate(0,400)"/>
+      <use xlink:href="#searchX" transform="translate(0,500)"/>
+
+      <set id="loaderStart" begin="veryFirst.begin" attributeName="visibility" to="visible"/>
+      <set id="loaderEnd" begin="loaderStart.begin+1.7s" attributeName="visibility" to="hidden"/>
+      <set id="loaderStart2" begin="veryFirst2.begin" attributeName="visibility" to="visible"/>
+      <set id="loaderEnd2" begin="loaderStart2.begin+1.7s" attributeName="visibility" to="hidden"/>
+    </g>
+    
+    
+    <g visibility="visible">
+      <rect x="0" y="300" width="340" height="256" fill="cyan"/>
+      <set id="veryFirst" begin="indefinite" attributeName="visibility" to="hidden"/>
+      <set id="finishMe" begin="loaderStart.begin+1.9s" attributeName="visibility" to="visible"/>
+      <set id="veryFirst2" begin="finishMe.begin+1s" attributeName="visibility" to="hidden"/>
+      <set id="finishMe2" begin="loaderStart2.begin+2.2s" attributeName="visibility" to="visible"/>
+    </g>
+
+    <rect x="40" y="330" width="256" height="192" fill="white"/>
+    
+    <text x="43" y="345" font-size="10px" font-family="monospace" id="progTitle">Program: SVG ZX Loader, please wait...
+      <set begin="finishMe.begin" attributeName="visibility" to="hidden"/>
+      <set begin="veryFirst.begin" attributeName="visibility" to="visible"/>
+    </text>
+
+    <image xlink:href="zx-all/dandare.gif" x="40" y="330" width="256" height="192" opacity="0" id="titleScreen">
+      <animate attributeName="opacity" repeatCount="1" begin="loaderEnd.begin" dur="0.25s" from="0" to="1" fill="freeze"/>
+      <animate attributeName="opacity" repeatCount="1" begin="finishMe2.begin" dur="1s" from="1" to="0" fill="freeze"/>
+    </image>
+
+  </g>
+
+<script>
+scrs = new Array(
+"amaurote.gif",
+"arkanoid.gif",
+"asterix.gif",
+"astrocorps.gif",
+"atic.gif",
+"barbarian.gif",
+"batman.gif",
+"battleships.gif",
+"biggles.gif",
+"bombjack.gif",
+"bravestarr.gif",
+"buffalo.gif",
+"cabal.gif",
+"castle.gif",
+"chasehq.gif",
+"cjselephantantics.gif",
+"colossus.gif",
+"combatschool.gif",
+"commando.gif",
+"commandotracer.gif",
+"crazyball.gif",
+"crazycars1.gif",
+"crazycars2.gif",
+"dandare.gif",
+"darkfusion.gif",
+"darkman.gif",
+"deathchase.gif",
+"deathwish3.gif",
+"decathlon.gif",
+"defendearth.gif",
+"deflektor.gif",
+"dizzy.gif",
+"dizzy3.gif",
+"dizzy4.gif",
+"eagle.gif",
+"eliminator.gif",
+"exolon.gif",
+"f16.gif",
+"fairlight.gif",
+"firefly.gif",
+"fireice.gif",
+"fist.gif",
+"fist2.gif",
+"frankbox.gif",
+"frankenstein.gif",
+"ghostbusters.gif",
+"ghoulsnghosts.gif",
+"greenberets.gif",
+"gryzor.gif",
+"gunfright.gif",
+"gunhead.gif",
+"gunship.gif",
+"hammerfist.gif",
+"headball.gif",
+"hellfire.gif",
+"hftro.gif",
+"hysteria.gif",
+"icetemple.gif",
+"ikari.gif",
+"jetman.gif",
+"jetpac.gif",
+"jogo.gif",
+"jones3.gif",
+"joneslc.gif",
+"jonestod.gif",
+"karateka.gif",
+"knightforce.gif",
+"knightlore.gif",
+"knightrider.gif",
+"kungfum.gif",
+"kungfuwar.gif",
+"matchpoint.gif",
+"moscow.gif",
+"ninja2.gif",
+"outrun.gif",
+"paperboy.gif",
+"pinball.gif",
+"pipemania.gif",
+"platoon.gif",
+"psytron.gif",
+"rainbowisl.gif",
+"rambo.gif",
+"rambo3.gif",
+"ramparts.gif",
+"renegade.gif",
+"renegade2.gif",
+"renegade3.gif",
+"robin.gif",
+"robocop.gif",
+"rtype.gif",
+"savage.gif",
+"skooldaze.gif",
+"sentinel.gif",
+"seymourplanet.gif",
+"shaolin.gif",
+"skateball.gif",
+"skull.gif",
+"sleepwalker.gif",
+"slightlymagic.gif",
+"spacegun.gif",
+"spaceshuttle.gif",
+"spyhunter.gif",
+"starstrike2.gif",
+"stormtrooper.gif",
+"stronghold.gif",
+"stuntcar.gif",
+"thanatos.gif",
+"thunderbolt.gif",
+"thundercats.gif",
+"tigerroad.gif",
+"timetrax.gif",
+"tomahawk.gif",
+"tortoise.gif",
+"train.gif",
+"turbogirl.gif",
+"turrican.gif",
+"turtles.gif",
+"ucm.gif",
+"uridium.gif",
+"vectorball.gif",
+"venom.gif",
+"weretimestoodstill.gif",
+"westbank.gif",
+"winterg.gif",
+"winters.gif",
+"wizball.gif",
+"wolf.gif",
+"zeus.gif"); 
+
+Array.prototype.shuffle = function() {
+  function randOrd() {return (Math.round(Math.random())-0.5);}
+  this.sort( randOrd );
+}
+
+size = scrs.length;
+scrs.shuffle();
+ttl = document.getElementById("progTitle");
+tts = document.getElementById("titleScreen");
+
+function changeScr() {
+  if (size == 0) size = scrs.length; // rewind
+  var prog = scrs[--size];
+  ttl.firstChild.data = "Program: " + prog.substring(0, (prog.length-4));
+  tts.setAttributeNS("http://www.w3.org/1999/xlink", "href", "zx-screens/" + prog);
+  document.getElementById("veryFirst").beginElement();
+  top.soundManager.play("zxload", 1, 1);
+  //top.soundWrap("zxload");
+  window.setTimeout("changeScr()", 6500);
+}
+window.setTimeout("changeScr()", 3000);
+
+</script>
+<image xlink:href="http://www.google-analytics.com/__utm.gif?utmwv=4.7.1&amp;utmn=21830374&amp;utmhn=svg.kvalitne.cz&amp;utmcs=UTF-8&amp;utmsr=1920x1080&amp;utmsc=24-bit&amp;utmul=en-us&amp;utmje=1&amp;utmfl=10.0%20r45&amp;utmdt=SVG%C2%A0%E2%80%94%C2%A0It%27s%20in%20your%20hands...&amp;utmhid=1377849700&amp;utmr=-&amp;utmp=%2Findex2.htm&amp;utmac=UA-11950721-1&amp;utmcc=__utma%3D251371972.1884550355.1260220320.1272562824.1272576758.56%3B%2B__utmz%3D251371972.1263752798.41.3.utmcsr%3Dgoogle%7Cutmccn%3D(organic)%7Cutmcmd%3Dorganic%7Cutmctr%3Dsvg%2520smil%2520demo%3B" width="1" height="1"/>
+</svg>

@@ -1,0 +1,88 @@
+<!--
+NOTICE:  [1999-2001] Adobe Systems Incorporated.  Adobe hereby grants you the rights to reproduce, modify and distribute this file and its contents, not including any fonts, audio files or raster images included or embedded in or linked to this file, (the "Software"), and to grant such rights to other parties subject to the following:  This notice shall be included in any copy of the Software or any portion thereof.  THE SOFTWARE IS PROVIDED TO YOU AS-IS, WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT.  IN NO EVENT SHALL ADOBE BE LIABLE TO YOU OR ANY OTHER PARTY FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE.
+Modified by  Marek Raida
+-->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>feEmboss.svg</title> 
+<desc>image rendered with "embossing" filter effect</desc>
+	<defs>
+
+		<filter id="emboss" filterUnits="objectBoundingBox" x="0%" y="0%" width="100%" height="100%">
+
+			<feColorMatrix type="luminanceToAlpha" result="dot"/>
+
+			<feComponentTransfer result="dot">
+
+				<feFuncA type="table" tableValues="1 0"/>
+
+			</feComponentTransfer>
+
+
+
+			<feDiffuseLighting resultScale="1" surfaceScale=".015" diffuseConstant="1" lighting-color="gray" result="diffuse">
+
+				<feDistantLight azimuth="135" elevation="60"/>
+
+			</feDiffuseLighting>
+
+			<feSpecularLighting in="dot" surfaceScale=".015" specularConstant="1" specularExponent="6" lighting-color="white" result="specular">
+
+				<feDistantLight azimuth="135" elevation="60"/>
+
+			</feSpecularLighting>
+
+			<feComposite in="diffuse" in2="specular" operator="arithmetic" k1="0" k2="1" k3="1" k4="0" result="litPaint"/>
+
+		</filter>
+
+
+
+		<filter id="gray" filterUnits="objectBoundingBox" x="0%" y="0%" width="100%" height="100%">
+
+			<feColorMatrix type="luminanceToAlpha" result="dot"/>
+
+			<feColorMatrix type="matrix" values="0 0 0 1 0  0 0 0 1 0  0 0 0 1 0  0 0 0 0 1"/>
+
+		</filter>
+
+	</defs>
+
+
+
+	<g transform="translate(40 30) scale(400)">
+
+		<image style="filter:url(#emboss)" width="1" height="0.7" xlink:href="snowboard.jpg"/>
+
+
+
+		<clipPath id="clip1">
+
+			<rect x=".15" y=".2" width=".4" height=".3"/>
+
+		</clipPath>
+
+		<g style="clip-path:url(#clip1)">
+
+			<g style="filter:url(#gray)">
+
+				<image width="1" height="0.7" xlink:href="snowboard.jpg"/>
+
+			</g>
+
+		</g>
+
+
+
+		<clipPath id="clip2">
+
+			<rect x=".4" y=".08" width=".45" height=".25"/>
+
+		</clipPath>
+
+		<image style="clip-path:url(#clip2)" width="1" height="0.7" xlink:href="snowboard.jpg"/>
+
+	</g>
+
+<image xlink:href="http://www.google-analytics.com/__utm.gif?utmwv=4.7.1&amp;utmn=21830374&amp;utmhn=svg.kvalitne.cz&amp;utmcs=UTF-8&amp;utmsr=1920x1080&amp;utmsc=24-bit&amp;utmul=en-us&amp;utmje=1&amp;utmfl=10.0%20r45&amp;utmdt=SVG%C2%A0%E2%80%94%C2%A0It%27s%20in%20your%20hands...&amp;utmhid=1377849700&amp;utmr=-&amp;utmp=%2Findex2.htm&amp;utmac=UA-11950721-1&amp;utmcc=__utma%3D251371972.1884550355.1260220320.1272562824.1272576758.56%3B%2B__utmz%3D251371972.1263752798.41.3.utmcsr%3Dgoogle%7Cutmccn%3D(organic)%7Cutmcmd%3Dorganic%7Cutmctr%3Dsvg%2520smil%2520demo%3B" width="1" height="1"/>
+
+</svg>

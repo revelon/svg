@@ -1,0 +1,207 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>SVG&nbsp;&mdash;&nbsp;It's in your hands... Demos Resume</title>
+<link rel="stylesheet" type="text/css" href="css/svg-screen.css" media="screen,projection" />
+<link rel="stylesheet" type="text/css" href="css/svg-print.css" media="print"/>
+<style type="text/css">
+  img {border-style: none; border: none}
+  td {vertical-align: top}
+  th {text-align: left}
+</style>
+</head>
+<body>
+
+<a href="index2.htm" style="float:right">Back to the main page</a>
+<h1>Demos Resume | <span>Evaluation page...</span></h1>
+<hr />
+
+<p><strong>Update on 2011-02-28:</strong> Initial release<br/>
+Following test is my another attempt to provide browser support evaluation based on all (well, majority, not all) files hosted on my site. You can expect more changes to come in the future.<br/>
+Some demos utilize FakeSMILe to add <em>at least some SMIL support to MSIE9</em> and is a way of cheating, but I feel it is good to use workarounds where there are available and easy to use.<br/>
+<strong>Some of the tests are not fair to other browsers</strong> (like lmc-org or xhtml test for Batik) but I hope to solve these handicaps in the future as well...<br/>
+510 points = maximum
+</p>
+<hr />
+
+<table border="1">
+<tbody id="tbl"><tr>
+  <th>No.</th>
+  <th>Description</th>
+  <th><a href="ftp://ftp.mozilla.org/pub/firefox/nightly/latest-trunk/"><img alt="" src="browsers/icofirefox.png"/>Firefox&nbsp;4 Beta&nbsp;12</a></th>
+  <th><a href="http://www.opera.com/browser/download/"><img alt="" src="browsers/icoopera.png"/>Opera&nbsp;11.01</a></th>
+  <th><a href="http://www.apple.com/safari/"><img alt="" src="browsers/icosafari.png"/>Safari&nbsp;5.0.3</a></th>
+  <th><a href="http://www.google.com/chrome/"><img alt="" src="browsers/icochrome.png"/>Chrome&nbsp;9.0.597.98</a></th>
+  <th><a href="http://ie.microsoft.com/testdrive/Info/ThankYou/Default.html"><img alt="" src="browsers/icoie.png"/>MSIE&nbsp;9&nbsp;RC</a></th>
+  <th><a href="http://xmlgraphics.apache.org/batik/"><img alt="" src="browsers/icobatik.png"/>Batik&nbsp;1.7</a></th>
+</tr>
+
+</tbody>
+</table>
+
+<script type="text/javascript">
+
+var data = new Array(
+  {src:"ab-pasic/intro-ab.svg", ff:5, op:5, sf:4, cr:5, ie:0, bt:0},
+  {src:"ab-pasic/intro-pasic.svg", ff:4, op:5, sf:5, cr:5, ie:0, bt:0},
+  {src:"banner/banner.svg", ff:5, op:5, sf:5, cr:5, ie:3, bt:5},
+  {src:"banner/banner2.svg", ff:5, op:5, sf:2, cr:4, ie:3, bt:5},
+  {src:"bezier/beez.svg", ff:5, op:5, sf:5, cr:5, ie:1, bt:5},
+  {src:"bezier/demo.svg", ff:5, op:5, sf:5, cr:5, ie:1, bt:5},
+  {src:"bezier/bee.svg", ff:5, op:5, sf:5, cr:5, ie:1, bt:5},
+  {src:"bezier/fire.svg", ff:5, op:5, sf:5, cr:5, ie:1, bt:1},
+  {src:"bezier/bez2.svg", ff:5, op:5, sf:4, cr:4, ie:1, bt:0},
+  {src:"bezier/bez4.svg", ff:5, op:5, sf:5, cr:5, ie:1, bt:5},
+  {src:"bezier/bez5.svg", ff:5, op:5, sf:5, cr:5, ie:1, bt:5},
+  {src:"bubbles/bubblesimg.svg", ff:5, op:5, sf:5, cr:3, ie:3, bt:5}, // re-check 
+  {src:"bubbles/bubblesfull.svg", ff:5, op:5, sf:5, cr:5, ie:1, bt:5},
+  {src:"bump/bump.xhtml", ff:5, op:5, sf:0, cr:5, ie:1, bt:0}, // re-check online
+  {src:"cavern/100/cavern.xhtmlz", ff:5, op:5, sf:3, cr:5, ie:2, bt:1}, // recheck
+  {src:"chisel/chisel.svg", ff:5, op:5, sf:5, cr:5, ie:2, bt:1},
+  {src:"circles/circles-hypnotize.svg", ff:5, op:5, sf:1, cr:4, ie:1, bt:1},
+  {src:"circles/circles-radiation-sign.svg", ff:5, op:5, sf:5, cr:5, ie:1, bt:5},
+  {src:"circles/circles-ying-yang.svg", ff:5, op:5, sf:5, cr:5, ie:1, bt:1},
+  {src:"citysunset/citysunset.svg", ff:5, op:5, sf:5, cr:4, ie:1, bt:2},
+  {src:"clouds/clouds_v1b.svg", ff:5, op:4, sf:4, cr:4, ie:2, bt:4},
+  {src:"cowboys/cowboys.xhtmlz", ff:5, op:5, sf:3, cr:4, ie:1, bt:0},// recheck online
+  {src:"dance/dance.svg", ff:5, op:5, sf:5, cr:5, ie:3, bt:5},
+  {src:"demos1212/bowling.svg", ff:4, op:5, sf:2, cr:2, ie:1, bt:4},
+  {src:"demos1212/bradbury.svg", ff:3, op:4, sf:3, cr:3, ie:1, bt:0},
+  {src:"demos1212/halloween.svg", ff:5, op:4, sf:4, cr:4, ie:3, bt:2},
+  {src:"demos1212/kaleid3_opera.svg", ff:5, op:5, sf:5, cr:5, ie:4, bt:5},
+  {src:"demos1212/keySplineTool.svg", ff:5, op:3, sf:1, cr:1, ie:5, bt:5},
+  {src:"demos1212/rotate-linear-upd.svg", ff:5, op:5, sf:5, cr:5, ie:0, bt:5},
+  {src:"demos1212/svg_08.svg", ff:5, op:5, sf:5, cr:5, ie:5, bt:1},
+  {src:"demos1212/wereldbol.svg", ff:5, op:5, sf:5, cr:5, ie:1, bt:5},
+  {src:"digg/cubes_step8fin.svg", ff:5, op:5, sf:5, cr:5, ie:4, bt:5},
+  {src:"drawinganimals/drawinganimals.svg", ff:5, op:5, sf:4, cr:5, ie:1, bt:0},
+  {src:"fancymenu/fancymenu.svg", ff:5, op:5, sf:4, cr:4, ie:1, bt:5},
+  {src:"firefox/firefox-logo-animated.svg", ff:5, op:5, sf:5, cr:4, ie:1, bt:5},
+  {src:"firefox/firefox-logo-simplified2w.svg", ff:5, op:5, sf:5, cr:4, ie:5, bt:5}, // test again
+  {src:"ghost/spirit.svg", ff:5, op:5, sf:5, cr:0, ie:1, bt:5},
+  {src:"ghost/spirit-org2.svg", ff:5, op:5, sf:1, cr:0, ie:1, bt:2},
+  {src:"svg-introduction/extracted-demos/spirit.svg", ff:5, op:5, sf:5, cr:0, ie:5, bt:5},
+  {src:"hourglass/hourglass.svg", ff:5, op:5, sf:5, cr:5, ie:1, bt:4},
+  {src:"ireland/irelandvacation.svg", ff:5, op:5, sf:5, cr:5, ie:1, bt:5},
+  {src:"jack/jack-o-lantern-upd.svg", ff:5, op:5, sf:5, cr:5, ie:4, bt:2}, // ******************* from server again
+  {src:"lmc-org/index.html", ff:5, op:0, sf:0, cr:0, ie:0, bt:0},
+  {src:"map/map-czech-republic-minified.svg", ff:5, op:5, sf:5, cr:5, ie:5, bt:4},
+  {src:"map/map-slovakia-minified.svg", ff:5, op:5, sf:5, cr:5, ie:5, bt:4},
+  {src:"map/map3.html", ff:5, op:5, sf:3, cr:5, ie:4, bt:0}, // ****************************************** from server again
+  {src:"map/map4.html", ff:5, op:5, sf:4, cr:5, ie:4, bt:0},
+  {src:"map/map7.html", ff:5, op:5, sf:3, cr:5, ie:4, bt:0},
+  {src:"martinhejral/a02-moving-mask.svg", ff:5, op:5, sf:5, cr:5, ie:1, bt:1},
+  {src:"martinhejral/a10-1-scriptable-mask.svg", ff:5, op:5, sf:3, cr:0, ie:1, bt:1},
+  {src:"martinhejral/a10-2-scriptable-mask.svg", ff:5, op:5, sf:1, cr:0, ie:1, bt:1},
+  {src:"martinhejral/a10-3-scriptable-mask.svg", ff:5, op:5, sf:1, cr:0, ie:1, bt:1},
+  {src:"matrix/matrix.svg", ff:5, op:5, sf:5, cr:5, ie:2, bt:5},
+  {src:"mousecatch/mousecatch.svg", ff:5, op:5, sf:5, cr:5, ie:1, bt:3},
+  {src:"mouseovertoy/mouseovertoy.svg", ff:5, op:5, sf:5, cr:5, ie:1, bt:5},
+  {src:"norway/norwayvacation-static.svg", ff:5, op:5, sf:3, cr:3, ie:1, bt:2},
+  {src:"replicator/exp.svg", ff:5, op:5, sf:5, cr:5, ie:5, bt:0},
+  {src:"rotjump/rotatefull.svg", ff:5, op:5, sf:4, cr:4, ie:3, bt:5},
+  {src:"starwars/starwars.svg", ff:5, op:4, sf:5, cr:5, ie:1, bt:4},
+  {src:"submarine/index.htm", ff:5, op:5, sf:1, cr:1, ie:5, bt:2}, // test submarine live
+  {src:"svg-introduction/index.xhtml", ff:5, op:5, sf:4, cr:4, ie:2, bt:0}, // test again
+  {src:"svgopen/DrawingOnTheNet.svg", ff:5, op:3, sf:3, cr:3, ie:1, bt:3},
+  //{src:"turtles/turtles.svgz", ff:1, op:1, sf:1, cr:1, ie:1, bt:1}, // live recheck
+  {src:"xmastree/xmastree.svg", ff:5, op:5, sf:5, cr:5, ie:1, bt:5},
+  {src:"zx/imggallery2.svg", ff:5, op:5, sf:1, cr:1, ie:1, bt:1},
+  {src:"zx/zx-spectrum-demo-2.svg", ff:5, op:5, sf:5, cr:4, ie:1, bt:1},
+  {src:"zx/loader.htm", ff:5, op:5, sf:4, cr:3, ie:1, bt:3}, // recheck
+  {src:"zx/zx.svg", ff:5, op:5, sf:5, cr:5, ie:1, bt:5},
+  //{src:"", ff:1, op:1, sf:1, cr:1, ie:1, bt:1}
+
+  {src:"adobe/0992-anim-key-splines.svg", ff:5, op:5, sf:5, cr:5, ie:1, bt:5},
+  {src:"adobe/svgtest2.svg", ff:5, op:5, sf:5, cr:5, ie:1, bt:1},
+  {src:"adobe/audio.svg", ff:4, op:5, sf:5, cr:5, ie:0, bt:5},
+  {src:"adobe/building/index.html", ff:5, op:5, sf:4, cr:4, ie:4, bt:0},
+  {src:"adobe/airplane/index.html", ff:5, op:5, sf:4, cr:4, ie:5, bt:0},
+  {src:"adobe/reflections/02_snow.svg", ff:3, op:4, sf:4, cr:2, ie:2, bt:4},
+  {src:"adobe/reflections/reflections.svg", ff:5, op:1, sf:5, cr:1, ie:1, bt:1},
+  {src:"adobe/anim1_01.svg", ff:5, op:5, sf:5, cr:5, ie:5, bt:5},
+  {src:"adobe/anim2_01.svg", ff:5, op:5, sf:5, cr:5, ie:5, bt:5},
+  {src:"adobe/feAnim1.svg", ff:5, op:5, sf:0, cr:5, ie:0, bt:1},
+  {src:"adobe/feEmboss.svg", ff:3, op:5, sf:0, cr:0, ie:0, bt:5},
+  {src:"adobe/feEtchedGlass.svg", ff:5, op:5, sf:2, cr:2, ie:2, bt:4},
+  {src:"adobe/feImage.svg", ff:5, op:5, sf:1, cr:5, ie:0, bt:5},
+  {src:"adobe/feWavy.svg", ff:4, op:5, sf:0, cr:1, ie:1, bt:5},
+  {src:"adobe/Matrixtransform.svg", ff:5, op:0, sf:0, cr:0, ie:1, bt:1},
+  {src:"adobe/nutty.svg", ff:5, op:5, sf:5, cr:5, ie:5, bt:5},
+  {src:"adobe/Sparkplug.svg", ff:2, op:5, sf:3, cr:2, ie:1, bt:1},
+  {src:"adobe/BallAndChain.svg", ff:5, op:5, sf:5, cr:5, ie:5, bt:5},
+  {src:"adobe/circleanimation.svg", ff:5, op:5, sf:5, cr:5, ie:1, bt:5},
+  {src:"adobe/clock.svg", ff:5, op:5, sf:5, cr:5, ie:1, bt:5},
+  {src:"adobe/moire.svg", ff:5, op:5, sf:5, cr:5, ie:1, bt:1},
+  {src:"adobe/StarsAndStripesAnim.svg", ff:5, op:5, sf:5, cr:5, ie:5, bt:5},
+  {src:"adobe/wonder.svg", ff:5, op:5, sf:3, cr:3, ie:3, bt:4},
+  {src:"adobe/feAnim2.svg", ff:5, op:5, sf:5, cr:5, ie:0, bt:1},
+  {src:"adobe/feBumps.svg", ff:5, op:5, sf:0, cr:4, ie:0, bt:0},
+  {src:"adobe/candleinthewind.svg", ff:5, op:5, sf:1, cr:5, ie:1, bt:5},
+  {src:"adobe/discrete_vs_linear.svg", ff:5, op:5, sf:5, cr:5, ie:5, bt:5},
+  {src:"adobe/fePixels.svg", ff:5, op:5, sf:0, cr:3, ie:0, bt:5},
+  {src:"adobe/fe_flame.svg", ff:4, op:5, sf:1, cr:5, ie:0, bt:5},
+  {src:"adobe/3_anim_filter.svg", ff:4, op:5, sf:0, cr:5, ie:0, bt:1},
+  {src:"adobe/bluranim.svg", ff:1, op:5, sf:1, cr:5, ie:0, bt:1},
+  {src:"adobe/feMarble.svg", ff:3, op:5, sf:1, cr:5, ie:0, bt:5},
+  {src:"adobe/hollywood.svg", ff:5, op:5, sf:1, cr:5, ie:1, bt:1},
+  {src:"adobe/Melting.svg", ff:5, op:5, sf:1, cr:5, ie:1, bt:1},
+  {src:"adobe/100percent.svg", ff:5, op:5, sf:1, cr:5, ie:3, bt:5}
+
+);
+
+var counter = {src:"Total Points For The Browser:", ff:0, op:0, sf:0, cr:0, ie:0, bt:0};
+
+
+function render(dataSet, setNumbering, returnRow) {
+  for (var i in dataSet) {
+    var row = document.createElement("tr");
+    var cell = document.createElement("th");
+    if (setNumbering) cell.appendChild(document.createTextNode((1+i*1)));
+    row.appendChild(cell);
+    for (var ii in dataSet[i]) {
+      if (ii == "src") {
+        var cell = document.createElement("th");
+        var link = document.createElement("a");
+        link.appendChild(document.createTextNode(dataSet[i][ii]));
+        link.setAttribute("href", dataSet[i][ii]);
+        cell.appendChild(link);
+      } else {
+        var cell = document.createElement("td");
+        cell.appendChild(document.createTextNode(dataSet[i][ii]));
+        counter[ii] = counter[ii] + dataSet[i][ii]
+
+      }
+      row.appendChild(cell);
+    }
+    if (returnRow) return row;
+    else tbl.appendChild(row);
+  }
+}
+
+var tbl = document.getElementById("tbl");
+
+render(data, 1, 0);
+tbl.insertBefore(render(new Array(counter), 0, 1), tbl.firstChild.nextSibling);
+
+</script>
+
+<br />
+
+<div id="footer">
+<h4>Author: Marek Raida &lt;marek&nbsp;.&nbsp;raida&nbsp;@&nbsp;gmail&nbsp;.&nbsp;com&gt;</h4>
+</div>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-11950721-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+</body>
+</html>

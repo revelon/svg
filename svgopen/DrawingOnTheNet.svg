@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  id="drawing" width="231" height="210" viewBox="0 -24 308 280" overflow="visible">
+  <title>Drawing on the Net</title>
+  <desc>SVG Open 2003 Conference Logo</desc>
+  <defs>
+    <style type="text/css"><![CDATA[
+      .ocean {fill:navy}
+      .border {stroke:none}
+      #net {fill:none; stroke:white; stroke-width:2; stroke-linecap:square}
+      .netText {fill:white; stroke:none; font-family:Arial,sans-serif; font-size:0.75px;
+        text-anchor:middle}
+    ]]></style>
+    <pattern id="net" patternUnits="userSpaceOnUse" width="32" height="32"
+      overflow="visible">
+      <line x1="0" y1="16" x2="32" y2="16"/>
+      <line x1="16" y1="0" x2="16" y2="32"/>
+    </pattern>
+  </defs>
+  <g class="background">
+    <rect class="ocean" y="-96" width="384" height="352"/>
+    <rect class="border" x="1" y="1" width="254" height="254" fill="url(#net)"/>
+    <g class="netText" transform="scale(32) translate(0,.275)">
+      <text x="1" y="1">D<set id="T1" attributeName="visibility" to="hidden"
+        begin="drawing.load;drawing.click" dur="0.4s"/></text>
+      <text x="2" y="1">R<set attributeName="visibility" to="hidden"
+        begin="T1.begin" dur="0.6s"/></text>
+      <text x="3" y="1">A<set attributeName="visibility" to="hidden"
+        begin="T1.begin" dur="0.8s"/></text>
+      <text x="4" y="1">W<set attributeName="visibility" to="hidden"
+        begin="T1.begin" dur="1s"/></text>
+      <text x="5" y="1">I<set attributeName="visibility" to="hidden"
+        begin="T1.begin" dur="1.2s"/></text>
+      <text x="6" y="1">N<set attributeName="visibility" to="hidden"
+        begin="T1.begin" dur="1.4s"/></text>
+      <text x="7" y="1">G<set attributeName="visibility" to="hidden"
+        begin="T1.begin" dur="1.6s"/></text>
+      <text x="1" y="3">O<set attributeName="visibility" to="hidden"
+        begin="T1.begin" dur="2s"/></text>
+      <text x="1" y="4">N<set attributeName="visibility" to="hidden"
+        begin="T1.begin" dur="2.2s"/></text>
+      <text x="5" y="4">T<set attributeName="visibility" to="hidden"
+        begin="T1.begin" dur="2.6s"/></text>
+      <text x="6" y="4">H<set attributeName="visibility" to="hidden"
+        begin="T1.begin" dur="2.8s"/></text>
+      <text x="7" y="4">E<set attributeName="visibility" to="hidden"
+        begin="T1.begin" dur="3s"/></text>
+      <text x="1" y="6">N<set attributeName="visibility" to="hidden"
+        begin="T1.begin" dur="3.4s"/></text>
+      <text x="2" y="6">E<set attributeName="visibility" to="hidden"
+        begin="T1.begin" dur="3.6s"/></text>
+      <text x="3" y="6">T<set id="Tlast" attributeName="visibility" to="hidden"
+        begin="T1.begin" dur="3.8s"/></text>
+      <text x="5" y="7" font-weight="900">.<set attributeName="visibility" to="hidden"
+        begin="T1.begin" end="Tlast.end+5s"/></text>
+     </g>
+  </g>
+<svg x="25" y="38" width="182" height="133.833" viewBox="118 0 1092 803"
+  overflow="visible">
+  <set attributeName="visibility" to="hidden" begin="T1.begin" end="Tlast.end"/>
+  <defs>
+    <style type="text/css"><![CDATA[
+      .fil0 {fill:#E77919}
+      .fil1 {fill:#0C0C0E}
+      .fil2 {fill:#C56179}
+      .fil3 {fill:#B82A5E}
+      .str0 {stroke:black; stroke-width:4; stroke-linejoin:round}
+      .crayonText {fill:black; stroke:none; font-family:Arial,sans-serif; font-size:80px;
+        font-weight:900; font-stretch:condensed; font-style:italic}
+    ]]></style>
+    <linearGradient id="fuzzyEdge" gradientUnits="objectBoundingBox"
+      x2="100%" y2="100%">
+      <stop offset="0" stop-color="white">
+        <animate attributeName="offset" from="0" to="1" begin="Tlast.end+0.3s" dur="5s" fill="freeze"/>
+      </stop>
+      <stop offset="0.1" stop-color="black">
+        <animate attributeName="offset" from="0.1" to="1.1" begin="Tlast.end+0.3s" dur="5s" fill="freeze"/>
+      </stop>
+    </linearGradient>
+    <mask id="drawn">
+      <rect x="118" y="0" width="1092" height="803" fill="url(#fuzzyEdge)"/>
+    </mask>
+  </defs>
+  <g id="fish" mask="url(#drawn)">
+   <path class="fil0" d="M118 163c-11,12 266,598 611,335 0,0 35,282 315,305 0,0 -260,-173 -173,-292 87,-118 339,-144 339,-144 0,0 -221,-167 -434,64 -10,-524 -647,-280 -658,-268z"/>
+   <path class="fil1" d="M263 165c-29,31 31,102 71,50 40,-51 -41,-82 -71,-50z"/>
+   <path class="fil2" d="M355 440c0,0 -58,160 59,224 118,64 275,84 275,84 0,0 -145,-90 -159,-144 -15,-54 -9,-83 -11,-86l-164 -78z"/>
+   <path class="fil2" d="M491 109l-27 -106c0,0 49,-21 177,39 129,60 201,126 201,126 0,0 -96,-16 -129,20 -33,36 -52,56 -52,56 0,0 -76,-93 -123,-98 -46,-6 -47,-37 -47,-37z"/>
+   <path class="fil2" d="M271 385c4,-3 68,22 85,-10 16,-33 -18,-84 -18,-84 0,0 68,7 84,-32 16,-40 -34,-52 -34,-52 0,0 42,-2 55,-30 13,-29 -45,-55 -45,-55 0,0 71,4 73,46 2,43 -23,47 -23,47 0,0 19,31 -4,64 -24,33 -62,38 -62,38 0,0 42,87 7,102 -34,16 -121,-30 -118,-34z"/>
+   <path class="fil2" d="M498 174c-1,5 52,30 42,62 -10,32 -60,43 -60,43 0,0 44,39 30,76 -14,36 -50,11 -50,11 0,0 23,29 14,56 -10,28 -58,7 -58,7 0,0 43,43 69,17 26,-27 14,-46 14,-46 0,0 30,-7 35,-44 6,-37 -13,-65 -13,-65 0,0 75,-29 64,-62 -10,-33 -87,-60 -87,-55z"/>
+   <path class="fil2" d="M490 476c3,-3 54,17 70,-10 16,-28 -8,-70 -8,-70 0,0 55,5 72,-28 16,-33 -25,-42 -25,-42 0,0 36,-3 49,-27 12,-24 -33,-44 -33,-44 0,0 58,1 56,37 -1,35 -22,39 -22,39 0,0 13,26 -9,53 -22,28 -54,33 -54,33 0,0 29,72 -1,85 -30,14 -99,-22 -95,-26z"/>
+   <path class="fil2" d="M621 494c2,-2 35,10 45,-7 10,-17 -5,-44 -5,-44 0,0 35,3 45,-18 10,-21 -15,-27 -15,-27 0,0 22,-1 30,-16 8,-16 -21,-29 -21,-29 0,0 37,2 36,24 -1,22 -14,25 -14,25 0,0 8,16 -6,34 -13,17 -34,20 -34,20 0,0 18,45 -1,54 -19,9 -62,-14 -60,-16z"/>
+   <path class="fil2" d="M773 546c0,0 60,151 119,183 58,32 98,53 98,53 0,0 -99,-61 -137,-147 -38,-87 -24,-134 -24,-134l-74 -23 18 68z"/>
+   <path class="fil2" d="M789 457l69 20c0,0 29,-54 112,-81 83,-26 178,-42 178,-42 0,0 -177,-38 -229,2 -52,41 -130,101 -130,101z"/>
+   <path class="fil3" d="M369 472c0,0 -25,106 23,150 48,44 222,94 222,94 0,0 -73,-24 -91,-77 -17,-53 -16,-110 -16,-110l-39 -10 28 128 -30 -16 -16 -115 -27 -16 -1 105 -23 -14 1 -103 -31 -16z"/>
+   <path class="fil3" d="M533 111l-19 -83 47 6 -28 77z"/>
+   <path class="fil3" d="M560 114l36 -47 28 18 -64 29z"/>
+   <path class="fil3" d="M603 139l32 30 36 -71 -68 41z"/>
+   <path class="fil3" d="M678 186l31 -74 55 21 -86 53z"/>
+  </g>
+  <g class="fil3 str0" id="crayon">
+    <g transform="scale(1.25)">
+      <path d="M-45,100 L-9,32 A11,11 0 0,1 9,32 L45,100z"/>
+      <path d="M-45,700 A45,20 0 0,0 45,700 L45,100 A45,20 0 0,0 -45,100 L-45,700z"/>
+      <path d="M-45,700 A45,20 0 0,1 45,700"/>
+      <text x="125" y="30" textLength="540" class="crayonText" transform="rotate(90)">SVG OPEN 2003</text>
+    </g>
+    <animateMotion id="drawPath" path="M-182,408 l709,-736 l-491,896 l709,-736 l-491,896 l709,-736 l-491,896 l709,-736 l-491,896 l709,-736 l-491,896" begin="Tlast.end" dur="5s" rotate="-120" fill="freeze"/>
+  </g>
+</svg>
+<image xlink:href="http://www.google-analytics.com/__utm.gif?utmwv=4.7.1&amp;utmn=21830374&amp;utmhn=svg.kvalitne.cz&amp;utmcs=UTF-8&amp;utmsr=1920x1080&amp;utmsc=24-bit&amp;utmul=en-us&amp;utmje=1&amp;utmfl=10.0%20r45&amp;utmdt=SVG%C2%A0%E2%80%94%C2%A0It%27s%20in%20your%20hands...&amp;utmhid=1377849700&amp;utmr=-&amp;utmp=%2Findex2.htm&amp;utmac=UA-11950721-1&amp;utmcc=__utma%3D251371972.1884550355.1260220320.1272562824.1272576758.56%3B%2B__utmz%3D251371972.1263752798.41.3.utmcsr%3Dgoogle%7Cutmccn%3D(organic)%7Cutmcmd%3Dorganic%7Cutmctr%3Dsvg%2520smil%2520demo%3B" width="1" height="1"/>
+</svg>

@@ -1,0 +1,2306 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.1"
+   width="723pt"
+   height="350pt"
+   viewBox="0 0 723 350"
+   id="svg2815"
+   xml:space="preserve"><defs
+   id="defs3901" />
+    <style
+   type="text/css"
+   id="style2817" />
+    <g
+   id="w7_8_x002C_w10_13_x002C_w16_17"
+   style="font-size:12px;fill:none;stroke:#1d0e82;stroke-miterlimit:4;font-family:Myriad-Roman,sans-serif">
+        <g
+   transform="translate(-53.5,-95)"
+   id="CenterArea"
+   style="stroke:#666666;stroke-width:1">
+            <path
+   d="m 303,214 v 18 h 1"
+   id="path2821" />
+            <path
+   d="m 514,341 v -18 h -3"
+   id="path2823" />
+            <text
+   transform="translate(236,303)"
+   id="text2825"><tspan
+     x="0"
+     y="0"
+     id="tspan2827"
+     style="fill:#666666;stroke:none">Break Area</tspan></text>
+
+            <text
+   transform="matrix(0,1,-1,0,655,262)"
+   id="text2829"
+   style="fill:#666666;stroke:none"><tspan
+     x="0"
+     y="0"
+     id="tspan2831">South </tspan><tspan
+     x="-7.7160001"
+     y="10"
+     id="tspan2833">Elevators</tspan></text>
+
+            <text
+   transform="matrix(0,-1,1,0,174,292)"
+   id="text2835"
+   style="fill:#666666;stroke:none"><tspan
+     x="0"
+     y="0"
+     id="tspan2837">North</tspan><tspan
+     x="-7.9549999"
+     y="10"
+     id="tspan2839">Elevators</tspan></text>
+
+            <path
+   d="m 228,312 v -45 h -11 v 56 h 86 v -11 h -75 z"
+   id="path2841" />
+            <text
+   transform="translate(392,284)"
+   id="text2843"><tspan
+     x="0"
+     y="0"
+     id="tspan2845"
+     style="fill:#666666;stroke:none">Aviary</tspan></text>
+
+            <st26
+   id="st262847" /><path
+   d="m 326,232 v 91 H 490 V 232 H 326 z m 162,28 -3,4 v 4 l 3,3 v 12 l -3,4 v 4 l 3,4 v 12 l -3,3 v 9 h -7 l -3,2 h -12 l -3,-2 h -6 l -2,2 h -12 l -3,-2 h -6 l -2,2 h -12 l -3,-2 h -12 l -3,2 h -12 l -2,-2 h -6 l -3,2 h -12 l -2,-2 h -6 l -3,2 h -12 l -3,-2 h -7 v -9 l -3,-3 v -12 l 3,-4 v -5 l -3,-3 v -12 l 3,-3 v -5 l -3,-3 v -12 l 3,-3 v -9 h 7 l 3,-3 h 12 l 3,3 h 5 l 3,-3 h 12 l 3,3 h 5 l 3,-3 h 12 l 3,3 h 11 l 4,-3 h 12 l 3,3 h 5 l 3,-3 h 12 l 3,3 h 5 l 3,-3 h 12 l 3,3 h 7 v 9 l 3,3 v 12 z"
+   id="atrium_walls" />
+            <g
+   id="table_chairs">
+                <path
+   d="m 260,244 c 0,5 -4,8 -8,8 -5,0 -8,-3 -8,-8 0,-4 3,-8 8,-8 4,0 8,4 8,8 z"
+   id="path2851" />
+                <path
+   d="m 255,236 c 0,-1 -2,-3 -3,-3 -2,0 -3,2 -3,3 0,2 1,3 3,3 1,0 3,-1 3,-3 z"
+   id="path2853" />
+                <path
+   d="m 255,252 c 0,-1 -2,-3 -3,-3 -2,0 -3,2 -3,3 0,2 1,3 3,3 1,0 3,-1 3,-3 z"
+   id="path2855" />
+                <path
+   d="m 247,244 c 0,-1 -2,-3 -3,-3 -2,0 -3,2 -3,3 0,2 1,3 3,3 1,0 3,-1 3,-3 z"
+   id="path2857" />
+                <path
+   d="m 263,244 c 0,-1 -2,-3 -3,-3 -2,0 -3,2 -3,3 0,2 1,3 3,3 1,0 3,-1 3,-3 z"
+   id="path2859" />
+            </g>
+            <g
+   id="g2861">
+                <path
+   d="m 269,277 c 0,5 -3,8 -8,8 -4,0 -8,-3 -8,-8 0,-4 4,-8 8,-8 5,0 8,4 8,8 z"
+   id="path2863" />
+                <path
+   d="m 264,269 c 0,-1 -1,-3 -3,-3 -1,0 -3,2 -3,3 0,2 2,3 3,3 2,0 3,-1 3,-3 z"
+   id="path2865" />
+                <path
+   d="m 264,285 c 0,-1 -1,-3 -3,-3 -1,0 -3,2 -3,3 0,2 2,3 3,3 2,0 3,-1 3,-3 z"
+   id="path2867" />
+                <path
+   d="m 256,277 c 0,-1 -1,-3 -3,-3 -1,0 -3,2 -3,3 0,2 2,3 3,3 2,0 3,-1 3,-3 z"
+   id="path2869" />
+                <path
+   d="m 272,277 c 0,-1 -1,-3 -3,-3 -1,0 -3,2 -3,3 0,2 2,3 3,3 2,0 3,-1 3,-3 z"
+   id="path2871" />
+            </g>
+            <g
+   id="g2873">
+                <path
+   d="m 299,259 c 0,4 -4,8 -8,8 -5,0 -8,-4 -8,-8 0,-4 3,-8 8,-8 4,0 8,4 8,8 z"
+   id="path2875" />
+                <path
+   d="m 294,251 c 0,-2 -2,-3 -3,-3 -2,0 -3,1 -3,3 0,2 1,3 3,3 1,0 3,-1 3,-3 z"
+   id="path2877" />
+                <path
+   d="m 294,267 c 0,-2 -2,-3 -3,-3 -2,0 -3,1 -3,3 0,2 1,3 3,3 1,0 3,-1 3,-3 z"
+   id="path2879" />
+                <path
+   d="m 286,259 c 0,-2 -2,-3 -3,-3 -2,0 -3,1 -3,3 0,2 1,3 3,3 1,0 3,-1 3,-3 z"
+   id="path2881" />
+                <path
+   d="m 302,259 c 0,-2 -2,-3 -3,-3 -2,0 -3,1 -3,3 0,2 1,3 3,3 1,0 3,-1 3,-3 z"
+   id="path2883" />
+            </g>
+            <g
+   id="g2885">
+                <path
+   d="m 539,274 c 0,4 -4,8 -8,8 -5,0 -8,-4 -8,-8 0,-5 3,-8 8,-8 4,0 8,3 8,8 z"
+   id="path2887" />
+                <path
+   d="m 534,266 c 0,-2 -2,-3 -3,-3 -2,0 -3,1 -3,3 0,1 1,3 3,3 1,0 3,-2 3,-3 z"
+   id="path2889" />
+                <path
+   d="m 534,282 c 0,-2 -2,-3 -3,-3 -2,0 -3,1 -3,3 0,1 1,3 3,3 1,0 3,-2 3,-3 z"
+   id="path2891" />
+                <path
+   d="m 526,274 c 0,-2 -2,-3 -3,-3 -2,0 -3,1 -3,3 0,1 1,3 3,3 1,0 3,-2 3,-3 z"
+   id="path2893" />
+                <path
+   d="m 542,274 c 0,-2 -2,-3 -3,-3 -2,0 -3,1 -3,3 0,1 1,3 3,3 1,0 3,-2 3,-3 z"
+   id="path2895" />
+            </g>
+            <g
+   id="g2897">
+                <path
+   d="m 548,306 c 0,5 -3,8 -8,8 -4,0 -8,-3 -8,-8 0,-4 4,-8 8,-8 5,0 8,4 8,8 z"
+   id="path2899" />
+                <path
+   d="m 543,298 c 0,-1 -1,-3 -3,-3 -1,0 -3,2 -3,3 0,2 2,3 3,3 2,0 3,-1 3,-3 z"
+   id="path2901" />
+                <path
+   d="m 543,314 c 0,-1 -1,-3 -3,-3 -1,0 -3,2 -3,3 0,2 2,3 3,3 2,0 3,-1 3,-3 z"
+   id="path2903" />
+                <path
+   d="m 535,306 c 0,-1 -1,-3 -3,-3 -1,0 -3,2 -3,3 0,2 2,3 3,3 2,0 3,-1 3,-3 z"
+   id="path2905" />
+                <path
+   d="m 551,306 c 0,-1 -1,-3 -3,-3 -1,0 -3,2 -3,3 0,2 2,3 3,3 2,0 3,-1 3,-3 z"
+   id="path2907" />
+            </g>
+            <g
+   id="g2909">
+                <path
+   d="m 577,288 c 0,5 -3,8 -8,8 -4,0 -8,-3 -8,-8 0,-4 4,-8 8,-8 5,0 8,4 8,8 z"
+   id="path2911" />
+                <path
+   d="m 572,280 c 0,-1 -1,-3 -3,-3 -1,0 -3,2 -3,3 0,2 2,3 3,3 2,0 3,-1 3,-3 z"
+   id="path2913" />
+                <path
+   d="m 572,296 c 0,-1 -1,-3 -3,-3 -1,0 -3,2 -3,3 0,2 2,3 3,3 2,0 3,-1 3,-3 z"
+   id="path2915" />
+                <path
+   d="m 564,288 c 0,-1 -1,-3 -3,-3 -1,0 -3,2 -3,3 0,2 2,3 3,3 2,0 3,-1 3,-3 z"
+   id="path2917" />
+                <path
+   d="m 580,288 c 0,-1 -1,-3 -3,-3 -1,0 -3,2 -3,3 0,2 2,3 3,3 2,0 3,-1 3,-3 z"
+   id="path2919" />
+            </g>
+            <text
+   transform="translate(536,261)"
+   id="text2921"><tspan
+     x="0"
+     y="0"
+     id="tspan2923"
+     style="fill:#000000;stroke:none;font-family:Myriad-Italic,sans-serif">Break Area</tspan></text>
+
+            <path
+   d="m 601,242 v 45 h 11 v -55 h -86 v 10 h 75 z"
+   id="path2925" />
+            <st26
+   id="st262927" /><path
+   d="m 636,313 v 7 h -19 v -26 h 19 v 7 h 2 v -18 h -2 v 8 h -19 v -26 h 19 v 6 h 2 v -17 h -2 v 7 h -19 v -25 h 19 v 6 h 2 v -10 h -26 v 91 h 26 v -10 h -2 z"
+   id="elevators" />
+            <st26
+   id="st262930" /><path
+   d="m 193,242 v -7 h 19 v 25 h -19 v -6 h -2 v 17 h 2 v -7 h 19 v 26 h -19 v -7 h -2 v 18 h 2 v -8 h 19 v 26 h -19 v -6 h -2 v 10 h 26 v -91 h -26 v 10 h 2 z"
+   id="path2932" />
+        </g>
+        <path
+   d="M 1,11.7 36.3,29.1 V 5.35 L 98.8,36.6 V 1 H 624 l 21,10.1 h 68 v 34.5 l 9,5.4 v 300 l -35,-17 v 23 l -62,-31 v 35 H 99.3 L 77.4,352 H 10.8 V 317 L 1,312 V 11.7 z"
+   id="FloorOutline"
+   style="stroke-width:2" />
+
+
+        
+        <g onmouseover="onImg(evt)" onmouseout="offImg()" onclick="selector(evt)"
+   id="g2935">
+            <g
+   id="g2937">
+                <path
+   d="m 107,41.7 -6,-3.1 V 4.89 h 40 V 60.7 l -27,-15.4 27,15.3 0,-10.9 -19,0.1"
+   id="Con1"
+   style="fill:#ffffff" />
+                <text
+   x="105"
+   y="-64"
+   transform="matrix(0.707,0.707,-0.707,0.707,0,0)"
+   id="Con1Txt"
+   style="text-anchor:middle;fill:#000000;stroke:none;font-family:Myriad-Italic,sans-serif">Con1</text>
+
+            </g>
+            <g
+   id="g2941">
+                <path
+   d="M 163,109 V 94.5 L 99.8,62.1 V 73.7 H 121 v 0.1 L 99.8,73.9 V 120 H 163 v -2"
+   id="Con2"
+   style="fill:#ffffff" />
+                <text
+   x="130"
+   y="105"
+   id="Con2Txt"
+   style="text-anchor:middle;fill:#000000;stroke:none;font-family:Myriad-Italic,sans-serif">Con2</text>
+
+            </g>
+            <g
+   id="g2945">
+                <path
+   d="M 249,92.1 V 54.6 h -84 v 17.5 c 0,0 16,-0.7 22,13.1 6,13.8 13,30.8 44,24.8 v -7 l 18,0 0,18 -18,-11 v 0 l 18,11 0,-19"
+   id="Con3"
+   style="fill:#ffffff" />
+                <text
+   x="212"
+   y="75"
+   id="Con3Txt"
+   style="text-anchor:middle;fill:#000000;stroke:none;font-family:Myriad-Italic,sans-serif">Con3</text>
+
+                <path
+   d="m 184,87.1 6,-1.7"
+   id="path2949"
+   style="stroke-width:3" />
+                <path
+   d="m 188,97.9 6,-3.2"
+   id="path2951"
+   style="stroke-width:3" />
+                <path
+   d="m 197,107 4,-5"
+   id="path2953"
+   style="stroke-width:3" />
+                <path
+   d="m 207,113 3,-6"
+   id="path2955"
+   style="stroke-width:3" />
+                <path
+   d="m 219,115 v -6"
+   id="path2957"
+   style="stroke-width:3" />
+                <path
+   d="m 231,114 -1,-6"
+   id="path2959"
+   style="stroke-width:3" />
+            </g>
+            <g
+   id="g2961">
+                <path
+   d="m 460,271 v 39 h 97 v -18 c 0,0 -14,3 -18,-10 -3,-13 -21,-34 -48,-23 -17,3 -15,-17 -31,-17 v 20 l 0,-1 32,0 -1,0 h -31"
+   id="Con4"
+   style="fill:#ffffff" />
+                <text
+   x="505"
+   y="295"
+   id="Con4Txt"
+   style="text-anchor:middle;fill:#000000;stroke:none;font-family:Myriad-Italic,sans-serif">Con4</text>
+
+                <path
+   d="m 490,255 2,6"
+   id="path2965"
+   style="stroke-width:3" />
+                <path
+   d="m 503,259 0,-7"
+   id="path2967"
+   style="stroke-width:3" />
+                <path
+   d="m 513,260 2,-6"
+   id="path2969"
+   style="stroke-width:3" />
+                <path
+   d="m 523,265 3,-6"
+   id="path2971"
+   style="stroke-width:3" />
+                <path
+   d="m 531,272 5,-4"
+   id="path2973"
+   style="stroke-width:3" />
+                <path
+   d="m 535,281 6,-2"
+   id="path2975"
+   style="stroke-width:3" />
+            </g>
+            <g
+   id="g2977">
+                <path
+   d="m 558,256 v 14 l 65,32 v -12 h -22 v 0 l 22,0 v -45 h -65 v 1"
+   id="Con5"
+   style="fill:#ffffff" />
+                <text
+   x="590"
+   y="265"
+   id="Con5Txt"
+   style="text-anchor:middle;fill:#000000;stroke:none;font-family:Myriad-Italic,sans-serif">Con5</text>
+
+            </g>
+            <g
+   id="g2981">
+                <path
+   d="m 617,322 5,3 v 34 h -40 v -56 l 28,15 -27,-15 -1,11 20,0"
+   id="Con6"
+   style="fill:#ffffff" />
+                <text
+   x="663"
+   y="-185"
+   transform="matrix(0.707,0.707,-0.707,0.707,0,0)"
+   id="Con6Txt"
+   style="text-anchor:middle;fill:#000000;stroke:none;font-family:Myriad-Italic,sans-serif">Con6</text>
+
+            </g>
+        </g>
+        
+        
+        
+        <g onmouseover="onImg(evt)" onmouseout="offImg()" onclick="selector(evt)"
+   id="g2985">
+            <g
+   id="g2987">
+                <g
+   id="g2989">
+                    <path
+   d="m 685,72.7 v 18.2 h 33 V 62.1 h -33 v 1.1"
+   id="Rm_231"
+   style="fill:#ffffff" />
+                    <text
+   transform="translate(692,80.7)"
+   id="text2992"><tspan
+     x="0"
+     y="0"
+     id="tspan2994"
+     style="fill:#000000;stroke:none">231</tspan></text>
+
+                </g>
+                <g
+   id="g2996">
+                    <path
+   d="M 685,112 V 92.6 h 33 V 122 h -33 v -1"
+   id="Rm_229"
+   style="fill:#ffffff" />
+                    <text
+   transform="translate(692,111)"
+   id="text2999"><tspan
+     x="0"
+     y="0"
+     id="tspan3001"
+     style="fill:#000000;stroke:none">229</tspan></text>
+
+                </g>
+                <g
+   id="g3003">
+                    <path
+   d="m 685,134 v 20 h 33 v -30 h -33 v 1"
+   id="Rm_227"
+   style="fill:#ffffff" />
+                    <text
+   transform="translate(692,143)"
+   id="text3006"><tspan
+     x="0"
+     y="0"
+     id="tspan3008"
+     style="fill:#000000;stroke:none">227</tspan></text>
+
+                </g>
+                <g
+   id="g3010">
+                    <path
+   d="m 685,175 v -20 h 33 v 30 h -33 v -1"
+   id="Rm_225"
+   style="fill:#ffffff" />
+                    <text
+   transform="translate(693,173)"
+   id="text3013"><tspan
+     x="0"
+     y="0"
+     id="tspan3015"
+     style="fill:#000000;stroke:none">225</tspan></text>
+
+                </g>
+                <g
+   id="g3017">
+                    <path
+   d="m 685,197 v 19 h 33 v -30 h -33 v 2"
+   id="Rm_223"
+   style="fill:#ffffff" />
+                    <text
+   transform="translate(692,205)"
+   id="text3020"><tspan
+     x="0"
+     y="0"
+     id="tspan3022"
+     style="fill:#000000;stroke:none">223</tspan></text>
+
+                </g>
+                <g
+   id="g3024">
+                    <path
+   d="m 660,228 h 1 v -92 h -33 v 2 h -13 v -2 h -2 v 92 h 34"
+   id="Rm_221"
+   style="fill:#ffffff" />
+                    <text
+   transform="translate(628,184)"
+   id="text3027"><tspan
+     x="0"
+     y="0"
+     id="tspan3029"
+     style="fill:#000000;stroke:none">221</tspan></text>
+
+                </g>
+                <g
+   id="g3031">
+                    <path
+   d="m 685,238 v -20 h 33 v 30 h -33 v -2"
+   id="Rm_219"
+   style="fill:#ffffff" />
+                    <text
+   transform="translate(692,236)"
+   id="text3034"><tspan
+     x="0"
+     y="0"
+     id="tspan3036"
+     style="fill:#000000;stroke:none">219</tspan></text>
+
+                </g>
+                <g
+   id="g3038">
+                    <path
+   d="m 656,253 v -9 h -32 v 25 h 32 v -7"
+   id="Rm_217"
+   style="fill:#ffffff" />
+                    <text
+   transform="translate(631,260)"
+   id="text3041"><tspan
+     x="0"
+     y="0"
+     id="tspan3043"
+     style="fill:#000000;stroke:none">217</tspan></text>
+
+                </g>
+                <g
+   id="g3045">
+                    <path
+   d="m 685,259 v 20 h 33 v -30 h -33 v 1"
+   id="Rm_215"
+   style="fill:#ffffff" />
+                    <text
+   transform="translate(692,268)"
+   id="text3048"><tspan
+     x="0"
+     y="0"
+     id="tspan3050"
+     style="fill:#000000;stroke:none">215</tspan></text>
+
+                </g>
+                <g
+   id="g3052">
+                    <path
+   d="m 656,288 v 8 h -32 v -25 h 32 v 7"
+   id="Rm_213"
+   style="fill:#ffffff" />
+                    <text
+   transform="translate(631,285)"
+   id="text3055"><tspan
+     x="0"
+     y="0"
+     id="tspan3057"
+     style="fill:#000000;stroke:none">213</tspan></text>
+
+                </g>
+                <g
+   id="g3059">
+                    <path
+   d="m 685,321 v 9 l 33,16 v -66 h -33 v 32"
+   id="Rm_211"
+   style="fill:#ffffff" />
+                    <text
+   transform="translate(693,312)"
+   id="text3062"><tspan
+     x="0"
+     y="0"
+     id="tspan3064"
+     style="fill:#000000;stroke:none">211</tspan></text>
+
+                </g>
+            </g>
+            <g
+   id="g3066">
+                <g
+   id="g3068">
+                    <path
+   d="M 37.1,42.6 V 32.9 L 4.14,16.9 V 83.4 H 37.1 v -32"
+   id="Rm_210"
+   style="fill:#ffffff" />
+                    <text
+   transform="translate(9.54,55.7)"
+   id="text3071"><tspan
+     x="0"
+     y="0"
+     id="tspan3073"
+     style="fill:#000000;stroke:none">210</tspan></text>
+
+                </g>
+                <g
+   id="g3075">
+                    <path
+   d="M 66.6,76.6 V 68.2 H 98.3 V 93.4 H 66.6 v -7.6"
+   id="Rm_212"
+   style="fill:#ffffff" />
+                    <text
+   transform="translate(74.3,85.3)"
+   id="text3078"><tspan
+     x="0"
+     y="0"
+     id="tspan3080"
+     style="fill:#000000;stroke:none">212</tspan></text>
+
+                </g>
+                <g
+   id="g3082">
+                    <path
+   d="M 37.1,106 V 84.9 H 4.19 V 115 H 37.1 v -1"
+   id="Rm_214"
+   style="fill:#ffffff" />
+                    <text
+   transform="translate(10.4,103)"
+   id="text3085"><tspan
+     x="0"
+     y="0"
+     id="tspan3087"
+     style="fill:#000000;stroke:none">214</tspan></text>
+
+                </g>
+                <g
+   id="g3089">
+                    <path
+   d="m 66.6,112 v 8 H 98.2 V 94.7 H 66.6 v 7.3"
+   id="Rm_216"
+   style="fill:#ffffff" />
+                    <text
+   transform="translate(73.8,109)"
+   id="text3092"><tspan
+     x="0"
+     y="0"
+     id="tspan3094"
+     style="fill:#000000;stroke:none">216</tspan></text>
+
+                </g>
+                <g
+   id="g3096">
+                    <path
+   d="m 37.1,125 v 21 H 4.13 V 116 H 37.1 v 1"
+   id="Rm_218"
+   style="fill:#ffffff" />
+                    <text
+   transform="translate(10.1,135)"
+   id="text3099"><tspan
+     x="0"
+     y="0"
+     id="tspan3101"
+     style="fill:#000000;stroke:none">218</tspan></text>
+
+                </g>
+                <g
+   id="g3103">
+                    <path
+   d="M 37,169 V 148 H 4.08 v 30 H 37 v -1"
+   id="Rm_220"
+   style="fill:#ffffff" />
+                    <text
+   transform="translate(10.7,166)"
+   id="_x0035_08"><tspan
+     x="0"
+     y="0"
+     id="tspan3107"
+     style="fill:#000000;stroke:none">220</tspan></text>
+
+                </g>
+                <g
+   id="g3109">
+                    <path
+   d="m 62.9,137 h -1.8 v 91 h 33.6 v -1 H 107 v 1 h 2 V 137 H 75.2"
+   id="Rm_222"
+   style="fill:#ffffff" />
+                    <text
+   transform="translate(74.8,185)"
+   id="text3112"><tspan
+     x="0"
+     y="0"
+     id="tspan3114"
+     style="fill:#000000;stroke:none">222</tspan></text>
+
+                </g>
+                <g
+   id="g3116">
+                    <path
+   d="m 37,188 v 21 H 4.02 V 179 H 37 v 1"
+   id="Rm_224"
+   style="fill:#ffffff" />
+                    <text
+   transform="translate(10.3,198)"
+   id="text3119"><tspan
+     x="0"
+     y="0"
+     id="tspan3121"
+     style="fill:#000000;stroke:none">224</tspan></text>
+
+                </g>
+                <g
+   id="g3123">
+                    <path
+   d="M 37,232 V 211 H 4.08 v 30 H 37 v -1"
+   id="Rm_226"
+   style="fill:#ffffff" />
+                    <text
+   transform="translate(10.7,228)"
+   id="text3126"><tspan
+     x="0"
+     y="0"
+     id="tspan3128"
+     style="fill:#000000;stroke:none">226</tspan></text>
+
+                </g>
+                <g
+   id="g3130">
+                    <path
+   d="m 37,251 v 21 H 4.02 V 242 H 37 v 1"
+   id="Rm_228"
+   style="fill:#ffffff" />
+                    <text
+   transform="translate(10.7,259)"
+   id="text3133"><tspan
+     x="0"
+     y="0"
+     id="tspan3135"
+     style="fill:#000000;stroke:none">228</tspan></text>
+
+                </g>
+                <g
+   id="g3137">
+                    <path
+   d="M 37,298 V 273 H 3.97 v 36 H 37 v -2"
+   id="Rm_230"
+   style="fill:#ffffff" />
+                    <text
+   transform="translate(10.3,293)"
+   id="text3140"><tspan
+     x="0"
+     y="0"
+     id="tspan3142"
+     style="fill:#000000;stroke:none">230</tspan></text>
+
+                </g>
+            </g>
+            <g
+   id="g3144">
+                <g
+   id="g3146">
+                    <path
+   d="M 162,36.1 H 143 V 4.97 h 30 V 36.1 h -2"
+   id="Rm_283"
+   style="fill:#ffffff" />
+                    <text
+   transform="translate(147,23.6)"
+   id="text3149"><tspan
+     x="0"
+     y="0"
+     id="tspan3151"
+     style="fill:#000000;stroke:none">283</tspan></text>
+
+                </g>
+                <g
+   id="g3153">
+                    <path
+   d="m 185,36.1 h 19 V 4.97 H 174 V 36.1 h 2"
+   id="Rm_281"
+   style="fill:#ffffff" />
+                    <text
+   transform="translate(179,23.4)"
+   id="text3156"><tspan
+     x="0"
+     y="0"
+     id="tspan3158"
+     style="fill:#000000;stroke:none">281</tspan></text>
+
+                </g>
+                <g
+   id="g3160">
+                    <path
+   d="M 225,36.1 H 206 V 4.97 h 29 V 36.1 h -1"
+   id="Rm_279"
+   style="fill:#ffffff" />
+                    <text
+   transform="translate(211,23)"
+   id="text3163"><tspan
+     x="0"
+     y="0"
+     id="tspan3165"
+     style="fill:#000000;stroke:none">279</tspan></text>
+
+                </g>
+                <g
+   id="g3167">
+                    <path
+   d="m 247,36.1 h 19 V 4.97 H 237 V 36.1 h 1"
+   id="Rm_277"
+   style="fill:#ffffff" />
+                    <text
+   transform="translate(243,23)"
+   id="text3170"><tspan
+     x="0"
+     y="0"
+     id="tspan3172"
+     style="fill:#000000;stroke:none">277</tspan></text>
+
+                </g>
+                <g
+   id="g3174">
+                    <path
+   d="M 287,36.2 H 268 V 5.09 h 30 V 36.2 h -2"
+   id="Rm_275"
+   style="fill:#ffffff" />
+                    <text
+   transform="translate(273,23)"
+   id="text3177"><tspan
+     x="0"
+     y="0"
+     id="tspan3179"
+     style="fill:#000000;stroke:none">275</tspan></text>
+
+                </g>
+                <g
+   id="g3181">
+                    <path
+   d="m 275,54.3 h -2 v 31.9 h 32 V 54.3 h -22"
+   id="Rm_273"
+   style="fill:#ffffff" />
+                    <text
+   transform="translate(279,74.4)"
+   id="text3184"><tspan
+     x="0"
+     y="0"
+     id="tspan3186"
+     style="fill:#000000;stroke:none">273</tspan></text>
+
+                </g>
+                <g
+   id="g3188">
+                    <path
+   d="m 310,36.2 h 19 V 5.09 H 299 V 36.2 h 1"
+   id="Rm_271"
+   style="fill:#ffffff" />
+                    <text
+   transform="translate(304,23)"
+   id="text3191"><tspan
+     x="0"
+     y="0"
+     id="tspan3193"
+     style="fill:#000000;stroke:none">271</tspan></text>
+
+                </g>
+                <g
+   id="g3195">
+                    <path
+   d="m 337,54.3 h 2 V 86.2 H 307 V 54.3 h 22"
+   id="Rm_269"
+   style="fill:#ffffff" />
+                    <text
+   transform="translate(313,73.9)"
+   id="text3198"><tspan
+     x="0"
+     y="0"
+     id="tspan3200"
+     style="fill:#000000;stroke:none">269</tspan></text>
+
+                </g>
+                <g
+   id="g3202">
+                    <path
+   d="M 350,36.2 H 331 V 5.11 h 30 V 36.2 h -1"
+   id="Rm_267"
+   style="fill:#ffffff" />
+                    <text
+   transform="translate(335,23)"
+   id="text3205"><tspan
+     x="0"
+     y="0"
+     id="tspan3207"
+     style="fill:#000000;stroke:none">267</tspan></text>
+
+                </g>
+                <g
+   id="g3209">
+                    <path
+   d="m 343,54.4 h -2 v 32 h 32 v -32 h -22"
+   id="Rm_265"
+   style="fill:#ffffff" />
+                    <text
+   transform="translate(347,73.9)"
+   id="text3212"><tspan
+     x="0"
+     y="0"
+     id="tspan3214"
+     style="fill:#000000;stroke:none">265</tspan></text>
+
+                </g>
+                <g
+   id="g3216">
+                    <path
+   d="m 373,36.2 h 19 V 5.11 H 362 V 36.2 h 2"
+   id="Rm_263"
+   style="fill:#ffffff" />
+                    <text
+   transform="translate(368,23)"
+   id="text3219"><tspan
+     x="0"
+     y="0"
+     id="tspan3221"
+     style="fill:#000000;stroke:none">263</tspan></text>
+
+                </g>
+                <g
+   id="g3223">
+                    <path
+   d="m 405,54.4 h 2 v 32 h -32 v -32 h 21"
+   id="Rm_261"
+   style="fill:#ffffff" />
+                    <text
+   transform="translate(381,73.9)"
+   id="text3226"><tspan
+     x="0"
+     y="0"
+     id="tspan3228"
+     style="fill:#000000;stroke:none">261</tspan></text>
+
+                </g>
+                <g
+   id="g3230">
+                    <path
+   d="M 413,36.2 H 394 V 5.08 h 29 V 36.2 h -1"
+   id="Rm_259"
+   style="fill:#ffffff" />
+                    <text
+   transform="translate(400,23)"
+   id="text3233"><tspan
+     x="0"
+     y="0"
+     id="tspan3235"
+     style="fill:#000000;stroke:none">259</tspan></text>
+
+                </g>
+                <g
+   id="g3237">
+                    <path
+   d="m 410,54.4 h -2 v 32 h 32 v -32 h -22"
+   id="Rm_257"
+   style="fill:#ffffff" />
+                    <text
+   transform="translate(415,73.9)"
+   id="text3240"><tspan
+     x="0"
+     y="0"
+     id="tspan3242"
+     style="fill:#000000;stroke:none">257</tspan></text>
+
+                </g>
+                <g
+   id="g3244">
+                    <path
+   d="m 435,36.2 h 20 V 5.08 H 425 V 36.2 h 1"
+   id="Rm_255"
+   style="fill:#ffffff" />
+                    <text
+   transform="translate(431,23)"
+   id="text3247"><tspan
+     x="0"
+     y="0"
+     id="tspan3249"
+     style="fill:#000000;stroke:none">255</tspan></text>
+
+                </g>
+                <g
+   id="g3251">
+                    <path
+   d="m 471,54.4 h 2 v 32 h -31 v -32 h 21"
+   id="Rm_253"
+   style="fill:#ffffff" />
+                    <text
+   transform="translate(448,73.9)"
+   id="text3254"><tspan
+     x="0"
+     y="0"
+     id="tspan3256"
+     style="fill:#000000;stroke:none">253</tspan></text>
+
+                </g>
+                <g
+   id="g3258">
+                    <path
+   d="M 476,36.2 H 456 V 5.08 h 30 V 36.2 h -1"
+   id="Rm_251"
+   style="fill:#ffffff" />
+                    <text
+   transform="translate(461,23)"
+   id="text3261"><tspan
+     x="0"
+     y="0"
+     id="tspan3263"
+     style="fill:#000000;stroke:none">251</tspan></text>
+
+                </g>
+                <g
+   id="g3265">
+                    <path
+   d="m 477,54.3 h -2 v 32 h 33 v -32 h -22"
+   id="Rm_249"
+   style="fill:#ffffff" />
+                    <text
+   transform="translate(481,73.9)"
+   id="text3268"><tspan
+     x="0"
+     y="0"
+     id="tspan3270"
+     style="fill:#000000;stroke:none">249</tspan></text>
+
+                </g>
+                <g
+   id="g3272">
+                    <path
+   d="m 498,36.2 h 20 V 5.08 H 488 V 36.2 h 1"
+   id="Rm_247"
+   style="fill:#ffffff" />
+                    <text
+   transform="translate(494,23)"
+   id="text3275"><tspan
+     x="0"
+     y="0"
+     id="tspan3277"
+     style="fill:#000000;stroke:none">247</tspan></text>
+
+                </g>
+                <g
+   id="g3279">
+                    <path
+   d="M 539,36.3 H 519 V 5.2 h 30 v 31.1 h -1"
+   id="Rm_245"
+   style="fill:#ffffff" />
+                    <text
+   transform="translate(524,23)"
+   id="text3282"><tspan
+     x="0"
+     y="0"
+     id="tspan3284"
+     style="fill:#000000;stroke:none">245</tspan></text>
+
+                </g>
+                <g
+   id="g3286">
+                    <path
+   d="m 560,54.2 h 2 v 32 h -32 v -32 h 22"
+   id="Rm_243"
+   style="fill:#ffffff" />
+                    <text
+   transform="translate(536,73.9)"
+   id="text3289"><tspan
+     x="0"
+     y="0"
+     id="tspan3291"
+     style="fill:#000000;stroke:none">243</tspan></text>
+
+                </g>
+                <g
+   id="g3293">
+                    <path
+   d="m 561,36.3 h 20 V 5.2 h -30 v 31.1 h 1"
+   id="Rm_241"
+   style="fill:#ffffff" />
+                    <text
+   transform="translate(556,23)"
+   id="text3296"><tspan
+     x="0"
+     y="0"
+     id="tspan3298"
+     style="fill:#000000;stroke:none">241</tspan></text>
+
+                </g>
+                <g
+   id="g3300">
+                    <path
+   d="m 565,54.3 h -2 v 32 h 32 v -32 h -21"
+   id="Rm_239"
+   style="fill:#ffffff" />
+                    <text
+   transform="translate(569,73.9)"
+   id="text3303"><tspan
+     x="0"
+     y="0"
+     id="tspan3305"
+     style="fill:#000000;stroke:none">239</tspan></text>
+
+                </g>
+                <g
+   id="g3307">
+                    <path
+   d="m 644,36.3 h 1 V 16 L 623,5.2 h -41 v 31.1 h 52"
+   id="Rm_237"
+   style="fill:#ffffff" />
+                    <text
+   transform="translate(597,23)"
+   id="text3310"><tspan
+     x="0"
+     y="0"
+     id="tspan3312"
+     style="fill:#000000;stroke:none">237</tspan></text>
+
+                </g>
+                <g
+   id="g3314">
+                    <path
+   d="m 626,54.3 h 2 v 32 h -31 v -32 h 21"
+   id="Rm_235"
+   style="fill:#ffffff" />
+                    <text
+   transform="translate(603,73.9)"
+   id="text3317"><tspan
+     x="0"
+     y="0"
+     id="tspan3319"
+     style="fill:#000000;stroke:none">235</tspan></text>
+
+                </g>
+                <g
+   id="g3321">
+                    <path
+   d="m 661,69.8 v -8.4 h -31 v 25.2 h 31 V 79"
+   id="Rm_233"
+   style="fill:#ffffff" />
+                    <text
+   transform="translate(636,76.7)"
+   id="text3324"><tspan
+     x="0"
+     y="0"
+     id="tspan3326"
+     style="fill:#000000;stroke:none">233</tspan></text>
+
+                </g>
+            </g>
+            <g
+   id="g3328">
+                <g
+   id="g3330">
+                    <path
+   d="m 274,120 h -1 V 87.9 h 32 V 120 h -22"
+   id="Rm_131"
+   style="fill:#ffffff" />
+                    <text
+   transform="translate(279,107)"
+   id="text3333"><tspan
+     x="0"
+     y="0"
+     id="tspan3335"
+     style="fill:#000000;stroke:none">131</tspan></text>
+
+                </g>
+                <g
+   id="g3337">
+                    <path
+   d="m 337,120 h 2 V 87.9 H 307 V 120 h 22"
+   id="Rm_129"
+   style="fill:#ffffff" />
+                    <text
+   transform="translate(314,107)"
+   id="text3340"><tspan
+     x="0"
+     y="0"
+     id="tspan3342"
+     style="fill:#000000;stroke:none">129</tspan></text>
+
+                </g>
+                <g
+   id="g3344">
+                    <path
+   d="m 343,120 h -2 V 88 h 32 v 32 h -22"
+   id="Rm_127"
+   style="fill:#ffffff" />
+                    <text
+   transform="translate(347,107)"
+   id="text3347"><tspan
+     x="0"
+     y="0"
+     id="tspan3349"
+     style="fill:#000000;stroke:none">127</tspan></text>
+
+                </g>
+                <g
+   id="g3351">
+                    <path
+   d="m 405,120 h 1 V 88 h -31 v 32 h 21"
+   id="Rm_125"
+   style="fill:#ffffff" />
+                    <text
+   transform="translate(381,107)"
+   id="text3354"><tspan
+     x="0"
+     y="0"
+     id="tspan3356"
+     style="fill:#000000;stroke:none">125</tspan></text>
+
+                </g>
+                <g
+   id="g3358">
+                    <path
+   d="m 410,120 h -2 V 88 h 32 v 32 h -22"
+   id="Rm_123"
+   style="fill:#ffffff" />
+                    <text
+   transform="translate(414,107)"
+   id="text3361"><tspan
+     x="0"
+     y="0"
+     id="tspan3363"
+     style="fill:#000000;stroke:none">123</tspan></text>
+
+                </g>
+                <g
+   id="g3365">
+                    <path
+   d="m 471,120 h 2 V 88 h -31 v 32 h 21"
+   id="Rm_121"
+   style="fill:#ffffff" />
+                    <text
+   transform="translate(447,107)"
+   id="text3368"><tspan
+     x="0"
+     y="0"
+     id="tspan3370"
+     style="fill:#000000;stroke:none">121</tspan></text>
+
+                </g>
+                <g
+   id="g3372">
+                    <path
+   d="m 477,120 h -2 V 88 h 33 v 32 h -22"
+   id="Rm_119"
+   style="fill:#ffffff" />
+                    <text
+   transform="translate(481,107)"
+   id="text3375"><tspan
+     x="0"
+     y="0"
+     id="tspan3377"
+     style="fill:#000000;stroke:none">119</tspan></text>
+
+                </g>
+                <g
+   id="g3379">
+                    <path
+   d="m 560,120 h 2 V 87.8 H 530 V 120 h 22"
+   id="Rm_117"
+   style="fill:#ffffff" />
+                    <text
+   transform="translate(538,107)"
+   id="text3382"><tspan
+     x="0"
+     y="0"
+     id="tspan3384"
+     style="fill:#000000;stroke:none">117</tspan></text>
+
+                </g>
+                <g
+   id="g3386">
+                    <path
+   d="m 565,120 h -2 V 87.9 h 32 V 120 h -21"
+   id="Rm_115"
+   style="fill:#ffffff" />
+                    <text
+   transform="translate(571,107)"
+   id="text3389"><tspan
+     x="0"
+     y="0"
+     id="tspan3391"
+     style="fill:#000000;stroke:none">115</tspan></text>
+
+                </g>
+                <g
+   id="g3393">
+                    <path
+   d="m 626,120 h 2 V 87.9 H 597 V 120 h 21"
+   id="Rm_113"
+   style="fill:#ffffff" />
+                    <text
+   transform="translate(603,107)"
+   id="text3396"><tspan
+     x="0"
+     y="0"
+     id="tspan3398"
+     style="fill:#000000;stroke:none">113</tspan></text>
+
+                </g>
+                <g
+   id="g3400">
+                    <path
+   d="m 661,105 v 8 H 630 V 87.9 h 31 v 7.7"
+   id="Rm_111"
+   style="fill:#ffffff" />
+                    <text
+   transform="translate(636,102)"
+   id="text3403"><tspan
+     x="0"
+     y="0"
+     id="tspan3405"
+     style="fill:#000000;stroke:none">111</tspan></text>
+
+                </g>
+            </g>
+            <g
+   id="g3407">
+                <g
+   id="g3409">
+                    <path
+   d="m 59,252 v -6 h 26.2 v 31 H 59.1 v -12"
+   id="Rm_110"
+   style="fill:#ffffff" />
+                    <text
+   transform="translate(62.9,265)"
+   id="text3412"><tspan
+     x="0"
+     y="0"
+     id="tspan3414"
+     style="fill:#000000;stroke:none">110</tspan></text>
+
+                </g>
+                <g
+   id="g3416">
+                    <path
+   d="m 88.7,245 h -1.9 v 32 H 118 V 245 H 97.1"
+   id="Rm_112"
+   style="fill:#ffffff" />
+                    <text
+   transform="translate(92.8,265)"
+   id="text3419"><tspan
+     x="0"
+     y="0"
+     id="tspan3421"
+     style="fill:#000000;stroke:none">112</tspan></text>
+
+                </g>
+                <g
+   id="g3423">
+                    <path
+   d="m 149,245 h 2 v 32 h -31 v -32 h 21"
+   id="Rm_114"
+   style="fill:#ffffff" />
+                    <text
+   transform="translate(127,265)"
+   id="text3426"><tspan
+     x="0"
+     y="0"
+     id="tspan3428"
+     style="fill:#000000;stroke:none">114</tspan></text>
+
+                </g>
+                <g
+   id="g3430">
+                    <path
+   d="m 154,245 h -2 v 32 h 32 v -32 h -22"
+   id="Rm_116"
+   style="fill:#ffffff" />
+                    <text
+   transform="translate(159,265)"
+   id="text3433"><tspan
+     x="0"
+     y="0"
+     id="tspan3435"
+     style="fill:#000000;stroke:none">116</tspan></text>
+
+                </g>
+                <g
+   id="g3437">
+                    <path
+   d="m 214,245 h 2 v 32 h -31 v -32 h 21"
+   id="Rm_118"
+   style="fill:#ffffff" />
+                    <text
+   transform="translate(192,265)"
+   id="text3440"><tspan
+     x="0"
+     y="0"
+     id="tspan3442"
+     style="fill:#000000;stroke:none">118</tspan></text>
+
+                </g>
+                <g
+   id="g3444">
+                    <path
+   d="m 247,245 h 2 v 32 h -32 v -32 h 22"
+   id="Rm_120"
+   style="fill:#ffffff" />
+                    <text
+   transform="translate(224,265)"
+   id="text3447"><tspan
+     x="0"
+     y="0"
+     id="tspan3449"
+     style="fill:#000000;stroke:none">120</tspan></text>
+
+                </g>
+                <g
+   id="g3451">
+                    <path
+   d="m 274,245 h -2 v 32 h 32 v -32 h -21"
+   id="Rm_122"
+   style="fill:#ffffff" />
+                    <text
+   transform="translate(278,265)"
+   id="text3454"><tspan
+     x="0"
+     y="0"
+     id="tspan3456"
+     style="fill:#000000;stroke:none">122</tspan></text>
+
+                </g>
+                <g
+   id="g3458">
+                    <path
+   d="m 335,245 h 2 v 32 h -31 v -32 h 21"
+   id="Rm_124"
+   style="fill:#ffffff" />
+                    <text
+   transform="translate(313,265)"
+   id="text3461"><tspan
+     x="0"
+     y="0"
+     id="tspan3463"
+     style="fill:#000000;stroke:none">124</tspan></text>
+
+                </g>
+                <g
+   id="g3465">
+                    <path
+   d="m 340,245 h -1 v 32 h 31 v -32 h -21"
+   id="Rm_126"
+   style="fill:#ffffff" />
+                    <text
+   transform="translate(344,265)"
+   id="text3468"><tspan
+     x="0"
+     y="0"
+     id="tspan3470"
+     style="fill:#000000;stroke:none">126</tspan></text>
+
+                </g>
+                <g
+   id="g3472">
+                    <path
+   d="m 401,245 h 1 v 32 h -30 v -32 h 20"
+   id="Rm_128"
+   style="fill:#ffffff" />
+                    <text
+   transform="translate(378,265)"
+   id="text3475"><tspan
+     x="0"
+     y="0"
+     id="tspan3477"
+     style="fill:#000000;stroke:none">128</tspan></text>
+
+                </g>
+                <g
+   id="g3479">
+                    <path
+   d="m 434,245 h 2 v 32 h -32 v -32 h 21"
+   id="Rm_130"
+   style="fill:#ffffff" />
+                    <text
+   transform="translate(410,265)"
+   id="text3482"><tspan
+     x="0"
+     y="0"
+     id="tspan3484"
+     style="fill:#000000;stroke:none">130</tspan></text>
+
+                </g>
+            </g>
+            <g
+   id="g3486">
+                <g
+   id="g3488">
+                    <path
+   d="m 59,304 v 6 H 85.2 V 279 H 59.1 v 12"
+   id="Rm_232"
+   style="fill:#ffffff" />
+                    <text
+   transform="translate(61.9,298)"
+   id="text3491"><tspan
+     x="0"
+     y="0"
+     id="tspan3493"
+     style="fill:#000000;stroke:none">232</tspan></text>
+
+                </g>
+                <g
+   id="g3495">
+                    <path
+   d="m 79.6,327 h -1.7 v 21 l 22,11 H 141 V 327 H 89"
+   id="Rm_236"
+   style="fill:#ffffff" />
+                    <text
+   transform="translate(103,347)"
+   id="text3498"><tspan
+     x="0"
+     y="0"
+     id="tspan3500"
+     style="fill:#000000;stroke:none">236</tspan></text>
+
+                </g>
+                <g
+   id="g3502">
+                    <path
+   d="M 88.7,310 H 86.8 V 278 H 118 v 32 H 97.1"
+   id="Rm_234"
+   style="fill:#ffffff" />
+                    <text
+   transform="translate(92.8,298)"
+   id="text3505"><tspan
+     x="0"
+     y="0"
+     id="tspan3507"
+     style="fill:#000000;stroke:none">234</tspan></text>
+
+                </g>
+                <g
+   id="g3509">
+                    <path
+   d="m 162,327 h -19 v 32 h 30 v -32 h -2"
+   id="Rm_240"
+   style="fill:#ffffff" />
+                    <text
+   transform="translate(148,347)"
+   id="text3512"><tspan
+     x="0"
+     y="0"
+     id="tspan3514"
+     style="fill:#000000;stroke:none">240</tspan></text>
+
+                </g>
+                <g
+   id="g3516">
+                    <path
+   d="m 149,310 h 2 v -32 h -31 v 32 h 21"
+   id="Rm_238"
+   style="fill:#ffffff" />
+                    <text
+   transform="translate(127,298)"
+   id="text3519"><tspan
+     x="0"
+     y="0"
+     id="tspan3521"
+     style="fill:#000000;stroke:none">238</tspan></text>
+
+                </g>
+                <g
+   id="g3523">
+                    <path
+   d="m 185,327 h 19 v 32 h -30 v -32 h 2"
+   id="Rm_244"
+   style="fill:#ffffff" />
+                    <text
+   transform="translate(180,347)"
+   id="text3526"><tspan
+     x="0"
+     y="0"
+     id="tspan3528"
+     style="fill:#000000;stroke:none">244</tspan></text>
+
+                </g>
+                <g
+   id="g3530">
+                    <path
+   d="m 154,310 h -2 v -32 h 32 v 32 h -22"
+   id="Rm_242"
+   style="fill:#ffffff" />
+                    <text
+   transform="translate(157,298)"
+   id="text3533"><tspan
+     x="0"
+     y="0"
+     id="tspan3535"
+     style="fill:#000000;stroke:none">242</tspan></text>
+
+                </g>
+                <g
+   id="g3537">
+                    <path
+   d="m 225,328 h -19 v 31 h 30 v -31 h -2"
+   id="Rm_248"
+   style="fill:#ffffff" />
+                    <text
+   transform="translate(212,347)"
+   id="text3540"><tspan
+     x="0"
+     y="0"
+     id="tspan3542"
+     style="fill:#000000;stroke:none">248</tspan></text>
+
+                </g>
+                <g
+   id="g3544">
+                    <path
+   d="m 214,310 h 2 v -32 h -31 v 32 h 21"
+   id="Rm_246"
+   style="fill:#ffffff" />
+                    <text
+   transform="translate(191,298)"
+   id="text3547"><tspan
+     x="0"
+     y="0"
+     id="tspan3549"
+     style="fill:#000000;stroke:none">246</tspan></text>
+
+                </g>
+                <g
+   id="g3551">
+                    <path
+   d="m 248,328 h 19 v 31 h -30 v -31 h 2"
+   id="Rm_252"
+   style="fill:#ffffff" />
+                    <text
+   transform="translate(243,347)"
+   id="text3554"><tspan
+     x="0"
+     y="0"
+     id="tspan3556"
+     style="fill:#000000;stroke:none">252</tspan></text>
+
+                </g>
+                <g
+   id="g3558">
+                    <path
+   d="m 219,310 h -2 v -32 h 32 v 32 h -21"
+   id="Rm_250"
+   style="fill:#ffffff" />
+                    <text
+   transform="translate(223,298)"
+   id="text3561"><tspan
+     x="0"
+     y="0"
+     id="tspan3563"
+     style="fill:#000000;stroke:none">250</tspan></text>
+
+                </g>
+                <g
+   id="g3565">
+                    <path
+   d="m 288,328 h -19 v 31 h 29 v -31 h -1"
+   id="Rm_254"
+   style="fill:#ffffff" />
+                    <text
+   transform="translate(274,347)"
+   id="text3568"><tspan
+     x="0"
+     y="0"
+     id="tspan3570"
+     style="fill:#000000;stroke:none">254</tspan></text>
+
+                </g>
+                <g
+   id="g3572">
+                    <path
+   d="m 274,310 h -2 v -32 h 32 v 32 h -21"
+   id="Rm_256"
+   style="fill:#ffffff" />
+                    <text
+   transform="translate(278,298)"
+   id="text3575"><tspan
+     x="0"
+     y="0"
+     id="tspan3577"
+     style="fill:#000000;stroke:none">256</tspan></text>
+
+                </g>
+                <g
+   id="g3579">
+                    <path
+   d="m 310,328 h 20 v 31 h -30 v -31 h 1"
+   id="Rm_258"
+   style="fill:#ffffff" />
+                    <text
+   transform="translate(304,347)"
+   id="text3582"><tspan
+     x="0"
+     y="0"
+     id="tspan3584"
+     style="fill:#000000;stroke:none">258</tspan></text>
+
+                </g>
+                <g
+   id="g3586">
+                    <path
+   d="m 335,310 h 2 v -32 h -31 v 32 h 21"
+   id="Rm_260"
+   style="fill:#ffffff" />
+                    <text
+   transform="translate(312,298)"
+   id="text3589"><tspan
+     x="0"
+     y="0"
+     id="tspan3591"
+     style="fill:#000000;stroke:none">260</tspan></text>
+
+                </g>
+                <g
+   id="g3593">
+                    <path
+   d="m 351,328 h -20 v 31 h 30 v -31 h -1"
+   id="Rm_262"
+   style="fill:#ffffff" />
+                    <text
+   transform="translate(336,347)"
+   id="text3596"><tspan
+     x="0"
+     y="0"
+     id="tspan3598"
+     style="fill:#000000;stroke:none">262</tspan></text>
+
+                </g>
+                <g
+   id="g3600">
+                    <path
+   d="m 340,310 h -2 v -32 h 32 v 32 h -21"
+   id="Rm_264"
+   style="fill:#ffffff" />
+                    <text
+   transform="translate(344,298)"
+   id="text3603"><tspan
+     x="0"
+     y="0"
+     id="tspan3605"
+     style="fill:#000000;stroke:none">264</tspan></text>
+
+                </g>
+                <g
+   id="g3607">
+                    <path
+   d="m 373,328 h 19 v 31 h -29 v -31 h 1"
+   id="Rm_266"
+   style="fill:#ffffff" />
+                    <text
+   transform="translate(367,347)"
+   id="text3610"><tspan
+     x="0"
+     y="0"
+     id="tspan3612"
+     style="fill:#000000;stroke:none">266</tspan></text>
+
+                </g>
+                <g
+   id="g3614">
+                    <path
+   d="m 401,310 h 1 v -32 h -30 v 32 h 20"
+   id="Rm_268"
+   style="fill:#ffffff" />
+                    <text
+   transform="translate(377,298)"
+   id="text3617"><tspan
+     x="0"
+     y="0"
+     id="tspan3619"
+     style="fill:#000000;stroke:none">268</tspan></text>
+
+                </g>
+                <g
+   id="g3621">
+                    <path
+   d="m 414,328 h -19 v 31 h 29 v -31 h -1"
+   id="Rm_270"
+   style="fill:#ffffff" />
+                    <text
+   transform="translate(399,347)"
+   id="text3624"><tspan
+     x="0"
+     y="0"
+     id="tspan3626"
+     style="fill:#000000;stroke:none">270</tspan></text>
+
+                </g>
+                <g
+   id="g3628">
+                    <path
+   d="m 434,310 h 2 v -32 h -32 v 32 h 21"
+   id="Rm_272"
+   style="fill:#ffffff" />
+                    <text
+   transform="translate(409,298)"
+   id="text3631"><tspan
+     x="0"
+     y="0"
+     id="tspan3633"
+     style="fill:#000000;stroke:none">272</tspan></text>
+
+                </g>
+                <g
+   id="g3635">
+                    <path
+   d="m 436,328 h 19 v 31 h -29 v -31 h 1"
+   id="Rm_274"
+   style="fill:#ffffff" />
+                    <text
+   transform="translate(430,347)"
+   id="text3638"><tspan
+     x="0"
+     y="0"
+     id="tspan3640"
+     style="fill:#000000;stroke:none">274</tspan></text>
+
+                </g>
+                <g
+   id="g3642">
+                    <path
+   d="m 476,328 h -19 v 31 h 30 v -31 h -2"
+   id="Rm_276"
+   style="fill:#ffffff" />
+                    <text
+   transform="translate(462,347)"
+   id="text3645"><tspan
+     x="0"
+     y="0"
+     id="tspan3647"
+     style="fill:#000000;stroke:none">276</tspan></text>
+
+                </g>
+                <g
+   id="g3649">
+                    <path
+   d="m 499,328 h 19 v 31 h -30 v -31 h 1"
+   id="Rm_278"
+   style="fill:#ffffff" />
+                    <text
+   transform="translate(493,347)"
+   id="text3652"><tspan
+     x="0"
+     y="0"
+     id="tspan3654"
+     style="fill:#000000;stroke:none">278</tspan></text>
+
+                </g>
+                <g
+   id="g3656">
+                    <path
+   d="m 539,328 h -20 v 31 h 30 v -31 h -1"
+   id="Rm_280"
+   style="fill:#ffffff" />
+                    <text
+   transform="translate(524,347)"
+   id="text3659"><tspan
+     x="0"
+     y="0"
+     id="tspan3661"
+     style="fill:#000000;stroke:none">280</tspan></text>
+
+                </g>
+                <g
+   id="g3663">
+                    <path
+   d="m 561,328 h 19 v 31 h -29 v -31 h 1"
+   id="Rm_282"
+   style="fill:#ffffff" />
+                    <text
+   transform="translate(556,347)"
+   id="text3666"><tspan
+     x="0"
+     y="0"
+     id="tspan3668"
+     style="fill:#000000;stroke:none">282</tspan></text>
+
+                </g>
+            </g>
+        </g>
+        
+
+        
+        <g
+   id="w6"
+   style="display:none">
+            <g
+   id="SkyBridge">
+                <path
+   d="M 729,378 680,354"
+   id="path3672"
+   style="stroke-width:2" />
+                <path
+   d="M 732,356 679,330"
+   id="path3674"
+   style="stroke-width:2" />
+                <path
+   d="m 689,356 h -4 v -20 h 4 v 20 z"
+   id="path3676"
+   style="fill:#ffffff;stroke:none" />
+                <path
+   d="M 727,374 678,350"
+   id="path3678"
+   style="stroke:#666666;stroke-width:1" />
+                <path
+   d="M 727,357 678,333"
+   id="path3680"
+   style="stroke:#666666;stroke-width:1" />
+                <text
+   transform="matrix(0.889,0.458,-0.458,0.889,635,323)"
+   id="text3682"><tspan
+     x="-1"
+     y="-1"
+     id="tspan3684"
+     style="fill:#666666;stroke:none">East Tower</tspan></text>
+
+                <path
+   d="m 713,358 -17,-8"
+   id="path3686"
+   style="stroke:#666666;stroke-width:1" />
+                <path
+   d="m 714,353 2,7 -6,2"
+   id="path3688"
+   style="stroke:#666666;stroke-width:1" />
+            </g>
+            <rect
+   width="7"
+   height="32"
+   x="308"
+   y="279"
+   id="rect3690"
+   style="fill:#ffffff;stroke:none" />
+            <g onmouseover="onImg(evt)" onmouseout="offImg()" onclick="selector(evt)"
+   id="g3692">
+                <g
+   id="g3694">
+                    <path
+   d="m 628,136 h 34 v 45 h -48 v -45 h 1"
+   id="Rm_611_6"
+   style="fill:#ffffff" />
+                    <text
+   transform="translate(629,163)"
+   id="text3697"><tspan
+     x="0"
+     y="0"
+     id="tspan3699"
+     style="fill:#000000;stroke:none">611</tspan></text>
+
+                </g>
+                <g
+   id="g3701">
+                    <path
+   d="m 648,228 h -34 v -47 h 48 v 47 h -2"
+   id="Rm_607_6"
+   style="fill:#ffffff" />
+                    <text
+   transform="translate(628,208)"
+   id="text3704"><tspan
+     x="0"
+     y="0"
+     id="tspan3706"
+     style="fill:#000000;stroke:none">607</tspan></text>
+
+                </g>
+                <g
+   id="g3708">
+                    <path
+   d="m 405,119 h 1 V 54.2 h -1 l 0,7.4 c 0,0 -9,0.8 -9,-7.4 H 374 V 119 h 22"
+   id="Rm_319_6"
+   style="fill:#ffffff" />
+                    <text
+   transform="translate(380,89.8)"
+   id="text3711"><tspan
+     x="0"
+     y="0"
+     id="tspan3713"
+     style="fill:#000000;stroke:none">319</tspan></text>
+
+                </g>
+            </g>
+                <g
+   id="g3715">
+                    <path
+   d="m 567,296 -8,-3 c -22,-2 -10,-16 -32,-34 -26,-14 -32,2 -50,-12 -14,-9 -23,-8 -23,-8 v 120 h 128 v -56"
+   id="Rm_Virtual_Soccer_Field"
+   style="fill:#ffffff;stroke:#666666;stroke-width:1" />
+                    <text
+   transform="translate(470,317)"
+   id="text3718"><tspan
+     x="0"
+     y="0"
+     id="tspan3720"
+     style="fill:#666666;stroke:none;font-family:Myriad-Italic,sans-serif">Virtual Soccer Field</tspan></text>
+
+                </g>
+                <g
+   id="g3722">
+                    <path
+   d="m 532,120 h -2 V 54.2 h 98 V 120 h -87"
+   id="Rm_Space_Flight_Simulator"
+   style="fill:#ffffff;stroke:#666666;stroke-width:1" />
+                    <text
+   transform="translate(545,80.8)"
+   id="text3725"
+   style="fill:#666666;stroke:none;font-family:Myriad-Italic,sans-serif"><tspan
+     x="0"
+     y="0"
+     id="tspan3727">Space Flight</tspan><tspan
+     x="0"
+     y="14.5"
+     id="tspan3729">Simulator</tspan></text>
+
+                </g>
+                <g
+   id="g3731">
+                    <path
+   d="M 509,108 V 66.8 h -1 V 56.7 h 1 V 54.5 H 406 V 120 h 103 v -2"
+   id="Rm_Wine_Cellar_and_Tasting_Room"
+   style="fill:#ffffff;stroke:#666666;stroke-width:1" />
+                    <text
+   transform="translate(423,80.8)"
+   id="text3734"
+   style="fill:#666666;stroke:none;font-family:Myriad-Italic,sans-serif"><tspan
+     x="0"
+     y="0"
+     id="tspan3736">Wine Cellar</tspan><tspan
+     x="0"
+     y="14.5"
+     id="tspan3738">&amp; Tasting Room</tspan></text>
+
+                </g>
+                <g
+   id="g3740">
+                    <path
+   d="m 274,120 h -2 V 54.3 h 3 l 0,7.7 c 0,0 9,1.1 9,-7.7 h 90 V 120 h -90"
+   id="Rm_Spa_and_Casino"
+   style="fill:#ffffff;stroke:#666666;stroke-width:1" />
+                    <text
+   transform="translate(288,80.8)"
+   id="text3743"
+   style="fill:#666666;stroke:none;font-family:Myriad-Italic,sans-serif"><tspan
+     x="0"
+     y="0"
+     id="tspan3745">Spa and Casino</tspan><tspan
+     x="0"
+     y="14.5"
+     id="tspan3747">&quot;Simulator&quot;</tspan></text>
+
+                </g>
+                <g
+   id="g3749">
+                    <path
+   d="M 431,244 H 315 v 67 h 127 v -2 h 10 v 2 h 2 v -67 h -2"
+   id="Rm_Pet_Care_Holodeck"
+   style="fill:#ffffff;stroke:#666666;stroke-width:1" />
+                    <text
+   transform="translate(342,280)"
+   id="text3752"><tspan
+     x="0"
+     y="0"
+     id="tspan3754"
+     style="fill:#666666;stroke:none;font-family:Myriad-Italic,sans-serif">Pet Care Holodeck</tspan></text>
+
+                </g>
+                <g
+   id="g3756">
+                    <path
+   d="m 306,279 h -34 v 32 h 35 v -19"
+   id="Rm_Pet_Bath"
+   style="fill:#ffffff;stroke:#666666;stroke-width:1" />
+                    <text
+   transform="translate(278,292)"
+   id="text3759"
+   style="fill:#666666;stroke:none;font-family:Myriad-Italic,sans-serif"><tspan
+     x="0"
+     y="0"
+     id="tspan3761">Pet</tspan><tspan
+     x="0"
+     y="13"
+     id="tspan3763">Bath</tspan></text>
+
+                </g>
+            <g
+   id="g3765">
+                <path
+   d="m 315,279 0,-35 h -43 v 35 h 34"
+   id="Rm_Storage"
+   style="fill:#ffffff;stroke:#666666;stroke-width:1" />
+                <text
+   transform="translate(275,263)"
+   id="text3768"><tspan
+     x="0"
+     y="0"
+     id="tspan3770"
+     style="fill:#666666;stroke:none;font-family:Myriad-Italic,sans-serif">Storage</tspan></text>
+
+            </g>
+        </g>
+        <g
+   id="w9"
+   style="display:none">
+            <g
+   id="g3773">
+                <path
+   d="m 560,90 v -2.1 h 35 V 54.3 h 33 V 120 H 560 V 97.4"
+   id="Rm_Equipment_Room"
+   style="fill:#ffffff;stroke:#666666;stroke-width:1" />
+                <text
+   transform="translate(567,100)"
+   id="text3776"
+   style="fill:#666666;stroke:none;font-family:Myriad-Italic,sans-serif"><tspan
+     x="0"
+     y="0"
+     id="tspan3778">Equipment</tspan><tspan
+     x="0"
+     y="14.5"
+     id="tspan3780">Room</tspan></text>
+
+            </g>
+		<g
+   id="g3782">
+		    <path
+   d="m 528,120 h 32 V 97.2 h -6 c 0,0 -2,-7.4 6,-7.4 v -5 c -7,-0.3 -6,-7 -6,-7 l 6,-0.1 V 54.3 h -43 l -1,7.2 c 0,0 -8,1.5 -8,-7.2 H 272 V 120 h 2 l 0,-8 c 0,0 8,-3 8,8 h 225"
+   id="Rm_Long_Jump_Training_Room"
+   style="fill:#ffffff;stroke:#666666;stroke-width:1" />
+		    <text
+   transform="translate(340,88.8)"
+   id="text3785"><tspan
+     x="0"
+     y="0"
+     id="tspan3787"
+     style="fill:#666666;stroke:none;font-family:Myriad-Italic,sans-serif">Long Jump Training Room</tspan></text>
+
+		</g>
+		<g
+   id="g3789">
+		    <path
+   d="M 425,244 H 283 c 0,10 -9,8 -9,8 l 0,-8 h -2 v 67 h 164 v -67 h -2"
+   id="Rm_Aerodynamics_Lab"
+   style="fill:#ffffff;stroke:#666666;stroke-width:1" />
+		    <text
+   transform="translate(305,280)"
+   id="text3792"><tspan
+     x="0"
+     y="0"
+     id="tspan3794"
+     style="fill:#666666;stroke:none;font-family:Myriad-Italic,sans-serif">Aerodynamics Lab</tspan></text>
+
+		</g>
+		<g
+   id="g3796">
+		    <path
+   d="m 247,311 h 3 V 244 H 97.1 c 0,9 -8.3,8 -8.3,8 v -8 H 87 v 67 h 142"
+   id="Rm_Levitation_Training"
+   style="fill:#ffffff;stroke:#666666;stroke-width:1" />
+		    <text
+   transform="translate(120,281)"
+   id="text3799"><tspan
+     x="0"
+     y="0"
+     id="tspan3801"
+     style="fill:#666666;stroke:none;font-family:Myriad-Italic,sans-serif">Levitation Training</tspan></text>
+
+		</g>
+		<g
+   id="g3803">
+		    <path
+   d="M 560,78.4 V 54.3 h 35 v 33.3 h -35 v -1.9"
+   id="Rm_Supplies"
+   style="fill:#ffffff;stroke:#666666;stroke-width:1" />
+		</g>
+        </g>
+        <g
+   id="w14_15"
+   style="display:none">
+            <g
+   id="g3807">
+                <path
+   d="M 729,378 680,354"
+   id="path3809"
+   style="stroke-width:2" />
+                <path
+   d="M 732,356 679,330"
+   id="path3811"
+   style="stroke-width:2" />
+                <path
+   d="m 689,356 h -4 v -20 h 4 v 20 z"
+   id="path3813"
+   style="fill:#ffffff;stroke:none" />
+                <path
+   d="M 727,374 678,350"
+   id="path3815"
+   style="stroke:#666666;stroke-width:1" />
+                <path
+   d="M 727,357 678,333"
+   id="path3817"
+   style="stroke:#666666;stroke-width:1" />
+                <text
+   transform="matrix(0.889,0.458,-0.458,0.889,635,323)"
+   id="text3819"><tspan
+     x="-1"
+     y="-1"
+     id="tspan3821"
+     style="fill:#666666;stroke:none">East Tower</tspan></text>
+
+                <path
+   d="m 713,358 -17,-8"
+   id="path3823"
+   style="stroke:#666666;stroke-width:1" />
+                <path
+   d="m 714,353 2,7 -6,2"
+   id="path3825"
+   style="stroke:#666666;stroke-width:1" />
+            </g>
+        </g>
+        <g
+   id="w16"
+   style="display:none">
+            <g
+   transform="translate(71,-1)"
+   id="balcony_cover"
+   style="fill:#ffffff;stroke:none">
+                <g
+   id="g3829">
+                    <path
+   d="M 72,0 72.3,64.7 1.01,24.9 0.927,0 72,0 z"
+   id="path3831" />
+                    <path
+   d="M 0.456,23.9 71.2,60.1 71.2,1.57"
+   id="path3833"
+   style="fill:none;stroke:#1d0e82;stroke-width:2;stroke-miterlimit:4" />
+                </g>
+                <g
+   id="g3835">
+                    <path
+   d="m 512,365 v -62 l 69,38 0,24 -69,0 z"
+   id="path3837" />
+                    <path
+   d="m 583,342 -71,-36 0,58"
+   id="path3839"
+   style="fill:none;stroke:#1d0e82;stroke-width:2;stroke-miterlimit:4" />
+                </g>
+            </g>
+        </g>
+        <g
+   id="w17"
+   style="display:none">
+            <g
+   transform="translate(71,-1)"
+   id="g3842"
+   style="fill:#ffffff;stroke:none">
+                <g
+   id="g3844">
+                    <path
+   d="M 72,0 72.3,64.7 1.01,24.9 0.927,0 72,0 z"
+   id="path3846" />
+                    <path
+   d="M 0.456,23.9 71.2,60.1 71.2,1.57"
+   id="path3848"
+   style="fill:none;stroke:#1d0e82;stroke-width:2;stroke-miterlimit:4" />
+                </g>
+                <g
+   id="g3850">
+                    <path
+   d="m 512,365 v -62 l 69,38 0,24 -69,0 z"
+   id="path3852" />
+                    <path
+   d="m 583,342 -71,-36 0,58"
+   id="path3854"
+   style="fill:none;stroke:#1d0e82;stroke-width:2;stroke-miterlimit:4" />
+                </g>
+            </g>
+        </g>
+        <g
+   id="w18"
+   style="display:none">
+            <g
+   transform="translate(71,-1)"
+   id="g3857"
+   style="fill:#ffffff;stroke:none">
+                <g
+   id="g3859">
+                    <path
+   d="M 72,0 72.3,64.7 1.01,24.9 0.927,0 72,0 z"
+   id="path3861" />
+                    <path
+   d="M 0.456,23.9 71.2,60.1 71.2,1.57"
+   id="path3863"
+   style="fill:none;stroke:#1d0e82;stroke-width:2;stroke-miterlimit:4" />
+                </g>
+                <g
+   id="g3865">
+                    <path
+   d="m 512,365 v -62 l 69,38 0,24 -69,0 z"
+   id="path3867" />
+                    <path
+   d="m 583,342 -71,-36 0,58"
+   id="path3869"
+   style="fill:none;stroke:#1d0e82;stroke-width:2;stroke-miterlimit:4" />
+                </g>
+            </g>
+        </g>
+    </g>
+    
+    <g
+   id="lock"
+   style="font-size:24px;display:none;font-family:Myriad-Roman,sans-serif">
+        <rect
+   width="500"
+   height="120"
+   x="112"
+   y="120"
+   id="rect3872"
+   style="opacity:0.75;fill:#ffffff;stroke:none" />
+        <text
+   x="210"
+   y="150"
+   id="text3874"><tspan
+   id="tspan3876">Mouse over a room to show</tspan>         <tspan
+   x="210"
+   y="170"
+   id="tspan3878">occupant information.</tspan>         <tspan
+   x="210"
+   y="200"
+   id="tspan3880">Click on a room to freeze</tspan>         <tspan
+   x="210"
+   y="220"
+   id="tspan3882">the information.</tspan></text>
+
+        <rect
+   width="490"
+   height="120"
+   x="120"
+   y="120"
+   id="rect3884"
+   style="opacity:0;fill:#ffffff;stroke:none" />
+    </g>
+    
+    <g
+   id="unlock"
+   style="font-size:24px;display:none;font-family:Myriad-Roman,sans-serif">
+        <rect
+   width="500"
+   height="120"
+   x="112"
+   y="120"
+   id="rect3887"
+   style="opacity:0.75;fill:#ffffff;stroke:none" />
+        <text
+   x="210"
+   y="180"
+   id="text3889"><tspan
+   id="tspan3891">Click on a highlighted room</tspan>         <tspan
+   x="210"
+   y="200"
+   id="tspan3893">to unfreeze it.</tspan></text>
+
+        <rect
+   width="490"
+   height="120"
+   x="120"
+   y="120"
+   id="rect3895"
+   style="opacity:0;fill:#ffffff;stroke:none" />
+    </g>
+
+    <script>
+        // localized function callers
+        function onImg(evt) {
+            if (top.onImg) top.onImg(evt)
+        }
+
+        function offImg() {
+            if (top.offImg) top.offImg()
+        }
+
+
+        function selector(evt) {
+            if (top.selector) top.selector(evt)
+        }
+    </script>    
+</svg>

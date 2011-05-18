@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" font-family="Helvetica, sans-serif" font-size="11px">
+<title>Graph of suspend redraw rendering way</title>
+<rect width="300" height="300" fill="lightgray"/>
+<line x1="50" x2="50" y1="10" y2="290" stroke="gray" stroke-width="1"/><line x1="150" x2="150" y1="10" y2="290" stroke="gray" stroke-width="1"/><line x1="250" x2="250" y1="10" y2="290" stroke="gray" stroke-width="1"/>
+<text x="42" y="295">50 particles</text><text x="138" y="295">500 particles</text><text x="232" y="295">2500 particles</text>
+<line x1="40" x2="260" y1="280" y2="280" stroke="gray" stroke-width="1"/><line x1="40" x2="260" y1="230" y2="230" stroke="gray" stroke-width="1"/><line x1="40" x2="260" y1="180" y2="180" stroke="gray" stroke-width="1"/><line x1="40" x2="260" y1="130" y2="130" stroke="gray" stroke-width="1"/><line x1="40" x2="260" y1="80" y2="80" stroke="gray" stroke-width="1"/><line x1="40" x2="260" y1="30" y2="30" stroke="gray" stroke-width="1"/>
+<text x="3" y="280">0 fps</text><text x="3" y="230">50 fps</text><text x="3" y="180">100 fps</text><text x="3" y="130">150 fps</text><text x="3" y="80">200 fps</text><text x="3" y="30">250 fps</text>
+<g transform="scale(1 -1) translate(0 -279)">
+  <polyline stroke="black" fill="none" stroke-width="2" points="50,56 150,33 250,8.5"/>
+  <polyline stroke="red" fill="none" stroke-width="2" points="50,28 150,11.5 250,1.8"/>
+  <polyline stroke="#0c0" fill="none" stroke-width="2" points="50,123 150,64 250,13.2"/>
+  <polyline stroke="#009ad9" fill="none" stroke-width="2" points="50,242 150,51 250,9.9"/>
+  <polyline stroke="#fff" fill="none" stroke-width="2" points="50,148 150,29 250,7.9"/>
+  <polyline stroke="orange" fill="none" stroke-width="2" points="50,42 150,4 250,0.7"/>
+  <polyline stroke="#00377f" fill="none" stroke-width="2" points="50,83 150,6 250,0.8"/>
+  <polyline stroke="gray" fill="none" stroke-width="2" points="50,46 150,4.3 250,0.7"/>
+  <polyline stroke="magenta" fill="none" stroke-width="2" points="50,58.2 150,6 250,0.7"/>
+</g>
+<text x="120" y="40" font-size="33px">SUSPEND</text>
+<text x="127" y="76" font-size="33px">REDRAW</text>
+</svg>

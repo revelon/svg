@@ -1,0 +1,504 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" font-family="Helvetica, sans-serif" viewBox="0 0 860 550" width="860" height="550" stroke="none" stroke-width="0">
+  <title>SVG Cavern Fighter 1.01</title>
+  <desc>by Marek Raida, marek.raida@gmail.com</desc>
+
+  <defs>
+    <image xlink:href="http://www.google-analytics.com/__utm.gif?utmwv=4.6.5&amp;utmn=1614960838&amp;utmhn=svg.kvalitne.cz&amp;utmcs=UTF-8&amp;utmsr=1920x1080&amp;utmsc=24-bit&amp;utmul=en-us&amp;utmje=0&amp;utmfl=10.0%20r32&amp;utmdt=SVG%C2%A0%E2%80%94%C2%A0It%27s%20in%20your%20hands...&amp;utmhid=406713458&amp;utmr=-&amp;utmp=%2Findex2.htm&amp;utmac=UA-11950721-1&amp;utmcc=__utma%3D251371972.1884550355.1260220320.1260479915.1260743424.4%3B%2B__utmz%3D251371972.1260220320.1.1.utmcsr%3D(direct)%7Cutmccn%3D(direct)%7Cutmcmd%3D(none)%3B"/>
+
+    <linearGradient id="ceiling" x1="0" y1="0" x2="0" y2="300" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="beige" id="ceilOffset1"/>
+      <stop offset="100%" stop-color="brown" id="ceilOffset2"/>
+    </linearGradient> 
+    <linearGradient id="floor" x1="0" y1="200" x2="0" y2="500" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="brown" id="floorOffset1"/>
+      <stop offset="100%" stop-color="beige" id="floorOffset2"/>
+    </linearGradient>
+    <linearGradient id="shieldGradient" x1="30" y1="0" x2="230" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="red"/>
+      <stop offset="25%" stop-color="orange"/>
+      <stop offset="50%" stop-color="blue"/>
+      <stop offset="100%" stop-color="steelblue"/>
+    </linearGradient>
+    <linearGradient id="fuelGradient" x1="240" y1="0" x2="440" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="red"/>
+      <stop offset="25%" stop-color="gold"/>
+      <stop offset="50%" stop-color="green"/>
+      <stop offset="100%" stop-color="lightgreen"/>
+    </linearGradient>
+
+    <circle id="bonusMarker" cx="16" cy="4" r="4" fill="#2f2">
+      <animate attributeName="fill" values="#2f2; none" calcMode="discrete" repeatCount="indefinite" begin="0s" dur="1s"/>
+    </circle>
+
+    <circle id="antiBonusMarker" cx="16" cy="4" r="4" fill="#e00">
+      <animate attributeName="fill" values="#e00; none" calcMode="discrete" repeatCount="indefinite" begin="0s" dur="1s"/>
+    </circle>
+
+    <g id="halfHourglassBg">
+      <polygon fill="#599" points="1,0 10,7 19,0"/>
+    </g>
+    <g id="halfHourglassSand">
+      <polygon fill="yellow" points="2,0 10,6 18,0"/>
+    </g>
+
+    <g id="normal">
+      <ellipse cx="25" cy="10" rx="5" ry="3" fill="white"/>
+      <g fill="gold">
+        <polygon points="1,5  8,7 1,9"/>
+        <polygon points="1,15  8,13 1,11"/>
+        <animate attributeName="fill" values="gold; #222; gold" dur="1s" repeatCount="indefinite" begin="0s"/>
+      </g>
+      <rect x="20" y="0" width="6" height="2" fill="#4f4" rx="1"/>
+      <rect x="20" y="18" width="6" height="2" fill="maroon" rx="1"/>
+      <polygon fill="#eee" points="2,0    22,0      22,2    12,2    17,6    27,7      27,10       8,10      8,8       6,8     6,5      8,5       5,2     2,2"/>
+      <polygon fill="#aaa" points="2,20  22,20   22,18  12,18 17,14  27,13    27,10       8,10      8,12     6,12    6,15     8,15    5,18   2,18 "/>
+      <rect x="18" y="7" width="6" height="2" fill="navy" rx="1"/>
+    </g>
+    <g id="crash">
+      <ellipse cx="25" cy="10" rx="5" ry="3" fill="red"/>
+      <rect x="20" y="0" width="6" height="2" fill="red" rx="1"/>
+      <rect x="20" y="18" width="6" height="2" fill="red" rx="1"/>
+      <polygon fill="red" points="2,0    22,0      22,2    12,2    17,6    27,7      27,10       8,10      8,8       6,8     6,5      8,5       5,2     2,2"/>
+      <polygon fill="red" points="2,20  22,20   22,18  12,18 17,14  27,13    27,10       8,10      8,12     6,12    6,15     8,15    5,18   2,18 "/>
+      <rect x="18" y="7" width="6" height="2" fill="black" rx="1"/>
+    </g>
+    <g id="forward">
+      <ellipse cx="25" cy="10" rx="5" ry="3" fill="maroon"/>
+      <polygon fill="red" points="0,3  8,7 0,10"/>
+      <polygon fill="red" points="0,17  8,13 0,10"/>
+      <rect x="20" y="0" width="6" height="2" fill="#4f4" rx="1"/>
+      <rect x="20" y="18" width="6" height="2" fill="#2f2" rx="1"/>
+      <polygon fill="#eee" points="2,0    22,0      22,2    12,2    17,6    27,7      27,10       8,10      8,8       6,8     6,5      8,5       5,2     2,2"/>
+      <polygon fill="#aaa" points="2,20  22,20   22,18  12,18 17,14  27,13    27,10       8,10      8,12     6,12    6,15     8,15    5,18   2,18 "/>
+      <rect x="18" y="7" width="6" height="2" fill="navy" rx="1"/>
+    </g>
+    <g id="backward">
+      <ellipse cx="25" cy="10" rx="5" ry="3" fill="cyan"/>
+      <polygon fill="cyan" points="0,2  8,7 0,10"/>
+      <polygon fill="cyan" points="0,18  8,13 0,10"/>
+      <rect x="20" y="0" width="6" height="2" fill="#4f4" rx="1"/>
+      <rect x="20" y="18" width="6" height="2" fill="#2f2" rx="1"/>
+      <polygon fill="#eee" points="2,0    22,0      22,2    12,2    17,6    27,7      27,10       8,10      8,8       6,8     6,5      8,5       5,2     2,2"/>
+      <polygon fill="#aaa" points="2,20  22,20   22,18  12,18 17,14  27,13    27,10       8,10      8,12     6,12    6,15     8,15    5,18   2,18 "/>
+      <rect x="18" y="7" width="6" height="2" fill="navy" rx="1"/>
+    </g>
+
+    <radialGradient id="crashGrad" gradientUnits="objectBoundingBox" cx="55%" cy="55%">
+      <stop offset="0" stop-color="white"/>
+      <stop offset="35%" stop-color="red"/>
+      <stop offset="100%" stop-color="orange"/>
+    </radialGradient>
+
+    <g id="crashNegative"><g><text x="-14" y="-4" fill="#e00" font-size="18px" font-weight="normal">shield -10</text>
+      <circle cx="10" cy="10" fill="url(#crashGrad)" r="12">
+        <animate attributeName="r" values="4; 20; 4" dur="1.6s" repeatCount="indefinite" begin="0s"/>
+      </circle>
+      <circle cx="11" cy="11" fill="url(#crashGrad)" r="6">
+        <animate attributeName="r" values="2; 6; 13; 2" dur="1.6s" repeatCount="indefinite" begin="0.2s"/>
+      </circle>
+    </g></g>
+
+    <radialGradient id="positiveCrashGrad" gradientUnits="objectBoundingBox" cx="55%" cy="55%">
+      <stop offset="0" stop-color="white"/>
+      <stop offset="35%" stop-color="yellow"/>
+      <stop offset="100%" stop-color="#3f3"/>
+    </radialGradient>
+
+    <g id="crashPositive"><g><text x="-14" y="-4" fill="#2f2" font-size="18px" font-weight="normal">fuel +10</text>
+      <circle cx="10" cy="10" fill="url(#positiveCrashGrad)" r="12">
+        <animate attributeName="r" values="4; 20; 4" dur="1.6s" repeatCount="indefinite" begin="0.2s"/>
+      </circle>
+      <circle cx="11" cy="11" fill="url(#positiveCrashGrad)" r="6">
+        <animate attributeName="r" values="2; 6; 13; 2" dur="1.6s" repeatCount="indefinite" begin="0.2s"/>
+      </circle>
+    </g></g>
+
+    <!-- problems with FFX use + smil and bolts solved in some, although not optimal way -->
+    <g id="bolt1"><g>
+      <rect x="0" y="-130" width="20" height="150" fill="#666" rx="3"/>
+      <g fill="steelblue">
+        <rect x="10" y="-125" width="7" height="140" rx="4"/>
+        <rect x="3" y="-120" width="3" height="130" rx="2"/>
+        <animate attributeName="fill" values="#666; steelblue; steelblue; #666" dur="2.5s" repeatCount="indefinite" begin="0s"/>
+        <animateTransform attributeName="transform" type="scale" values="1 1; .4 1; 1 1; 1 1" dur="4s" repeatCount="indefinite" begin="0s"/>
+      </g>
+    </g></g>
+
+    <g id="bolt2"><g>
+      <rect x="0" y="0" width="20" height="150" fill="darkgray" rx="3"/>
+      <g fill="gray">
+        <rect x="3" y="5" width="7" height="140" rx="4"/>
+        <rect x="12" y="10" width="3" height="130" rx="2"/>
+        <animate attributeName="fill" values="darkgray; steelblue; steelblue; darkgray" dur="2s" repeatCount="indefinite" begin="0s"/>
+        <animateTransform attributeName="transform" type="scale" values="1 1; .4 1; 1 1; 1 1" dur="4.5s" repeatCount="indefinite" begin="0s"/>
+      </g>
+    </g></g>
+
+    <g id="noForceShieldVisual"/>
+
+    <g id="forceShieldVisual">
+      <rect width="36" height="28" x="-3" y="-4" rx="12" fill="cyan">
+        <animate attributeName="fill" values="navy; cyan; navy" dur="0.7s" repeatCount="indefinite" begin="0s"/>
+      </rect>
+      <rect width="30" height="22" x="0" y="-1" rx="12" fill="navy"/>
+    </g>
+
+    <polygon id="finishFlag" fill="#eee" points="20,0 0 0 0,20 20,20 20,40 0,40 0,60 20,60 20,80 0,80 0,100 20,100 20,120 0,120 0,140 20,140  20,100 40,100 40,120 20,120 20,80 40,80 40,60 20,60 20,40 40,40 40,20, 20,20"/>
+
+  </defs>
+
+  <rect x="0" y="0" width="100%" height="100%" fill="black"/>
+
+  <g id="fires"/>
+
+  <g id="cave">
+    <g id="bcgDecors"/>
+    <g id="finishLine" display="none">
+        <use xlink:href="#finishFlag" x="-90" y="0"/>
+        <use xlink:href="#finishFlag" x="-50" y="0"/>
+    </g>
+    <g id="environment"/>
+    <g id="objects"/>
+    <g id="caveWalls"/>
+    <g id="crashes"/>
+  </g>
+
+  <rect x="0" y="89%" width="100%" height="11%" fill="black"/>
+  <g id="fighter" transform="matrix(1 0 0 1 0 0)" visibility="hidden"><use xlink:href="#noForceShieldVisual" id="forceShieldDom"/><use xlink:href="#normal"/></g>
+    
+  <text x="2" y="8" fill="white" text-rendering="optimizeLegibility" id="message" visibility="visible" font-size="9px"> </text>
+
+  <rect x="30" y="504" width="200" height="15" fill="#300" stroke-width="2" stroke="maroon"/>
+  <rect x="30" y="504" width="200" height="15" fill="url(#shieldGradient)" stroke="red" id="shieldBar"/>
+  <text x="35" y="516" fill="white" font-size="12px" font-weight="bold" id="shieldInfo">SHIELD</text>
+
+  <rect x="240" y="504" width="200" height="15" fill="#030" stroke-width="2" stroke="blue"/>
+  <rect x="240" y="504" width="200" height="15" fill="url(#fuelGradient)" stroke="red" id="fuelBar"/>
+  <text x="245" y="516" fill="white" font-size="12px" font-weight="bold" id="fuelInfo">FUEL</text>
+
+  <rect x="450" y="504" width="80" height="15" fill="gray" stroke-width="2" stroke="maroon"/>
+  <rect x="450" y="504" width="80" height="15" fill="gray" stroke="red" id="ammoBar"/>
+  <text x="455" y="516" fill="white" font-size="12px" font-weight="bold" id="ammoInfo">AMMO</text>
+
+  <rect x="540" y="504" width="80" height="15" fill="blue" stroke-width="2" stroke="brown"/>
+  <text x="545" y="516" fill="white" font-size="12px" font-weight="bold" id="levelInfo">LEVEL</text>
+
+  <rect x="630" y="504" width="150" height="15" fill="gold" stroke-width="2" stroke="navy"/>
+  <text x="635" y="516" fill="black" font-size="12px" font-weight="bold" id="scoreInfo">SCORE</text>
+
+  <g id="modalScreen" font-size="30px" stroke="steelblue" fill="white" stroke-width="1.5" font-weight="bold" text-anchor="middle">
+    <rect x="0" y="0" width="100%" height="100%" fill="black" fill-opacity="0.9"/>
+
+  <text x="45" y="27" font-size="20px" fill="cyan" text-anchor="start">Enemies to avoid or shoot down</text>
+  <text x="45" y="320" font-size="20px" fill="cyan" text-anchor="start">Bonuses to pick up</text>
+  <use xlink:href="#antiBonusMarker" x="20" y="17"/>
+  <use xlink:href="#bonusMarker" x="20" y="309"/>
+
+  <g fill="white" stroke="none" stroke-width="0" font-size="16px" text-anchor="start">
+
+  <g transform="translate(10 35)">
+    <g id="bomb"><g>
+      <polygon fill="#9ff" points="4,3 3,4   8,9 1,9   1,11 8,11   3,16 4,17   9,12 9,19   11,19 11,12   16,17 17,16   12,11 19,11   19,9 12,9   17,4 16,3   11,8 11,1   9,1 9,8">
+        <animateTransform attributeName="transform" type="rotate" values="0 10 10; -365 10 10" dur="10s" repeatCount="indefinite" begin="0s"/>
+      </polygon>
+      <circle cx="10" cy="10" fill="#88f" r="7">
+        <animate attributeName="r" values="8; 4; 8" dur="3s" repeatCount="indefinite" begin="0s"/>
+      </circle>
+    </g></g>
+    <text x="35" y="17">Bomb = Shield -20</text>
+  </g>
+
+  <g transform="translate(10 60)">
+    <g id="ufo"><g>
+      <ellipse cx="10" cy="8" rx="5" ry="3" fill="cyan">
+        <animate attributeName="fill" values="cyan; red; yellow" dur="0.5s" calcMode="discrete" repeatCount="indefinite" begin="0s"/>
+      </ellipse>
+      <polygon fill="yellow" points="1,12 1,15 8,10 10,20 12,10 19,15 19,12">
+        <animateTransform attributeName="transform" type="scale" values="1 1; 1 0.8; 1 1" dur="0.6s" repeatCount="indefinite" begin="0s"/>
+      </polygon>
+      <polygon fill="#333" points="4,15 0,18 2,20 8,15 12,15 18,20 20,18 16,15"/>
+      <polygon fill="white" points="-1,11 6,8 14,8 21,11"/>
+      <polygon fill="gray" points="-1,11 8,16 12,16 21,11"/>
+    </g></g>
+    <text x="35" y="17">Ufo = Shield -30</text>
+  </g>
+
+  <g transform="translate(10 85)">
+    <g id="death"><g fill="#ccc">
+      <polygon points="2,1 1,2 18,19 19,18 11,10 19,2 18,1 1,18 2,19 11,10"/>
+      <circle cx="3" cy="3" r="2"/>
+      <circle cx="17" cy="3" r="2"/>
+      <circle cx="3" cy="17" r="2"/>
+      <circle cx="17" cy="17" r="2"/>
+      <circle cx="10" cy="10" r="6" fill="white"/>
+      <rect x="7" y="12" width="6" height="6" rx="2"/>
+      <g fill="red">
+        <circle cx="7" cy="9" r="1.5"/>
+        <circle cx="13" cy="9" r="1.5"/>
+        <animate attributeName="fill" values="red; black; white; black; red" dur="2s" repeatCount="indefinite" begin="0s"/>
+      </g>
+    </g></g>
+    <text x="35" y="17">Death = Shield -40</text>
+  </g>
+
+  <g transform="translate(10 110)">
+    <g id="eye"><g>
+      <ellipse cx="10" cy="10" rx="10" ry="5" fill="red"/>
+      <ellipse cx="10" cy="10" rx="10" ry="3" fill="white">
+        <animate attributeName="ry" values="3; 10; 3" dur="2s" repeatCount="indefinite" begin="0s"/>
+      </ellipse>
+      <ellipse cx="10" cy="10" rx="3" ry="2" fill="darkgreen">
+        <animate attributeName="ry" values="2; 8; 2" dur="2s" repeatCount="indefinite" begin="0s"/>
+        <animate attributeName="cx" values="10; 8; 8; 12; 12; 10" dur="2s" repeatCount="indefinite" begin="1s"/>
+      </ellipse>
+     </g></g>
+    <text x="35" y="17">Evil Eye = Shield -20</text>
+  </g>
+
+  <g transform="translate(10 135)">
+    <g id="coil"><g>
+      <rect x="7" y="0" width="6" height="30" fill="brown"/>
+      <rect x="1" y="26" width="18" height="4" fill="brown" rx="2"/>
+      <g>
+        <rect x="3" y="1" width="14" height="1" fill="#0ff"/>
+        <rect x="0" y="3" width="20" height="2" fill="#0dd"/>
+        <rect x="3" y="6" width="14" height="1" fill="#0bb"/>
+        <rect x="0" y="8" width="20" height="2" fill="#099"/>
+        <rect x="3" y="11" width="14" height="1" fill="#0bb"/>
+        <rect x="0" y="13" width="20" height="2" fill="#0dd"/>
+        <rect x="3" y="16" width="14" height="1" fill="#0ff"/>
+        <animateTransform attributeName="transform" type="scale" values="1 1; 1 0.5; 1" dur="2.4s" repeatCount="indefinite" begin="0s"/>
+      </g>
+      <rect x="1" y="1" width="2" height="2" fill="yellow">
+        <animateTransform attributeName="transform" type="translate" values="2,1; 10,4; 17,9; 2,7; 18,1; 7,7; 2,9; 12,3" dur="1s" calcMode="discrete" repeatCount="indefinite" begin="0s"/>
+      </rect>
+    </g></g>
+    <text x="35" y="17">Coil = Shield -30</text>
+  </g>
+
+  <g transform="translate(10 170)">
+    <g><g>
+      <rect x="0" y="0" width="20" height="30" fill="darkgray" rx="3"/>
+      <g fill="steelblue">
+        <rect x="3" y="0" width="7" height="25" rx="4"/>
+        <rect x="12" y="0" width="3" height="20" rx="2"/>
+        <animate attributeName="fill" values="darkgray; steelblue; steelblue; darkgray" dur="2s" repeatCount="indefinite" begin="0s"/>
+        <animateTransform attributeName="transform" type="scale" values="1 1; .4 1; 1 1; 1 1" dur="4.5s" repeatCount="indefinite" begin="0s"/>
+      </g>
+    </g></g>
+    <text x="35" y="16">Bolt = Shield -30</text>
+    <text x="35" y="28" font-size="11">(undestroyable)</text>
+  </g>
+
+  <g transform="translate(10 217)">
+    <g id="icicle"><g stroke-width="3">
+      <polygon fill="#77f" points="2,-10 0,0 3,20 7,4 10,15 14,3 17,19 20,0 18,-10"/>
+      <polygon fill="#aaf" points="1,1 3,18 3,3 17,2 17,16 19,-4"/>
+      <g>
+        <polygon fill="#fff" points="5,10 8,11 9,14 10,11 13,10 10,9 9,6 8,9">
+          <animateTransform attributeName="transform" type="rotate" values="0 10 10; 365 10 10" dur="4s" repeatCount="indefinite" begin="0s"/>
+        </polygon>
+        <animateTransform attributeName="transform" type="scale" values="0.7; 1.2; 0.7 " dur="2s" repeatCount="indefinite" begin="0s"/>
+      </g>
+    </g></g>
+    <text x="35" y="13">Icicle = Shield -20</text>
+  </g>
+
+  <g transform="translate(21 225)">
+    <g id="boss" transform="translate(20 20) scale(-1 1)"><g>
+      
+      <polygon fill="#444" points="20,7 26,20 20,35 24,37 30,20 24,7"/>
+      
+      <polygon fill="#444" points="0,12 10,12 2,20 0,19"/>      
+      <rect x="0" y="0" width="30" height="10" fill="#555" transform="rotate(-15) translate(-3 6)" rx="3"/>
+      <circle cx="22" cy="6" r="3" fill="#222"/>
+      <rect x="3" y="9" width="5" height="4" fill="white">
+        <animate attributeName="height" values="4; 1; 4" dur="2s" repeatCount="indefinite" begin="0s"/>
+      </rect>
+
+      <polygon fill="#666" points="25,14 40,8 40,20"/>
+      <polygon fill="#888" points="30,24 40,22 34,34"/>
+      <rect x="0" y="0" width="14" height="14" fill="#999" transform="rotate(-15) translate(9 19)" rx="3"/>
+      <circle cx="25" cy="26" r="4" fill="maroon"/>
+
+      <g>
+        <rect x="3" y="21" width="18" height="7" fill="#777" rx="2"/>
+        <polygon fill="#777" points="3,26 20,26 3,30"/>
+        <rect x="0" y="23" width="5" height="2" fill="red"/>
+        <rect x="0" y="27" width="5" height="2" fill="red"/>
+        <animateTransform attributeName="transform" type="translate" values="0 0; 3 3; 3 -3; 0 0" dur="2s" repeatCount="indefinite" begin="0s"/>
+      </g>
+      <polygon fill="#777" points="0,40 2,36 4,34 20,32 40,38 40,40 35,38 30,40 25,38 20,40 15,38 10,40 5,38"/>
+
+    </g></g>
+    <text x="25" y="40">Boss = Shield -80</text>
+    <text x="25" y="53" font-size="11">(has shield, shoot more times)</text>
+  </g>
+
+
+
+
+
+  <g transform="translate(10 330)">
+    <g id="shield"><g fill="brown">
+      <rect x="0" y="0" width="20" height="13" rx="2"/>
+      <circle cx="10" cy="10" r="10"/>
+      <g fill="green">
+        <rect x="3" y="3" width="14" height="7" rx="2"/>
+        <circle cx="10" cy="10" r="7"/>
+        <animate attributeName="fill" values="green; lightblue; yellow; green" dur="3s" repeatCount="indefinite" begin="0s"/>
+      </g>
+      <ellipse cx="10" cy="10" rx="6" ry="3" fill="green"/>
+      <ellipse cx="10" cy="12" rx="3" ry="5" fill="orange"/>
+    </g></g>
+    <text x="35" y="17">Shield = Shield +20</text>
+  </g>
+
+  <g transform="translate(10 355)">
+    <g id="fuel"><g fill="#0aa">
+      <polygon points="2,12 10,0 18,12"/>
+      <ellipse cx="10" cy="13" rx="10" ry="7">
+        <animate attributeName="rx" values="9.5; 7.5; 9.5" dur="1s" repeatCount="indefinite" begin="0s"/>
+      </ellipse>
+      <ellipse cx="13" cy="11" rx="3" ry="6" fill="#099"/>
+      <ellipse cx="7" cy="13" rx="2" ry="4" fill="white"/>
+    </g></g>
+    <text x="35" y="17">Petrol = Fuel +80</text>
+  </g>
+
+  <g transform="translate(10 380)">
+    <g id="bonus"><g>
+      <rect x="0" y="0" width="20" height="20" fill="#055" rx="3"/>
+      <rect x="3" y="3" width="14" height="14" fill="blue" rx="3"/>
+      <g>
+        <rect x="8" y="4" width="4" height="12" fill="white" rx="2"/>
+        <rect x="4" y="8" width="12" height="4" fill="white" rx="2"/>
+        <animateTransform attributeName="transform" type="rotate" values="0 10 10; 365 10 10" dur="3s" repeatCount="indefinite" begin="0s"/>
+      </g>
+    </g></g>
+    <text x="35" y="17">Bonus = Points +50</text>
+  </g>
+
+  <g transform="translate(10 405)">
+    <g id="ammo"><g>
+      <rect x="0" y="0" width="20" height="20" fill="gold" rx="2"/>
+      <rect x="0" y="4" width="20" height="9" fill="orange"/>
+      <g fill="black">
+        <ellipse cx="4" cy="7" rx="2.5" ry="6" fill="black"/>
+        <ellipse cx="10" cy="8" rx="2.5" ry="6" fill="black"/>
+        <ellipse cx="16" cy="9" rx="2.5" ry="6" fill="black"/>
+        <rect x="1" y="12" width="5" height="5" fill="maroon"/>
+        <rect x="7" y="13" width="5" height="5" fill="maroon"/>
+        <rect x="13.5" y="14" width="5" height="5" fill="maroon"/>
+        <animateTransform attributeName="transform" type="scale" values="1 1; .1 1; 1 1; 1 1" dur="3s" repeatCount="indefinite" begin="0s"/>
+      </g>
+    </g></g>
+    <text x="35" y="17">Magazine = Ammo +6</text>
+  </g>
+
+  <g transform="translate(10 430)">
+    <g id="cistern"><g>
+      <rect x="0" y="0" width="20" height="10" fill="#0aa" rx="2"/>
+      <rect x="10" y="10" width="2" height="18" fill="#066" rx="1">
+        <animate attributeName="height" values="18; 6; 18" dur="2s" repeatCount="indefinite" begin="0.5s"/>
+      </rect>
+      <rect x="1" y="1" width="18" height="2" fill="black" rx="1">
+        <animate attributeName="height" values="1; 4; 1" dur="1.7s" repeatCount="indefinite" begin="0.3s"/>
+      </rect>
+      <rect x="1" y="6" width="18" height="3" fill="#077" rx="1"/>
+      <polygon fill="yellow" points="0,30 0,20 5,11, 15,11 20,20 20,30 18,30 18,20 15,16 5,16 2,20 2,30"/>
+      <rect x="0" y="20" width="20" height="1" fill="orange"/>
+    </g></g>
+    <text x="35" y="17">Cistern = Fuel +60</text>
+  </g>
+
+  <g transform="translate(10 470)">
+    <g id="hourglass"><g><rect fill="steelblue" x="10" y="-5" height="15" width="1"/><g>
+
+    <rect fill="maroon" x="3" y="-1" height="22" width="2"/>
+    <rect fill="maroon" x="15" y="-1" height="22" width="2"/>
+    <g transform="translate(0,3)">
+      <use xlink:href="#halfHourglassBg"/>
+      <use xlink:href="#halfHourglassSand">
+        <animateTransform attributeName="transform" type="translate" values="0,0; 10,6; 10,6" dur="4s" begin="0s" repeatCount="indefinite" additive="sum"/>
+        <animateTransform attributeName="transform" type="scale" values="1; 0; 0" dur="4s" begin="0s" repeatCount="indefinite" additive="sum"/>
+      </use>
+    </g>
+
+    <rect fill="brown" height="3" width="20"/>
+    <rect fill="brown" y="17" height="3" width="20"/>
+    <g transform="translate(20,17), rotate(180)">
+      <use xlink:href="#halfHourglassBg"/>
+      <use xlink:href="#halfHourglassSand">
+        <animateTransform attributeName="transform" type="scale" values="1 0; 1 1; 1 1" dur="4s" begin="0s" repeatCount="indefinite"/>
+    </use>
+    </g>
+    <animateTransform attributeName="transform" type="rotate" values="0 10 10; 0 10 10; 180 10 10" begin="0s" dur="4s" repeatCount="indefinite"/>
+    </g></g></g>
+    <text x="35" y="8">Hourglass = Points +20</text>
+    <text x="35" y="20" font-size="11">(affects time, lasts 6 seconds)</text>
+  </g>
+
+  <g transform="translate(10 505)">
+    <g id="forceShield"><g>
+      <rect width="20" height="20" x="0" y="0" rx="8" fill="cyan">
+        <animate attributeName="fill" values="navy; cyan; navy; cyan; navy" dur="1.2s" repeatCount="indefinite" begin="0s"/>
+      </rect>
+      <rect width="14" height="14" x="3" y="3" rx="6" fill="black"/>
+      <g>
+        <circle cx="10" cy="8" r="3" fill="white"/>
+        <circle cx="12" cy="12" r="3" fill="magenta"/>
+        <circle cx="8" cy="12" r="3" fill="darkgreen"/>
+        <animateTransform attributeName="transform" type="rotate" values="0 10 10; -360 10 10" begin="0.5s" dur="3s" repeatCount="indefinite"/>
+      </g>
+
+    </g></g>
+    <text x="35" y="9">Force Shield = Shield +10000</text>
+    <text x="35" y="20" font-size="11">(temporary effect, lasts 4 seconds)</text>
+  </g>
+
+  </g>
+
+  <g fill="white" stroke="none" stroke-width="0" text-anchor="end">
+    <text x="99%" y="6%" stroke="maroon" stroke-width="2">Game goals</text>
+    <text x="99%" y="10%" font-size="14px">fly through cavern and avoid the walls</text>
+    <text x="99%" y="13%" font-size="14px">pick up all positive (+) bonuses, esp. fuel</text>
+    <text x="99%" y="16%" font-size="14px">avoid or shoot down enemies, pick up bonuses</text>
+  
+    <text x="99%" y="23%" stroke="maroon" stroke-width="2">Game controls</text>
+    <text x="99%" y="27%" font-size="14px">movement: arrow keys</text>
+    <text x="99%" y="30%" font-size="14px">fire: Z or SPACE , bomb: B or X</text>
+    <text x="99%" y="33%" font-size="14px">start,quit level: ENTER, ESC</text>
+  
+    <text x="99%" y="47%" stroke="maroon" stroke-width="2">Hall of fame</text>
+    <text x="99%" y="50%" fill="#9ee" font-size="13px" id="hallOfFame" text-anchor="start"/>
+
+    <text x="99%" y="94%" fill="orange" font-size="15px">Performance hint: Keep window size not necessarily larger than game screen!</text>
+  </g>
+
+  <text x="50%" y="99%" fill="gold" font-size="12px" stroke="none" stroke-width="0" font-weight="normal">Most of the sounds downloaded from http://www.freesound.org/</text>
+
+    <use xlink:href="#normal" x="49%" y="20%"/>
+    <text x="50%" y="31%" fill="white" id="modalScreenText">SVG CAVERN FIGHTER</text>
+    <text x="50%" y="40%" fill="gold" id="modalScreenSubText">*** by Marek Raida ***</text>
+    <a id="modalScreenLink" xlink:href="javascript:Game.levelStart(true)"><text x="50%" y="54%" fill="white" font-size="40px" id="modalScreenLinkText">START GAME
+    <animate attributeName="fill" values="white; yellow; red; green; navy; orange; white" dur="3s" repeatCount="indefinite" begin="0s"/></text></a>
+    <text x="50%" y="65%" stroke="navy" stroke-width="1" fill="gray" font-size="18px" font-weight="bold">Game options</text>
+    <g stroke="none" stroke-width="0">
+      <text x="50%" y="69%" fill="lightgreen" cursor="pointer" font-size="12px" font-weight="bold" onclick="javascript:AudioMan.switcher(this)">Sound ON/OFF</text>
+      <text x="50%" y="72%" fill="lightgreen" cursor="pointer" font-size="12px" font-weight="bold" onclick="javascript:Game.markerSwitcher(this)">Object's Mark ON/OFF</text>
+      <text x="50%" y="75%" fill="lightgreen" cursor="pointer" font-size="12px" font-weight="bold" onclick="javascript:Game.decorationsSwitcher(this)">Decorations ON/OFF</text>
+      <text x="50%" y="78%" fill="red" cursor="pointer" font-size="12px" font-weight="bold" onclick="javascript:Game.debugSwitcher(this)">Debugging ON/OFF</text>
+      <a xlink:href="http://svg.kvalitne.cz/"><text x="50%" y="87%" fill="magenta" cursor="pointer" font-size="12px" font-weight="bold">marek.raida@gmail.com</text></a>
+    </g>
+
+  </g>
+  <script type="text/javascript" xlink:href="cavern.js"/>
+
+  <!--foreignObject x="0" y="0" width="0" height="0">
+    <body xmlns="http://www.w3.org/1999/xhtml">
+      <audio src="sounds/bon_shield_min.wav" autoplay="true"/>
+    </body>
+  </foreignObject-->
+
+</svg>

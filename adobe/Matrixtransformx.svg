@@ -1,0 +1,179 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="600" height="600" onload="main(evt)">
+<title>Matrix transform.svg</title> 
+<!--
+NOTICE:  [1999-2001] Adobe Systems Incorporated.  Adobe hereby grants you the rights to reproduce, modify and distribute this file and its contents, not including any fonts, audio files or raster images included or embedded in or linked to this file, (the "Software"), and to grant such rights to other parties subject to the following:  This notice shall be included in any copy of the Software or any portion thereof.  THE SOFTWARE IS PROVIDED TO YOU AS-IS, WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT.  IN NO EVENT SHALL ADOBE BE LIABLE TO YOU OR ANY OTHER PARTY FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE.
+Modified by  Marek Raida
+-->
+<desc>tests composition of transformations</desc>
+
+<script type="text/javascript" xlink:href="Matrix.js"/>
+<script type="text/javascript"><![CDATA[
+
+var doc;
+var object;
+var currTransformText;
+var timerID;
+
+var totalTransform = "";
+var currTransform;
+
+var uis = new Array();
+
+function getUIObj( evt )
+{
+	var id = evt.target.parentNode.getAttribute( "id" ) + "";
+	return uis[id.substr(2)-0];
+}
+
+function updateTransform(uiObj)
+{
+	currTransform = uiObj.transform.replace( /\*/, Math.round(uiObj.value*10000)/10000.0 + "" );
+	var t = totalTransform + currTransform;
+	object.setAttribute( "transform", t );
+	currTransformText.data = t;
+}
+
+function incrementTransform( index, inc )
+{
+	var uiObj = uis[index];
+	if( inc )
+	{
+		if( uiObj.mul )
+			uiObj.value *= 1+1/64.0;
+		else
+			uiObj.value += 1;
+	}
+	else
+	{
+		if( uiObj.mul )
+			uiObj.value /= 1 + 1/64.0;
+		else
+			uiObj.value -= 1;
+	}
+	updateTransform( uiObj );
+}
+
+function resetTransform()
+{
+	totalTransform = " ";
+	object.setAttribute( "transform", "translate(0 0)" );
+	currTransformText.data = " ";
+}
+
+function makeMatrix()
+{
+	var m = new Matrix();
+	m.initFromString( totalTransform );
+	totalTransform = m.toReadableString();
+	object.setAttribute( "transform", totalTransform );
+	currTransformText.data = "" + totalTransform;
+}
+
+function activate(evt)
+{
+	evt.target.setAttribute( 'style', 'opacity:1' );
+	currTransformText.data = "" + getUIObj(evt).transform;
+}
+
+function deactivate(evt)
+{
+	evt.target.setAttribute( 'style', 'opacity:0.4' );
+	currTransformText.data = "" + totalTransform;
+	window.clearInterval(timerID);
+}
+
+function onpress(evt)
+{
+	var uiObj = getUIObj(evt);
+	uiObj.value = uiObj.mul ? 1 : 0;
+	updateTransform( uiObj );
+	var xlink = "" + evt.target.getAttribute( "xlink:href" );
+	timerID = window.setInterval( "window.incrementTransform(" + uiObj.index + "," + (xlink == "#plus") + ")", 50 ); 
+}
+
+function onrelease(evt)
+{
+	totalTransform = totalTransform + currTransform;
+	var uiObj = getUIObj(evt);
+	window.clearInterval(timerID);
+}
+
+function cloneUI( ui, transform, mul )
+{
+	var val = ( mul ? 1.2 : 13 );
+	var uiObj = new Object();
+	uiObj.transform = transform;
+	uiObj.mul = mul;
+	uiObj.element = ui.cloneNode(true);
+	uiObj.element.setAttribute( "id", "UI" + uis.length );
+	uiObj.origRect = uiObj.element.firstChild;
+	uiObj.newRect = uiObj.origRect.nextSibling;
+	uiObj.minus = uiObj.newRect.nextSibling;
+	uiObj.plus = uiObj.minus.nextSibling;
+	uiObj.element.setAttribute( "transform", "translate(" + (100+uis.length*70) + " 500)" );
+	uiObj.newRect.setAttribute( "transform", transform.replace( /\*/, "" + val ) );
+	uiObj.minus.addEventListener( "mouseover", activate, false );
+	uiObj.minus.addEventListener( "mouseout", deactivate, false );
+	uiObj.minus.addEventListener( "mousedown", onpress, false );
+	uiObj.minus.addEventListener( "mouseup", onrelease, false );
+	uiObj.plus.addEventListener( "mouseover", activate, false );
+	uiObj.plus.addEventListener( "mouseout", deactivate, false );
+	uiObj.plus.addEventListener( "mousedown", onpress, false );
+	uiObj.plus.addEventListener( "mouseup", onrelease, false );
+	uiObj.index = uis.length;
+	uis[uis.length] = uiObj;
+	doc.firstChild.appendChild( uiObj.element );
+}
+
+function main(evt)
+{
+	doc = document;
+	currTransformText = doc.getElementById( "currTransform" ).firstChild;
+	object = doc.getElementById( "object" );
+	var ui = doc.getElementById( "UI" );
+	cloneUI( ui, "translate(* 0)", false );
+	cloneUI( ui, "translate(0 *)", false );
+	cloneUI( ui, "rotate(*)", false );
+	cloneUI( ui, "scale(* 1)", true );
+	cloneUI( ui, "scale(1 *)", true );
+	cloneUI( ui, "skewX(*)", false );
+	cloneUI( ui, "skewY(*)", false );
+	window.incrementTransform = incrementTransform;
+}
+
+]]></script>
+<defs>
+	<g id="minus" style="fill-opacity:1;stroke:none">
+		<circle style="fill:red" r="12"/>
+		<path style="fill:yellow" d="M-8 3H8V-3H-8z"/>
+	</g>
+	<g id="plus" style="fill-opacity:1;stroke:none">
+		<circle style="fill:green" r="12"/>
+		<path style="fill:yellow" d="M-8 2H-2V8H2V2H8V-2H3V-8H-2V-2H-8z"/>
+	</g>
+	<g id="UI" style="fill:blue;fill-opacity:0.1;stroke:black"><rect width="40" height="40" style="stroke-dasharray:4,4"/><rect transform="rotate(15)" width="40" height="40"/><use x="5" y="70" style="opacity:0.4" xlink:href="#minus"/><use x="35" y="70" style="opacity:0.4" xlink:href="#plus"/></g>
+
+	<g id="TestObject">
+		<text y="90" x="5" style="font-size:100px">A</text>
+		<rect width="75" height="100" style="stroke:black;fill:blue;fill-opacity:0.1"/>
+	</g>
+</defs>
+
+<text style="fill:#088;font-family:Serif;font-size:35px;text-anchor:middle" x="300" y="45">SVG Transform Tester</text>
+
+<g transform="translate(260 200)">
+	<use style="fill:none;stroke:red;stroke-dasharray:4,4" xlink:href="#TestObject"/>
+	<use id="object" style="fill:red" xlink:href="#TestObject"/>
+</g>
+
+<text x="30" y="480" style="font-size:16px" id="currTransform"> </text>
+
+<path style="fill:none;stroke:red;stroke-width:5" transform="translate(50 515)" d="M-11 -11L11 11M-11 11L11 -11"/>
+<circle cx="50" cy="515" r="20" style="fill:red;fill-opacity:0.1;stroke:red;stroke-width:4" onclick="resetTransform()"/>
+
+<path style="fill:none;stroke:blue;stroke-width:4;stroke-miterlimit:3" transform="translate(50 565)" d="M-7 10L-7 -10L0 3L7 -10L7 10"/>
+<circle cx="50" cy="565" r="20" style="fill:blue;fill-opacity:0.1;stroke:blue;stroke-width:4" onclick="makeMatrix()"/>
+
+<image xlink:href="http://www.google-analytics.com/__utm.gif?utmwv=4.7.1&amp;utmn=21830374&amp;utmhn=svg.kvalitne.cz&amp;utmcs=UTF-8&amp;utmsr=1920x1080&amp;utmsc=24-bit&amp;utmul=en-us&amp;utmje=1&amp;utmfl=10.0%20r45&amp;utmdt=SVG%C2%A0%E2%80%94%C2%A0It%27s%20in%20your%20hands...&amp;utmhid=1377849700&amp;utmr=-&amp;utmp=%2Findex2.htm&amp;utmac=UA-11950721-1&amp;utmcc=__utma%3D251371972.1884550355.1260220320.1272562824.1272576758.56%3B%2B__utmz%3D251371972.1263752798.41.3.utmcsr%3Dgoogle%7Cutmccn%3D(organic)%7Cutmcmd%3Dorganic%7Cutmctr%3Dsvg%2520smil%2520demo%3B" width="1" height="1"/>
+
+</svg>

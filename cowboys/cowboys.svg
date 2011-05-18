@@ -1,0 +1,1084 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
+    "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd" [
+    <!ATTLIST svg
+              xmlns:a3 CDATA #IMPLIED
+              a3:scriptImplementation CDATA #IMPLIED>
+    <!ATTLIST script
+              a3:scriptImplementation CDATA #IMPLIED>
+
+]>
+
+<svg xmlns="http://www.w3.org/2000/svg" 
+     xmlns:xlink="http://www.w3.org/1999/xlink" 
+     xmlns:a3="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" 
+     xmlns:a="http://www.adobe.com/svg10-extensions" 
+     a3:scriptImplementation="Adobe" 
+     width="780" height="480" 
+     onmousedown="DoMouseDown(evt, null)" 
+     onmouseup="DoMouseUp(evt)" 
+     onmousemove="DoMouseMove(evt)" 
+     onkeydown="pressKey(evt)"
+     onload="ini(evt)">
+        <title>Cowboys Game 1.02</title>
+
+        <metadata><![CDATA[
+            <rdf:RDF xmlns="http://web.resource.org/cc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+                <Work rdf:about="http://www.guide.cz/svg/cowboys.svgz">
+                    <dc:title>SVG Cowboys Game 1.0</dc:title>
+                    <dc:description>Feel free to play it and use it in any way...</dc:description>
+                    <dc:creator>
+                        <Agent>
+                            <dc:title>Marek Raida</dc:title>
+                        </Agent>
+                    </dc:creator>
+                    <dc:rights>
+                        <Agent>
+                            <dc:title>SVG Cowboys</dc:title>
+                        </Agent>
+                    </dc:rights>
+                    <dc:date>2004/02/11</dc:date>
+                    <dc:format>image/svg+xml</dc:format>
+                    <dc:type rdf:resource="http://www.guide.cz/svg/cowboys/" />
+                </Work>
+                <License rdf:about="http://web.resource.org/cc/PublicDomain">
+                    <permits rdf:resource="http://web.resource.org/cc/Reproduction" />
+                    <permits rdf:resource="http://web.resource.org/cc/Distribution" />
+                    <permits rdf:resource="http://web.resource.org/cc/DerivativeWorks" />
+                </License>
+            </rdf:RDF>
+        ]]></metadata>
+
+    <script type="text/ecmascript" a3:scriptImplementation="Adobe" xlink:href="scripts.js"/>
+    <script type="text/ecmascript" a3:scriptImplementation="Adobe" xlink:href="setup.js"/>
+
+/* ************************************************************************* */
+/* *********************  TEMPLATES SECTION START  ************************* */
+/* ************************************************************************* */
+
+<defs>
+
+    <image id="temp_b1" xlink:href="pics/lump3.svgz" width="65" height="100"/>
+    <use id="template_b1" xlink:href="#temp_b1"/>
+    <mask id="mask_b1" maskUnits="userSpaceOnUse">
+        <polygon points="219,236 224,258 220,269 234,271 239,291 233,311 248,313 255,335 250,360 600,362 600,239" fill="white" stroke="none"/>
+    </mask>
+
+
+    <image id="temp_b2" xlink:href="pics/lump2.svgz" width="25" height="100"/>
+    <use id="template_b2" xlink:href="#temp_b2"/>
+    <image id="temp_b2i" xlink:href="pics/lady01.svgz" width="45" height="45" transform="scale(-1 1)"/>
+    <use id="template_b2i" xlink:href="#temp_b2i"/>
+    <mask id="mask_b2" maskUnits="userSpaceOnUse">
+        <polygon points="206,137 329,137 330,171 223,172 214,165 200,164" fill="white" stroke="none"/>
+    </mask>
+
+
+    <image id="temp_b3" xlink:href="pics/lump5.svgz" width="150" height="290"/>
+    <use id="template_b3" xlink:href="#temp_b3"/>
+    <mask id="mask_b3" maskUnits="userSpaceOnUse">
+        <rect x="0" y="180" width="100%" height="300" stroke="none" fill="white"/>
+    </mask>
+
+
+    <image id="temp_b4" xlink:href="pics/lump1.svgz" width="40" height="100"/>
+    <use id="template_b4" xlink:href="#temp_b4"/>
+    <image id="temp_b4i" xlink:href="pics/man01.svgz" width="50" height="100"/>
+    <use id="template_b4i" xlink:href="#temp_b4i"/>
+    <mask id="mask_b4" maskUnits="userSpaceOnUse">
+        <polygon points="622,41 703,45 707,86 680,87 622,84" fill="white" stroke="none"/>
+    </mask>
+
+
+    <image id="temp_b5" xlink:href="pics/lump4.svgz" width="33" height="120"/>
+    <use id="template_b5" xlink:href="#temp_b5"/>
+    <mask id="mask_b5" maskUnits="userSpaceOnUse">
+        <polygon points="732,170 756,163 761,218 736,222" fill="white" stroke="none"/>
+    </mask>
+
+
+    <image id="temp_b6" xlink:href="pics/lump6.svgz" width="25" height="100"/>
+    <use id="template_b6" xlink:href="#temp_b6"/>
+    <mask id="mask_b6" maskUnits="userSpaceOnUse">
+        <polygon points="62,103 81,104 80,133 60,132" fill="white" stroke="none"/>
+    </mask>
+
+
+    <image id="temp_b7" xlink:href="pics/lump1.svgz" width="30" height="100"/>
+    <use id="template_b7" xlink:href="#temp_b7"/>
+    <image id="temp_b7i" xlink:href="pics/man02.svgz" width="31" height="45"/>
+    <use id="template_b7i" xlink:href="#temp_b7i"/>
+
+    <mask id="mask_b7" maskUnits="userSpaceOnUse">
+        <polygon points="627,205 656,199 656,229 627,232" fill="white" stroke="none"/>
+    </mask>
+
+
+    <image id="temp_b8" xlink:href="pics/lump6.svgz" width="150" height="300" transform="scale(-1 1) translate(-75 0)"/>
+    <use id="template_b8" xlink:href="#temp_b8"/>
+    <image id="temp_b8i" xlink:href="pics/lady01.svgz" width="300" height="400"/>
+    <use id="template_b8i" xlink:href="#temp_b8i"/>
+    <mask id="mask_b8" maskUnits="userSpaceOnUse"/>
+
+
+    <image id="temp_b9" xlink:href="pics/lump2.svgz" width="47" height="120"/>
+    <use id="template_b9" xlink:href="#temp_b9"/>
+    <mask id="mask_b9" maskUnits="userSpaceOnUse">
+        <image x="182" y="80" width="520" height="420" xlink:href="pics/vuzmask.svgz"/>
+    </mask>
+
+
+    <image id="temp_b11" xlink:href="pics/lump1.svgz" width="40" height="120"/>
+    <use id="template_b11" xlink:href="#temp_b11"/>
+    <image id="temp_b11i" xlink:href="pics/man02.svgz" width="55" height="55" transform="scale(-1 1) rotate(12)"/>
+    <use id="template_b11i" xlink:href="#temp_b11i"/>
+    <mask id="mask_b11" maskUnits="userSpaceOnUse">
+        <polygon points="725,31 746,20 755,71 730,89" fill="white" stroke="none"/>
+    </mask>
+
+
+    <g id="firePrototype1">
+        <circle cx="-5" cy="28" r="5" fill="yellow" stroke="none" opacity="0.75"/>
+        <circle cx="37" cy="28" r="5" fill="yellow" stroke="none" opacity="0.75"/>
+    </g>
+    <use id="template_fire1" xlink:href="#firePrototype1"/>
+
+
+    <g id="firePrototype2">
+        <circle cx="-1" cy="12" r="4" fill="yellow" stroke="none" opacity="0.75"/>
+    </g>
+    <use id="template_fire2" xlink:href="#firePrototype2"/>
+
+
+    <g id="firePrototype3">
+        <circle cx="0"  cy="50" r="13" fill="yellow" stroke="none" opacity="0.75"/>
+        <circle cx="104" cy="50" r="13" fill="yellow" stroke="none" opacity="0.75"/>
+    </g>
+    <use id="template_fire3" xlink:href="#firePrototype3"/>
+
+
+    <g id="firePrototype4">
+        <circle cx="0" cy="50" r="13" fill="yellow" stroke="none" opacity="0.75"/>
+    </g>
+    <use id="template_fire4" xlink:href="#firePrototype4"/>
+
+
+    <g id="gunLayer" stroke="#00ff00"> 
+        <line x1="0" y1="25" x2="50" y2="25" shape-rendering="optimizeSpeed"/> 
+        <line x1="25" y1="0" x2="25" y2="50" shape-rendering="optimizeSpeed"/>
+        <circle cx="25" cy="25" r="20" fill="none" stroke-width="1">
+            <animateColor id="gunShot" begin="gun_fire.begin" attributeName="fill" values="none;green;none" dur="0.2s" repeatCount="1" restart="whenNotActive"/>
+            <set begin="gunShot.begin" attributeName="fill-opacity" to="0.3" />
+            <set begin="gunShot.end" attributeName="fill-opacity" to="1" />
+        </circle>
+        <circle cx="25" cy="25" r="10" fill="none" stroke-width="1"/> 
+        <circle cx="25" cy="25" r="3"  fill="black" stroke-width="1"/> 
+        <animateColor id="reload" begin="indefinite" attributeName="stroke" values="#ffffff;yellow;#ffffff" dur="0.75s" repeatCount="1"/> 
+        <animateColor id="emptyGun" begin="indefinite" attributeName="stroke" values="#ffffff;#0000ff;#ffffff" dur="0.5s" repeatCount="1"/>
+    </g>
+
+    <g id="bullet">
+        <circle cx="0" cy="0" r="12" fill="#EBC952" stroke="black" stroke-width="2px" />
+        <circle cx="0" cy="0" r="7" fill="#EBC952" stroke="#7C5C25" stroke-width="1px" />
+        <circle cx="0" cy="0" r="2" fill="#EBC952" stroke="#7C5C25" stroke-width="2px" />
+    </g>
+
+    <g id="magazine">
+        <path fill="#444444" stroke="gray" stroke-width="3px" d="M88 32C76.1758 28.2139 81.5306 21.777 77.2924 14.0039C73.0337 6.19298 62.1508 1.88655 54 0C44.5347 10.5527 39.5921 -2.01629 29 1.69907C24.0017 3.45231 15.1778 7.26192 13.8125 13.0147C12.8622 17.0188 15.422 19.937 12.848 23.9066C10.1218 28.111 3.89973 28.3766 1.70293 32.314C-1.0115 37.1793 -1.79054 51.9824 2.73843 56.0162C6.59451 59.4507 11.6856 59.3626 13.8673 65.0147C15.1653 68.3774 12.7499 71.7225 14.1319 74.9606C16.6899 80.9539 29.4797 87.6612 35.9606 86.5926C40.2552 85.8845 42.4958 81.0004 47.0008 80.6435C52.1226 80.2378 54.763 86.2412 60.0147 85.1535C66.258 83.8605 75.2369 77.8587 77.9329 71.9992C79.252 69.1322 77.9601 65.9468 79.1289 63.0147C80.8282 58.7516 85.4313 57.4028 87.4861 53.6211C90.8586 47.4144 88.5201 38.5907 88 32z"/>
+        <circle cx="45" cy="43" r="4" fill="black" stroke="#AAAAAA" stroke-width="1.5px" />
+    </g>
+
+    <g id="environment">
+        <image xlink:href="pics/street3.svgz" x="0" y="0" width="780" height="310"/>
+    </g>
+
+    <linearGradient id="sky_grad" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" stop-color="#ffff00"/>
+        <stop offset="100%" stop-color="#ff0000"/>
+    </linearGradient>
+
+    <linearGradient id="madlo_hor" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" stop-color="#541F16"/>
+        <stop offset="35%" stop-color="#BD5D3B"/>
+        <stop offset="100%" stop-color="#541F16"/>
+    </linearGradient>
+
+    <linearGradient id="madlo_ver" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#541F16"/>
+        <stop offset="60%" stop-color="#BD5D3B"/>
+        <stop offset="100%" stop-color="#531F36"/>
+    </linearGradient>
+
+    <linearGradient id="street_grad" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" stop-color="beige"/>
+        <stop offset="100%" stop-color="gold"/>
+    </linearGradient>
+
+    <linearGradient id="health_grad" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="darkgreen"/>
+        <stop offset="60%" stop-color="green"/>
+        <stop offset="100%" stop-color="yellow"/>
+    </linearGradient>
+
+    <polygon id="q_FILLTOMADLO" points="38,13 58,143 38,290 39,468 62,584 47,643 188,644 185,636 170,622 171,599 177,560 189,500 200,440 203,388 201,337 195,276 188,223 180,183 171,132 172,102 187,63 200,40 184,37 199,13" fill="#9c4931" stroke="none"/>
+
+    <!-- I was forced to include madlo directly, because of some strange behavior :-( -->
+    <pattern id="madlo_whole" patternUnits="userSpaceOnUse" x="0" y="0" width="50" height="90">
+        <g transform="translate(0 0) scale(0.14)">
+            <use xlink:href="#q_FILLTOMADLO"/>
+            <g transform="translate(0,648) scale(0.617143,-0.617143)" fill="#000000" stroke="none">
+                <path d="M30 1032 c0 -10 5 -23 12 -30 9 -9 9 -12 0 -12 -7 0 -12 -7 -12 -15
+                0 -8 4 -15 9 -15 5 0 16 -19 26 -42 18 -45 15 -89 -11 -206 -7 -34 -18 -122
+                -24 -194 -9 -123 -8 -141 14 -258 38 -194 41 -226 22 -233 -9 -4 -16 -12 -16
+                -18 0 -12 75 -7 87 5 3 3 -7 67 -23 143 -36 179 -39 378 -5 516 11 48 21 118
+                21 156 0 69 -15 131 -31 131 -5 0 -9 5 -9 10 0 6 45 10 114 10 l113 0 -24 -47
+                c-27 -53 -26 -94 3 -221 7 -34 18 -122 24 -194 9 -123 8 -141 -15 -259 -37
+                -191 -41 -239 -21 -239 9 0 16 -5 16 -12 0 -6 3 -8 7 -4 5 4 0 14 -11 21 -21
+                16 -20 29 20 235 22 116 23 135 14 258 -6 72 -17 160 -24 194 -26 117 -29 161
+                -11 206 10 23 21 42 26 42 5 0 9 7 9 15 0 8 -5 15 -12 15 -9 0 -9 3 0 12 7 7
+                12 20 12 30 0 17 -12 18 -150 18 -138 0 -150 -1 -150 -18z m276 -27 c-11 -11
+                -38 -15 -104 -15 -67 0 -93 4 -102 15 -11 13 2 15 104 15 104 0 116 -2 102
+                -15z"/>
+            </g>
+        </g>
+    </pattern>
+
+    <mask id="healthMaskX" maskUnits="userSpaceOnUse">
+        <rect id="healthMask" x="592" y="7" width="100" height="15" fill="white"/>
+    </mask>
+
+    <image id="bulhole" width="35" height="35" xlink:href="pics/bulhole.svgz"/>
+    <image id="bulhole2" xlink:href="pics/bulhole.svgz" width="56" height="56"/>
+
+    <mask id="dying" maskUnits="userSpaceOnUse">
+        <rect x="0" y="0" width="100%" height="100%" fill="white"/>
+        <circle cx="390" cy="240" r="500" fill="black" shape-rendering="optimizeSpeed">
+            <animate attributeName="r" dur="6s" calcMode="discrete" 
+            values="450;425;400;375;350;325;300;275;250;225;200;175;150;125;100;75;50;25;0;0;0" 
+            begin="6s;showDeathScreen.begin" repeatCount="1"/>
+        </circle>
+    </mask>
+
+    <mask id="supWings" maskUnits="userSpaceOnUse">
+        <rect x="0" y="0" width="100%" height="100%" fill="white"/>
+        <rect x="485" y="27" width="20" height="20" fill="black"/>
+        <rect x="462" y="31" width="20" height="22" fill="black" rx="6" stroke="none"/>
+    </mask>
+
+    <mask id="catTail" maskUnits="userSpaceOnUse">
+        <rect x="0" y="0" width="100%" height="100%" fill="white"/>
+        <rect x="723" y="321" width="60" height="29.5" fill="black"/>
+    </mask>
+
+    <image id="ripX" xlink:href="pics/rip.svgz" width="170" height="170"/>
+
+</defs>
+
+/* ************************************************************************* */
+/* **********************  TEMPLATES SECTION END  ************************** */
+/* ************************************************************************* */
+
+
+/* ************************************************************************* */
+/* ***********************  SVG ELEMENTS START  **************************** */
+/* ************************************************************************* */
+
+<!--rect id="q_SKY" x="0" y="0" width="100%" height="230" stroke="none" fill="url(#sky_grad)"/>
+<rect id="q_STREET" x="0" y="244" width="100%" height="238" stroke="none" fill="url(#street_grad)"/-->
+
+<rect id="q_SKY" x="0" y="0" width="100%" height="230" stroke="none" fill="#FF9D00"/>
+<rect id="q_STREET" x="0" y="244" width="100%" height="238" stroke="none" fill="#FAE773"/>
+
+
+    <use xlink:href="#ripX" x="420" y="58" display="none">
+        <set attributeName="display" to="block" begin="sup2Killed.end"/>
+        <set attributeName="display" to="none" begin="sup2Alive.begin"/>
+    </use>
+
+<use xlink:href="#environment"/>
+
+    <g mask="url(#healthMaskX)">
+        <rect id="q_HEALTH" x="592" y="7" width="100" height="15" fill="#198C00" rx="2" />
+        <text x="595" y="19" fill="white" font-stretch="ultra-expanded">Health</text>
+    </g>
+    <text id="score" x="591" y="33" fill="black" font-stretch="ultra-expanded">Score: </text>
+
+    <circle cx="355" cy="110" r="50" fill="gold" stroke="none">
+        <animateColor id="q_SUN" begin="indefinite" end="indefinite" attributeName="fill" values="orange;gold;orange" dur="10s" repeatCount="indefinite"/> 
+    </circle>
+
+<g transform="translate(11 11) scale(0.9)" color-rendering="optimizeSpeed">
+    <g transform="rotate(30 45 44)">
+        <use xlink:href="#magazine">
+            <animate id="reloadMagazine" attributeName="opacity" begin="indefinite" values="1;0;1" 
+            dur="0.7s" repeatCount="1" restart="whenNotActive" />
+        </use>
+        <use xlink:href="#bullet" x="32" y="20" id="ammo6" />
+        <use xlink:href="#bullet" x="58" y="20" id="ammo5" />
+        <use xlink:href="#bullet" x="72" y="43" id="ammo4" />
+        <use xlink:href="#bullet" x="58" y="66" id="ammo3" />
+        <use xlink:href="#bullet" x="32" y="66" id="ammo2" />
+        <use xlink:href="#bullet" x="18" y="43" id="ammo1" />
+    </g>
+
+    <animateTransform id="rotateMagazine" attributeName="transform" type="rotate" begin="indefinite;0s" 
+    from="0 45 44" to="60 45 44" dur="700ms" repeatCount="1" restart="whenNotActive" fill="freeze" />
+</g>
+
+
+    <image x="120" y="250" width="60" height="60" xlink:href="pics/sud.svgz"/>
+    <image x="192" y="275" width="90" height="90" xlink:href="pics/sud.svgz"/>
+    <image x="145" y="270" width="95" height="95" xlink:href="pics/sud.svgz"/>
+    <image x="162" y="275" width="100" height="100" xlink:href="pics/sud.svgz"/>
+    <image x="130" y="280" width="100" height="100" xlink:href="pics/sud.svgz"/>
+    <image x="179" y="235" width="86" height="86" xlink:href="pics/sud.svgz"/>
+    <image x="151" y="237" width="90" height="90" xlink:href="pics/sud.svgz"/>
+    <image x="168" y="202" width="80" height="80" xlink:href="pics/sud.svgz"/>
+
+    <image x="380" y="210" width="200" height="160" xlink:href="pics/vuz.svgz"/>
+
+
+    <use xlink:href="#ripX" x="-27" y="174" display="none">
+        <set attributeName="display" to="block" begin="babkaKilled.end"/>
+        <set attributeName="display" to="none" begin="babkaAlive.begin"/>
+    </use>
+    <use xlink:href="#ripX" x="407" y="263" display="none">
+        <set attributeName="display" to="block" begin="snakeKilled.end"/>
+        <set attributeName="display" to="none" begin="snakeAlive.begin"/>
+    </use>
+    <use xlink:href="#ripX" x="632" y="386" display="none">
+        <set attributeName="display" to="block" begin="kotKilled.end"/>
+        <set attributeName="display" to="none" begin="kotAlive.begin"/>
+    </use>
+    <use xlink:href="#ripX" x="660" y="170" display="none">
+        <set attributeName="display" to="block" begin="sup1Killed.end"/>
+        <set attributeName="display" to="none" begin="sup1Alive.begin"/>
+    </use>
+
+    <!-- babka -->
+    <polygon id="babkaAct" points="15,212 45,212 45,258 15,258" 
+    fill="none" stroke="none" stroke-width="0.3px"/>
+    <g transform="scale(-0.45 0.45) translate(-550 260)">
+        <image xlink:href="pics/babka.svgz" x="400" y="100" width="150" height="300">
+            <animateTransform id="q_BABKA" begin="indefinite" end="indefinite" attributeName="transform" type="rotate" values="-5 470 300;10 470 300;-5 470 300" dur="6s" repeatCount="indefinite" />
+        </image>
+        <animateTransform id="babkaKilled" attributeName="transform" type="skewY" by="50" begin="indefinite" dur="0.7s"/>
+        <set attributeName="display" to="none" begin="babkaKilled.end"/>
+        <set id="babkaAlive" attributeName="display" to="block" begin="showStartScreen.begin"/>
+    </g>
+    <g transform="translate(45 145)" display="none">
+        <polygon points="10,45 0,80 30,45" fill="white" stroke="black" stroke-width="2"/>
+        <rect x="10" y="15" width="77" height="50" fill="white" stroke="black" rx="10" stroke-width="2"/>
+        <text x="20" y="20" stroke="none" fill="black" font-size="10">
+            <tspan x="15" dy="12">Hey, dear boy.</tspan>
+            <tspan x="15" dy="12">I'm too old...</tspan>
+            <tspan x="15" dy="12" fill="red">Hit me, please!</tspan>
+        </text>
+        <set id="babkaShowDialog" attributeName="display" to="block" begin="indefinite" end="indefinite"/>
+        <set id="babkaHideDialog" attributeName="display" to="none" begin="showStartScreen.begin;indefinite" end="indefinite"/>
+    </g>
+
+
+    <!-- kot -->
+    <polygon id="kotAct" points="665,305 725,305 725,358 665,358" 
+    fill="none" stroke="none" stroke-width="0.3px"/>
+    <g>
+        <!-- cat's tail -->
+        <g transform="translate(710,365) scale(0.3)" id="q_TAIL_FLY" display="none">
+            <desc><!-- [oc] animation - frame #1 --></desc>
+            <path id="oc" d="
+            M-28,-106C-28,-106 10,-117 30,-100C50,-83 71,-105 120,-70C169,-35 194,47 129,-19C64,-85 53,-55 22,-73"
+              />
+            <desc><!-- [oc] animation - from #1 to #2 --></desc>
+            <animate id="oc_frame1" xlink:href="#oc" begin="0s;oc_frame8.end" dur="1s"
+              attributeName="d" attributeType="XML" fill="freeze"
+              from="
+            M-28,-106C-28,-106 10,-117 30,-100C50,-83 71,-105 120,-70C169,-35 194,47 129,-19C64,-85 53,-55 22,-73"
+              to="
+            M-28,-106C-28,-106 10,-117 30,-100C50,-83 77,-122 126,-87C175,-52 214,24 142,-40C70,-104 53,-55 22,-73"
+              />
+            <desc><!-- [oc] animation - from #2 to #3 --></desc>
+            <animate id="oc_frame2" xlink:href="#oc" begin="oc_frame1.end" dur="1s"
+              attributeName="d" attributeType="XML" fill="freeze"
+              from="
+            M-28,-106C-28,-106 10,-117 30,-100C50,-83 77,-122 126,-87C175,-52 214,24 142,-40C70,-104 53,-55 22,-73"
+              to="
+            M-28,-106C-28,-106 8,-120 28,-103C48,-86 97,-142 146,-107C195,-72 234,1 162,-63C90,-127 74,-73 22,-75"
+              />
+            <desc><!-- [oc] animation - from #3 to #4 --></desc>
+            <animate id="oc_frame3" xlink:href="#oc" begin="oc_frame2.end" dur="1s"
+              attributeName="d" attributeType="XML" fill="freeze"
+              from="
+            M-28,-106C-28,-106 8,-120 28,-103C48,-86 97,-142 146,-107C195,-72 234,1 162,-63C90,-127 74,-73 22,-75"
+              to="
+            M-28,-106C-28,-106 8,-120 28,-103C48,-86 74,-121 146,-107C218,-93 268,-48 167,-78C66,-108 74,-73 22,-75"
+              />
+            <desc><!-- [oc] animation - from #4 to #5 --></desc>
+            <animate id="oc_frame4" xlink:href="#oc" begin="oc_frame3.end" dur="1s"
+              attributeName="d" attributeType="XML" fill="freeze"
+              from="
+            M-28,-106C-28,-106 8,-120 28,-103C48,-86 74,-121 146,-107C218,-93 268,-48 167,-78C66,-108 74,-73 22,-75"
+              to="
+            M-28,-106C-28,-106 -2,-112 28,-103C58,-94 71,-130 149,-135C227,-140 276,-98 168,-113C60,-128 74,-73 22,-75"
+              />
+            <desc><!-- [oc] animation - from #5 to #6 --></desc>
+            <animate id="oc_frame5" xlink:href="#oc" begin="oc_frame4.end" dur="1s"
+              attributeName="d" attributeType="XML" fill="freeze"
+              from="
+            M-28,-106C-28,-106 -2,-112 28,-103C58,-94 71,-130 149,-135C227,-140 276,-98 168,-113C60,-128 74,-73 22,-75"
+              to="
+            M-28,-106C-28,-106 0,-118 30,-109C60,-100 69,-139 145,-153C221,-167 287,-113 186,-128C85,-143 75,-86 23,-88"
+              />
+            <desc><!-- [oc] animation - from #6 to #7 --></desc>
+            <animate id="oc_frame6" xlink:href="#oc" begin="oc_frame5.end" dur="1s"
+              attributeName="d" attributeType="XML" fill="freeze"
+              from="
+            M-28,-106C-28,-106 0,-118 30,-109C60,-100 69,-139 145,-153C221,-167 287,-113 186,-128C85,-143 75,-86 23,-88"
+              to="
+            M-28,-106C-28,-106 0,-118 30,-109C60,-100 119,-99 156,-137C193,-175 252,-178 187,-119C122,-60 77,-82 25,-84"
+              />
+            <desc><!-- [oc] animation - from #7 to #8 --></desc>
+            <animate id="oc_frame7" xlink:href="#oc" begin="oc_frame6.end" dur="1s"
+              attributeName="d" attributeType="XML" fill="freeze"
+              from="
+            M-28,-106C-28,-106 0,-118 30,-109C60,-100 119,-99 156,-137C193,-175 252,-178 187,-119C122,-60 77,-82 25,-84"
+              to="
+            M-28,-106C-28,-106 0,-118 30,-109C60,-100 122,-55 159,-93C196,-131 251,-134 186,-75C121,-16 77,-82 25,-84"
+              />
+            <desc><!-- [oc] animation - from #8 to #1 --></desc>
+            <animate id="oc_frame8" xlink:href="#oc" begin="oc_frame7.end" dur="1s"
+              attributeName="d" attributeType="XML" fill="freeze"
+              from="
+            M-28,-106C-28,-106 0,-118 30,-109C60,-100 122,-55 159,-93C196,-131 251,-134 186,-75C121,-16 77,-82 25,-84"
+              to="
+            M-28,-106C-28,-106 10,-117 30,-100C50,-83 71,-105 120,-70C169,-35 194,47 129,-19C64,-85 53,-55 22,-73"
+              />
+        </g>
+
+        <g mask="none" id="q_KOT_ITSELF">
+            <image xlink:href="pics/kot.svgz" x="110" y="100" width="150" height="300" transform="scale(-0.85 0.85) translate(-1020 142)"/>
+        </g>
+
+        <animateTransform id="kotKilled" attributeName="transform" type="translate" by="10 240" begin="indefinite" dur="0.7s"/>
+        <set attributeName="display" to="none" begin="kotKilled.end"/>
+        <set id="kotAlive" attributeName="display" to="block" begin="showStartScreen.begin"/>
+    </g>
+    <g transform="translate(672 220)" display="none">
+        <polygon points="10,45 0,80 30,45" fill="white" stroke="black" stroke-width="2"/>
+        <rect x="10" y="15" width="95" height="50" fill="white" stroke="black" rx="10" stroke-width="2"/>
+        <text x="20" y="20" stroke="none" fill="black" font-size="10">
+            <tspan x="15" dy="12">Miiaauu.. yesterday</tspan>
+            <tspan x="15" dy="12" fill="red">I massacred your</tspan>
+            <tspan x="15" dy="12">dog, stupid cowboy!</tspan>
+        </text>
+        <set id="kotShowDialog" attributeName="display" to="block" begin="indefinite" end="indefinite"/>
+        <set id="kotHideDialog" attributeName="display" to="none" begin="showStartScreen.begin;indefinite" end="indefinite"/>
+    </g>
+
+
+    <!-- sup1 -->
+    <polygon id="sup1Act" points="705,92 729,92 729,122 705,122" 
+    fill="none" stroke="none" stroke-width="0.3px"/>
+    <g>
+        <image x="668" y="79" width="100" height="60" xlink:href="pics/sup1.svgz"/>
+        <animateTransform id="sup1Killed" attributeName="transform" type="translate" by="0 150" begin="indefinite" dur="0.7s"/>
+        <set attributeName="display" to="none" begin="sup1Killed.end"/>
+        <set id="sup1Alive" attributeName="display" to="block" begin="showStartScreen.begin"/>
+    </g>
+    <g transform="translate(610 110)" display="none">
+        <polygon transform="rotate(180) translate(-95 -83)" points="10,45 0,80 30,45" fill="white" stroke="black" stroke-width="2"/>
+        <rect x="10" y="15" width="75" height="50" fill="white" stroke="black" rx="10" stroke-width="2"/>
+        <text x="20" y="20" stroke="none" fill="black" font-size="10">
+            <tspan x="15" dy="12">Kroaach! Ugh!</tspan>
+            <tspan x="15" dy="12">I'm so ugly bird</tspan>
+            <tspan x="15" dy="12" fill="red"> ! Disggusting !</tspan>
+        </text>
+        <set id="sup1ShowDialog" attributeName="display" to="block" begin="indefinite" end="indefinite"/>
+        <set id="sup1HideDialog" attributeName="display" to="none" begin="showStartScreen.begin;indefinite" end="indefinite"/>
+    </g>
+
+
+    <!-- sup2 -->
+    <polygon id="sup2Act" points="474,46 495,46 495,60 474,60" 
+    fill="none" stroke="none" stroke-width="0.3px"/>
+
+    <g>
+        <g transform="translate(488,50) scale(0.08)" id="q_WINGS_FLY" display="none">
+            <g transform="translate(-348,47)">
+            <desc><!-- [wings2] animation - frame #1 --></desc>
+            <path id="wings2" d="
+            M15,32C15,32 71,-12 82,-89C93,-166 153,-113 156,-107C159,-101 212,-57 251,-32C290,-7 206,-11 201,-10C196,-9 152,-30 143,-29C134,-28 129,24 106,21C83,18 89,3 92,11C95,19 72,34 72,34C72,34 40,31 55,24"
+              />
+            <desc><!-- [wings2] animation - from #1 to #2 --></desc>
+            <animate id="wings2_frame1" xlink:href="#wings2" begin="0s;wings2_frame3.end" dur="1s"
+              attributeName="d" attributeType="XML" fill="freeze"
+              from="
+            M15,32C15,32 71,-12 82,-89C93,-166 153,-113 156,-107C159,-101 212,-57 251,-32C290,-7 206,-11 201,-10C196,-9 152,-30 143,-29C134,-28 129,24 106,21C83,18 89,3 92,11C95,19 72,34 72,34C72,34 40,31 55,24"
+              to="
+            M-57,-17C-57,-17 26,-31 82,-89C138,-147 148,-112 157,-104C166,-96 212,-57 251,-32C290,-7 206,-11 201,-10C196,-9 144,-54 135,-53C126,-52 111,16 88,13C65,10 62,-7 65,1C68,9 21,17 21,17C21,17 -5,8 10,1"
+              />
+            <desc><!-- [wings2] animation - from #2 to #3 --></desc>
+            <animate id="wings2_frame2" xlink:href="#wings2" begin="wings2_frame1.end" dur="1s"
+              attributeName="d" attributeType="XML" fill="freeze"
+              from="
+            M-57,-17C-57,-17 26,-31 82,-89C138,-147 148,-112 157,-104C166,-96 212,-57 251,-32C290,-7 206,-11 201,-10C196,-9 144,-54 135,-53C126,-52 111,16 88,13C65,10 62,-7 65,1C68,9 21,17 21,17C21,17 -5,8 10,1"
+              to="
+            M-92,-97C-92,-97 7,-14 63,-72C119,-130 142,-93 151,-85C160,-77 212,-57 251,-32C290,-7 201,-10 201,-10C201,-10 139,-40 130,-39C121,-38 13,-14 -10,-17C-33,-20 -35,-38 -32,-30C-29,-22 -57,-23 -57,-23C-57,-23 -70,-38 -55,-45"
+              />
+            <desc><!-- [wings2] animation - from #3 to #1 --></desc>
+            <animate id="wings2_frame3" xlink:href="#wings2" begin="wings2_frame2.end" dur="1s"
+              attributeName="d" attributeType="XML" fill="freeze"
+              from="
+            M-92,-97C-92,-97 7,-14 63,-72C119,-130 142,-93 151,-85C160,-77 212,-57 251,-32C290,-7 201,-10 201,-10C201,-10 139,-40 130,-39C121,-38 13,-14 -10,-17C-33,-20 -35,-38 -32,-30C-29,-22 -57,-23 -57,-23C-57,-23 -70,-38 -55,-45"
+              to="
+            M15,32C15,32 71,-12 82,-89C93,-166 153,-113 156,-107C159,-101 212,-57 251,-32C290,-7 206,-11 201,-10C196,-9 152,-30 143,-29C134,-28 129,24 106,21C83,18 89,3 92,11C95,19 72,34 72,34C72,34 40,31 55,24"
+              />
+            </g>
+            
+            <g>
+            <desc><!-- [wingsa] animation - frame #1 --></desc>
+            <path id="wingsa" d="
+            M-37,-11C-37,-11 -29,-208 60,-192C149,-176 257,-232 269,-233C281,-234 269,-176 260,-159C251,-142 210,-107 166,-108C122,-109 53,-154 46,-122C39,-90 -2,-1 -2,-1"
+              />
+            <desc><!-- [wingsa] animation - from #1 to #2 --></desc>
+            <animate id="wingsa_frame1" xlink:href="#wingsa" begin="0s;wingsa_frame4.end" dur="1s"
+              attributeName="d" attributeType="XML" fill="freeze"
+              from="
+            M-37,-11C-37,-11 -29,-208 60,-192C149,-176 257,-232 269,-233C281,-234 269,-176 260,-159C251,-142 210,-107 166,-108C122,-109 53,-154 46,-122C39,-90 -2,-1 -2,-1"
+              to="
+            M-37,-11C-37,-11 0,-179 89,-163C178,-147 283,-195 295,-196C307,-197 265,-129 256,-112C247,-95 197,-90 153,-91C109,-92 64,-136 57,-104C50,-72 -2,-1 -2,-1"
+              />
+            <desc><!-- [wingsa] animation - from #2 to #3 --></desc>
+            <animate id="wingsa_frame2" xlink:href="#wingsa" begin="wingsa_frame1.end" dur="1s"
+              attributeName="d" attributeType="XML" fill="freeze"
+              from="
+            M-37,-11C-37,-11 0,-179 89,-163C178,-147 283,-195 295,-196C307,-197 265,-129 256,-112C247,-95 197,-90 153,-91C109,-92 64,-136 57,-104C50,-72 -2,-1 -2,-1"
+              to="
+            M-38,-11C-38,-11 -29,-122 93,-141C215,-160 317,-168 303,-146C289,-124 261,-104 252,-87C243,-70 191,-74 147,-75C103,-76 88,-118 50,-81C12,-44 -3,-1 -3,-1"
+              />
+            <desc><!-- [wingsa] animation - from #3 to #4 --></desc>
+            <animate id="wingsa_frame3" xlink:href="#wingsa" begin="wingsa_frame2.end" dur="1s"
+              attributeName="d" attributeType="XML" fill="freeze"
+              from="
+            M-38,-11C-38,-11 -29,-122 93,-141C215,-160 317,-168 303,-146C289,-124 261,-104 252,-87C243,-70 191,-74 147,-75C103,-76 88,-118 50,-81C12,-44 -3,-1 -3,-1"
+              to="
+            M-38,-11C-38,-11 -26,-100 96,-119C218,-138 319,-86 300,-54C281,-22 257,-81 248,-64C239,-47 198,-60 154,-61C110,-62 85,-98 47,-61C9,-24 -3,-1 -3,-1"
+              />
+            <desc><!-- [wingsa] animation - from #4 to #1 --></desc>
+            <animate id="wingsa_frame4" xlink:href="#wingsa" begin="wingsa_frame3.end" dur="1s"
+              attributeName="d" attributeType="XML" fill="freeze"
+              from="
+            M-38,-11C-38,-11 -26,-100 96,-119C218,-138 319,-86 300,-54C281,-22 257,-81 248,-64C239,-47 198,-60 154,-61C110,-62 85,-98 47,-61C9,-24 -3,-1 -3,-1"
+              to="
+            M-37,-11C-37,-11 -29,-208 60,-192C149,-176 257,-232 269,-233C281,-234 269,-176 260,-159C251,-142 210,-107 166,-108C122,-109 53,-154 46,-122C39,-90 -2,-1 -2,-1"
+              />
+            </g>
+        </g>
+
+        <g mask="none" id="q_SUP_ITSELF">
+            <image x="468" y="29" width="37" height="37" xlink:href="pics/sup2.svgz"/>
+        </g>
+
+        <animateTransform id="sup2Killed" attributeName="transform" type="translate" by="0 80" begin="indefinite" dur="0.6s"/>
+        <set attributeName="display" to="none" begin="sup2Killed.end"/>
+        <set id="sup2Alive" attributeName="display" to="block" begin="showStartScreen.begin"/>
+    </g>
+
+    <g transform="translate(482 54)" display="none">
+        <polygon points="10,45 0,80 30,45" fill="white" stroke="black" stroke-width="2" transform="scale(1 -1) translate(0 -86)"/>
+        <rect x="10" y="15" width="83" height="50" fill="white" stroke="black" rx="10" stroke-width="2"/>
+        <text x="20" y="20" stroke="none" fill="black" font-size="10">
+            <tspan x="15" dy="12">I'm so young and</tspan>
+            <tspan x="15" dy="12">so hungry! I'm</tspan>
+            <tspan x="15" dy="12" fill="red">going to eat You!</tspan>
+        </text>
+        <set id="sup2ShowDialog" attributeName="display" to="block" begin="indefinite" end="indefinite"/>
+        <set id="sup2HideDialog" attributeName="display" to="none" begin="showStartScreen.begin;indefinite" end="indefinite"/>
+    </g>
+
+
+    <!-- snake -->
+    <polygon id="snakeAct" points="460,257 484,257 484,299 460,299" 
+    fill="none" stroke="none" stroke-width="0.3px"/>
+    <g>
+        <image x="448" y="250" width="60" height="60" xlink:href="pics/snake.svgz"/>
+        <animateTransform id="snakeKilled" attributeName="transform" type="translate" by="0 80" begin="indefinite" dur="0.6s"/>
+        <set attributeName="display" to="none" begin="snakeKilled.end"/>
+        <set id="snakeAlive" attributeName="display" to="block" begin="showStartScreen.begin"/>
+    </g>
+    <g transform="translate(485 185)" display="none">
+        <polygon points="10,45 0,80 30,45" fill="white" stroke="black" stroke-width="2"/>
+        <rect x="10" y="15" width="70" height="50" fill="white" stroke="black" rx="10" stroke-width="2"/>
+        <text x="20" y="20" stroke="none" fill="black" font-size="10">
+            <tspan x="15" dy="12">Ssss Sssss...</tspan>
+            <tspan x="15" dy="12">I'm going to</tspan>
+            <tspan x="15" dy="12" fill="red">kill you, boy!</tspan>
+        </text>
+        <set id="snakeShowDialog" attributeName="display" to="block" begin="indefinite" end="indefinite"/>
+        <set id="snakeHideDialog" attributeName="display" to="none" begin="showStartScreen.begin;indefinite" end="indefinite"/>
+    </g>
+
+
+    <!-- MAIN CONTAINER FOR BANDITS -->
+    <g id="activeElements"/>
+
+
+<rect id="q_MADLOHOR" x="0" y="375" width="100%" height="13" stroke="black" stroke-width="2px" fill="#9c4931"/>
+<g transform="translate(0,27)">
+    <rect x="0" y="360" width="100%" height="94" stroke="none" fill="url(#madlo_whole)"/>
+</g>
+
+<use xlink:href="#gunLayer" x="25" y="25" id="gunSight" stroke="black"/>
+<circle id="theMiddle" cx="25" cy="25" r="3" fill="none" stroke="none"/>
+
+<text x="230" y="45" stroke="black" fill="white" font-size="40" font-weight="bolder" visibility="hidden" font-stretch="ultra-expanded">
+    IT HURTS!
+    <set id="hit" attributeName="visibility" to="visible" begin="indefinite" end="hit.begin+0.66s" restart="whenNotActive" repeatCount="1"/>
+</text>
+
+<text x="258" y="45" stroke="black" fill="purple" font-size="40" font-weight="bolder" visibility="hidden" font-stretch="ultra-expanded">
+    OH NO!
+    <set id="hit2" attributeName="visibility" to="visible" begin="indefinite" end="hit2.begin+0.7s" restart="whenNotActive" repeatCount="1"/>
+</text>
+
+<text x="264" y="45" stroke="black" fill="lightgreen" font-size="40" font-weight="bolder" visibility="hidden" font-stretch="ultra-expanded">
+    BINGO!
+    <set id="hit3" attributeName="visibility" to="visible" begin="indefinite" end="hit3.begin+0.7s" restart="whenNotActive" repeatCount="1"/>
+</text>
+
+<text x="230" y="45" stroke="black" fill="#dd0000" font-size="40" font-weight="bolder" visibility="hidden" font-stretch="ultra-expanded">
+    RELOAD!
+    <set id="mustReload" attributeName="visibility" to="visible" begin="emptyGun.begin" end="mustReload.begin+0.66s" restart="whenNotActive" repeatCount="1"/>
+</text>
+
+
+/* ************************************************************************* */
+/* *************************  SVG ELEMENTS END  **************************** */
+/* ************************************************************************* */
+
+
+/* ************************************************************************* */
+/* ***************************  SOUNDS START  ****************************** */
+/* ************************************************************************* */
+
+<a:audio id="gun_reload" begin="reload.begin;indefinite" volume="1.0" xlink:href="sounds/reload.wav"/>
+<a:audio id="gun_fire" begin="indefinite" volume="0.8" xlink:href="sounds/colt.wav"/>
+<a:audio id="gun_fire_enemy" begin="indefinite" volume="0.75" xlink:href="sounds/coltb.wav"/>
+<a:audio id="gunIsEmpty" begin="emptyGun.begin" volume="1.0" xlink:href="sounds/empty.wav"/>
+
+<a:audio id="ugh1" begin="hit.begin;indefinite" volume="1.0" xlink:href="sounds/ugh1.wav"/>
+
+<a:audio id="ugh2" begin="indefinite" volume="1.0" xlink:href="sounds/ugh2.wav"/>
+<a:audio id="ugh3" begin="indefinite" volume="1.0" xlink:href="sounds/ugh3.wav"/>
+<a:audio id="ugh4" begin="indefinite" volume="1.0" xlink:href="sounds/ugh4.wav"/>
+<a:audio id="ugh5" begin="indefinite" volume="1.0" xlink:href="sounds/innough.wav"/>
+
+<a:audio id="ugh5" begin="indefinite" volume="1.0" xlink:href="sounds/ugh4.wav"/>
+<a:audio id="babkaugh" begin="indefinite;babkaKilled.begin+0.3s" volume="1.0" xlink:href="sounds/babka01.wav"/>
+<a:audio id="innough" begin="indefinite" volume="1.0" xlink:href="sounds/wow.wav"/>
+
+<a:audio id="haha" begin="indefinite" volume="0.8" xlink:href="sounds/haha.wav"/>
+<a:audio id="creak" begin="displayHelp.click;onlyView.click;indefinite" volume="1.0" xlink:href="sounds/creak.wav"/>
+
+<a:audio volume="1.0" xlink:href="sounds/catbird.wav" begin="sup1Killed.begin+0.3s;sup2Killed.begin+0.3s;kotKilled.begin+0.3s;"/>
+
+<a:audio xlink:href="sounds/end.mp3" repeatCount="1" begin="showDeathScreen.begin+0.7s"/>
+
+<!-- music, with some hacking of loading from beginning -->
+<!--a:audio xlink:href="sounds/picking3.mp3" repeatCount="indefinite" id="music" begin="0.44s;0.51s;showStartScreen.begin+0.4s" end="0.5;showDeathScreen.begin"/-->
+<a:audio id="music" xlink:href="sounds/picking3.mp3" repeatCount="indefinite" begin="0.44s;0.53s;indefinite" end="0.5;showDeathScreen.begin;indefinite"/>
+
+/* ************************************************************************* */
+/* ****************************  SOUNDS END  ******************************* */
+/* ************************************************************************* */
+
+<!-- mask_1 -->
+<!--polygon points="219,236 224,258 220,269 234,271 239,291 233,311 248,313 255,335 250,360 600,362 600,239" 
+fill="none" stroke="#ffffff" stroke-width="0.3px"/-->
+
+<!-- mask_2 -->
+<!--polygon points="206,137 329,137 330,171 223,172 214,165 200,164" 
+Fill="none" stroke="#ffffff" stroke-width="0.3px"/-->
+
+<!-- mask_4 -->
+<!--polygon points="622,41 703,45 707,86 680,87 622,84" 
+fill="none" stroke="#ffffff" stroke-width="0.3px"/-->
+
+<!-- mask_5 -->
+<!--polygon points="732,170 756,163 761,218 736,222" 
+fill="none" stroke="#ffffff" stroke-width="0.3px"/-->
+
+<!-- mask_6 -->
+<!--polygon points="62,103 81,104 80,133 60,132" 
+fill="none" stroke="#ffffff" stroke-width="0.3px"/-->
+
+<!-- mask_7 -->
+<!--polygon points="627,205 656,199 656,229 627,232" 
+fill="none" stroke="#ffffff" stroke-width="0.3px"/-->
+
+<!-- mask_9 -->
+<!--polygon points="452,233 442,232 438,232 438,259 449,290 430,294 414,313 457,338 283,365 280,218" 
+fill="none" stroke="#ffffff" stroke-width="0.3px"/-->
+
+<rect x="0" y="0" width="100%" height="100%" fill="none" stroke="none" cursor="crosshair" pointer-events="all"/>
+
+
+/* ************************************************************************* */
+/* ***************************  START SCREEN  ****************************** */
+/* ************************************************************************* */
+<g id="startScreen">
+    <rect x="-2" y="-3" width="784" height="485" fill="beige" fill-opacity="0.8" stroke="maroon" stroke-width="6"/>
+    <g transform="translate(70 -60)">
+        <image x="0" y="-75" width="200" height="200" xlink:href="pics/hat.svgz" visibility="hidden">
+            <set attributeName="visibility" to="visible" begin="hutFly.begin" />
+            <set attributeName="visibility" to="hidden" begin="hideStartScreen.begin" />
+        </image>
+        <g visibility="hidden" transform="scale(0.7)">
+            <use x="70" y="-20" xlink:href="#bulhole">
+                <set id="bulshot1" attributeName="visibility" to="visible" begin="hutFly.begin+1.5"/>
+                <a:audio volume="0.5" xlink:href="sounds/colt.wav" begin="hutFly.begin+1.5" end="hideStartScreen.begin">
+                    <set attributeName="volume" to="0" begin="hideStartScreen.begin"/>
+                    <set attributeName="volume" to="0.5" begin="showStartScreen.begin"/>
+                </a:audio>
+                <set attributeName="visibility" to="hidden" begin="showStartScreen.begin"/>
+            </use>
+            <use x="170" y="-20" xlink:href="#bulhole">
+                <set attributeName="visibility" to="visible" begin="bulshot1.begin+1.5s"/>
+                <a:audio volume="0.5" xlink:href="sounds/colt.wav" begin="bulshot1.begin+1.5s" end="hideStartScreen.begin">
+                    <set attributeName="volume" to="0" begin="hideStartScreen.begin"/>
+                    <set attributeName="volume" to="0.5" begin="showStartScreen.begin"/>
+                </a:audio>
+                <set attributeName="visibility" to="hidden" begin="showStartScreen.begin"/>
+            </use>
+            <use x="200" y="60" xlink:href="#bulhole">
+                <set attributeName="visibility" to="visible" begin="bulshot1.begin+2.7s"/>
+                <a:audio volume="0.5" xlink:href="sounds/colt.wav" begin="bulshot1.begin+2.7s" end="hideStartScreen.begin">
+                    <set attributeName="volume" to="0" begin="hideStartScreen.begin"/>
+                    <set attributeName="volume" to="0.5" begin="showStartScreen.begin"/>
+                </a:audio>
+                <set attributeName="visibility" to="hidden" begin="showStartScreen.begin"/>
+            </use>
+        </g>
+
+        <animateMotion id="hutFly" begin="2.2s;showStartScreen.begin+1s" dur="5s" repeatCount="1" fill="freeze" 
+        path="M 84.65907 -22.26250 C 84.65907 -22.26250 334.5399 125.2083 314.0580 100.6298 C 333.1746 40.54916 116.0649 155.2486 88.75553 193.4818 C 87.39007 148.4212 75.10077 168.9032 259.4392 242.6386 C 264.9010 183.9234 173.4145 257.6587 143.3741 321.8358"
+        end="hideStartScreen.begin"/>
+
+    </g>
+
+
+    <g display="none">
+        <text x="120" y="150" stroke="#aaaaaa" stroke-width="0.8" fill="none" font-size="100" font-weight="bolder" font-family="sans-serif">SVG</text>
+        <text x="562" y="340" stroke="#aaaaaa" stroke-width="0.8" fill="none" font-size="60" font-weight="bolder" font-family="sans-serif">1.0</text>
+        <image x="50" y="40" width="660" height="300" xlink:href="pics/cowboys.svgz"/>
+        <set attributeName="display" to="block" begin="hutFly.end+0.3s" />
+        <set attributeName="display" to="none" begin="hideStartScreen.begin;showStartScreen.begin" />
+    </g>
+
+    <g transform="translate(343,243) scale(0.23)" stroke="none" fill="#ffffff" fill-opacity="0.5" id="smoke" display="none">
+        <desc><!-- [kour1] animation - frame #1 --></desc>
+        <path id="kour1" d="
+        M9,-175C9,-175 -51,-147 -49,-115C-47,-83 -8,-104 -17,-39C-26,26 -6,20 2,52C10,84 22,16 23,-42C24,-100 -29,-101 -11,-128"
+          />
+        <desc><!-- [kour1] animation - from #1 to #2 --></desc>
+        <animate id="kour1_frame1" xlink:href="#kour1" begin="0s;kour1_frame3.end" dur="1s"
+          attributeName="d" attributeType="XML" fill="freeze"
+          from="
+        M9,-175C9,-175 -51,-147 -49,-115C-47,-83 -8,-104 -17,-39C-26,26 -6,20 2,52C10,84 22,16 23,-42C24,-100 -29,-101 -11,-128"
+          to="
+        M24,-162C24,-162 -45,-150 -37,-116C-29,-82 -35,-106 -17,-39C1,28 -6,20 2,52C10,84 35,20 23,-42C11,-104 -39,-113 -11,-128"
+          />
+        <desc><!-- [kour1] animation - from #2 to #3 --></desc>
+        <animate id="kour1_frame2" xlink:href="#kour1" begin="kour1_frame1.end" dur="1s"
+          attributeName="d" attributeType="XML" fill="freeze"
+          from="
+        M24,-162C24,-162 -45,-150 -37,-116C-29,-82 -35,-106 -17,-39C1,28 -6,20 2,52C10,84 35,20 23,-42C11,-104 -39,-113 -11,-128"
+          to="
+        M-13,-176C-13,-176 -30,-153 -37,-116C-44,-79 -24,-99 -15,-42C-6,15 14,-9 2,52C-10,113 55,24 23,-42C-9,-108 -32,-88 -11,-128"
+          />
+        <desc><!-- [kour1] animation - from #3 to #1 --></desc>
+        <animate id="kour1_frame3" xlink:href="#kour1" begin="kour1_frame2.end" dur="1s"
+          attributeName="d" attributeType="XML" fill="freeze"
+          from="
+        M-13,-176C-13,-176 -30,-153 -37,-116C-44,-79 -24,-99 -15,-42C-6,15 14,-9 2,52C-10,113 55,24 23,-42C-9,-108 -32,-88 -11,-128"
+          to="
+        M9,-175C9,-175 -51,-147 -49,-115C-47,-83 -8,-104 -17,-39C-26,26 -6,20 2,52C10,84 22,16 23,-42C24,-100 -29,-101 -11,-128"
+          />    
+        <set attributeName="display" to="block" begin="hutFly.end"/>
+        <set attributeName="display" to="none" begin="showStartScreen.begin"/>
+    </g>
+
+
+    <g visibility="hidden">
+        <g>
+            <use x="170" y="225" xlink:href="#bulhole"/>
+            <a:audio volume="0.5" xlink:href="sounds/colt.wav" begin="bulshot1b.begin" end="hideStartScreen.begin">
+                <set attributeName="volume" to="0" begin="hideStartScreen.begin"/>
+                <set attributeName="volume" to="0.5" begin="showStartScreen.begin"/>
+            </a:audio>
+            <text x="440" y="280" stroke="none" fill="black" font-size="18" font-weight="bold" font-style="italic" font-family="serif">by</text>
+            <set id="bulshot1b" attributeName="visibility" to="visible" begin="hutFly.end+1.5s"/>
+            <set attributeName="visibility" to="hidden" begin="showStartScreen.begin"/>
+        </g>
+
+        <g>
+            <use x="360" y="120" xlink:href="#bulhole"/>
+            <a:audio volume="0.5" xlink:href="sounds/colt.wav" begin="bulshot1b.begin+0.5s" end="hideStartScreen.begin">
+                <set attributeName="volume" to="0" begin="hideStartScreen.begin"/>
+                <set attributeName="volume" to="0.5" begin="showStartScreen.begin"/>
+            </a:audio>
+            <text x="466" y="280" stroke="none" fill="black" font-size="18" font-weight="bold" font-style="italic" font-family="serif">Marek</text>
+            <set attributeName="visibility" to="visible" begin="bulshot1b.begin+0.5s"/>
+            <set attributeName="visibility" to="hidden" begin="showStartScreen.begin"/>
+        </g>
+
+        <g>
+            <use x="550" y="170" xlink:href="#bulhole"/>
+            <a:audio volume="0.5" xlink:href="sounds/colt.wav" begin="bulshot1b.begin+1s" end="hideStartScreen.begin">
+                <set attributeName="volume" to="0" begin="hideStartScreen.begin"/>
+                <set attributeName="volume" to="0.5" begin="showStartScreen.begin"/>
+            </a:audio>
+            <text x="522" y="280" stroke="none" fill="black" font-size="18" font-weight="bold" font-style="italic" font-family="serif">Raida</text>
+            <set id="latestIntroEvent" attributeName="visibility" to="visible" begin="bulshot1b.begin+1s"/>
+            <set attributeName="visibility" to="hidden" begin="showStartScreen.begin"/>
+        </g>
+    </g>
+
+    <text x="265" y="399" stroke="none" fill="#004400" font-weight="bold" font-style="italic" font-family="serif" font-size="15" visibility="hidden">
+        ...click on the screen to start the game...
+        <set attributeName="visibility" to="visible" begin="latestIntroEvent.begin+1s"/>
+        <set attributeName="visibility" to="hidden" begin="showStartScreen.begin"/>
+    </text>
+
+    <set id="showStartScreen" attributeName="display" begin="indefinite" to="block" />
+    <set id="hideStartScreen" attributeName="display" begin="indefinite" to="none" />
+
+    <a><rect x="0" y="0" width="100%" height="100%" fill="none" stroke="none" pointer-events="all" onclick="init(evt)"/></a>
+
+    <g>
+        <a>
+            <text x="518" y="440" stroke="none" fill="black" font-size="28" 
+            font-weight="bold" font-style="italic" font-family="serif">Game instructions</text>
+            <rect id="displayHelp" x="510" y="415" width="233" height="33" fill="none" 
+            stroke="white" stroke-width="3" pointer-events="all" rx="10">
+                <set attributeName="stroke" to="maroon" begin="mouseover"/>
+                <set attributeName="stroke-width" to="1" begin="mouseover"/>
+                <set attributeName="stroke" to="white" begin="mouseout"/>
+                <set attributeName="stroke-width" to="3" begin="mouseout"/>
+            </rect>
+
+            <text x="42" y="440" stroke="none" fill="black" font-size="28" 
+            font-weight="bold" font-style="italic" font-family="serif">Show High Scores</text>
+            <rect id="onlyView" x="35" y="415" width="230" height="33" fill="none" 
+            stroke="white" stroke-width="3" pointer-events="all" rx="10" onclick="showScoreList(false)">
+                <set attributeName="stroke" to="maroon" begin="mouseover"/>
+                <set attributeName="stroke-width" to="1" begin="mouseover"/>
+                <set attributeName="stroke" to="white" begin="mouseout"/>
+                <set attributeName="stroke-width" to="3" begin="mouseout"/>
+            </rect>
+
+        </a>
+    </g>
+
+</g>
+
+
+/* ************************************************************************* */
+/* ***************************  DEATH SCREEN  ****************************** */
+/* ************************************************************************* */
+
+<g id="deathScreen" display="none">
+    <rect x="-2" y="-3" width="784" height="485" fill="red" fill-opacity="0.8" stroke="maroon" stroke-width="6"/>
+
+    <image xlink:href="pics/bulhole.svgz" x="307" y="161" width="170" height="170"/>
+
+    <rect x="0" y="0" width="100%" height="100%" fill="black" stroke="none" mask="url(#dying)" shape-rendering="optimizeSpeed" color-rendering="optimizeSpeed"/>
+
+    <a><rect x="0" y="0" width="100%" height="100%" fill="none" stroke="none" pointer-events="all" onclick="afterDeath()"/></a>
+
+    <set id="showDeathScreen" attributeName="display" begin="indefinite" to="block" />
+    <set id="hideDeathScreen" attributeName="display" begin="indefinite" to="none" />
+
+</g>
+
+
+/* ************************************************************************* */
+/* ************************  SIGNATUTING SCREEN  *************************** */
+/* ************************************************************************* */
+
+<g id="signatureScreen" display="none">
+    <rect x="-2" y="-3" width="784" height="485" fill="#65B5F3" fill-opacity="0.96" stroke="maroon" stroke-width="6"/>
+
+    <use x="570" y="40" xlink:href="#bulhole2" />
+    <text x="480" y="50" stroke="#333333" stroke-width="1" fill="white" font-size="40" font-weight="bolder" font-family="monospace">SIGNATURING</text>
+    <image xlink:href="pics/lump1.svgz" x="490" y="210" width="200" height="200"/>
+
+    <rect x="35" y="30" width="350" height="90" fill="gold" stroke="#4E3D10" rx="10" stroke-width="5"/>
+    <image x="45" y="-20" width="330" height="190" xlink:href="pics/cowboys.svgz"/>
+
+    <g transform="translate(-10 0)">
+        <text x="460" y="140" stroke="none" fill="#dddddd" font-size="20">You've reached score:</text>
+
+        <rect x="460" y="150" width="150" height="30" fill="white" rx="10" stroke="#aaaaaa"/>
+        <text id="finalScore" x="466" y="176" stroke="none" fill="black" font-size="30">000</text>
+
+        <text x="460" y="220" stroke="none" fill="#dddddd" font-size="20">Write down your famous name:</text>
+
+        <rect x="460" y="230" width="297" height="30" fill="white" rx="10" stroke="#aaaaaa"/>
+        <text id="playerName" x="465" y="256" stroke="none" fill="black" font-size="30">NOBODY</text>
+    </g>
+
+    <rect x="0" y="0" width="100%" height="100%" fill="none" stroke="none"/>
+
+    <a transform="translate(5 20)">
+    <g id="abeceda" transform="translate(30 80)"/>
+        <text x="160" y="354" stroke="none" fill="white" font-weight="bold" font-size="14" id="letx-delete" onclick="getLetter(evt)">SPC</text>
+        <text x="280" y="354" stroke="none" fill="white" font-weight="bold" font-size="14" id="letx-delete" onclick="getLetter(evt)">DEL</text>
+        <text x="340" y="354" stroke="none" fill="white" font-weight="bold" font-size="14" id="letx-enter" onclick="getLetter(evt)">END</text>
+    <g id="textCovers" transform="translate(30 80)"/>
+    </a>
+
+    <set id="showSignatureScreen" attributeName="display" begin="indefinite" to="block" />
+    <set id="hideSignatureScreen" attributeName="display" begin="indefinite" to="none" />
+
+    <a>
+        <text x="457" y="440" stroke="none" fill="black" font-size="28" 
+        font-weight="bold" font-style="italic" font-family="serif">Continue to High Scores</text>
+        <rect id="texx-enter" x="450" y="415" width="300" height="33" fill="none" onclick="getLetter(evt)"
+        stroke="white" stroke-width="3" pointer-events="all" rx="10">
+            <set attributeName="stroke" to="maroon" begin="mouseover"/>
+            <set attributeName="stroke-width" to="1" begin="mouseover"/>
+            <set attributeName="stroke" to="white" begin="mouseout"/>
+            <set attributeName="stroke-width" to="3" begin="mouseout"/>
+        </rect>
+    </a>
+
+</g>
+
+/* ************************************************************************* */
+/* *************************  HIGHSCORE SCREEN  **************************** */
+/* ************************************************************************* */
+
+<g id="highScoreScreen" display="none">
+    <rect x="-2" y="-3" width="784" height="485" fill="#D8EF3D" fill-opacity="0.96" stroke="maroon" stroke-width="6"/>
+
+    <use x="560" y="40" xlink:href="#bulhole2" />
+    <use x="450" y="155" xlink:href="#bulhole2" />
+    <use x="670" y="95" xlink:href="#bulhole2" />
+    <text x="480" y="50" stroke="#333333" stroke-widht="1" fill="white" font-size="40" font-weight="bolder" font-family="monospace">HIGH SCORES</text>
+    <image xlink:href="pics/lady01.svgz" x="520" y="200" width="330" height="330"/>
+    <image xlink:href="pics/lump6.svgz" x="495" y="135" width="220" height="220"/>
+
+    <image x="380" y="220" width="150" height="180" xlink:href="pics/sud.svgz"/>
+    <image x="400" y="260" width="150" height="180" xlink:href="pics/sud.svgz"/>
+    <image x="450" y="290" width="150" height="180" xlink:href="pics/sud.svgz"/>
+
+    <rect x="30" y="20" width="360" height="440" fill="beige" stroke="gray" stroke-width="4" rx="25"/>
+    <text x="38" y="180" stroke="none" font-size="115" fill="black" font-weight="bold" font-stretch="ultra-condensed" fill-opacity="0.1">WANTED</text>
+    <use x="40" y="32" xlink:href="#bulhole" />
+    <use x="350" y="32" xlink:href="#bulhole" />
+    <use x="40" y="420" xlink:href="#bulhole" />
+    <use x="350" y="420" xlink:href="#bulhole" />
+    <text x="120" y="28" stroke="none" fill="#2E2201" font-family="sans-serif" sont-weight="bold" font-size="11" id="HallOfFame" font-stretch="ultra-expanded"> </text>
+
+    <a>
+        <rect x="0" y="0" width="100%" height="100%" fill="none" stroke="none" pointer-events="all" onclick="hideScoreList()"/>
+        <rect id="highOff2" x="0" y="0" width="100%" height="100%" fill="none" stroke="none" pointer-events="all" display="none">
+            <set attributeName="display" to="block" begin="onlyView.click"/>
+            <set attributeName="display" to="none" begin="click"/>
+        </rect>
+    </a>
+
+    <set id="showHighScoreScreen" attributeName="display" begin="indefinite" to="block" />
+    <set id="hideHighScoreScreen" attributeName="display" begin="indefinite;highOff2.click" to="none" />
+
+</g>
+
+
+/* ************************************************************************* */
+/* ****************************  HELP SCREEN  ****************************** */
+/* ************************************************************************* */
+
+<g id="helpScreen" display="none">
+    <rect x="-2" y="-3" width="784" height="485" fill="beige" fill-opacity="0.96" stroke="maroon" stroke-width="6"/>
+
+    <use x="585" y="40" xlink:href="#bulhole2" />
+    <text x="480" y="50" stroke="#333333" stroke-widht="1" fill="white" font-size="40" font-weight="bolder" font-family="monospace">ABOUT GAME</text>
+    <image xlink:href="pics/lump3.svgz" x="470" y="200" width="220" height="220"/>
+    <image xlink:href="pics/babka.svgz" x="520" y="200" width="250" height="250"/>
+
+    <a><rect id="unDisplayHelp" x="0" y="0" width="100%" height="100%" fill="none" stroke="none" pointer-events="all"/></a>
+
+    <use x="30" y="120" xlink:href="#bulhole" />
+    <use x="30" y="290" xlink:href="#bulhole" />
+    <use x="30" y="420" xlink:href="#bulhole" />
+
+    <text x="65" y="26" stroke="none" font-family="serif" font-weight="normal" font-size="16">
+        <tspan x="50" dx="0" dy="24" font-style="italic" fill="navy" font-weight="bold">Game instructions:</tspan>
+        <tspan x="65" dx="0" dy="20">Kill all the bandits trying to kill you ;-)</tspan>
+        <tspan x="65" dx="0" dy="17">Remeber that you've only six bullets in your Smith&amp;Wesson.</tspan>
+        <tspan x="65" dx="0" dy="17">To reload new magazine use key SPACE or MIDDLE mouse button.</tspan>
+        <tspan x="65" dx="0" dy="17">Do not shoot innocent people sometimes moving between bandits</tspan>
+        <tspan x="65" dx="0" dy="17">(they have no gun). It will reduce your score points slightly!</tspan>
+        <tspan x="65" dx="0" dy="17">Do not kill nor grandmother, cat, vultures or snake, until they not talk to you.</tspan>
+        <tspan x="65" dx="0" dy="17">If you kill them when talking, it is great points bonus or otherwise great loss.</tspan>
+        <tspan x="65" dx="0" dy="17" fill="red">To change graphics quality/improve speed, use small green quarter in top right corner (anytime).</tspan>
+        <tspan x="50" dx="0" dy="24" font-style="italic" fill="navy" font-weight="bold">Credits:</tspan>
+        <tspan x="65" dx="0" dy="20">Graphics based on F. Chmelar &amp; Lucky Luke Series (and also Marek R. :-)</tspan>
+        <tspan x="65" dx="0" dy="17">Music "pickin6.mid" from uknown author &amp; Slavici z Madridu (W. M.)</tspan>
+        <tspan x="65" dx="0" dy="17">Sounds taken mostly from many old Amiga game modules ;-)</tspan>
+        <tspan x="65" dx="0" dy="17" font-weight="bold">Special Cowboy's thanx to following programs:</tspan>
+        <tspan x="65" dx="0" dy="17"> ... "Potrace" by <a xlink:href="http://potrace.sourceforge.net/" fill="maroon">Peter Selinger
+                                                        <set attributeName="fill" to="blue" begin="mouseover"/>
+                                                        <set attributeName="fill" to="maroon" begin="mouseout"/>
+                                                       </a> (vectorizing BW bitmaps)</tspan>
+        <tspan x="65" dx="0" dy="17"> ... "Sodipodi" by <a xlink:href="http://www.sodipodi.com/" fill="maroon">Lauris Kaplinski &amp; others 
+                                                         <set attributeName="fill" to="blue" begin="mouseover"/>
+                                                         <set attributeName="fill" to="maroon" begin="mouseout"/>
+                                                        </a> (colorizing many images)</tspan>
+        <tspan x="65" dx="0" dy="17"> ... "GoldWave" by <a xlink:href="http://www.goldwave.com/" fill="maroon">GoldWave Inc.
+                                                         <set attributeName="fill" to="blue" begin="mouseover"/>
+                                                         <set attributeName="fill" to="maroon" begin="mouseout"/>
+                                                        </a> (editing sounds)</tspan>
+        <tspan x="65" dx="0" dy="17"> ... "beez::svg bezier animator" by <a xlink:href="http://beez.sourceforge.net/" fill="maroon">Philippe Elsass
+                                                         <set attributeName="fill" to="blue" begin="mouseover"/>
+                                                         <set attributeName="fill" to="maroon" begin="mouseout"/>
+                                                        </a> (path based animations)</tspan>
+        <tspan x="65" dx="0" dy="17"> ... "SVG Convertor" by <a xlink:href="http://www.guide.cz/svg/" fill="maroon">Marek Raida
+                                                              <set attributeName="fill" to="blue" begin="mouseover"/>
+                                                              <set attributeName="fill" to="maroon" begin="mouseout"/>
+                                                             </a> (merge of all parts together)</tspan>
+        <tspan x="50" dx="0" dy="24" fill="navy" font-style="italic" font-weight="bold">Author:</tspan>
+        <tspan x="65" dx="0" dy="20"><a xlink:href="mailto:raida@guide.cz" fill="maroon">Marek Raida
+                                      <set attributeName="fill" to="blue" begin="mouseover"/>
+                                      <set attributeName="fill" to="maroon" begin="mouseout"/>
+                                     </a></tspan>
+        <tspan x="65" dx="0" dy="17">December 2003 - February 2004</tspan>
+        <tspan x="65" dx="0" dy="17">Based on many and many existing shooting games :-)</tspan>
+    </text>
+
+    <set id="showHelpScreen" attributeName="display" begin="displayHelp.click" to="block" />
+    <set id="hideHelpScreen" attributeName="display" begin="unDisplayHelp.click" to="none" />
+
+</g>
+
+
+
+<text x="322" y="220" stroke="none" fill="#004000" font-size="16" font-weight="bold">... please wait ...
+    <set attributeName="display" to="none" begin="2.5s"/>
+</text>
+
+<!-- quality options -->
+<rect id="q_SET_BACK" x="757" y="5" width="20" height="13" fill="green" stroke="none"/>
+<text id="q_SET_TEXT" x="760" y="15" stroke="none" fill="white" font-size="10" font-family="sans-serif">LQ</text>
+<rect x="757" y="5" width="20" height="13" fill="none" stroke="none" onclick="setQuality(evt)" pointer-events="all"/>
+
+<!-- quality options -->
+<rect id="q_MUSIC_BACK" x="757" y="20" width="20" height="13" fill="navy" stroke="none"/>
+<text x="758" y="29.5" stroke="none" fill="white" font-size="10" font-family="sans-serif" font-stretch="extra-condensed">music</text>
+<polygon id="q_MUSIC_SKRT" points="757,20 777,33 777,20 757,33" fill="none" stroke="black" visibility="hidden"/>
+<rect x="757" y="20" width="20" height="13" fill="none" stroke="none" onclick="setMusic(evt)" pointer-events="all"/>
+
+<image xlink:href="http://www.google-analytics.com/__utm.gif?utmwv=4.7.1&amp;utmn=21830374&amp;utmhn=svg.kvalitne.cz&amp;utmcs=UTF-8&amp;utmsr=1920x1080&amp;utmsc=24-bit&amp;utmul=en-us&amp;utmje=1&amp;utmfl=10.0%20r45&amp;utmdt=SVG%C2%A0%E2%80%94%C2%A0It%27s%20in%20your%20hands...&amp;utmhid=1377849700&amp;utmr=-&amp;utmp=%2Findex2.htm&amp;utmac=UA-11950721-1&amp;utmcc=__utma%3D251371972.1884550355.1260220320.1272562824.1272576758.56%3B%2B__utmz%3D251371972.1263752798.41.3.utmcsr%3Dgoogle%7Cutmccn%3D(organic)%7Cutmcmd%3Dorganic%7Cutmctr%3Dsvg%2520smil%2520demo%3B" width="1" height="1"/>
+
+</svg>

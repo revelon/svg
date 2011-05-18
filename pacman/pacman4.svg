@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>Pacman 4, by marek.raida@gmail.com</title>
+<script type="text/ecmascript" xlink:href="../fakesmile/smil.user.js"/>
+
+<linearGradient id="gr" gradientTransform="rotate(0)" gradientUnits="objectBoundingBox">
+  <animateTransform attributeName="gradientTransform" type="rotate" values="270 0.5 0.5; 290 0.5 0.5; 270 0.5 0.5" dur="1s" repeatCount="indefinite" begin="0"/>
+	<stop offset="0" stop-color="#0f0"/>
+	<stop offset="0.4999" stop-color="#0f0"/>
+	<stop offset="0.5" stop-color="#fff" stop-opacity="0"/>
+	<stop offset="1" stop-color="#fff" stop-opacity="0"/>
+</linearGradient>
+<g transform="translate(90 90)">
+  <circle r="80" fill="url(#gr)"/>
+  <circle r="80" fill="url(#gr)" transform="scale(1 -1)"/>
+  <circle cy="-35" r="7" fill="#000" stroke="white" stroke-width="3"/>
+</g>
+
+</svg>

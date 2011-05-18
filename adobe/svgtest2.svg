@@ -1,0 +1,149 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" font-family="'Arial Narrow',Arial,sans-serif">
+<title>Adobe SVG Viewer Installation Test</title>
+<desc>Thank you for choosing the Adobe SVG Viewer. Learn more about Adobe and SVG at http://www.adobe.com/svg.</desc>
+<!--  NOTICE: [1999-2001] Adobe Systems Incorporated.  Adobe hereby grants you the rights to reproduce, modify and distribute this file and its contents, not including any fonts, audio files or raster images included or embedded in or linked to this file, (the "Software"), and to grant such rights to other parties subject to the following:  This notice shall be included in any copy of the Software or any portion thereof.  THE SOFTWARE IS PROVIDED TO YOU AS-IS, WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT.  IN NO EVENT SHALL ADOBE BE LIABLE TO YOU OR ANY OTHER PARTY FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE.
+Modified By Marek Raida
+-->
+<defs>
+	<radialGradient id="mygradient1" cx="0.5" cy="0.50" r="0.5" fx="0.25" fy="0.25" gradientUnits="objectBoundingBox">
+		<stop id="1stop1" offset="0.0" style="stop-color:cyan;stop-opacity:0;"/>
+		<stop id="1stop2" offset="0.1" style="stop-color:cyan;stop-opacity:.25;"/>
+		<stop id="1stop3" offset="1.1" style="stop-color:cyan;stop-opacity:0;"/>
+	</radialGradient>
+	<radialGradient id="mygradient2" cx="0.1" cy="0.1" r="1.0" fx="0.25" fy="0.25" gradientUnits="objectBoundingBox">
+		<stop id="2stop1" offset="0.0" style="stop-color:blue;"/>
+		<stop id="2stop2" offset="1.0" style="stop-color:black;"/>
+	</radialGradient>
+	<radialGradient id="mygradient3" cx="0.5" cy="0.5" r="0.5" gradientUnits="objectBoundingBox">
+		<stop id="3stop1" offset="0.0" stop-color="white"/>
+		<stop id="3stop2" offset="1.0" stop-color="white"/>
+		<stop id="3stop3" offset="1.0" stop-color="white"/>
+	</radialGradient>
+	<filter id="DropShadowFilter" filterUnits="objectBoundingBox" x="-50%" y="-50%" width="200%" height="200%">
+		<!--Copyright 2001 Adobe Systems. You may copy, modify, and distribute this file, if you include this notice & do not charge for the distribution. This file is provided "AS-IS" without warranties of any kind, including any implied warranties.-->
+		<feGaussianBlur in="SourceAlpha" stdDeviation="1.5" result="BlurAlpha"/>
+		<feOffset in="BlurAlpha" dx="2" dy="2" result="OffsetBlurAlpha"/>
+		<feMerge>
+			<feMergeNode in="OffsetBlurAlpha"/>
+			<feMergeNode in="SourceGraphic"/>
+		</feMerge>
+	</filter>
+</defs>
+<!-- BLUE CIRCLE, ANIMATED GRADIENT STOPS -->
+<g id="animated_gradient" transform="translate(100 45)">
+	<circle id="gradient_background" cx="0" cy="0" r="30" style="fill:url(#mygradient2)"/>
+	<g id="circle1">
+		<circle cx="0" cy="0" r="30" style="fill:url(#mygradient1)"/>
+	</g>
+	<g id="circle2">
+		<circle cx="0" cy="0" r="30" style="fill:url(#mygradient1)" transform="rotate(120)"/>
+	</g>
+	<g id="circle3">
+		<circle cx="0" cy="0" r="30" style="fill:url(#mygradient1)" transform="rotate(240)"/>
+	</g>
+</g>
+<!-- RASTER IMAGE CIRCLE, ANIMATED ELLIPSES -->
+<image width="60" height="60" xlink:href="data:image/jpg;base64,/9j/4AAQSkZJRgABAgAAZABkAAD/7AARRHVja3kAAQAEAAAAPAAA/+4ADkFkb2JlAGTAAAAAAf/b
+AIQABgQEBAUEBgUFBgkGBQYJCwgGBggLDAoKCwoKDBAMDAwMDAwQDA4PEA8ODBMTFBQTExwbGxsc
+Hx8fHx8fHx8fHwEHBwcNDA0YEBAYGhURFRofHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8f
+Hx8fHx8fHx8fHx8fHx8fHx8f/8AAEQgAPAA8AwERAAIRAQMRAf/EAJwAAAMBAAMBAAAAAAAAAAAA
+AAYHCAQAAgUBAQADAAMBAAAAAAAAAAAAAAADBAUAAQIGEAABAwIEAwUGAwUJAAAAAAABAgMEEQUA
+IRIGMRMUQWEiFQdRcTIjFhfBQlLwgaFiM7GSQ1ODk3QIGBEAAQMDAgQEBAYDAAAAAAAAAQARAiED
+BDESQSITBVFhgTLwoWIUcZGxwdEj4UIG/9oADAMBAAIRAxEAPwCqcYsQNv8A9WrDtNfQIHmF8WkF
+MBtQSGwr4VPuZhsHsHxH2UzwxYxpXD5JbIyY2h4lJLcPq5vCfeERrrcRCt7oOpmC4poNmuSVcurh
+r/Mr+GKIswgKDcfNTTfuXNSYjy+HQTfjudUpU5ukmAg/LltoW42K5hDil6qn254LK8YRdvTigxsi
+Zr/hensu+bhkTXHWr85bpIQnpI8J3Qjv1IyQfcScAF0S90Qj9Iw9simdtz17vdokoh7vYTOiUBcn
+xkhMllJNAt1lPgcT3ooR7DgN7EBrBHsZpFJ6p42y6W66wGbhbpCJUKQnWy+2apUP24jsxPlEgsVS
+jIEOFqxpbS49b/VZjYO2QqOUrvtx1NW1k0OmnxvqHsRXL2mnfjuEXNdFxMsKKPxum5JekT1vmTOk
+LLrr7niOtZqVkqzUrPjh+F4xDBT52BIuV8tkC63e7NsRmlO3CWuqEKrqUo51UT3ZknsxkrsYAzkW
+iFvpmR2xDlUXtjbb7O1jY7ygPILZU8QsuqBUAFAFQSKGmPJZn/TEzPTDAaHirmN2UCA31fUIfv8A
+6PWeS0l/bjq7dKjJKykJW4lRBCgeOtJFPy41gf8ARXSecdQfkR+y3ldng3Idh+SGdw7fu22mZUt2
+Y3MjuJ5kxJQpLoXTMp+KicXMfvdu5SIIl4KXd7VOOrEeK1ekfrF9LXhtMpwjbs9xLc5gq1JaWoUE
+hvvTlrH6e8DFC5IXobtJBK2YSsT26wKrbns8nn8xPI06+bUaNFK6tXClO3E9U1DPr/up/c3qdcnu
+bWFbXDb4LZJ06IyilavZRbus4MIsEGUnKwxLfEl2ltyYmGqQ4gNx3UPhLiAntWgeGmfDBYS3Sql5
+8ooiT0ilxbfutx19RWsx1sMJSK61FSeBr2JThPv2JduY4jbD81UXtOVCN4mZalFSMUNSUNUY0OPJ
+ChQHVQ/wx5WfbpBgY83kvQxyomoNPNbUWtlTDi05ipoltWYIyIJHbhqz2tgSzH8UG5mOUq/U0w2r
+bLYdaIJQoatK6HTxBPb30xzCxdjcBMWquupAxPMpknttxwEKSeU6jmMqHHMmufvGPSEGikAiqe33
+fmf+XOm55856j6d5lTr5Gnmaq/8AG+XXHTcVj8En32+tfly3lAPPKddKjwIqSQTnn+OKAtAhz4Kf
+K6RJh4oi2/ZtsripMmRKdkOAhUNiMlTqClIU4tRUtNEgHwnKuD24gDzS92RJ8vJFm1Ytpte97RNt
+0OTJtYVzFGUEoerTIpQDwzFDmDwGDyjugQ4dkpGe2Ykx19VSUibBajm4oyecR8tlwaVlSRXTQg0N
+BiELRJZXzdDOvN2jvKDfxMZiMKZELTqKglJUV1qQgdgI44Jk4pss/FCxcuN59v8Aqgb1ETargExZ
+8wuOSm/koZJQFHVpolSTo1Eg/FXB7UaVFEG7KutVP+5o0JEDQl5T5bCm4PhCVBkVCdRyqQQa43Oy
+C6y3eLj5oZ6l76W8v/wus59K5auVo4e7AW5PVMvz+i97d8OVtzdd0tnLGqHNfaTUAiiXDpNDxCk0
+ODC4REMgTtAyLrdfr7aZshrp43Ty2wOdPBIUVEVKABTIVpnhmN6MqnVKmzKNBp4LXt2NczIhrtba
+nX3XAyy62S4sqSR4O6nECnDDluUQKmiQvRnIsBVPxext0NW9l+bcVT5jTdURFHWgKy1BOrSDQCgz
+ricO42zIgRYeKoHtt0RBMt0hwS/tV93HD3ahqOpUYsIddlxwoJHLIICHAkV1AlOVeOHMw2+k546J
+HCF0Xfw1XV592+3fqSospbWkvMuUCS5p8WkimRpl34l9aIDcVV6UiX4IN9Qr7CfjC1Mx2mXSpxSl
+EjU0lBrSgrQr7MMC6Ont8UMWj1N3ALH9Mq+0P1P0o5PmXQ8D/kf1f7+XvwPqRZm4I3Tk7vxTR/7Q
+7AMS7tbxYZK7dPCI91LYzakIGlt0j9LiAE+8d+BY1we2WiLk2z7o6pNsWSR0kqSXEOwHkpWiVor4
+0kBISa1Sc6HFAY7GheJU77pxUGMgir07tEmTdWI7MhCVOOoSuI9rRrGZC0ONg6Vo/Krin3VwebRh
+VLRecwyf0y+bg2tdI8e4Rk3Vq5ENtXIKDbiChIGh5ABTwzqKA54kjGhegTE7dvD+FUllTszAkN27
+j/KWG4VKhep0i4NpkIjS5Dsd95xJQlS3knltioGWrTRX78Hy7PUwmpuiAR6a/JK413ZmE12yJH5r
+Hvm9W3byBAjIS7KmUXIXqCVNVSBpoNWfeMR8GxKVSVYy70Y0CUdqtFzvd4TbYDRk3C4vIbaAJUSV
+nIEmuXaT2DFPbqUpu0CtL7U2v7T/AEDVOjpdHUUy6uvN53t/rZ+7LCm/mdN7OVkY3a02672yTbLi
+wmTBltlqQyvgpKv7D2g9hxyCy6IdSz6helV92M3KbYSubtWQsuMzkp1FgnIIkJTTT2eP4T3HLF3B
+y4SG2VJLz/ccO4CJRrEIdsVtt3l633JCkusuIEduleZrrqJoRTLgcUNpBAZSpXQQSSx8E0dp7+tc
+1pi03hh6a4g8tl1xPPcZ8ISpSXPiplX4cu/CGThSiTKFPk6fxO4QkBCYJ8OLLz/VpAW8hue483Zo
+jafLHWNCgVJAGigVUEdhKfDjWFAGNBzHVd505CYc8o9qWjO23butmEw07PmyVK5DXLBkkk9mk+FP
+bVQweeNGIclghWsuUi0Q8lRPox6KQNktG7T0Jd3DIRpqDrTGQrihCu1Z/Moe4ZcYmReiS0Pb+qv4
+1qQDzPN+iamFU0uYxYur3K5S+dp5Ok8zXTTppnqrlSmMWKefUP7EdU75Zz/MqnX5Lo6XXX83N+R/
+t4uYX3TfT9Xw6gdw+04+76fhkum+X1ifLebq7OGunbXR+GLAduZl5w7X5NyKY/ldYv1p5z0Fflcn
+laNX82vxfjhWW+vS2On4bGHW6jJ6enX236FX0d0/AdTpr1X+tzfncf1ZezEDL627+x/2XpsLobf6
+mZGGFE6uYxYv/9k=" transform="matrix(1 0 0 1 30 80)"/>
+<g id="animated_ellipses1" transform="translate(60 110) rotate(-25)" style="stroke:white;stroke-width:0.5;fill:none">
+	<ellipse id="ellipse1" cx="0" cy="0" rx="30" ry="30"/>
+	<ellipse id="ellipse2" cx="0" cy="0" rx="30" ry="30"/>
+</g>
+<g id="animated_ellipses2" transform="translate(60 110) rotate(65)" style="stroke:white;stroke-width:0.5;fill:none">
+	<ellipse id="ellipse3" cx="0" cy="0" rx="30" ry="30"/>
+	<ellipse id="ellipse4" cx="0" cy="0" rx="30" ry="30"/>
+</g>
+<!-- ANIMATED TEXT CIRCLE -->
+<clipPath id="message_area" clipPathUnits="userSpaceOnUse">
+	<circle cx="140" cy="110" r="30"/>
+</clipPath>
+<circle id="message_background" cx="140" cy="110" r="30" fill="url(#mygradient3)"/>
+<g id="animated_text" style="text-anchor:middle;fill:gray;clip-path:url(#message_area)">
+	<text id="u" x="140" y="140" style="font-size:100px">U</text>
+	<g transform="translate(140 90)">
+		<text id="r" x="0" y="50" style="font-size:78px;fill-opacity:0">R</text>
+	</g>
+	<text id="svg" x="240" y="122" style="font-size:29px;fill:#D90000">SVG</text>
+	<g transform="translate(137.5 108)">
+		<g id="n" style="text-anchor:middle;font-size:64px;fill:gray;fill-opacity:0;text-rendering:geometricPrecision" transform="translate(85 -107)">
+			<text x="0" y="-58"><tspan>YOU ARE</tspan><tspan x="0" dy="100">SVG</tspan><tspan x="0" dy="100">ENABLED</tspan></text>
+		</g>
+		<g style="font-size:54px">
+			<text id="logo" x="3" y="22" style="fill:#D90000;fill-opacity:0">b</text>
+		</g>
+	</g>
+<circle id="message_border" cx="140" cy="110" r="30" style="stroke:gray;stroke-width:5;stroke-opacity:.5;fill:none"/>
+</g>
+<text x="100" y="158" style="text-anchor:middle;font-size:12px;fill:#333333;word-spacing:2px">Thank you for installing</text>
+<text x="45" y="180" style="text-anchor:middle;font-size:20px;filter:url(#DropShadowFilter);fill-opacity:.5"><tspan>Adobe</tspan><tspan font-size="8px" y="169">&#xAE;</tspan><tspan y="180" x="135"> SVG Viewer</tspan></text>
+<text x="45" y="180" style="text-anchor:middle;font-size:20px;"><tspan fill="#D90000">Adobe</tspan><tspan fill="#D90000" font-size="8px" y="169">&#xAE;</tspan><tspan fill="#000000" y="180" x="135"> SVG Viewer</tspan></text>
+<!-- ANIMATION ELEMENTS -->
+<animateTransform xlink:href="#circle1" attributeName="transform" type="rotate" values="0;360" begin="0s" dur="10s" repeatDur="indefinite"/>
+<animateTransform xlink:href="#circle2" attributeName="transform" type="rotate" values="0;360" begin="0s" dur="10s" repeatDur="indefinite"/>
+<animateTransform xlink:href="#circle3" attributeName="transform" type="rotate" values="0;360" begin="0s" dur="10s" repeatDur="indefinite"/>
+<animate xlink:href="#1stop1" attributeName="offset" values="0.0;1.0;0.0" begin="0s" dur="5s" repeatCount="indefinite"/>
+<animate xlink:href="#1stop2" attributeName="offset" values="0.1;1.0;0.1" begin="0s" dur="5s" repeatCount="indefinite"/>
+<animate xlink:href="#ellipse1" attributeName="rx" values="30;0;30" begin="0s" dur="3s" repeatCount="indefinite"/>
+<animate xlink:href="#ellipse2" attributeName="rx" values="30;0;30" begin="1.6s" dur="3s" repeatCount="indefinite"/>
+<animate xlink:href="#ellipse3" attributeName="rx" values="30;0;30" begin="0.8s" dur="3s" repeatCount="indefinite"/>
+<animate xlink:href="#ellipse4" attributeName="rx" values="30;0;30" begin="2.4s" dur="3s" repeatCount="indefinite"/>
+<animate id="start" xlink:href="#u" attributeName="font-size" to="100" begin="1s" dur="1s" repeatCount="1" fill="freeze"/>
+<animate xlink:href="#u" attributeName="fill-opacity" to="0" begin="start.begin+1s" dur="1s" repeatCount="1" fill="freeze"/>
+<animate xlink:href="#r" attributeName="fill-opacity" values="0;0;1;1;0" begin="start.begin+1s" keyTimes="0;.25;.50;.75;1" dur="4s" repeatCount="1" fill="freeze"/>
+<animateTransform xlink:href="#r" attributeName="transform" type="rotate" values="-180;0" dur="1s" begin="start.begin+1s" repeatCount="1" fill="freeze"/>
+<animateTransform xlink:href="#svg" attributeName="transform" type="translate" values="0 0;0 0;-100 0;-100 0;-200 0" keyTimes="0;.25;.50;.75;1" dur="4s" begin="start.begin+3s" repeatCount="1" fill="freeze"/>
+<animate xlink:href="#n" attributeName="fill-opacity" to="1" begin="start.begin+6s" dur="1s" repeatCount="1" fill="freeze"/>
+<animateTransform xlink:href="#n" attributeName="transform" type="translate" values="0 0;-82.5 107" begin="start.begin+8s" dur="3s" repeatCount="1" additive="sum" fill="freeze"/> 
+<animateTransform xlink:href="#n" attributeName="transform" type="scale" values="1;.15" begin="start.begin+8s" dur="3s" repeatCount="1" additive="sum" fill="freeze"/> 
+<animate xlink:href="#n" attributeName="fill-opacity" to="0" begin="start.begin+14s" dur="1s" repeatCount="1" fill="freeze"/>
+<animate xlink:href="#logo" attributeName="fill-opacity" to="1" begin="start.begin+14s" dur="1s" repeatCount="1" fill="freeze"/>
+<set xlink:href="#3stop3" attributeName="stop-color" to="gray" begin="start.begin+15s" repeatCount="1" fill="freeze"/>
+<animate xlink:href="#3stop2" attributeName="offset" values="1.0;0.65;1.0" begin="start.begin+15s" dur="3s" repeatCount="indefinite"/>
+
+<image xlink:href="http://www.google-analytics.com/__utm.gif?utmwv=4.7.1&amp;utmn=21830374&amp;utmhn=svg.kvalitne.cz&amp;utmcs=UTF-8&amp;utmsr=1920x1080&amp;utmsc=24-bit&amp;utmul=en-us&amp;utmje=1&amp;utmfl=10.0%20r45&amp;utmdt=SVG%C2%A0%E2%80%94%C2%A0It%27s%20in%20your%20hands...&amp;utmhid=1377849700&amp;utmr=-&amp;utmp=%2Findex2.htm&amp;utmac=UA-11950721-1&amp;utmcc=__utma%3D251371972.1884550355.1260220320.1272562824.1272576758.56%3B%2B__utmz%3D251371972.1263752798.41.3.utmcsr%3Dgoogle%7Cutmccn%3D(organic)%7Cutmcmd%3Dorganic%7Cutmctr%3Dsvg%2520smil%2520demo%3B" width="1" height="1"/>
+</svg>

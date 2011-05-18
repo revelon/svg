@@ -1,0 +1,108 @@
+<svg id="V74a5684" width="140" height="140" viewBox="0 0 140 140" preserveAspectRatio="xMinYMin" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<animate id="D74a5684" xlink:href="#V74a5684"  dur="indefinite"/>
+	<defs>
+		<rect id="B74a5684" width="140" height="140"/> 
+	</defs>
+	<use xlink:href="#B74a5684"  id="U74a5684" style="fill:#FFFFFF;"/>
+	<g id="G74a8184" transform="matrix(1 0 0 1 70 70)">
+		<svg id="V74a8184" style="overflow:visible;" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+			<animate id="D74a8184" xlink:href="#V74a8184"  dur="indefinite" repeatDur="indefinite"/>
+			<g id="S74a81e4">
+				<g id="P74ab0f4" transform="matrix(1 0 0 1 6 8)" style="display:none;opacity:0.12;">
+					<defs>
+						<image style="display:inline;" width="140" height="140" id="B74ab154" xlink:href="B74ab154.png"  transform="matrix(1 0 0 1 -70 -70)"/>
+					</defs>
+					<use xlink:href="#B74ab154"  id="U74b5044" style="display:inline;fill:none;"/>
+					<animate xlink:href="#P74ab0f4" attributeName="display" attributeType="CSS"  begin="P74a7214.mouseover+1.6667s" dur="1.3333s" fill="freeze" calcMode="discrete" values="inline;inline;inline"  keyTimes="0;
+						0.9999;0.9999" />
+					<animate xlink:href="#P74ab0f4" attributeName="opacity" attributeType="CSS"  begin="P74a7214.mouseover+1.6667s" dur="1.3333s" fill="freeze" values="0.12;1;0;0"  keyTimes="0;0.375;0.625;1" />
+				</g>
+				<g id="P74b29e4" transform="matrix(1 0 0 1 8 3)">
+					<defs>
+						<image width="140" height="140" id="B74b2a44" xlink:href="B74b2a44.png"  transform="matrix(1 0 0 1 -70 -70)"/>
+					</defs>
+					<use xlink:href="#B74b2a44"  id="U74aaeb4" style="fill:none;"/>
+					<animate xlink:href="#P74b29e4" attributeName="opacity" attributeType="CSS"  begin="P74a7214.mouseover" dur="3s" fill="freeze" values="1;1;1;0;0.11;0.2;1"  keyTimes="0;0.0556;0.1111;0.3056;0.8333;0.9167;1" />
+				</g>
+				<g id="P74a8924" transform="matrix(1 0 0 1 13 -2)" style="display:none;opacity:0.06;">
+					<defs>
+						<image style="display:inline;" width="140" height="140" id="B74a8984" xlink:href="B74a8984.png"  transform="matrix(1 0 0 1 -70 -70)"/>
+					</defs>
+					<use xlink:href="#B74a8984"  id="U74b27a4" style="display:inline;fill:none;"/>
+					<animate xlink:href="#P74a8924" attributeName="display" attributeType="CSS"  begin="P74a7214.mouseover+0.8333s" dur="2.1667s" fill="freeze" calcMode="discrete" values="inline;inline;inline"  keyTimes="0;0.9999;0.9999" />
+					<animate xlink:href="#P74a8924" attributeName="opacity" attributeType="CSS"  begin="P74a7214.mouseover+0.8333s" dur="2.1667s" fill="freeze" values="0.06;0.99;0;0"  keyTimes="0;0.2308;0.3846;1" />
+				</g>
+				<g id="P74a8474">
+					<defs>
+						<path id="B74a84d4" d="M0,75q-31.07,0-53.04-21.96Q-75,31.07-75,0q0-31.07,21.96-53.04Q-31.07-75,0-75q31.07,0,53.04,21.96Q75-31.07,75,0q0,31.07-21.96,53.04Q31.07,75,0,75z M5.44-67.23q-27.85,0-47.54,19.69Q-61.79-27.85-61.79,0q0,27.85,19.69,47.54
+							q19.69,19.69,47.54,19.69q27.85,0,47.54-19.69Q72.67,27.85,72.67,0q0-27.85-19.69-47.54Q33.29-67.23,5.44-67.23z"/>
+					</defs>
+					<use xlink:href="#B74a84d4"  id="U74a86e4" style="fill:#CC0033;"/>
+					<animate xlink:href="#U74a86e4" attributeName="fill" attributeType="CSS"  begin="P74a7214.mouseover" dur="indefinite" fill="freeze" values="#CC0033" />
+				</g>
+			</g>
+		</svg>
+	</g>
+	<g id="P74a7b74" transform="matrix(1 0 0 1 70 69)">
+		<svg id="V74a7b74" style="overflow:visible;" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+			<defs>
+				<path id="B74a7bd4" d="M-73,73q0-146,0-146q146,0,146,0q0,146,0,146q-146,0-146,0z M4.74-62.78q-26.16,0-44.65,18.49Q-58.4-25.8-58.4,0.37q0,26.16,18.49,44.65q18.49,18.49,44.65,18.49q26.16,0,44.65-18.49Q67.89,26.53,67.89,0.37q0-26.16-18.49-44.65
+					Q30.91-62.78,4.74-62.78z"/>
+			</defs>
+			<defs>
+				<filter id="F74a7f44" filterUnits="objectBoundingBox" x="-4.0816%" y="-4.0816%" width="109.1837%" height="109.1837%">
+					<feOffset  id="F74a7f44_3000" in="SourceGraphic" dx="0" dy="1" result="a74a7f44"/>
+					<feGaussianBlur  id="F74a7f44_4000" in="a74a7f44" stdDeviation="3" result="a74a7f44"/>
+				</filter>
+			</defs>
+			<use xlink:href="#B74a7bd4"  id="U74a7f44" style="fill-opacity:0.75;filter:url(#F74a7f44);"/>
+			<use xlink:href="#B74a7bd4"  id="U74a7de4" style="fill:#FFFFFF;"/>
+		</svg>
+	</g>
+	<g id="P74a76c4" transform="matrix(1 0 0 1 70 70)">
+		<defs>
+			<path id="B74a7724" d="M0,68q-28.17,0-48.09-19.91Q-68,28.17-68,0q0-28.17,19.91-48.09Q-28.17-68,0-68q28.17,0,48.09,19.91Q68-28.17,68,0q0,28.17-19.91,48.09Q28.17,68,0,68z M4.93-60.95q-25.25,0-43.1,17.85Q-56.02-25.25-56.02,0q0,25.25,17.85,43.1
+				q17.85,17.85,43.1,17.85q25.25,0,43.1-17.85Q65.89,25.25,65.89,0q0-25.25-17.85-43.1Q30.19-60.95,4.93-60.95z"/>
+		</defs>
+		<use xlink:href="#B74a7724"  id="U74a7934" style="fill:#CC0033;"/>
+		<animate xlink:href="#U74a7934" attributeName="fill" attributeType="CSS"  dur="3s" fill="freeze" values="#CC0033;#CC0033" />
+	</g>
+<!--a xlink:href="javascript:OpenWindow('/svg/demos/vbs/html/frameset.html',800,630,'scrollbars=yes,menubar=no,toolbar=no,location=no,status=no,resizable=yes');"-->
+	<g id="P74a7214" transform="matrix(1 0 0 1 70 70)" style="opacity:0;">
+		<svg id="V74a7214" style="overflow:visible;" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+			<defs>
+				<ellipse id="B74a7274" pointer-events="visible" transform="matrix(1 0 0 1 -68 -68)" cx="68.5" cy="68.5" rx="68.5" ry="68.5"/> 
+			</defs>
+			<use xlink:href="#B74a7274"  id="U74a7484" style="fill:#FFFFBF;"/>
+		</svg>
+	</g>
+<!--/a-->
+	<g id="G74a5b24" transform="matrix(1 0 0 1 91 84)">
+		<g id="S74a5b84">
+			<g id="P74a6c24" transform="matrix(1 0 0 1 -108 -5)">
+				<defs>
+					<rect id="B74a6c84" transform="matrix(1 0 0 1 -15 -112)" width="31" height="225"/> 
+				</defs>
+				<use xlink:href="#B74a6c84"  id="U74a6fd4" style="fill:#FFFFFF;"/>
+			</g>
+			<g id="P74a6774" transform="matrix(1 0 0 1 0 -117)">
+				<defs>
+					<rect id="B74a67d4" transform="matrix(1 0 0 1 -138 -29)" width="276" height="59"/> 
+				</defs>
+				<use xlink:href="#B74a67d4"  id="U74a69e4" style="fill:#FFFFFF;"/>
+			</g>
+			<g id="P74a62c4" transform="matrix(1 0 0 1 94 0)">
+				<defs>
+					<rect id="B74a6324" transform="matrix(1 0 0 1 -21 -110)" width="43" height="220"/> 
+				</defs>
+				<use xlink:href="#B74a6324"  id="U74a6534" style="fill:#FFFFFF;"/>
+			</g>
+			<g id="P74a5e14" transform="matrix(1 0 0 1 9 113)">
+				<defs>
+					<rect id="B74a5e74" transform="matrix(1 0 0 1 -121 -32)" width="242" height="65"/> 
+				</defs>
+				<use xlink:href="#B74a5e74"  id="U74a6084" style="fill:#FFFFFF;"/>
+			</g>
+		</g>
+	</g>
+</svg>

@@ -1,0 +1,114 @@
+<svg viewBox="0 0 210 150" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" stroke-linejoin="round" xmlns:html="http://www.w3.org/1999/xhtml">
+  <title>Xmas Tree Demo 1.0 with audio, by Marek Raida</title>
+  <desc>Original clipart from: http://upload.wikimedia.org/wikipedia/commons/c/c3/Smiling_Christmas_Tree.svg, modified a lot, audio is live record of classical Czech Christmas Carol</desc>
+  <script type="text/ecmascript" xlink:href="../fakesmile/smil.user.js"/>
+
+  <html:audio src="narodilse.ogg" autoplay="true"/>
+ 
+  <radialGradient id="ban1" gradientUnits="objectBoundingBox" cx="0.66" cy="0.66">
+    <stop offset="0" stop-color="red"/>
+    <stop offset="1" stop-color="maroon"/>
+  </radialGradient>
+
+  <radialGradient id="ban2" gradientUnits="objectBoundingBox" cx="0.66" cy="0.66">
+    <stop offset="0" stop-color="cyan"/>
+    <stop offset="1" stop-color="navy"/>
+  </radialGradient>
+
+  <radialGradient id="ban3" gradientUnits="objectBoundingBox" cx="0.66" cy="0.66">
+    <stop offset="0" stop-color="white"/>
+    <stop offset="1" stop-color="gray"/>
+  </radialGradient>
+
+  <radialGradient id="ban4" gradientUnits="objectBoundingBox" cx="0.66" cy="0.66">
+    <stop offset="0" stop-color="white"/>
+    <stop offset="1" stop-color="gold"/>
+  </radialGradient>
+
+  <radialGradient id="ban4" gradientUnits="objectBoundingBox" cx="0.66" cy="0.66">
+    <stop offset="0" stop-color="yellow"/>
+    <stop offset="1" stop-color="gold"/>
+  </radialGradient>
+
+  <radialGradient id="ban5" gradientUnits="objectBoundingBox" cx="0.66" cy="0.66">
+    <stop offset="0" stop-color="white"/>
+    <stop offset="1" stop-color="green"/>
+  </radialGradient>
+
+  <radialGradient id="ban6" gradientUnits="objectBoundingBox" cx="0.66" cy="0.66">
+    <stop offset="0" stop-color="white"/>
+    <stop offset="1" stop-color="magenta"/>
+  </radialGradient>
+
+
+  <polygon id="trunk" fill="brown" stroke="none" points="96.0686,122.431 106.315,147.023 114.513,122.724 104.852,115.99"/>
+  <path id="tree" fill="#18A842" stroke="#006D39" stroke-width="4" d="M106.009 121.004c-23.3888,12.0476 -76.9108,15.4472 -105.26,12.2958 28.9653,-8.8335 49.2766,-27.4449 65.0943,-49.4254 -13.9741,6.045 -24.5599,8.629 -36.3346,5.8749 19.1279,-7.894 38.4278,-15.9453 55.3471,-48.1312 -15.0817,9.785 -22.8623,7.5967 -31.5176,5.4025 18.3519,-3.2846 38.2616,-19.5664 52.0857,-45.2107 13.824,24.7593 32.2699,42.5049 50.6218,45.7896 -8.6553,2.1941 -16.4359,4.3824 -31.5176,-5.4026 16.9193,32.1859 36.2192,40.2372 55.3471,48.1313 -11.7747,2.754 -22.3605,0.17 -36.3347,-5.875 15.8178,21.9805 36.1291,40.5919 65.0944,49.4254 -28.3496,3.1514 -79.2367,-0.541 -102.626,-12.8746z"/>
+
+  <ellipse fill="white" stroke="#006D39" stroke-width="2.3" cx="96" cy="64" rx="8" ry="0.5">
+    <animate id="leftEye" attributeName="ry" from="0.5" to="10" dur="1s" begin="banka1.end+1s" fill="freeze"/>
+    <animate attributeName="ry" values="10; 12; 10" dur="3s" begin="centerEyes.end+1s" fill="freeze"/>
+  </ellipse>
+  <ellipse fill="white" stroke="#006D39" stroke-width="2.3" cx="118" cy="64" rx="8" ry="0.5">
+    <animate id="rightEye" attributeName="ry" from="0.5" to="10" dur="1s" begin="leftEye.begin+0.2s" fill="freeze"/>
+    <animate attributeName="ry" values="10; 12; 10" dur="3s" begin="centerEyes.end+1s" fill="freeze"/>
+  </ellipse>
+
+  <g opacity="0">
+    <circle fill="white" stroke="black" stroke-width="4.3" cx="98" cy="66" r="3"/>
+    <circle fill="white" stroke="black" stroke-width="4.3" cx="120" cy="66" r="3"/>
+    <animate id="pupils" attributeName="opacity" from="0" to="1" dur="1s" begin="rightEye.end+0.5s" fill="freeze"/>
+    <animateTransform attributeName="transform" type="translate" to="-5 -2" begin="banka2.end" repeatCount="1" dur="0.7s" fill="freeze"/>
+    <animateTransform attributeName="transform" type="translate" to="0 3" begin="banka3.end" repeatCount="1" dur="0.7s" fill="freeze"/>
+    <animateTransform attributeName="transform" type="translate" to="-4 2" begin="banka4.end" repeatCount="1" dur="0.7s" fill="freeze"/>
+    <animateTransform attributeName="transform" type="translate" to="1 -2" begin="banka5.end" repeatCount="1" dur="0.7s" fill="freeze"/>
+    <animateTransform attributeName="transform" type="translate" to="-3 2" begin="banka6.end" repeatCount="1" dur="0.7s" fill="freeze"/>
+    <animateTransform id="centerEyes" attributeName="transform" type="translate" to="-2 -1" begin="banka6.end+2.5s" repeatCount="1" dur="1s" fill="freeze"/>
+  </g>
+
+  <path id="mouth" stroke="#006D39" opacity="0" fill="black" stroke-width="2.5" d="M89.335 88.7627c6.1481,0.9759 12.3553,4.2221 18.4442,2.9277 7.0565,-1.5002 12.4912,-7.2215 18.737,-10.8323 -3.5132,7.4168 -4.0693,17.2019 -10.5396,22.2501 -4.2492,3.3153 -11.3568,1.0912 -16.1021,-1.4638 -4.8847,-2.6302 -7.0263,-8.5879 -10.5395,-12.8817z">
+    <animate id="showMouth" attributeName="opacity" from="0" to="1" dur="7s" begin="banka4.end" fill="freeze"/>
+    <animate attributeName="stroke-width" values="2.5; 1.5; 3.5; 2.5" dur="3s" begin="centerEyes.end+3s" repeatCount="1" fill="freeze"/>
+  </path>
+
+  <g transform="translate(80 60)" opacity="0">
+    <animate id="banka1" attributeName="opacity" from="0" to="1" dur="1.5s" begin="3s" fill="freeze"/>
+    <line x1="80" y1="26" x2="80" y2="38" stroke="black"/>
+    <circle cx="80" cy="38" r="9" fill="url(#ban1)" stroke="black"/>
+  </g>
+
+  <g transform="translate(-10 20)" opacity="0">
+    <animate id="banka2" attributeName="opacity" from="0" to="1" dur="1.5s" begin="pupils.end+1.3s" fill="freeze"/>
+    <line x1="80" y1="26" x2="80" y2="38" stroke="black"/>
+    <circle cx="80" cy="38" r="9" fill="url(#ban2)" stroke="black"/>
+  </g>
+
+  <g transform="translate(55 90)" opacity="0">
+    <animate id="banka3" attributeName="opacity" from="0" to="1" dur="1.5s" begin="banka2.end+1.3s" fill="freeze"/>
+    <line x1="80" y1="26" x2="80" y2="38" stroke="black"/>
+    <circle cx="80" cy="38" r="9" fill="url(#ban3)" stroke="black"/>
+  </g>
+
+  <g transform="translate(-30 55)" opacity="0">
+    <animate id="banka4" attributeName="opacity" from="0" to="1" dur="1.5s" begin="banka3.end+1.3s" fill="freeze"/>
+    <line x1="80" y1="26" x2="80" y2="38" stroke="black"/>
+    <circle cx="80" cy="38" r="9" fill="url(#ban5)" stroke="black"/>
+  </g>
+
+  <g transform="translate(60 20)" opacity="0">
+    <animate id="banka5" attributeName="opacity" from="0" to="1" dur="1.5s" begin="banka4.end+1.3s" fill="freeze"/>
+    <line x1="80" y1="26" x2="80" y2="38" stroke="black"/>
+    <circle cx="80" cy="38" r="9" fill="url(#ban4)" stroke="black"/>
+  </g>
+
+  <g transform="translate(0 75)" opacity="0">
+    <animate id="banka6" attributeName="opacity" from="0" to="1" dur="1.5s" begin="banka5.end+1.3s" fill="freeze"/>
+    <line x1="80" y1="26" x2="80" y2="38" stroke="black"/>
+    <circle cx="80" cy="38" r="9" fill="url(#ban6)" stroke="black"/>
+  </g>
+
+  <text x="20" y="30" stroke="#c00" fill="darkgreen" font-family="serif" font-weight="bolder" font-size="30px" stroke-width="2" opacity="0">Merry Xmas!!
+    <animate attributeName="opacity" from="0" to="1" dur="1s" begin="centerEyes.end+4s" fill="freeze"/>
+  </text>
+
+<image xlink:href="http://www.google-analytics.com/__utm.gif?utmwv=4.7.1&amp;utmn=21830374&amp;utmhn=svg.kvalitne.cz&amp;utmcs=UTF-8&amp;utmsr=1920x1080&amp;utmsc=24-bit&amp;utmul=en-us&amp;utmje=1&amp;utmfl=10.0%20r45&amp;utmdt=SVG%C2%A0%E2%80%94%C2%A0It%27s%20in%20your%20hands...&amp;utmhid=1377849700&amp;utmr=-&amp;utmp=%2Findex2.htm&amp;utmac=UA-11950721-1&amp;utmcc=__utma%3D251371972.1884550355.1260220320.1272562824.1272576758.56%3B%2B__utmz%3D251371972.1263752798.41.3.utmcsr%3Dgoogle%7Cutmccn%3D(organic)%7Cutmcmd%3Dorganic%7Cutmctr%3Dsvg%2520smil%2520demo%3B" width="1" height="1"/>
+</svg>

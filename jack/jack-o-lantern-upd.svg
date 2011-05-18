@@ -1,0 +1,424 @@
+<svg height='400' width='600' onload='main(evt);' xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>Jack-o'-Lantern</title>
+	<desc>
+		An interactive Jack-o'-Lantern in SVG and Javascript.
+
+		Use the mouse to carve a face in the pumpkin.
+
+		To do: 
+			save.  This is a big one because we'd sure like it
+			if people didn't feel like they were wasting their time.
+
+		$Id: jack-o-lantern.svg,v 1.9 2001/01/17 08:16:27 eric Exp $
+		
+		Original from http://www.taedium.com/svg/jack-o-lantern.svg.html , slightly modified by marek.raida@gmail.com, to be more compatible
+	</desc>
+
+	<!-- *************************************************************
+	                     SCRIPT (ecmascript, to be precise)
+		 ************************************************************* -->
+	<script type='text/javascript'><![CDATA[
+		var canvas = null;
+		var newpath = null;
+
+		function main( evt ) {
+			canvas = document.getElementById( 'canvas' );
+			return 0;
+		}
+
+			// void reset_pumpkin()
+			//   remove all of the children from canvas (i.e. the "carvings")
+		function reset_pumpkin() {
+			var child;
+
+			while ( canvas.hasChildNodes() ) {
+				canvas.removeChild( canvas.firstChild );
+			}
+		}
+
+			// void mousemove( evt )
+			//   if we're in the middle of drawing, add another point
+			//   and a lineto to the newpath path-element
+		function mousemove( evt ) {
+			if ( newpath ) {
+				var x = evt.clientX;
+				var y = evt.clientY;
+
+				newpath.setAttribute( 'd', 
+					newpath.getAttribute('d') + " " + x + " " + y );
+			}
+		}
+
+			// void mousedown( evt )
+			//   start a new path-element at the current mouse position.
+		function mousedown( evt ) {
+			if ( newpath ) { mouseup( evt ); }
+
+			var x = evt.clientX;
+			var y = evt.clientY;
+
+			newpath = _newpath( x, y );
+			canvas.appendChild( newpath );
+		}
+
+			// void mouseup( evt )
+			//   finish drawing the path by closing it and changing the
+			//   class to the filled-path class.  If we were doing remote
+			//   saving, this would be the time to update the saved path
+			//   data.
+		function mouseup( evt ) {
+			if ( newpath ) {
+				newpath.setAttribute( 'd', 
+					newpath.getAttribute('d') + " z" );
+				newpath.setAttribute( 'class', 'userpath1' );
+				newpath = null;
+			}
+		}
+
+			// Element _newpath( x, y )
+			//  given the mouse position (x, y), return a DOM 2 Element
+			//  with the tagName 'path'.
+		function _newpath( x, y ) {
+			var path = document.createElementNS( 'http://www.w3.org/2000/svg',  'path' );
+			path.setAttribute( 'class', 'userpath0' );
+			path.setAttribute( 'd', 'M ' + x + ' ' + y + ' L ' + x + ' ' + y );
+
+			return path;
+		}
+	]]></script>
+
+
+	<!-- ************************************************************
+					STYLE a la css
+		 ************************************************************ -->
+	<style type='text/css'><![CDATA[
+		.userpath0 { stroke: #822; fill: none; }
+		.userpath1 { fill: url(#candle01); fill-rule: nonzero; 
+			stroke: black; stroke-width: 1; }
+
+		.pumpkin { fill: orange; stroke: none; stroke-width: 0.5; }
+		.pumpkinOutline { fill: none; stroke: black; stroke-width: 0.5; }
+
+		.background { fill: url(#bg_grad); }
+		.textGreeting { font-size: 72px; fill: red; opacity: 0.4; font-family: sans-serif;}
+
+		.menuText { font-size: 18pt; fill: white; opacity: 0.8; 
+			text-anchor: middle; }
+		.menuOff { fill: #212985; stroke: #000; stroke-width: 0.5; }
+		.menuOn  { fill: #333dca; stroke: #000; stroke-width: 0.5; }
+		.menuIcon { fill: none; stroke: black; stroke-width: 0.5; }
+	]]></style>
+
+
+	<!-- ************************************************************
+					 DEFS
+		 ************************************************************ -->
+	<defs>
+		<!-- PUMPKIN DEFS -->
+		<g id='pumpkin_skin' 
+			style='fill: none; stroke: black; stroke-width: 0.1;'>
+			<path d="M 13.664 1.9 C 11.214,2.7 9.36405,3.85 8.11405,6.2"/>
+			<path d="M 8.11405 6.25 C 6.51405,8.2 4.66405,10.2 4.51405,13.2"/>
+			<path d="M 4.46405 13.25 C 3.71405,16.6 3.71405,19.5 
+				4.41405,22.25"/>
+			<path d="M 4.46405 22.25 C 5.71405,24.55 6.76405,26.1
+				8.56405,27.05"/>
+			<path d="M 8.56405 27.05 C 9.66405,27.7 10.6307,28.15 11.664,28.7"/>
+			<path d="M 15.214 3 C 13.964,4.4 12.914,6 12.414,7.85"/>
+			<path d="M 12.414 7.85 C 11.764,10.55 11.014,13.25 11.114,16.1"/>
+			<path d="M 11.114 16.15 C 10.914,18.8 11.764,21.3 12.214,23"/>
+			<path d="M 14.764 28.75 C 16.564,27.05 17.614,25.05 18.114,22.55"/>
+			<path d="M 18.114 22.55 C 19.064,20.7 19.664,18.9 19.714,16.85"/>
+			<path d="M 19.714 16.85 C 19.864,15.7 19.814,14.05 19.464,13.15"/>
+			<path d="M 17.814 2.15 C 20.264,2.55 22.014,4.15 23.114,6.25"/>
+			<path d="M 23.114 6.25 C 24.714,7.3 25.464,9.25 26.114,11.9"/>
+			<path d="M 26.114 11.9 C 26.464,14.15 26.264,16.15 25.914,18.6"/>
+			<path d="M 25.914 18.6 C 25.764,20.2 24.914,21.5 23.864,22.9"/>
+		</g>
+
+		<path id='pumpkin_stem' 
+			style='fill: brown; stroke: black; stroke-width: 0.3;'
+			transform='translate(1 2)'
+			d="M 13.6108 1.69782 C 12.9608,0.297825
+			13.2108,-0.952175 13.7608,-1.75218
+			14.5942,-2.53551 15.4275,-3.31884
+			16.2608,-4.10218 16.4775,-3.80218 16.6942,-3.50218
+			16.9108,-3.20218 16.5608,-2.60218 16.2108,-2.00218
+			15.8608,-1.40218 15.3608,-0.202175 15.9608,1.24782
+			17.0608,2.09782"/>
+
+		<path id='pumpkin_path' 
+			d="M 15.4 2.75 C 16.7,2.7 17.25,1.55 18.9,1.7 20.8,1.8
+			22.85,2 23.7,3.25 25.2,4.45 26.55,5.6 27.35,7 28.4,8.8
+			29.25,10.4 29.4,12.2 29.75,14.3 29.9,16.35 29.55,18.4
+			29,20.55 28.25,22.3 27,24.1 25.5,25.75 23.7,27.25
+			21.8,28.2 20.25,28.8 18.5,29.25 16.75,29.3 14.8167,29.2167
+			12.85,29.25 11.05,29.05 8.65,28.4 6.7,27.3 5.15,25.65
+			3.9,23.95 2.15,22.3 1.7,20.5 0.85,17.7 0.75,15.05
+			1.1,12.85 1.35,10.75 1.85,9 2.7,7.55 3.7,5.85 5,4.45
+			6.45,3.65 7.65,2.8 8.85,1.95 10.15,1.85 11.35,1.6
+			12.35,1.5 13.4,1.7 14.8,1.65 14.85,2.3 15.4,2.75 z"/>
+
+		<radialGradient id='candle01' cx='400' cy='260' r='300'
+			gradientUnits='userSpaceOnUse'>
+			<stop offset='0%' style='stop-color: #fff'/>
+			<stop offset='2%' style='stop-color: #fff'/>
+			<stop offset='20%' style='stop-color: #ff0'/>
+			<stop offset='100%' style='stop-color: #aa0;'/>
+		</radialGradient>
+		<!-- END PUMPKIN DEFS -->
+
+		<!-- FILTER DEFS: this slows down the interaction too much -->
+		<filter id='lighting'>
+			<feGaussianBlur in='SourceAlpha' stdDeviation='3' result='blur'/>
+
+				<!-- note that the lightColor attribute is no longer
+					valid, use the style lighting-color property instead -->
+			<feSpecularLighting in='blur' surfaceScale='1'
+				style='lighting-color: #ff3;'
+				lightColor='#ff3'
+				specularConstant='1' specularExponent='10' result='spec'>
+				<fePointLight x='-500' y='-500' z='1850'/>
+			</feSpecularLighting>
+			<feComposite in='spec' in2='SourceAlpha' operator='in'
+				result='clipped_spec'/>
+
+			<feMerge>
+				<feMergeNode in='SourceGraphic'/> 
+				<feMergeNode in='clipped_spec'/>
+			</feMerge>
+		</filter>
+		<!-- END FILTER DEFS -->
+
+		<!-- BACKGROUND DEFS -->
+		<linearGradient id='bg_grad' x1='0' y1='0' x2='0' y2='100%'>
+			<stop offset='0%' style='stop-color: #338;'/>
+			<stop offset='80%' style='stop-color: #000;'/>
+			<stop offset='100%' style='stop-color: #030;'/>
+		</linearGradient>
+		<!-- END BACKGROUND DEFS -->
+
+		<path id='menu_item_bg' transform='scale(5)'
+			d='M 10.4 3.4 C 9.3,1.4 7.2,0.9 6,0.95 2.55,0.95
+			1.05,3.25 1,5.5 1.3,8.35 3.35,9.85 5.95,9.9
+			8.1,9.9 9.2,9 10.35,7.55 10.85,8.8 12.15,9.75
+			13.4,9.9 18.15,9.88333 22.9,9.86667 27.65,9.85
+			30.15,9.5 31.25,7.2 31.1,5.55 31,2.6 29.7,1.35
+			27.3,1 22.8833,1 18.4667,1 14.05,1 12.55,1.25
+			11.15,1.65 10.45,3.35 z'/>
+
+		<g id='icon_save' transform='translate(-1 2) scale(2.5)'
+			class='menuIcon'>
+			<path d="M 5.95,9.3 L 10.55,16.3 18.45,11.5 18.6,10.8
+				13.45,3.8 6.05,8.25 z"/>
+			<line x1="6.05" y1="8.25" x2="10.85" y2="15.65"/>
+			<line x1="10.85" y1="15.65" x2="18.6" y2="10.8"/>
+			<line x1="10.85" y1="15.66" x2="10.55" y2="16.3"/>
+			<path d="M 7.7,7.95 12.55,5 14.85,8.15 10,11 z"/>
+			<path d="M 11.05,12 L 14.55,9.85 16.3,12.15 16.35,12.8
+				12.85,14.95 12.85,14.45 z"/>
+		</g>
+
+		<g id='icon_help2' transform='translate(0 2.5) scale(2.5)'
+			class='menuIcon'>
+			<path d="M 7.75 8.05 C 7.05,7.2 6.95,6.25
+				7.5,5.55 8.33333,4.73333 9.21667,3.91667
+				10.1,3.1 11.45,2.5 12.8,2.55 14.05,3.05
+				14.8667,3.85 15.6833,4.65 16.5,5.45
+				17,6.45 16.8,7.4 16.3,8.15 15.6,8.76667
+				14.9,9.38333 14.2,10 13.5333,10.3167
+				12.8667,10.6333 12.2,10.95 11.75,11.45
+				11.65,12 11.8,12.6 12.2167,13.0667
+				12.6333,13.5333 13.05,14 12,14.3 11.1,14
+				10.15,13.4 9.75,12.1 9.85,10.65 10.5,9.7
+				11.35,9.2 12.2,8.7 13.05,8.2 13.7,7.45
+				13.5,6.8 13.1,6.35 12.4,5.8 11.7,5.85
+				11.05,6.1 10.8667,6.6 10.6833,7.1 10.5,7.6
+				10.55,8.05 10.1,8.3 9.55,8.6 8.85,8.55
+				8.25,8.35 7.75,8.05"/>
+		
+			<circle cx='11.5' cy='15.8' r='1.175'/>
+		</g>
+
+		<path id='icon_erase' transform='translate(0 2.5) scale(2.5)'
+			class='menuIcon'
+			d='M 5.75,7.25 L 8.5,4.4 11.55,7.15 14.6,4.35 17.35,7.1
+			14.5,9.85 17.4,12.45 14.75,15.25 11.65,12.5 8.8,15.3 
+			5.75,12.3 8.6,9.85 z'/>
+
+		<g id='menu_save'>
+			<use xlink:href='#menu_item_bg'/>
+			<use xlink:href='#icon_save'/>
+		</g>
+
+		<g id='menu_help'>
+			<use xlink:href='#menu_item_bg'/>
+			<use xlink:href='#icon_help2'/>
+		</g>
+
+		<g id='menu_erase'>
+			<use xlink:href='#menu_item_bg'/>
+			<use xlink:href='#icon_erase'/>
+		</g>
+
+	</defs>
+
+
+	<!-- ************************************************************
+					 GRAPHICS
+		 ************************************************************ -->
+	<g id='background'>
+		<desc>The background image.  Gradient for ground/sky and an
+			ellipse for the pumpkin's shadow.</desc>
+		<rect class='background' x='0' y='0' width='100%' height='100%'/> 
+		<ellipse style='fill: #000; opacity: 0.7;' cx='500' cy='370'
+			rx='150' ry='30'/>
+	</g>
+
+	<g id='greeting'>
+		<desc>The greeting.  It ought to say "Happy Halloween" or
+			somesuch</desc>
+		<text x='10' y='65' class='textGreeting'>
+			Happy Halloween
+
+			<!-- I commented out the animation because this seems to
+				 slow down the interactive stuff, even after it's done -->
+			<!-- animate attributeName='x' attributeType='XML'
+				from='-600' to='10' begin='0.2s' dur='2s' fill='freeze'/ -->
+		</text>
+	</g>
+
+	<g id='pumpkin'>
+		<desc>The pumpkin.  Use the mouse to 'carve' out a 
+			jack-o-lantern.  Technical note: we can't just set
+			the transform-attribute in the enclosing g-element
+			because that would also hit our canvas, throwing
+			the display of the user-drawing out of whack.  We
+			could set an inverse transform, I suppose, but I
+			haven't tried it yet.</desc>
+
+		<use xlink:href='#pumpkin_stem' 
+			transform='translate(220 30) scale(12)'/>
+
+		<g id='jack-o-lantern'
+				onmousemove='mousemove(evt);'
+				onmousedown='mousedown(evt);'
+				onmouseup='mouseup(evt);'>
+
+			<!-- I'd like to use style='filter: url(#lighting);' but 
+				it's TOO DAMNED SLOW  -->
+			<g id='pumpkin_face' transform='translate(220 30) scale(12)'>
+				<use xlink:href='#pumpkin_path' class='pumpkin'/>
+				<use xlink:href='#pumpkin_skin'/>
+			</g>
+			<g id="canvas"><path class="userpath1" d="M 266 179 L 266 179 266 175 268 166 271 160 275 154 279 148 282 143 286 139 290 135 294 131 321 95 323 93 324 91 326 89 328 87 330 100 330 104 331 109 332 113 334 117 335 123 336 128 338 137 339 141 340 145 341 150 341 153 342 155 343 156 344 159 z"/><path class="userpath1" d="M 375 159 L 375 159 375 158 375 157 375 153 375 150 375 145 376 139 377 134 378 129 380 125 383 118 385 115 387 110 389 105 391 99 394 96 397 90 400 86 403 87 403 89 403 92 406 99 408 103 409 108 411 114 414 119 417 124 423 134 425 137 427 140 429 143 431 146 433 150 436 160 438 165 440 170 441 173 442 175 443 178 444 180 445 181 446 182 447 185 z"/><path class="userpath1" d="M 340 194 L 340 194 335 201 333 207 331 214 327 224 326 227 325 231 323 233 321 238 329 233 333 229 339 227 344 225 355 223 359 222 362 222 365 222 368 221 370 220 373 220 373 222 371 220 371 219 370 219 370 218 363 211 362 209 361 206 360 205 358 204 z"/><path class="userpath1" d="M 280 235 L 280 235 280 237 280 238 280 240 297 254 299 254 303 255 305 256 307 256 310 257 312 258 317 259 319 259 321 260 323 261 329 262 332 263 334 263 335 264 338 265 340 268 340 272 340 275 340 279 340 282 340 289 339 291 338 294 337 296 337 299 337 304 346 306 351 306 363 308 368 308 374 309 382 310 384 310 386 311 388 311 389 312 391 304 391 300 391 296 391 294 391 291 391 288 391 285 391 282 391 279 391 278 391 275 391 273 391 270 391 269 391 267 391 266 391 265 391 264 391 263 393 263 394 263 396 263 399 262 404 260 406 260 409 260 415 258 417 258 420 257 426 256 428 254 431 252 438 247 443 244 448 240 458 234 461 233 466 230 474 223 478 218 482 214 490 206 492 204 495 202 498 200 499 198 502 195 503 201 503 205 502 207 497 217 495 221 490 230 488 233 486 237 482 244 481 247 478 252 474 259 472 263 470 268 465 280 463 283 461 287 458 292 457 294 454 297 452 299 449 303 446 307 427 324 423 325 418 329 415 330 409 334 404 338 385 346 381 348 378 348 374 349 371 349 364 349 359 349 357 349 351 349 349 349 346 349 343 347 342 346 338 344 333 340 330 337 325 332 322 328 317 322 313 320 309 316 307 314 306 313 305 312 301 305 299 304 297 304 296 304 296 302 296 301 z"/><path class="userpath1" d="M 294 301 L 294 301 z"/></g>
+		</g>
+		<use xlink:href='#pumpkin_path' class='pumpkinOutline'
+			transform='translate(220 30) scale(12)'/>
+	</g>
+
+	<g id='menu'>
+		<g id='erase' onclick='reset_pumpkin();' transform='translate(30 150)'>
+			<use xlink:href='#menu_erase' class='menuOff'>
+				<set attributeName='fill' attributeType='CSS'
+					to='#333dca' begin='mouseover'/>
+				<set attributeName='fill' attributeType='CSS'
+					to='#212985' begin='mouseout'/>
+			</use>
+			<text x='100' y='35' class='menuText'>
+				Erase
+			</text>
+		</g>
+
+		<g id='save' onclick='reset_pumpkin();' transform='translate(30 210)'>
+			<use xlink:href='#menu_save' class='menuOff'>
+			<!--
+				<set attributeName='fill' attributeType='CSS'
+					to='#333dca' begin='mouseover'/>
+				<set attributeName='fill' attributeType='CSS'
+					to='#212985' begin='mouseout'/>
+			-->
+			</use>
+			<text x='100' y='35' class='menuText'>
+				Save
+			</text>
+		</g>
+
+		<g id='help' transform='translate(30 270)' onclick="document.getElementById('help_screen').style.display = 'inherit'">
+			<use xlink:href='#menu_help' class='menuOff'>
+				<set attributeName='fill' attributeType='CSS'
+					to='#333dca' begin='mouseover'/>
+				<set attributeName='fill' attributeType='CSS'
+					to='#212985' begin='mouseout'/>
+			</use>
+			<text x='100' y='35' class='menuText'>
+				Help
+			</text>
+		</g>
+	</g>
+
+	<!-- Save not implemented.  I would use some sort of cgi perhaps
+		(or maybe that's just because of my recent perl history :) -->
+	<g transform='translate(90 255) rotate(-40)'>
+		<rect height='20' width='80'
+			style='fill: #933; stroke: #000; stroke-width: 1;'/>
+		<text x='5' y='15' font-family="sans-serif" font-size="8pt">
+			Not available
+		</text>
+	</g>
+
+	<!-- the help screen.  This would be a nice place for a
+		 foreignObject rather than this rat's next of tspans.  -->
+	<g id='help_screen' transform='translate(200 25)' style='display: none;'>
+		<rect width='280' height='350' style='opacity: 0.9; fill: #fff;'/>
+		<text x='140' y='1.5em' 
+				style='font-size: 12pt; text-decoration: underline;
+					text-anchor: middle;'>
+				SVG Jack-o'-Lantern</text>
+
+		<text y='2em' style='font-family: serif; font-size: 8pt;'>
+<tspan x='10' dy='2em'>INSTRUCTIONS: Use your mouse to 'carve'</tspan>
+<tspan x='10' dy='1em'>out a face on the pumpkin.  Push the mouse</tspan>
+<tspan x='10' dy='1em'>button down to start 'cutting' and release it</tspan>
+<tspan x='10' dy='1em'>to finish.  To start over, click on the 'Erase'</tspan>
+<tspan x='10' dy='1em'>menu button.</tspan>
+
+<tspan x='10' dy='2em'>SAVING: Remote saving is not implemented.</tspan>
+<tspan x='10' dy='1em'>If you are using the Adobe SVG viewer, you</tspan>
+<tspan x='10' dy='1em'>can save your work by right-clicking on the</tspan>
+<tspan x='10' dy='1em'>graphic, selecting 'Copy SVG' and then pasting</tspan>
+<tspan x='10' dy='1em'>it into an empty text file.</tspan>
+
+<tspan x='10' dy='2em'>COMING SOON (wait till next year!):</tspan>
+<tspan x='10' dy='1em'>  * animated 'candle'</tspan>
+<tspan x='10' dy='1em'>  * undo previous 'cuts'</tspan>
+<tspan x='10' dy='1em'>  * save/thumbnail/display</tspan>
+<tspan x='10' dy='1em'>  * attach a message/send as a greeting card</tspan>
+
+<tspan x='10' dy='2em'>QUESTIONS, COMMENTS: Feel free to email</tspan>
+<tspan x='10' dy='1em'>me at
+	<a style='fill: blue; text-decoration: underline;'
+	xlink:href='mailto:halloween@taedium.com'>halloween@taedium.com</a>.
+	</tspan>
+
+		</text>
+		<text id='help_screen_close' x='140' y='340'
+			style='fill: blue; text-decoration: underline; 
+				text-anchor: middle;' onclick="document.getElementById('help_screen').style.display = 'none'">
+			Click Here to Close Help</text>
+		<set id='help_screen_on' begin='help.click'
+			attributeName='display' attributeType='CSS' to='inherit'/>
+		<set id='help_screen_off' begin='help_screen_close.click'
+			attributeName='display' attributeType='CSS' to='none'/>
+	</g>
+
+	<g id='copyright'>
+		<text style='fill: yellow; opacity: 0.2;'
+			transform='translate(590 390) rotate(-90)'>
+			<a xlink:href='mailto:halloween@taedium.com'>
+			(c) 2000 Eric Wong
+			</a>
+		</text>
+	</g>
+<image xlink:href="http://www.google-analytics.com/__utm.gif?utmwv=4.7.1&amp;utmn=21830374&amp;utmhn=svg.kvalitne.cz&amp;utmcs=UTF-8&amp;utmsr=1920x1080&amp;utmsc=24-bit&amp;utmul=en-us&amp;utmje=1&amp;utmfl=10.0%20r45&amp;utmdt=SVG%C2%A0%E2%80%94%C2%A0It%27s%20in%20your%20hands...&amp;utmhid=1377849700&amp;utmr=-&amp;utmp=%2Findex2.htm&amp;utmac=UA-11950721-1&amp;utmcc=__utma%3D251371972.1884550355.1260220320.1272562824.1272576758.56%3B%2B__utmz%3D251371972.1263752798.41.3.utmcsr%3Dgoogle%7Cutmccn%3D(organic)%7Cutmcmd%3Dorganic%7Cutmctr%3Dsvg%2520smil%2520demo%3B" width="1" height="1"/>
+</svg>

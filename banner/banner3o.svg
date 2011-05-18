@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="816" height="460">
+
+<g>
+    <image x="-815" y="-20" width="816" height="425" xlink:href="skydiff.jpg"/>
+    <image x="0" y="-20" width="816" height="425" xlink:href="skydiff.jpg"/>
+    <animateTransform attributeName="transform" type="translate" dur="30s" from="0 0" to="816 0" repeatCount="indefinite" begin="0s"/>
+</g>
+
+<linearGradient id="grass" gradientUnits="objectBoundingBox" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#040"/>
+    <stop offset="1" stop-color="green"/>
+</linearGradient>
+
+<linearGradient id="track" gradientUnits="objectBoundingBox" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#995141"/>
+    <stop offset="1" stop-color="#5d1909"/>
+</linearGradient>
+
+<g>
+    <rect x="-816" y="323" width="1632" height="50" fill="url(#grass)"/>
+    <rect x="-816" y="373" width="1632" height="95" fill="url(#track)"/>
+    <line x1="-816" y1="373" x2="816" y2="373" stroke="white" stroke-width="1"/>
+    <line x1="-816" y1="379" x2="816" y2="379" stroke="white" stroke-width="1"/>
+    <line x1="-816" y1="388" x2="816" y2="388" stroke="white" stroke-width="1"/>
+    <line x1="-816" y1="405" x2="816" y2="405" stroke="white" stroke-width="1"/>
+    <line x1="-816" y1="440" x2="816" y2="440" stroke="white" stroke-width="1"/>
+</g>
+
+<g>
+    <g id="trees1" transform="translate(0 -48)">
+        <image x="-50" y="135" width="256" height="256" xlink:href="tree8.png"/>
+        <image x="50" y="150" width="256" height="256" xlink:href="tree8.png"/>
+        <image x="150" y="160" width="256" height="256" xlink:href="tree8.png"/>
+        <image x="300" y="140" width="256" height="256" xlink:href="tree8.png"/>
+        <image x="420" y="155" width="256" height="256" xlink:href="tree8.png"/>
+        <image x="520" y="160" width="256" height="256" xlink:href="tree8.png"/>
+        <image x="600" y="145" width="256" height="256" xlink:href="tree8.png"/>
+    </g>
+    <g transform="translate(-815 -48)">
+        <image x="-50" y="135" width="256" height="256" xlink:href="tree8.png"/>
+        <image x="50" y="150" width="256" height="256" xlink:href="tree8.png"/>
+        <image x="150" y="160" width="256" height="256" xlink:href="tree8.png"/>
+        <image x="300" y="140" width="256" height="256" xlink:href="tree8.png"/>
+        <image x="420" y="155" width="256" height="256" xlink:href="tree8.png"/>
+        <image x="520" y="160" width="256" height="256" xlink:href="tree8.png"/>
+        <image x="600" y="145" width="256" height="256" xlink:href="tree8.png"/>
+    </g>
+    <animateTransform attributeName="transform" type="translate" dur="5s" from="0 0" to="220 0" begin="0s;runnersOut.end" repeatCount="1" keySplines="0 .75 .5 1" calcMode="spline" fill="freeze"/>
+</g>
+
+<g>
+    <line x1="285" y1="373" x2="72" y2="461" stroke="white" stroke-width="2.5"/>
+    <line x1="600" y1="373" x2="570" y2="461" stroke="white" stroke-width="2.8"/>
+    <image x="10" y="230" width="274" height="219" xlink:href="runners8.png"/>
+    <animateTransform attributeName="transform" type="translate" dur="5s" begin="0s;runnersOut.end" from="-290 0" to="50 0" repeatCount="1" fill="freeze" id="runnersIn" keySplines="0 .75 .5 1" calcMode="spline"/>
+</g>
+
+    <text font-size="50px" stroke="none" stroke-width="0" fill="white" font-family="sans-serif" transform="translate(400 -100)">
+      BANNER DEMO
+      <animateTransform attributeName="transform" type="translate" dur="0.25s" begin="runnersIn.end" from="400 -100" to="400 240" repeatCount="1" fill="freeze"/>
+      <animateTransform attributeName="transform" type="translate" dur="0.25s" begin="runnersOut.begin" from="400 240" to="400 -100" repeatCount="1" fill="freeze"/>
+    </text>
+
+<rect x="0" y="0" width="816" height="460" fill="white" fill-opacity="0" stroke="none" stroke-width="0">
+    <animate attributeName="fill-opacity" dur="0.5s" begin="runnersIn.end+3s" from="0" to="1" repeatCount="1" id="runnersOut"/>
+</rect>
+
+</svg>

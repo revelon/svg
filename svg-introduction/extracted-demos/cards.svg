@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>Cards, by marek.raida@gmail.com</title>
+<script type="text/ecmascript" xlink:href="smil.user.js"/>
+<g id="fullhand" transform="translate(150 230) rotate(-30)" fill="red">
+  <g>
+    <rect id="card" x="-50" y="-200" width="100" height="150" fill="#dda" stroke="black" rx="5"/>
+    <text x="-45" y="-180">10</text>
+    <animateTransform id="c1" attributeName="transform" type="rotate" dur="1s" begin="0s;c5.end+3s" repeatCount="1" by="10" fill="freeze"/>
+  </g>
+
+  <g>
+    <use xlink:href="#card"/>
+    <text x="-45" y="-180">J</text>
+    <animateTransform attributeName="transform" type="rotate" dur="2s" begin="c1.begin" repeatCount="1" by="20" fill="freeze"/>
+  </g>
+
+  <g>
+    <use xlink:href="#card"/>
+    <text x="-45" y="-180">Q</text>
+    <animateTransform attributeName="transform" type="rotate" dur="3s" begin="c1.begin" repeatCount="1" by="30" fill="freeze"/>
+  </g>
+
+  <g>
+    <use xlink:href="#card"/>
+    <text x="-45" y="-180">K</text>
+    <animateTransform attributeName="transform" type="rotate" dur="4s" begin="c1.begin" repeatCount="1" by="40" fill="freeze"/>
+  </g>
+  
+  <g>
+    <use xlink:href="#card"/>
+    <text x="-45" y="-180">A</text><text x="30" y="-58">A</text>
+    <g transform="scale(0.5 1)"><rect x="-110" y="-110" width="35" height="35" transform="rotate(45)"/></g>
+    <animateTransform id="c5" attributeName="transform" type="rotate" dur="5s" begin="c1.begin" repeatCount="1" by="50" fill="freeze"/>
+  </g>
+</g>
+</svg>

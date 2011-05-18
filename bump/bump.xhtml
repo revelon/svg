@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <head>
+    <title>SVG Filter's bumpmapping simple demo, by Marek Raida</title>
+      <script>
+        function mov(evt) {
+          document.getElementById("lght").setAttribute("x", evt.clientX);
+          document.getElementById("lght").setAttribute("y", evt.clientY);
+        }
+        function swap(evt) {
+          document.getElementById('bmp').setAttributeNS("http://www.w3.org/1999/xlink", "href", document.getElementById('imageName').value);
+          return false;
+        }
+        function setImg(url) {
+          document.getElementById('bmp').setAttributeNS("http://www.w3.org/1999/xlink", "href", url);
+          return false;
+        }
+      </script>
+  </head>
+  <body>
+    <svg:svg width="440" height="440">
+      <svg:filter id="MyFilter5" filterUnits="objectBoundingBox" x="0%" y="0%" width="100%" height="100%">
+        <svg:feColorMatrix result="pict0" in="SourceGraphic" type="luminanceToAlpha"/>
+        <svg:feSpecularLighting result="pict1" in="pict0" lighting-color="white" specularConstant="0.9" specularExponent="25" surfaceScale="6">
+          <svg:fePointLight id="lght" x="200" y="150" z="188"/>
+        </svg:feSpecularLighting>
+        <svg:feComposite in2="pict1" in="SourceGraphic" operator="out"/>
+      </svg:filter>
+      <svg:image id="bmp" x="0" y="0" height="440" width="440" filter="url(#MyFilter5)" onmousemove="mov(evt)" xlink:href="dragon.jpg"/>
+    </svg:svg>
+    <ul style="cursor:pointer; color: blue">
+    <li onclick="setImg('dragon.jpg')">dragon</li>
+    <li onclick="setImg('armadillo.jpg ')">armadillo</li>
+    <li onclick="setImg('dragon2.jpg')">dragon2</li>
+    <li onclick="setImg('http://www.fallingpixel.com/products/24223/mains/000-3d-model-peugeot%20rcz%202011%20lowpoly%201.jpg')">peugeot</li>
+    <li onclick="setImg('stanford-bunny-cebal-ssh.jpg')">bunny</li>
+    <li onclick="setImg('lucy-vray_28_mil_poly_hdri_gi.jpg')">lucy</li>
+    <li onclick="setImg('http://www.fallingpixel.com/products/5493/mains/Dragon-Male_1.jpg')">dragon male</li>
+    </ul>
+    <form>
+      <input type="text" id="imageName" size="128" value="http://www.fallingpixel.com/products/5493/mains/Dragon-Male_1.jpg"/>
+      <button onclick="return swap()">Swap To Image From URL</button>
+    </form>
+    <p>Small image <strong>experiment with SVG's bump-mapping</strong> bitmap filters. <strong>Only 10 lines of SVG and 3 lines of scripting</strong> are really needed.<br/>
+    Try URL to some other picture, confirm and watch the effect. <strong>Best results are with some 3D models bitmaps</strong>, common photos are not very suitable, but sometimes produce funny effect... ;-)<br/>
+    I preselected some images (mostly from http://graphics.stanford.edu/data/3Dscanrep/ and http://www.fallingpixel.com/products) for you and they are available for clicking below the image with applied filter.<br/>
+    Known to be <strong>working well with Opera and Firefox</strong> browsers, <strong>not Chrome nor MSIE</strong> yet, sorry... :-(<br/><br/>
+    <em>Marek Raida</em></p>
+
+  <script type="text/javascript" src="http://www.google-analytics.com/ga.js"></script>
+  <script type="text/javascript">
+  try {
+  var pageTracker = _gat._getTracker("UA-11950721-1");
+  pageTracker._trackPageview();
+  } catch(err) {}</script>
+  </body>
+</html>

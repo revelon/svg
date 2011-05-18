@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="500" height="380">
+  <g transform="scale(.3) translate(981 650)" id="logo">
+    <g id="node_outline" fill="#000000">
+     <circle cx="300" cy="501.819" r="83.5962"/>
+     <circle cx="300" cy="300" r="167.192"/>
+     <circle cx="157.293" cy="157.293" r="83.5965"/>
+     <circle cx="300" cy="98.1818" r="83.5965"/>
+  
+     <circle cx="442.707" cy="157.293" r="83.5965"/>
+     <circle cx="501.819" cy="300" r="83.5951"/>
+     <circle cx="442.707" cy="442.707" r="83.5944"/>
+     <circle cx="157.293" cy="442.707" r="83.5962"/>
+     <circle cx="98.1815" cy="300" r="83.5962"/>
+    </g>
+    <g id="nodes" fill="gold">
+     <circle cx="300" cy="98.1815" r="45.2521"/>
+     <circle cx="442.707" cy="157.293" r="45.2521"/>
+  
+     <circle cx="501.819" cy="300" r="45.2507"/>
+     <circle cx="442.707" cy="442.707" r="45.2521"/>
+     <circle cx="300" cy="501.819" r="45.2521"/>
+     <circle cx="157.293" cy="442.707" r="45.2486"/>
+     <circle cx="98.1815" cy="300" r="45.25"/>
+     <circle cx="157.293" cy="157.293" r="45.2486"/>
+    </g>
+    <g id="connectors" fill="none" stroke="gold" stroke-width="63.9921">
+     <line x1="300" y1="98.1815" x2="300" y2= "501.819" />
+
+     <line x1="442.707" y1="157.293" x2="157.293" y2= "442.707" />
+     <line x1="501.819" y1="300" x2="98.1815" y2= "300" />
+     <line x1="442.707" y1="442.707" x2="157.293" y2= "157.293" />
+    </g>
+  </g>
+</svg>

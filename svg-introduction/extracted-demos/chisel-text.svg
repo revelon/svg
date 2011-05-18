@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="270" height="120">
+  <title>Chisel Text, by marek.raida@gmail.com</title>
+  <script type="text/ecmascript" xlink:href="smil.user.js"/>
+  <defs>
+    <linearGradient id="grad1" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop stop-color="#406666" offset="0%"/>
+      <stop stop-color="#fcfcfc" offset="25%"/>
+      <stop stop-color="#406666" offset="50%"/>
+      <stop stop-color="#fcfcfc" offset="80%"/>
+      <stop stop-color="#507676" offset="100%"/>
+      <animate attributeName="y2" begin="0s" dur="8s" values="1;.4;1" repeatCount="indefinite"/>
+    </linearGradient>
+    <linearGradient id="grad2" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop stop-color="#fcfcfc" offset="0%"/>
+      <stop stop-color="#406666" offset="25%"/>
+      <stop stop-color="#fcfcfc" offset="50%"/>
+      <stop stop-color="#406666" offset="80%"/>
+      <stop stop-color="#fcfcfc" offset="100%"/>
+      <animate attributeName="y1" begin="0s" dur="4s" values="0;.2;0" repeatCount="indefinite"/>
+    </linearGradient>
+  </defs>
+
+  <g font-size="120px" font-family="sans-serif" font-weight="bold">
+    <text x="10" y="100" fill="url(#grad1)" stroke-width="6" stroke="url(#grad2)">SVG</text>
+    <animate attributeName="opacity" begin="0s" dur="4s" values="1;0.5;1" repeatCount="indefinite"/>
+  </g>
+</svg>

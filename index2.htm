@@ -1,0 +1,1305 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>SVG&nbsp;&mdash;&nbsp;It's in your hands...</title>
+<link rel="stylesheet" type="text/css" href="css/svg-screenx.css" media="screen,projection" />
+<link rel="stylesheet" type="text/css" href="css/svg-print.css" media="print"/>
+</head>
+<body>
+
+<h1>SVG | <span>Dedicated blog...</span></h1>
+
+<hr />
+
+<h2><a href="banner2/banner2.svg">SVG Banner 2</a></h2>
+<div class="date">2011-4-21 | svg | remake</div>
+<p>For maybe a week was on one popular Czech website placed <a href="banner2/Master300x300.swf">quite cool SWF banner</a> and  when I saw it for maybe fifth time, I decided, that it would be good to try 
+to do something similar in SVG as well. I downloaded mentioned SWF <em>(which was clever of me, because it disappeared in two days ;-)</em>, but it took me more than three more days until I started my work on it. 
+There were <strong>three main graphical effects</strong> used in this demo whose I liked I wanted to reproduce them all (and my intention never was to copy the banner with its original content or sequence...):<br/><br/>
+<a href="banner2/banner2.svg"><img src="banner2/banner2.svg" width="200" height="200" align="right" alt="Banner 2"/></a>
+<strong>1. Big text with gradient arriving from different directions, some even with reflection</strong><br/>
+This was the easy part, centered text and gradient were obvious, for reflection I used re-scaling of the text and applied filter with horizontal gradient to it.<br/><br/>
+<strong>2. Todo-paper-sheets with handdrawn text appearing on them</strong><br/>
+I downloaded free web font <a href="http://www.fontsquirrel.com/fonts/Belligerent-Madness">BelligerentMadnessRegular</a>, paper as common rectangular with gradient (I added even pin to it ;-), rotated a bit, with drop shadow using filter effect, and for each line of text there is extra 
+animated mask to do the trick of slowly appearing text.<br/><br/>
+<strong>3. Big logo appears with text which changes its color with slow filling from left to right</strong><br/>
+Logo is very easy scaling effect and for the coloring flash effect I chose to use animated linear gradient which has its begin and end out of visible area/box and beginning and ending colors differ.<br/><br/>
+Well, it <strong>took me me approx. four hours</strong> to do it and I was pretty satisfied with my <a href="banner2/banner2.svg">result</a>. Unfortunately, I discovered that it is <strong>working properly only in Firefox 4 and Opera 11</strong>; all other browsers (and I decided also for FakeSmile compatible version) 
+were looking very very bad. So I started doing ungrateful cross-browser work, which cost me maybe another four hours, but ended with partial success only :-(<br/>
+<strong>Chrome and its masking is something really not working</strong> at all <em>(and is even getting worse and worse with new releases! - there is a bunch of bug reports, but they don't mind... :-( )</em>,<br/> 
+<strong>Safari does not support filters</strong> yet and its masking, although better than that of Chrome, is still not behaving in desired and expectable way.<br/>Many limitations of <strong>FakeSmile + Firefox 3.6</strong> <em>(missing support for set method, not supported multiple values for animateTransform etc.)</em> <strong>made me to do more compatible 
+<a href="banner2/banner2c.svg">version full of compromises</a></strong> and even this shares the same masking flaw with Chrome and Safari. <br/>
+And this unfortunate masking is most probably also reason why <strong>MSIE9 with FakeSmile freezes</strong> after first part and is refusing to continue.<br/><br/>
+<em>Well, and so <strong>this is area where Flash is reallly superior to SVG</strong> - there is only <strong>one</strong> (widely spread and popular) <strong>implementation</strong> and developers can <strong>focus on creating desired graphics effects and not solve cross 
+implementation issues</strong> (what is nothing pleasant, trust me). But... <strong>heads up!</strong> dear friends, <strong>SVG&amp;SMIL implementations are improving still</strong> (with some exceptions, like Chrome's masking capabilities ;-) and 
+there is really logical and comfortable way how to code in SVG and SMIL banners like this... ;-) <strong>Just do not stop trying!! :-))))))</strong></em></p>
+
+ <h2><a href="rotozoomsmil/rotozoomsmil.svg">SVG and SMIL Rotozoomer effect</a></h2>
+<div class="date">2011-4-20 | svg</div>
+<p>If you remember very cool PC demo back from year 1993 from <strong>Future Crew</strong>, there was introduced cool <em>rotozoomer effect,</em>, recently reincarnated to modern web browsers 
+by <a href="http://mrdoob.com/lab/javascript/effects/rotozoomer/00/">mr doob</a> and  then even improved by HTML5 video version by <a href="http://svg-wow.org/blog/2011/03/28/rotozoom-video/">Erik Dahlström</a>. 
+It is very easy to achieve it using SVG <strong>pattern</strong> technology and modifying its <strong>patternTransform</strong> property.<br/>
+However, it relies on JavaScript to do the motion&amp;zoom effect and external bitmap or video as texture. 
+<a href="rotozoomsmil/rotozoomsmil.svg">Here I present to you much simplified version</a>, 
+how to achieve this effect only via SMIL (2 animateTransforms are enough, I added third animate just for fun, rotating ellipses as a texture are there merely as texture placeholder for whatever you wish...) in one very small SVG file (less than 2kB).<br/>
+<em>However, it works properly only in Firefox 4+ and Opera 11+ browsers...</em>
+</p>
+
+<h2><a href="pacman/pacmans.svg"><img src="pacman/pacman5.svg" width="180" height="180" align="right" alt="Pacman"/>Different ways how draw and animate Pacman using SVG and SMIL</a></h2>
+<div class="date">2011-4-20 | svg | experiment</div>
+<p>Couple of days ago I came up with an idea of creating SMIL animated SVG Pacman. But what is the best way how to do it? It was (and still I am) haunted with it, although I was able to solve this issue in many different ways already. 
+Some is very short in code, another best cross-browser compatible, yet another the best looking one... really hard to decide which one is best. So, here is my current work status and question for you: "Can you tell me of another way how to do it?" ;-)</p>
+
+<ul>
+<li><a href="pacman/pills.svg">Pacman's Pills (mask over horizontally transformed dashed line)</a></li>
+<li><a href="pacman/pacman1.svg">Pacman 1 (45 degrees rotated rectangular, animated its scale to create mouth, as a mask over circle)</a></li>
+<li><a href="pacman/pacman2.svg">Pacman 2 (two paths, as a first and last position of animation, animated by d attribute)</a></li>
+<li><a href="pacman/pacman3.svg">Pacman 3 (two animated rectangulars in a mask to create mouth, then applied to the circle)</a></li>
+<li><a href="pacman/pacman4.svg">Pacman 4 (animated linear gradient applied to two circles)</a></li>
+<li><a href="pacman/pacman5.svg">Pacman 5 (path in shape of half circle, rotated and re-used)</a></li>
+<li><a href="pacman/pacman6.svg">Pacman 6 (circle with very thick stroke having animated its dasharray)</a></li>
+<li><a href="pacman/pacman7.svg">Pacman 7 (circle and ellipse with animated ry attribute, both in a mask over circle)</a></li>
+<li><a href="pacman/pacman8.svg">Pacman 8 (two circles, rotated, over each applied simple rectangular mask)</a></li>
+<li><a href="pacman/pacmans.svg">Pacman Cloud (everything put - well, copy&amp;pasted - together - Warning: very CPU consuming!! ;-)</a></li>
+</ul>
+<p>PS: All examples work properly only in Firefox4+ and Opera 11+, Webkit's masking implementation is very sad story... :-(</p>
+
+<h2><a href="svg-introduction/index.xhtmlz"><img src="svg-introduction/extracted-demos/redball.svg" width="270" height="270" align="right" alt="Rotating redball"/>Presentation: Yet Another SVG Introduction (updated)</a></h2>
+<div class="date">2011-4-18 | svg | evangelization</div>
+<p>For internal learning purposes of our company I refreshed and updated my one year old presentation about SVG. 
+I made it up to date, reformulated some phrases, removed some examples and added couple of new ones. I think that I can say, that all participants 
+enjoyed the workshop.<br/>It is (still) titled 
+<a href="svg-introduction/index.xhtmlz">Yet Another SVG Introduction</a> and its purpose is still the same and simple: <strong>draw some more attention to this 
+great technology!</strong>.<br/>
+Presentation works best in Firefox 4 and Opera 11, then in Safari 5 followed by Chrome 10 (it is very sad story, how much unstable and buggy is its masking and re-using ability :-( ).
+Yes, you can see it in Firefox 3.6 or MSIE 9 as well, although you're missing then many nice animations and W3C's slidy not supports MSIE9 properly. 
+To see at least some of them, I separated many embedded examples to individual files and you can see them animated (more or less even in FFX 3.6 and MSIE9 via FakeSmile) here:</p>
+<ul>
+<li><a href="svg-introduction/extracted-demos/redball.svg">Rotating redball</a></li>
+<li><a href="svg-introduction/extracted-demos/cards.svg">Poker Hand</a></li>
+<li><a href="svg-introduction/extracted-demos/rotated-gradients.svg">Rotating gradients</a></li>
+<li><a href="svg-introduction/extracted-demos/morph-cr-sk.svg">Czech and Slovak republics morphing</a></li>
+<li><a href="svg-introduction/extracted-demos/pacman.svg">Pacman</a></li>
+<li><a href="svg-introduction/extracted-demos/pattern.svg">Animated pattern</a></li>
+<li><a href="svg-introduction/extracted-demos/propeller.svg">Blue helicopter</a></li>
+<li><a href="svg-introduction/extracted-demos/boyface.svg">Boyface with and without hair</a></li>
+<li><a href="svg-introduction/extracted-demos/car.svg">Car ride</a></li>
+<li><a href="svg-introduction/extracted-demos/planets.svg">Sun, earth and moon</a></li>
+<li><a href="svg-introduction/extracted-demos/animatemotion.svg">Simple animate motion</a></li>
+<li><a href="svg-introduction/extracted-demos/clip-mask-anim.svg">Animated stars</a></li>
+<li><a href="svg-introduction/extracted-demos/clock.svg">Good old clock</a></li>
+<li><a href="svg-introduction/extracted-demos/chisel-text.svg">Chisel text</a></li>
+<li><a href="svg-introduction/extracted-demos/kaleidoscope.svg">Kaleidoscope</a></li>
+<li><a href="svg-introduction/extracted-demos/textpath-anim.svg">Animated text on textpath</a></li>
+</ul>
+<p><em>PS: I'm not author of all examples and many are from other authors, but simplified a lot. You can also 
+<a href="svg-introduction/extracted-demos/svg-introduction.zip">download whole presentation in one archive</a>...</em><br/>
+Couple of nice SVG documents on other servers:</p>
+<ul>
+<li><a href="http://jroatch.com/gallery/0029-path_morph.svg">One Path Morphing Only</a></li>
+<li><a href="http://jroatch.com/gallery/0033-circles_anim.svg">Animated circles</a></li>
+<li><a href="http://upload.wikimedia.org/wikipedia/commons/6/6c/Trajans-Column-lower-animated.svg">Trajans Column</a></li>
+<li><a href="http://upload.wikimedia.org/wikipedia/commons/0/01/Slider_Crank_animation.svg">Slider Crank</a></li>
+<li><a href="http://www.svgopen.org/2007/papers/SLOGO_Abstract/SLogo_Fig9_Goldberg_Machine.svg">Rube Goldberg Machine</a></li>
+<li><a href="http://upload.wikimedia.org/wikipedia/commons/7/74/Timeline_of_web_browsers.svg">Timeline of web browsers evaluation (static graph)</a></li>
+<li><a href="http://blogtop.lv/box/marts.svg">Very cool radial gradients</a></li>
+</ul>
+
+<h2><a href="resume.htm"><img src="browsers/browser_logos.png" width="250" align="right" alt="Browser Comparison"/>SVG Browsers Comparison Table</a></h2>
+<div class="date">2011-02-28 | svg | browser</div>
+<p>This test is another attempt to provide SVG browser support evaluation / comparison table, based on all <em>(well, majority, not all)</em> files hosted on my site.<br/>
+This is very initial (early) version, imperfect and you can expect more changes to come in the future.<br/>
+Some demos utilize <em>FakeSMILe</em> to add at least <strong>some SMIL support to MSIE9</strong> and you can feel this as a way of <em>cheating</em>, but I feel that it is good to use workarounds whenever available (and are really easy to use...).<br/>
+<strong>Some of the tests are not fair</strong> to other browsers <em>(like lmc-org or xhtml test for Batik)</em>, but I hope to solve these handicaps in the future.<br/>
+I decided to add <a href="http://xmlgraphics.apache.org/batik/">Batik Squiggle</a> to the chart, whose strict error messages are of great value during making SVG demos more cross-compatible 
+<em>(and I've updated/fixed many of the demos during this benchmarking...).</em><br/>
+<a href="resume.htm">Enjoy the resume / comparison page</a> and stay tuned for more updates in April (not sooner, sorry, because of my vacation on Cuba ;-) Current test results are:
+</p>
+<ul>
+<li><strong>Firefox 4 (489 points) and Opera 11 (487 points) are the best SVG browsers around</strong></li>
+<li>Webkit based browsers are <strong>second league</strong> and although <strong>Chrome (403 points)</strong> has much wider feature support than <strong>Safari (363 points)</strong> with older core,but it's awkward re-introduced bugs are really hell of SVG common developer :-(</li>
+<li><strong>Batik (305 points)</strong> is not a real browser, however it outperforms <strong>latest browser</strong> in test, <strong>MSIE 9 RC (191 points)</strong> with ease. Old Firefox 3.6 is no longer member of the tests, because of coming-soon Firefox 4...</li>
+</ul>
+
+<h2>Three Circles Demos: <a href="circles/circles-ying-yang.svg"><img src="circles/circles-ying-yang.png" width="164" align="right" alt="Circles Ying-Yang Demo"/>Ying-Yang</a>, <a href="circles/circles-hypnotize.svg">Hypnotize</a> and <a href="circles/circles-radiation-sign.svg">Radiation Sign</a></h2>
+<div class="date">2011-02-20 | svg</div>
+<p>Sunday's afternoon I've spent playing with <strong>script generated circles</strong> of different settings, <strong>stroke-dasharray</strong> and <strong>different timing</strong> to create several funny results.<br/> 
+Three of them I decided to publish and share with you. They work well in <strong>Firefox 4 Beta</strong>, <strong>Opera 11</strong> and with couple of workarounds in <strong>Chrome 9</strong> and <strong>Safari 5</strong> too.<br/>
+They the not work in <strong>MSIE 9</strong> because of missing <strong>SMIL</strong> support.</p>
+<ul>
+<li><a href="circles/circles-ying-yang.svg">Ying-Yang Demo</a> uses <strong>trick with using pauseAnimations()</strong> method to freeze animation at the right visual moment without any additional computation ;-)</li>
+<li><a href="circles/circles-radiation-sign.svg">Radiation Sign Demo</a> uses <strong>computation of stroke-dasharray lenght</strong> to create effect of disassembling and assembling of famous radiation warning sign (<em>Webkit's rendering is not so precise as Opera's and Gecko's are</em>)</li>
+<li><a href="circles/circles-hypnotize.svg">Hypnotize Demo</a> (<strong><em>best played in full-screen mode</em></strong>) uses <strong>keySplines</strong> (<em>not working in Webkit based browsers</em>) to create really <strong>hypnotic circles animation</strong> effect</li>
+</ul>
+
+<h2>Big Benchmarking of SVG Particles in Recent Browser Versions</h2>
+<div class="date">2011-02-17 | svg, benchmark</div>
+<p>On year ago published <a href="http://www.themaninblue.com/writing/perspective/2010/03/22/">Cameron Adams</a> interesting benchmark comparing different technologies on the simple particles demo. The benchmark had got big popularity and reactions,
+many of them proposing optimizations and tweaks of the algorithm for different platforms. One of them was <a href="http://www.codedread.com/blog/archives/2010/03/22/know-the-beast/">Jeff Schiller</a>, offering two logical tweak methods for <strong>SVG</strong> rendering:</p>
+<ol>
+<li>use <strong>suspendRedraw() / unsuspendRedraw() methods </strong> from SVG specification, however, the only browser implementing these features at that time was Firefox and the result (effect) was not miraculous; it helped, but only a little</li>
+<li>use <strong>manual detach/attach approach to assure off-screen rendering </strong> which <strong>helped</strong> Opera a bit and <strong>Firefox a lot!</strong></li>
+</ol>
+<p>Now, a year later, I decided to repeat the benchmarking again with slightly modified local copies, <strong>recent browser versions, different particle numbers, enabling and disabling GPU</strong> (in browsers supporting HW acceleration) and using, in case of Firefox/Mozilla, new proposed animation scripting model <a href="http://weblogs.mozillazine.org/roc/archives/2010/08/mozrequestanima.html"><strong>RequestAnimationFrame (RAF)</strong></a> by Robert O'Callahan and Boris Zbarsky. 
+  500 particles is the amount used in original benchmark, 50 and 2500 are my modifications (in 2500 case there is critical not only rendering speed, but computation&amp;DOM binding speed as well). There is what I discovered...</p>
+
+<h3>Results of the tests, measured after running for more than 30 seconds, on 32-bit versions of all browsers, running 64-bit Windows&nbsp;7 with NVidia GPU, 1920×1080 resolution, full screen</h3>
+
+<table border="1" class="partbench">
+<tr><th class="desc hh">50 particles</th><th class="sf">Safari 5.0.3</th><th class="op">Opera 11.01</th><th class="cr">Chrome 9.0.597.98</th><th class="ie">MSIE 9 RC + GPU</th><th class="iesw">MSIE 9 RC</th><th class="ff">Firefox 3.6.13</th><th class="ff4">Firefox 4 Beta12 + GPU</th><th class="ff4sw">Firefox 4 Beta12</th><th class="desc hh">RAF version</th><th class="ff4raf">Firefox 4 Beta12 + GPU RAF</th><th class="ff4rafsw">Firefox 4 Beta12 RAF *</th></tr>
+<tr><th class="desc"><a href="partbench/original_50.xml">original demo</a></th><td>56&nbsp;FPS / 68%&nbsp;CPU</td><td class="ko">29.7&nbsp;FPS / 61%&nbsp;CPU</td><td>123&nbsp;FPS / 84%&nbsp;CPU</td><td>242&nbsp;FPS / 32%&nbsp;CPU</td><td>148&nbsp;FPS / 56%&nbsp;CPU</td><td>39&nbsp;FPS / 59%&nbsp;CPU</td><td>83&nbsp;FPS / 21%&nbsp;CPU</td><td>42&nbsp;FPS / 56%&nbsp;CPU</td><th class="desc"><a href="partbench/original_raf_50.xml">original RAF</a></th><td>58.2&nbsp;FPS / 7%&nbsp;CPU</td><td>42&nbsp;FPS / 56%&nbsp;CPU</td></tr>
+<tr><th class="desc"><a href="partbench/suspend_50.xml">suspend redraw</a></th><td>56&nbsp;FPS / 67%&nbsp;CPU</td><td class="ko">28&nbsp;FPS / 60%&nbsp;CPU</td><td>123&nbsp;FPS / 84%&nbsp;CPU</td><td>242&nbsp;FPS / 32%&nbsp;CPU</td><td>148&nbsp;FPS / 56%&nbsp;CPU</td><td>42&nbsp;FPS / 59%&nbsp;CPU</td><td>83&nbsp;FPS / 9%&nbsp;CPU</td><td>46&nbsp;FPS / 55%&nbsp;CPU</td><th class="desc"><a href="partbench/suspend_raf_50.xml">suspend RAF</a></th><td>58.2&nbsp;FPS / 5%&nbsp;CPU</td><td>46&nbsp;FPS / 55%&nbsp;CPU</td></tr>
+<tr><th class="desc"><a href="partbench/offscreen_50.xml">offscreen rendering</a></th><td>50&nbsp;FPS / 71%&nbsp;CPU</td><td class="ko">29.7&nbsp;FPS / 58%&nbsp;CPU</td><td>123&nbsp;FPS / 84%&nbsp;CPU</td><td>260&nbsp;FPS / 32%&nbsp;CPU</td><td>127&nbsp;FPS / 60%&nbsp;CPU</td><td>42&nbsp;FPS / 58%&nbsp;CPU</td><td>83&nbsp;FPS / 6%&nbsp;CPU</td><td>44&nbsp;FPS / 54%&nbsp;CPU</td><th class="desc"><a href="partbench/offscreen_raf_50.xml">offscreen RAF</a></th><td>58.2&nbsp;FPS / 5%&nbsp;CPU</td><td>44&nbsp;FPS / 54%&nbsp;CPU</td></tr>
+<tr><th class="desc hh">500 particles</th><th class="sf">Safari 5.0.3</th><th class="op">Opera 11.01</th><th class="cr">Chrome 9.0.597.98</th><th class="ie">MSIE 9 RC + GPU</th><th class="iesw">MSIE 9 RC</th><th class="ff">Firefox 3.6.13</th><th class="ff4">Firefox 4 Beta12 + GPU</th><th class="ff4sw">Firefox 4 Beta12</th><th class="desc hh">RAF version</th><th class="ff4raf">Firefox 4 Beta12 + GPU RAF</th><th class="ff4rafsw">Firefox 4 Beta12 RAF *</th></tr>
+<tr><th class="desc"><a href="partbench/original.xml">original demo</a></th><td>33&nbsp;FPS / 69%&nbsp;CPU</td><td class="ko">14.1&nbsp;FPS / 55%&nbsp;CPU</td><td>64&nbsp;FPS / 72%&nbsp;CPU</td><td>51&nbsp;FPS / 54%&nbsp;CPU</td><td class="ko">29&nbsp;FPS / 58%&nbsp;CPU</td><td class="ko">2.4&nbsp;FPS / 63%&nbsp;CPU</td><td class="ko">3&nbsp;FPS / 78%&nbsp;CPU</td><td class="ko">2.5&nbsp;FPS / 64%&nbsp;CPU</td><th class="desc"><a href="partbench/original_raf.xml">original RAF</a></th><td class="ko">3&nbsp;FPS / 76%&nbsp;CPU</td><td class="ko">2.5&nbsp;FPS / 68%&nbsp;CPU</td></tr>
+<tr><th class="desc"><a href="partbench/suspend.xml">suspend redraw</a></th><td>33&nbsp;FPS / 69%&nbsp;CPU</td><td class="ko">11.5&nbsp;FPS / 57%&nbsp;CPU</td><td>64&nbsp;FPS / 72%&nbsp;CPU</td><td>51&nbsp;FPS / 54%&nbsp;CPU</td><td class="ko">29&nbsp;FPS / 58%&nbsp;CPU</td><td class="ko">4&nbsp;FPS / 61%&nbsp;CPU</td><td class="ko">6&nbsp;FPS / 77%&nbsp;CPU</td><td class="ko">4.3&nbsp;FPS / 62%&nbsp;CPU</td><th class="desc"><a href="partbench/suspend_raf.xml">suspend RAF</a></th><td class="ko">6&nbsp;FPS / 71%&nbsp;CPU</td><td class="ko">4.3&nbsp;FPS / 58%&nbsp;CPU</td></tr>
+<tr><th class="desc"><a href="partbench/offscreen.xml">offscreen rendering</a></th><td>30&nbsp;FPS / 59%&nbsp;CPU</td><td class="ko">18&nbsp;FPS / 58%&nbsp;CPU</td><td>41&nbsp;FPS / 75%&nbsp;CPU</td><td>40&nbsp;FPS / 54%&nbsp;CPU</td><td class="ko">27&nbsp;FPS / 58%&nbsp;CPU</td><td class="ko">12&nbsp;FPS / 54%&nbsp;CPU</td><td>34.5&nbsp;FPS / 54%&nbsp;CPU</td><td class="ko">18.1&nbsp;FPS / 52%&nbsp;CPU</td><th class="desc"><a href="partbench/offscreen_raf.xml">offscreen RAF</a></th><td>31.5&nbsp;FPS / 27%&nbsp;CPU</td><td class="ko">18&nbsp;FPS / 52%&nbsp;CPU</td></tr>
+<tr><th class="desc hh">2500 particles</th><th class="sf">Safari 5.0.3</th><th class="op">Opera 11.01</th><th class="cr">Chrome 9.0.597.98</th><th class="ie">MSIE 9 RC + GPU</th><th class="iesw">MSIE 9 RC</th><th class="ff">Firefox 3.6.13</th><th class="ff4">Firefox 4 Beta12 + GPU</th><th class="ff4sw">Firefox 4 Beta12</th><th class="desc hh">RAF version</th><th class="ff4raf">Firefox 4 Beta12 + GPU RAF</th><th class="ff4rafsw">Firefox 4 Beta12 RAF *</th></tr>
+<tr class="partbenchko"><th class="desc"><a href="partbench/original_500x5.xml">original demo</a></th><td>9&nbsp;FPS / 58%&nbsp;CPU</td><td>1.8&nbsp;FPS / 53%&nbsp;CPU</td><td>13.2&nbsp;FPS / 59%&nbsp;CPU</td><td>9.9&nbsp;FPS / 53%&nbsp;CPU</td><td>8&nbsp;FPS / 58%&nbsp;CPU</td><td>0.5&nbsp;FPS / 76%&nbsp;CPU</td><td>0.5&nbsp;FPS / 78%&nbsp;CPU</td><td>0.5&nbsp;FPS / 76%&nbsp;CPU</td><th class="desc"><a href="partbench/original_raf_500x5.xml">original RAF</a></th><td>0.5&nbsp;FPS / 78%&nbsp;CPU</td><td>0.5&nbsp;FPS / 75%&nbsp;CPU</td></tr>
+<tr class="partbenchko"><th class="desc"><a href="partbench/suspend_500x5.xml">suspend redraw</a></th><td>8.5&nbsp;FPS / 58%&nbsp;CPU</td><td>1.8&nbsp;FPS / 53%&nbsp;CPU</td><td>13.2&nbsp;FPS / 59%&nbsp;CPU</td><td>9.9&nbsp;FPS / 53%&nbsp;CPU</td><td>7.9&nbsp;FPS / 58%&nbsp;CPU</td><td>0.7&nbsp;FPS / 72%&nbsp;CPU</td><td>0.8&nbsp;FPS / 76%&nbsp;CPU</td><td>0.7&nbsp;FPS / 72%&nbsp;CPU</td><th class="desc"><a href="partbench/suspend_raf_500x5.xml">suspend RAF</a></th><td>0.7&nbsp;FPS / 76%&nbsp;CPU</td><td>0.7&nbsp;FPS / 74%&nbsp;CPU</td></tr>
+<tr class="partbenchko"><th class="desc"><a href="partbench/offscreen_500x5.xml">offscreen rendering</a></th><td>4.3&nbsp;FPS / 60%&nbsp;CPU</td><td>6.4&nbsp;FPS / 53%&nbsp;CPU</td><td>10.7&nbsp;FPS / 59%&nbsp;CPU</td><td>8.5&nbsp;FPS / 54%&nbsp;CPU</td><td>7.1&nbsp;FPS / 58%&nbsp;CPU</td><td>3&nbsp;FPS / 51%&nbsp;CPU</td><td>7&nbsp;FPS / 52%&nbsp;CPU</td><td>4.9&nbsp;FPS / 52%&nbsp;CPU</td><th class="desc"><a href="partbench/offscreen_raf_500x5.xml">offscreen RAF</a></th><td>7.2&nbsp;FPS / 52%&nbsp;CPU</td><td>4.6&nbsp;FPS / 52%&nbsp;CPU</td></tr>
+<tr><th class="desc">Color legend</th><td>&nbsp;more than 30 FPS = OK</td><td class="ko">&nbsp;less than 30 FPS = KO</td><th class="desc" colspan="9">* has no part in graphs below...</th></tr>
+</table>
+
+<h3>Graphical representation of scaling across different browsers / number of particles + Firefox CPU demands</h3>
+<table border="0" cellspacing="10">
+<tr><td>
+<iframe id="zxcasdqw" src="partbench/graph-original.svg" width="300" height="300"></iframe>
+</td><td>
+<iframe id="poubggtsj" src="partbench/graph-suspend.svg" width="300" height="300"></iframe>
+</td><td>
+<iframe id="hekcutfgaksdpso" src="partbench/graph-offscreen.svg" width="300" height="300"></iframe>
+</td><td>
+<iframe id="grwkcutfgaksdpso" src="partbench/graphffcpu.svg" width="300" height="300"></iframe>
+</td></tr>
+</table>
+
+<h3>My Conclusions</h3>
+<ul>
+<li><img alt="" src="browsers/icoie.png"/></li>
+<li><strong>MSIE 9 really is</strong> what the MSIE team is shouting around the world: <strong>very fast in rendering and speed of DOM binding</strong>. 
+  Even with HW acceleration disabled it is doing pretty good job and keeping reasonable CPU consumption level. <strong>Fastest browser in 50 particles</strong> category. 
+  <strong>Suspend redraw is not implemented</strong> and <strong>off-screen rendering actually hurts the performance.</strong> 
+  However, MSIE 9 RC + GPU acceleration is for the first approx. <strong>8 seconds using CPU up to 100%</strong> and then drops down to some reasonable level (probably because of script compilation to native code?)</li>
+<li><img alt="" src="browsers/icochrome.png"/></li>
+<li><strong>Chrome 9 is very fast as well</strong> and when more JS computing is needed, it is taking the lead and is clear <strong>winner of 500+ particles</strong> category. 
+  However, its <strong>demands on CPU are considerable!
+  Suspend redraw is not implemented</strong> and <strong>off-screen rendering hurts the performance</strong></li>
+<li><img alt="" src="browsers/icofirefox.png"/> &nbsp; <img alt="" src="browsers/icominefield.png"/></li>
+<li><strong>Firefox 4 beta is very strange beast</strong> and its performance differs a lot, based on actual conditions. <strong>Original demo rendering way is very very slow</strong>, even when there is a GPU to help.
+  It has some implementation of <strong>suspend redraw, but it helps a bit only</strong>. On the other hand, <strong>off-screen rendering is its domain</strong> and it is <strong>performing very well</strong> in this way.
+  Without HW acceleration, there is <strong>no rendering difference compared to its elder brother Firefox 3.6</strong> and it is scoring only slightly better, probably because of JS speed improvements.
+  My guess is, that it is <strong>suffering from very slow script vs DOM Binding</strong> / interaction. <strong> Demands on CPU</strong> are a <strong>bit higher than is acceptable</strong>, esp. in case of 500+ particles.
+  Its animation way using <a href="http://weblogs.mozillazine.org/roc/archives/2010/08/mozrequestanima.html"><strong>RequestAnimationFrame (RAF)</strong></a> was a small disappointment to me: 
+  it is supposed to save CPU power by dropping too high frame-rates, but <strong>its behavior/results are rather inconsistent</strong>. 
+  Firefox 4 is clear <strong>winner of CPU demands in 50 particles</strong> category but miserable <strong>looser in 2500 particles</strong> competition. Is it good or bad? Hard to decide, although <strong>RAF &amp; off-screen rendering are performing really well</strong> (from CPU perspective)...
+  </li>
+<li><img alt="" src="browsers/icoopera.png"/></li>
+<li><strong>Opera</strong> performs on <strong>lowest level in 50 particles case</strong>, but is able to <strong>beat most of the Firefoxes in 500+ category</strong> and scales quite linearly. Suspend redraw decreases its frame-rate a bit, but <strong>off-screen rendering</strong>, like in case of Firefox, <strong>improves its performance</strong> in quite handsome way.
+  Opera is the only browser <strong>unable to overcome 30 FPS threshold</strong> in any category which makes it, in some way, a looser of this test</li>
+<li><img alt="" src="browsers/icosafari.png"/></li>
+<li><strong>Safari</strong> on the Windows platform not combination in use of common user, however, it performs on quite <strong>moderate level</strong>, but much lower actually than its brother-in-core Chrome. 
+  Its <strong>frame-rate was the hardest to guess/compute</strong> and was shaking in very wide ranges</li>
+</ul>
+<br/>
+
+
+
+<h2><a href="svgopen/DrawingOnTheNet.svg">Drawing On The Net</a></h2>
+<div class="date">2011-02-13 | svg</div>
+<p>Title clipart/demo from <a href="http://www.svgopen.org/2003/">SVG Open 2003</a> and finetuned to Adobe SVG Viewer 2.0 only, is not rendered properly in any of modern browsers :-( However, after adding units to font sizes, 
+then at least Firefox 4 Nightly is able to <a href="svgopen/DrawingOnTheNet.svg">repeat ASV feat</a> (on click) from so many years ago perfectly. Great! Chrome has problems with masking and fonts Opera with just fonts...<br/>
+PS: One more little update for <a href="banner/index.html">Runners II. banner version for SVG Web</a>...</p>
+
+
+<h2><a href="banner/banner2.svg"><img src="banner/tree8.png" width="140" align="right" alt="Runners2"/>Banner II. (experiment update) + other news</a></h2>
+<div class="date">2011-02-12 | svg</div>
+<p>Original runners banner I've tried to "copy" couple of days ago is <a href="http://unicreditbank.jobs.cz/pro-studenty-a-absolventy/">UnicreditBank one</a> and is quite easy one. Unfortunately, I'm too lazy to do the bitmap extraction work / clipping again, 
+so I only <a href="banner/banner2.svg">modified slightly</a> my <a href="banner/banner.svg">original experiment</a> to a bit more resemble timing and behavior of original. In practice it meant adding <strong>keySplines timing</strong> and made it run as one animation with stop and after-fade-out effect again, rather then continuous one. That's all, quite easy, it took me about thirty minutes.<br/>
+<strong>Update 2011-02-13:</strong> I gave <a href="http://code.google.com/p/svgweb/">SVG Web</a> a try with my latest demo and <a href="banner/index.html">result is quite acceptable</a>; the most annoying incompatibilities are problems with <em>fill:none, stroking</em> and generally with <em>display/visibility</em> properties...
+<br/>Other news follow:</p>
+<ul>
+<li><a href="http://code.google.com/p/svgweb/">SVG Web has new release called: Lurker Above</a> and accordingly to my quick testing it is significantly better than previous version; if you are looking for MSIE compatibility renderer for SVG, this is really a good one to try</li>
+<li><a href="http://code.google.com/p/canvg/">CANVG</a> project slowed its development down a bit, but represents quite interesting way of rendering SVG via Canvas and is already able to cope with some simple documents quite well</li>
+<li>as it seems, guys at Google are not happy with quality of their Chrome 9 neither and are pushing <strong>updates to Chrome</strong> very quickly...</li>
+<li>Microsoft is going to release <a href="http://ie.microsoft.com/testdrive/">MSIE9</a> pretty soon, <strong>recently released Release Candidate</strong> is the proof of it; although there are common many <a href="chisel/chisel.svg">rendering issues</a>, they don't mind...</li>
+<li>Mozilla developers are under heavy pressure to finish <strong>Firefox 4 / Gecko 2</strong>, but they are fixing bugs <a href="http://blocker-reports.brasstacks.mozilla.com/">in much much slower way</a> than many optimists anticipated; I'm not so much disappointed, however, because I still expect rather early April's release ;-)</li>
+</ul>
+
+<h2><a href="banner/banner.svg"><img src="banner/runners8.png" width="200" align="right" alt="Runners"/>Banner experiment + unsorted news</a></h2>
+<div class="date">2011-02-08 | svg</div>
+<p>Another experiment is out, this time imitating in very free way SWF banner I had been shown week ago (sorry, I've no link/file right now). Once I'll have the link to the original SWF banner I plan to update <a href="banner/banner.svg">this one</a> to copy it <strong>as closely as possible</strong>. It is example of good old <strong>parallax scrolling</strong> animation technique.<br/>
+FakeSMILe (for FFX 3.6/MSIE 9) renders this banner correctly for only one run and then some errors appear... :-( and is quite choppy as well)<br/>It took me two hours to gather and prepare <strong>three bitmaps (20kB sky + 25kB tree + 24kB runners)</strong> and one more to put it all together (rest of the graphics is pure <strong>SVG, 4kB</strong>). Also...</p>
+<ul>
+<li>although there is new <strong>Chrome 9</strong> out, old SVG bugs (esp. those related to USE element) are still there <strong>unfixed</strong>, so I had all the trees position one by one... :-(</li>
+<li>latest <strong>Firefox 4.0 trunk build</strong> does great job and renders <a href="banner/banner.svg">this animation</a> in <strong>best</strong> way (compared to all other recent SVG browsers - HW acceleration is real fun)</li>
+<li>Mozillians were finally able to fix bugs preventing <strong>Gecko</strong> to <strong>reach full score in <a href="http://svgtorture.googlecode.com/svn/trunk/automated/test.html">SVG DOM 1.1 conformance test</a></strong> - on the other hand, <strong>Chrome</strong> browser, which passed this test previously, <strong>fails miserably four of the tests</strong> in its latest version :-(((((</li>
+<li>Mozilla's <strong>Game On 2010 competition is over</strong> and you can see <a href="https://gaming.mozillalabs.com/games/winners">the winners</a> (I guessed more than three of the awarded games, wow... ;-)</li>
+<li>official release date of <strong>Firefox 4.0</strong> is getting postponed more and more :-( and my personal guess is to have it released by the end of March / beginning of April (and MSIE 9 will probably by out already by this date as well...)</li>
+</ul>
+
+<h2><a href="http://blocker-reports.brasstacks.mozilla.com/">Firefox 4.0 big finish</a></h2>
+<div class="date">2011-01-31 | mozilla</div>
+<p><img src="browsers/icofirefox.png" width="64" height="64" align="left" alt="Firefox logo"/>
+<strong>Mozillians, GO, GO!!! I wish you luck and energy (both physical and mental) to solve remaining (and very tough, no doubt) Gecko 2.0 blockers and finish Firefox 4.0 on schedule!!!</strong><br/>
+Although I'm a bit pessimistic about February, I pray from the deep of my heart for March...<br/><a href="http://office.smedbergs.us/blocker-report/">Go on, guys!!!</a></p>
+<br clear="all"/>
+
+<h2><a href="https://gaming.mozillalabs.com/games/"><img src="https://gaming.mozillalabs.com/media/img/logo.png" width="202" height="100" align="right" alt="Gaming Mozilla Labs"/>Gaming Mozilla Labs - Game Gallery</a></h2>
+<div class="date">2011-01-13 | svg, game, mozilla</div>
+<p>I'm a bit sad that I missed current Mozilla's game competition, but I've had not enough free time in last two months... but now 
+I'm enjoying all subscribed projects and can <strong>recommend</strong> you to do the same. 
+Many of them are only JS/HTML/CSS based, CANVAS is very popular and only few use SVG or WebGL, but all are great!!
+<br/>Games whose attracted my attention are for example:</p>
+<ul>
+<li><a href="https://gaming.mozillalabs.com/games/29/contrasaurus-defender-of-the-american-dream">https://gaming.mozillalabs.com/games/29/contrasaurus-defender-of-the-american-dream</a></li>
+<li><a href="https://gaming.mozillalabs.com/games/126/z-type">https://gaming.mozillalabs.com/games/126/z-type</a></li>
+<li><a href="https://gaming.mozillalabs.com/games/38/orbium">https://gaming.mozillalabs.com/games/38/orbium</a></li>
+<li><a href="https://gaming.mozillalabs.com/games/42/save-the-miner">https://gaming.mozillalabs.com/games/42/save-the-miner</a></li>
+<li><a href="https://gaming.mozillalabs.com/games/169/sketchout">https://gaming.mozillalabs.com/games/169/sketchout</a></li>
+<li><a href="https://gaming.mozillalabs.com/games/43/hypergunner">https://gaming.mozillalabs.com/games/43/hypergunner</a></li>
+<li><a href="https://gaming.mozillalabs.com/games/77/canvasquest">https://gaming.mozillalabs.com/games/77/canvasquest</a></li>
+<li><a href="https://gaming.mozillalabs.com/games/87/frantic">https://gaming.mozillalabs.com/games/87/frantic</a></li>
+<li><a href="https://gaming.mozillalabs.com/games/95/invasion-in-la">https://gaming.mozillalabs.com/games/95/invasion-in-la</a></li>
+<li><a href="https://gaming.mozillalabs.com/games/100/jsripoff">https://gaming.mozillalabs.com/games/100/jsripoff</a></li>
+<li><a href="https://gaming.mozillalabs.com/games/105/vehicle-soccer">https://gaming.mozillalabs.com/games/105/vehicle-soccer</a></li>
+<li><a href="https://gaming.mozillalabs.com/games/108/openodyssey">https://gaming.mozillalabs.com/games/108/openodyssey</a></li>
+<li><a href="https://gaming.mozillalabs.com/games/118/the-humanity-project">https://gaming.mozillalabs.com/games/118/the-humanity-project</a></li>
+<li><a href="https://gaming.mozillalabs.com/games/132/mad-tanks-td">https://gaming.mozillalabs.com/games/132/mad-tanks-td</a></li>
+<li><a href="https://gaming.mozillalabs.com/games/129/yirtok">https://gaming.mozillalabs.com/games/129/yirtok</a></li>
+<li><a href="https://gaming.mozillalabs.com/games/146/red-shooting-hood">https://gaming.mozillalabs.com/games/146/red-shooting-hood</a></li>
+<li><a href="https://gaming.mozillalabs.com/games/148/websnooker">https://gaming.mozillalabs.com/games/148/websnooker</a></li>
+<li><a href="https://gaming.mozillalabs.com/games/166/toxic-tower">https://gaming.mozillalabs.com/games/166/toxic-tower</a></li>
+<li><a href="https://gaming.mozillalabs.com/games/171/manic-spaceman">https://gaming.mozillalabs.com/games/171/manic-spaceman</a></li>
+</ul>
+
+
+<h2><a href="citysunset/citysunset.svg"><img src="citysunset/Andy_Houses_on_the_horizon_-_Starburst_remix.svgz" width="208" height="128" align="right" alt="Houses on the horizon"/>Sunset Over City SVG Demo</a></h2>
+<div class="date">2011-01-09 | svg</div>
+<p>My first post in 2011 is about introducing you my new demo. It is based on couple of heavily modified <strong>open cliparts</strong>, changing sun rays to be the effect created by circle stroke-dasharray and thus animatable in very easy way 
+(and is also much smaller in size of source code).
+Then I added animation of boat, bird flock, added some background music and Voila' - demo is complete! It took me about four hours to do it and I hope you'll <a href="citysunset/citysunset.svg">like it</a>. <em>It is non interactive demo and lasts approx. 50 seconds.</em><br/>
+It is <strong>looking best in Firefox 4 Nightly</strong>, then in Opera 11 (but crashing from time to time), Chrome/Safari renders sun rays in not so pretty way and slight opacity and gradient fill changes causes reflections in water to flicker a bit. 
+Using FakeSMILe forced the demo to run somehow in Firefox 3.6 as well, but it was far from perfect, and MSIE9 refused to animate at all, so I removed FakeSMILe completely...</p>
+
+
+<h2><a href="xmastree/xmastree.svg"><img src="xmastree/xmastreemute.svg" width="128" height="128" align="right" alt="Xmas Tree Demo"/>Merry Xmas!!, dear SVG community...</a></h2>
+<div class="date">2010-12-17 | svg</div>
+<p>Today is my last opportunity to blog before Christmas Eve, since now on I'll have no access to the internet. Following tradition from last year I'm bringing you gift again - 
+<a href="xmastree/xmastree.svg">Xmas Tree Demo</a>. It is very simple, but I had no more time than two hours to create it and I hope you'll enjoy it a lot.
+It has audio part, thanks to the FakeSmile it runs in every modern browser (although best experience is in Opera and FFX4b) and I wish you: <strong>MERRY XMAS!!!!!!!!!!!!!!!!!!!!!</strong><br/>
+<em>PS: I discovered that using SVG file with audio inside as IMAGE on the page, that it incredibly, really and truly plays the music!! I had been amazed... I'm not sure, if it is intention or side effect, but I'm replacing it with mute one, 
+to not shock visitors unexpectedly on title page, but I encourage you, to click the link and enjoy the demo in big size and with the music... ;-)</em></p>
+
+
+<h2><a href="demos1212/rotate-linear-upd.svg">Firefox 4 Nightly has got support for SVGAnimatedPoints</a> of polygon/polyline elements</h2>
+<div class="date">2010-12-14 | svg</div>
+<p>Great <a href="http://www.kevlindev.com/">Kevin Lindsey</a> created many years ago bunch of fantastic SVG resources. His site is very inspiring even in these days 
+and I can recommend it to you warmly as a MUST for every SVG interested developer/coder. Many of his demos/tutorials are working pretty well in modern browsers 
+(like <a href="http://www.kevlindev.com/samples/mouseRepel/mouseRepel.svg">mouseRepel</a>), some, however, have some problems.<br/>
+One of the last missing pieces to SMIL support in Firefox 4 is ability to animate points of polygons/polylines, which is almost done. Kevin has cool example for this,
+simulating pseudo-3D animation, but because of invalid values (floats) for color numbers I had to modify 
+<a href="http://www.kevlindev.com/samples/rotate3d/rotate-linear.svg">original demo</a> a bit (only ASV and Opera are able to render it properly), so if you're running very latest 
+build of Firefox 4, Opera, Safari or Chrome, you can <a href="demos1212/rotate-linear-upd.svg">try this link</a>.</p>
+
+<h2>FakeSmile and MSIE 9/Firefox 3.6</h2>
+<div class="date">2010-12-12 | svg</div>
+<p>I added <a href="http://leunen.d.free.fr/fakesmile/index.html">FakeSmile script</a> to some simple SMIL demos to allow them working even in <a href="http://ie.microsoft.com/testdrive/">Microsoft's next browser - MSIE9</a>, or current stable version of Firefox 3.6. Those working (at least partially) are:</p>
+<ul>
+  <li><a href="digg/cubes_step8fin.svg">Digging animation demo</a></li>  
+  <li><a href="zx/zx-spectrum-demo-2.svg">ZX Spectrum demo</a></li>
+  <li><a href="bubbles/bubblesimg.svg">Bubbles demo</a></li>  
+  <li><a href="svg-introduction/extracted-demos/spirit.svg">Good spirit demo</a></li>  
+  <li><a href="demos1212/kaleid3_opera.svg">Kaleidoskope demo</a></li>  
+  <li><a href="demos1212/halloween.svg">Halloween demo</a></li>  
+  <li><a href="adobe/nutty.svg">Adobe Nutty demo</a></li>  
+  <li><a href="adobe/discrete_vs_linear.svg">Adobe Discrete vs. Linear demo</a></li>  
+  <li><a href="chisel/chisel.svg">Chisel demo</a></li>  
+  <li><a href="clouds/clouds_v1b.svg">Clouds demo</a> (some animations missing)</li>  
+  <li><a href="dance/dance.svg">Dance demo</a> (no movement)</li>  
+  <li><a href="rotjump/rotatefull.svg">Rotate and Jumping demo</a> (no rotation)</li>  
+  <li><a href="matrix/matrix.svg">Matrix demo</a> (no proper fonts/missing image)</li>  
+  <li><a href="adobe/wonder.svg">Adobe Wonder demo</a> (no texts)</li>  
+  <li><a href="adobe/audio.svg">Adobe Audio demo</a> (many animations are missing)</li>  
+</ul>
+<p>If animation does not start, try to reload the page (F5 / Ctrl+R). It happens sometimes...</p>
+
+<h2>Unsorted news and demos</h2>
+<div class="date">2010-12-12 | svg</div>
+<p>There are couple of modified demos (I downloaded some years back and cannot find their source again) or direct links to some cool SVG/SMIL stuff (I apologize to all the authors I don't know and so cannot announce there...):</p>
+<ul>
+  <li><a href="demos1212/halloween.svg">Halloween animation</a>, working well in all browsers</li>  
+  <li><a href="demos1212/kaleid3_opera.svg">Kaleidoscope</a> by <a href="http://www.burningpixel.com/svg/index.htm">Burning pixel</a> (not woking in FFX/Webkit from original site)</li>
+  <li><a href="demos1212/keySplineTool.svg">KeySplineTool</a> by <a href="http://www.burningpixel.com/svg/index.htm">Burning pixel</a> (woking only in ASV in original, modified version work well in FFX4 and a bit in Opera)</li>
+  <li><a href="http://www.tinyline.com/svgt/samples/samples/index.html">SVG TinyLine samples</a>, I like most of them, esp. <a href="http://www.tinyline.com/svgt/samples/samples/lambp.html">Lamb</a> and <a href="http://www.tinyline.com/svgt/samples/samples/surprisep.html">Surprise</a> animations</li>
+  <li><a href="http://www.svgopen.org/2003/papers/AnimatedMathematics/cycloid1.svg">Cycloid 1</a> and <a href="http://www.svgopen.org/2003/papers/AnimatedMathematics/cycloid2.svg">Cycloid 2</a> examples of animated mathematics, from year 2003</li>
+  <li><a href="demos1212/wereldbol.svg">Animated globe</a> demo</li>
+  <li><a href="demos1212/bradbury.svg">SVG Typography animation</a> from <a href="http://www.xml.com/lpt/a/1438">xml.com</a> (although modified a bit, not one browser is able to render it properly in every detail yet...</li>
+  <li><a href="demos1212/bowling.svg">Bowling SVG Tiny demo</a> by <a href="http://www.ikivo.com/animator/02animator_6gallery.html">Ikivo</a>, (only Opera render's it proper, not working directly from creators page)</li>
+  <li><a href="demos1212/svg_08.svg">Simple 3D model</a>, computed solely in JavaScript</li>
+  <li><a href="http://www.ikivo.com/svg/dog.svgz">Ikivo's Crazy dog</a> (<strong>Update 2010-12-13</strong>)</li>
+</ul>
+
+
+<h2><a href="ab-pasic/intro-ab.svg">AgroBio Intro</a> and <a href="ab-pasic/intro-pasic.svg">Pasic Intro</a></h2>
+<div class="date">2010-12-12 | svg</div>
+<p><img src="ab-pasic/pthumb.jpg" width="167" height="105" align="right" alt=""/><img src="ab-pasic/abthumb.jpg" width="120" height="105" align="right" alt=""/>Back in years 2002 / 2003 I created couple of commercial SVG introduction for small local companies from Opava City. They were for interactive CD ROMs and forced installation of Adobe SVG viewer 
+was no problem. I found source codes for two of them three weeks ago, also original music, but all raster pictures used are lost hopelessly... :-(  I played with those demos for a while, making them to be quite well cross-browser 
+compatible. There is "original" bug in <a href="ab-pasic/intro-pasic.svg">interactive Pasic demo</a> demo, but I left it there unfixed... <a href="ab-pasic/intro-ab.svg">AgroBio demo</a> has no user interaction 
+and is almost perfect. There are small differences/rendering incompatibilities, across different browsers (missing letter-spacing in Firefox in Pasic, not working image shrinking in Webkit in AgroBio), 
+but generally everything is working good enough, don't you think? Pictures in AgroBio are snapshots of Opava City, pictures in Pasic are snapshots of girls related to Starwars theme... :-)))</p>
+
+<h2>Short news</h2>
+<div class="date">2010-12-05 | svg</div>
+<ul>
+  <li>I slightly modified nice SWF re-worked filter effects, to be working in recent browsers, made by <a href="http://hejral.mysteria.cz/">Martin Hejral</a> for his tutorials for <em>interval.cz</em> server: <a href="martinhejral/a10-1-scriptable-mask.svg">a10-1-scriptable-mask</a>, 
+     <a href="martinhejral/a10-2-scriptable-mask.svg">a10-2-scriptable-mask</a>,  <a href="martinhejral/a10-3-scriptable-mask.svg">a10-3-scriptable-mask</a> (interactive) and  <a href="martinhejral/a02-moving-mask.svg">a02-moving-mask</a> <em>(most of them are broken in Webkit based browsers :-( )</em></li>
+  <li>If you've not read old, but very good article about <a href="http://www.maa.org/joma/Volume7/Lane/Gallery.html">mathematics demonstrated using SVG</a>, then you should...</li>
+  <li>Wonderful, but only Webkit-compatible introduction (opening titles) for Web Directions South 2010 conference <a href="http://www.themaninblue.com/experiment/wds10/">is truly fantastic</a>, I like it very much and maybe one day, who knows, I'll try something similar in cross-browser compatible SVG as well...</li>
+  <li>I submitted couple of recently found bugs to both Mozilla and Webkit, so lets hope, they'll be fixed soon... (at least for Mozilla it looks very promising)</li>
+  <li>I added one more very simple Adobe <a href="adobe/0992-anim-key-splines.svg">demo showing how key-splines</a> work...</li>
+</ul>
+
+<h2><a href="matrix/matrix.svg">SVG Matrix Animation</a></h2>
+<div class="date">2010-12-04 | svg</div>
+<p>Being angry that so many people is playing around with CSS transitions, but those demos working properly in Webkit based browsers only, I prepared new demo, inspired both by the famous movie and 
+<a href="http://girliemac.com/blog/2009/05/03/matrix-animation-with-webkit-css3/">GirlieMac's Matrix CSS demo</a>. Current limitations are many, but as a proof-of-concept I consider it good enough (it took me less than three hours).<br/>
+Best working in Chrome 7+, Opera 10.5+ does not support well animation of fill properties of web fonts and Firefox4 Beta plays sound in very very choppy way (and embedding it to be part of the SVG does not help). 
+If you're experiencing performance issues, just resize browser window to make it smaller and animation should become fluent. Not able to find better font, I'm using the same TTF as GirlieMac, and I'm not happy about it, but...</p>
+
+<h2>Google Chrome 8.0 is out</h2>
+<div class="date">2010-12-03 | svg</div>
+<p>My recent <a href="fancymenu/fancymenu.svg">Fancy Menu Experiment</a> works even worse in version 8.0 than 7.0, there are some ugly filter-errors :-((, but however in 
+<a href="adobe/adobe.htm">Adobe SVG samples</a> is Chrome doing better than before, gaining extra 27 points (although there are some worse rendering exceptions as well, like 
+<a href="adobe/fePixels.svg">fePixels.svg</a> or broken game <a href="submarine/index.htm">SVG Submarine Assault</a> :-(((( )</p>.
+
+<h2><a href="fancymenu/fancymenu.svg">Fancy Menu Experiment</a></h2>
+<div class="date">2010-12-02 | svg</div>
+<p>Having Acer notebook with W7, I'm forced from time to time see Acer Arcade menu, which is 3Dm glowing and I like it actually... but yesterday I realized, why not try something similar in SVG and SMIL?
+And so there is result of my doing ... I have it done quickly in 20 minutes or so, but then got stuck for another hour while fighting for better cross-browser compatibility and performance. 
+Current version is neither fully different browsers compatible nor performing very well, but it is close to what I planned to achieve. Problems I've encountered were many: 
+Firefox is able to create gradient color-to-transparent, but other browsers not, so I had to use filtering, which is in FFX performing worse; Firefox does not allow to set filter to empty string while other browsers do; 
+Chrome is not applying of the filter effect after onload for some strange reason.... and this list can continue and continue. But, I've lost my nerves for today, so I'm <a href="fancymenu/fancymenu.svg">publishing it as-it-is</a> + some rendering controls 
+(everything is done via SMIL, no scripting used). I hope you will like it and welcome all comments or tips for improvement... <em>(without all effects animation is really smooth.. ;-)</em><br/>
+Works pretty well in Firefox 4 Beta, Chrome/Safari 5+ and Opera 10+</p>
+
+<h2><a href="adobe/adobe.htm">Old Adobe SVG samples are back again...</a></h2>
+<div class="date">2010-10-28 | svg</div>
+<p>I updated my <a href="adobe/adobe.htm">old page again</a>, added many new (but actually old ;-) demos, 
+added thumbnails, better descriptions and <strong>re-evaluated</strong> recent individual browsers success in rendering them.
+I still find many of them perfect for showing SVG power to beginners. I worked many incompatibilities around,
+but still are many missing and I welcome all your tips for improving cross browser compatibilities.<br/>
+Opera is still best performing SVG browser, followed with Firefox 4beta, Chrome and others...<br/>
+<strong>Update 2010-11-29:</strong> Corrected/tweaked two demos and one new introduced... and after several complaints, I added test for latest preview of MSIE9 as well...</p>
+
+<h2>Quick bezier animation experiments</h2>
+<div class="date">2010-11-13 | svg</div>
+<p>I spent funny hour playing with <a href="http://beez.sourceforge.net/">good, old, SVG Bezier Animator</a> and there are the results 
+  (simple and just playing with the editor):</p>
+<ul>
+  <li><a href="bezier/bez5.svg">Air House</a></li>  
+  <li><a href="bezier/bez1.svg">Crazy C Letter</a></li>
+  <li><a href="bezier/bez2.svg">Liquid Shape</a></li>
+  <li><a href="bezier/bez3.svg">Grass</a></li>
+  <li><a href="bezier/bez4.svg">Angry Face</a></li>
+</ul>
+
+
+<h2>Some news in short</h2>
+<div class="date">2010-11-10 | svg</div>
+<ul>
+  <li><img src="bezier/fire.svg" width="86" height="86" align="right" alt="Fire Demo"/>
+    Mozillians finished support for <strong>SVGAnimatedPathData</strong> and as a result animations like this are now working in <a href="ftp://ftp.mozilla.org/pub/firefox/nightly/latest-trunk/">FFX4 nightly</a> builds (<a href="http://www.dotuscomus.com/svg/demos/gallop.svg">Domenico Strazzullo's Horse's gallop demo</a>)</li>
+  <li>There exists pretty old and unfinished <em>(but I do not know about anything better... do you know???)</em> utility for creating bezier animations called: <a href="http://beez.sourceforge.net/">SVG Bezier Animator</a>; demos included on the site work properly only in ASV plugin, 
+      but after couple of minor changes they work as expected (demos: <a href="bezier/bee.svg">Bee</a>, <a href="bezier/beez.svg">Pulsing title</a>, 
+      <a href="bezier/fire.svg">Fire</a> and <a href="bezier/demo.svg">Fire demo</a>)</li>
+  <li>Latest <a href="http://ie.microsoft.com/testdrive/">preview of MSIE9</a> (sixth one) is finally able to play properly my old game <a href="submarine/index.htm">SVG Submarine Assault</a>, wow...; unfortunately, there are still some problems with <a href="cavern/100/cavern.xhtmlz">SVG Cavern Fighter</a> game...</li>
+  <li>Current Firefox 4 nightly build displays <a href="http://debreuil.com/svg/horse.svg">this SWF story animation</a> <em>(reload it at least once to see it from true start - SMIL principle of time-based animations prevents you from seeing it from real beginning, because of time taken to download, for the first time...)</em> <strong>perfectly</strong> (both Chrome and Opera have rendering issues). For source see <a href="http://blog.debreuil.com/?p=175">Robin's post</a> and 
+    although its results are not very SVG positive, Firefox is proof of the opposite and it is in many aspects superior to Chrome/Webkit or Opera!</li>
+</ul>
+
+<h2><a href="http://brigady.jobs.cz/dobrovolnictvi/">First SVG use on LMC's web</a></h2>
+<div class="date">2010-10-09 | svg</div>
+<p>Well, first early bird for my company, LMC, we have finally <em>some</em> real SVG in use (map of Czech Republic as search interface per locality) 
+on our job portal. Let us hope, it's first in long queue of implementations... ;-)</p>
+
+<h2><a href="lmc-org/index.html">Company organizational structure in SVG</a></h2>
+<div class="date">2010-10-07 | svg, xslt</div>
+<p>I work for Czech company LMC and one case which is our HR dpt. solving on regular basis is graphical representation of organization's structure. 
+Master data are maintained in ERP system (IFS), which offers graphical features equals almost to zero. I bit better approach was visualization using Lotus Notes (IBM), 
+but even there were many limitations, esp. in interactivity and printability. 
+And so I offered to try SVG. My colleague Hynek Musil is very skilled in XSLT and <a href="lmc-org/index.html">current prototype</a> is already working great!<br/>
+Current solution is: two manual reports from ERP to CSV files and convert them to UTF-8. Then there it is where browser comes, loading those files, parses them 
+using XSLT/eXSLT to XML tree in memory and then running another transformation to produce visual structure in SVG. There is dedicated CSS for good print and 
+are there onclick events which re-runs XSL Transformation with (according to event parameters) rebuilded XML tree and as a result, there is highly interactive graph in SVG. What do you say?
+It is temporary, semi-automatic solution, but we're already working on tuning this process up. Data should be on-the-fly retrieved from some web service, 
+graphics improved, compatibility extended from <em>Firefox</em> to other browsers (main limitation are differences in eXSLT implementations, used for tokenization of CSV,
+but since Firefox is our company browser it is OK for intranet purposes) and who knows what else...?? ;-)<br/>
+IMHO it is a good use and demonstration of modern technologies and almost everything using "only" web browser...<br/>
+<strong>PS: Firefox only...</strong></p>
+
+<h2>No more tweaks for Firefox 4.0+</h2>
+<div class="date">2010-10-06 | svg</div>
+<p>Long time ago I released some demos <em>tweaked</em> to work in Firefox trunk and the tweaks were because of lack of support for some SMIL features primarily. Well, Firefox grew to be much more featureful
+and thus I can remove some tweaks of the past. So I started with <a href="digg/cubes_step7fin.svg">Digging Animation</a> and removed scripting events and replaced and let genuine SMIL events to drive the interactivity, 
+and then moved to the <a href="hourglass/hourglass.svg">Hourglass demo</a> and removed animateTransform tweaks for animateMotion and replaced them by native animateMotion itself.<br/>
+<a href="digg/cubes_step7fin1.svg">Old version of digging</a> and <a href="hourglass/hourglass2.svg">old version of hourglass</a> are still available, for comparison, or if you like them more ;-)<br/>
+PS: Opera and Webkit implementations are of 180 degrees different opinion regarding to rotate attribute implementation of animateMotion, hmm... :-(<br/>
+<strong>Update 2010-10-06:</strong> My thanks to Daniel's Holbert for explanation; I applied workaround (avoided transform on source path for animateMotion) and now <a href="hourglass/hourglass.svg">Hourglass demo</a> works properly in all SVG+SMIL capable browsers... WOW!! ;-)<br/>
+<strong>Update 2010-10-07:</strong> Daniel created bug for this, so even this difference in behavior should be fixed soon...good...<br/>
+</p>
+
+<h2><a href="http://srufaculty.sru.edu/david.dailey/svg/SVGOpen2010/replicate.htm">SVG Replicator</a></h2>
+<div class="date">2010-9-16 | svg</div>
+<p>On SVG Open 2010 presented David Dailey excellent tool called "SVG Replicator" and you can use it to create very easily very 3D looking effects. I prepared briefly (in 5 minutes) one 
+<a href="replicator/exp.svg">experiment</a>, but its potential is much much greater - check David's demos out and do not forget to say <em>WOW</em> .. and start experimenting yourself... ;-)</p>
+
+<h2><a href="http://lavadip.com/experiments/jigsaw/">SVG Puzzle Demo</a>, <a href="http://ie.microsoft.com/testdrive/">MSIE9 Beta</a></h2>
+<div class="date">2010-9-15 | svg</div>
+<p>Great SVG Jigsaw game around by HRJ, don't miss it. And, of course, M$ finally made MSIE9 Beta official. Many demos seems to be working or close-tobe-working, so it seems I'll be forced to consider testing my demos
+in this one as well. Performance looks fine, in some tests is FFX4 nightly better performing, in some wins MSIE9, but generally I'm satisfied with both of them... ;-)<br/>
+<em>PS: Some new M$ demos looks fine, especially Pacman SVG remake, well, except of non MSIE9 frame-rate, hmm... ;-)</em></p>
+
+<h2><a href="norway/norwayvacation-static.svg">Second Update of Vacation in Norway Demo (v1.3s)</a></h2>
+<div class="date">2010-9-13 | svg</div>
+<p>After getting some more feedback I decided to update Norway's vacation demo once more again. Here is list of changes:</p>
+<ul>
+<li>next and previous listing is now behaving in more fancy way, closer to Lightbox behavior and more understandable to lot of people around</li>
+<li>there is second, smaller map showing photo's position all the time and is easier to navigate; behavior of this feature is, however, broken in current Gecko's trunk, but I 
+     <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=595840">filled the bug</a> to Mozilla's Bugzilla and hope guys will be able to fix it soon</li>
+<li>if you rather prefer older versions, they are still available for you: <a href="norway/norwayvacation-static12.svg">version 1.2s</a>, <a href="norway/norwayvacation-static11.svg">version 1.1s</a>,  <a href="norway/norwayvacation-static10.svg">version 1.0s</a></li>
+<li><strong>Update 2010-9-14:</strong> Not able to find good-enough workaround to make it working in all browsers, I applied dirty hack with detecting Gecko by user agent and using different approach to trigger animation (offset value instead of JS api; it works a bit worse in Chrome, 
+but generally is the most compatible version created so far); previous version 1.2s remains still available (and waits for Gecko to be fixed, though... ;-)</li>
+</ul>
+
+<h2><a href="mouseovertoy/mouseovertoy.svg">MouseOver&amp;Click Toy Demo</a></h2>
+<div class="date">2010-9-10 | SVG</div>
+<p>Another <em>micro</em> demo landing. It took me less than 40 minutes to prepare it as proof of concept for neat Flash effect which saw in one <em>ad</em> and I'm not 
+able to find (and link) again :-9 It demonstrates SMIL easiness for doing common Flash effects and only <em>DOM Event/JS hack</em> there is for Gecko's current inability to 
+<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=589436">animate string properties</a>.<br/>
+Works pretty well in Firefox 4 Beta, Chrome/Safari 5+ and Opera 9+. Enjoy...</p>
+
+
+<h2><img src="bubbles/bubblesimg.svg" width="150" height="150" align="right" alt="Bubbles demo"/><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=276431">SVG-AS-IMAGE landed to Gecko</a></h2>
+<div class="date">2010-9-09 | SVG, Gecko</div>
+<p>In case you've not noticed, support for SVG-AS-IMAGE finally landed to Gecko's trunk, so now you can use SVG from HTML via common <em>img</em> tag and its <em>src</em> attribute,
+in CSS via <em>background-image</em> and of course from SVG itself via <em>image</em> element and its <em>xlink:href</em> attribute. <strong>GREAT!!</strong> 
+Thank you Daniel, Roc and others...</p>
+
+
+<h2><a href="norway/norwayvacation-static.svg">Vacation in Norway Demo Updated</a></h2>
+<div class="date">2010-9-07 | svg</div>
+<p>Well, I received some improvement tips and tried to implement them, and here is the list of changes (but I'm still more than pleased to receive more, so please, do it ;-):</p>
+<ul>
+<li>visited / already seen thumbnails are now more/better recognizable (darker)</li>
+<li>in viewing image detail, there is navigation available for moving to previous and next image (including marking them as visited + animated change of location)</li>
+<li>moose's head indicating position is on top now and goes transparent to not disturb you much</li>
+<li>description transformation updated to avoid some ugly effects on some computers/configurations</li>
+<li>compatibility with Chrome5/Safari5 improved and you are at least able to see the detailed photo at least (note: Chrome6 behaves correctly); it is bug in Webkit's work with masks and avoiding it is true hell; 
+      I've tried tens of approaches to solve it but without much success, some bugs are simply hard to work around, hmm... :-(  I developed one dirty and partial solution, but I'm not happy about it...</li>
+</ul>
+
+<h2><a href="http://svg-wow.org/">SVG WOW site updated</a></h2>
+<div class="date">2010-9-06 | SVG, Canvas, JavaScript</div>
+<p>Erik and Vincent started (after SVG Open 2010) updating their cool site of SVG demos. They added four new demos, promise more to come, and my favourit one is <a href="http://svg-wow.org/camera/camera.xhtml">Vincents's Camera demo</a>.</p>
+
+<h2><a href="http://js1k.com/demos">Short but wonderful JavaScript demos</a></h2>
+<div class="date">2010-9-06 | JavaScript</div>
+<p>Incredible contest of 1kB JS demos contains tens of very very cool demos! Most of them use canvas, SVG only couple of them, but this is in case, where source-code size matters, quite acceptable. 
+Some pieces are really amazing, check them yourselves! ;-)</p>
+
+
+<h2><a href="norway/norwayvacation-static.svg">Vacation in Norway (SVG Demo)</a></h2>
+<div class="date">2010-9-06 | svg</div>
+<p>So, it happened, and I finished SVG demo/presentation from my this year's second beatiful vacation, this time in Norway.
+I tried to make it different from <a href="ireland/irelandvacation.svg">Ireland's one</a> and you can judge how much I succeeded ;-)<br/>
+This time I used scripting as well, because it is much more easy way of doing repetitive tasks and I'm lazy creature, that's for sure... ;-) However, as it happened, Webkit guys are still failing to implement scripting/dynamic API for animateMotion element 
+(<a href="https://bugs.webkit.org/show_bug.cgi?id=34301">1</a>, <a href="https://bugs.webkit.org/show_bug.cgi?id=38836">2</a>), and thus 
+I was forced to modify <a href="norway/norwayvacation.svg">this elegant version</a> to <a href="norway/norwayvacation-static.svg">more (read Webkit) compatible one</a>. I used Gecko's dynamically generated source code listing 
+and then hacked resulting data to more static, but cross-browser compatible version, except of MSIE9, though. Creating demos for this beast I'm leaving for near future (I feel SMIL absence as very limiting).<br/>
+ <em>Demo uses our photos, SMIL, masking, scripting and some free SVG cliparts. Demo size is 53kB (or 61kB in case of static version) of uncompressed SVG  and 707kB in 20 JPEG pictures.</em><br/>
+It works well in Firefox 4Beta/Nightly Trunk Builds, Opera 10+, Chrome 6+ and Safari 5+ - so everything except of mentioned MSIE9beta.<br/><br/>
+<em>Any ideas for some improvements are more than welcome and I thank you for them...</em></p>
+
+<h2><a href="http://svg-wow.org/">SVG WOW site updated</a></h2>
+<div class="date">2010-9-06 | SVG, Canvas, JavaScript</div>
+<p>Erik and Vincent started (after SVG Open 2010) updating their cool site of SVG demos. They added four new demos, promise more to come, and my favourit one is <a href="http://svg-wow.org/camera/camera.xhtml">Vincents's Camera demo</a>.</p>
+
+<h2><a href="http://js1k.com/demos">Short but wonderful JavaScript demos</a></h2>
+<div class="date">2010-9-06 | JavaScript</div>
+<p>Incredible contest of 1kB JS demos contains tens of very very cool demos! Most of them use canvas, SVG only couple of them, but this is in case, where source-code size matters, quite acceptable. 
+Some pieces are really amazing, check them yourselves! ;-)</p>
+
+
+<h2><a href="ireland/irelandvacation.svg">Vacation in Ireland Demo Updated</a></h2>
+<div class="date">2010-8-23 | svg</div>
+<p>After publishing my last demo I received some feedback on improvements. I've had no time since today to implement them...and because, if you've not noticed, <strong>Gecko has got support fo SMIL events/repeats 
+(thank you Brian Birtles, Daniel Holbert and others from Mozilla...)</strong>, I also involved support for this feature into the demo. So the changes of <em>version 1.2</em> are:</p>
+<ul>
+<li>viewBox support, so the demo now stretches accordingly to screen/given resolution what prevents broken display in case of low resolution and is well suitable for use from IMG tag</li>
+<li>it is now possible to click on the thumbnail and see higher resolution image again (with workaround for SVG's missing z-index feature)</li>
+<li>irritating pulse animation of clover removed</li>
+<li>couple of text/formatting changes</li>
+<li>scripting is strictly avoided, although it is quite complicated now and script solution would be much more elegant, but it is the only way, how to achieve full functionality in IMG tag</li>
+</ul>
+<p><em>It works well in Firefox 4 Beta5/Nightly Trunk Builds, Opera 10+, Chrome 5+ and Safari 5+.</em><br/>
+Similar and maybe even better presentation from my Norway vacation is on its way, so be patient, please... ;-)<br/>
+...and in case you do not know it yet, support for <em>SVG-AS-IMAGE</em> is coming to Firefox 4 Beta 5 soon as well... ;-)<br/><br/>
+<strong>Update 2010-8-24:</strong> Minor update again - adding one more forever lasting animation to avoid (again) annoying Webkit's bug with stopping all animations/SMIL events, when animateMotion is done...<br/><br/>
+<em>PS: Since Mozilla is for good reasons not going to implement animateColor, I updated old Adobe's <a href="adobe/discrete_vs_linear.svg">discrete_vs_linear.svg demo</a> to work with standard animate...</em></p>
+
+<h2><a href="ireland/irelandvacation.svg">Vacation in Ireland (SVG Demo)</a></h2>
+<div class="date">2010-7-25 | svg</div>
+<p>After my return from vacation in Ireland I came up with idea of its visualization using SVG. Well, it took me some time to get to it, but finally I succeeded and so I'm introducing you <a href="ireland/irelandvacation.svg">brand new demo</a> of SVG's awesome power. 
+I used <a href="http://commons.wikimedia.org/wiki/File:Ireland.svg">excellent map of Ireland from Wikipedia</a> and I pretty damn well utilized <a href="http://schepers.cc/?p=243">Doug Shepers Catmull-Rom path prototype</a> to create the route around the island.
+My girlfriend Jana shot more than 6000 pictures and selecting subset of only 20 pictures for this demo was really tough task, believe me... ;-) So many beatiful places are missing there... hmmm... but space is limited on the map, so there was no other way...<br/>
+<em>Demo uses 100% SMIL, no scripting and everything except of photos is vector based. Overall capacity of this demo is 213kB of uncompressed SVG (Ireland's map is very detailed!) and 620kB of 20 JPEG pictures.</em><br/>
+It works well in Firefox 4Beta/Nightly Trunk Builds, Opera 10+, Chrome 5+ and Safari 5+ - so everything except of MSIE9beta.<br/><br/>
+<em>Any ideas for improvements are welcome! ;-)</em></p>
+
+<h2><a href="bump/bump.xhtml">Bitmap Filter Bump-Mapping Experiment</a></h2>
+<div class="date">2010-6-1 | svg</div>
+<p>When I saw <a href="http://www.chromeexperiments.com/detail/normal-mapping/">Happy Buddha normal-mapping</a> demo of Canvas (excellent site, by the way), I decided immediately, that I have to write SVG demo
+doing the same, but in the much more easy and clean way, using SVG filters. But it took me some time to get to it. Finally I succeeded and you can <a href="bump/bump.xhtml">see the result</a>.<br/>
+I had simplicity on my mind, so I'm luminancing alpha channel from source image rather than producing one additional bitmap with 3rd dimension. Results are maybe not so realistic, but it is much more easy 
+for you to understand and use it, is it not? Only 14 lines of code for whole demo is not much, ehm? ;-)<br/>
+However, because SVG filter's implementation is not finished in Webkit/Chrome/Safari yet, it is working well in Opera 9+ and Firefox 3.5+ only.<br/><br/>
+<em>PS: Guys at Mozilla fixed SMIL animationTransform for gradientTransform attribute, so my <a href="drawinganimals/drawinganimals.svg">Drawing Animals</a> demo is now fully working in trunk builds, great! ;-)</em>
+</p>
+
+<h2><a href="starwars/starwars.svg">Starwars Intro Demo</a></h2>
+<div class="date">2010-5-16 | svg</div>
+<p>When M$ announced <a href="http://blogs.msdn.com/ie/archive/2010/05/05/html5-and-same-markup-second-ie9-platform-preview-available-for-developers.aspx">second MSIE9 preview</a>, 
+it had been accompanied with some new demos and <a href="http://ie.microsoft.com/testdrive/Performance/12ScrollingText/Default.xhtml">one of them</a> based on famous Starwars introductory text scrolling. 
+It is quite simple demo and its resemblance to original is pretty low. It is not my opinion only, many others feel the same, and one of the comments points to another, <a href="http://www.gesteves.com/experiments/starwars.html?nouacheck=1">much better attempt</a>.<br/>
+Unfortunately, its drawback is that it is based on 3D-perspective proprietary CSS3 transformation, and it works on Safari on OSX only; no other browsers are capable of displaying it properly/at all, hmmmm :-(<br/>
+But it inspired me, however, to prepare SVG version; the toughest task to solve was how to deal with 3D perspective transformation with SVG's 2D - actually anti-3D concept.
+Well, I tried some different approaches, but only one happened to be <a href="starwars/starwars.svg">acceptable enough</a> (though not without flaws, of course) and differs from original concept: 
+scrolling emulated perspective is shifted to be not center-based, but is based to be right-to-left, but my feeling about it is, that it is almost as much as can be gained (without some hard scripting in mind).
+I also tried to be more close to original movie introduction and result you can <a href="starwars/starwars.svg">see and judge</a>...<br/>
+Some implementation comments:</p>
+<ul>
+<li>no scripting used, it could be done <em>better</em> with use of scripting, but it was not my intention to do</li>
+<li>if your browser/computer is animating choppy/not playing fluently, decrease window size for better performance</li>
+<li>it is fully vector based, no bitmaps in use, and result is 13kB in one file with all the graphics enclosed (music is one external 86kB Ogg-Vorbis file, though)</li>
+<li>be sure to have antialiasing turned on; it is resulting in much smoother scrolling than without it</li>
+<li>Opera is not dealing very good with several transformations to the one text element happening in the same time and it is jumping from side to side and is performing visually worst of all SVG capable browsers</li>
+<li>Safari on Windows sometimes play music, sometimes not, it is really strange... :-(  ...and Chrome has some ugly glitches during playback as well...</li>
+<li>but all non MSIE browsers are able to play it, somehow, what is much larger coverage then Mac only solution ;-)</li>
+</ul>
+<p><em>If you've any comments / improvement suggestions etc., I welcome them, I truly do!!  ;-)))</em></p>
+
+<h2>Gecko has support for animateMotion and I present two new demos: <a href="mousecatch/mousecatch.svg">Catch The Mouse</a> and <a href="drawinganimals/drawinganimals.svg">Drawing Animals</a></h2>
+<div class="date">2010-4-29 | svg</div>
+<p>Today landed support for SMIL <a href="http://www.w3.org/TR/SVG/animate.html#AnimateMotionElement">animateMotion</a> element to Gecko's trunk and support is available in <a href="ftp://ftp.mozilla.org/pub/firefox/nightly/latest-trunk/">nightlies</a> already (thank you <a href="http://blog.dholbert.org/">Daniel Holbert</a>. ;-). 
+I watched for some time its progress and that's why I've ready some brand new demos already.<br/><br/>
+<a href="mousecatch/mousecatch.svg">Catch The Mouse</a> is first of them. It combines animateMotion and scripting to create effect of escaping mouse and man 
+with broom trying to catch (hit, actually) escaping rodent. (<a href="mousecatch/mousecatch-wo.svg">version without fade-off effect</a> for better Gecko's performance, esp. on Linux systems...)<br/><br/>
+<a href="drawinganimals/drawinganimals.svg">Drawing Animals</a> is the second one. It is again combination of animateMotion and scripting, trying this time to simulate pen 
+drawing outline of different animals.<br/><br/>
+Both demos uses free cliparts downloaded from <a href="http://www.clker.com/">www.clker.com</a> and <a href="http://www.openclipart.org/">www.openclipart.org</a> (and modified/simplified a bit).<br/>
+Technical issues (cross browser implementation differences) I encoutered during creating these demos were:</p>
+<ol>
+<li><em>WebKit</em> does not support DOM method <em>beginElement() on animateMotion element</em> yet, but for this one I had been able to place a workaround.</li>
+<li><em>Gecko and WebKit</em> both suffers from not supporting <em>animateTransform of gradientTransform</em> attribute. No workaround there, but I filled bug report to both projects.</li>
+<li><em>Presto</em> has issue with wrong computation of <em>CurrentTransformationMatrix (CTM)</em> in case when browser's zoom is set to different than 100% value. For this one I developed no workaround either 
+and created bug report issue again.</li>
+</ol>
+<p>With exceptions of those last two small <em>buts</em>/flaws, both demos work well enough in Opera 10+, Firefox 3.7+ and Chrome 4+/Safari 4+.</p>
+
+
+<h2><a href="firefox/firefox-logo-simplified.svg">Firefox Static Simplified Logo</a> And <a href="firefox/firefox-logo-animated.svg">Firefox Logo Animation</a></h2>
+<div class="date">2010-4-16 | svg</div>
+<p>Yesterday I did another small experiment. I took Firefox logo created by Jon Hicks and reduced&amp;modified by Doug Schepers and made even more simplifications. 
+My intention was not to keep precisely the same quality and final look but <em>stick to the very similar look and quality</em>, but with less elements and reduced size. Well, I more or less succeeded 
+and result is there for you, if you'll find some use for it. It is still keeping good internal structure and semantics, of course.<br/>
+Better performing logo I needed for my <a href="firefox/firefox-logo-animated.svg">animation experiment</a>, 'cause original logo performed quite bad... :-(<br/>
+There exists also KDE icon of Firefox logo, which has however quite simplified design and differs from original quite a lot (on detailed zoom, but as icon it is good, yes). 
+I tried (hastily) to optimize it as well...<br/>
+All static versions are flawless everywhere ;-) , animated version runs well in Opera 9+, Firefox 3.7+ and Chrome 3+/Safari 4+ have some slight issues with text fill shift, but is acceptable...<br/>
+<em>Some comparing data below:</em></p>
+<ul>
+ <li><a href="http://upload.wikimedia.org/wikipedia/en/e/e3/Firefox-logo.svg">Firefox logo by Jon Hicks/Doug Shepers version</a>, 348 elements, 45kB size</li>
+ <li><a href="firefox/firefox-logo-simplified.svg">Firefox logo by Jon Hicks/Doug Shepers with Marek Raida's modification</a>, 270 elements, 28kB size</li>
+ <li><a href="http://kde-files.org/content/show.php/Firefox+SVG+icon?content=70935">Firefox KDE Icon version original</a>, 198 elements, 88kB size<br/></li>
+ <li><a href="firefox/firefox-kde-icon-optimized.svg">Firefox KDE Icon Marek Raida's modification</a>, 167 elements, 35kB size</li>
+</ul>
+<p><strong>Update on 2010-4-19</strong> - even more variants of Firefox SVG logo added, thx. <a href="http://codedread.com/">Jeff</a> for <a href="http://codedread.com/scour/">Scour</a> suggestion...</p>
+<ul>
+ <li><a href="firefox/firefox-logo-simplified2.svg">Firefox logo by Jon Hicks/Doug Shepers, scoured + more modifications</a>, 270 elements, 24kB size</li>
+ <li><a href="firefox/firefox-logo-simplified2w.svg">Firefox logo by Jon Hicks/Doug Shepers, scoured + removed all whitespaces and unnecessary stuff + more modifications</a>, 266 elements, 22kB size</li>
+ <li><a href="firefox/firefox-logo-simplified2w.svgz">Firefox logo by Jon Hicks/Doug Shepers, scoured + removed all whitespaces and unnecessary stuff + more modifications</a>, GZIPed, 266 elements, 6kB size</li>
+</ul>
+
+
+<h2>Minified <a href="map/map-czech-republic-minified.svg">Country Map of Czech Republic</a> and <a href="map/map-slovakia-minified.svg">Slovakia</a></h2>
+<div class="date">2010-4-15 | svg</div>
+<p>Couple of weeks ago I finished minifying of country maps of <a href="map/map-czech-republic-minified.svg">Czech (size of 6kB)</a> and <a href="map/map-slovakia-minified.svg">Slovak  (size of 8kB)</a> republics. 
+Goal was to have them really small to be of easy use almost everywhere. Another condition was to have separate paths for every region to be able to highlight / distinguish them.<br/>
+There are many similar maps on the web, on Wikipedia sites esp., but they are all quite huge (from bytes amount point of view) and almost never 1 region = 1 path based.
+It could be useful to many other Czech and Slovak web designers, so I'm publishing them freely now...</p>
+
+<h2><a href="map/map7.html">Clickable SVG Maps of Czech Republic</a></h2>
+<div class="date">2010-3-22 | svg</div>
+<p>My employer, as a company, offers many times, during customization process for our customers, clickable map of Czech Republic localities (regions).
+<br/>Traditionally it is implemented as HTML textarea or Flash clip. However, integration with page is in Flash case a bit clumsy and not flexible,
+in case of changing API and parameters again and again. HTML Clickable map is bad idea because of polygon creation and different sizes of maps.
+After my presentation about SVG people responsible for customizations asked me, whether it will be possible or not to use SVG for those maps...<br/>
+"But of course...", was my only logical response ;-) and I started preparing some prototype. And there are my initial outputs, which should serve as 
+inspiration for other guys, primarily... In my mind, during creating these prototypes, I had primarily cross-browser and version functionality and easiness of use. 
+Map is the same in all the examples, 19kB long + some javascript and configuration rules + <em>SVG Web</em> resources.<br/> 
+<br/>Follows list of my current attempts:</p>
+<ul>
+ <li><a href="map/map1.html">Test map 1 - plain clickable map with individual direct links</a></li>
+ <li><a href="map/map2.html">Test map 2 - plain clickable application with color fills</a></li>
+ <li><a href="map/map3.html">Test map 3 - plain clickable application with gradient and opacity</a></li>
+ <li><a href="map/map4.html">Test map 4 - plain clickable application with image + clipping + opacity + shadow (without shadow in Chrome/Safari)</a></li>
+ <li><a href="map/map5.html">Test map 5 - plain clickable application with gradient, opacity and stroke highlight (not working properly in SVGWeb)</a></li>
+ <li><a href="map/map6.html">Test map 6 - plain clickable application with different colors of regions</a></li>
+ <li><a href="map/map7.html">Test map 7 - plain clickable application with region names + opacity</a></li>
+</ul>
+
+
+<h2><a href="http://zxspectrum.net/">ZX Spectrum emulator in JavaScript</a></h2>
+<div class="date">2010-3-19 | JavaScript</div>
+<p>I'm watching this project for some time already, and it's really <em>amazing!</em> It's fast, with sound (beeper emulation), well playable (I mean quite fast) and everything just in your browser.<br/>Really good, who imagined something like this to be possible five years ago? And Cavern Fighter <em>IS</em> on the list of available games, of course... ;-)))</p>
+
+
+<h2><a href="http://ie.microsoft.com/testdrive/Default.html">Microsoft is going to support SVG in IE - It's official now</a></h2>
+<div class="date">2010-3-16 | svg</div>
+<p>Wow, after phenomenal <a href="http://www.opera.com/">Opera 10.50</a> filling majority of browser related articles during couple of previous weeks, here comes new exciting event. <strong>MSIE will support SVG!! Finally...</strong><br/>Several unsorted notices and thoughts:</p>
+<ul>
+  <li>there is going to be SVG support in MSIE9, now it's for sure</li>
+  <li>current technology preview is very limited, but working nonetheless (I noticed lack of filters, gradiens, masking, SMIL, etc... but basic shapes are there, with scripting working)</li>
+  <li>color representation of many semitransparent overlaying layers is much different from other SVG implementations</li>
+  <li>new JS engine is very fast, as it seems</li>
+  <li>hardware acceleration via DirectX 2D (D2D) is cool; Pulsating bubbles demo or SVG–oids in nebula mode, when comparing MSIE9 to HW accelerated Firefox 3.7 and Opera 9.10, is significantly faster (both Firefox and Opera seems to be performing much better than with use of SW renderer, and even with HW acceleration they seems to be of similar speed to me - optically ;-) - but slower than MSIE9 indeed...</li>
+  <li>there are 15 demos, to demonstrate new MSIE9 features, and SVG is used in 7 of them, what is pretty high number, in my opinion (all demos with XHTML flag, in fact)</li>
+  <li>I cannot find any canvas demos, though, not even mention about it in related texts</li>
+  <li>some CSS3  features are really competing with SVG, I'm aware of it more and more</li>
+  <li>I personally do not expect MSIE9 to be released sooner than next year neither its version for WindowsXP to exist, which will, for sure, slow down its adoption</li>
+  <li>although it was expected, I'm thrilled to see it on my eyes officially - SVG for everyone is no longer just a dream</li>
+  <li>I cannot wait for tomorrow's <a href="http://live.visitmix.com/MIX10/Sessions/EX30">MIX10 session related to SVG itself</a> - we will see what more they will tell us about their plans with SVG technology</li>
+  <li>SVG-oids game if really funny, a good one ;-)</li>
+</ul>
+
+
+<h2><a href="svg-introduction/index.xhtmlz">Presentation: Yet Another SVG Introduction</a></h2>
+<div class="date">2010-3-12 | svg | evangelization</div>
+<p>Our company largely supports internal education of employees. I decided to have one about SVG and a little bit evangelize it even more.
+And because I've spent quite a lot of time with creating it, I'm giving it now freely available to everyone.<br/>It is titled 
+<a href="svg-introduction/index.xhtmlz">Yet Another SVG Introduction</a> and its purpose was/is simple: draw some more attention to this 
+great technology! It contains a lot of resources taken randomly from web (with references listed down, of course ;-), linked directly and 
+also couple of small demos prepared directly for the sake of this presentation (like propeller or car demo). I hope you will like it as well, 
+yesterday's sixteen attendees did (or I rather hope they did... ;-)<br/>
+During making presentation I discovered <em>three important facts (for me at least, they are new):</em><br/><br/>
+- current Firefox trunk has broken some masking cases, like <a href="adobe/wonder.svg">Adobe's Wonder demo</a>, working properly some weeks back<br/>
+- Webkit has bug in SMIL timing model; if there are only animate elements in &lt;defs&gt;, they are not triggered to start as long as there is no direct animate 
+element as well; so workaround to trigger them add one and it will start working; practical example is there: 
+<a href="ghost/spirit-org.svg">Spirit animation not animating in Webkit</a> and 
+<a href="svg-introduction/extracted-demos/spirit.svg">spirit animation animating in Webkit</a> (with added one more, direct animation, for smile)<br/>
+- both latest Opera(Presto) and Webkit have somewhat working implementation of &lt;foreignObject&gt; already, wow...
+</p>
+
+<h2><a href="ftp://ftp.mozilla.org/pub/firefox/nightly/latest-trunk/">GECKO SVG/SMIL Progress</a></h2>
+<div class="date">2010-2-24 | svg</div>
+<p>Although there is no official buzz around Gecko SMIL/SVG improvements, gus at Mozilla are not sleeping and working hard. 
+I assume this from the fact that recent Gecko version is able to correctly render and animate many demos failing in the past. For example:</p>
+<ul>
+  <li><a href="zx/loader.htm">ZX Spectrum loader (Gecko was crashing on animated re-used elements)</a></li>
+  <li><a href="adobe/3_anim_filter.svg">Adobe Animated Filters (Gecko was not animating at all)</a></li>
+  <li><a href="adobe/Melting.svg">Adobe Melting Filter Effect (Gecko was not animating at all)</a></li>
+</ul>
+<p><strong>Go on guys, and thank you!! :-)</strong></p>
+
+
+<h2><a href="clouds/clouds_v1b.svg">SVG SMIL Clouds Demo II.</a></h2>
+<div class="date">2010-1-17 | svg</div>
+<p>Inspired by Daniel Holbert's <a href="http://people.mozilla.org/%7Edholbert/tests/smil/demos/clouds_v1a.svg">Clouds Demo</a> I asked him, if can I use it and modify it a bit...<br/>
+He kindly agreed and, as a result, after effort slightly longer than two hours, I'm coming out with
+ <a href="clouds/clouds_v1b.svg">extended version</a>, where major changes are rewritten timeline based animations to sandwich (syncbase) model, improved graphics and added couple of new effects.
+I hope you'll like it... ;-) Fonts are of different sizes in different SVG browsers; this demo is, however, best viewed in Gecko trunk nightbuilds.</p>
+
+<h2><a href="cowboys/cowboys.xhtmlz">SVG Cowboys Game cross-browser experiment</a></h2>
+<div class="date">2010-1-13 | svg | game</div>
+<p>Back in the early 2004, I created game called <a href="http://svg.kvalitne.cz/cowboys/cowboys.svgz">SVG Cowboys for Adobe SVG Viewer</a> (exclusively), depending heavily on SMIL. 
+Today, since SMIL/SVG implementation in common browsers is getting quite mature, I tried what I always wanted: patch the game in a way, to be playable/runnable in Gecko, Presto and Webkit.
+And this dream comes true! It is not perfect and this version is simplified and not as good as original, but still... <a href="cowboys/cowboys.xhtmlz">decent attempt</a>, I'd say. 
+During compatibility conversion I was forced to face many problems and there is (brief) list of what I did:</p>
+<ul>
+<li>Gecko does not support SVG as image source and Webkit does not support viewBox => so all the images were converted to be part of the SVG document (despiriting manual work)</li>
+<li>performance was very very poor, until I greatly reduced number of SVG DOM objects by converting background to the bitmap image; performance on fast computers is not perfect, but acceptable now</li>
+<li>no one of recent browsers support <em>audio</em> element in SVG DOM => so all sounds are JavaScript controlled now, but it is far from elegance and precise timing of syncbase SMIL controls</li>
+<li>Webkit based browsers have some weird problems with masking, so I added switch to disabling them => stupid workaround and you must still aim for bandit's upper body part, although you can see them whole, but it is at least playable, hmm... :-(</li>
+<li>many features were discarded, like pretty aiming cross, repetitive animations and a lot of other small effects</li>
+<li>some animateMotion elements converted to animateTransform ones, because Gecko does not support it yet; it is ugly or not working (in Gecko) at all, but...</li>
+<li>sounds are converted and available in embedded ogg format or individual wav files (for Presto) now</li>
+</ul>
+<p>I know about many and many issues, in this conversion, but I'll welcome your bug reports, of course!!<br/>
+PS: For <a href="ftp://ftp.mozilla.org/pub/firefox/nightly/latest-trunk/">Gecko</a> users - do not forget to use latest trunk nightly build, <em>release from version 20100113 on!</em></p>
+
+
+<h2><a href="http://brian.sol1.net/svg/2010/01/13/synchronising-smil/">Gecko has SMIL syncbase support now</a></h2>
+<div class="date">2010-1-13 | svg</div>
+<p>Many and many thanks to <em>Brian, Daniel</em> and others - Gecko in the development trunk has from today patch, enabling one of the hottest SMIL features - support for <em>begin</em> and <em>end</em>
+attributes of declarative animations based on other animation (named) events state (aka sandwich timing model). Bravo!! guys ... and thank you again!!!</p>
+
+<h2><a href="cavern/100/cavern.xhtmlz">SVG Cavern Fighter 1.03 bugfix release</a></h2>
+<div class="date">2010-1-2 | svg | game</div>
+<p>Only bugfixes in this minor update + compatibility table extended. Changes are:</p>
+<ul>
+<li>made fuel object available more often</li>
+<li>fixed displaying wrong reason at the game finish</li>
+<li>after entering hall of fame is game not jumping to the main menu immediately</li>
+<li>added reset of keypress state at the beginning of each level/game to prevent involuntary crash on the beginning of next round</li>
+<li>reversed behavior of timeshift - when hit by fire - slows time, when picked up - speeds it up, what is actually more logical behavior</li>
+</ul>
+<table border="1">
+  <tr>
+    <th>Browser / Platform</th>
+    <th>SMIL Animations (2p)</th>
+    <th>Audio Support (1p)</th>
+    <th>Audio Prefetching (1p)</th>
+    <th>Crashes (1p)</th>
+    <th>Number of files / Size to download (1p)</th>
+    <th>Feature Points</th>
+  </tr>
+  <tr>
+    <th>Firefox 3.5.6  / Wxp,W7,Linux,MacOsX</th>
+    <th>no</th>
+    <td>yes, perfect (ogg)</td>
+    <td>yes, via data:base64 embedding</td>
+    <td>never</td>
+    <td>1 / 154kB</td>
+    <th>4</th>
+  </tr>
+  <tr>
+    <th>Firefox 3.6 Beta 5 / Wxp,W7</th>
+    <th>no</th>
+    <td>yes, perfect (ogg)</td>
+    <td>yes, via data:base64 embedding</td>
+    <td>never</td>
+    <td>1 / 154kB</td>
+    <th>4</th>
+  </tr>
+  <tr>
+    <th>Firefox 3.7a / Wxp,W7</th>
+    <th>yes</th>
+    <td>yes, perfect (ogg)</td>
+    <td>yes, via data:base64 embedding</td>
+    <td>never</td>
+    <td>1 / 154kB</td>
+    <th>6</th>
+  </tr>
+  <tr>
+    <th>Firefox 3.7a / Linux</th>
+    <th>yes, but not fluent</th>
+    <th>yes, with glitches(ogg)</th>
+    <td>yes, via data:base64 embedding</td>
+    <td>never</td>
+    <td>1 / 154kB</td>
+    <th>4.5</th>
+  </tr>
+  <tr>
+    <th>Opera 10.10 / Wxp,W7</th>
+    <td>yes</td>
+    <td>yes (wav)</td>
+    <th>partial, via loud preloading (bad solution)</th>
+    <td>never</td>
+    <td>21 / 1349kB</td>
+    <th>4.5</th>
+  </tr>
+  <tr>
+    <th>Opera 10.10 / Linux,MacOsX</th>
+    <th>yes, but not fluent</th>
+    <th>yes, with glitches (wav)</th>
+    <th>partial, via loud preloading (bad solution)</th>
+    <td>never</td>
+    <td>21 / 1349kB</td>
+    <th>3.5</th>
+  </tr>
+  <tr>
+    <th>Opera 10.5a1 (2009 build) / Win7</th>
+    <td>yes</td>
+    <td>yes (wav)</td>
+    <th>partial, via loud preloading (bad solution)</th>
+    <th>a lot</th>
+    <td>21 / 1349kB</td>
+    <th>3.5</th>
+  </tr>
+  <tr>
+    <th>Opera 10.5a2 (2010 build) / Win7</th>
+    <td>yes</td>
+    <td>yes (ogg)</td>
+    <td>yes, via data:base64 embedding</td>
+    <th>sometimes</th>
+    <td>1 / 154kB</td>
+    <th>5.5</th>
+  </tr>
+  <tr>
+    <th>Chrome 4.0.249 / Wxp,W7</th>
+    <td>yes</td>
+    <th>yes, but with glitches (ogg)</th>
+    <td>yes, via data:base64 embedding</td>
+    <th>sometimes</th>
+    <td>1 / 154kB</td>
+    <th>5</th>
+  </tr>
+  <tr>
+    <th>Chrome 4.0.249.43 / MacOsX</th>
+    <td>yes</td>
+    <td>yes (ogg)</td>
+    <td>yes, via data:base64 embedding</td>
+    <td>never</td>
+    <td>1 / 154kB</td>
+    <th>6</th>
+  </tr>
+  <tr>
+    <th>Safari 4.0.4 / Wxp,W7</th>
+    <td>yes</td>
+    <th>no</th>
+    <th>no</th>
+    <td>never</td>
+    <td>1 / 154kB</td>
+    <th>4</th>
+  </tr>
+  <tr>
+    <th>Safari 4.0.4 / MacOsX</th>
+    <td>yes</td>
+    <td>yes (ogg)</td>
+    <td>yes, via data:base64 embedding</td>
+    <td>never</td>
+    <td>1 / 154kB</td>
+    <th>6</th>
+  </tr>
+</table>
+<p>Three perfect browsers are now available for game play - Firefox 3.7 on Windows and Safari/Chrome on MacOsX and latest alpha of Opera browser is almost as good. Sound glitches and not fluent animation in majority cases is due to the out of CPU performance issue, so really really looking forward to HW acceleration of graphics and sound...<br/>
+<em>Performance tip for fluent gameplay:</em> disable Object's mark and Decorations options (and in the extreme disable also Sound support)</p>
+
+
+<h2><a href="cavern/100/cavern.xhtmlz">SVG Cavern Fighter 1.02 compatibility and optimization release</a></h2>
+<div class="date">2009-12-28 | svg | game</div>
+<p>Today I spent part of my sickday by tuning compatibility of the game for other browsers and solving audio prefetching issues. I did quite well and cross-browser compatibility is much better now.<br/>
+Switching for Firefox from more individual files wav audio to single file and ogg + compression brings many benefits:<br/><strong>
+* 23 files to download previously versus 1 file now<br/>
+* 1005kb to download previously versus 154kB now<br/>
+* audio prefetching working well versus working perfectly now<br/>
+* 346kB has non-compressed single file versus 154kB with best gzip compression available<br/>
+</strong> and performance drop is minimal (by my amateurish measurements ;-)<br/>Changes are:</p>
+<ul>
+<li>compatibility enhanced for Webkit browsers - almost all animations are working now (via manual start by calling of beginElement() method)</li>
+<li>all sounds now available both as wav and ogg; sounds are working in Chrome now (although with some glitches and unexpected delays, but it is current implementation issue, I suppose...)</li>
+<li><strong>SVG converted to xhtml document</strong> - merging all files (esp. ogg sounds) into one compressed document, now whole game has only 154kB in one file - wow!</li>
+<li>sound of starting level dropped</li>
+<li>added event.preventDefault() on keypress for X and B (bomb) to prevent Firefox's autosearch feature</li>
+<li>bugfixed destroying non-existing crash elements</li>
+</ul>
+<h3>Table of current game's compatibility and features</h3>
+<table border="1">
+  <tr>
+    <th>Browser / Platform</th>
+    <th>SMIL Animations (2p)</th>
+    <th>Audio Support (1p)</th>
+    <th>Audio Prefetching (1p)</th>
+    <th>Crashes (1p)</th>
+    <th>Number of files / Size to download (1p)</th>
+    <th>Feature Points</th>
+  </tr>
+  <tr>
+    <th>Firefox 3.5.6  / Wxp,W7</th>
+    <th>no</th>
+    <td>yes, perfect (ogg)</td>
+    <td>yes, via data:base64 embedding</td>
+    <td>never</td>
+    <td>1 / 154kB</td>
+    <th>4</th>
+  </tr>
+  <tr>
+    <th>Firefox 3.6 Beta 5 / Wxp,W7</th>
+    <th>no</th>
+    <td>yes, perfect (ogg)</td>
+    <td>yes, via data:base64 embedding</td>
+    <td>never</td>
+    <td>1 / 154kB</td>
+    <th>4</th>
+  </tr>
+  <tr>
+    <th>Firefox 3.7a / Wxp,W7</th>
+    <th>yes</th>
+    <td>yes, perfect (ogg)</td>
+    <td>yes, via data:base64 embedding</td>
+    <td>never</td>
+    <td>1 / 154kB</td>
+    <th>6</th>
+  </tr>
+  <tr>
+    <th>Opera 10.10 / Wxp,W7</th>
+    <td>yes</td>
+    <td>yes (wav)</td>
+    <th>partial, via loud preloading (bad solution)</th>
+    <td>never</td>
+    <td>21 / 1349kB</td>
+    <th>4.5</th>
+  </tr>
+  <tr>
+    <th>Opera 10.5a / Win7</th>
+    <td>yes</td>
+    <td>yes (wav)</td>
+    <th>partial, via loud preloading (bad solution)</th>
+    <th>a lot</th>
+    <td>21 / 1349kB</td>
+    <th>3.5</th>
+  </tr>
+  <tr>
+    <th>Chrome 4.0.249 / Wxp,W7</th>
+    <td>yes</td>
+    <th>yes, but with glitches (ogg)</th>
+    <td>yes, via data:base64 embedding</td>
+    <th>sometimes</th>
+    <td>1 / 154kB</td>
+    <th>5</th>
+  </tr>
+  <tr>
+    <th>Safari 4.0.4 / Wxp,W7</th>
+    <td>yes</td>
+    <th>no</th>
+    <th>no</th>
+    <td>never</td>
+    <td>1 / 154kB</td>
+    <th>4</th>
+  </tr>
+</table>
+<p>As you can see, <a href="cavern/100/cavern.xhtmlz">game</a> is best playable with <a href="ftp://ftp.mozilla.org/pub/firefox/nightly/latest-trunk/">Firefox 3.7</a>, then Chrome and stable Opera, follow Safari, Opera alpha and Firefox 3.5 and 3.6 are the last, because of missing support for SMIL animations.</p>
+
+<h2><a href="cavern/100/cavern.svg">SVG Cavern Fighter 1.00 Released</a></h2>
+<div class="date">2009-12-27 | svg | game</div>
+<p>So, doing faster than expected, I'm releasing version 1.0 of my latest game ... right now!! :-)  I updated a lot of minor features and hope you'll enjoy all enhancements with pleasure.<br/>
+Do not forget to <em>upgrade</em> to <a href="ftp://ftp.mozilla.org/pub/firefox/nightly/latest-trunk/">latest nightly version of Firefox</a>, even day or two elder versions (before 2008-12-27) are crashing! <em>Opera is also performing quite well</em>,
+except of in-game music playback (lacks support for ogg format) and is a bit slow, but good enough (latest stable version 10.5 alpha is fine). <em>Webkit based browsers</em> still miss support for dynamically created animations :-(<br/>
+I do not plan to add more features to the game so far, only fix reported bugs (Thank you, <em>Petr Hubacek</em>, for excellent betatesting!). Only feature I've still bad feeling about is <em>audio prefetching</em> - all advices are welcome.<br/>
+My intention had been to pack all audios using base64 and embed to the single document using "data://" protocol. Unfortunately, audio HTML5 JavaScript API does not support it and Opera does not support 
+<em>foreignObject</em> properly (where data protocol should work in source attribute of &lt;audio&gt; tag), so <em>if I'll discover/know some better way of prefetching, I'll definitely try it!</em> List of changes in <a href="cavern/100/cavern.svg">this major version</a> is:
+</p>
+<ul>
+<li>release postponed to give time Gecko to be patched and stop crashing, thx. Daniel H. for fixing it promptly ;-)</li>
+<li>added hall of fame (top 15) / score recording feature</li>
+<li>change of behavior - positive object, when shoot down, adds 50% of its type points, not always just increase of score</li>
+<li>new sounds and updated global volume and configuration</li>
+<li>one new enemy object "icycle" added, bonus object force shield added (lasts 4 seconds and applies aka god-mode)</li>
+<li>added reversed type of bolt enemy</li>
+<li>updated graphics of explosions by gradient effects</li>
+<li>replaced majority of strokes by fills in hope for better performance</li>
+<li>added no decoration option for improving performance on weaker computers</li>
+<li>added in-game music in ogg format (Opera does not supports it yet)</li>
+<li>game/level is startable also using SPACE key, bombs are now supported also using B key</li>
+<li>corrections to the cave decorations generation</li>
+<li>first level made extremely easy for beginners, also BOSS moved to the higher levels</li>
+<li>tons of small design up-lifts and playability/level enhancements</li>
+<li>bonuses - reevaluated point/damage values + updated decription by exacts point numbers</li>
+</ul>
+<p><strong>Update on 2009-12-28 12:00</strong></p>
+<ul>
+<li>fixed bug preventing game-play on browsers without support for SMIL (like Firefox &lt; 3.7)</li>
+<li>fixed bug preventing Safari without Audio support (Windows version) from not hiding out modal screen</li>
+</ul>
+
+<h2>Opera 10.5 Alpha</h2>
+<div class="date">2009-12-25 | svg</div>
+<p>Pre-release version of incoming Opera version looks very promising - although stability is not good, performance of both JavaScript and rendering is really really good!</p>
+
+<h2><a href="hourglass/hourglass.svg">SVG Hourglass demo</a></h2>
+<div class="date">2009-12-24 | svg</div>
+<p>!!!Happy Christmas to all SVG believers!!! :-) :-) :-) Today I'm announcing my another small demo - <a href="hourglass/hourglass.svg">SVG Hourglass</a> - as a gift for you ;-)<br/>
+Has a lot of imperfections, primarily due to the Gecko limitations (missing support for animateMotion, animate begin=event etc.), but it is good enough to be published already, esp. on such occasion ;-)<br/>
+<em>So, enjoy it, and again, HAPPY CHRISTMAS, EVERYONE!!</em><br/>
+It runs great in <a href="ftp://ftp.mozilla.org/pub/firefox/nightly/latest-trunk/">Firefox 3.7+</a>, Opera 9+, ASV and Chrome 3+/Safari 4+ 
+</p>
+
+<h2><a href="cavern/088/cavern.svg">Minor update of Cavern Fighter 0.88</a></h2>
+<div class="date">2009-12-15 | svg | game</div>
+<p>Because there's not enough of free time, and probably till the end of year it will go no better, I'm releasing this minor and primarily bugfixing release of my recent game. <em>Betatesters still more than welcome!! ;-)</em> Changes are: </p>
+<ul>
+<li>fixed more games running simultaneously by accident</li>
+<li>hourglass now extends its lasting when collecting another during effect of previous one</li>
+<li>game cave colors are returning to the same state as before timeshift</li>
+<li>added decorative craters to the cave walls</li>
+<li>couple of other small enhancements to cave objects and decorations</li>
+</ul>
+
+
+<h2><a href="cavern/087/cavern.svg">SVG Cavern Fighter 0.87</a></h2>
+<div class="date">2009-12-13 | svg | game</div>
+<p>So, Christmas shopping and packing almost done (<em>Imagine! Me and my girlfriend bought and packed more than 70 gifts!!</em>). Unfortunately, baking of sweets barely started... :-( <br/>
+Anyway ... I had been able to spent couple of hours on updating and fine-tuning the game even more as well.
+Below you can, as usually, found log of changes made. Enjoy it ;-)</p>
+<ul>
+<li>cave objects support/move at different speeds</li>
+<li>final level boss initial implementation</li>
+<li>hourglass object when shot speeds game up temporarily, when picked up slows it down for a little while</li>
+<li>added normal ship jets animation</li>
+<li>re-factored messy logic for generation of movable objects</li>
+<li>added current/finished level indicators + added ammo warning</li>
+<li>ammo cartridge, ammo generally and fuel bonuses are more more often available now and provide more ammunition and petrol - you should feel free to shoot a lot now</li>
+<li>audio files pre-fetching to avoid unnecessary delays during first playing (works ugly in Opera not supporting volume controls)</li>
+<li>object graphics lift-up</li>
+<li>cavern background stars decoration</li>
+<li>hourglass object updated by Daniel's suggestions to preserve transparency</li>
+<li>more sounds and small color changes</li>
+</ul>
+
+<h2><a href="cavern/086/cavern.svg">SVG Cavern Fighter 0.86</a></h2>
+<div class="date">2009-12-7 | svg | game</div>
+<p>Thank some of you for feedback. I'm trying to do progress primarily in mentioned areas. Safari on Windows is working strangely, but references from Mac are not so bad... Change log for this version is:</p>
+<ul>
+<li>implemented so much requested object's marking during game-play</li>
+<li>one new object type added (hourglass)</li>
+<li>game options are now with cursor: pointer property for easier understanding of their meaning</li>
+<li>setting on and off debugging for developers</li>
+<li>added support for reversed (up to down) objects (hanging from ceiling, in other words ;-)</li>
+<li>couple of text corrections and game screens/state fixes</li>
+<li>fixed unnecessary crash calls</li>
+<li>default tunnel space increased</li>
+</ul>
+
+<h2><a href="cavern/085/cavern.svg">SVG Cavern Fighter 0.85</a></h2>
+<div class="date">2009-12-5 | svg | game</div>
+<p>Another couple of hours spent and I really feel game is becoming quite good looking and funny. Added above else audio support and changed look a lot.<br/>
+Firefox 3.7 on Windows is my development and target platform, I do not deny, so I welcome feedback/hints from other platforms. Just now, during this release, I discovered that <em>Opera is terribly slow </em>
+(even with small window) and <em>sounds are not working in Chrome</em> (is it possible Chrome does not support WAV?) and <em>window.resizeTo() seems to be working only in Firefox</em>...<br/>
+But, it's still beta version, remember ;-)  Now I desperately need beta testers, feature sugestors, code/graphics/sounds contributors - simply, every help is welcome!!<br/><strong>Please, contact me / give me your feedback / via e-mail on marek(dot)raida(at)gmail(dot)com</strong><br/>
+<em>Changes from last public version are:</em></p>
+<ul>
+<li>added four new types of cave objects (Evil Eye, Ufo, Cistern and Coil)</li>
+<li>fixed bug in missile not detecting end of cave and continuing "forever"</li>
+<li>added maximum limits to shield and fuel</li>
+<li>visual indication bars for vital attributes</li>
+<li>movement of cave objects quickened to make it easier, esp. for bolt, to be able to avoid it</li>
+<li>starting position of rocket moved more to the center of window</li>
+<li>fixed game support to be fully manageable via Enter / Esc, without need for mouse and preventing default actions</li>
+<li>extended crash visual and information</li>
+<li>new "dark mood" design applied, game screen rearranged</li>
+<li>added visual warning of fuel running out and low shield</li>
+<li>graphical lift-up of main ship (fighter)</li>
+<li>for better compatibility with original game extended fire of missile also to Z key</li>
+<li>small configuration and design updates of cave objects</li>
+<li>initial sound support (there's 18 different sounds, 690kB in total, but using WAV for compatibility with Opera browsers) added + sound control on/off</li>
+<li>debug disabled by default</li>
+<li>script controlled window size to propose initial smaller screen size which is good for performance <em>(might be irritating for someone ;-)</em></li>
+</ul>
+<p><strong>Update 2009-12-6:</strong> Opera browser performance could be improved a bit by decreasing SVG target frame rate (<em>about:config, SVG fold, Target frame-rate</em>, set value to 15, and optionally also <em>Rendering Quality</em>, set value to 15), followed by browser restart...</p>
+
+<h2><a href="cavern/083/cavern.svg">SVG Cavern Fighter Update (v0.83)</a></h2>
+<div class="date">2009-12-1 | svg | game</div>
+<p>Thank you for your feedback. Most requested is better visualization of collision and here comes an update... ;-)<br/>Change log:</p>
+<ul>
+<li>shooting and bombing is much faster now and without range limitations</li>
+<li>added two types of visual crashing, I hope you'll enjoy them</li>
+<li>objects timing updated to be more interactive</li>
+<li>couple of workarounds to improve playability in Webkit (change of bolts initial appearance)</li>
+<li>menu optimization for low screen resolutions + few other minor visual changes</li>
+</ul>
+
+<h2>Game: <a href="cavern/082/cavern.svg">SVG Cavern Fighter Public Beta</a></h2>
+<div class="date">2009-11-30 | svg | game</div>
+<p>I feel that I've spent quite enough time on my latest game to announce it <em>public beta</em> and gather some feedback or obtain even some hints/advices/help on further development ;-)
+Rough idea is based on good old speccy Scramble like <a href="http://zxspectrumgames.blogspot.com/2009/10/zx-spectrum-games-cavern-fighter-zx.html">Cavern Fighter</a> game.  
+<a href="cavern/082/cavern.svg">My game</a> is playable already and although many ideas are not implemented yet (and maybe never will), many features are in place already:</p>
+<ul>
+<li>random generation of cave, collision detection and scrolling; scrolling is not SMIL based because of huge performance troubles :-(</li>
+<li>seven types of nice cave objects, fully configurable and it is very easy to add more</li>
+<li>ship movement by all four directions</li>
+<li>dynamic increasing of levels difficulty, they are more narrow, faster and with more enemies...</li>
+<li>ship can fire missile or throw a bomb; one at a time only, to save some CPU power</li>
+<li>viewport computing during collision detection to save CPU power</li>
+<li>game playability is, I would say, moderate now, can be tuned far more, but primarily running out of fuel is what makes game quite funny</li>
+</ul>
+<p>What is not implemented and should be, before can be game considered at least version 1.0 is:</p>
+<ul>
+<li>adding better crashes visual effects</li>
+<li>better visualization of shield indicator, fuel indicator etc.</li>
+<li>sound support (I plan not to use Flash this time, but direct HTML5 audio support)</li>
+<li>server based storing of achieved score / TOP TEN</li>
+<li>hacking performance a bit more, it is, especially in Opera, very slow on higher levels (I look forward to hardware acceleration in browsers, like 
+<a href="http://www.basschouten.com/blog1.php/2009/11/22/direct2d-hardware-rendering-a-browser">Bas showed us</a>, I really do! It is not about CPU usage, it seems similar to me, but game is smooth and fluent even on higher levels!! Wonderful!)</li>
+</ul>
+<p>I <em>appreciate any help, especially related to performance tweaking</em>, cross OS/Browser compatibility, audio, but also with graphics, game ideas or bugs. Contact me via e-mail, please, marek(dot)raida(at)gmail(dot)com. 
+My goal is to make game fully working in <br/>
+Firefox 3.7+ with SMIL turned on (about:config => svg.smil.enabled = true) and Opera 10.x. Chrome 3+/Safari 4+ suffers from current Webkit's issue with dynamic generation of SMIL animations,
+so elements in cave are static, not movable :-(<br/>
+<em>Support for ASV is not part of my plans!</em><br/>
+..and... thank you for your feedback ;-)</p>
+
+
+<h2>SMIL disabled for Firefox 3.6</h2>
+<div class="date">2009-11-12 | svg</div>
+<p>...and this time finally, so Firefox 3.6 beta 2 is the last official build where could be SMIL turned ON (about:config => svg.smil.enabled = true).
+So, guys, from now on we should <em>look forward to 3.7</em> even more eagerly!!</p>
+
+
+<h2><a href="rotjump/rotatefull.svg">Rotate and Jump with Reflection</a></h2>
+<div class="date">2009-11-04 | svg</div>
+<p>So, another experiment is out. I started with reflection effect on the water (sea), then added couple of other animations.
+Result is far from complex animation, but worth of publishing as version 1.0 (my opinion, yes), especially considering fact, that it could,
+like many and many other experiments, remain hidden and forgotten on some local computer... ;-)<br/>
+So here comes my <a href="rotjump/rotatefull.svg">animated text with sea water reflection effect</a> during sunset. It is really simple, couple of
+texts stupidly duplicated to another transformed group to achieve reflection and (almost) nothing else. How do you like it?<br/>
+As you may notice, animations are <em>not so fluent in Firefox</em>, but this a bit <a href="rotjump/rotate.svg">simplified version</a>
+works very fluently even in Firefox (with dropped gradient animations, transparencies and cloud movements). I believe it to be only matter of time, 
+before Mozilla guys will tweak the drawing performance a bit more (and I'm really really looking forward to the public release of version 3.7!)<br/>
+It runs great in Opera 9+, Firefox 3.6a-b2, 3.7+ with SMIL turned on (about:config => svg.smil.enabled = true) and ASV. Chrome 3+/Safari 4+ have not implemented masking yet and so there is no reflection at all :-( 
+<em>(FFX 3.6 does not animate gradient's stop colors, but 3.7+ does!)</em></p>
+
+<h2><a href="jack/jack-o-lantern-upd.svg">Jack-o'-Lantern in SVG</a></h2>
+<div class="date">2009-11-03 | svg</div>
+<p>Reminded by Jeff and his <a href="http://blog.codedread.com/">Halloween Vomit theme</a> I started thinking about some nice Halloween SVG I saw couple of years back.
+After googling a while I found the <a href="http://www.taedium.com/svg/jack-o-lantern.svg.html">original (by Eric)</a>, and it really <em>is</em> nice, despite its origin in year 2001.<br/>
+However, as expected, it works in ASV only. But I've spent 15 minutes and updated it to be compatible enough to run well in all common SVG browsers. So enjoy this <a href="jack/jack-o-lantern-upd.svg"><em>old-but-gold piece</em></a>!<br/>
+Runs great in Opera 8+, Chrome 2+/Safari 3+, Firefox 1.5+ and of course ASV. Gecko &amp; Webkit miss hover support on buttons, but this is only minor feature... and old FFX does not support tref nor opacity...</p>
+
+<h2><a href="dance/dance.svg">SVG Dance! (Text Effect)</a></h2>
+<div class="date">2009-10-28 | svg</div>
+<p>Today I've spent three hours of our national holiday by further experimenting with SVG text.
+I discovered that Firefox does not support direct animation of text element ('cause it is list, not just number), but encapsulation in group element solved the problem.
+Another known issue with Webkit is that it's not possible to dynamically create SMIL animation, so <a href="dance/dance.svg">this demo</a> is the <em>static one</em>,
+to achieve best cross browser compatibility.<br/>
+Original idea to generate via script (which is logical approach in this case) o lot of texts with different timing to achieve <em>"tailing effect"</em> had been
+simplified in the end, but despite it, final effect is roughly what I planned from the beginning...<br/>
+Runs great in Opera 9+, Chrome 3+/Safari 4+, <a href="ftp://ftp.mozilla.org/pub/firefox/nightly/latest-trunk/">Firefox 3.7+</a> with SMIL turned on (about:config => svg.smil.enabled = true) and also ASV 
+(ASV is surprisingly performing worst in case of many text transformations, hmmm...)
+</p>
+
+<h2><a href="chisel/chisel.svg">SVG Chisel Text Effect</a></h2>
+<div class="date">2009-10-25 | svg</div>
+<p>Another demo which demonstrates power of SVG - popular chisel effect on text, implemented in SVG. I'm personally not sure, if it is better with or without SMIL 
+animations, but both are nice.<br/>
+Runs well in Opera 9+, Chrome 3+/Safari 4+, ASV and Firefox (it works good and without animations in version 3.0 or later and could be considered even nicer than animated one).
+</p>
+
+<h2><a href="zx/imggallery2.svg">SVG Image Gallery Firefox Update</a></h2>
+<div class="date">2009-10-19 | svg</div>
+<p>Firefox has been patched and supports now floating values for SMIL animations. So, as a results,
+now works properly <a href="adobe/wonder.svg">old <em>wonder</em> Adobe SVG demo</a> and I prepared also different version of my <a href="zx/imggallery2.svg">SVG Image Gallery</a>
+(and yes, also the <a href="zx/plainimggall2.svg">simplified static version</a>).<br/>
+Because Firefox does not support &lt;set&gt; yet I used &lt;animate&gt; with calcMode="discrete" instead, to do the trick 
+of semi-transparency, which Gecko has been not supporting previously!)<br/>
+<del>However, it causes Firefox to crash after some dozen seconds (probably on remove action from DOM of element with 
+SMIL animation using floating values - my guess), but it's surely some temporary bug and I filled in some 
+crash reports already)</del> - <strong>Patched - thx Daniel! ;-)</strong><br/>
+Updated code runs great in Opera 9+, ASV and <a href="ftp://ftp.mozilla.org/pub/firefox/nightly/latest-trunk/">Firefox 3.7+</a> with SMIL turned on (about:config => svg.smil.enabled = true); 
+in Chrome 3+/Safari 4+ dynamic insertion (via JavaScript) of SMIL events does not work and it is known bug, 
+so I'm not able to fix it in no way...<br/>
+<strong>Update 2009-10-19, one hour later:</strong> I discovered that if SMIL animation finishes before removing from DOM, we're able to avoid the problem ;-) , but it's <a href="zx/imggallery2o.svg">still there :-(</a>...
+</p>
+
+<h2><a href="zx/imggallery.svg">SVG Image Gallery (ZX Nostalgy Vol. II)</a></h2>
+<div class="date">2009-10-15 | svg</div>
+<p>So, I worked a bit on my next idea - <em>animated SVG image gallery</em> - and there comes my first attempt. It is far from complete state, but working already.
+I used again ZX Spectrum screenshots as presentable images (<a href="zx/zxgallery2.htm">static gallery</a> of 256! nice speccy titles), 
+but they could be easily reconfigured to something else. Goal is to prepare easily installable and configurable image <a href="zx/imggallery.svg">gallery script</a>.<br/>
+It uses SMIL and scripting altogether and works great in most of browsers, except of Webkit, but it is just a matter of time to find out what's wrong (I hope).<br/>
+It runs great in Opera 9+ and ASV. <a href="ftp://ftp.mozilla.org/pub/firefox/nightly/latest-trunk/">Firefox 3.6a-b2, 3.7+</a> with SMIL turned on (about:config => svg.smil.enabled = true) 
+runs fine, but without semi-transparencies during flipping image; Chrome 3+/Safari 4+ seems to be not working on dynamic creation of SMIL animations... :-(<br/>
+However, there is <a href="zx/plainimggall.svg">compatible, more simple version of gallery</a>, working in Chrome/Safari as well! ;-)<br/>
+<em>Animated GIFs with blink effects were converted to static images to avoid problems in Opera etc., so Bruce Lee and Batman are back!</em></p>
+
+<h2><a href="zx/loader.htm">ZX Spectrum SVG Loader 1.0 (with sound)</a></h2>
+<div class="date">2009-10-11 | svg</div>
+<p>Not satisfied with synchronization issues and really really missing sound support, there is final version of my ZX Loader.<br/>
+Using good old sound manager (SWF based, for achieving cross browser functionality), and thus also HTML/iframe encapsulation is must.
+Also synchronization problems were solved; not relying anymore on SMIL &amp; JS sync, animations are chunked and every chunk is
+started from <a href="zx/loader.htm">script always</a> (so SMIL and JS are both still in use, but keeping sync via scripting.)<br/>
+Also random screenshot picking mechanism had been changed to array shuffle, to achieve better order experience. ;-)<br/>
+<em>Please, be patient for animation to start for the first time...</em><br/>
+No changes to compatibility - it still runs great in Opera 9+, Chrome 3+/Safari 4+ and ASV but not Firefox.</p>
+
+
+<h2><a href="zx/zx-spectrum-loader.svg">ZX Spectrum SVG Loader 0.75</a></h2>
+<div class="date">2009-10-07 | svg</div>
+<p>Keeping another of my promises, here comes ZX Spectrum Loader demo. It contains more than <em>one hundred</em> randomly loaded 
+title screens from the most famous Speccy games. SVG and SMIL is in use for for creating loading border stripes and I hope final effect is very close to the <a href="zx/zx-spectrum-loader.svg">real ZX loading effect</a> 
+(you can compare it to for example <a href="http://www.youtube.com/watch?v=pYryKa3CQTE">this video</a> ;-)<br/>
+It runs great in Opera 9+, Chrome 3+/Safari 4+ and of course ASV. <em>Sadly, no Firefox this time, it freezes hopelessly on used animations and do not support's SMIL event starts</em>... :-(<br/>
+SMIL timed events and JS timed events are <em>not synchronized</em> and after some time you'll be able to notice it, but never mind... it's juts short demo! ;-)<br/>
+<br/><strong>Update:</strong> Removed animated images cousing troubles (<a href="zx/zx-screens/other/batman1.gif">batman1</a>, <a href="zx/zx-screens/other/brucelee.gif">brucelee</a>,
+<a href="zx/zx-screens/other/swordsofbane.gif">swordsofbane</a>) and total number of screenshot finalized to magic number <em>128</em>!<br/>If you wish to see them all, 
+there is the <a href="zx/gallery.htm">gallery page</a> (mostly taken from <a href="http://www.worldofspectrum.org/">www.worldofspectrum.org</a> ;-)</p>
+
+
+<h2><a href="zx/zx-spectrum-demo-2.svg">ZX Spectrum SVG demo 2.0</a></h2>
+<div class="date">2009-09-24 | svg</div>
+<p>Keeping my promise from couple days back, I got back to ZX Spectrum demo and done massive update.<br/>
+There are all the buttons text, properly positioned. I have been forced to avoid use of tspan, 'cause it behave "ugly" during scaling and is inconstent between different browsers. 
+So you can scale freely now and it keeps basic formatting sufficiently. Animation is very fluent on small scale, but texts are not legible, se we've to cope with bigger size :-(<br/>
+And <em>voila!</em> ...<a href="zx/zx-spectrum-demo-2.svg">here we go!</a> With gradient on buttons, animated gradient rainbow effect and masked text 
+I consider it worth of version 2.0! I have ideas for other effects and improvements and hope to create some other variant after my <em>just starting vacations</em> :-)<br/>
+It runs great in Opera 9+ and <a href="ftp://ftp.mozilla.org/pub/firefox/nightly/latest-trunk/">Firefox 3.6a-b2, 3.7+</a> with SMIL turned on (about:config => svg.smil.enabled = true) and Chrome 3+/Safari 4+, with exception to text masking, too. 
+ASV does traditionally well, but is not able to display some UTF-8 characters, huh :-(</p>
+
+<h2><a href="adobe/adobe.htm">Old Adobe SVG Samples</a></h2>
+<div class="date">2009-09-23 | svg</div>
+<p>Selected samples from old <a href="http://www.adobe.com/svg/demos/samples.html">Adobe SVG samples</a> web and updated to work, at least partially, in modern browsers. Although old, still <em>quite inspirational</em> 
+and showing, which modern web browser is best in SVG implementation. It is, without suprise, Opera, followed by Firefox and Webkit core. Webkit has better SMIL 
+implementation than Firefox but is beaten down in the area of filters. See and compare, yourselves, <a href="adobe/adobe.htm">enjoy them</a>... ;-)</p>
+
+<h2><a href="zx/zx-static.svg">ZX Spectrum SVG Tribute</a></h2>
+<div class="date">2009-09-23 | svg</div>
+<p>Idea from nowhere appeared to me, to create some tribute to good, old (but gold) <a href="http://en.wikipedia.org/wiki/ZX_Spectrum">Speccy</a>. Drawing Speccy itself is not very creative and entertaining process, but I consider it good enough to publish it already. (Although I plan to enhance it even more, in the near future).<br/>
+I have more ideas so let's hope to find enough time to turn them to become something <em>real</em>. So, it is <a href="zx/zx-static.svg">initial version</a> and from lack of time I prepared only one more, <a href="zx/zx.svg">bouncing version</a>. However, it seems to be quite performance demanding :-( , esp. in Firefox.<br/>
+It runs great in Opera 9+, Chrome 3+, Safari 4+ and <a href="ftp://ftp.mozilla.org/pub/firefox/nightly/latest-trunk/">Firefox 3.6a-b2, 3.7+</a> with SMIL turned on (about:config => svg.smil.enabled = true).
+I do not test other browsers, but expect all my recent demos to be working properly in ASV and Squiggle as well.</p>
+
+<h2><a href="ghost/spirit.svg">Good Spirit Animation</a></h2>
+<div class="date">2009-09-22 | svg</div>
+<p>I work for LMC company these days and company has in the sign of its flagship <a href="http://www.jobs.cz/en/">Jobs.cz portal</a> GIF animation of flying "Good spirit", created by company's founder in its early days (more than 10 years ago).<br/>
+Recently, I saw this animated GIF in presentation, stretched to whole screen and it was really <em>ugly, pixelized</em> and, well, ...raster based!<br />
+So I found spare 30 minutes and created <a href="ghost/spirit-org.svg">vector version</a> and with effort of additional 10 minutes slightly more cheery, <a href="ghost/spirit.svg">enhanced version</a> ;-).<br/>
+It runs great in Opera 9+, Chrome 3+, Safari 4+ and <a href="ftp://ftp.mozilla.org/pub/firefox/nightly/latest-trunk/">Firefox 3.6a-b2, 3.7+</a> with SMIL turned on (about:config => svg.smil.enabled = true).<br/>
+<strong>Update 2009-09-25:</strong> Added one more Good Spirit version, this time it is <a href="ghost/spirit-org2.svg">Good Spirit with drop shadow effect</a>...</p>
+
+<h2><a href="digg/cubes_step7fin.svg">Famous SVG Digging Animation Resurrected</a></h2>
+<div class="date">2009-09-21 | svg</div>
+<p>Original <a href="http://www.xml.com/pub/a/2002/01/23/svg/">demo from Antoine Quint</a> has trouble running in other browsers (plugins) than ASV. I modified original file and <a href="digg/cubes_step7fin.svg">result you can see</a>.<br />
+Now it runs great in Opera 9+, Chrome 3+, Safari 4+ and even <a href="ftp://ftp.mozilla.org/pub/firefox/nightly/latest-trunk/">Firefox 3.6a-b2, 3.7+</a> with SMIL turned on (about:config => svg.smil.enabled = true).<br />
+For Firefox very limited support of SMIL events, there is, however, some dirty trick in JS in place... but it is working at least acceptably, if not optimally...</p>
+
+<h2><a href="turtles/turtles.svgz">SVG Turtles</a></h2>
+<div class="date">2006-10-06 | svg</div>
+<p>My first SVG game created, compatible with only ADOBE SVG Viewer 3.x/6a but maybe compatibility with Opera should not be a great trouble. I'll see, if there is some time, I could try. Historical HighScores are lost, so at this new location it's starting from scratch again. :-)<br />
+Game controls by cursor keys or both mouse buttons (left and right only).</p>
+
+<h2><a href="cowboys/cowboys.svg">SVG Cowboys</a></h2>
+<div class="date">2006-10-06 | svg</div>
+<p>My second SVG game created, compatible again with only ADOBE SVG Viewer 3.x/6a. I tried to make it compatible with Opera but current status is, that there is something strange with applying mask/clippingPath elements to the dynamically created elements :-( Avaiable also as compressed <a href="cowboys/cowboys.svgz">one-file package</a>. Again, as to for Turtles, historical HighScores are lost, so at new location it's starting from scratch... Cowboys was my most popular game, having on the highscores list about two thousand of entries after six months of public availability.<br />
+Game controls by mouse + mouse buttons (left and middle) and Space.</p>
+
+<h2><a href="bubbles/bubbles.svgz">SVG Bubbles</a></h2>
+<div class="date">2006-10-06 | svg</div>
+<p>Not a game nor demo. I was just inspired by O2 banners during massive Telefonica's Czech Republic so I created quickly some SVG clones, to prove simplicity of creating something like oxygen bubbles in water in SVG and SMIL. There are also three additional versions available, for <a href="bubbles/bubblesff.svg">Firefox with SMIL script</a>, <a href="bubbles/bubblesfull.svg">full-screen with filters</a> and one <a href="bubbles/bubblesred.svg">"vodafonized" version</a> ;-)</p>
+
+<h2><a href="tutorial/index.htm">SVG Basics in Mozilla</a> (Czech only)</h2>
+<div class="date">2006-10-06 | svg</div>
+<p>Short How-To-Start / Learning article I wrote at the time of Firefox 1.0 when SVG was only in the trunk and not in official builds. However, it was never published... until now, and although a bit outdated, perhaps still usable for many SVG newbies ;-)</p>
+
+<h2><a href="submarine/index.htm">SVG Submarine Assault</a></h2>
+<div class="date">2006-10-02 | svg</div>
+<p>Comeback to the SVG gaming arena after a while... My trully first SVG cross-browser's game, and quite good one, I hope. let's try it and you'll see. There is even sound support without Adobe's native audio extension, but through Flash sound bridge, so with far larger compatibility. More details available on the game detail page.<br />
+Game controls by cursor keys, Space and Shift.</p>
+
+
+<div id="footer">
+<h4>Authors: Marek Raida &lt;marek&nbsp;.&nbsp;raida&nbsp;@&nbsp;gmail&nbsp;.&nbsp;com&gt;</h4>
+</div>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-11950721-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+</body>
+</html>

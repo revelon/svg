@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="250" height="150">
+<script type="text/ecmascript" xlink:href="smil.user.js"/>
+<mask id="pills1">
+  <rect x="0" y="0" width="130" height="40" fill="white"/>
+</mask>
+
+<g mask="url(#pills1)" transform="translate(72 64)">
+  <circle r="300" fill="none" stroke="black"/>
+  <line x1="0" y1="20" x2="400" y2="20" stroke="gray" stroke-width="20" stroke-linecap="round" stroke-dasharray="1,60">
+    <animateTransform attributeName="transform" type="translate" begin="0s" dur="6s" values="0 0; -185 0" repeatCount="indefinite"/>
+  </line>
+</g>
+
+<g transform="translate(85 85)">
+  <g id="halfax1">
+    <path d="m 125.71429,70.933609 a 55.714287,55.714287 0 1 1 -111.428577,-3e-6" stroke="none" fill="gold" transform="translate(-70 -71.5)"/>
+    <animateTransform id="abc" attributeName="transform" type="rotate" from="0" to="20" dur="0.5s" repeatCount="1" begin="0s; cde.end" fill="freeze"/>
+    <animateTransform id="cde" attributeName="transform" type="rotate" from="20" to="0" dur="0.5s" repeatCount="1" begin="abc.end" fill="freeze"/>
+  </g>
+  <use xlink:href="#halfax1" transform="scale(1 -1) translate(0 0)"/>
+  <circle cy="-30" r="8" fill="#000" stroke="white" stroke-width="4"/>
+</g>
+</svg>

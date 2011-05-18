@@ -1,0 +1,89 @@
+<!--
+NOTICE:  [1999-2001] Adobe Systems Incorporated.  Adobe hereby grants you the rights to reproduce, modify and distribute this file and its contents, not including any fonts, audio files or raster images included or embedded in or linked to this file, (the "Software"), and to grant such rights to other parties subject to the following:  This notice shall be included in any copy of the Software or any portion thereof.  THE SOFTWARE IS PROVIDED TO YOU AS-IS, WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT.  IN NO EVENT SHALL ADOBE BE LIABLE TO YOU OR ANY OTHER PARTY FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE.
+Modified By Marek Raida
+-->
+<svg xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>feMarble</title>
+<desc>Marble-like texture and blurred drop shadow applied to text</desc>
+	<defs>
+		<linearGradient id="pinnedLinear" gradientUnits="objectBoundingBox" x1="0" y1="0" x2="0" y2="1">
+			<stop offset="0.000" style="stop-color:orange"/>
+			<stop offset="0.200" style="stop-color:orange"/>
+			<stop offset="0.240" style="stop-color:#A0A0FF"/>
+			<stop offset="0.250" style="stop-color:#0000FF"/>
+			<stop offset="0.265" style="stop-color:#0000FF"/>
+			<stop offset="0.275" style="stop-color:#A0A0FF"/>
+			<stop offset="0.315" style="stop-color:orange"/>
+			<stop offset="0.500" style="stop-color:orange"/>
+			<stop offset="0.540" style="stop-color:#A0A0FF"/>
+			<stop offset="0.550" style="stop-color:#0000FF"/>
+			<stop offset="0.565" style="stop-color:#0000FF"/>
+			<stop offset="0.575" style="stop-color:#A0A0FF"/>
+			<stop offset="0.615" style="stop-color:orange"/>
+			<stop offset="0.800" style="stop-color:orange"/>
+			<stop offset="0.840" style="stop-color:#A0A0FF"/>
+			<stop offset="0.850" style="stop-color:#0000FF"/>
+			<stop offset="0.865" style="stop-color:#0000FF"/>
+			<stop offset="0.875" style="stop-color:#A0A0FF"/>
+			<stop offset="0.915" style="stop-color:orange"/>
+			<stop offset="1.000" style="stop-color:orange"/>
+		</linearGradient>
+		<g id="stripes">
+			<rect x="10" y="10" width="500" height="200" style="fill:url(#pinnedLinear)"/>
+		</g>
+		<filter id="Marble" filterUnits="objectBoundingBox" width="120%" height="130%">
+			<feTurbulence baseFrequency="0.017" numOctaves="3" result="turb"/>
+			<feComponentTransfer result="turb">
+				<feFuncR type="table" tableValues="0 2.5"/>
+				<feFuncG type="table" tableValues="0 2.5"/>
+				<feFuncB type="table" tableValues="0 2.5"/>
+				<feFuncA type="table" tableValues="0 2.5"/>
+			</feComponentTransfer>
+			<feTurbulence baseFrequency="0.091" numOctaves="3" result="turb2"/>
+			<feComponentTransfer result="turb2">
+				<feFuncR type="table" tableValues="0 2.5"/>
+				<feFuncG type="table" tableValues="0 2.5"/>
+				<feFuncB type="table" tableValues="0 2.5"/>
+				<feFuncA type="table" tableValues="0 2.5"/>
+			</feComponentTransfer>
+			<feImage xlink:href="#stripes"/>
+			<feDisplacementMap in2="turb"  scale="20" xChannelSelector="R" yChannelSelector="G"/>
+			<feDisplacementMap                    in2="turb"  scale="20" xChannelSelector="B" yChannelSelector="A"/>
+			<feDisplacementMap                    in2="turb2" scale="5" xChannelSelector="R" yChannelSelector="G"/>
+			<feDisplacementMap result="Marble"    in2="turb2" scale="5" xChannelSelector="B" yChannelSelector="A"/>
+			<feMorphology result="mask" in="SourceAlpha" operator="dilate" radius="6"/>
+			<feComposite in="Marble" in2="mask" operator="in" result="MarbleCutout"/>
+			<feGaussianBlur		id="blur" in="mask" stdDeviation="7" result="blur"/>
+			<feOffset			id="offset" in="blur" dx="10" dy="10" result="offsetBlurredAlpha"/>
+			<feFlood			id="color" style="flood-color:black; flood-opacity:0.4" result="color"/>
+			<feComposite		id="shadowColor" in="color" in2="offsetBlurredAlpha" operator="in"
+								result="offsetBlurredAlpha"/>
+			<feDiffuseLighting	id="diffuse" in="blur" resultScale="1" surfaceScale="5"
+								diffuseConstant="1" style="lighting-color:#E0E0E0"
+								result="diffuse">
+				<feDistantLight		id="light" azimuth="135" elevation="60"/>
+			</feDiffuseLighting>
+			<feSpecularLighting	in="blur" surfaceScale="5" specularConstant="1" specularExponent="6"
+								style="lighting-color:#EEE" result="specularOut">
+				<feDistantLight		id="light" azimuth="135" elevation="30"/>
+			</feSpecularLighting>
+			<feComposite		in="MarbleCutout" in2="diffuse"
+								operator="arithmetic" k1="0" k2="0.7" k3="0.3" k4="0"
+								result="litPaint"/>
+			<feComposite		in="litPaint" in2="specularOut"
+								operator="arithmetic" k1="0" k2="1" k3="0.7" k4="0"
+								result="litPaint"/>
+			<feComposite		in="litPaint" in2="mask" operator="in" result="litPaint"/>
+			<feMerge>
+				<feMergeNode in="offsetBlurredAlpha"/>
+				<feMergeNode in="litPaint"/>
+			</feMerge>
+		</filter>
+	</defs>
+	<g style="filter:url(#Marble)" transform="matrix(.8 0 0 .8 0 0)">
+		<text x="10" y="180" style="font-size:180px">SVG</text>
+	</g>
+
+<image xlink:href="http://www.google-analytics.com/__utm.gif?utmwv=4.7.1&amp;utmn=21830374&amp;utmhn=svg.kvalitne.cz&amp;utmcs=UTF-8&amp;utmsr=1920x1080&amp;utmsc=24-bit&amp;utmul=en-us&amp;utmje=1&amp;utmfl=10.0%20r45&amp;utmdt=SVG%C2%A0%E2%80%94%C2%A0It%27s%20in%20your%20hands...&amp;utmhid=1377849700&amp;utmr=-&amp;utmp=%2Findex2.htm&amp;utmac=UA-11950721-1&amp;utmcc=__utma%3D251371972.1884550355.1260220320.1272562824.1272576758.56%3B%2B__utmz%3D251371972.1263752798.41.3.utmcsr%3Dgoogle%7Cutmccn%3D(organic)%7Cutmcmd%3Dorganic%7Cutmctr%3Dsvg%2520smil%2520demo%3B" width="1" height="1"/>
+
+</svg>

@@ -1,0 +1,5 @@
+<svg width="600" height="450" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<foreignObject x="40" y="40" width="800" height="600" transform="skewY(6) scale(0.6)">
+  <iframe xmlns="http://www.w3.org/1999/xhtml" src="http://www.prace.cz/" width="800" height="600"></iframe>
+</foreignObject>
+</svg>

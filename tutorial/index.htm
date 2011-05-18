@@ -1,0 +1,350 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="cs">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>svg &amp; mozilla</title>
+<style type="text/css">
+pre {background-color:lightgray;padding:4px;font-size:0.9em;}
+pre img {float:right;border:none;}
+</style>
+</head>
+<body>
+<h1>SVG &amp; Mozilla - XML grafika pro web</h1>
+<img src="examples/uvod.png" align="right" alt="SVG & Mozilla"/>
+<p><em>(Marek Raida, květen 2005)</em></p>
+
+<h2>Stručný úvod</h2>
+
+<p>SVG (Scalable Vector Graphics) znamená v překladu něco jako <em>Škálovatelná vektorová grafika</em>, tedy vhodná k zoomování a další práci. Jedná se jednu z existujících technologií vektorové grafiky, určené primárně pro použití na webu (existují samozřejmě i jiné vektorové formáty - nejznámější z dílen Macromedie - SWF, Microsoftu - VML apod.). Bylo napsáno mnoho pojednání a debat o výhodách a nevýhodách jednotlivých technologií a implementací, ale těmi se v tomto <em>úvodu do SVG</em> nebudeme zabývat. Mělo by postačit tvrzení, že je to standardizovaný vektorový formát na bázi XML. Technologie SVG je na světě bezmála od roku 1999 a není to tak přelomová technologie, jak mnozí předpovídali, ale dny jejího širokého nasazení už jsou tady. Na straně jedné tomu napomáhá trend mobilních telefonů, a na druhé straně je zde jako velmi zajímavý (a módní) propagátor také Mozilla či Firefox (současná technologická <a href="http://www.mozilla.org/projects/firefox/" target="_blank">preview verze Deer Park má už SVG standardně zakompilováno a zapnuto</a>. Pro testování ukázek v tomto článku je doporučena.</p>
+
+<p>Nejznámějším SVG pluginem je implementace od Adobe, odkaz na jeho stažení je uveden v odkazech na konci článku. Rozsahem vlastností je to již delší dobu nejlepší existující SVG plugin. S prohlížeči Mozilla je poměrně dobře kompatibilní <em>(Upozornění: Windows verze nepodporuje práci s klávesnicí a Linuxová verze zase zvuková multimedia)</em>. Pro většinu ukázek v tomto článku je možno jej použít rovněž.<br />
+Existující i další pluginy (Corel, Batik apod.), tyto jsou ale z hlediska článku stranou našeho hlavního zájmu.</p>
+
+<p>Na poli SVG se toho hodně děje a pohybuje se tam mnoho velkých hráčů. Na jedné straně jsou to výrobci známých vektorových editorů, které běžně export/import SVG podporují, a na straně druhé, na kterou se zaměříme my, jsou to webové prohlížeče a jejich pluginy, umožňující s SVG přímou práci a interakci;  především pak na Firefox 1.1.</p>
+
+<hr />
+
+<h2>Hello world!</h2>
+<p>Příklad starý jako programování samo, napoví vše o základní struktuře SVG. Celý příklad se sestává z pouze z otevření kořenového elementu SVG a zavěšení textového elementu s textem "Hello world!", přičemž atributy X a Y u textu udávají souřadnice kam se má text umístit a atribut XMLNS je u tagu SVG přítomen pouze proto, abz prohlížeči sdělil, s jakým jmenným prostorem se bude pracovat. Snadné, že?</p>
+<pre><a title="Odkaz na ukázku" href="examples/hello.svg" target="_blank"><img src="examples/hello.png" alt="Hello world"/></a>&lt;svg xmlns="http://www.w3.org/2000/svg"&gt;
+  &lt;text x="20" y="20"&gt;Hello world!&lt;/text&gt;
+&lt;/svg&gt;</pre>
+<p><em>Pro formální správnost však již u všech dalších příkladů budeme uvádět také deklarace XML a typu dokumentu.</em></p>
+
+<h2>Standard SVG</h2>
+
+<p>Existují tři verze SVG, a to SVG 1.0, SVG 1.1 a SVG 1.2 přičemž poslední zmiňovaná není v době tvorby článku dosud ve stavu ani Release Candidate. Dále se SVG dělí na několik podskupin vypouštějících určité oblasti funkcí, výměnou za snadnější implementaci a možný provoz i na zařízeních jako jsou PDA a mobilní telefony. Oficiálními podskupinami specifikace SVG 1.1 jsou <em>SVG Basic a SVG Tiny</em>. Mozilla nativní implementace nesplňuje plně ani jednu z existujících verzí, avšak většina běžně potřebných elementů a funkcí dostupná je.</p>
+
+<h2>Možnosti SVG</h2>
+<p>SVG by samo o sobě by nebylo dostatečně zajímavou technologií, kdyby neumožňovalo dobrou integraci s existujícími standardy a technologiemi. SVG je tedy značkovací XML jazyk a mezi nejdůležitější technologie s ním spojené patří:</p>
+
+<ul>
+<li>scriptování, otevřeno pro veškeré existující jazyky; norma však vyžaduje minimálně podporu pro EcmaScript (nejznámější z Ecma řady je JavaScript), další jazyky jsou již závislé na konkrétních implementacích</li>
+<li>DOM aneb standardní způsob manipulace se všemi elementy a událostmi stromu dokumentu</li>
+<li>Compound Document - tedy dokument kombinující mnoho formátů</li>
+<li>XLINK sloužícící k využívaní/propojování interních i externích objektů</li>
+<li>SMIL čili událostně-animační multimediální jazyk; právě integrace s SVG umožňuje v plné šíři využívat všech jeho možností</li>
+<li>ICC aneb podpora barevných profilů, předurčující SVG k dobrému využítí i v oblasti tiskové grafiky.</li>
+</ul>
+
+<h3>SVG nabízí</h3>
+<ul>
+<li>předdefinované základní geometrické tvary
+<li>polygony, křivky apod.</li>
+<li>stylování vzhledu použitím modelu CSS2</li>
+<li>podporu uživatelských gradientů a filtrů</li>
+<li>ořezové cesty a maskování</li>
+<li>velké množství 2D transformací se zachováním maximální kvality</li>
+<li>pokročilá podpora grafických filtrů</li>
+<li>manipulovatelnost s elementy a jejich vlastnostmi standardními DOM metodami</li>
+<li>indexovatelnost vnitřních textů vyhledávacími stroji</li>
+<li>značkování - tedy např. šipky (využití v oblasti GIS, DTP)</li>
+<li>webová písma, tj. uživatelské sady písem</li>
+<li>intuitivní a přehledný způsob práce, snadné automatické generovaní, např. s použitím XSLT.</li>
+</ul>
+
+<hr />
+
+<h3>Praktické ukázky</h3>
+<p>Podívejme se na několik jednoduchých příkladů použití. Nutno ještě upozornit že se předpokládá prohlížení ve Firefox Deer Parku či pozdnějších verzích, a dále, že pro lokální prohlížení dostačuje prohlížeči rozlišování podle přípony (htm, html, xml, svg, svgz); avšak pro prohlížení obsahu na serveru je nutno mít také spravně nastaveny MIME typy pro přípony svg a svgz na <em>image/svg+xml</em>.</p>
+<p>Vzhledem k tomu, že zde jde o stručné seznamování s SVG a jeho možnostmi, nebudeme u příkladů podrobně probírat všechny jednotlivé značky a jejich možnosti, pouze zdůrazníme některé (z hlediska článku) novinky a zajímavosti (většina atributů je samopopisných, jako např. x,y jsou souřadnice, cx,cy jsou souřadnice středu, rx,ry poloměry pro radius apod.). Rovněž u delších příkladů nebude zobrazován celý zdrojový kód, ale pouze výsek toho nejzajímavějšího.</p>
+
+<h4>Obdélníkové útvary</h4>
+<pre><a title="Odkaz na ukázku" href="examples/obdelnik.svg" target="_blank"><img src="examples/obdelnik.png" alt="Obdélníkové útvary"/></a>&lt;?xml version="1.0"?&gt;
+&lt;!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"&gt;
+&lt;svg xmlns="http://www.w3.org/2000/svg"&gt;
+
+  &lt;rect x="0" y="0" width="200" height="80" fill="none" stroke="blue" stroke-width="1"/&gt;
+
+  &lt;rect x="10" y="10" width="60" height="60" rx="5" fill="red"/&gt; 
+  &lt;rect x="0" y="0" width="80" height="30" rx="5" ry="5" fill="none" stroke="darkgreen" 
+  stroke-width="3" transform="translate(110 5) rotate(30)"/&gt;
+
+&lt;/svg&gt;</pre>
+<p>Pro konstrukci veškerých jednoduchých rektangulárních útvarů lze použít tag RECT. Oproti možnostem běžného HTML zaujme snadná možnost tvorby zakulacených rohů pomocí atributů rx/ry. Rovněž je zde částečně demonstrován, na pootočení třetího obdélníku, atribut <em>transform</em>, a to konkrétně přesun a rotace.</p>
+
+<h4>Čáry a úsečky</h4>
+<pre><a title="Odkaz na ukázku" href="examples/cary.svg" target="_blank"><img src="examples/cary.png" alt="Čáry a úsečky"/></a>&lt;?xml version="1.0"?&gt;
+
+&lt;!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"&gt;
+&lt;svg xmlns="http://www.w3.org/2000/svg"&gt;
+
+  &lt;rect x="0" y="0" width="200" height="80" style="fill:none;stroke:blue;stroke-width:1px"/&gt;
+  &lt;g style="stroke:gold;"&gt;
+    &lt;line x1="5" y1="70" x2="35" y2="10" style="stroke-width:5; stroke-linecap:round;"/&gt;
+    &lt;line x1="40" y1="70" x2="70" y2="10" style="stroke-width:10; stroke-linecap:butt;"/&gt;
+
+    &lt;line x1="80" y1="70" x2="110" y2="10" style="stroke-width:15; stroke-linecap:square;"/&gt;
+    &lt;line x1="120" y1="70" x2="150" y2="10" style="stroke-width:20; stroke-linecap:round;"/&gt;
+    &lt;line x1="155" y1="70" x2="185" y2="10" style="stroke-width:25;"/&gt;
+  &lt;/g&gt;
+
+&lt;/svg&gt;</pre>
+<p>Základem mnoha jednoduchých grafů je přirozeně čára či úsečka. SVG ji nabízí jako předdefinovaný tvar tagem LINE, určujícím souřadnice počátečního a koncového bodu. V příkladu je také vidět možnost kombinace přímých atributů kombinovaných s ovlivňováním vzhledu také CSS atributy. Různé typy zobrazování koncových bodů jsou vhodné pro pokročilejší "hezkou" grafiku. No a konečně je zde představen velmi mocný seskupující element G (group), který v tomto případě všem prvkům přednastavuje zlatou barvu linky.</p>
+
+<h4>Písmo a gradient</h4>
+<pre><a title="Odkaz na ukázku" href="examples/pismo.svg" target="_blank"><img src="examples/pismo.png" alt="Písmo a gradient"/></a>&lt;?xml version="1.0"?&gt;
+&lt;!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"&gt;
+&lt;svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"&gt;
+
+  &lt;defs&gt;
+    &lt;radialGradient id="kruh" fx="40%" fy="20%"&gt;
+     &lt;stop offset="2%" stop-color="white"/&gt;
+
+     &lt;stop offset="40%" stop-color="lightgreen"/&gt;
+     &lt;stop offset="90%" stop-color="darkgreen"/&gt;
+    &lt;/radialGradient&gt;
+    &lt;linearGradient id="prechod" x1="0%" y1="0%" x2="100%" y2="0%" spreadMethod="pad"&gt;
+      &lt;stop offset="0%" style="stop-color:gold;stop-opacity:1"/&gt;
+      &lt;stop offset="100%" style="stop-color:red;stop-opacity:1"/&gt;
+
+  &lt;/linearGradient&gt;
+  &lt;/defs&gt;
+
+  &lt;rect x="0" y="0" width="200" height="80" style="fill:none;stroke:blue;stroke-width:1px"/&gt;  
+  &lt;circle cx="42" cy="40" r="35" fill="url(#kruh)"/&gt;
+  &lt;text x="15" y="75" fill="url(#prechod)" stroke="black" stroke-width="1px" 
+    style="font-family:sans-serif;font-weight:bold;font-size:57px;kerning:1;"&gt;Mozilla&lt;/text&gt;
+
+&lt;/svg&gt;</pre>
+<p>Tento již mírně složitější příklad ukazuje, že pro práci s písmem lze v SVG využít (mimo jiné) tag TEXT. Oproti běžným možnostem HTML+CSS1 zaujme možnost stylování tahů znaků (glyphů). Definováno je také namespace pro XLINK, který je nutný pro použití principu práce s oddělením definice objektu - zde gradientu - a jeho mnohonásobném použití u jiných elementů. Svázání se provádí definováním a voláním identifikátoru ID. Představena je zde také sekce definic DEFS, kde lze definovat libovolně složité a četné elementy jako knihovny, jejichž použití je vázáno na jejich volání z elementů dokumentu mimo sekce DEFS (může jich být definováno i více).</p>
+
+<h4>Kružnice a elipsa</h4>
+<pre>
+<a title="Odkaz na ukázku" href="examples/kruznice.svg" target="_blank"><img src="examples/kruznice.png" alt="Kružnice a elipsa"/></a>&lt;?xml version="1.0"?&gt;
+&lt;!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"&gt;
+&lt;svg xmlns="http://www.w3.org/2000/svg"&gt;
+
+  &lt;rect x="0" y="0" width="200" height="160" style="fill:none;stroke:blue;stroke-width:1px"/&gt;
+
+  &lt;g style="fill-opacity:0.7; stroke:black; stroke-width:0.05cm;" transform="translate(0 -45)"&gt;
+    &lt;circle cx="3cm" cy="0cm" r="40" style="fill:blue;" transform="translate(-45,95)" /&gt;
+    &lt;circle cx="3cm" cy="0cm" r="40" style="fill:green;" transform="translate(-15,150)" /&gt;
+    &lt;circle cx="3cm" cy="0cm" r="40" style="fill:red;" transform="translate(-70,150)"/&gt;
+  &lt;/g&gt;
+  &lt;ellipse cx="155" cy="30" rx="40" ry="20" fill="green" stroke="black" stroke-width="0.5"/&gt;
+
+  &lt;ellipse cx="165" cy="80" rx="20" ry="50" fill="gray" stroke="white" stroke-width="5px"/&gt;
+
+&lt;/svg&gt;</pre>
+<p>Pro kružnice existuje v SVG separátní značka CIRCLE. Je to spíše koncepční záležitost, neboť stejného efektu se dá dosáhnout i zvláštní variantou prvku ELLIPSE, ba dokonce i prvku RECT (se zakulacenými rohy). (Na serveru kevlindev.com proběhla před časem zajímavá soutěž - kolika způsoby lze v SVG vykreslit kruh, a ačkoliv link již nemohu najít, způsobu bylo, pokud se pamatuji správně, více než 20!). Příklad nám ukazuje použití nejen zmiňovaných značek, ale rovněž funkční transparenci (z CSS2) a zejména vícenásobné transformace. Právě možnost "nabalování" libovolného počtu transformací tvoří jeden ze zásadních přínosů a výhod SVG, a také se asi největší měrou podílí na prezenci slova <em>scalable</em> v názvu technologie samotné.</p>
+
+<h4>Compound dokument, polygony, události, styly i scriptování</h4>
+<pre>
+<a title="Odkaz na ukázku" href="examples/compound.xml" target="_blank"><img src="examples/compound.png" alt="Compound dokument, polygony, události, styly i scriptování"/></a>&lt;?xml version="1.0"?&gt;
+
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;&lt;head&gt;
+&lt;style type="text/css"&gt;
+  polygon:hover {stroke:red;stroke-width:5;fill-opacity:0.2;}
+&lt;/style&gt;&lt;script&gt;
+var redVal=0; var greenVal=0; var blueVal=0;
+function changeCol(evt) {
+   var targetshape= evt.target;
+   redVal = Math.round(Math.random()*255); 
+   greenVal = Math.round(Math.random()*255);
+   blueVal = Math.round(Math.random()*255);
+   targetshape.setAttribute("fill","rgb(" + redVal + "," + greenVal + "," + blueVal + ")");
+}&lt;/script&gt;&lt;/head&gt;&lt;body&gt;
+
+&lt;h2&gt;Najed mysi nad hvezdici a klikej...&lt;/h2&gt;
+
+&lt;svg xmlns="http://www.w3.org/2000/svg"&gt;
+  &lt;rect x="0" y="0" width="350" height="130" style="fill:none;stroke:blue;stroke-width:1px"/&gt;
+  &lt;g transform="scale(0.5) translate(-140 -70)"&gt;
+    &lt;polygon fill="gold" points="850,75  958,137.5 958,262.5 850,325 742,262.6 742,137.5" 
+    transform="translate(-320)"/&gt;
+    &lt;polygon fill="lime" onclick="changeCol(evt)" style="cursor:pointer;" 
+    points="350, 75 379,161 469,161 397,215 423,301 350,250 277,301 303,215 231,161 321,161" /&gt;
+
+  &lt;/g&gt;
+&lt;/svg&gt; 
+
+&lt;/body&gt;&lt;/html&gt;</pre>
+<p>Tak a toto je konečně příklad, na kteří jistě mnozí čekali. Byť je to jen jednoduchá demonstrace, představuje možnosti nativní podpory SVG v prohlížeči (základ compound document modelu). Mimo nově představeného prvku pro práci s obecnými POLYGONy, je zde možnost vidět unikátní propojení HTML dokumentu, kaskádových stylů (a jejich událostního modelu) a scriptovacího engine prohlížeče na SVG element přítomný přímo v těle hlavního dokumentu. Možnosti tohoto propojení jsou nesmírné, schválně se nad tím můžete sami zamyslet. Rovněž událostně aktivní (tvarově nepravidelné) oblasti jsou v běžném HTML, bez použití definovaných a zastaralých image-maps, těžkým oříškem.<br />PS:Toto demo funguje (narozdíl od ostatních příkladů, funkčních také s některými pluginy) pouze v Mozille s nativní SVG podporou.</p>
+
+
+<h4>Tučnák</h4>
+<pre>
+<a title="Odkaz na ukázku" href="examples/tucnak.svg" target="_blank"><img src="examples/tucnak.png" alt="Tučnák"/></a>&lt;?xml version="1.0"?&gt;
+
+&lt;!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"&gt;
+&lt;svg width="180" height="200" xmlns="http://www.w3.org/2000/svg"&gt;
+&lt;script&gt;function beweeg(evt) {
+evt.target.ownerDocument.getElementById("oog1").setAttribute("cx",76+(evt.clientX/14));
+evt.target.ownerDocument.getElementById("oog2").setAttribute("cx",54+(evt.clientX/14));
+evt.target.ownerDocument.getElementById("oog1").setAttribute("cy",30+(evt.clientY/14));
+evt.target.ownerDocument.getElementById("oog2").setAttribute("cy",32+(evt.clientY/14));
+}&lt;/script&gt;
+&lt;g transform="translate(10,10)"&gt;
+  &lt;path d="M54,174C68,170 95,170 101,174L138,127C139,109 131,82 115,68C115,68 107,54 105,36C105,
+  36 107,16 93,6C93,6 72,-16 50,14C50,14 45,32 51,58C51,58 46,74 33,85C11,139 28,100 18,134C28,
+  100 13,149 27,157C23,147 37,163 40,169" /&gt;
+  &lt;path fill="white" d="M50,153C55,168 89,165 101,149C108,133 120,116 104,83C93,61 93,41 65,50C56,
+  56 55,67 47,81C41,95 34,111 34,126" /&gt;
+  &lt;path d="M50,151C60,152 61,144 51,137L27,115L24,133" /&gt;
+
+  &lt;path fill="white" d="M75,39C73,30 82,18 91,30C91,37 95,46 81,46" /&gt;
+  &lt;path fill="white" d="M58,47C50,37 58,18 66,29C68,33 66,45 65,50" /&gt;
+  &lt;ellipse id="oog1" fill="black" cx="82" cy="36" rx="4" ry="6" /&gt;
+  &lt;ellipse id="oog2" fill="black" cx="60" cy="38" rx="4" ry="6" /&gt;
+  &lt;path fill="#f6bf03" d="M54,53C65,71 75,66 91,53C93,43 81,42 72,38C64,40 57,46 54,51" /&gt;
+  &lt;path fill="#f6bf03" d="M0,166C38,178 59,191 58,162L37,130C16,104 24,147 0,135C2,146 2,155 1,162" /&gt;
+
+  &lt;path fill="#f6bf03" d="M102,148C91,200 127,177 140,162C140,162 156,157 153,149C142,146 137,
+  141 140,130C132,125 127,134 119,137C113,135 112,121 103,126" /&gt;
+  &lt;circle cx="78" cy="42" r="1" /&gt;
+  &lt;circle cx="68" cy="42" r="1" /&gt;
+  &lt;path fill="none" stroke="black" stroke-width="1" d="M54,52C63,59 73,59 88,49" /&gt;
+&lt;/g&gt;
+  &lt;rect x="0" y="0" width="99%" height="99%" fill="yellow" fill-opacity="0.05" stroke="blue"
+  stroke-width="1px" onmousemove="beweeg(evt)"/&gt;
+
+&lt;/svg&gt;</pre>
+<p>Většina dosud uvedených příkladů byla jistě zajímavá, ale skutečně kretivní grafici, by pouze s pevně danými grafickými elementy spokojeni být nemohli. Možnost volných křivek PATH jim tuto svobodu projevu dává. Daný příklad však zároveň představuje vyvážené propojení použití uživatelských i předdefinovaných tvarů, které je pro tvorbu SVG obecně doporučováno. Jednak je tím lépe vyjádřena struktura dokumentu (a o to jde v XML především) a navíc lze v mnoha SVG implementacích pozorovat mnohem lepší optimalizaci předdefinovaných tvarových elementů, což je dobře patrno např. při animačních činnostech.</p>
+
+
+<h4>Svíce</h4>
+<pre>
+<a title="Odkaz na ukázku" href="examples/svice.svg" target="_blank"><img src="examples/svice.png" alt="Svíce"/></a>&lt;?xml version="1.0"?&gt;
+&lt;!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"&gt;
+&lt;svg width="400" height="600" 
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"&gt;
+ &lt;defs&gt;
+
+  &lt;radialGradient id="Style2" cx="50%" cy="50%" fx="50%" fy="50%" r="50%" gradientUnits="objectBoundingBox"&gt;
+   &lt;stop offset="0%" style="stop-color:#ffffff; stop-opacity:0.988235"/&gt;
+   &lt;stop offset="48%" style="stop-opacity:0.988235"/&gt;
+   &lt;stop offset="100%" style="stop-color:#0932ff; stop-opacity:0"/&gt;
+  &lt;/radialGradient&gt;
+  &lt;radialGradient id="Style3" cx="50%" cy="50%" fx="50%" fy="50%" r="50%" radientUnits="objectBoundingBox"&gt;
+
+   &lt;stop offset="77%" style="stop-color:#ffffff"/&gt;
+   &lt;stop offset="79%" style="stop-opacity:0.988235"/&gt;
+   &lt;stop offset="92%" style="stop-color:#0f37ff"/&gt;
+   &lt;stop offset="100%" style="stop-opacity:0"/&gt;
+  &lt;/radialGradient&gt;
+  &lt;linearGradient id="Style71" x1="0%" y1="0%" x2="100%" y2="0%" gradientUnits="objectBoundingBox"&gt;
+
+   &lt;stop offset="0%" style="stop-color:#bfb7a1; stop-opacity:0.988235"/&gt;
+   &lt;stop offset="20%" style="stop-color:#707590"/&gt;
+   &lt;stop offset="32%" style="stop-color:#665a50"/&gt;
+   &lt;stop offset="54%" style="stop-color:#bfb7a1"/&gt;
+   &lt;stop offset="74%" style="stop-color:#ffe5c1"/&gt;
+   &lt;stop offset="100%" style="stop-color:#bfb7a1; stop-opacity:0.988235"/&gt;
+
+  &lt;/linearGradient&gt;
+&lt;!-- pokračování souboru --&gt;</pre>
+<p>Vícenásobné použití dosud představených grafických elementů do komplexnějšího obrázku už představuje nejenom užitkovou, ale také velmi příjemně působivou, celistvou grafiku. V ukázce je mimo jiné použito transformačních matic (MATRIX), které slouží k uceleným univerzálním manipulacím s celým dokumentem či jeho částí. Příklad obsahuje také jednoduchý příklad uživatelské možnosti zoomování výsledného obrazu (povšimněte si absence degradace kvality během zoomu).</p>
+
+
+<h4>Gradient (přechod)</h4>
+<pre>
+<a title="Odkaz na ukázku" href="examples/gradient.svg" target="_blank"><img src="examples/gradient.png" alt="Gradient (přechod)"/></a>&lt;!-- pokračování souboru --&gt;
+&lt;radialGradient id="blueRadsmooth"&gt;
+		gradientTransform="skewX(50)"
+    &lt;stop offset="0%" style="stop-color: rgb(255,255,255);"/&gt;
+
+    &lt;stop offset="100%" style="stop-color: rgb(0,0,255);"/&gt;
+	&lt;/radialGradient&gt;
+	&lt;linearGradient id="sunSkew"&gt;
+    &lt;stop offset="0%" style="stop-color: #ffcc00;"/&gt;
+    &lt;stop offset="33.3%" style="stop-color: #cc6699"/&gt;
+    &lt;stop offset="100%" style="stop-color: #ffcc00;"/&gt;
+
+	&lt;/linearGradient&gt;
+	&lt;linearGradient id="skewed-sun" gradientTransform="skewX(10)" xlink:href="#sunSkew"/&gt;
+	&lt;linearGradient id="Skewblue"&gt;
+    	&lt;stop offset="0%" style="stop-color: blue;"/&gt;
+    	&lt;stop offset="50.3%" style="stop-color: white"/&gt;
+    	&lt;stop offset="100%" style="stop-color: blue;"/&gt;
+
+	&lt;/linearGradient&gt;
+	&lt;linearGradient id="skewed-blue" gradientTransform="skewX(30)" xlink:href="#Skewblue"/&gt;
+&lt;/defs&gt;
+
+&lt;rect id="bcgg" x="5" y="5" width="350" height="150" rx="15" ry="15" stroke="blue" fill="url(#skewed-sun)"/&gt;
+&lt;rect x="20" y="10" width="320" height="30" rx="5" ry="5" fill="black" opacity="0.5"/&gt;
+&lt;text x="45" y="30" font-size="14" style="fill:white"&gt;Ukazka gradientu&lt;/text&gt;
+
+&lt;text x="20" y="150" font-size="10"&gt;Tisknete klavesy 1-9 pro zmenu gradientu pozadi&lt;/text&gt;
+
+&lt;/svg&gt;</pre>
+<p>Tento příklad demonstruje snadné propojení událostí zadávaných také z klávesnice (doposud všechny příklady operovaly pouze s myší), a také způsob práce s předdefinovanými uživatelskými objekty, v tomto případě přechody. Všechny objekty mají relativní (přizpůsobivé) velikosti v procentech a existují předdefinovány v paměti. Na uživatelské události je definovanému objektu (obdélníku) nahrazována vyplň pomocí uživatelsky definovaného objektu podobně, jako při práci s běžnou výplní barvou.</p>
+
+
+<h3>Závěr a poděkování</h3>
+<p>Na úvod do oblasti SVG bylo již řečeno i předvedeno snad dostatek. Ty čtenáře, kteří toho o SVG zatím mnoho netušili, snad tento článek zaujal. Zkušení programátoři a znalci SVG jistě naopak poukáží na nekompletnost informací v mnoha směrech, absenci zanoření do hlouby normy samotné a představených prvků, či na chybějící příklady v jiných zásadních oblastí, které SVG nabízí. Ano, je toho mnoho, co zde nebylo zmíněno, nebo zmíněno bylo, avšak bez jakéhokoliv komentáře či praktické ukázky. Důvodů proto existuje více, zejména to jsou však tyto tři:</p>
+<ol>
+<li>omezená a nekompletní funkčnost některých SVG oblastí v mozillí implementaci, viz <a target="_blank" href="http://www.mozilla.org/projects/svg/status.html">současný status</a></li>
+<li>omezené zkušenosti pisatele s SVG v Mozille (neboť většinu prostoru strávil vývojem nad pluginem od Adobe)</li>
+<li>omezený prostor jednoho článku (a rovněž omezený čas autora ;-)</li>
+</ol>
+
+<p>Všem čtenářům, kritikům a hlavně vývojářům přeji příjemné objevné chvíle při prozkoumávání SVG a v případě zájmu, by se tento text mohl stát úvodním článkem seriálu o SVG ve spojení s jeho implementací v Mozille.</p>
+
+<h3>Vybrané doporučené odkazy</h3>
+<ul>
+<li><a href="http://www.mozilla.org/projects/firefox/" target="_blank">download preview verze Deer Parku - developerského preview Firefoxe 1.1</a></li>
+<li><a href="http://www.adobe.com/svg/viewer/install/beta.html" target="_blank">download preview beta verze 6.0 Adobe SVG pluginu; verze pro MS Windows</a> <em>(Pozor: starší Windows verze nejsou s Gecko jádry novějšímí než 0.9.3 kompatibilní!)</em> Po nainstalování je nutno překopírovat knihovny <em>NPSVG6.dll a NPSVG6.zip z adresáře c:\Program Files\Common Files\Adobe\SVG Viewer 6.0</em> do <em>plugins</em> adresáře instance požadovaného Gecko Browseru a restartovat jej</li>
+<li><a href="http://www.adobe.com/svg/viewer/install/" target="_blank">download verze 3.01 beta 3 Adobe SVG pluginu; verze pro Linux a MAC.</a></li>
+http://www.adobe.com/svg/viewer/install/
+<li><a href="http://svg.org/story/2005/6/10/213526/025" target="_blank">rozšíření umožňující přepínat mezi nativním či pluginovým renderováním SVG</a></li>
+<li><a href="http://www.w3.org/Graphics/SVG" target="_blank">SVG specifikace na W3C</a></li>
+<li><a href="http://www.croczilla.com/svg/samples/" target="_blank">Mozilla SVG samples Alexandra Fritzeho</a></li>
+<li><a href="http://www.svgx.org/" target="_blank">SVGX - asi nejčastěji aktualizovaný zdroj o dění kolem SVG</a></li>
+<li><a href="http://groups.yahoo.com/group/svg-developers" target="_blank">SVG Mailing List na Yahoo - nejlepší a největší svého druhu</a></li>
+<li><a href="http://www.protocol7.com/svg-wiki" target="_blank">klasická SVG-WIKI</a></li>
+<li><a href="http://www.svgbasics.com/" target="_blank">SVG Basics - řada příkladů je funkčních i pod Mozillou</a></li>
+</ul>
+
+<hr />
+
+<h4>Poznámka k SVG příkladům na webu</h4>
+<p>Na celém webu je k nalezení skutečně velké množství SVG souborů, demonstrací a příkladů. Bohužel pro uživatele nativní implementace Mozilla SVG, bude valná většina z nich nefunkční. Je to díky několika pravidlům i (dočasným) omezením, které Mozilla implementace má/kterými trpí; ale těm podnikavějším z vás nabízím pár tipů jak značnou část SVG souborů zprovoznit také pod Mozillou.</p>
+<ol>
+<li>častou překážkou je absence deklarace namespace (xmlns="http://www.w3.org/2000/svg") v hlavním SVG elementu; pokud chybí, je třeba ji přidat; často chybí také namespace pro xlink (xmlns:xlink="http://www.w3.org/1999/xlink), takže tu taky</li>
+<li>při využívání EcmaScriptu není v současné verzi (hybridního script engine) podporován MIME typ text/ecmascript, takže má-li SCRIPT element jakýkoliv atribut, je nejjednodužší jej smazat (uvádění je nepovinné)</li>
+<li>pokud je pro uživatelské události někde použita metoda <em>.getTarget()</em>, je nutno ji nahradit za přímý přístup k property <em>.target.</em></li>
+<li>pokud příklady pracují s prvkem <em>svgDocument.</em>, je nutná náhrada za obecný <em>document.</em></li>
+<li>a nakonec, pokud některé SV dokumenty používají SMIL (zejména pak pro animační účely), doporučuji, z důvodu současné nulové podpory, úplně přeskakovat</li>
+</ol>
+
+<h4>Stručná historie nativního SVG v Mozille</h2>
+<p>Za zrodem SVG pro Mozillu stojí <em>Alexander Fritze</em>, který jej dd roku 2000 jej do Mozilly začal implementovat. Práce začal nad multiplatformní grafickou knihovnou libart. Časem se ale projevily nedostatky této "lightweight" knihovny, zejména pak v oblasti práce s textem, proto dosud nejpokročilejší verze Mozilly s SVG jsou dostupné pouze v implementaci nad microsoftí grafickou knihovnou GDI+. <em>One man show</em> situace se změnila koncem roku 2003, kdy se SVG technologií, která byla pro další vývoj organizací Mozilla Foundation oficiálně odsouhlasena. Zdrojové kódy SVG prošly revizí a poté byly importovány do hlavního stromu CVS. Pak již jen bylo nutno rozhodnout, který grafický engine bude pro další vývoj vyhovující. Libart ani GDI+ již nepřicházely v úvahu. Nakonec volba padla na vektorovou knihovnu <a href="http://www.cairographics.org/" target="_blank">Cairo</a>, splňující většinu kladených nároků. Tato volba se v současnosti zdá být výhodná pro vývoj obou projektů.</p>
+
+<p><em>V článku byly použity a modifikovány ukázky z několika zdrojů, které si autor v žádném případě nehodlá přivlastňovat, jen si už ale bohužel přesně nepamatuje, odkud ;-)</em></p>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-11950721-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+</body>
+</html>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+                      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>LMC Organization Structure, by Hynek Musil</title>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+        <script type="text/javascript">
+	var employersUri = 'gen/ORGS_Zamestnanci.csv';
+	var orgUri = 'gen/ORGS_Strediska.csv';
+	var csv2xmlUri = 'gen/lmc-org_csv2xml.xsl';
+	var stylesheetUri = 'view.xsl';
+	var removerUri = 'remover.xsl'; 
+	var reducerUri = 'reducer.xsl'; 
+	var stylesheetProc = null;
+	var removerProc = null;
+	var dataDoc = null;
+	var tempDoc = null;
+	var stylesheetDoc = null;
+	var removerDoc = null;
+	window.onload = function(){
+		try{
+		stylesheetProc = new XSLTProcessor();
+		removerProc = new XSLTProcessor();
+		stylesheetDoc = getSource(stylesheetUri);
+		stylesheetProc.importStylesheet(stylesheetDoc);
+		removerDoc = getSource(removerUri);
+		removerProc.importStylesheet(removerDoc);
+		dataDoc = csv2xml();
+		dataDoc = reduce();
+
+		refresh(null,'*');
+		}catch(err){
+			document.body.innerHTML =  '<h1>Váš prohlížeč nepodporuje tuto aplikaci - vyzkoušejte Firefox</h1>';
+		}
+	}
+	function reduce(){
+		var reducerProc = new XSLTProcessor();
+		reducerProc.importStylesheet(getSource(reducerUri));
+		return reducerProc.transformToDocument(dataDoc);
+	}
+	function csv2xml(){
+		var csv2xmlProc = new XSLTProcessor();
+		csv2xmlProc.importStylesheet(getSource(csv2xmlUri));
+		var orgDoc = document.implementation.createDocument('http://www.w3.org/ns/xproc-step','c:data',null);
+		var o = orgDoc.documentElement.appendChild(orgDoc.createElementNS('http://www.w3.org/ns/xproc-step','c:o'));
+		o.appendChild(orgDoc.createTextNode(getSource(orgUri,'text')));
+		var p = orgDoc.documentElement.appendChild(orgDoc.createElementNS('http://www.w3.org/ns/xproc-step','c:p'));
+		p.appendChild(orgDoc.createTextNode(getSource(employersUri,'text')));
+		return csv2xmlProc.transformToDocument(orgDoc);
+	}
+	function getSource(aUri, aMethod){
+		var http = new XMLHttpRequest(); 
+		http.open("GET",aUri,false);
+		http.send(null);
+		if(aMethod) return http.responseText;
+		return http.responseXML;
+	}
+	function refresh(aEvent, aId){
+		if(aId == '*'){
+			tempDoc = dataDoc;
+	   }else{
+			document.body.removeChild(get_firstchild(document.body));
+		   var node = xml_getElementById(dataDoc,aId);
+		   if(node.hasAttribute('hidden')){
+				node.removeAttribute('hidden');
+			}else{
+				node.setAttribute('hidden','');
+			}
+		}
+		tempDoc = removerProc.transformToDocument(dataDoc);
+	   var fragment = stylesheetProc.transformToFragment(tempDoc, document);
+	   if(fragment.childNodes.item(0) == null) throw "chyba transformace";
+		document.body.appendChild(fragment);
+		if(aEvent) aEvent.stopPropagation();
+	}
+	function do_nothing(aEvent){
+		if(aEvent) aEvent.stopPropagation();
+	}
+	function get_firstchild(aNode){
+		result=aNode.firstChild;
+		while (result.nodeType!=1){
+			result=result.nextSibling;
+		}
+		return result;
+	}
+	function xml_getElementById(aXmlDoc, aID) {
+      var xpath = '//*[@id="'+aID+'"]';
+		return aXmlDoc.evaluate(xpath, aXmlDoc, null, XPathResult.ORDERED_NODE_ITERATOR_TYPE, null).iterateNext();
+	};
+
+        </script>
+        <script type="text/javascript">
+        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+        </script>
+        <script type="text/javascript">
+        try {
+        var pageTracker = _gat._getTracker("UA-11950721-1");
+        pageTracker._trackPageview();
+        } catch(err) {}</script>
+    </head>
+    <body>
+    </body>
+</html>

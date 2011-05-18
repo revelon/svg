@@ -1,0 +1,55 @@
+<svg width="100%" height="100%"	xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+<filter id="turbF">
+	<feTurbulence baseFrequency=".04" numOctaves="2" result="turb">
+		<animate attributeName="baseFrequency" dur="3s" values=".04; .015; .04" begin="bb1.click" id="baseFrequency" repeatCount="3"/>
+		<animate attributeName="numOctaves" dur="4s" values="1; 4; 1" begin="bb3.click" id="numOctaves" repeatCount="2"/>
+	</feTurbulence>
+	<feDisplacementMap in="SourceGraphic" in2="turb" scale="150" xChannelSelector="R" yChannelSelector="B">
+		<animate attributeName="scale" dur="4s"	values="1; 400; 200; 300; 1" begin="bb2.click" id="scale" repeatCount="2"/>
+	</feDisplacementMap>
+
+</filter>
+<radialGradient id="gradient1" cx="250" cy="90" r="150"  gradientUnits="userSpaceOnUse">
+	<animate attributeName="cx" dur="4s" values="1; 400; 1" begin="bb4.click" id="cx" repeatCount="2"/>
+	<stop offset="0" stop-color="#8cf"/>
+	<stop offset="0.10" stop-color="#f40"/>
+	<stop offset="0.4" stop-color="yellow"/>
+	<stop offset="0.8" stop-color="orange"/>
+	<stop offset="0.96" stop-color="#482"/>
+	<stop offset="1" stop-color="#eee" stop-opacity=".5"/>
+</radialGradient>
+
+<rect id="Q" x="0" y="0" width="100%" height="100%" fill="#dea"/>
+<g transform="translate(70,110)" font-size="8pt">
+<g id="bb1">
+  <rect x="0" y="160" height="30" width="100" fill="#750" />
+  <text x="5" y="180" fontsize="12" fill="white">baseFrequency</text>
+</g>
+
+<g id="bb2">
+  <rect x="110" y="160" height="30" width="50" fill="#540" />
+  <text x="115" y="180" fontsize="12" fill="white">scale</text>
+</g>
+
+<g id="bb3">
+  <rect x="170" y="160" height="30" width="90" fill="#750" />
+  <text x="180" y="180" fontsize="12" fill="white">numOctaves</text>
+</g>
+
+<g id="bb4">
+  <rect x="270" y="160" height="30" width="40" fill="#540" />
+  <text x="280" y="180" fontsize="12" fill="white">cx</text>
+</g>
+
+</g>
+<text x="120" y="18" font-size="18" fill="darkgreen">Playing with turbulence filter</text>
+
+<g filter="url(#turbF)">
+<rect x="190" y="150" height="30" width="400" fill="none" />
+	<path id="P" transform=" scale(.8,1.2) translate(-10,-10)"
+	d="M 100 50 140 70 120 80 100 50 M 121 173 165 67 176 113 195 92 230 123 254 79 268 39 273 91 286 51 323 166 336 125 337 77 365 138 363 212 104 212 101 122 z"
+  fill="url(#gradient1)"/>
+</g>
+
+</svg>

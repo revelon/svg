@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<HEAD>
+<TITLE>Adobe Floor Plan Data</TITLE>
+<META NAME="author" CONTENT="Glen H. Gersten">
+</HEAD>
+
+<body onload="pageInit()">
+<SCRIPT LANGUAGE="JavaScript">
+function pageInit() {
+	if (parent.checkCaller()) parent.checkCaller()
+}
+
+parent.floorNum = "06"
+parent.floorStr = "usa.CA-EastTower-06"
+parent.fTitle = "6th Floor, East Tower, San Jose"
+parent.confs = new Array("Night", "Near", "November", "Now", "Niece", "Nose")
+
+parent.Rm = new parent.makeArray(630)
+
+parent.Rm[1] = new parent.confRm('Near', '408-555-1212', 'seats 10')
+parent.Rm[2] = new parent.confRm('Niece', '408-555-1212', 'seats 10')
+parent.Rm[3] = new parent.confRm('Night', '408-555-1212', 'seats 8')
+parent.Rm[4] = new parent.confRm('Nose', '408-555-1212', 'seats 8')
+parent.Rm[5] = new parent.confRm('November', '408-555-1212', 'seats 16')
+parent.Rm[6] = new parent.confRm('Now', '408-555-1212', 'seats 16')
+
+parent.loaded = "yes"
+</SCRIPT>
+
+</body>
+</HTML>
+

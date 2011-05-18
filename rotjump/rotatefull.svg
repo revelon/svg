@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
+  <title>Rotate and Jump - Full</title>
+  <desc>by Marek Raida, marek.raida@gmail.com</desc>
+
+<script type="text/ecmascript" xlink:href="../fakesmile/smil.user.js"/>
+
+  <defs>
+   
+    <linearGradient id="grd1" x1="0" y1="1" x2="0" y2="0" gradientUnits="objectBoundingBox">
+      <stop stop-color="#000" offset="0%"/>
+      <stop stop-color="#fff" offset="90%"/>
+    </linearGradient>
+
+    <linearGradient id="env1" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="gray"/>
+  		<stop offset="50%" stop-color="purple"/>
+  		<stop offset="100%" stop-color="orange">
+  		  <animate attributeName="stop-color" values="orange; gold; yellow; orange" dur="8s" repeatCount="indefinite"/>
+  		</stop>
+    </linearGradient>
+    <linearGradient id="env2" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+  		<stop offset="0%" stop-color="blue">
+  		  <animate attributeName="stop-color" values="blue; #55f; #99f; blue" dur="8s" repeatCount="indefinite"/>
+  		</stop>
+      <stop offset="50%" stop-color="navy"/>
+  		<stop offset="100%" stop-color="#002"/>
+    </linearGradient>
+    
+    <mask id="reflect">
+      <rect x="0" y="300" width="100%" height="100" fill="url(#grd1)"/>
+    </mask>
+
+  </defs>
+
+  <rect x="0" y="0" width="100%" height="300" fill="url(#env1)" />
+  <circle cx="450" cy="300" r="40" fill="red" stroke="orange" stroke-width="3"/>
+  <rect x="0" y="300" width="100%" height="300" fill="url(#env2)" />
+
+  <g>
+    <ellipse cx="730" cy="110" rx="60" ry="5" fill="#844"/>  
+    <ellipse cx="700" cy="120" rx="170" ry="7" fill="#850"/>
+    <ellipse cx="740" cy="130" rx="100" ry="9" fill="#844"/>
+    <ellipse cx="840" cy="143" rx="140" ry="6" fill="#855"/>
+    <animateTransform attributeName="transform" type="translate" begin="0" dur="60s" values="0 0; -500 0; 0 0" repeatCount="indefinite"/>
+  </g>
+
+<g mask="url(#reflect)">
+  <circle cx="450" cy="300" r="40" fill="#a0a" stroke="none" stroke-width="3"/>
+<g stroke-width="2px" fill="none" font-family="Times New Roman, serif" font-weight="bolder" font-size="100px" stroke="white" transform="translate(0 502) scale(1 -1)">
+
+  <g>
+    <text x="50" y="200">R</text>
+    <animateTransform attributeName="transform" type="rotate" begin="2000ms" dur="6s" values="0 200 200; -360 200 200; -360 200 200" repeatCount="indefinite"/>
+  </g>
+  <g>
+    <text x="110" y="200">O</text>
+    <animateTransform attributeName="transform" type="rotate" begin="1600ms" dur="6s" values="0 250 200; -360 250 200; -360 250 200" repeatCount="indefinite"/>
+  </g>
+  <g>
+    <text x="180" y="200">T</text>
+    <animateTransform attributeName="transform" type="rotate" begin="1200ms" dur="6s" values="0 300 200; -360 300 200; -360 300 200" repeatCount="indefinite"/>
+  </g>
+  <g>
+    <text x="230" y="200">A</text>
+    <animateTransform attributeName="transform" type="rotate" begin="800ms" dur="6s" values="0 350 200; -360 350 200; -360 350 200" repeatCount="indefinite"/>
+  </g>
+  <g>
+    <text x="285" y="200">T</text>
+    <animateTransform attributeName="transform" type="rotate" begin="400ms" dur="6s" values="0 400 200; -360 400 200; -360 400 200" repeatCount="indefinite"/>
+  </g>
+  <g>
+    <text x="345" y="200">E</text>
+    <animateTransform attributeName="transform" type="rotate" begin="0ms" dur="6s" values="0 450 200; -360 450 200; -360 450 200" repeatCount="indefinite"/>
+  </g>
+
+
+  <g>
+    <text x="600" y="200">J</text>
+    <animateTransform attributeName="transform" type="translate" begin="0ms" dur="3s" values="0 0; 0 -50; 0 0; 0 -25; 0 0; 0 -14; 0 0; 0 -4; 0 0; 0 0; 0 0" repeatCount="indefinite"/>
+  </g>
+  <g>
+    <text x="650" y="200">U</text>
+    <animateTransform attributeName="transform" type="translate" begin="300ms" dur="3s" values="0 0; 0 -50; 0 0; 0 -25; 0 0; 0 -14; 0 0; 0 -4; 0 0; 0 0; 0 0" repeatCount="indefinite"/>
+  </g>
+  <g>
+    <text x="710" y="200">M</text>
+    <animateTransform attributeName="transform" type="translate" begin="600ms" dur="3s" values="0 0; 0 -50; 0 0; 0 -25; 0 0; 0 -14; 0 0; 0 -4; 0 0; 0 0; 0 0" repeatCount="indefinite"/>
+  </g>
+  <g>
+    <text x="800" y="200">P</text>
+    <animateTransform attributeName="transform" type="translate" begin="900ms" dur="3s" values="0 0; 0 -50; 0 0; 0 -25; 0 0; 0 -14; 0 0; 0 -4; 0 0; 0 0; 0 0" repeatCount="indefinite"/>
+  </g>
+  
+</g>
+</g>
+
+<g stroke-width="2px" fill="white" font-family="Times New Roman, serif" font-weight="bolder" font-size="100px" stroke="#000" transform="translate(0 98)" fill-opacity=".7">
+
+  <g>
+    <text x="50" y="200">R</text>
+    <animateTransform attributeName="transform" type="rotate" begin="2000ms" dur="6s" values="0 200 200; -360 200 200; -360 200 200" repeatCount="indefinite"/>
+  </g>
+  <g>
+    <text x="110" y="200">O</text>
+    <animateTransform attributeName="transform" type="rotate" begin="1600ms" dur="6s" values="0 250 200; -360 250 200; -360 250 200" repeatCount="indefinite"/>
+  </g>
+  <g>
+    <text x="180" y="200">T</text>
+    <animateTransform attributeName="transform" type="rotate" begin="1200ms" dur="6s" values="0 300 200; -360 300 200; -360 300 200" repeatCount="indefinite"/>
+  </g>
+  <g>
+    <text x="230" y="200">A</text>
+    <animateTransform attributeName="transform" type="rotate" begin="800ms" dur="6s" values="0 350 200; -360 350 200; -360 350 200" repeatCount="indefinite"/>
+  </g>
+  <g>
+    <text x="285" y="200">T</text>
+    <animateTransform attributeName="transform" type="rotate" begin="400ms" dur="6s" values="0 400 200; -360 400 200; -360 400 200" repeatCount="indefinite"/>
+  </g>
+  <g>
+    <text x="345" y="200">E</text>
+    <animateTransform attributeName="transform" type="rotate" begin="0ms" dur="6s" values="0 450 200; -360 450 200; -360 450 200" repeatCount="indefinite"/>
+  </g>
+
+
+  <g>
+    <text x="600" y="200">J</text>
+    <animateTransform attributeName="transform" type="translate" begin="0ms" dur="3s" values="0 0; 0 -50; 0 0; 0 -25; 0 0; 0 -14; 0 0; 0 -4; 0 0; 0 0; 0 0" repeatCount="indefinite"/>
+  </g>
+  <g>
+    <text x="650" y="200">U</text>
+    <animateTransform attributeName="transform" type="translate" begin="300ms" dur="3s" values="0 0; 0 -50; 0 0; 0 -25; 0 0; 0 -14; 0 0; 0 -4; 0 0; 0 0; 0 0" repeatCount="indefinite"/>
+  </g>
+  <g>
+    <text x="710" y="200">M</text>
+    <animateTransform attributeName="transform" type="translate" begin="600ms" dur="3s" values="0 0; 0 -50; 0 0; 0 -25; 0 0; 0 -14; 0 0; 0 -4; 0 0; 0 0; 0 0" repeatCount="indefinite"/>
+  </g>
+  <g>
+    <text x="800" y="200">P</text>
+    <animateTransform attributeName="transform" type="translate" begin="900ms" dur="3s" values="0 0; 0 -50; 0 0; 0 -25; 0 0; 0 -14; 0 0; 0 -4; 0 0; 0 0; 0 0" repeatCount="indefinite"/>
+  </g>
+
+</g>
+<image xlink:href="http://www.google-analytics.com/__utm.gif?utmwv=4.7.1&amp;utmn=21830374&amp;utmhn=svg.kvalitne.cz&amp;utmcs=UTF-8&amp;utmsr=1920x1080&amp;utmsc=24-bit&amp;utmul=en-us&amp;utmje=1&amp;utmfl=10.0%20r45&amp;utmdt=SVG%C2%A0%E2%80%94%C2%A0It%27s%20in%20your%20hands...&amp;utmhid=1377849700&amp;utmr=-&amp;utmp=%2Findex2.htm&amp;utmac=UA-11950721-1&amp;utmcc=__utma%3D251371972.1884550355.1260220320.1272562824.1272576758.56%3B%2B__utmz%3D251371972.1263752798.41.3.utmcsr%3Dgoogle%7Cutmccn%3D(organic)%7Cutmcmd%3Dorganic%7Cutmctr%3Dsvg%2520smil%2520demo%3B" width="1" height="1"/>
+</svg>

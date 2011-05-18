@@ -1,0 +1,683 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1000 500">
+	<!--animate id="D12e6060" xlink:href="#V12e6060"  dur="9.2s" repeatDur="indefinite"/-->
+	<g id="P60c18c0" transform="matrix(1 0 0 1 500 250)">
+		<defs>
+			<image width="1000" height="500" id="B60c14b0" xlink:href="snow.jpg" transform="matrix(1 0 0 1 -500 -250)"/>
+		</defs>
+		<use xlink:href="#B60c14b0"  id="U60c2350" style="fill:none;"/>
+	</g>
+	<g id="P60bce50" transform="matrix(1 0 0 1 172 255)" style="opacity:0.1;">
+		<defs>
+			<rect id="B60bca40" transform="matrix(1 0 0 1 -74 -256)" width="100" height="512"/> 
+		</defs>
+		<use xlink:href="#B60bca40"  id="U60be1f0" style="fill:#FFFFFF;"/>
+	</g>
+	<g id="P12e0f30" transform="matrix(1 0 0 1 149 -14)">
+		<defs>
+			<ellipse id="B12e0b30" transform="matrix(1 0 0 1 -10 -10)" cx="10.5" cy="10.5" rx="10.5" ry="10.5"/> 
+		</defs>
+		<defs>
+			<radialGradient id="R12e32a0" cx="0.5" cy="0.5" r="0.5" fx="0.5" fy="0.5" gradientUnits="objectBoundingBox">
+				<stop id="R12e32a0_0" offset="0" style="stop-color:#FFFFFF"/>
+				<stop id="R12e32a0_1" offset="1" style="stop-color:#FFFFFF;stop-opacity:0"/>
+			</radialGradient>
+			<use xlink:href="#B12e0b30"  id="o12e32a0" style="fill:url(#R12e32a0);"/>
+		</defs>
+		<radialGradient id="R12e32a0" cx="0.5" cy="0.5" r="0.5" fx="0.5" fy="0.5" gradientUnits="objectBoundingBox">
+			<stop id="R12e32a0_0" offset="0" style="stop-color:#FFFFFF"/>
+			<stop id="R12e32a0_1" offset="1" style="stop-color:#191E33;stop-opacity:0"/>
+		</radialGradient>
+		<use xlink:href="#B12e0b30"  id="U12e32a0" style="fill:url(#R12e32a0);"/>
+		<animateTransform xlink:href="#P12e0f30" attributeName="transform"  type="translate" begin="0.9167s" dur="10.25s" repeatCount="indefinite" values="149 -14;149 515;149 515"  keyTimes="0;0.6263;1" />
+	</g>
+	<g id="P60b7030" transform="matrix(1 0 0 1 108 -16)" style="opacity:0.75;">
+		<defs>
+			<ellipse id="B60bcee0" transform="matrix(1 0 0 1 -11 -11)" cx="11" cy="11" rx="11" ry="11"/> 
+		</defs>
+		<radialGradient id="R60bf020" cx="0.5" cy="0.5" r="0.5" fx="0.5" fy="0.5" gradientUnits="objectBoundingBox">
+			<stop id="R60bf020_0" offset="0.1" style="stop-color:#FFFFFF"/>
+			<stop id="R60bf020_1" offset="0.71" style="stop-color:#191E33;stop-opacity:0"/>
+		</radialGradient>
+		<use xlink:href="#B60bcee0"  id="U60bf020" style="fill:url(#R60bf020);"/>
+		<animateTransform xlink:href="#P60b7030" attributeName="transform"  type="translate" dur="11.1667s" repeatCount="indefinite" values="108 -16;108 514;108 514"  keyTimes="0;0.5455;1" />
+	</g>
+	<g id="P6c3a820" transform="matrix(1 0 0 1 195 -31)" style="opacity:0.72;">
+		<defs>
+			<ellipse id="B6c3a410" transform="matrix(1 0 0 1 -24 -24)" cx="24" cy="24" rx="24" ry="24"/> 
+		</defs>
+		<radialGradient id="R6c5c6a0" cx="0.5" cy="0.5" r="0.5" fx="0.5" fy="0.5" gradientUnits="objectBoundingBox">
+			<stop id="R6c5c6a0_0" offset="0.04" style="stop-color:#FFFFFF"/>
+			<stop id="R6c5c6a0_1" offset="0.48" style="stop-color:#191E33;stop-opacity:0"/>
+		</radialGradient>
+		<use xlink:href="#B6c3a410"  id="U6c5c6a0" style="fill:url(#R6c5c6a0);"/>
+		<animateTransform xlink:href="#P6c3a820" attributeName="transform"  type="translate" begin="1s" dur="10.1667s" repeatCount="indefinite" values="195 -31;195 526;195 526"  keyTimes="0;0.5714;1" />
+	</g>
+	<g id="P6c89d90" transform="matrix(1 0 0 1 125 -20)">
+		<defs>
+			<ellipse id="B6c89980" transform="matrix(1 0 0 1 -11 -11)" cx="11" cy="11" rx="11" ry="11"/> 
+		</defs>
+		<radialGradient id="R6c8dac0" cx="0.5" cy="0.5" r="0.5" fx="0.5" fy="0.5" gradientUnits="objectBoundingBox">
+			<stop id="R6c8dac0_0" offset="0.06" style="stop-color:#FFFFFF"/>
+			<stop id="R6c8dac0_1" offset="0.79" style="stop-color:#191E33;stop-opacity:0"/>
+		</radialGradient>
+		<use xlink:href="#B6c89980"  id="U6c8dac0" style="fill:url(#R6c8dac0);"/>
+		<animateTransform xlink:href="#P6c89d90" attributeName="transform"  type="translate" begin="3s" dur="12.1667s" repeatCount="indefinite" values="125 -20;125 511;125 511"  keyTimes="0;0.6622;1" />
+	</g>
+	<g id="P6bef090" transform="matrix(1 0 0 1 213 -17)">
+		<defs>
+			<ellipse id="B6beec60" transform="matrix(1 0 0 1 -11 -11)" cx="11" cy="11" rx="11" ry="11"/> 
+		</defs>
+		<radialGradient id="R6bed760" cx="0.5" cy="0.5" r="0.5" fx="0.5" fy="0.5" gradientUnits="objectBoundingBox">
+			<stop id="R6bed760_0" offset="0.06" style="stop-color:#FFFFFF"/>
+			<stop id="R6bed760_1" offset="0.79" style="stop-color:#191E33;stop-opacity:0"/>
+		</radialGradient>
+		<use xlink:href="#B6beec60"  id="U6bed760" style="fill:url(#R6bed760);"/>
+		<animateTransform xlink:href="#P6bef090" attributeName="transform"  type="translate" begin="2.0833s" dur="14.0833s" repeatCount="indefinite" values="213 -17;213 521;213 521"  keyTimes="0;0.5412;1" />
+	</g>
+	<g id="P61ad930" transform="matrix(1 0 0 1 160 260)">
+		<defs>
+			<ellipse id="B61ac1e0" transform="matrix(1 0 0 1 -9 -10)" cx="9.5" cy="10" rx="9.5" ry="10"/> 
+		</defs>
+		<radialGradient id="R61acc70" cx="0.5" cy="0.5" r="0.5" fx="0.5" fy="0.5" gradientUnits="objectBoundingBox">
+			<stop id="R61acc70_0" offset="0.06" style="stop-color:#FFFFFF"/>
+			<stop id="R61acc70_1" offset="0.79" style="stop-color:#191E33;stop-opacity:0"/>
+		</radialGradient>
+		<use xlink:href="#B61ac1e0"  id="U61acc70" style="fill:url(#R61acc70);"/>
+		<!--animate xlink:href="#k61ac1e0" attributeName="x"  begin="6.3333s" dur="5.8333s" fill="freeze" values="0;0" />
+		<animate xlink:href="#k61ac1e0" attributeName="y"  begin="6.3333s" dur="6.8333s" fill="freeze" values="0;0" /-->
+		<animateTransform xlink:href="#P61ad930" attributeName="transform"  type="translate" dur="14.1667s" repeatCount="indefinite" values="160 260;160 509;160 -14;160 -14;160 260"  keyTimes="0;0.2727;0.2728;0.6909;1" />
+	</g>
+	<g id="P12e04d0" transform="matrix(1 0 0 1 108 514)" style="opacity:0.75;">
+		<defs>
+			<ellipse id="B12e00f0" transform="matrix(1 0 0 1 -11 -11)" cx="11" cy="11" rx="11" ry="11"/> 
+		</defs>
+		<radialGradient id="R12e1290" cx="0.5" cy="0.5" r="0.5" fx="0.5" fy="0.5" gradientUnits="objectBoundingBox">
+			<stop id="R12e1290_0" offset="0.1" style="stop-color:#FFFFFF"/>
+			<stop id="R12e1290_1" offset="0.71" style="stop-color:#191E33;stop-opacity:0"/>
+		</radialGradient>
+		<use xlink:href="#B12e00f0"  id="U12e1290" style="fill:url(#R12e1290);"/>
+		<animateTransform xlink:href="#P12e04d0" attributeName="transform"  type="translate" dur="18.1667s" repeatCount="indefinite" values="108 514;108 514;108 514"  keyTimes="0;0.5455;1" />
+	</g>
+	<g id="P6258340" transform="matrix(1 0 0 1 204 -23)">
+		<defs>
+			<ellipse id="B625aee0" transform="matrix(1 0 0 1 -22 -22)" cx="22" cy="22" rx="22" ry="22"/> 
+		</defs>
+		<radialGradient id="R625d0c0" cx="0.5" cy="0.5" r="0.5" fx="0.5" fy="0.5" gradientUnits="objectBoundingBox">
+			<stop id="R625d0c0_0" offset="0.06" style="stop-color:#FFFFFF"/>
+			<stop id="R625d0c0_1" offset="0.79" style="stop-color:#191E33;stop-opacity:0"/>
+		</radialGradient>
+		<use xlink:href="#B625aee0"  id="U625d0c0" style="fill:url(#R625d0c0);"/>
+		<animateTransform xlink:href="#P6258340" attributeName="transform"  type="translate" begin="5.5833s" dur="5.5833s" repeatCount="indefinite" values="204 -23;204 524" />
+	</g>
+	<g id="P60a0170" transform="matrix(1 0 0 1 196 -6)">
+		<defs>
+			<path id="B60a1d40" style="fill:none;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;" d="M0,0q0,514.5,0,514.5"/>
+		</defs>
+		<use xlink:href="#B60a1d40"  id="U60a2890" style="fill:none;stroke:#FFFFFF;"/>
+	</g>
+	<g id="P134deb0" transform="matrix(1 0 0 1 96 -6)">
+		<defs>
+			<path id="B134c410" style="fill:none;stroke-linecap:round;stroke-linejoin:round;" d="M0,0q0,514.25,0,514.25"/>
+		</defs>
+		<use xlink:href="#B134c410"  id="U133b270" style="fill:none;stroke:#FFFFFF;"/>
+	</g>
+	<g id="P12de9f0" transform="matrix(1 0 0 1 248 253)">
+		<defs>
+			<rect id="B12dfcb0" transform="matrix(1 0 0 1 1 -259)" style="fill:none;stroke-width:6.25;" width="2" height="518"/> 
+		</defs>
+		<use xlink:href="#B12dfcb0"  id="U12dd310" style="fill:none;stroke:#FFFFFF;"/>
+	</g>
+	
+<!-- LANGUAGE SWITCH -->
+	<g id="G6edf2b0" transform="matrix(1 0 0 1 380 15)" style="font-family:'Verdana,Arial,Helvetica,SunSans-Regular'; font-size:9px;letter-spacing:0.1em;fill:#FFFFFF;text-rendering:geometricPrecision">
+		<g id="S6ee1380">
+			<g id="P6ee6ac0">
+				<defs>
+					<text id="B5bb63a0" x="-75">&lt;&lt; introspections</text>
+				</defs>
+				<use xlink:href="#B5bb63a0"  id="U5bb6e70"/>
+			</g>
+			<g id="P6ee2e20" transform="matrix(1 0 0 1 -93 -4)">
+				<defs>
+					<rect id="B5c29aa0" transform="matrix(1 0 0 1 -7 -7)" style="stroke-width:1.25;" width="13" height="13"/> 
+				</defs>
+				<use xlink:href="#B5c29aa0"  id="U5b90b30" style="fill:#FFFFFF;fill-opacity:.5;stroke-width:1.25;stroke:#FFFFFF"/>
+				<set xlink:href="#j_text" attributeName="display" to="inline" begin="U5b90b30.click" dur="indefinite" fill="freeze"/>
+				<set xlink:href="#e_text" attributeName="display" to="none" begin="U5b90b30.click" dur="indefinite" fill="freeze"/>
+				<set xlink:href="#faith_link" attributeName="xlink:href" to="01_faith.svg" begin="U5b90b30.click" dur="indefinite" fill="freeze"/>
+				<set xlink:href="#renewal_link" attributeName="xlink:href" to="03_renewal.svg" begin="U5b90b30.click" dur="indefinite" fill="freeze"/>
+			</g>
+			<g id="P6ee5c50" transform="matrix(1 0 0 1 -114 -4)">
+				<defs>
+					<rect id="B5c2a870" transform="matrix(1 0 0 1 -7 -7)" style="stroke-width:1.25;" width="13" height="13"/> 
+				</defs>
+				<use xlink:href="#B5c2a870"  id="U5c290f0" style="fill:#FFFFFF;fill-opacity:.5;stroke-width:1.25;stroke:#FFFFFF"/>
+				<set xlink:href="#e_text" attributeName="display" to="inline" begin="U5c290f0.click" dur="indefinite" fill="freeze"/>
+				<set xlink:href="#j_text" attributeName="display" to="none" begin="U5c290f0.click" dur="indefinite" fill="freeze"/>
+				<set xlink:href="#faith_link" attributeName="xlink:href" to="01_faith.svg" begin="U5c290f0.click" dur="indefinite" fill="freeze"/>
+				<set xlink:href="#renewal_link" attributeName="xlink:href" to="03_renewal.svg" begin="U5c290f0.click" dur="indefinite" fill="freeze"/>
+			</g>
+			<g id="P6f11510" style="opacity:0;" transform="matrix(1 0 0 1 -102 20)">
+				<defs>
+					<text id="B5c71b30"><tspan x="0" y="0" style="fill-rule:nonzero;clip-rule:nonzero; font-family:'HeiseiKakuGo-W3-83pv-RKSJ-H'; font-size:12px;stroke:none;">日本語</tspan></text>
+				</defs>
+				<use xlink:href="#B5c71b30"  id="U5c720d0"/>
+				<animate xlink:href="#P6f11510" attributeName="opacity" attributeType="CSS"  begin="U5b90b30.mouseout" dur="0.5s" fill="freeze" values="1;0" />
+				<animate xlink:href="#P6f11510" attributeName="opacity" attributeType="CSS"  begin="U5b90b30.mouseover" dur="0.6667s" fill="freeze" values="0;1" />
+			</g>
+			<g id="P6ece200" style="opacity:0;" transform="matrix(1 0 0 1 -121 20)">
+				<defs>
+					<text id="B5b90320">english</text>
+				</defs>
+				<use xlink:href="#B5b90320"  id="U5c06670"/>
+				<animate xlink:href="#P6ece200" attributeName="opacity" attributeType="CSS"  begin="U5c290f0.mouseout" dur="0.5s" fill="freeze" values="1;0" />
+				<animate xlink:href="#P6ece200" attributeName="opacity" attributeType="CSS"  begin="U5c290f0.mouseover" dur="0.6667s" fill="freeze" values="0;1" />
+			</g>
+		</g>
+	</g>
+
+<!-- END LANGUAGE SWITCH -->
+
+<!-- RIGHTHAND COMPOSITION ANCHOR RIGHT -->
+
+<svg viewBox="0 0 1000 500" x="0" y="0" preserveAspectRatio="xMaxYMin slice" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<g id="P60bab30" transform="matrix(1 0 0 1 763 -4)">
+		<defs>
+			<path id="B60b9090" d="M0,0q0,508,0,508q9.47,0,9.47,0q0-347.32,0-347.32Q18,112.78,18,112.78Q18,2,18,2Q0,0,0,0z"/>
+		</defs>
+		<use xlink:href="#B60b9090"  id="U60bc440" style="fill:#FFFFFF;"/>
+	</g>
+	<g id="P60b9e10" transform="matrix(1 0 0 1 785 -5)">
+		<defs>
+			<path id="B60b9a00" style="fill:none;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;" d="M0,0q0,512.5,0,512.5"/>
+		</defs>
+		<use xlink:href="#B60b9a00"  id="U60ba120" style="fill:none;stroke:#FFFFFF;"/>
+	</g>
+	<g id="P60b54b0" transform="matrix(1 0 0 1 790 -8)">
+		<defs>
+			<path id="B60b50a0" style="fill:none;stroke-linecap:round;stroke-linejoin:round;" d="M0,0q0,514.25,0,514.25"/>
+		</defs>
+		<use xlink:href="#B60b50a0"  id="U60aee10" style="fill:none;stroke:#FFFFFF;"/>
+	</g>
+	<g id="P60b34b0" transform="matrix(1 0 0 1 829 -6)">
+		<defs>
+			<path id="B60b30a0" style="fill:none;stroke-linecap:round;stroke-linejoin:round;" d="M0,0q0,514.25,0,514.25"/>
+		</defs>
+		<use xlink:href="#B60b30a0"  id="U60b6690" style="fill:none;stroke:#FFFFFF;"/>
+	</g>
+	<g id="P60b14b0" transform="matrix(1 0 0 1 729 -6)">
+		<defs>
+			<path id="B60b10a0" style="fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;" d="M0,0q0,514.25,0,514.25"/>
+		</defs>
+		<use xlink:href="#B60b10a0"  id="U60b4790" style="fill:none;stroke:#FFFFFF;"/>
+	</g>
+	<g id="P60b0160" transform="matrix(1 0 0 1 758 -6)">
+		<defs>
+			<path id="B60b1d40" transform="matrix(1 0 0 1 1 1)" style="fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;" d="M0,0q0,515.25,0,515.25"/>
+		</defs>
+		<use xlink:href="#B60b1d40"  id="U60b2890" style="fill:none;stroke:#FFFFFF;"/>
+	</g>
+	<g id="P60ad4b0" transform="matrix(1 0 0 1 809 -6)">
+		<defs>
+			<path id="B60ad0a0" style="fill:none;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;" d="M0,0q0,514.5,0,514.5"/>
+		</defs>
+		<use xlink:href="#B60ad0a0"  id="U1346a60" style="fill:none;stroke:#FFFFFF;"/>
+	</g>
+	<g id="P60ab4b0" transform="matrix(1 0 0 1 814 -6)">
+		<defs>
+			<path id="B60ab0a0" style="fill:none;stroke-linecap:round;stroke-linejoin:round;" d="M0,0q0,514.25,0,514.25"/>
+		</defs>
+		<use xlink:href="#B60ab0a0"  id="U60ae690" style="fill:none;stroke:#FFFFFF;"/>
+	</g>
+	<g id="P60a94b0" transform="matrix(1 0 0 1 816 -6)">
+		<defs>
+			<path id="B60a90a0" style="fill:none;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;" d="M0,0q0,514.5,0,514.5"/>
+		</defs>
+		<use xlink:href="#B60a90a0"  id="U60ac790" style="fill:none;stroke:#FFFFFF;"/>
+	</g>
+	<g id="P60a8170" transform="matrix(1 0 0 1 825 -6)">
+		<defs>
+			<path id="B60a9d40" style="fill:none;stroke-width:0.75;stroke-linecap:round;stroke-linejoin:round;" d="M0,0q0,514.25,0,514.25"/>
+		</defs>
+		<use xlink:href="#B60a9d40"  id="U60aa890" style="fill:none;stroke:#FFFFFF;"/>
+	</g>
+	<g id="P60a54b0" transform="matrix(1 0 0 1 856 -6)">
+		<defs>
+			<path id="B60a50a0" style="fill:none;stroke-width:1.25;stroke-linecap:round;stroke-linejoin:round;" d="M0,0q0,514.25,0,514.25"/>
+		</defs>
+		<use xlink:href="#B60a50a0"  id="U134fbc0" style="fill:none;stroke:#FFFFFF;"/>
+	</g>
+	<g id="P60a34b0" transform="matrix(1 0 0 1 963 -6)">
+		<defs>
+			<path id="B60a30a0" transform="matrix(1 0 0 1 1 1)" style="fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;" d="M0,0q0,514.25,0,514.25"/>
+		</defs>
+		<use xlink:href="#B60a30a0"  id="U60a6690" style="fill:none;stroke:#FFFFFF;"/>
+	</g>
+	<g id="P60a14b0" transform="matrix(1 0 0 1 967 -6)">
+		<defs>
+			<path id="B60a10a0" style="fill:none;stroke-linecap:round;stroke-linejoin:round;" d="M0,0q0,514.25,0,514.25"/>
+		</defs>
+		<use xlink:href="#B60a10a0"  id="U60a4790" style="fill:none;stroke:#FFFFFF;"/>
+	</g>
+	<g id="P13491d0" transform="matrix(1 0 0 1 773 -9)" style="opacity:0.4;">
+		<defs>
+			<path id="B134ada0" d="M0,0q215.01,0,215.01,0q-1,364.29-1,364.29q-24.89,72.86-24.89,72.86q0,74.85,0,74.85q-192.12,0-192.12,0Q0,0,0,0z"/>
+		</defs>
+		<use xlink:href="#B134ada0"  id="U134b8f0" style="fill:#FFFFFF;"/>
+	</g>
+	<g id="P133cf30" transform="matrix(1 0 0 1 647 206)">
+		<defs>
+			<path id="B1343240" d="M0,0q15.87-50.52,15.87-50.52q-11.41-0.5-11.41-0.5q-7.93,18.33-7.93,18.33q-4.96-3.96-4.96-3.96q1.49-14.36,1.49-14.36q-7.44-0.99-7.44-0.99q-3.97,12.38-3.97,12.38q-13.39,2.48-13.39,2.48q-2.98,12.38-2.98,12.38q12.89,1.49,12.89,1.49
+				q3.97,6.44,3.97,6.44q-20.83,2.97-20.83,2.97q-6.45,14.86-6.45,14.86Q0,0,0,0z"/>
+		</defs>
+		<linearGradient id="R1348920" gradientUnits="objectBoundingBox" gradientTransform="matrix(0.6561 0.7547 -0.7547 0.6561 0.5493 -0.2054)">
+			<stop id="R1348920_0" offset="0" style="stop-color:#383C4C"/>
+			<stop id="R1348920_1" offset="1" style="stop-color:#5D647F"/>
+		</linearGradient>
+		<use xlink:href="#B1343240"  id="U1348920" style="fill:url(#R1348920);"/>
+	</g>
+	<g id="P1343430" transform="matrix(1 0 0 1 676 205)">
+		<defs>
+			<path id="B13430a0" d="M0,0q11.5-20.58,11.5-20.58Q0.5-49,0.5-49q-15,34.79-15,34.79Q0,0,0,0z"/>
+		</defs>
+		<linearGradient id="R13462d0" gradientUnits="objectBoundingBox" gradientTransform="matrix(-0.1045 -0.9945 0.9945 -0.1045 0.055 1.0495)">
+			<stop id="R13462d0_0" offset="0.08" style="stop-color:#7B829A"/>
+			<stop id="R13462d0_1" offset="1" style="stop-color:#4C5164"/>
+		</linearGradient>
+		<use xlink:href="#B13430a0"  id="U13462d0" style="fill:url(#R13462d0);"/>
+	</g>
+	<g id="P13414a0" transform="matrix(1 0 0 1 703 189)">
+		<defs>
+			<path id="B1341090" d="M0,0q22.38-13.79,22.38-13.79Q21.41-66,21.41-66q-7.78,5.42-7.78,5.42q-0.97,14.78-0.97,14.78q-8.27,8.87-8.27,8.87q-6.81-14.28-6.81-14.28q-11.19,8.87-11.19,8.87Q0,0,0,0z"/>
+		</defs>
+		<linearGradient id="R13445d0" gradientUnits="objectBoundingBox" gradientTransform="matrix(0.4067 -0.9135 0.9135 0.4067 -0.1601 0.7534)">
+			<stop id="R13445d0_0" offset="0" style="stop-color:#565B74"/>
+			<stop id="R13445d0_1" offset="0.57" style="stop-color:#363946"/>
+		</linearGradient>
+		<use xlink:href="#B1341090"  id="U13445d0" style="fill:url(#R13445d0);"/>
+	</g>
+	<g id="P1340060" transform="matrix(1 0 0 1 705 215)">
+		<defs>
+			<path id="B1341c40" d="M0,0q19-1.96,19-1.96Q19-25,19-25q-9.02,2.45-9.02,2.45Q0,0,0,0z"/>
+		</defs>
+		<use xlink:href="#B1341c40"  id="U1342780" style="fill:#7E86A0;"/>
+	</g>
+	<g id="P1337db0" transform="matrix(1 0 0 1 704 257)">
+		<defs>
+			<path id="B1336330" d="M0,0q19.52-5.79,19.52-5.79Q20,20.76,20,20.76Q6.19,22.21,6.19,22.21Q0,0,0,0z"/>
+		</defs>
+		<use xlink:href="#B1336330"  id="U133d360" style="fill:#DFE1E7;"/>
+	</g>
+	<g id="P133b4b0" transform="matrix(1 0 0 1 685 251)">
+		<defs>
+			<path id="B133b0a0" d="M0,0q8.91-3.47,8.91-3.47q0-14.37,0-14.37q-4.95-2.48-4.95-2.48q3.96-8.42,3.96-8.42Q-6.43-32.7-6.43-32.7q-5.94,9.41-5.94,9.41q-2.97-4.95-2.97-4.95q-16.33,10.9-16.33,10.9q2.47,5.95,2.47,5.95q-8.91,5.45-8.91,5.45q0,15.36,0,15.36
+				q7.42,1.49,7.42,1.49q-4.95,7.93-4.95,7.93q14.84,3.47,14.84,3.47q4.95-7.43,4.95-7.43q6.93,4.46,6.93,4.46Q2.97,6.44,2.97,6.44Q0,0,0,0z"/>
+		</defs>
+		<linearGradient id="R133e540" gradientUnits="objectBoundingBox" gradientTransform="matrix(-0.454 -0.891 0.891 -0.454 0.2815 1.1725)">
+			<stop id="R133e540_0" offset="0.28" style="stop-color:#B3B7C7"/>
+			<stop id="R133e540_1" offset="0.65" style="stop-color:#868DA6"/>
+		</linearGradient>
+		<use xlink:href="#B133b0a0"  id="U133e540" style="fill:url(#R133e540);"/>
+	</g>
+	<g id="P13394a0" transform="matrix(1 0 0 1 617 245)">
+		<defs>
+			<path id="B1339090" d="M0,0q23.5-10.11,23.5-10.11Q15.5-26,15.5-26q-31,2.41-31,2.41Q0,0,0,0z"/>
+		</defs>
+		<use xlink:href="#B1339090"  id="U133c6f0" style="fill:#727997;"/>
+	</g>
+	<g id="P1338180" transform="matrix(1 0 0 1 591 215)">
+		<defs>
+			<path id="B1339d60" d="M0,0q-1.39-10.11-1.39-10.11Q-13-5.3-13-5.3q1.39,8.19,1.39,8.19Q0,0,0,0z"/>
+		</defs>
+		<use xlink:href="#B1339d60"  id="U133a8a0" style="fill:#4A4F65;"/>
+	</g>
+	<g id="P13344b0" transform="matrix(1 0 0 1 591 233)">
+		<defs>
+			<path id="B13340a0" d="M0,0q26.27,27.81,26.27,27.81Q-9.91,75-9.91,75q-6.94-9.44-6.94-9.44Q0.74,41.97,0.74,41.97q-11.65,3.48-11.65,3.48q-12.88,11.92-12.88,11.92q-5.95-6.71-5.95-6.71q9.42-10.43,9.42-10.43q-4.96-9.93-4.96-9.93q5.95-7.95,5.95-7.95
+				q9.17,6.46,9.17,6.46q8.92-7.45,8.92-7.45q-7.43-11.18-7.43-11.18Q0,0,0,0z"/>
+		</defs>
+		<linearGradient id="R1325350" gradientUnits="objectBoundingBox" gradientTransform="matrix(0.1219 -0.9925 0.9925 0.1219 -0.0572 0.9353)">
+			<stop id="R1325350_0" offset="0" style="stop-color:#999EB2"/>
+			<stop id="R1325350_1" offset="1" style="stop-color:#5D657D"/>
+		</linearGradient>
+		<use xlink:href="#B13340a0"  id="U1325350" style="fill:url(#R1325350);"/>
+	</g>
+	<g id="P13324a0" transform="matrix(1 0 0 1 615 281)">
+		<defs>
+			<path id="B1332090" d="M0,0q19.5-5.5,19.5-5.5q-10,26-10,26q-34,14-34,14Q0,0,0,0z"/>
+		</defs>
+		<use xlink:href="#B1332090"  id="U1335770" style="fill:#C4C7D4;"/>
+	</g>
+	<g id="P1331200" transform="matrix(1 0 0 1 654 313)">
+		<defs>
+			<path id="B1332de0" d="M0,0q11.06-21.61,11.06-21.61Q25-5.4,25-5.4Q9.13,33.39,9.13,33.39Q0,0,0,0z"/>
+		</defs>
+		<use xlink:href="#B1332de0"  id="U1333920" style="fill:#FFFFFF;"/>
+	</g>
+	<g id="P1324f30" transform="matrix(1 0 0 1 678 349)">
+		<defs>
+			<path id="B132b230" d="M0,0q14.69,2.5,14.69,2.5q8.81-24,8.81-24q6.85,8,6.85,8Q28.89,5,28.89,5q12.73,3.5,12.73,3.5Q46.02-1,46.02-1Q47-25,47-25q-4.9-10.5-4.9-10.5q0.49-4,0.49-4q3.92,1,3.92,1q0.49-19,0.49-19Q17.63-57,17.63-57Q0,0,0,0z"/>
+		</defs>
+		<use xlink:href="#B132b230"  id="U13308d0" style="fill:#FFFFFF;"/>
+	</g>
+	<g id="P132b4a0" transform="matrix(1 0 0 1 664 392)">
+		<defs>
+			<path id="B132b090" d="M0,0q8.5-12.54,8.5-12.54Q1-27,1-27q-9.5,13.5-9.5,13.5Q0,0,0,0z"/>
+		</defs>
+		<use xlink:href="#B132b090"  id="U132e180" style="fill:#FFFFFF;"/>
+	</g>
+	<g id="P13294b0" transform="matrix(1 0 0 1 636 362)">
+		<defs>
+			<path id="B13290a0" d="M0,0q15.43-5.96,15.43-5.96Q1.99-55.6,1.99-55.6q-44.56,23.08-44.56,23.08q1.24,13.15,1.24,13.15q20.41-9.43,20.41-9.43q-7.47,14.89-7.47,14.89q-10.45,7.94-10.45,7.94q-0.5,9.43-0.5,9.43Q-27.38,0-27.38,0q3.98,13.4,3.98,13.4
+				q10.21-5.46,10.21-5.46q1-17.37,1-17.37Q-6.22-6.7-6.22-6.7q2.74-7.69,2.74-7.69Q0,0,0,0z"/>
+		</defs>
+		<use xlink:href="#B13290a0"  id="U132c6e0" style="fill:#FFFFFF;"/>
+	</g>
+	<g id="P1328160" transform="matrix(1 0 0 1 572 340)">
+		<defs>
+			<path id="B1329d40" d="M0,0q8.5-14.52,8.5-14.52Q-3-15-3-15q-7.5,15-7.5,15Q0,0,0,0z"/>
+		</defs>
+		<use xlink:href="#B1329d40"  id="U132a890" style="fill:#DFE1E8;"/>
+	</g>
+	<g id="P131dd10" transform="matrix(1 0 0 1 676 140)">
+		<defs>
+			<path id="B131fd40" d="M0,0q8.37-11.61,8.37-11.61Q0.74-21,0.74-21Q-7.63-8.89-7.63-8.89Q0,0,0,0z"/>
+		</defs>
+		<use xlink:href="#B131fd40"  id="U1326c80" style="fill:#2E323F;"/>
+	</g>
+	<g id="P13234a0" transform="matrix(1 0 0 1 649 206)">
+		<defs>
+			<path id="B1323090" d="M-1.9,0q5.79,2.5,5.79,2.5Q17.1-48.25,17.1-48.25q-3.86-3.25-3.86-3.25Q-1.9,0-1.9,0z"/>
+		</defs>
+		<use xlink:href="#B1323090"  id="U1326030" style="fill:#999EB4;"/>
+	</g>
+	<g id="P13214b0" transform="matrix(1 0 0 1 676 205)">
+		<defs>
+			<path id="B13210a0" d="M0,0q4.18,2.69,4.18,2.69Q16-17.86,16-17.86q-3.94-2.45-3.94-2.45Q0,0,0,0z"/>
+		</defs>
+		<use xlink:href="#B13210a0"  id="U13246e0" style="fill:#E4E6EB;"/>
+	</g>
+	<g id="P1320170" transform="matrix(1 0 0 1 642 172)">
+		<defs>
+			<path id="B1321d40" d="M0,0q1.59-13.55,1.59-13.55Q-1.82-17-1.82-17Q-3.41-2.46-3.41-2.46Q0,0,0,0z"/>
+		</defs>
+		<use xlink:href="#B1321d40"  id="U1322890" style="fill:#6D7493;"/>
+	</g>
+	<g id="P131c470" transform="matrix(1 0 0 1 617 246)">
+		<defs>
+			<path id="B131c0a0" d="M-0.74-0.25q5.9,0.99,5.9,0.99q23.1-10.16,23.1-10.16Q20.4-25.03,20.4-25.03q-5.41-3.22-5.41-3.22q8.36,16.85,8.36,16.85Q-0.74-0.25-0.74-0.25z"/>
+		</defs>
+		<use xlink:href="#B131c0a0"  id="U12fbc90" style="fill:#13151A;"/>
+	</g>
+	<g id="P131a4a0" transform="matrix(1 0 0 1 618 261)">
+		<defs>
+			<path id="B131a090" d="M0,0q5.25,2.95,5.25,2.95Q-32,48-32,48q-4.75-0.98-4.75-0.98Q0,0,0,0z"/>
+		</defs>
+		<use xlink:href="#B131a090"  id="U131d110" style="fill:#17181F;"/>
+	</g>
+	<g id="P13190a0" transform="matrix(1 0 0 1 568 291)">
+		<defs>
+			<path id="B131ac80" d="M-0.5-0.51Q6-1.27,6-1.27q13.5-13.24,13.5-13.24Q12-12.22,12-12.22Q-0.5-0.51-0.5-0.51z"/>
+		</defs>
+		<use xlink:href="#B131ac80"  id="U131b7c0" style="fill:#1D1F27;"/>
+	</g>
+	<g id="P1311520" transform="matrix(1 0 0 1 591 215)">
+		<defs>
+			<path id="B1317ee0" d="M0,0q4.09,1.75,4.09,1.75q-1.14-9.5-1.14-9.5q-3.86-3.5-3.86-3.5Q0,0,0,0z"/>
+		</defs>
+		<use xlink:href="#B1317ee0"  id="U1318820" style="fill:#20232B;"/>
+	</g>
+	<g id="P13144b0" transform="matrix(1 0 0 1 580 218)">
+		<defs>
+			<path id="B13140a0" d="M0,0q3.97,1.32,3.97,1.32Q14-1.32,14-1.32Q9.57-3.68,9.57-3.68Q0,0,0,0z"/>
+		</defs>
+		<use xlink:href="#B13140a0"  id="U1317840" style="fill:#13151A;"/>
+	</g>
+	<g id="P13125c0" transform="matrix(1 0 0 1 694 232)">
+		<defs>
+			<path id="B13121b0" d="M-0.78,0.74q4.36-6.77,4.36-6.77q-4.02-3.23-4.02-3.23q-4.98,7.91-4.98,7.91q4.64,2.09,4.64,2.09z"/>
+		</defs>
+		<use xlink:href="#B13121b0"  id="U13159f0" style="fill:#BABECC;"/>
+	</g>
+	<g id="P1311480" transform="matrix(1 0 0 1 695 233)">
+		<defs>
+			<path id="B1311070" d="M-0.95,0q5,2.86,5,2.86Q3.81,15,3.81,15q-4.76-1.19-4.76-1.19Q-0.95,0-0.95,0z"/>
+		</defs>
+		<use xlink:href="#B1311070"  id="U1313ba0" style="fill:#2A2E3A;"/>
+	</g>
+	<g id="P12f9180" transform="matrix(1 0 0 1 687 252)">
+		<defs>
+			<path id="B1309e50" d="M0,0q0,0.24,11.73-3.53Q6.88-4,6.88-4q-8.16,3.06-8.16,3.06Q0,0,0,0z"/>
+		</defs>
+		<use xlink:href="#B1309e50"  id="U1310ea0" style="fill:#132129;"/>
+	</g>
+	<g id="P130c7a0" transform="matrix(1 0 0 1 689 257)">
+		<defs>
+			<path id="B1309cb0" d="M0,0q2.66,2.33,2.66,2.33Q-9.19,14-9.19,14q-3.15-1.87-3.15-1.87Q0,0,0,0z"/>
+		</defs>
+		<use xlink:href="#B1309cb0"  id="U130fe20" style="fill:#132129;"/>
+	</g>
+	<g id="P130c660" transform="matrix(1 0 0 1 669 277)">
+		<defs>
+			<path id="B130c260" d="M0-0.78q-4.62-2.48-4.62-2.48q4.65-7.52,4.65-7.52q5.35,3.03,5.35,3.03Q0-0.78,0-0.78z"/>
+		</defs>
+		<use xlink:href="#B130c260"  id="U13092f0" style="fill:#FFFFFF;"/>
+	</g>
+	<g id="P130e9f0" transform="matrix(1 0 0 1 650 271)">
+		<defs>
+			<path id="B130e5e0" d="M-0.49-0.48q5.18,3.36,5.18,3.36q13.82,2.64,13.82,2.64q-4.44-2.88-4.44-2.88Q-0.49-0.48-0.49-0.48z"/>
+		</defs>
+		<use xlink:href="#B130e5e0"  id="U130dc60" style="fill:#313645;"/>
+	</g>
+	<g id="P12fbf30" transform="matrix(1 0 0 1 629 305)">
+		<defs>
+			<path id="B12f8950" d="M0,0q7.51-25.33,7.51-25.33Q5.4-29,5.4-29Q-4.49-3.6-4.49-3.6Q0,0,0,0z"/>
+		</defs>
+		<use xlink:href="#B12f8950"  id="U1301d80" style="fill:#D3D5DE;"/>
+	</g>
+	<g id="P1304550" transform="matrix(1 0 0 1 597 318)">
+		<defs>
+			<path id="B1304140" d="M0,0q31.57-12.31,31.57-12.31Q27.63-16,27.63-16Q-5.43-2.46-5.43-2.46Q0,0,0,0z"/>
+		</defs>
+		<use xlink:href="#B1304140"  id="U13014a0" style="fill:#252631;"/>
+	</g>
+	<g id="P13064b0" transform="matrix(1 0 0 1 581 325)">
+		<defs>
+			<path id="B13060a0" d="M0,0q4.33,2.91,4.33,2.91Q-3.82,17-3.82,17q-4.84-3.16-4.84-3.16Q0,0,0,0z"/>
+		</defs>
+		<use xlink:href="#B13060a0"  id="U1303630" style="fill:#FFFFFF;"/>
+	</g>
+	<g id="P1307170" transform="matrix(1 0 0 1 629 355)">
+		<defs>
+			<path id="B1306d40" d="M0,0q1.27,18.66,1.27,18.66q-8-3.93-8-3.93Q-5.84-2.34-5.84-2.34Q0,0,0,0z"/>
+		</defs>
+		<use xlink:href="#B1306d40"  id="U1305890" style="fill:#747C99;"/>
+	</g>
+	<g id="P12fa4b0" transform="matrix(1 0 0 1 619 378)">
+		<defs>
+			<path id="B12fa0a0" d="M-0.21-1.06q11.68-2.85,11.68-2.85q-7.5-3.15-7.5-3.15q-10.5,4.32-10.5,4.32q6.32,1.68,6.32,1.68z"/>
+		</defs>
+		<use xlink:href="#B12fa0a0"  id="U12e8700" style="fill:#4E536A;"/>
+	</g>
+	<g id="P12fd4b0" transform="matrix(1 0 0 1 671 351)">
+		<defs>
+			<path id="B12fd0a0" d="M-1.38-2.81q-6.47-1.65-6.47-1.65Q7.76-43.81,7.76-43.81q6.39,4.32,6.39,4.32Q-1.38-2.81-1.38-2.81z"/>
+		</defs>
+		<use xlink:href="#B12fd0a0"  id="U12fb150" style="fill:#E7E7E3;"/>
+	</g>
+	<g id="P12ff3f0" transform="matrix(1 0 0 1 679 349)">
+		<defs>
+			<path id="B12fdee0" d="M0,0q13.67,1.21,13.67,1.21q8.12-22.55,8.12-22.55Q26-16.42,26-16.42Q17.73,4.66,17.73,4.66Q3.4,2.34,3.4,2.34Q0,0,0,0z"/>
+		</defs>
+		<use xlink:href="#B12fdee0"  id="U12fc8a0" style="fill:#E7E7E3;"/>
+	</g>
+	<g id="P12e82c0" transform="matrix(1 0 0 1 665 365)">
+		<defs>
+			<path id="B12e1a40" d="M0,0q4.88,2.29,4.88,2.29Q12,14,12,14q-5.37-0.69-5.37-0.69Q0,0,0,0z"/>
+		</defs>
+		<use xlink:href="#B12e1a40"  id="U12fede0" style="fill:#727895;"/>
+	</g>
+	<g id="P12f64b0" transform="matrix(1 0 0 1 664 392)">
+		<defs>
+			<path id="B12f60a0" d="M0,0q3.68-0.7,3.68-0.7Q13-12.54,13-12.54Q8.09-13,8.09-13Q0,0,0,0z"/>
+		</defs>
+		<use xlink:href="#B12f60a0"  id="U12f3750" style="fill:#4F566B;"/>
+	</g>
+	<g id="P12f0530" transform="matrix(1 0 0 1 637 362)">
+		<defs>
+			<path id="B12f0120" d="M0,0q15.12-6.71,15.12-6.71Q20-5.16,20-5.16Q7.56,1.29,7.56,1.29Q0,0,0,0z"/>
+		</defs>
+		<use xlink:href="#B12f0120"  id="U12f5930" style="fill:#727895;"/>
+	</g>
+	<g id="P12f4650" transform="matrix(1 0 0 1 638 306)">
+		<defs>
+			<path id="B12f0ee0" d="M0,0q5.53,2.74,5.53,2.74Q19,52,19,52q-6.25-2.74-6.25-2.74Q0,0,0,0z"/>
+		</defs>
+		<use xlink:href="#B12f0ee0"  id="U12f7ae0" style="fill:#7E86A0;"/>
+	</g>
+	<g id="P12eb610" transform="matrix(1 0 0 1 681 308)">
+		<defs>
+			<path id="B12eb200" d="M-1.25-0.24q5,2.68,5,2.68Q-6.5-10.23-6.5-10.23q-8.75-6.33-8.75-6.33q14,16.32,14,16.32z"/>
+		</defs>
+		<use xlink:href="#B12eb200"  id="U12df610" style="fill:#646B89;"/>
+	</g>
+	<g id="P12ee960" transform="matrix(1 0 0 1 724 -7)">
+		<defs>
+			<path id="B12ee560" transform="matrix(1 0 0 1 1 1)" style="fill:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;" d="M0,0q0,512.25,0,512.25"/>
+		</defs>
+		<use xlink:href="#B12ee560"  id="U12ea7d0" style="fill:none;stroke:#FFFFFF;"/>
+	</g>
+	<g id="P12efc10" transform="matrix(-1.470205e-015 1 -1 -1.470205e-015 771 166)">
+		<defs>
+			<text id="B12ef810" transform="matrix(0.9919 0 0 1 0 0)" style="font-family:'Impact'; font-size:14px;letter-spacing:0.2em;">REFLECTIONS.WINTER 2001.REPUBLIK ONE</text>
+		</defs>
+		<use xlink:href="#B12ef810"  id="U12ecf00" style="fill:#FFFFFF;"/>
+	</g>
+	<g id="P12e19a0" transform="matrix(-1.470205e-015 1 -1 -1.470205e-015 765 -78)" style="opacity:0.25;">
+		<defs>
+			<text id="B12dfe50" transform="matrix(1.0051 0 0 1 0 0)" style="font-family:'Impact'; font-size:47px;">REFLECTIONS.WINTER 2001.REPUBLIK ONE</text>
+		</defs>
+		<use xlink:href="#B12dfe50"  id="U12e9f10" style="fill:#FFFFFF;"/>
+	</g>
+<!-- LINKS -->
+	<a xlink:href="http://www.republikone.com"><rect x="771" y="378" width="13" height="112" style="fill-opacity:0"/></a>
+<!-- END LINKS -->
+</svg>
+
+<!-- END RIGHTHAND COMPOSITION ANCHOR RIGHT -->
+
+	<g id="e_text" transform="matrix(1 0 0 1 35 266)" style="display:none">
+	<text transform="matrix(1 0 0 1 -6 1)" style="font-family:'Verdana,Arial,Helvetica,SunSans-Regular'; font-size:10px;fill:#FFFFFF;text-rendering:geometricPrecision">&gt;&gt;</text>
+		<defs>
+			<text id="B134a0a0" transform="matrix(0.9972 0 0 1 0 0)" style="font-family:'Verdana,Arial,Helvetica,SunSans-Regular'; font-size:10px">     the first time I drove up here,<tspan x="0" y="12">     there were gorgeous trees</tspan><tspan x="0" y="24">     covered in satin-like flowers;</tspan><tspan x="0" y="36">     and the hills were a lush green.</tspan><tspan x="0" y="48">     On my way back yesterday the</tspan><tspan x="0" y="60">     countryside was yellow and</tspan><tspan x="0" y="72">     the same groves of trees were</tspan><tspan x="0" y="84">     leafless and had withered to</tspan><tspan x="0" y="96">     brown in the heat.</tspan><tspan x="0" y="108"></tspan><tspan x="0" y="120">     Seems like a fitting</tspan><tspan x="0" y="132">                              metaphor . . .</tspan><tspan x="0" y="144"></tspan><tspan x="0" y="156">     . . . winter is colder when</tspan><tspan x="0" y="168">     you&apos;re the one dropping the</tspan><tspan x="0" y="180">     snow . . .</tspan></text>
+		</defs>
+		<use xlink:href="#B134a0a0"  id="text_offset" transform="translate(1 1)" style="fill:#000000"/>
+		<use xlink:href="#B134a0a0"  id="U134d060" style="fill:#FFFFFF;"/>
+	</g>
+		<rect id="transparent_rect" x="196" y="0" width="56" height="500" style="fill:#FFFFFF; fill-opacity:0.1"/>
+	<g id="j_text">
+		<text transform="matrix(1 0 0 1 204 18)" style="stroke:none;fill:#FFFFFF;fill-rule:nonzero;clip-rule:nonzero; font-family:'HeiseiKakuGo-W3-83pv-RKSJ-H'; font-size:9px;writing-mode:tb"><tspan x="0" y="0">始めてここに来た時は</tspan><tspan x="-14.5" y="0">大きな樹木にサテンの様な白い花がつまっていていた</tspan><tspan x="-29" y="0">その丘は緑にしげっていた</tspan><tspan x="-43.5" y="0">時は過ぎ昨日の帰り道にはすでに夏の光にてらされて黄色く</tspan><tspan x="-58" y="0">光る丘と赤ちゃけた花が残っているだけだった</tspan><tspan x="-72.5" y="0">季節のうつろいを見ながらこんな事を思う</tspan><tspan x="-101.5" y="0">白い雪のひとひらがおちてきたらそれはもう冬</tspan></text>
+		<text transform="matrix(1 0 0 1 220 26)" style="font-family:'Verdana,Arial,Helvetica,SunSans-Regular'; font-size:10px;fill:#FFFFFF">&lt;&lt;</text>
+	</g>
+
+<!-- NAV BUTTONS -->
+
+<svg viewBox="0 0 1000 500" x="0" y="0" preserveAspectRatio="xMaxYMin slice" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g transform="translate(0 200)">
+	<g id="nav_layer">
+	<g id="P12e5c30" transform="matrix(1 0 0 1 859 15)">
+		<defs>
+			<text id="B12e5820" transform="matrix(1 0 0 1 0 0)" style="font-family:'Verdana,Arial,Helvetica,SunSans-Regular'; font-size:9px;letter-spacing:0.1em; fill:#FFFFFF;text-rendering:geometricPrecision">reflections &gt;&gt;</text>
+		</defs>
+		<use xlink:href="#B12e5820"  id="U12e7750"/>
+	</g>
+	
+	<g id="button_fills" style="fill:#FFFFFF;fill-opacity:.5;stroke-width:1.25;stroke:#FFFFFF">
+		<g id="P12cfa50" transform="matrix(1 0 0 1 985 11)">
+			<a id="renewal_link" xlink:href="03_renewal.svg">
+			<defs>
+				<rect id="B12ccd30" transform="matrix(1 0 0 1 -7 -7)" width="13" height="13"/> 
+			</defs>
+			<use xlink:href="#B12ccd30"  id="U12d52d0"/>
+			</a>
+		</g>
+		<g id="P12d3250" transform="matrix(1 0 0 1 965 11)">
+			<defs>
+				<rect id="B12d0730" transform="matrix(1 0 0 1 -7 -7)" width="13" height="13"/> 
+			</defs>
+			<use xlink:href="#B12d0730"  id="U12d8600"/>
+		</g>
+		<g id="P12dc9e0" transform="matrix(1 0 0 1 944 11)">
+			<a id="faith_link" xlink:href="01_faith.svg">
+			<defs>
+				<rect id="B12dc5e0" transform="matrix(1 0 0 1 -7 -7)" width="13" height="13"/> 
+			</defs>
+			<use xlink:href="#B12dc5e0"  id="U12dacc0"/>
+			</a>
+		</g>
+	</g>
+	
+	<g id="nav_rollovers" style="font-family:'Verdana,Arial,Helvetica,SunSans-Regular'; font-size:8px;letter-spacing:0.1em; fill:#FFFFFF;text-rendering:geometricPrecision">
+		<g id="G5c56c80" transform="matrix(1 0 0 1 937 89)">
+			<g id="S5c57290">
+				<g id="P5c55290" style="opacity:0;">
+					<defs>
+						<text id="B12cf3a0" transform="matrix(1.0184 0 0 1 0 0)">3 // renewal</text>
+					</defs>
+					<use xlink:href="#B12cf3a0"  id="renewal_shadow" style="fill-opacity:.5; fill:black"/>
+					<use xlink:href="#B12cf3a0"  id="U12d78a0"/>
+					<animate xlink:href="#P5c55290" attributeName="opacity" attributeType="CSS"  begin="P12cfa50.mouseover" dur="1s" fill="freeze" values="0;1" />
+					<animate xlink:href="#P5c55290" attributeName="opacity" attributeType="CSS"  begin="P12cfa50.mouseout" dur="0.6667s" fill="freeze" values="1;0" />
+					<animateTransform xlink:href="#renewal_shadow" attributeName="transform" type="skewX"  begin="P12cfa50.mouseover" end="P12cfa50.mouseout" dur="15s" fill="freeze" values="60;-60" />
+				</g>
+			</g>
+		</g>
+		<g id="G5bc5c50" transform="matrix(1 0 0 1 949 73)">
+			<g id="S5ba4bc0">
+				<g id="P5ba66c0" style="opacity:0;">
+					<defs>
+						<text id="B12d4240" transform="matrix(1.0328 0 0 1 0 0)">2 // snow</text>
+					</defs>
+					<g transform="matrix(1.0184 0 0 -1 0 0)">
+						<use xlink:href="#B12d4240"  id="snow_shadow" style="fill-opacity:.5; fill:black"/>
+					</g>
+					<use xlink:href="#B12d4240"  id="U12d2de0"/>
+					<animate xlink:href="#P5ba66c0" attributeName="opacity" attributeType="CSS"  begin="P12d3250.mouseover" dur="1s" fill="freeze" values="0;1" />
+					<animate xlink:href="#P5ba66c0" attributeName="opacity" attributeType="CSS"  begin="P12d3250.mouseout" dur="0.6667s" fill="freeze" values="1;0" />
+					<animateTransform xlink:href="#snow_shadow" attributeName="transform" type="skewX"  begin="P12d3250.mouseover" end="P12d3250.mouseout" dur="15s" fill="freeze" values="60;-60" />
+				</g>
+			</g>
+		</g>
+		<g id="G5c298d0" transform="matrix(1 0 0 1 952 56)">
+			<g id="S5c29c00">
+				<g id="P5c2ce20" style="opacity:0;">
+					<defs>
+						<text id="B5beeee0" transform="matrix(1.0318 0 0 1 0 0)">1 // faith</text>
+					</defs>
+					<use xlink:href="#B5beeee0"  id="faith_shadow" style="fill-opacity:.5; fill:black"/>
+					<use xlink:href="#B5beeee0"  id="U12af9f0"/>
+					<animate xlink:href="#P5c2ce20" attributeName="opacity" attributeType="CSS"  begin="P12dc9e0.mouseover" dur="1s" fill="freeze" values="0;1" />
+					<animate xlink:href="#P5c2ce20" attributeName="opacity" attributeType="CSS"  begin="P12dc9e0.mouseout" dur="0.6667s" fill="freeze" values="1;0" />
+					<animateTransform xlink:href="#faith_shadow" attributeName="transform" type="skewX"  begin="P12dc9e0.mouseover" end="P12dc9e0.mouseout" dur="15s" fill="freeze" values="60;-60" />
+				</g>
+			</g>
+		</g>
+	</g>
+	</g>
+</g>
+</svg>
+<!-- END NAV BUTTONS -->
+
+<!-- BEGIN RESIZE LABEL -->
+	<svg viewBox="0 0 1000 500" preserveAspectRatio="xMaxYMax slice" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<path id="label" d="M945, 500 v-13h42L1000,500" style="fill:white;stroke:gray"/>
+		<text style="font-family:'Verdana,Arial,Helvetica,SunSans-Regular';font-size:8px" x="950" y="497">!  resize</text>
+		<path d="M983,492L989,498" style="stroke:gray"/>
+		<path d="M985,498h4v-4" style="stroke:gray;fill:none"/>
+		<animate xlink:href="#label" attributeName="fill" values="white;red;white" dur="1s" begin="0s" end="3s" repeatCount="3"/>
+	</svg>
+<!-- END RESIZE LABEL -->		
+
+<image xlink:href="http://www.google-analytics.com/__utm.gif?utmwv=4.7.1&amp;utmn=21830374&amp;utmhn=svg.kvalitne.cz&amp;utmcs=UTF-8&amp;utmsr=1920x1080&amp;utmsc=24-bit&amp;utmul=en-us&amp;utmje=1&amp;utmfl=10.0%20r45&amp;utmdt=SVG%C2%A0%E2%80%94%C2%A0It%27s%20in%20your%20hands...&amp;utmhid=1377849700&amp;utmr=-&amp;utmp=%2Findex2.htm&amp;utmac=UA-11950721-1&amp;utmcc=__utma%3D251371972.1884550355.1260220320.1272562824.1272576758.56%3B%2B__utmz%3D251371972.1263752798.41.3.utmcsr%3Dgoogle%7Cutmccn%3D(organic)%7Cutmcmd%3Dorganic%7Cutmctr%3Dsvg%2520smil%2520demo%3B" width="1" height="1"/>
+
+</svg>

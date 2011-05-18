@@ -1,0 +1,210 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" font-weight="bold" font-style="italic" width="400" height="400">
+ <title>SVG Banner 2, by marek.raida@gmail.com</title>
+<style type="text/css" media="screen">
+@font-face {
+    font-family: 'BelligerentMadnessRegular';
+    src: url('font2/belligerent-webfont.eot');
+    src: url('font2/belligerent-webfont.eot?#iefix') format('eot'),
+         url('font2/belligerent-webfont.woff') format('woff'),
+         url('font2/belligerent-webfont.ttf') format('truetype'),
+         url('font2/belligerent-webfont.svg#webfontqdGI9bTD') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+text.hw {font: 30px/32px 'BelligerentMadnessRegular', Arial, sans-serif;}
+</style>
+
+  <radialGradient id="back" cx="0.5" cy="0.5" r="0.66" gradientUnits="objectBoundingBox">
+   <stop offset="0.8" stop-color="#eee"/>
+   <stop offset="1" stop-color="#ddd"/>
+  </radialGradient>
+  
+  <rect x="1" y="1" width="398" height="398" fill="url(#back)" stroke="navy" stroke-width="2" rx="16"/>
+
+  <g>
+  <linearGradient id="fontgr" gradientUnits="objectBoundingBox" x1="0" x2="0.5" y1="0.1" y2="1">
+    <stop offset="0" stop-color="navy"/>
+    <stop offset="1" stop-color="deepskyblue"/>
+  </linearGradient>
+
+  <linearGradient id="stdgr" gradientUnits="objectBoundingBox" x1="0" x2="0" y1="0" y2="1">
+    <stop offset="0" stop-color="black"/>
+    <stop offset="0.6" stop-color="white"/>
+  </linearGradient>
+
+  <mask id="horizmask">
+    <rect y="250" width="400" height="80" fill="url(#stdgr)"/>
+  </mask>
+
+  <g font-size="53px" font-family="sans-serif" font-weight="bold" stroke-width="0" stroke="none" fill="url(#fontgr)" text-anchor="middle" font-style="normal">
+    <text x="200%" y="30%">DO YOU KNOW
+      <animate id="txt1" attributeName="x" begin="1s;finalFadeOff.end+1s" dur="0.5s" from="200%" to="50%" repeatCount="1" fill="freeze"/>
+      <set attributeName="x" to="200%" begin="finalFadeOff.end"/>
+    </text>
+    <text x="-200%" y="50%">HOW UTILIZE
+      <animate id="txt2" attributeName="x" begin="txt1.end" dur="1s" from="-200%" to="50%" repeatCount="1" fill="freeze"/>
+      <set attributeName="x" to="-200%" begin="finalFadeOff.end"/>
+    </text>
+    <g transform="translate(0 410)">
+      <text x="50%" y="70%">SVG &amp; SMIL?</text>
+      <g transform="translate(0 574) scale(1 -1)">
+        <text x="50%" y="72%" mask="url(#horizmask)">SVG &amp; SMIL?</text>
+      </g>
+      <animateTransform id="txt3" attributeName="transform" type="translate" begin="txt2.end" dur="1.5s" from="0 410" to="0 0" repeatCount="1" fill="freeze"/>
+      <animateTransform attributeName="transform" type="translate" begin="finalFadeOff.end-0.05" dur="0.05s" from="0 0" to="0 410" repeatCount="1" fill="freeze"/>
+    </g>
+  </g>
+
+
+
+
+
+
+
+
+
+
+
+<linearGradient id="papergr" gradientUnits="objectBoundingBox" x1="0" x2="0.2" y1="0" y2="1">
+	<stop offset="0" stop-color="gold"/>
+	<stop offset="0.5" stop-color="beige"/>
+	<stop offset="1" stop-color="beige"/>
+</linearGradient>
+
+ <filter id="abc" x="-25%" y="-25%" width="150%" height="150%">
+  <feGaussianBlur in="SourceAlpha" stdDeviation="10" result="blur"/>
+  <feOffset dx="5" dy="5" in="blur" result="shift"/>
+  <feMerge>
+   <feMergeNode in="shift"/>
+   <feMergeNode in="SourceGraphic"/>
+  </feMerge>
+ </filter>
+
+  <radialGradient id="zch" fx="30%" fy="20%" gradientUnits="objectBoundingBox">
+   <stop offset="2%" stop-color="white"/>
+   <stop offset="90%" stop-color="red"/>
+   <stop offset="95%" stop-color="#222"/>
+  </radialGradient>
+
+<defs>
+  <g id="paper">
+    <rect width="300" height="300" fill="lightgray" transform="translate(-28 -48)" stroke="none"/>
+    <rect width="300" height="300" fill="url(#papergr)" transform="translate(-30 -50)" stroke="none" filter="url(#abc)">
+      <set id="render" attributeName="width" to="300" begin="pap1.end; pap2.end; pap3.end; finalFadeOff.end"/>
+    </rect>
+  </g>
+</defs>
+
+  <mask id="shw1">
+    <rect x="-800" width="790" height="800" fill="white">
+      <animate attributeName="x" begin="render.begin+1s" dur="2s" from="-800" to="0" repeatCount="1" fill="freeze"/>
+      <set attributeName="x" to="-800" begin="render.begin"/>
+    </rect>
+  </mask>
+  <mask id="shw2">
+    <rect x="-800" width="790" height="800" fill="white">
+      <animate attributeName="x" begin="render.begin+2s" dur="2s" from="-800" to="0" repeatCount="1" fill="freeze"/>
+      <set attributeName="x" to="-800" begin="render.begin"/>
+    </rect>
+  </mask>
+  <mask id="shw3">
+    <rect x="-800" width="790" height="800" fill="white">
+      <animate attributeName="x" begin="render.begin+3s" dur="2s" from="-800" to="0" repeatCount="1" fill="freeze"/>
+      <set attributeName="x" to="-800" begin="render.begin"/>
+    </rect>
+  </mask>
+  <mask id="shw4">
+    <rect x="-800" width="790" height="800" fill="white">
+      <animate attributeName="x" begin="render.begin+4s" dur="2s" from="-800" to="0" repeatCount="1" fill="freeze"/>
+      <set attributeName="x" to="-800" begin="render.begin"/>
+    </rect>
+  </mask>
+
+  <g transform="translate(80 80) rotate(5)" opacity="0">
+    <set attributeName="opacity" to="0" begin="finalFadeOff.end"/>
+    <animate id="pap1" attributeName="opacity" begin="txt3.end+2s" dur="0.5s" from="0" to="1" repeatCount="1" fill="freeze"/>
+    <use xlink:href="#paper"/>
+    <circle cx="135" cy="-20" r="16" fill="url(#zch)"/>
+    <g visibility="hidden" stroke="none">
+      <set attributeName="visibility" to="visible" begin="pap1.end"/>
+      <set attributeName="visibility" to="hidden" begin="finalFadeOff.end; pap1.begin"/>
+      <text class="hw" x="0" y="30" fill="navy" mask="url(#shw1)">Do experiments</text>
+      <text class="hw" x="4" y="74" fill="navy" mask="url(#shw2)">with every aspect</text>
+      <text class="hw" x="0" y="123" fill="navy" mask="url(#shw3)">of the SVG &amp; SMIL</text>
+      <text class="hw" x="2" y="170" fill="navy" mask="url(#shw4)">W3C standards...</text>
+    </g>
+  </g>
+
+  <g transform="translate(70 90) rotate(-5)" opacity="0">
+    <set attributeName="opacity" to="0" begin="finalFadeOff.end"/>
+    <animate id="pap2" attributeName="opacity" begin="pap1.end+5.5s" dur="0.5s" from="0" to="1" repeatCount="1" fill="freeze"/>
+    <use xlink:href="#paper"/>
+    <circle cx="115" cy="-24" r="16" fill="url(#zch)"/>
+    <g visibility="hidden" stroke="none">
+      <set attributeName="visibility" to="visible" begin="pap2.end"/>
+      <set attributeName="visibility" to="hidden" begin="finalFadeOff.end; pap3.begin"/>
+      <text class="hw" x="0" y="30" fill="navy" mask="url(#shw1)">Support in modern</text>
+      <text class="hw" x="2" y="82" fill="navy" mask="url(#shw2)">browsers is good</text>
+      <text class="hw" x="-2" y="125" fill="navy" mask="url(#shw3)">and improving</text>
+      <text class="hw" x="0" y="166" fill="navy" mask="url(#shw4)">with every release..</text>
+    </g>
+  </g>
+
+  <g transform="translate(80 104) rotate(7)" opacity="0">
+    <set attributeName="opacity" to="0" begin="finalFadeOff.end"/>
+    <animate id="pap3" attributeName="opacity" begin="pap2.end+5.5s" dur="0.5s" from="0" to="1" repeatCount="1" fill="freeze"/>
+    <use xlink:href="#paper"/>
+    <circle cx="135" cy="-11" r="16" fill="url(#zch)"/>
+    <g visibility="hidden" stroke="none">
+      <set attributeName="visibility" to="visible" begin="pap3.end"/>
+      <set attributeName="visibility" to="hidden" begin="finalFadeOff.end; pap3.begin"/>
+      <text class="hw" x="0" y="35" fill="navy" mask="url(#shw1)">You can do graphs,</text>
+      <text class="hw" x="3" y="82" fill="navy" mask="url(#shw2)">rich presentations,</text>
+      <text class="hw" x="12" y="123" fill="navy" mask="url(#shw3)">maps, games</text>
+      <text class="hw" x="5" y="171" fill="navy" mask="url(#shw4)">and many more!!!</text>
+    </g>
+  </g>
+
+
+
+
+  <linearGradient id="grad2" x1="-100%" y1="90%" x2="30%" y2="99%" gradientUnits="objectBoundingBox">
+    <stop stop-color="navy" offset="0%"/>
+    <stop stop-color="navy" offset="40%"/>        
+    <stop stop-color="gold" offset="48%"/>
+    <stop stop-color="gold" offset="52%"/>
+    <stop stop-color="orange" offset="56%"/>
+    <stop stop-color="#555" offset="60%"/>
+    <stop stop-color="#555" offset="100%"/>
+    <animate attributeName="x1" begin="showLogo.end" dur="2.5s" values="-100%;100%" repeatCount="1" fill="freeze"/>
+    <animate attributeName="x2" begin="showLogo.end" dur="2.5s" values="0%;200%" repeatCount="1" fill="freeze"/>
+    <set attributeName="x1" to="-100%" begin="finalFadeOff.end"/>
+    <set attributeName="x2" to="30%" begin="finalFadeOff.end"/>
+  </linearGradient>
+
+  <radialGradient id="circ" fx="40%" fy="20%" gradientUnits="objectBoundingBox">
+   <stop offset="2%" stop-color="white"/>
+   <stop offset="40%" stop-color="lightgreen"/>
+   <stop offset="90%" stop-color="darkgreen"/>
+  </radialGradient>
+
+  <g transform="translate(200 220)">
+    <g visibility="hidden">
+      <ellipse rx="66" ry="15" fill="none" stroke="#131" stroke-width="4" id="elp" stroke-dasharray="20,3"/>
+      <use xlink:href="#elp" transform="rotate(30)"/>
+      <use xlink:href="#elp" transform="rotate(-30)"/>
+      <circle cy="-20" r="44" fill="url(#circ)"/>
+      <text x="0" y="0" text-anchor="middle" font-style="normal" font-size="28px" font-family="Verdana, sans-serif" font-weight="bold" fill="url(#grad2)" stroke="none">SMIL &amp; SVG</text>
+      <animateTransform id="showLogo" attributeName="transform" type="scale" begin="pap3.end+6s" dur="4s" values="0 ;3; 2; 2" repeatCount="1" fill="freeze"/>
+      <animateTransform id="hideLogo" attributeName="transform" type="scale" begin="finalFadeOff.begin-0.3s" dur="0.3s" values="2; 2.5; 0; 0" repeatCount="1" fill="freeze"/>
+      <set attributeName="visibility" to="visible" begin="showLogo.begin"/>
+      <set attributeName="visibility" to="hidden" begin="hideLogo.end"/>
+    </g>
+  </g>
+
+  <animate id="finalFadeOff" attributeName="opacity" begin="showLogo.end+6s" dur="3s" values="1; 0; 0" repeatCount="1"/>
+  </g>
+
+<image xlink:href="http://www.google-analytics.com/__utm.gif?utmwv=4.7.1&amp;utmn=21830374&amp;utmhn=svg.kvalitne.cz&amp;utmcs=UTF-8&amp;utmsr=1920x1080&amp;utmsc=24-bit&amp;utmul=en-us&amp;utmje=1&amp;utmfl=10.0%20r45&amp;utmdt=SVG%C2%A0%E2%80%94%C2%A0It%27s%20in%20your%20hands...&amp;utmhid=1377849700&amp;utmr=-&amp;utmp=%2Findex2.htm&amp;utmac=UA-11950721-1&amp;utmcc=__utma%3D251371972.1884550355.1260220320.1272562824.1272576758.56%3B%2B__utmz%3D251371972.1263752798.41.3.utmcsr%3Dgoogle%7Cutmccn%3D(organic)%7Cutmcmd%3Dorganic%7Cutmctr%3Dsvg%2520smil%2520demo%3B" width="1" height="1"/>
+
+</svg>

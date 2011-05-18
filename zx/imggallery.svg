@@ -1,0 +1,161 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <title>SVG Image Gallery v0.81</title>
+  <desc>by Marek Raida, marek.raida@gmail.com</desc>
+
+  <g id="baseMe"/>
+  
+  <!--text x="75%" y="95%" font-size="10px" font-family="monospace" id="debugger" fill="gray">Debug...</text-->
+
+  <g font-weight="bolder" font-family="monospace" fill="gray">
+    <text x="75%" y="5%" font-size="24px">SVG Image Gallery</text>
+    <text x="75%" y="10%" font-size="20px">ZX Screens Nostalgy Vol II.</text>
+    <text x="75%" y="15%" font-size="18px">There's 256 screens in total...</text>
+    <text x="75%" y="20%" font-size="14px">Resize window and reload for better performance...</text>
+  </g>
+
+  <g transform="translate(-500, 0)" stroke-width="5">
+    <line x1="355" y1="390" x2="570" y2="-75" stroke="red"/>
+    <line x1="360" y1="390" x2="570" y2="-65" stroke="yellow"/>
+    <line x1="365" y1="390" x2="570" y2="-55" stroke="green"/>
+    <line x1="370" y1="390" x2="570" y2="-45" stroke="cyan"/>
+  </g>
+
+  <script type="text/javascript" xlink:href="gallerylist2.js"/>
+  
+  <script type="text/javascript">
+    var svgns = "http://www.w3.org/2000/svg";
+    var xlinkns = "http://www.w3.org/1999/xlink";
+
+    if (typeof window.innerWidth != 'undefined') {
+      var scrWidth = window.innerWidth;
+      var scrHeight = window.innerHeight;
+    } else if (typeof document.documentElement != 'undefined' &amp;&amp; typeof document.documentElement.clientWidth != 'undefined' &amp;&amp; document.documentElement.clientWidth != 0) {
+       var scrWidth = document.documentElement.clientWidth;
+       var scrHeight = document.documentElement.clientHeight;
+    } else {
+       var scrWidth = document.getElementsByTagName('body')[0].clientWidth;
+       var scrHeight = document.getElementsByTagName('body')[0].clientHeight;
+    }
+
+    var myId = 0;
+    var size = 0;
+    var colors = new Array("blue", "red", "magenta", "green", "cyan", "yellow", "white", "black"); // speccy colors ;-)
+    var dir = "zx-screens2/";
+    var imgWidth = 256;
+    var imgHeight = 192;
+    var xTerminateAt = (Math.round(scrWidth/3)*2) - imgWidth;
+    var yTerminateAt = scrHeight + imgHeight;
+    var root = document.getElementById("baseMe");
+    var startDate = new Date();
+
+    function gener() {
+      myId++;
+      if (size == 0) {
+        size = screens.length; // rewind
+        screens.shuffle();  // and resuffle
+      }
+
+      var myTime = (new Date() - startDate);
+      var durr = (9 + Math.round(Math.random()*3));      
+      var rX = Math.round(Math.random()*xTerminateAt);
+      if (rX &lt; Math.round(imgWidth/2)) rX = rX + Math.round(imgWidth/2);
+
+      var g1 = document.createElementNS(svgns, "g");
+      g1.setAttributeNS(null, "id", "whole" + myId);
+
+      var a1 = document.createElementNS(svgns, "animateTransform");
+      a1.setAttributeNS(null, "attributeName", "transform");
+      a1.setAttributeNS(null, "type", "translate");
+      a1.setAttributeNS(null, "dur", ""+ durr +"s");
+      a1.setAttributeNS(null, "repeatCount", 1);
+      a1.setAttributeNS(null, "values", ""+ rX +","+ (-1 * (imgHeight+10)) +";"+ rX +","+ (yTerminateAt+10));
+      a1.setAttributeNS(null, "begin", ""+ myTime +"ms");
+
+      var g2 = document.createElementNS(svgns, "g");
+
+      var a2 = document.createElementNS(svgns, "animateTransform");
+      a2.setAttributeNS(null, "attributeName", "transform");
+      a2.setAttributeNS(null, "type", "translate");
+      a2.setAttributeNS(null, "dur", "4s");
+      a2.setAttributeNS(null, "repeatCount", 3);
+      a2.setAttributeNS(null, "values", "0,0; "+ imgWidth +",0; 0,0");
+      a2.setAttributeNS(null, "begin", ""+ myTime +"ms");
+
+      var g3 = document.createElementNS(svgns, "g");
+
+      var im = document.createElementNS(svgns, "image");
+      im.setAttributeNS(null, "x", 0);
+      im.setAttributeNS(null, "y", (-1 * (imgHeight+10)));
+      im.setAttributeNS(null, "width", imgWidth);
+      im.setAttributeNS(null, "height", imgHeight);
+      im.setAttributeNS(xlinkns, "href", dir + screens[--size]);
+
+      // debug...
+      //document.getElementById("debugger").firstChild.data = myId + " , " + screens[size] + " , " + rX + " , " + xTerminateAt + " , " + yTerminateAt;
+
+      var rec = document.createElementNS(svgns, "rect");
+      rec.setAttributeNS(null, "id", "rec" + myId);
+      rec.setAttributeNS(null, "x", 0);
+      rec.setAttributeNS(null, "y", (-1 * (imgHeight+10)));
+      rec.setAttributeNS(null, "width", imgWidth);
+      rec.setAttributeNS(null, "height", imgHeight);
+      rec.setAttributeNS(null, "visibility", "hidden");
+      rec.setAttributeNS(null, "fill", colors[Math.round(Math.random()*(colors.length-1))]);
+      rec.setAttributeNS(null, "opacity", .3);
+
+      var a3 = document.createElementNS(svgns, "animateTransform");
+      a3.setAttributeNS(null, "attributeName", "transform");
+      a3.setAttributeNS(null, "type", "scale");
+      a3.setAttributeNS(null, "dur", "4s");
+      a3.setAttributeNS(null, "repeatCount", 3);
+      a3.setAttributeNS(null, "values", "1,1; -1,1; 1,1");
+      a3.setAttributeNS(null, "begin", "" + myTime + "ms");
+
+      var s1 = document.createElementNS(svgns, "set");
+      s1.setAttributeNS(null, "id", "setOn" + myId);
+      s1.setAttributeNS(null, "attributeName", "visibility");
+      s1.setAttributeNS(null, "to", "visible");
+      s1.setAttributeNS(null, "begin", "" + (1000 + myTime) + "ms; setOff" + myId + ".begin+2s");
+
+      var s2 = document.createElementNS(svgns, "set");
+      s2.setAttributeNS(null, "id", "setOff" + myId);
+      s2.setAttributeNS(null, "attributeName", "visibility");
+      s2.setAttributeNS(null, "to", "hidden");
+      s2.setAttributeNS(null, "begin", "setOn" + myId + ".begin+2s");
+
+      var s3 = document.createElementNS(svgns, "set");
+      s3.setAttributeNS(null, "attributeName", "opacity");
+      s3.setAttributeNS(null, "to", 1);
+      s3.setAttributeNS(null, "begin", "setOff" + myId + ".begin");
+
+      var s4 = document.createElementNS(svgns, "set");
+      s4.setAttributeNS(null, "attributeName", "opacity");
+      s4.setAttributeNS(null, "to", .3);
+      s4.setAttributeNS(null, "begin", "setOn" + myId + ".begin");
+
+      im.appendChild(s3);
+      im.appendChild(s4);
+      g3.appendChild(im);
+      rec.appendChild(s1);
+      rec.appendChild(s2);
+      g3.appendChild(rec);
+      
+      g3.appendChild(a3);
+      g2.appendChild(g3);
+      g2.appendChild(a2);
+      g1.appendChild(g2);
+      g1.appendChild(a1);
+      root.appendChild(g1);
+      
+      window.setTimeout("remover('whole" + myId + "')", (durr*1000)); //remove unwanted
+      window.setTimeout("gener()", 2400); // and do it again
+    }
+    
+    function remover(id){
+      root.removeChild(document.getElementById(id));
+    }
+    gener();
+    
+  </script>
+<image xlink:href="http://www.google-analytics.com/__utm.gif?utmwv=4.7.1&amp;utmn=21830374&amp;utmhn=svg.kvalitne.cz&amp;utmcs=UTF-8&amp;utmsr=1920x1080&amp;utmsc=24-bit&amp;utmul=en-us&amp;utmje=1&amp;utmfl=10.0%20r45&amp;utmdt=SVG%C2%A0%E2%80%94%C2%A0It%27s%20in%20your%20hands...&amp;utmhid=1377849700&amp;utmr=-&amp;utmp=%2Findex2.htm&amp;utmac=UA-11950721-1&amp;utmcc=__utma%3D251371972.1884550355.1260220320.1272562824.1272576758.56%3B%2B__utmz%3D251371972.1263752798.41.3.utmcsr%3Dgoogle%7Cutmccn%3D(organic)%7Cutmcmd%3Dorganic%7Cutmctr%3Dsvg%2520smil%2520demo%3B" width="1" height="1"/>
+</svg>

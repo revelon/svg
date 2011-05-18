@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SVG Submarine Assaul 1.0 Sound Configuration -->
+<items baseHref="sounds/" defaultVol="100">
+ <sound id="background" href="background.mp3" />
+ <sound id="introSong" href="ocean.mp3" />
+ <sound id="outroSong" href="ocean.mp3" />
+ <sound id="uboatCrash" href="uboatcrash.mp3" />
+ <sound id="enemyCrash" href="enemycrash1.mp3" />
+ <sound id="torpedoFire" href="torpedo.mp3" />
+ <sound id="enemyFire1" href="enemyfire1.mp3" />
+ <sound id="enemyFire2" href="enemyfire2.mp3" />
+ <sound id="enemyAlert" href="enemyalert.mp3" />
+ <sound id="notAvail" href="notavail.mp3" />
+ <sound id="gotBonus" href="bonus.mp3" />
+</items>

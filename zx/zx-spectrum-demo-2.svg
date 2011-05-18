@@ -1,0 +1,402 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events" width="100%" height="100%">
+  <title>ZX Spectrum in SVG demo 2.02 with animated gradient rainbow</title>
+  <desc>by Marek Raida, marek.raida@gmail.com</desc>
+
+  <script type="text/ecmascript" xlink:href="../fakesmile/smil.user.js"/>
+
+  <defs>
+    <radialGradient id="greyRad" cx="20%" cy="40%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" stop-color="#aaa"/>
+      <stop offset="100%" stop-color="#888"/>
+    </radialGradient>
+  
+    <g id="button">
+      <rect width="26" height="18" fill="#555" rx="2" x="2" y="2"/>
+      <rect width="26" height="18" fill="url(#greyRad)" rx="2" x="0" y="0"/>
+    </g>
+    <use id="buttonLong" xlink:href="#button" transform="scale(1.4 1)"/>
+    <use id="buttonLonger" xlink:href="#button" transform="scale(1.7 1)"/>
+    
+    <clipPath id="sqr">
+      <rect x="0" y="74" width="470" height="216" fill="black"/>
+    </clipPath>
+    
+    <linearGradient id="gradient1" x1="46%" y1="88%" x2="86%" y2="99%">
+        <stop stop-color="black" offset="0%"/>
+        <stop stop-color="black" offset="18%"/>        
+        <stop stop-color="red" offset="28%"/>
+        <stop stop-color="yellow" offset="40%"/>
+        <stop stop-color="green" offset="52%"/>
+        <stop stop-color="cyan" offset="62%"/>
+        <stop stop-color="black" offset="72%"/>        
+        <stop stop-color="black" offset="100%"/>
+      <animate attributeName="x1" begin="0" dur="25s" values="100%;-60%;100%" repeatCount="indefinite"/>
+      <animate attributeName="x2" begin="0" dur="25s" values="140%;-20%;140%" repeatCount="indefinite"/>
+    </linearGradient>
+    
+    <mask id="zxTitle">
+      <rect x="0" y="3" width="470" height="71" rx="2" fill="white"/>
+      <text x="22" y="53" font-family="Arial" font-style="italic" font-size="44px" font-weight="bolder" fill="black">ZX Spectrum in SVG</text>
+      <line x1="33" y1="67" x2="487" y2="67" stroke="black" stroke-width="5px" stroke-dasharray="4,4" transform="skewX(-20)"/>
+    </mask>
+          
+  </defs>
+
+
+  <g transform="translate(12,12) scale(1.5)">
+    <rect x="2" y="2" width="470" height="290" rx="5" fill="#000"/>
+    <rect x="0" y="0" width="470" height="290" rx="5" fill="url(#gradient1)"/>
+    <rect x="2" y="2" width="466" height="71" rx="5" fill="#000" mask="url(#zxTitle)"/>
+    
+    <g stroke-width="5" clip-path="url(#sqr)">
+      <g>
+      <line x1="355" y1="390" x2="570" y2="-75" stroke="red"/>
+      <line x1="360" y1="390" x2="570" y2="-70" stroke="yellow"/>
+      <line x1="365" y1="390" x2="570" y2="-65" stroke="green"/>
+      <line x1="370" y1="390" x2="570" y2="-60" stroke="cyan"/>
+      </g>
+    </g>
+    
+    <text x="17" y="41" font-family="Arial" font-size="14px" font-weight="bolder" fill="white">ZX Spectrum</text>
+    <g font-family="Verdana" font-weight="normal" font-size="6px" fill="white">
+
+      <g transform="translate(21,114)">
+        <use xlink:href="#button"/>
+        <text x="3" y="12" font-weight="bolder" font-size="11">1</text>
+        <text y="-2">EDIT</text>
+        <text y="-9" fill="blue">BLUE</text>
+        <text y="26" fill="red">DEF FN</text>
+        <text x="15" y="15" fill="red">!</text>
+        <rect x="15" y="2" width="6" height="6" fill="white" stroke-width="1" stroke="white"/>
+        <rect x="18" y="2" width="3" height="3" fill="#aaa"/>
+      </g>
+      <g transform="translate(62,114)">
+        <use xlink:href="#button"/>
+        <text x="3" y="12" font-weight="bolder" font-size="11">2</text>
+        <text y="-2" x="-7">CAPS LOCK</text>
+        <text y="-9" fill="red">RED</text>
+        <text y="26" fill="red">FN</text>
+        <text x="15" y="15" fill="red">@</text>
+        <rect x="15" y="2" width="6" height="6" fill="white" stroke-width="1" stroke="white"/>
+        <rect x="15" y="2" width="3" height="3" fill="#aaa"/>
+      </g>
+      <g transform="translate(103,114)">
+        <use xlink:href="#button"/>
+        <text x="3" y="12" font-weight="bolder" font-size="11">3</text>
+        <text y="-2" x="-5">TRUE VIDEO</text>
+        <text y="-9" fill="magenta">MAGENTA</text>
+        <text y="26" fill="red">LINE</text>
+        <text x="15" y="15" fill="red">#</text>
+        <rect x="15" y="2" width="6" height="6" fill="white" stroke-width="1" stroke="white"/>
+        <rect x="15" y="2" width="6" height="3" fill="#aaa"/>
+      </g>
+      <g transform="translate(144,114)">
+        <use xlink:href="#button"/>
+        <text x="3" y="12" font-weight="bolder" font-size="11">4</text>
+        <text y="-2" x="1">INV.VIDEO</text>
+        <text y="-9" fill="green">GREEN</text>
+        <text y="26" fill="red">OPEN #</text>
+        <text x="15" y="15" fill="red">$</text>
+        <rect x="15" y="2" width="6" height="6" fill="white" stroke-width="1" stroke="white"/>
+        <rect x="18" y="5" width="3" height="3" fill="#aaa"/>
+      </g>
+      <g transform="translate(185,114)">
+        <use xlink:href="#button"/>
+        <text x="3" y="12" font-weight="bolder" font-size="11">5</text>
+        <text y="-2" x="2">&#8592;</text>
+        <text y="-9" fill="cyan">CYAN</text>
+        <text y="26" fill="red">CLOSE #</text>
+        <text x="15" y="15" fill="red">%</text>
+        <rect x="15" y="2" width="6" height="6" fill="white" stroke-width="1" stroke="white"/>
+        <rect x="18" y="2" width="3" height="6" fill="#aaa"/>
+      </g>
+      <g transform="translate(226,114)">
+        <use xlink:href="#button"/>
+        <text x="3" y="12" font-weight="bolder" font-size="11">6</text>
+        <text y="-2" x="2">&#8595;</text>
+        <text y="-9" fill="yellow">YELLOW</text>
+        <text y="26" fill="red">MOVE</text>
+        <text x="15" y="15" fill="red">&amp;</text>
+        <rect x="15" y="2" width="6" height="6" fill="white" stroke-width="1" stroke="white"/>
+        <rect x="15" y="2" width="3" height="3" fill="#aaa"/>
+        <rect x="18" y="5" width="3" height="3" fill="#aaa"/>
+      </g>
+      <g transform="translate(267,114)">
+        <use xlink:href="#button"/>
+        <text x="3" y="12" font-weight="bolder" font-size="11">7</text>
+        <text y="-2" x="2">&#8593;</text>
+        <text y="-9">WHITE</text>
+        <text y="26" fill="red">ERASE</text>
+        <text x="15" y="15" fill="red">'</text>
+        <rect x="15" y="2" width="6" height="6" fill="#aaa" stroke-width="1" stroke="white"/>
+        <rect x="15" y="5" width="3" height="3" fill="white"/>
+      </g>
+      <g transform="translate(308,114)">
+        <use xlink:href="#button"/>
+        <text x="3" y="12" font-weight="bolder" font-size="11">8</text>
+        <text y="-2" x="2">&#8594;</text>
+        <text y="26" fill="red">POINT</text>
+        <text x="15" y="15" fill="red">(</text>
+        <rect x="15" y="2" width="6" height="6" fill="white" stroke-width="1" stroke="white"/>
+      </g>
+      <g transform="translate(349,114)">
+        <use xlink:href="#button"/>
+        <text x="3" y="12" font-weight="bolder" font-size="11">9</text>
+        <text y="-2" x="-3">GRAPHICS</text>
+        <text y="26" fill="red">CAT</text>
+        <text x="15" y="15" fill="red">)</text>
+      </g>
+      <g transform="translate(390,114)">
+        <use xlink:href="#button"/>
+        <text x="3" y="12" font-weight="bolder" font-size="11">0</text>
+        <text y="-2">DELETE</text>
+        <rect y="-15" width="24" height="7" fill="white"/>
+        <text y="-9" fill="black">BLACK</text>
+        <text y="26" x="-2" fill="red">FORMAT</text>
+        <text x="15" y="15" fill="red">_</text>
+      </g>
+
+
+
+    <g transform="translate(20,40)">
+      <g transform="translate(21,114)">
+        <use xlink:href="#button"/>
+        <text x="3" y="10" font-weight="bolder" font-size="11">Q</text>
+        <text y="-2" fill="green">SIN</text>
+        <text y="26" fill="red">ASN</text>
+        <text x="15" y="7" fill="red">&lt;=</text>
+        <text x="4" y="17">PLOT</text>
+      </g>
+      <g transform="translate(62,114)">
+        <use xlink:href="#button"/>
+        <text x="3" y="10" font-weight="bolder" font-size="11">W</text>
+        <text y="-2" fill="green">COS</text>
+        <text y="26" fill="red">ACS</text>
+        <text x="15" y="7" fill="red">&lt;&gt;</text>
+        <text x="3" y="17">DRAW</text>
+      </g>
+      <g transform="translate(103,114)">
+        <use xlink:href="#button"/>
+        <text x="3" y="10" font-weight="bolder" font-size="11">E</text>
+        <text y="-2" fill="green">TAN</text>
+        <text y="26" fill="red">ATN</text>
+        <text x="15" y="7" fill="red">&gt;=</text>
+        <text x="5" y="17">REM</text>
+      </g>
+      <g transform="translate(144,114)">
+        <use xlink:href="#button"/>
+        <text x="3" y="10" font-weight="bolder" font-size="11">R</text>
+        <text y="-2" fill="green">INT</text>
+        <text y="26" fill="red">VERIFY</text>
+        <text x="15" y="7" fill="red">&lt;</text>
+        <text x="5" y="17">RUN</text>
+      </g>
+      <g transform="translate(185,114)">
+        <use xlink:href="#button"/>
+        <text x="3" y="10" font-weight="bolder" font-size="11">T</text>
+        <text y="-2" fill="green">RND</text>
+        <text y="26" fill="red">MERGE</text>
+        <text x="15" y="7" fill="red">&gt;</text>
+        <text x="3" y="17">RAND</text>
+      </g>
+      <g transform="translate(226,114)">
+        <use xlink:href="#button"/>
+        <text x="2" y="10" font-weight="bolder" font-size="11">Y</text>
+        <text y="-2" fill="green">STR $</text>
+        <text y="26" x="2" fill="red">[</text>
+        <text x="10" y="7" fill="red">AND</text>
+        <text x="2" y="17" font-size="5.6">RETURN</text>
+      </g>
+      <g transform="translate(267,114)">
+        <use xlink:href="#button"/>
+        <text x="3" y="10" font-weight="bolder" font-size="11">U</text>
+        <text y="-2" fill="green">CHR $</text>
+        <text y="26" x="2" fill="red">]</text>
+        <text x="13" y="7" fill="red">OR</text>
+        <text x="10" y="17">IF</text>
+      </g>
+      <g transform="translate(308,114)">
+        <use xlink:href="#button"/>
+        <text x="3" y="10" font-weight="bolder" font-size="11">I</text>
+        <text y="-2" fill="green">CODE</text>
+        <text y="26" fill="red">IN</text>
+        <text x="12" y="7" fill="red">AT</text>
+        <text x="1" y="17">INPUT</text>
+      </g>
+      <g transform="translate(349,114)">
+        <use xlink:href="#button"/>
+        <text x="3" y="10" font-weight="bolder" font-size="11">O</text>
+        <text y="-2" fill="green">PEEK</text>
+        <text y="26" fill="red">OUT</text>
+        <text x="16" y="7" fill="red">;</text>
+        <text x="3" y="17">POKE</text>
+      </g>
+      <g transform="translate(390,114)">
+        <use xlink:href="#button"/>
+        <text x="3" y="10" font-weight="bolder" font-size="11">P</text>
+        <text y="-2" fill="green">TAB</text>
+        <text y="26" x="2" fill="red">&#169;</text>
+        <text x="15" y="7" fill="red">"</text>
+        <text x="2" y="17">PRINT</text>
+      </g>
+    </g>
+
+
+    <g transform="translate(32,80)">
+      <g transform="translate(21,114)">
+        <use xlink:href="#button"/>
+        <text x="0" y="10" font-weight="bolder" font-size="11">A</text>
+        <text y="-2" fill="green">READ</text>
+        <text y="26" x="2" fill="red">~</text>
+        <text x="7" y="7" fill="red">STOP</text>
+        <text x="4" y="17">NEW</text>
+      </g>
+      <g transform="translate(62,114)">
+        <use xlink:href="#button"/>
+        <text x="1" y="10" font-weight="bolder" font-size="11">S</text>
+        <text y="-2" x="-2" fill="green">RESTORE</text>
+        <text y="26" fill="red">|</text>
+        <text x="9" y="7" fill="red">NOT</text>
+        <text x="4" y="17">SAVE</text>
+      </g>
+      <g transform="translate(103,114)">
+        <use xlink:href="#button"/>
+        <text x="0" y="10" font-weight="bolder" font-size="11">D</text>
+        <text y="-2" fill="green">DATA</text>
+        <text y="26" fill="red">\</text>
+        <text x="8" y="7" fill="red">STEP</text>
+        <text x="4" y="17">DIM</text>
+      </g>
+      <g transform="translate(144,114)">
+        <use xlink:href="#button"/>
+        <text x="3" y="10" font-weight="bolder" font-size="11">F</text>
+        <text y="-2" fill="green">SGN</text>
+        <text y="26" fill="red">{</text>
+        <text x="13" y="7" fill="red">TO</text>
+        <text x="6" y="17">FOR</text>
+      </g>
+      <g transform="translate(185,114)">
+        <use xlink:href="#button"/>
+        <text x="0" y="10" font-weight="bolder" font-size="11">G</text>
+        <text y="-2" fill="green">ABS</text>
+        <text y="26" fill="red">}</text>
+        <text x="7" y="8" fill="red">THEN</text>
+        <text x="2" y="17">GOTO</text>
+      </g>
+      <g transform="translate(226,114)">
+        <use xlink:href="#button"/>
+        <text x="3" y="10" font-weight="bolder" font-size="11">H</text>
+        <text y="-2" fill="green">SQR</text>
+        <text y="26" x="-1" fill="red">CIRCLE</text>
+        <text x="15" y="7" fill="red">&#8593;</text>
+        <text x="0" y="17">GOSUB</text>
+      </g>
+      <g transform="translate(267,114)">
+        <use xlink:href="#button"/>
+        <text x="3" y="10" font-weight="bolder" font-size="11">J</text>
+        <text y="-2" fill="green">VAL</text>
+        <text y="26" fill="red">VAL $</text>
+        <text x="15" y="7" fill="red">-</text>
+        <text x="3" y="17">LOAD</text>
+      </g>
+      <g transform="translate(308,114)">
+        <use xlink:href="#button"/>
+        <text x="3" y="10" font-weight="bolder" font-size="11">K</text>
+        <text y="-2" fill="green">LEN</text>
+        <text y="26" x="-4" fill="red">SCREEN $</text>
+        <text x="15" y="7" fill="red">+</text>
+        <text x="5" y="17">LIST</text>
+      </g>
+      <g transform="translate(349,114)">
+        <use xlink:href="#button"/>
+        <text x="3" y="10" font-weight="bolder" font-size="11">L</text>
+        <text y="-2" fill="green">USR</text>
+        <text y="26" fill="red">ATTR</text>
+        <text x="15" y="7" fill="red">=</text>
+        <text x="6" y="17">LET</text>
+      </g>
+      <g transform="translate(390,114)">
+        <use xlink:href="#button"/>
+        <text x="0" y="12" font-size="8">ENTER</text>
+      </g>
+    </g>
+
+    <g transform="translate(51,121)">
+      <g transform="translate(-33,114)">
+        <use xlink:href="#buttonLong"/>
+        <text x="7" y="8" font-size="8">CAPS</text>
+        <text x="6" y="16" font-size="8">SHIFT</text>
+      </g>
+      <g transform="translate(21,114)">
+        <use xlink:href="#button"/>
+        <text x="3" y="10" font-weight="bolder" font-size="11">Z</text>
+        <text y="-2" fill="green">LN</text>
+        <text y="26" fill="red">BEEP</text>
+        <text x="15" y="7" fill="red">:</text>
+        <text x="3" y="17">COPY</text>
+      </g>
+      <g transform="translate(62,114)">
+        <use xlink:href="#button"/>
+        <text x="3" y="10" font-weight="bolder" font-size="11">X</text>
+        <text y="-2" fill="green">EXP</text>
+        <text y="26" fill="red">INK</text>
+        <text x="17" y="7" fill="red">&#163;</text>
+        <text x="1" y="17">CLEAR</text>
+      </g>
+      <g transform="translate(103,114)">
+        <use xlink:href="#button"/>
+        <text x="3" y="10" font-weight="bolder" font-size="11">C</text>
+        <text y="-2" fill="green">LPRINT</text>
+        <text y="26" fill="red">PAPER</text>
+        <text x="17" y="7" fill="red">?</text>
+        <text x="2" y="17">CONT</text>
+      </g>
+      <g transform="translate(144,114)">
+        <use xlink:href="#button"/>
+        <text x="3" y="10" font-weight="bolder" font-size="11">V</text>
+        <text y="-2" fill="green">LLIST</text>
+        <text y="26" fill="red">FLASH</text>
+        <text x="17" y="7" fill="red">/</text>
+        <text x="4" y="17">CLS</text>
+      </g>
+      <g transform="translate(185,114)">
+        <use xlink:href="#button"/>
+        <text x="3" y="10" font-weight="bolder" font-size="11">B</text>
+        <text y="-2" fill="green">BIN</text>
+        <text y="26" x="-1" fill="red">BRIGHT</text>
+        <text x="17" y="9" fill="red">*</text>
+        <text x="2" y="17" font-size="5.5">BORDER</text>
+      </g>
+      <g transform="translate(226,114)">
+        <use xlink:href="#button"/>
+        <text x="3" y="10" font-weight="bolder" font-size="11">N</text>
+        <text y="-2" x="-1" fill="green">INKEY $</text>
+        <text y="26" fill="red">OVER</text>
+        <text x="17" y="6" fill="red">,</text>
+        <text x="4" y="17">NEXT</text>
+      </g>
+      <g transform="translate(267,114)">
+        <use xlink:href="#button"/>
+        <text x="3" y="10" font-weight="bolder" font-size="11">M</text>
+        <text y="-2" fill="green">PI</text>
+        <text y="26"  x="-3" fill="red">INVERSE</text>
+        <text x="17" y="6" fill="red">.</text>
+        <text x="1" y="17">PAUSE</text>
+      </g>
+      <g transform="translate(308,114)">
+        <use xlink:href="#button"/>
+        <text x="2" y="9" font-size="6" fill="red">SYMB.</text>
+        <text x="1" y="16" font-size="6" fill="red">SHIFT</text>
+      </g>
+      <g transform="translate(349,114)">
+        <use xlink:href="#buttonLonger"/>
+        <text x="9" y="8" font-size="8">BREAK</text>
+        <text x="4" y="17" font-weight="bold" font-size="10">SPACE</text>
+      </g>
+    </g>
+    
+  </g>
+  
+  </g>
+<image xlink:href="http://www.google-analytics.com/__utm.gif?utmwv=4.7.1&amp;utmn=21830374&amp;utmhn=svg.kvalitne.cz&amp;utmcs=UTF-8&amp;utmsr=1920x1080&amp;utmsc=24-bit&amp;utmul=en-us&amp;utmje=1&amp;utmfl=10.0%20r45&amp;utmdt=SVG%C2%A0%E2%80%94%C2%A0It%27s%20in%20your%20hands...&amp;utmhid=1377849700&amp;utmr=-&amp;utmp=%2Findex2.htm&amp;utmac=UA-11950721-1&amp;utmcc=__utma%3D251371972.1884550355.1260220320.1272562824.1272576758.56%3B%2B__utmz%3D251371972.1263752798.41.3.utmcsr%3Dgoogle%7Cutmccn%3D(organic)%7Cutmcmd%3Dorganic%7Cutmctr%3Dsvg%2520smil%2520demo%3B" width="1" height="1"/><image xlink:href="http://www.google-analytics.com/__utm.gif?utmwv=4.7.1&amp;utmn=21830374&amp;utmhn=svg.kvalitne.cz&amp;utmcs=UTF-8&amp;utmsr=1920x1080&amp;utmsc=24-bit&amp;utmul=en-us&amp;utmje=1&amp;utmfl=10.0%20r45&amp;utmdt=SVG%C2%A0%E2%80%94%C2%A0It%27s%20in%20your%20hands...&amp;utmhid=1377849700&amp;utmr=-&amp;utmp=%2Findex2.htm&amp;utmac=UA-11950721-1&amp;utmcc=__utma%3D251371972.1884550355.1260220320.1272562824.1272576758.56%3B%2B__utmz%3D251371972.1263752798.41.3.utmcsr%3Dgoogle%7Cutmccn%3D(organic)%7Cutmcmd%3Dorganic%7Cutmctr%3Dsvg%2520smil%2520demo%3B" width="1" height="1"/>
+</svg>

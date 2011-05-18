@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>SVG Submarine Assault 1.01 game</title>
+<script type="text/javascript" src="soundmanager.js"></script>
+<script type="text/javascript">
+  function soundWrap(s) {
+    if (s=='background') soundManager.play(s,999,1);
+    else soundManager.play(s,1,1);
+  }
+  function soundWrapX(s) {
+    soundManager.stop(s);
+  }
+</script>
+<style type="text/css">
+#debugContainer { font:small "Terminal","Lucida Console","System";}
+#svgGame { width:600px; height:380px;border:none;}
+h1 { font: bold 20px sans-serif; margin: 2px;}
+h3, p { font: bold 15px sans-serif; margin: 2px;}
+li { font: 11px sans-serif; margin: 0; line-height: 14px;}
+ul { margin: 0; padding: 0;}
+</style>
+</head>
+<body>
+<div id="flashHolder"></div>
+<h1>SVG Submarine Assault game by <a href="mailto:marek.raida@gmail.com">Marek Raida</a> (and Petr Jerabek)</h1>
+<script type="text/javascript">soundManagerInit();</script>
+<iframe id="svgGame" src="submarine.svg"></iframe>
+<div id="debugContainer"></div>
+<h3>Programming notes</h3>
+<ul>
+  <li>If using Adobe SVG Plugin (SVG), leave mouse over SVG area since keyboard inputs will not work. This is limitation of the plugin vs. native implementation.</li>
+  <li>Pure SVG version (.svgz, 54kB) in one file only, without sounds etc. and compatible with standalone SVG viewers is <a href="submarine.svgz">also available</a>.</li>
+  <li>Full screen mode is working only when SVG is opened as standalone file (because of Opera issues iframe in html page has "original" size only).</li>
+  <li>Game tested under Firefox 1.5.x, Opera 9.x, MSIE + ASV 3.0x and Batik Squiggle 1.6. Other browsers may work, but maybe will not.</li>
+  <li>The most cross-browser/platform compatible sound output was chosen to be via Flash 8.0 and above plugins using JS bridge.</li>
+  <li>Sound support will perhaps work primarily on Windows, other platforms are untested, but they may work also...</li>
+  <li>Game performance have been tweaked a lot but still, Firefox is the worst performing platform, but playable as well (Notice: ASV is the best one). Turning off many visual options or using Firefox profile will help a lot. Any other ideas and recommendations and comments are welcome...</li>
+</ul>
+<h3>Known issues</h3>
+<ul>
+  <li>(Updated: It works!!) Firefox 2.0RC+ and whole branch builds has somewhat broken support for clipping, but changing Periscope view to rectangular makes game usable even with them</li>
+  <li>Opera having SVG opened in IFRAME, it always stretches SVG image to its viewBox, but I don't know why...</li>
+  <li>It is not working in viewers without keyboard support (ASV 6.0 Alpha, khtml and some others).</li>
+  <li>Bitmap Intro and Outro screens are reported to be broken under Safari, but I've no idea what's wrong or how to fix it, since I own no Mac.</li>
+  <li>Intro / outro bitmap animations are very slow in Firefox and Opera.</li>
+</ul>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-11950721-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+</body>
+</html>

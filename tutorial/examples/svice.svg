@@ -1,0 +1,164 @@
+<?xml version="1.0"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="400" height="600" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<script>
+function envZoom(view) {
+  document.getElementById("envelope").setAttribute("transform", "scale("+view+")");
+}
+</script>
+ <defs>
+  <radialGradient id="Style2" cx="50%" cy="50%" fx="50%" fy="50%" r="50%" gradientUnits="objectBoundingBox">
+   <stop offset="0%" style="stop-color:#ffffff; stop-opacity:0.988235"/>
+   <stop offset="48%" style="stop-opacity:0.988235"/>
+   <stop offset="100%" style="stop-color:#0932ff; stop-opacity:0"/>
+  </radialGradient>
+  <radialGradient id="Style3" cx="50%" cy="50%" fx="50%" fy="50%" r="50%" gradientUnits="objectBoundingBox">
+   <stop offset="77%" style="stop-color:#ffffff"/>
+   <stop offset="79%" style="stop-opacity:0.988235"/>
+   <stop offset="92%" style="stop-color:#0f37ff"/>
+   <stop offset="100%" style="stop-opacity:0"/>
+  </radialGradient>
+  <linearGradient id="Style71" x1="0%" y1="0%" x2="100%" y2="0%" gradientUnits="objectBoundingBox">
+   <stop offset="0%" style="stop-color:#bfb7a1; stop-opacity:0.988235"/>
+   <stop offset="20%" style="stop-color:#707590"/>
+   <stop offset="32%" style="stop-color:#665a50"/>
+   <stop offset="54%" style="stop-color:#bfb7a1"/>
+   <stop offset="74%" style="stop-color:#ffe5c1"/>
+   <stop offset="100%" style="stop-color:#bfb7a1; stop-opacity:0.988235"/>
+  </linearGradient>
+  <radialGradient id="Style74" cx="50%" cy="50%" fx="50%" fy="50%" r="50%" gradientUnits="objectBoundingBox">
+   <stop offset="77%" style="stop-color:#ffffff"/>
+   <stop offset="79%" style="stop-opacity:0.988235"/>
+   <stop offset="92%" style="stop-color:#0f37ff"/>
+   <stop offset="100%" style="stop-opacity:0"/>
+  </radialGradient>
+  <linearGradient id="Style76" x1="0%" y1="100%" x2="0%" y2="0%" gradientUnits="objectBoundingBox">
+   <stop offset="0%" style="stop-color:#ffffff; stop-opacity:0"/>
+   <stop offset="18%" style="stop-color:#6591ff"/>
+   <stop offset="37%" style="stop-opacity:0.988235"/>
+   <stop offset="50%" style="stop-color:#ffb80f"/>
+   <stop offset="100%" style="stop-color:#ff5e0f; stop-opacity:0.988235"/>
+  </linearGradient>
+  <radialGradient id="Style77" cx="50%" cy="50%" fx="50%" fy="50%" r="50%" gradientUnits="objectBoundingBox">
+   <stop offset="0%" style="stop-color:#ffe2a3"/>
+   <stop offset="14%" style="stop-color:#ffb60f"/>
+   <stop offset="16%" style="stop-opacity:0.988235"/>
+   <stop offset="100%" style="stop-opacity:0"/>
+  </radialGradient>
+  <radialGradient id="Style78" cx="50%" cy="50%" fx="50%" fy="50%" r="50%" gradientUnits="objectBoundingBox">
+   <stop offset="77%" style="stop-color:#ffffff"/>
+   <stop offset="79%" style="stop-opacity:0.988235"/>
+   <stop offset="92%" style="stop-color:#0f37ff"/>
+   <stop offset="100%" style="stop-opacity:0"/>
+  </radialGradient>
+  <linearGradient id="Style79" x1="0%" y1="0%" x2="100%" y2="0%" gradientUnits="objectBoundingBox">
+   <stop offset="0%" style="stop-color:#bfb7a1; stop-opacity:0.188235"/>
+   <stop offset="20%" style="stop-color:#707590"/>
+   <stop offset="32%" style="stop-color:#665a50"/>
+   <!--stop offset="54%" style="stop-color:#bfb7a1" /-->
+   <stop offset="74%" style="stop-color:#ffe5c1"/>
+   <stop offset="100%" style="stop-color:#bfb7a1; stop-opacity:0.188235"/>
+  </linearGradient>
+  <linearGradient id="background" x1="0%" y1="0%" x2="0%" y2="0%" gradientUnits="objectBoundingBox">
+   <stop offset="0%" style="stop-color:#000000; stop-opacity:0.988235"/>
+   <stop offset="43%" style="stop-color:#2c0086"/>
+   <stop offset="67%" style="stop-color:#000ca8"/>
+   <stop offset="99%" style="stop-color:#2c0086"/>
+   <stop offset="100%" style="stop-opacity:0.988235"/>
+  </linearGradient>
+  <linearGradient id="background1" x1="0%" y1="0%" x2="0%" y2="0%" gradientUnits="userSpace">
+   <stop offset="0%" style="stop-color:#000000; stop-opacity:0.988235"/>
+   <stop offset="43%" style="stop-color:#2c0086"/>
+   <stop offset="67%" style="stop-color:#000ca8"/>
+   <stop offset="99%" style="stop-color:#2c0086"/>
+   <stop offset="100%" style="stop-opacity:0.988235"/>
+  </linearGradient>
+  <linearGradient id="background2" x1="0%" y1="0%" x2="100%" y2="0%" gradientUnits="userSpace">
+   <stop offset="0%" style="stop-color:#000000; stop-opacity:0.988235"/>
+   <stop offset="43%" style="stop-color:#2c0086"/>
+   <stop offset="67%" style="stop-color:#000ca8"/>
+   <stop offset="99%" style="stop-color:#2c0086"/>
+   <stop offset="100%" style="stop-opacity:0.988235"/>
+  </linearGradient>
+  <linearGradient id="background3" x1="0%" y1="0%" x2="100%" y2="0%" gradientUnits="objectBoundingBox">
+   <stop offset="0%" style="stop-color:#000000; stop-opacity:0.988235"/>
+   <stop offset="43%" style="stop-color:#2c0086"/>
+   <stop offset="67%" style="stop-color:#000ca8"/>
+   <stop offset="99%" style="stop-color:#2c0086"/>
+   <stop offset="100%" style="stop-opacity:0.988235"/>
+  </linearGradient>
+  <linearGradient id="background4" x1="0%" y1="0%" x2="0%" y2="100%" gradientUnits="objectBoundingBox">
+   <stop offset="0%" style="stop-color:#000000; stop-opacity:0.988235"/>
+   <stop offset="43%" style="stop-color:#2c0086"/>
+   <stop offset="67%" style="stop-color:#000ca8"/>
+   <stop offset="99%" style="stop-color:#2c0086"/>
+   <stop offset="100%" style="stop-opacity:0.988235"/>
+  </linearGradient>
+  <radialGradient id="aaa" cx="50%" cy="50%" fx="50%" fy="50%" r="50%" gradientUnits="objectBoundingBox">
+   <stop offset="0%" style="stop-color:#ffffff; stop-opacity:0.988235"/>
+   <stop offset="91%" style="stop-color:#0131ff"/>
+   <stop offset="100%" style="stop-opacity:0"/>
+  </radialGradient>
+ </defs>
+ <g id="envelope">
+ <polygon style="stroke:#000000; stroke-width:1; stroke-opacity:0; stroke-miterlimit:10; fill:url(#background4); fill-opacity:0.913725" points="37,68,284,68,284,406,37,406" transform="matrix(1.63158 0 0 -1.78402 -62.3684 722.314)"/>
+ <g style="stroke:#000000; stroke-width:1; stroke-opacity:0; stroke-miterlimit:10; fill:url(#aaa); fill-opacity:1" >
+  <polygon points="279,62,284,62,284,67,279,67"/>
+  <polygon points="307,100,313,100,313,106,307,106"/>
+  <polygon points="348,149,352,149,352,153,348,153"/>
+  <polygon points="228,109,224,109,224,105,228,105"/>
+  <polygon points="215,33,213,33,213,31,215,31"/>
+  <polygon points="385,12,386,12,386,13,385,13"/>
+  <polygon points="378,23,361,23,361,40,378,40"/>
+  <polygon points="271,11,274,11,274,14,271,14"/>
+  <polygon points="40,22,44,22,44,26,40,26"/>
+  <polygon points="73,17,77,17,77,21,73,21"/>
+  <polygon points="77,104,74,104,74,101,77,101"/>
+  <polygon points="129,94,125,94,125,90,129,90"/>
+  <polygon points="144,54,142,54,142,52,144,52"/>
+  <polygon points="133,33,129,33,129,29,133,29"/>
+  <polygon points="38,171,39,171,39,172,38,172"/>
+  <polygon points="73,49,67,49,67,43,73,43"/>
+  <polygon points="164,8,159,8,159,3,164,3"/>
+  <polygon points="201,71,199,71,199,69,201,69"/>
+  <polygon points="165,61,166,61,166,62,165,62"/>
+  <polygon points="51,138,50,138,50,137,51,137"/>
+  <polygon points="195,17,188,17,188,10,195,10"/>
+  <polygon points="22,122,19,122,19,119,22,119"/>
+  <polygon points="307,63,302,63,302,58,307,58"/>
+  <polygon points="295,35,293,35,293,33,295,33"/>
+  <polygon points="309,32,310,32,310,33,309,33"/>
+  <polygon points="29,70,25,70,25,74,29,74"/>
+  <polygon points="16,17,13,17,13,20,16,20"/>
+  <polygon points="53,112,48,112,48,107,53,107"/>
+  <polygon points="78,187,75,187,75,190,78,190"/>
+  <polygon points="107,52,105,52,105,50,107,50"/>
+  <polygon points="117,5,116,5,116,6,117,6"/>
+  <polygon points="355,108,360,108,360,103,355,103"/>
+  <polygon points="366,81,375,81,375,72,366,72"/>
+  <polygon points="324,79,331,79,331,72,324,72"/>
+  <polygon points="327,22,328,22,328,23,327,23"/>
+  <polygon points="316,12,313,12,313,9,316,9"/>
+  <polygon points="362,15,344,15,344,33,362,33"/>
+  <polygon points="241,48,237,48,237,52,241,52"/>
+  <polygon points="250,39,254,39,254,35,250,35"/>
+  <polygon points="233,12,232,12,232,11,233,11"/>
+  <polygon points="241,27,243,27,243,29,241,29"/>
+ </g>
+ <path style="stroke-width:4; stroke-opacity:1; stroke-miterlimit:10" d="M 174 157 C 177 167 184 172 183 196"/>
+ <g style="stroke-opacity:0">
+  <ellipse style="fill:#000000; fill-opacity:0.2" cx="180.5" cy="476.5" rx="118.5" ry="26.5" transform="matrix(1 0 0 1.13 10 -89.43)"/>
+  <path style="fill:url(#Style71); fill-opacity:1" d="M 153 188 C 153 188 155 171 164 182 C 173 193 177 180 187 194 C 197 208 205 196 205 196 C 205 196 216 202 217 218 C 218 234 228 447 228 447 C 228 447 188 470 151 444" transform="matrix(1 0 0 0.996404 0 0.641175)"/>
+  <path style="fill:url(#Style76); fill-opacity:0.94902" d="M 177 163 C 167 149 167.956 120 171.956 108 C 175.956 96 191 65 191 48 C 191 31 188.13 101 197.13 116 C 206.13 131 195.652 157 188.652 163" transform="matrix(0.851732 0 0 1 19.5294 7)"/>
+  <path fill="url(#Style79)" d="M 150 454 C 182 468 228 455 228 455 L 229 597 L 155 597" transform="matrix(1 0 0 1 0 4)"/>
+ </g>
+ </g>
+ <g style="cursor:pointer" fill="gray" transform="translate(-20 460)">
+    <text x="300" y="30" onclick="envZoom(2.0)">Zoom na 200%</text>
+    <text x="300" y="50" onclick="envZoom(1.5)">Zoom na 150%</text>
+    <text x="300" y="70" onclick="envZoom(1.25)">Zoom na 125%</text>
+    <text x="300" y="90" onclick="envZoom(1)" font-weight="bolder">Zoom na 100%</text>
+    <text x="300" y="110" onclick="envZoom(0.75)">Zoom na 75%</text>
+    <text x="300" y="130" onclick="envZoom(0.5)">Zoom na 50%</text>
+  </g>
+</svg>

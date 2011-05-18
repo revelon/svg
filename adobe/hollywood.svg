@@ -1,0 +1,45 @@
+<!--
+NOTICE:  [1999-2001] Adobe Systems Incorporated.  Adobe hereby grants you the rights to reproduce, modify and distribute this file and its contents, not including any fonts, audio files or raster images included or embedded in or linked to this file, (the "Software"), and to grant such rights to other parties subject to the following:  This notice shall be included in any copy of the Software or any portion thereof.  THE SOFTWARE IS PROVIDED TO YOU AS-IS, WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT.  IN NO EVENT SHALL ADOBE BE LIABLE TO YOU OR ANY OTHER PARTY FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE.
+Modified by  Marek Raida
+-->
+<svg height="130" width="405" viewBox="-50 27 405 130" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>hollywood.svg</title> 
+<desc>moving spotlights</desc>
+<defs>
+<filter id="f1" x="-20%" y="-40%" width="140%" height="250%">
+    <feDiffuseLighting in="SourceGraphic" result="lamp" lighting-color="red" diffuseConstant=".65" surfaceScale="10" resultScale=".2">
+	<feSpotLight x="50" y="150" z="10" pointsAtX="150" pointsAtY="80" pointsAtZ="0" specularExponent="10">
+	    <animate attributeName="pointsAtX" values="-40;80;-40" dur="4s" repeatCount="indefinite"/>
+	</feSpotLight>
+	<animate attributeName="lighting-color" values="red;blue;green;white;red" dur="4s" repeatCount="indefinite"/>
+    </feDiffuseLighting>
+    <feDiffuseLighting in="SourceGraphic" lighting-color="red" diffuseConstant=".65" surfaceScale="10" resultScale=".2">
+	<feSpotLight x="250" y="150" z="10" pointsAtX="150" pointsAtY="80" pointsAtZ="0" specularExponent="10">
+	    <animate attributeName="pointsAtX" values="200;350;200" dur="4s" repeatCount="indefinite"/>
+	</feSpotLight>
+	<animate attributeName="lighting-color" values="red;blue;green;white;red" begin="1s" dur="5s" repeatCount="indefinite"/>
+    </feDiffuseLighting>
+    <feComposite in2="lamp" result="lamp" operator="arithmetic" k2="1" k3="1"/>
+    <feDiffuseLighting in="SourceGraphic" result="lamp3" lighting-color="red" diffuseConstant=".65" surfaceScale="10" resultScale=".2">
+	<feSpotLight x="150" y="150" z="10" pointsAtX="150" pointsAtY="80" pointsAtZ="0" specularExponent="10">
+	    <animate attributeName="pointsAtX" values="0;300;0" dur="8s" repeatCount="indefinite"/>
+	</feSpotLight>
+	<animate attributeName="lighting-color" values="red;blue;green;white;red" begin="2s" dur="3s" repeatCount="indefinite"/>
+    </feDiffuseLighting>
+    <feComposite in2="lamp" result="lamp" operator="arithmetic" k2="1" k3="1"/>
+    <feDiffuseLighting in="SourceGraphic" result="lamp4" lighting-color="red" diffuseConstant=".65" surfaceScale="10" resultScale=".2">
+	<feSpotLight x="152" y="150" z="10" pointsAtX="150" pointsAtY="80" pointsAtZ="0" specularExponent="10">
+	    <animate attributeName="pointsAtX" values="300;0;300" dur="8s" repeatCount="indefinite"/>
+	</feSpotLight>
+	<animate attributeName="lighting-color" values="red;blue;green;white;red" begin="3s" dur="6s" repeatCount="indefinite"/>
+    </feDiffuseLighting>
+    <feComposite in2="lamp" result="lamp" operator="arithmetic" k2="1" k3="1"/>
+</filter>
+</defs>
+<text style="fill:black;stroke-width:4;stroke:black;font-size:72px;text-anchor:middle;filter:url(#f1)" x="151" y="100">OTTAWA</text>
+<circle style="fill:blue" cx="50" cy="150" r="2"/>
+<circle style="fill:red" cx="150" cy="150" r="2"/>
+<circle style="fill:pink" cx="152" cy="150" r="2"/>
+<circle style="fill:green" cx="250" cy="150" r="2"/>
+<image xlink:href="http://www.google-analytics.com/__utm.gif?utmwv=4.7.1&amp;utmn=21830374&amp;utmhn=svg.kvalitne.cz&amp;utmcs=UTF-8&amp;utmsr=1920x1080&amp;utmsc=24-bit&amp;utmul=en-us&amp;utmje=1&amp;utmfl=10.0%20r45&amp;utmdt=SVG%C2%A0%E2%80%94%C2%A0It%27s%20in%20your%20hands...&amp;utmhid=1377849700&amp;utmr=-&amp;utmp=%2Findex2.htm&amp;utmac=UA-11950721-1&amp;utmcc=__utma%3D251371972.1884550355.1260220320.1272562824.1272576758.56%3B%2B__utmz%3D251371972.1263752798.41.3.utmcsr%3Dgoogle%7Cutmccn%3D(organic)%7Cutmcmd%3Dorganic%7Cutmctr%3Dsvg%2520smil%2520demo%3B" width="1" height="1"/>
+</svg>

@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" onload="init()">
+<script>
+function init(){document.documentElement.addEventListener("keydown", keyPress, false);}
+function keyPress(evt){
+  var targetx = document.getElementById('bcgg');
+  switch(evt.keyCode){
+  case 49: 
+  targetx.setAttribute("fill","url(#rainbow)"); 
+  break;
+  case 50: 
+  targetx.setAttribute("fill","url(#rainbowRad)"); 
+  break;
+  case 51: targetx.setAttribute("fill","url(#blueRad)"); break;
+  case 52: targetx.setAttribute("fill","url(#blueLinear)"); break;
+  case 53: targetx.setAttribute("fill","url(#blueRad3stops)"); break;
+  case 54: targetx.setAttribute("fill","url(#skewed-sun)"); break;
+  case 55: targetx.setAttribute("fill","url(#skewed-blue)"); break;
+  case 56: targetx.setAttribute("fill","url(#blueRad6stops)"); break;
+  case 57: targetx.setAttribute("fill","url(#blueRadsmooth)"); break;
+  }
+}
+</script>
+
+<defs>
+	<linearGradient id="rainbow">
+    <stop offset="0" style="stop-color: rgb(255,0,0);"/>
+    <stop offset="16.6%" style="stop-color: orange"/>
+		<stop offset="33.3%" style="stop-color: yellow;"/>
+    <stop offset="50%" style="stop-color: green;"/>
+    <stop offset="66.6%" style="stop-color : #00FFFF"/>
+    <stop offset="83.3%" style="stop-color: blue;"/>
+    <stop offset="100%" style="stop-color: indigo;"/>
+	</linearGradient>
+	<radialGradient id="rainbowRad">
+    <stop offset="0" style="stop-color: rgb(255,0,0);"/>
+    <stop offset="16.6%" style="stop-color: orange"/>
+		<stop offset="33.3%" style="stop-color: yellow;"/>
+    <stop offset="50%" style="stop-color: green;"/>
+    <stop offset="66.6%" style="stop-color : #00FFFF"/>
+    <stop offset="83.3%" style="stop-color: blue;"/>
+    <stop offset="100%" style="stop-color: indigo;"/>
+	</radialGradient>
+	<radialGradient id="blueRad">
+    <stop offset="0" style="stop-color: rgb(0,0,255);"/>
+    <stop offset="100%" style="stop-color: rgb(255,255,255);"/>
+	</radialGradient>
+	<linearGradient id="blueLinear">
+    <stop offset="0" style="stop-color: rgb(0,0,255);"/>
+    <stop offset="100%" style="stop-color: rgb(255,255,255);"/>
+	</linearGradient>
+	<radialGradient id="blueRad3stops">
+    <stop offset="0" style="stop-color: rgb(0,0,255);"/>
+    <stop offset="50%" style="stop-color: rgb(255,255,255);"/>
+		<stop offset="100%" style="stop-color: rgb(0,0,255);"/>
+	</radialGradient>
+	<radialGradient id="blueRad6stops">
+    <stop offset="0" style="stop-color: rgb(0,0,255);"/>
+    <stop offset="20%" style="stop-color: rgb(255,255,255);"/>
+		<stop offset="40%" style="stop-color: rgb(0,0,255);"/>
+    <stop offset="60%" style="stop-color: rgb(255,255,255);"/>
+		<stop offset="80%" style="stop-color: rgb(0,0,255);"/>
+    <stop offset="100%" style="stop-color: rgb(255,255,255);"/>
+	</radialGradient>
+	<radialGradient id="blueRadsmooth">
+		gradientTransform="skewX(50)"
+    <stop offset="0%" style="stop-color: rgb(255,255,255);"/>
+    <stop offset="100%" style="stop-color: rgb(0,0,255);"/>
+	</radialGradient>
+	<linearGradient id="sunSkew">
+    <stop offset="0%" style="stop-color: #ffcc00;"/>
+    <stop offset="33.3%" style="stop-color: #cc6699"/>
+    <stop offset="100%" style="stop-color: #ffcc00;"/>
+	</linearGradient>
+	<linearGradient id="skewed-sun" gradientTransform="skewX(10)" xlink:href="#sunSkew"/>
+	<linearGradient id="Skewblue">
+    	<stop offset="0%" style="stop-color: blue;"/>
+    	<stop offset="50.3%" style="stop-color: white"/>
+    	<stop offset="100%" style="stop-color: blue;"/>
+	</linearGradient>
+	<linearGradient id="skewed-blue" gradientTransform="skewX(30)" xlink:href="#Skewblue"/>
+</defs>
+
+<rect id="bcgg" x="5" y="5" width="350" height="150" rx="15" ry="15" stroke="blue" fill="url(#skewed-sun)"/>
+<rect x="20" y="10" width="320" height="30" rx="5" ry="5" fill="black" opacity="0.5"/>
+<text x="45" y="30" font-size="14" style="fill:white">Ukazka gradientu</text>
+<text x="20" y="150" font-size="10">Tisknete klavesy 1-9 pro zmenu gradientu pozadi</text>
+
+</svg>

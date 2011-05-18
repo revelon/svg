@@ -1,0 +1,17 @@
+<svg xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="650pt" height="39pt" viewBox="0 0 650 39" xml:space="preserve">
+	
+<defs>
+	<filter id="SpecFilter" filterUnits="objectBoundingBox" x="-25%" y="-25%" width="150%" height="150%">
+		<!--Copyright 1999 Adobe Systems. You may copy, modify, and distribute this file, if you include this notice & do not charge for the distribution. This file is provided "AS-IS" without warranties of any kind, including any implied warranties.-->
+		<feGaussianBlur in="SourceAlpha" stdDeviation="2" result="BlurAlpha"/>
+		<feSpecularLighting in="BlurAlpha" surfaceScale="5" specularConstant="1" specularExponent="10" lightColor="white" result="SpecularLightingExample">
+			<fePointLight x="-5000" y="-10000" z="20000"/>
+		</feSpecularLighting>
+		<feComposite in="SpecularLightingExample" in2="SourceAlpha" operator="in" result="SpecularOut"/>
+		<feComposite in="SourceGraphic" in2="SpecularOut" operator="arithmetic" k1="0" k2="1" k3="1" k4="0" result="litPaint"/>
+	</filter>
+</defs>
+	<g id="Layer_x0020_1" style="fill:#333333;filter:url(#SpecFilter); font-family:Myriad-Bold,sans-serif; font-weight: bold">
+		<text id="floorTitle" style="stroke:none; font-size:36px;" x="0" y="30">Loading Floor...</text>
+	</g>
+</svg>

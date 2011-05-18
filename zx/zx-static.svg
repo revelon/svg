@@ -1,0 +1,201 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events" width="100%" height="100%">
+  <title>ZX Speccy demo v0.7 without bouncing</title>
+  <desc>by Marek Raida, marek.raida@gmail.com</desc>
+
+  <defs>
+    <g id="button">
+      <rect width="26" height="18" fill="#555" rx="2" x="2" y="2"/>
+      <rect width="26" height="18" fill="#aaa" rx="2" x="0" y="0"/>
+    </g>
+    <use id="buttonLong" xlink:href="#button" transform="scale(1.4 1)"/>
+    <use id="buttonLonger" xlink:href="#button" transform="scale(1.7 1)"/>
+    
+    <clipPath id="sqr">
+      <rect x="0" y="74" width="470" height="216" fill="black"/>
+    </clipPath>
+    
+    <linearGradient id="gradient1">
+        <stop stop-color="#333" offset="0%"/>
+        <stop stop-color="#343434" offset="70%"/>
+        <stop stop-color="#999" offset="95%"/>
+        <stop stop-color="#333" offset="100%"/>
+    </linearGradient>
+  </defs>
+
+  <style type="text/css">
+  </style>
+  
+  <g transform="translate(56,86)">
+  <g>
+    <rect x="2" y="2" width="470" height="290" rx="5" fill="#000"/>
+    <rect x="0" y="0" width="470" height="290" rx="5" fill="url(#gradient1)"/>
+    <rect x="0" y="3" width="470" height="71" rx="2" fill="#222" opacity="0.5"/>
+    
+    <g stroke-width="5" clip-path="url(#sqr)">
+      <g>
+      <line x1="355" y1="390" x2="570" y2="-75" stroke="red"/>
+      <line x1="360" y1="390" x2="570" y2="-70" stroke="yellow"/>
+      <line x1="365" y1="390" x2="570" y2="-65" stroke="green"/>
+      <line x1="370" y1="390" x2="570" y2="-60" stroke="cyan"/>
+      <animateTransform attributeName="transform" type="translate" begin="0" dur="15s" from="90,0" to="-500,0" repeatCount="indefinite"/>
+      </g>
+    </g>
+    
+    <g>
+    <use xlink:href="#button" x="20" y="114"/>
+    <use xlink:href="#button" x="62" y="114"/>
+    <use xlink:href="#button" x="103" y="114"/>
+    <use xlink:href="#button" x="144" y="114"/>
+    <use xlink:href="#button" x="185" y="114"/>
+    <use xlink:href="#button" x="226" y="114"/>
+    <use xlink:href="#button" x="267" y="114"/>
+    <use xlink:href="#button" x="308" y="114"/>
+    <use xlink:href="#button" x="349" y="114"/>
+    <use xlink:href="#button" x="390" y="114"/>
+    </g>
+
+    <g transform="translate(20,40)">
+    <use xlink:href="#button" x="20" y="114"/>
+    <use xlink:href="#button" x="62" y="114"/>
+    <use xlink:href="#button" x="103" y="114"/>
+    <use xlink:href="#button" x="144" y="114"/>
+    <use xlink:href="#button" x="185" y="114"/>
+    <use xlink:href="#button" x="226" y="114"/>
+    <use xlink:href="#button" x="267" y="114"/>
+    <use xlink:href="#button" x="308" y="114"/>
+    <use xlink:href="#button" x="349" y="114"/>
+    <use xlink:href="#button" x="390" y="114"/>
+    </g>
+
+    <g transform="translate(32,80)">
+    <use xlink:href="#button" x="20" y="114"/>
+    <use xlink:href="#button" x="62" y="114"/>
+    <use xlink:href="#button" x="103" y="114"/>
+    <use xlink:href="#button" x="144" y="114"/>
+    <use xlink:href="#button" x="185" y="114"/>
+    <use xlink:href="#button" x="226" y="114"/>
+    <use xlink:href="#button" x="267" y="114"/>
+    <use xlink:href="#button" x="308" y="114"/>
+    <use xlink:href="#button" x="349" y="114"/>
+    <use xlink:href="#button" x="390" y="114"/>
+    </g>
+
+    <g transform="translate(51,121)">
+    <use xlink:href="#buttonLong" x="-33" y="114"/>    
+    <use xlink:href="#button" x="20" y="114"/>
+    <use xlink:href="#button" x="62" y="114"/>
+    <use xlink:href="#button" x="103" y="114"/>
+    <use xlink:href="#button" x="144" y="114"/>
+    <use xlink:href="#button" x="185" y="114"/>
+    <use xlink:href="#button" x="226" y="114"/>
+    <use xlink:href="#button" x="267" y="114"/>
+    <use xlink:href="#button" x="308" y="114"/>
+    <use xlink:href="#buttonLonger" x="349" y="114"/>
+    </g>
+    
+    <g font-family="Verdana" font-weight="bolder" font-size="11" fill="white">
+      <text x="17" y="41" font-size="13">ZX Spectrum</text>
+      <text x="17" y="128">
+        <tspan dx="6">1</tspan>
+        <tspan dx="30">2</tspan>
+        <tspan dx="29">3</tspan>
+        <tspan dx="29">4</tspan>
+        <tspan dx="29">5</tspan>
+        <tspan dx="29">6</tspan>
+        <tspan dx="29">7</tspan>
+        <tspan dx="29">8</tspan>
+        <tspan dx="29">9</tspan>
+        <tspan dx="29">0</tspan>
+      </text>
+      <text x="25" y="128" fill="red" font-size="6" font-weight="normal">
+        <tspan dx="8">!</tspan>
+        <tspan dx="39">@</tspan>
+        <tspan dx="35">#</tspan>
+        <tspan dx="33">$</tspan>
+        <tspan dx="33">%</tspan>
+        <tspan dx="33">&amp;</tspan>
+        <tspan dx="35">'</tspan>
+        <tspan dx="35">(</tspan>
+        <tspan dx="36">)</tspan>
+        <tspan dx="36">_</tspan>
+      </text>
+      
+      <text x="35" y="166">
+        <tspan dx="7">Q</tspan>
+        <tspan dx="28">W</tspan>
+        <tspan dx="28">E</tspan>
+        <tspan dx="29">R</tspan>
+        <tspan dx="29">T</tspan>
+        <tspan dx="27">Y</tspan>
+        <tspan dx="29">U</tspan>
+        <tspan dx="29">I</tspan>
+        <tspan dx="32">O</tspan>
+        <tspan dx="29">P</tspan>
+      </text>
+      <text x="45" y="164" fill="red" font-size="6" font-weight="normal">
+        <tspan dx="8">&lt;=</tspan>
+        <tspan dx="30">&lt;&gt;</tspan>
+        <tspan dx="28">&gt;=</tspan>
+        <tspan dx="33">&lt;</tspan>
+        <tspan dx="33">&gt;</tspan>
+        <tspan dx="28">AND</tspan>
+        <tspan dx="28">OR</tspan>
+        <tspan dx="29">AT</tspan>
+        <tspan dx="36">:</tspan>
+        <tspan dx="35">"</tspan>
+      </text>
+
+      <text x="45" y="206">
+        <tspan dx="10">A</tspan>
+        <tspan dx="30">S</tspan>
+        <tspan dx="28">D</tspan>
+        <tspan dx="29">F</tspan>
+        <tspan dx="29">G</tspan>
+        <tspan dx="29">H</tspan>
+        <tspan dx="29">J</tspan>
+        <tspan dx="29">K</tspan>
+        <tspan dx="29">L</tspan>
+        <tspan dx="31" font-size="7">Enter</tspan>
+      </text>
+      <text x="53" y="203" fill="red" font-size="6" font-weight="normal">
+        <tspan dx="8">STOP</tspan>
+        <tspan dx="26">NOT</tspan>
+        <tspan dx="26">STEP</tspan>
+        <tspan dx="28">TO</tspan>
+        <tspan dx="26">Then</tspan>
+        <tspan dx="28">^</tspan>
+        <tspan dx="34">-</tspan>
+        <tspan dx="34">+</tspan>
+        <tspan dx="33">=</tspan>
+      </text>
+
+
+      <text x="15" y="246">
+        <tspan dx="4" font-size="6">Caps Shift</tspan>
+        <tspan dx="16">Z</tspan>
+        <tspan dx="30">X</tspan>
+        <tspan dx="29">C</tspan>
+        <tspan dx="29">V</tspan>
+        <tspan dx="29">B</tspan>
+        <tspan dx="29">N</tspan>
+        <tspan dx="27">M</tspan>
+        <tspan dx="70" font-size="8">SPACE</tspan>
+      </text>
+      <text x="70" y="243" fill="red" font-size="7" font-weight="normal">
+        <tspan dx="20">:</tspan>
+        <tspan dx="33">&#163;</tspan>
+        <tspan dx="33">?</tspan>
+        <tspan dx="36">/</tspan>
+        <tspan dx="35">*</tspan>
+        <tspan dx="34">,</tspan>
+        <tspan dx="38">.</tspan>
+        <tspan dx="21" font-size="6">Symbol</tspan>
+      </text>
+      
+    </g>
+    <!--animateTransform attributeName="transform" attributeType="XML" 
+      type="rotate" values="-10 250 200; 10 250 200; -10 250 200" dur="7s" repeatCount="indefinite" /-->
+  </g>
+  </g>
+<image xlink:href="http://www.google-analytics.com/__utm.gif?utmwv=4.7.1&amp;utmn=21830374&amp;utmhn=svg.kvalitne.cz&amp;utmcs=UTF-8&amp;utmsr=1920x1080&amp;utmsc=24-bit&amp;utmul=en-us&amp;utmje=1&amp;utmfl=10.0%20r45&amp;utmdt=SVG%C2%A0%E2%80%94%C2%A0It%27s%20in%20your%20hands...&amp;utmhid=1377849700&amp;utmr=-&amp;utmp=%2Findex2.htm&amp;utmac=UA-11950721-1&amp;utmcc=__utma%3D251371972.1884550355.1260220320.1272562824.1272576758.56%3B%2B__utmz%3D251371972.1263752798.41.3.utmcsr%3Dgoogle%7Cutmccn%3D(organic)%7Cutmcmd%3Dorganic%7Cutmctr%3Dsvg%2520smil%2520demo%3B" width="1" height="1"/>
+</svg>

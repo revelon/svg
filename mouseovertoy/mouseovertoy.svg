@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="400" height="300">
+<title>MouseOver and Click Toy, by Marek Raida, ver. 1.0</title>
+
+<defs>
+<linearGradient id="gr" x1="0" y1="0" x2="1" y2="1" gradientUnits="objectBoundingBox"> 
+  <animateTransform attributeName="gradientTransform" dur="3s" repeatCount="indefinite" type="rotate" values="0 .5 .5; 360 .5 .5"/>
+  <stop offset="0" stop-color="#77f"/> 
+  <stop offset="1" stop-color="#7f5"/> 
+</linearGradient>
+
+<g id="master"><circle r="20" fill="white" stroke="none">
+    <animate attributeName="r" values="20; 7; 0; 0; 0; 24; 20" dur="4s" begin="mouseover" repeatCount="1" restart="whenNotActive"/>
+    <animate attributeName="fill-opacity" values="1; 0; 1" dur="4s" begin="mouseover" repeatCount="1" restart="whenNotActive"/>
+    <set attributeName="fill" to="url(#gr)" begin="click"/>
+  </circle>
+</g>
+</defs>
+
+<rect width="100%" height="100%" fill="black"/>
+<image xlink:href="ire16.jpg" x="0" y="0" width="400" height="267"/>
+<g id="pool"/>
+<text x="20" y="290" fill="white">MouseOver and Click Toy</text>
+
+<script>
+var master = document.getElementById("master").firstChild;
+var pool = document.getElementById("pool");
+var colorStep = 5;
+var cellStep = 28;
+var rows = 10;
+var cols = 15;
+
+for (var x = 0; x &lt; cols; x++) {
+  for (var y = 0; y &lt; rows; y++) {
+    var cp = master.cloneNode(true);
+    var col = 255 - (x*colorStep) - (y*colorStep);
+    cp.setAttribute("cx", x*cellStep);
+    cp.setAttribute("cy", y*cellStep);
+    cp.setAttribute("fill", "rgb("+col+","+col+","+col+")");
+    cp.addEventListener("click", function (evt) {evt.target.setAttribute("fill", "url(#gr)")}, false);
+    pool.appendChild(cp);
+  }
+}
+
+</script>
+<image xlink:href="http://www.google-analytics.com/__utm.gif?utmwv=4.7.1&amp;utmn=21830374&amp;utmhn=svg.kvalitne.cz&amp;utmcs=UTF-8&amp;utmsr=1920x1080&amp;utmsc=24-bit&amp;utmul=en-us&amp;utmje=1&amp;utmfl=10.0%20r45&amp;utmdt=SVG%C2%A0%E2%80%94%C2%A0It%27s%20in%20your%20hands...&amp;utmhid=1377849700&amp;utmr=-&amp;utmp=%2Findex2.htm&amp;utmac=UA-11950721-1&amp;utmcc=__utma%3D251371972.1884550355.1260220320.1272562824.1272576758.56%3B%2B__utmz%3D251371972.1263752798.41.3.utmcsr%3Dgoogle%7Cutmccn%3D(organic)%7Cutmcmd%3Dorganic%7Cutmctr%3Dsvg%2520smil%2520demo%3B" width="1" height="1"/>
+</svg>

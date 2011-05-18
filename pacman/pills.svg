@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>Pacman Pills, by marek.raida@gmail.com</title>
+<script type="text/ecmascript" xlink:href="../fakesmile/smil.user.js"/>
+
+<mask id="pills1">
+  <rect x="0" y="0" width="130" height="40" fill="white"/>
+</mask>
+
+<g mask="url(#pills1)" transform="translate(70 60)" id="pilltrack">
+  <circle r="300" fill="none" stroke="black"/>
+  <line x1="0" y1="20" x2="400" y2="20" stroke="#dd0" stroke-width="20" stroke-linecap="round" stroke-dasharray="1,60">
+    <animateTransform attributeName="transform" type="translate" begin="0s" dur="3s" values="0 0; -185 0" repeatCount="indefinite"/>
+  </line>
+</g>
+
+</svg>

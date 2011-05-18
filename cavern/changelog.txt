@@ -1,0 +1,100 @@
+1.03
+ * made fuel object available more often
+ * fixed displaying wrong reason at the game finish
+ * after entering hall of fame is game not jumping to the main menu immediately
+ * added reset of keypress state at the beginning of each level/game to prevent involuntary crash on the beginning of next round
+ * reversed behavior of timeshift - when hit by fire - slows time, when picked up - speeds it up, what is actually more logical behavior
+
+1.02
+ * compatibity enhanced for Webkit browsers - almost all animations are working now (via manual start by calling of beginElement() method)
+ * all sounds now avialable both as wav and ogg; sounds are working in Chrome now (althought with some glitches and unexpected delays, but it is current implementation issue, I suppose...)
+ * SVG converted to xhtml document - merging all files (esp. ogg sounds) into one compressed document, now whole game has only 154kB in one file - wow!
+ * sound of starting level dropped
+ * added event.preventDefault() on keypress for X and B (bomb) to prevent Firefox's autosearch feature
+ * bugfixed destroying non-existing crash elements
+
+1.01
+ * fixed bug preventing game-play on browsers without support for SMIL (like Firefox < 3.7)
+ * fixed bug preventing Safari without Audio support (Windows version) from not hiding out modal screen
+
+1.00
+ * release postponed to give time Gecko to be patched and stop crashing, thx. Daniel H. for fixing it promptly ;-)
+  * change of behavior - positive object, when shoot down, adds 50% of its type points, not always just increase of score
+ * new sounds and updated global volume and configuration
+ * one new enemy object "icycle" added
+ * bonus object force shield added (lasts 4 seconds and applies aka god-mode)
+* added reversed type of bolt enemy 
+* updated graphics of explosions by gradient effects
+ * replaced majority of strokes by fills in hope for better performance
+ * added no decoration option for improving performance on weaker computers
+ * added in-game music in ogg format (Opera does not supports it yet)
+ * game/level is startable also using SPACE key, bombs are now supported also using B key
+ * corrections to the cave decorations generation
+ * first level made extremely easy for beginners, also BOSS moved to the higher levels
+ * tons of small design up-lifts and playability/level enhancements
+
+0.90
+ * added hall of fame (top 15) / score recording feature
+ * bonuses - reevaluated point/damage values + updated decription by exacts point numbers
+ * minor release, not public one
+
+0.88
+ * fixed more games running simultaneously by accident
+ * hourglass now extends its lasting when collecting another during effect of previous one
+ * game cave colors are returning to the same state as before timeshift
+ * added decorative craters to the cave walls
+ * couple of other small enhancements to cave objects and decorations
+
+0.87
+ * hourglass object updated by Daniel's suggestions to preserve transparency
+ * hourglass object when shot speeds game up temporarily, when picked up slows it down for a little while
+ * added normal ship jets animation
+ * transparent current/finished level indicators and added ammo warning
+ * final level boss initial implementation
+ * ammo cartridge, ammo generally and fuel bonuses are more more often available now and provide more ammunition and petrol - you should feel free to shoot a lot now
+ * audio files pre-fetching to avoid unnecessary delays during first playing (works ugly in Opera not supporting volume controls)
+ * object graphics lift-up 
+ * cavern background stars decoration
+ * more sounds and small color changes
+ * cave objects support/move at different speeds
+ * refactored messy logic for generation of movable objects
+
+0.86
+ * implemented so much requested object's marking during game-play
+ * one new object type added (hourglass)
+ * game options are now with cursor: pointer property for easier understanding of their meaning
+ * setting on and off debugging for developers
+ * added support for reversed (up to down) objects (hanging from ceiling, in other words ;-)
+ * couple of text corrections and game screens/state fixes
+ * fixed unnecessary crash calls
+ * default tunnel space increased
+
+0.85
+ * added four new types of cave objects (Evil Eye, Ufo, Cistern and Coil)
+ * fixed bug in missile not detecting end of cave and continuing "forever"
+ * added maximum limits to shield and fuel
+ * visual indication bars for vital attributes
+ * movement of cave objects quickened to make it easier, esp. for bolt, to be able to avoid it
+ * starting position of rocket moved more to the center of window
+ * fixed game support to be fully manageable via Enter / Esc, without need for mouse and preventing default actions
+ * extended crash visual and information
+ * new "dark mood" design applied, game screen rearranged
+ * added visual warning of fuel running out and low shield
+ * graphical lift-up of main ship (fighter)
+ * for better compatibility with original game extended fire of missile also to Z key
+ * small configuration and design updates of cave objects
+ * initial sound support (there's 18 different sounds, 690kB in total, but using WAV for compatibility with Opera browsers) added + sound control on/off
+ * debug disabled by default
+ * script controlled window size to propose initial smaller screen size which is good for performance (might be irritating for someone ;-)
+ * version 0.84 skipped because of load of changes
+
+0.83
+  * shooting and bombing is much faster now and without range limitations 
+  * added two types of visual crashing, I hope you'll enjoy them 
+  * objects timing updated to be more interactive 
+  * couple of workarounds to improve playability in Webkit (change of bolts initial appearance) 
+  * menu optimization for low screen resolutions + few other minor visual changes 
+
+
+0.82
+ *  First PublicRelease

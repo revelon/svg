@@ -1,0 +1,924 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>SVG&nbsp;&mdash;&nbsp;It's in your hands... Old Adobe Demos</title>
+<link rel="stylesheet" type="text/css" href="../css/svg-screen.css" media="screen,projection" />
+<link rel="stylesheet" type="text/css" href="../css/svg-print.css" media="print"/>
+<style type="text/css">
+  img {border-style: none; border: none}
+  td {vertical-align: top}
+  th {text-align: left}
+</style>
+</head>
+<body>
+
+<a href="/index2.htm" style="float:right">Back to the main page</a>
+<h1>Adobe SVG Demos | <span>Re-cover page...</span></h1>
+<hr />
+
+<p><strong>Update on 2010-12-05:</strong> One more demo added...<br/>
+<strong>Update on 2010-12-03:</strong> Chrome update from version 7 to 8...<br/>
+<strong>Update on 2010-11-29:</strong> I added many more modified demos, re-evaluated current results and put them in 
+fancy table results. Changes done were mainly: <em>adding needed namespaces, adding units to font sizes, dropped embedded SVG fonts,
+replaced stylable entities by direct inline styles and replaced ASV specific scripting interfaces by DOM standard ones.</em><br/>
+<strong>MSIE9 is also evaluated</strong>, although its known lack of support for <em>SMIL and FILTERS</em>, and majority of these demos relies on those technologies, makes him obvious looser.<br/><br/>
+All demos there are slightly (more or less) modified examples from <a href="http://www.adobe.com/svg/demos/samples.html">Adobe SVG samples site</a>.<br/>
+Although they are pretty old, I found them still quite exciting and good to test/demonstrate level of implementation in recent web browsers.<br/>
+<em>They cannot be viewed directly from Adobe site</em>, because of ASV plugin scripting requirements, often missing namespaces, runtime plugin architecture expectations 
+and many more reasons. What I did is that I <em>partially and very quickly repaired what was obvious</em>, sometimes simplified something and put them in easy 
+and runnable state there.<br/><br/>
+There is of course plenty of other improvements or workarounds which could be done, to have them working better, but it is task for another day ;-)<br/>
+<em><strong>In percents under browser name I've expressed my personal opinion on how well each demo works.</strong></em></p>
+<hr />
+
+<table border="1">
+
+<tr>
+  <th><a href="0992-anim-key-splines.svg"><img alt="" src="thumbs/0992-anim-key-splines.jpg" width="100" style="float:left"/>0992-anim-key-splines.svg</a><br/>
+    Very simple demonstration on how are key-splines actually working/computed.
+  </th>
+  <td><a href="ftp://ftp.mozilla.org/pub/firefox/nightly/latest-trunk/"><img alt="" src="../browsers/icominefield.png"/>Firefox&nbsp;4b/20101128</a><br/>
+      <h2>100%</h2>
+  </td>
+  <td><a href="http://www.mozilla.com/en-US/firefox/upgrade.html"><img alt="" src="../browsers/icofirefox.png"/>Firefox&nbsp;3.6.12</a><br/>
+      <h2>0%</h2>No SMIL
+  </td>
+  <td><a href="http://www.opera.com/browser/download/"><img alt="" src="../browsers/icoopera.png"/>Opera&nbsp;10.63</a><br/>
+      <h2>100%</h2>
+  </td>
+  <td><a href="http://www.apple.com/safari/"><img alt="" src="../browsers/icosafari.png"/>Safari&nbsp;5.0.3</a><br/>
+      <h2>100%</h2>
+  </td>
+  <td><a href="http://www.google.com/chrome/"><img alt="" src="../browsers/icochrome.png"/>Chrome&nbsp;8.0.552</a><br/>
+      <h2>100%</h2>
+  </td>
+  <td><a href="http://ie.microsoft.com/testdrive/Info/ThankYou/Default.html"><img alt="" src="../browsers/icoie.png"/>MSIE&nbsp;9&nbsp;pr7</a><br/>
+      <h2>0%</h2>No SMIL
+  </td>
+</tr>
+
+<tr>
+  <th><a href="svgtest2.svg"><img alt="" src="thumbs/svgtest2.jpg" width="100" style="float:left"/>svgtest2.svg</a><br/>
+    Default it-is-working animation, of three animated circles. Had been modified a bit.
+  </th>
+  <td><a href="ftp://ftp.mozilla.org/pub/firefox/nightly/latest-trunk/"><img alt="" src="../browsers/icominefield.png"/>Firefox&nbsp;4b/20101128</a><br/>
+      <h2>100%</h2>
+  </td>
+  <td><a href="http://www.mozilla.com/en-US/firefox/upgrade.html"><img alt="" src="../browsers/icofirefox.png"/>Firefox&nbsp;3.6.12</a><br/>
+      <h2>20%</h2>No SMIL
+  </td>
+  <td><a href="http://www.opera.com/browser/download/"><img alt="" src="../browsers/icoopera.png"/>Opera&nbsp;10.63</a><br/>
+      <h2>100%</h2>
+  </td>
+  <td><a href="http://www.apple.com/safari/"><img alt="" src="../browsers/icosafari.png"/>Safari&nbsp;5.0.3</a><br/>
+      <h2>100%</h2>
+  </td>
+  <td><a href="http://www.google.com/chrome/"><img alt="" src="../browsers/icochrome.png"/>Chrome&nbsp;8.0.552</a><br/>
+      <h2>100%</h2>
+  </td>
+  <td><a href="http://ie.microsoft.com/testdrive/Info/ThankYou/Default.html"><img alt="" src="../browsers/icoie.png"/>MSIE&nbsp;9&nbsp;pr7</a><br/>
+      <h2>20%</h2>No SMIL
+  </td>
+</tr>
+
+<tr>
+  <th><a href="audio.svg"><img alt="" src="thumbs/audio.jpg" width="100" style="float:left"/>audio.svg</a><br/>
+    Beatiful ASV plugin starfield fly-through demo with sound (MP3 converted to OGG).
+  </th>
+  <td><a href="ftp://ftp.mozilla.org/pub/firefox/nightly/latest-trunk/"><img alt="" src="../browsers/icominefield.png"/>Firefox&nbsp;4b/20101128</a><br/>
+      <h2>70%</h2>Missing planets, flashes, choppy sound/slow framerate
+  </td>
+  <td><a href="http://www.mozilla.com/en-US/firefox/upgrade.html"><img alt="" src="../browsers/icofirefox.png"/>Firefox&nbsp;3.6.12</a><br/>
+      <h2>0%</h2>No SMIL
+  </td>
+  <td><a href="http://www.opera.com/browser/download/"><img alt="" src="../browsers/icoopera.png"/>Opera&nbsp;10.63</a><br/>
+      <h2>100%</h2>
+  </td>
+  <td><a href="http://www.apple.com/safari/"><img alt="" src="../browsers/icosafari.png"/>Safari&nbsp;5.0.3</a><br/>
+      <h2>100%</h2>No sound on Windows, but it is no fault of Safari, otherwise it's perfect
+  </td>
+  <td><a href="http://www.google.com/chrome/"><img alt="" src="../browsers/icochrome.png"/>Chrome&nbsp;8.0.552</a><br/>
+      <h2>100%</h2>
+  </td>
+  <td><a href="http://ie.microsoft.com/testdrive/Info/ThankYou/Default.html"><img alt="" src="../browsers/icoie.png"/>MSIE&nbsp;9&nbsp;pr7</a><br/>
+      <h2>0%</h2>No SMIL, no filters
+  </td>
+</tr>
+
+<tr>
+  <th><a href="building/index.html" target="_blank"><img alt="" src="thumbs/building.jpg" width="100" style="float:left"/>Building interactive plan</a><br/>
+    Complex demo of HTML, FRAMES, many SVG documents and a lot of scripting. Former Adobe headquarters building interactive plans. (opens in separate window)
+  </th>
+  <td><a href="ftp://ftp.mozilla.org/pub/firefox/nightly/latest-trunk/"><img alt="" src="../browsers/icominefield.png"/>Firefox&nbsp;4b/20101128</a><br/>
+      <h2>100%</h2>
+  </td>
+  <td><a href="http://www.mozilla.com/en-US/firefox/upgrade.html"><img alt="" src="../browsers/icofirefox.png"/>Firefox&nbsp;3.6.12</a><br/>
+      <h2>100%</h2>
+  </td>
+  <td><a href="http://www.opera.com/browser/download/"><img alt="" src="../browsers/icoopera.png"/>Opera&nbsp;10.63</a><br/>
+      <h2>100%</h2>
+  </td>
+  <td><a href="http://www.apple.com/safari/"><img alt="" src="../browsers/icosafari.png"/>Safari&nbsp;5.0.3</a><br/>
+      <h2>80%</h2>Bad viewbox/sizing, but otherwise working well
+  </td>
+  <td><a href="http://www.google.com/chrome/"><img alt="" src="../browsers/icochrome.png"/>Chrome&nbsp;8.0.552</a><br/>
+      <h2>80%</h2>Bad viewbox/sizing, but otherwise working well
+  </td>
+  <td><a href="http://ie.microsoft.com/testdrive/Info/ThankYou/Default.html"><img alt="" src="../browsers/icoie.png"/>MSIE&nbsp;9&nbsp;pr7</a><br/>
+      <h2>50%</h2>Bad viewbox/sizing, not working floor descriptions
+  </td>
+</tr>
+
+<tr>
+  <th><a href="airplane/index.html" target="_blank"><img alt="" src="thumbs/airplane.jpg" width="100" style="float:left"/>Airplane cockpit simulator</a><br/>
+    Plane "signalization" interactive demo consiting of HTML, FRAMES and two SVG documents + some scripting. (opens in separate window)
+  </th>
+  <td><a href="ftp://ftp.mozilla.org/pub/firefox/nightly/latest-trunk/"><img alt="" src="../browsers/icominefield.png"/>Firefox&nbsp;4b/20101128</a><br/>
+      <h2>100%</h2>
+  </td>
+  <td><a href="http://www.mozilla.com/en-US/firefox/upgrade.html"><img alt="" src="../browsers/icofirefox.png"/>Firefox&nbsp;3.6.12</a><br/>
+      <h2>100%</h2>
+  </td>
+  <td><a href="http://www.opera.com/browser/download/"><img alt="" src="../browsers/icoopera.png"/>Opera&nbsp;10.63</a><br/>
+      <h2>100%</h2>
+  </td>
+  <td><a href="http://www.apple.com/safari/"><img alt="" src="../browsers/icosafari.png"/>Safari&nbsp;5.0.3</a><br/>
+      <h2>80%</h2>Bad viewbox/sizing, but otherwise working well
+  </td>
+  <td><a href="http://www.google.com/chrome/"><img alt="" src="../browsers/icochrome.png"/>Chrome&nbsp;8.0.552</a><br/>
+      <h2>80%</h2>Bad viewbox/sizing, but otherwise working well
+  </td>
+  <td><a href="http://ie.microsoft.com/testdrive/Info/ThankYou/Default.html"><img alt="" src="../browsers/icoie.png"/>MSIE&nbsp;9&nbsp;pr7</a><br/>
+      <h2>80%</h2>Bad viewbox/sizing, but otherwise working well
+  </td>
+</tr>
+
+<tr>
+  <th><a href="reflections/01_faith.svg" target="_blank"><img alt="" src="thumbs/reflections.jpg" width="100" style="float:left"/>Reflection 01_faith.svg</a><br/>
+      <a href="reflections/02_snow.svg" target="_blank">Reflection 02_snow.svg</a><br/>
+      <a href="reflections/03_renewal.svg" target="_blank">Reflection 03_renewal.svg</a><br/>
+    Three individual interactive demos, allowing language switching, referencing each other and combines raster and vector effects together. (opens in separate window)
+  </th>
+  <td><a href="ftp://ftp.mozilla.org/pub/firefox/nightly/latest-trunk/"><img alt="" src="../browsers/icominefield.png"/>Firefox&nbsp;4b/20101128</a><br/>
+      <h2>60%</h2>Missing some filters, navigation and vertical text support (writing-mode property).
+  </td>
+  <td><a href="http://www.mozilla.com/en-US/firefox/upgrade.html"><img alt="" src="../browsers/icofirefox.png"/>Firefox&nbsp;3.6.12</a><br/>
+      <h2>10%</h2>No SMIL, no image rendering
+  </td>
+  <td><a href="http://www.opera.com/browser/download/"><img alt="" src="../browsers/icoopera.png"/>Opera&nbsp;10.63</a><br/>
+      <h2>90%</h2>For some reason is background for snow reflection not loading
+  </td>
+  <td><a href="http://www.apple.com/safari/"><img alt="" src="../browsers/icosafari.png"/>Safari&nbsp;5.0.3</a><br/>
+      <h2>90%</h2>No filter effects, but good enough
+  </td>
+  <td><a href="http://www.google.com/chrome/"><img alt="" src="../browsers/icochrome.png"/>Chrome&nbsp;8.0.552</a><br/>
+      <h2>40%</h2>Background sometimes not loading => filters not working, text/navigation invisible
+  </td>
+  <td><a href="http://ie.microsoft.com/testdrive/Info/ThankYou/Default.html"><img alt="" src="../browsers/icoie.png"/>MSIE&nbsp;9&nbsp;pr7</a><br/>
+      <h2>20%</h2>No SMIL, no filters
+  </td>
+</tr>
+
+<tr>
+  <th><a href="reflections/reflections.svg"><img alt="" src="thumbs/reflectico.jpg" width="100" style="float:left"/>Icon reflections.svg</a><br/>
+      <a href="airplane/usair.svg">Icon usair.svg</a><br/>
+      <a href="building/building.svg">Icon building.svg</a><br/>
+    Three animated "icons" of multiple SVG documents of three demos presented above on the page.
+  </th>
+  <td><a href="ftp://ftp.mozilla.org/pub/firefox/nightly/latest-trunk/"><img alt="" src="../browsers/icominefield.png"/>Firefox&nbsp;4b/20101128</a><br/>
+      <h2>100%</h2>
+  </td>
+  <td><a href="http://www.mozilla.com/en-US/firefox/upgrade.html"><img alt="" src="../browsers/icofirefox.png"/>Firefox&nbsp;3.6.12</a><br/>
+      <h2>40%</h2>No SMIL, but image is there
+  </td>
+  <td><a href="http://www.opera.com/browser/download/"><img alt="" src="../browsers/icoopera.png"/>Opera&nbsp;10.63</a><br/>
+      <h2>0%</h2>Animation of individual SVG documents + bitmaps is not working a all
+  </td>
+  <td><a href="http://www.apple.com/safari/"><img alt="" src="../browsers/icosafari.png"/>Safari&nbsp;5.0.3</a><br/>
+      <h2>100%</h2>
+  </td>
+  <td><a href="http://www.google.com/chrome/"><img alt="" src="../browsers/icochrome.png"/>Chrome&nbsp;8.0.552</a><br/>
+      <h2>20%</h2>It does the animation, but without the bitmap loaded, it is without desired effect
+  </td>
+  <td><a href="http://ie.microsoft.com/testdrive/Info/ThankYou/Default.html"><img alt="" src="../browsers/icoie.png"/>MSIE&nbsp;9&nbsp;pr7</a><br/>
+      <h2>40%</h2>No SMIL, but image is there
+  </td>
+</tr>
+
+<tr>
+  <th><a href="anim1_01.svg"><img alt="" src="thumbs/anim1.jpg" width="100" style="float:left"/>anim1_01.svg</a><br/>
+    Complicated pattern in pulse motion, showing us how to create frame based animation in SVG.
+  </th>
+  <td><a href="ftp://ftp.mozilla.org/pub/firefox/nightly/latest-trunk/"><img alt="" src="../browsers/icominefield.png"/>Firefox&nbsp;4b/20101128</a><br/>
+      <h2>100%</h2>
+  </td>
+  <td><a href="http://www.mozilla.com/en-US/firefox/upgrade.html"><img alt="" src="../browsers/icofirefox.png"/>Firefox&nbsp;3.6.12</a><br/>
+      <h2>100%</h2>
+  </td>
+  <td><a href="http://www.opera.com/browser/download/"><img alt="" src="../browsers/icoopera.png"/>Opera&nbsp;10.63</a><br/>
+      <h2>100%</h2>
+  </td>
+  <td><a href="http://www.apple.com/safari/"><img alt="" src="../browsers/icosafari.png"/>Safari&nbsp;5.0.3</a><br/>
+      <h2>100%</h2>
+  </td>
+  <td><a href="http://www.google.com/chrome/"><img alt="" src="../browsers/icochrome.png"/>Chrome&nbsp;8.0.552</a><br/>
+      <h2>100%</h2>
+  </td>
+  <td><a href="http://ie.microsoft.com/testdrive/Info/ThankYou/Default.html"><img alt="" src="../browsers/icoie.png"/>MSIE&nbsp;9&nbsp;pr7</a><br/>
+      <h2>100%</h2>
+  </td>
+</tr>
+
+<tr>
+  <th><a href="anim2_01.svg"><img alt="" src="thumbs/anim2.jpg" width="100" style="float:left"/>anim2_01.svg</a><br/>
+    Complicated pattern in stretch motion, showing us interpolated animation.
+  </th>
+  <td><a href="ftp://ftp.mozilla.org/pub/firefox/nightly/latest-trunk/"><img alt="" src="../browsers/icominefield.png"/>Firefox&nbsp;4b/20101128</a><br/>
+      <h2>100%</h2>
+  </td>
+  <td><a href="http://www.mozilla.com/en-US/firefox/upgrade.html"><img alt="" src="../browsers/icofirefox.png"/>Firefox&nbsp;3.6.12</a><br/>
+      <h2>100%</h2>
+  </td>
+  <td><a href="http://www.opera.com/browser/download/"><img alt="" src="../browsers/icoopera.png"/>Opera&nbsp;10.63</a><br/>
+      <h2>100%</h2>
+  </td>
+  <td><a href="http://www.apple.com/safari/"><img alt="" src="../browsers/icosafari.png"/>Safari&nbsp;5.0.3</a><br/>
+      <h2>100%</h2>
+  </td>
+  <td><a href="http://www.google.com/chrome/"><img alt="" src="../browsers/icochrome.png"/>Chrome&nbsp;8.0.552</a><br/>
+      <h2>100%</h2>
+  </td>
+  <td><a href="http://ie.microsoft.com/testdrive/Info/ThankYou/Default.html"><img alt="" src="../browsers/icoie.png"/>MSIE&nbsp;9&nbsp;pr7</a><br/>
+      <h2>100%</h2>
+  </td>
+</tr>
+
+<tr>
+  <th><a href="feAnim1.svg"><img alt="" src="thumbs/feanim1.jpg" width="100" style="float:left"/>feAnim1.svg</a><br/>
+    Medical pill with filters and drop shadow effect, reacting on mouse movement.
+  </th>
+  <td><a href="ftp://ftp.mozilla.org/pub/firefox/nightly/latest-trunk/"><img alt="" src="../browsers/icominefield.png"/>Firefox&nbsp;4b/20101128</a><br/>
+      <h2>100%</h2>
+  </td>
+  <td><a href="http://www.mozilla.com/en-US/firefox/upgrade.html"><img alt="" src="../browsers/icofirefox.png"/>Firefox&nbsp;3.6.12</a><br/>
+      <h2>100%</h2>
+  </td>
+  <td><a href="http://www.opera.com/browser/download/"><img alt="" src="../browsers/icoopera.png"/>Opera&nbsp;10.63</a><br/>
+      <h2>100%</h2>
+  </td>
+  <td><a href="http://www.apple.com/safari/"><img alt="" src="../browsers/icosafari.png"/>Safari&nbsp;5.0.3</a><br/>
+      <h2>0%</h2>No filters at all
+  </td>
+  <td><a href="http://www.google.com/chrome/"><img alt="" src="../browsers/icochrome.png"/>Chrome&nbsp;8.0.552</a><br/>
+      <h2>100%</h2>
+  </td>
+  <td><a href="http://ie.microsoft.com/testdrive/Info/ThankYou/Default.html"><img alt="" src="../browsers/icoie.png"/>MSIE&nbsp;9&nbsp;pr7</a><br/>
+      <h2>0%</h2>No filters
+  </td>
+</tr>
+
+<tr>
+  <th><a href="feEmboss.svg"><img alt="" src="thumbs/femboss.jpg" width="100" style="float:left"/>feEmboss.svg</a><br/>
+    Static image of snowboarder with applied several raster filters.
+  </th>
+  <td><a href="ftp://ftp.mozilla.org/pub/firefox/nightly/latest-trunk/"><img alt="" src="../browsers/icominefield.png"/>Firefox&nbsp;4b/20101128</a><br/>
+      <h2>50%</h2>Does not renders background bump map
+  </td>
+  <td><a href="http://www.mozilla.com/en-US/firefox/upgrade.html"><img alt="" src="../browsers/icofirefox.png"/>Firefox&nbsp;3.6.12</a><br/>
+      <h2>50%</h2>Does not renders background bump map
+  </td>
+  <td><a href="http://www.opera.com/browser/download/"><img alt="" src="../browsers/icoopera.png"/>Opera&nbsp;10.63</a><br/>
+      <h2>100%</h2>
+  </td>
+  <td><a href="http://www.apple.com/safari/"><img alt="" src="../browsers/icosafari.png"/>Safari&nbsp;5.0.3</a><br/>
+      <h2>0%</h2>No filters
+  </td>
+  <td><a href="http://www.google.com/chrome/"><img alt="" src="../browsers/icochrome.png"/>Chrome&nbsp;8.0.552</a><br/>
+      <h2>0%</h2>Almost no rendering there
+  </td>
+  <td><a href="http://ie.microsoft.com/testdrive/Info/ThankYou/Default.html"><img alt="" src="../browsers/icoie.png"/>MSIE&nbsp;9&nbsp;pr7</a><br/>
+      <h2>0%</h2>No filters
+  </td>
+</tr>
+
+<tr>
+  <th><a href="feEtchedGlass.svg"><img alt="" src="thumbs/fetchedglass.jpg" width="100" style="float:left"/>feEtchedGlass.svg</a><br/>
+    Another static image of snowboarder with SVG text and applied cool raster filters.
+  </th>
+  <td><a href="ftp://ftp.mozilla.org/pub/firefox/nightly/latest-trunk/"><img alt="" src="../browsers/icominefield.png"/>Firefox&nbsp;4b/20101128</a><br/>
+      <h2>100%</h2>
+  </td>
+  <td><a href="http://www.mozilla.com/en-US/firefox/upgrade.html"><img alt="" src="../browsers/icofirefox.png"/>Firefox&nbsp;3.6.12</a><br/>
+      <h2>100%</h2>
+  </td>
+  <td><a href="http://www.opera.com/browser/download/"><img alt="" src="../browsers/icoopera.png"/>Opera&nbsp;10.63</a><br/>
+      <h2>100%</h2>
+  </td>
+  <td><a href="http://www.apple.com/safari/"><img alt="" src="../browsers/icosafari.png"/>Safari&nbsp;5.0.3</a><br/>
+      <h2>40%</h2>There is front-end, but no shadow of the text
+  </td>
+  <td><a href="http://www.google.com/chrome/"><img alt="" src="../browsers/icochrome.png"/>Chrome&nbsp;8.0.552</a><br/>
+      <h2>40%</h2>There is shadow, but no front-end text
+  </td>
+  <td><a href="http://ie.microsoft.com/testdrive/Info/ThankYou/Default.html"><img alt="" src="../browsers/icoie.png"/>MSIE&nbsp;9&nbsp;pr7</a><br/>
+      <h2>40%</h2>There is front-end, but no shadow of the text
+  </td>
+</tr>
+
+<tr>
+  <th><a href="feImage.svg"><img alt="" src="thumbs/feimage.jpg" width="100" style="float:left"/>feImage.svg</a><br/>
+    Yet another static image of snowboarder with soft edges effect.
+  </th>
+  <td><a href="ftp://ftp.mozilla.org/pub/firefox/nightly/latest-trunk/"><img alt="" src="../browsers/icominefield.png"/>Firefox&nbsp;4b/20101128</a><br/>
+      <h2>100%</h2>
+  </td>
+  <td><a href="http://www.mozilla.com/en-US/firefox/upgrade.html"><img alt="" src="../browsers/icofirefox.png"/>Firefox&nbsp;3.6.12</a><br/>
+      <h2>100%</h2>
+  </td>
+  <td><a href="http://www.opera.com/browser/download/"><img alt="" src="../browsers/icoopera.png"/>Opera&nbsp;10.63</a><br/>
+      <h2>100%</h2>
+  </td>
+  <td><a href="http://www.apple.com/safari/"><img alt="" src="../browsers/icosafari.png"/>Safari&nbsp;5.0.3</a><br/>
+      <h2>0%</h2>No image
+  </td>
+  <td><a href="http://www.google.com/chrome/"><img alt="" src="../browsers/icochrome.png"/>Chrome&nbsp;8.0.552</a><br/>
+      <h2>100%</h2>
+  </td>
+  <td><a href="http://ie.microsoft.com/testdrive/Info/ThankYou/Default.html"><img alt="" src="../browsers/icoie.png"/>MSIE&nbsp;9&nbsp;pr7</a><br/>
+      <h2>0%</h2>No filters
+  </td>
+</tr>
+
+<tr>
+  <th><a href="feWavy.svg"><img alt="" src="thumbs/fewavy.jpg" width="100" style="float:left"/>feWavy.svg</a><br/>
+    Carrots and basic shapes with applied wavy-effect raster filter.
+  </th>
+  <td><a href="ftp://ftp.mozilla.org/pub/firefox/nightly/latest-trunk/"><img alt="" src="../browsers/icominefield.png"/>Firefox&nbsp;4b/20101128</a><br/>
+      <h2>80%</h2>Not very well rendered filters (compared to ASV and Opera) + takes A LOT of CPU power
+  </td>
+  <td><a href="http://www.mozilla.com/en-US/firefox/upgrade.html"><img alt="" src="../browsers/icofirefox.png"/>Firefox&nbsp;3.6.12</a><br/>
+      <h2>80%</h2>Not very well rendered filters (compared to ASV and Opera) + takes A LOT of CPU power
+  </td>
+  <td><a href="http://www.opera.com/browser/download/"><img alt="" src="../browsers/icoopera.png"/>Opera&nbsp;10.63</a><br/>
+      <h2>100%</h2>
+  </td>
+  <td><a href="http://www.apple.com/safari/"><img alt="" src="../browsers/icosafari.png"/>Safari&nbsp;5.0.3</a><br/>
+      <h2>0%</h2>No filters at all
+  </td>
+  <td><a href="http://www.google.com/chrome/"><img alt="" src="../browsers/icochrome.png"/>Chrome&nbsp;8.0.552</a><br/>
+      <h2>20%</h2>Badly shifted rendering
+  </td>
+  <td><a href="http://ie.microsoft.com/testdrive/Info/ThankYou/Default.html"><img alt="" src="../browsers/icoie.png"/>MSIE&nbsp;9&nbsp;pr7</a><br/>
+      <h2>0%</h2>No filters
+  </td>
+</tr>
+
+<tr>
+  <th><a href="Matrixtransform.svg"><img alt="" src="thumbs/matrixtransform.jpg" width="100" style="float:left"/>Matrixtransform.svg</a><br/>
+    Testing tool for demonstration how basic transformations work and can be expressed as transformation matrix.
+  </th>
+  <td><a href="ftp://ftp.mozilla.org/pub/firefox/nightly/latest-trunk/"><img alt="" src="../browsers/icominefield.png"/>Firefox&nbsp;4b/20101128</a><br/>
+      <h2>100%</h2>
+  </td>
+  <td><a href="http://www.mozilla.com/en-US/firefox/upgrade.html"><img alt="" src="../browsers/icofirefox.png"/>Firefox&nbsp;3.6.12</a><br/>
+      <h2>100%</h2>
+  </td>
+  <td><a href="http://www.opera.com/browser/download/"><img alt="" src="../browsers/icoopera.png"/>Opera&nbsp;10.63</a><br/>
+      <h2>0%</h2>Some strange JS errors prevent demo from working
+  </td>
+  <td><a href="http://www.apple.com/safari/"><img alt="" src="../browsers/icosafari.png"/>Safari&nbsp;5.0.3</a><br/>
+      <h2>0%</h2>Some strange JS errors prevent demo from working
+  </td>
+  <td><a href="http://www.google.com/chrome/"><img alt="" src="../browsers/icochrome.png"/>Chrome&nbsp;8.0.552</a><br/>
+      <h2>0%</h2>Some strange JS errors prevent demo from working
+  </td>
+  <td><a href="http://ie.microsoft.com/testdrive/Info/ThankYou/Default.html"><img alt="" src="../browsers/icoie.png"/>MSIE&nbsp;9&nbsp;pr7</a><br/>
+      <h2>0%</h2>Some strange JS errors prevent demo from working
+  </td>
+</tr>
+
+<tr>
+  <th><a href="nutty.svg"><img alt="" src="thumbs/nutty.jpg" width="100" style="float:left"/>nutty.svg</a><br/>
+    Crazily circling and pulsing letters of SVG word, shoving possibilities to animate tspan elements.
+  </th>
+  <td><a href="ftp://ftp.mozilla.org/pub/firefox/nightly/latest-trunk/"><img alt="" src="../browsers/icominefield.png"/>Firefox&nbsp;4b/20101128</a><br/>
+      <h2>100%</h2>
+  </td>
+  <td><a href="http://www.mozilla.com/en-US/firefox/upgrade.html"><img alt="" src="../browsers/icofirefox.png"/>Firefox&nbsp;3.6.12</a><br/>
+      <h2>20%</h2>No SMIL
+  </td>
+  <td><a href="http://www.opera.com/browser/download/"><img alt="" src="../browsers/icoopera.png"/>Opera&nbsp;10.63</a><br/>
+      <h2>100%</h2>
+  </td>
+  <td><a href="http://www.apple.com/safari/"><img alt="" src="../browsers/icosafari.png"/>Safari&nbsp;5.0.3</a><br/>
+      <h2>100%</h2>
+  </td>
+  <td><a href="http://www.google.com/chrome/"><img alt="" src="../browsers/icochrome.png"/>Chrome&nbsp;8.0.552</a><br/>
+      <h2>100%</h2>
+  </td>
+  <td><a href="http://ie.microsoft.com/testdrive/Info/ThankYou/Default.html"><img alt="" src="../browsers/icoie.png"/>MSIE&nbsp;9&nbsp;pr7</a><br/>
+      <h2>20%</h2>No SMIL
+  </td>
+</tr>
+
+<tr>
+  <th><a href="Sparkplug.svg"><img alt="" src="thumbs/sparkplug.jpg" width="100" style="float:left"/>Sparkplug.svg</a><br/>
+    Sparkling burner image and fire and sound effect (MP3 converted to OGG).
+  </th>
+  <td><a href="ftp://ftp.mozilla.org/pub/firefox/nightly/latest-trunk/"><img alt="" src="../browsers/icominefield.png"/>Firefox&nbsp;4b/20101128</a><br/>
+      <h2>50%</h2>No fire effect animation (mising support for enable-background property)
+  </td>
+  <td><a href="http://www.mozilla.com/en-US/firefox/upgrade.html"><img alt="" src="../browsers/icofirefox.png"/>Firefox&nbsp;3.6.12</a><br/>
+      <h2>50%</h2>No fire effect animation (mising support for enable-background property)
+  </td>
+  <td><a href="http://www.opera.com/browser/download/"><img alt="" src="../browsers/icoopera.png"/>Opera&nbsp;10.63</a><br/>
+      <h2>100%</h2>
+  </td>
+  <td><a href="http://www.apple.com/safari/"><img alt="" src="../browsers/icosafari.png"/>Safari&nbsp;5.0.3</a><br/>
+      <h2>70%</h2>There is fire animation, but without filter applied (ugly), no OGG support
+  </td>
+  <td><a href="http://www.google.com/chrome/"><img alt="" src="../browsers/icochrome.png"/>Chrome&nbsp;8.0.552</a><br/>
+      <h2>50%</h2>No fire effect animation
+  </td>
+  <td><a href="http://ie.microsoft.com/testdrive/Info/ThankYou/Default.html"><img alt="" src="../browsers/icoie.png"/>MSIE&nbsp;9&nbsp;pr7</a><br/>
+      <h2>50%</h2>No fire effect animation
+  </td>
+</tr>
+
+<tr>
+  <th><a href="BallAndChain.svg"><img alt="" src="thumbs/ball.jpg" width="100" style="float:left"/>BallAndChain.svg</a><br/>
+    Simple drag and drop demo, performs neatly in all three browsers.
+  </th>
+  <td><a href="ftp://ftp.mozilla.org/pub/firefox/nightly/latest-trunk/"><img alt="" src="../browsers/icominefield.png"/>Firefox&nbsp;4b/20101128</a><br/>
+      <h2>100%</h2>
+  </td>
+  <td><a href="http://www.mozilla.com/en-US/firefox/upgrade.html"><img alt="" src="../browsers/icofirefox.png"/>Firefox&nbsp;3.6.12</a><br/>
+      <h2>100%</h2>
+  </td>
+  <td><a href="http://www.opera.com/browser/download/"><img alt="" src="../browsers/icoopera.png"/>Opera&nbsp;10.63</a><br/>
+      <h2>100%</h2>
+  </td>
+  <td><a href="http://www.apple.com/safari/"><img alt="" src="../browsers/icosafari.png"/>Safari&nbsp;5.0.3</a><br/>
+      <h2>100%</h2>
+  </td>
+  <td><a href="http://www.google.com/chrome/"><img alt="" src="../browsers/icochrome.png"/>Chrome&nbsp;8.0.552</a><br/>
+      <h2>100%</h2>
+  </td>
+  <td><a href="http://ie.microsoft.com/testdrive/Info/ThankYou/Default.html"><img alt="" src="../browsers/icoie.png"/>MSIE&nbsp;9&nbsp;pr7</a><br/>
+      <h2>100%</h2>
+  </td>
+</tr>
+
+<tr>
+  <th><a href="circleanimation.svg"><img alt="" src="thumbs/circle.jpg" width="100" style="float:left"/>circleanimation.svg</a><br/>
+    Greatly simplified circle animation demo to be so simple to work everywhere where SMIL is supported perfectly ;-)
+  </th>
+  <td><a href="ftp://ftp.mozilla.org/pub/firefox/nightly/latest-trunk/"><img alt="" src="../browsers/icominefield.png"/>Firefox&nbsp;4b/20101128</a><br/>
+      <h2>100%</h2>
+  </td>
+  <td><a href="http://www.mozilla.com/en-US/firefox/upgrade.html"><img alt="" src="../browsers/icofirefox.png"/>Firefox&nbsp;3.6.12</a><br/>
+      <h2>0%</h2>No SMIL
+  </td>
+  <td><a href="http://www.opera.com/browser/download/"><img alt="" src="../browsers/icoopera.png"/>Opera&nbsp;10.63</a><br/>
+      <h2>100%</h2>
+  </td>
+  <td><a href="http://www.apple.com/safari/"><img alt="" src="../browsers/icosafari.png"/>Safari&nbsp;5.0.3</a><br/>
+      <h2>100%</h2>
+  </td>
+  <td><a href="http://www.google.com/chrome/"><img alt="" src="../browsers/icochrome.png"/>Chrome&nbsp;8.0.552</a><br/>
+      <h2>100%</h2>
+  </td>
+  <td><a href="http://ie.microsoft.com/testdrive/Info/ThankYou/Default.html"><img alt="" src="../browsers/icoie.png"/>MSIE&nbsp;9&nbsp;pr7</a><br/>
+      <h2>0%</h2>No SMIL
+  </td>
+</tr>
+
+<tr>
+  <th><a href="clock.svg"><img alt="" src="thumbs/clock.jpg" width="100" style="float:left"/>clock.svg</a><br/>
+    Most popular SVG demo ever - The Clock. However, this one was maybe the very first one, but who knows... Simple enough to work well in all browsers.
+  </th>
+  <td><a href="ftp://ftp.mozilla.org/pub/firefox/nightly/latest-trunk/"><img alt="" src="../browsers/icominefield.png"/>Firefox&nbsp;4b/20101128</a><br/>
+      <h2>100%</h2>
+  </td>
+  <td><a href="http://www.mozilla.com/en-US/firefox/upgrade.html"><img alt="" src="../browsers/icofirefox.png"/>Firefox&nbsp;3.6.12</a><br/>
+      <h2>20%</h2>Time is set correctly, but there's no SMIL animation
+  </td>
+  <td><a href="http://www.opera.com/browser/download/"><img alt="" src="../browsers/icoopera.png"/>Opera&nbsp;10.63</a><br/>
+      <h2>100%</h2>
+  </td>
+  <td><a href="http://www.apple.com/safari/"><img alt="" src="../browsers/icosafari.png"/>Safari&nbsp;5.0.3</a><br/>
+      <h2>100%</h2>
+  </td>
+  <td><a href="http://www.google.com/chrome/"><img alt="" src="../browsers/icochrome.png"/>Chrome&nbsp;8.0.552</a><br/>
+      <h2>100%</h2>
+  </td>
+  <td><a href="http://ie.microsoft.com/testdrive/Info/ThankYou/Default.html"><img alt="" src="../browsers/icoie.png"/>MSIE&nbsp;9&nbsp;pr7</a><br/>
+      <h2>20%</h2>Time is set correctly, but there's no SMIL animation
+  </td>
+</tr>
+
+<tr>
+  <th><a href="moire.svg"><img alt="" src="thumbs/moire.jpg" width="100" style="float:left"/>moire.svg</a><br/>
+    Dynamic resizing of transparent GIF images, simplified.
+  </th>
+  <td><a href="ftp://ftp.mozilla.org/pub/firefox/nightly/latest-trunk/"><img alt="" src="../browsers/icominefield.png"/>Firefox&nbsp;4b/20101128</a><br/>
+      <h2>100%</h2>
+  </td>
+  <td><a href="http://www.mozilla.com/en-US/firefox/upgrade.html"><img alt="" src="../browsers/icofirefox.png"/>Firefox&nbsp;3.6.12</a><br/>
+      <h2>20%</h2>No SMIL
+  </td>
+  <td><a href="http://www.opera.com/browser/download/"><img alt="" src="../browsers/icoopera.png"/>Opera&nbsp;10.63</a><br/>
+      <h2>100%</h2>
+  </td>
+  <td><a href="http://www.apple.com/safari/"><img alt="" src="../browsers/icosafari.png"/>Safari&nbsp;5.0.3</a><br/>
+      <h2>100%</h2>
+  </td>
+  <td><a href="http://www.google.com/chrome/"><img alt="" src="../browsers/icochrome.png"/>Chrome&nbsp;8.0.552</a><br/>
+      <h2>100%</h2>
+  </td>
+  <td><a href="http://ie.microsoft.com/testdrive/Info/ThankYou/Default.html"><img alt="" src="../browsers/icoie.png"/>MSIE&nbsp;9&nbsp;pr7</a><br/>
+      <h2>20%</h2>No SMIL
+  </td>
+</tr>
+
+<tr>
+  <th><a href="StarsAndStripesAnim.svg"><img alt="" src="thumbs/starstripes.jpg" width="100" style="float:left"/>StarsAndStripesAnim.svg</a><br/>
+    Animated USA flag, perfect everywhere where SMIL is supported...
+  </th>
+  <td><a href="ftp://ftp.mozilla.org/pub/firefox/nightly/latest-trunk/"><img alt="" src="../browsers/icominefield.png"/>Firefox&nbsp;4b/20101128</a><br/>
+      <h2>100%</h2>
+  </td>
+  <td><a href="http://www.mozilla.com/en-US/firefox/upgrade.html"><img alt="" src="../browsers/icofirefox.png"/>Firefox&nbsp;3.6.12</a><br/>
+      <h2>20%</h2>No SMIL
+  </td>
+  <td><a href="http://www.opera.com/browser/download/"><img alt="" src="../browsers/icoopera.png"/>Opera&nbsp;10.63</a><br/>
+      <h2>100%</h2>
+  </td>
+  <td><a href="http://www.apple.com/safari/"><img alt="" src="../browsers/icosafari.png"/>Safari&nbsp;5.0.3</a><br/>
+      <h2>100%</h2>
+  </td>
+  <td><a href="http://www.google.com/chrome/"><img alt="" src="../browsers/icochrome.png"/>Chrome&nbsp;8.0.552</a><br/>
+      <h2>100%</h2>
+  </td>
+  <td><a href="http://ie.microsoft.com/testdrive/Info/ThankYou/Default.html"><img alt="" src="../browsers/icoie.png"/>MSIE&nbsp;9&nbsp;pr7</a><br/>
+      <h2>20%</h2>No SMIL
+  </td>
+</tr>
+
+<tr>
+  <th><a href="wonder.svg"><img alt="" src="thumbs/wonder.jpg" width="100" style="float:left"/>wonder.svg</a><br/>
+    Animated clipping paths to create nice banner.
+  </th>
+  <td><a href="ftp://ftp.mozilla.org/pub/firefox/nightly/latest-trunk/"><img alt="" src="../browsers/icominefield.png"/>Firefox&nbsp;4b/20101128</a><br/>
+      <h2>100%</h2>
+  </td>
+  <td><a href="http://www.mozilla.com/en-US/firefox/upgrade.html"><img alt="" src="../browsers/icofirefox.png"/>Firefox&nbsp;3.6.12</a><br/>
+      <h2>20%</h2>No SMIL
+  </td>
+  <td><a href="http://www.opera.com/browser/download/"><img alt="" src="../browsers/icoopera.png"/>Opera&nbsp;10.63</a><br/>
+      <h2>100%</h2>
+  </td>
+  <td><a href="http://www.apple.com/safari/"><img alt="" src="../browsers/icosafari.png"/>Safari&nbsp;5.0.3</a><br/>
+      <h2>70%</h2>No masking of background bitmaps
+  </td>
+  <td><a href="http://www.google.com/chrome/"><img alt="" src="../browsers/icochrome.png"/>Chrome&nbsp;8.0.552</a><br/>
+      <h2>70%</h2>No masking of background bitmaps
+  </td>
+  <td><a href="http://ie.microsoft.com/testdrive/Info/ThankYou/Default.html"><img alt="" src="../browsers/icoie.png"/>MSIE&nbsp;9&nbsp;pr7</a><br/>
+      <h2>20%</h2>No SMIL
+  </td>
+</tr>
+
+<tr>
+  <th><a href="feAnim2.svg"><img alt="" src="thumbs/feanim2.jpg" width="100" style="float:left"/>feAnim2.svg</a><br/>
+    User generated events animated color filter.
+  </th>
+  <td><a href="ftp://ftp.mozilla.org/pub/firefox/nightly/latest-trunk/"><img alt="" src="../browsers/icominefield.png"/>Firefox&nbsp;4b/20101128</a><br/>
+      <h2>100%</h2>
+  </td>
+  <td><a href="http://www.mozilla.com/en-US/firefox/upgrade.html"><img alt="" src="../browsers/icofirefox.png"/>Firefox&nbsp;3.6.12</a><br/>
+      <h2>100%</h2>
+  </td>
+  <td><a href="http://www.opera.com/browser/download/"><img alt="" src="../browsers/icoopera.png"/>Opera&nbsp;10.63</a><br/>
+      <h2>100%</h2>
+  </td>
+  <td><a href="http://www.apple.com/safari/"><img alt="" src="../browsers/icosafari.png"/>Safari&nbsp;5.0.3</a><br/>
+      <h2>0%</h2>No filters
+  </td>
+  <td><a href="http://www.google.com/chrome/"><img alt="" src="../browsers/icochrome.png"/>Chrome&nbsp;8.0.552</a><br/>
+      <h2>100%</h2>
+  </td>
+  <td><a href="http://ie.microsoft.com/testdrive/Info/ThankYou/Default.html"><img alt="" src="../browsers/icoie.png"/>MSIE&nbsp;9&nbsp;pr7</a><br/>
+      <h2>0%</h2>No filters
+  </td>
+</tr>
+
+<tr>
+  <th><a href="feBumps.svg"><img alt="" src="thumbs/febumps.jpg" width="100" style="float:left"/>feBumps.svg</a><br/>
+    Static text with fancy filters creating bumb mapping effects.
+  </th>
+  <td><a href="ftp://ftp.mozilla.org/pub/firefox/nightly/latest-trunk/"><img alt="" src="../browsers/icominefield.png"/>Firefox&nbsp;4b/20101128</a><br/>
+      <h2>100%</h2>
+  </td>
+  <td><a href="http://www.mozilla.com/en-US/firefox/upgrade.html"><img alt="" src="../browsers/icofirefox.png"/>Firefox&nbsp;3.6.12</a><br/>
+      <h2>100%</h2>
+  </td>
+  <td><a href="http://www.opera.com/browser/download/"><img alt="" src="../browsers/icoopera.png"/>Opera&nbsp;10.63</a><br/>
+      <h2>100%</h2>
+  </td>
+  <td><a href="http://www.apple.com/safari/"><img alt="" src="../browsers/icosafari.png"/>Safari&nbsp;5.0.3</a><br/>
+      <h2>0%</h2>No rendering at all
+  </td>
+  <td><a href="http://www.google.com/chrome/"><img alt="" src="../browsers/icochrome.png"/>Chrome&nbsp;8.0.552</a><br/>
+      <h2>90%</h2>Rendered well, but result is too blurred, I miss the sharpness there
+  </td>
+  <td><a href="http://ie.microsoft.com/testdrive/Info/ThankYou/Default.html"><img alt="" src="../browsers/icoie.png"/>MSIE&nbsp;9&nbsp;pr7</a><br/>
+      <h2>0%</h2>No filters
+  </td>
+</tr>
+
+<tr>
+  <th><a href="candleinthewind.svg"><img alt="" src="thumbs/candle.jpg" width="100" style="float:left"/>candleinthewind.svg</a><br/>
+    Animated filter resulting in flickering candle's flame.
+  </th>
+  <td><a href="ftp://ftp.mozilla.org/pub/firefox/nightly/latest-trunk/"><img alt="" src="../browsers/icominefield.png"/>Firefox&nbsp;4b/20101128</a><br/>
+      <h2>100%</h2>
+  </td>
+  <td><a href="http://www.mozilla.com/en-US/firefox/upgrade.html"><img alt="" src="../browsers/icofirefox.png"/>Firefox&nbsp;3.6.12</a><br/>
+      <h2>20%</h2>No SMIL
+  </td>
+  <td><a href="http://www.opera.com/browser/download/"><img alt="" src="../browsers/icoopera.png"/>Opera&nbsp;10.63</a><br/>
+      <h2>100%</h2>
+  </td>
+  <td><a href="http://www.apple.com/safari/"><img alt="" src="../browsers/icosafari.png"/>Safari&nbsp;5.0.3</a><br/>
+      <h2>20%</h2>No animation
+  </td>
+  <td><a href="http://www.google.com/chrome/"><img alt="" src="../browsers/icochrome.png"/>Chrome&nbsp;8.0.552</a><br/>
+      <h2>100%</h2>
+  </td>
+  <td><a href="http://ie.microsoft.com/testdrive/Info/ThankYou/Default.html"><img alt="" src="../browsers/icoie.png"/>MSIE&nbsp;9&nbsp;pr7</a><br/>
+      <h2>0%</h2>No SMIL, no filters
+  </td>
+</tr>
+
+<tr>
+  <th><a href="discrete_vs_linear.svg"><img alt="" src="thumbs/discrete.jpg" width="100" style="float:left"/>discrete_vs_linear.svg</a><br/>
+    Basic SMIL animation principles test, works well everywhere, where SMIL is supported.
+  </th>
+  <td><a href="ftp://ftp.mozilla.org/pub/firefox/nightly/latest-trunk/"><img alt="" src="../browsers/icominefield.png"/>Firefox&nbsp;4b/20101128</a><br/>
+      <h2>100%</h2>
+  </td>
+  <td><a href="http://www.mozilla.com/en-US/firefox/upgrade.html"><img alt="" src="../browsers/icofirefox.png"/>Firefox&nbsp;3.6.12</a><br/>
+      <h2>20%</h2>No SMIL
+  </td>
+  <td><a href="http://www.opera.com/browser/download/"><img alt="" src="../browsers/icoopera.png"/>Opera&nbsp;10.63</a><br/>
+      <h2>100%</h2>
+  </td>
+  <td><a href="http://www.apple.com/safari/"><img alt="" src="../browsers/icosafari.png"/>Safari&nbsp;5.0.3</a><br/>
+      <h2>100%</h2>
+  </td>
+  <td><a href="http://www.google.com/chrome/"><img alt="" src="../browsers/icochrome.png"/>Chrome&nbsp;8.0.552</a><br/>
+      <h2>100%</h2>
+  </td>
+  <td><a href="http://ie.microsoft.com/testdrive/Info/ThankYou/Default.html"><img alt="" src="../browsers/icoie.png"/>MSIE&nbsp;9&nbsp;pr7</a><br/>
+      <h2>20%</h2>No SMIL
+  </td>
+</tr>
+
+<tr>
+  <th><a href="fePixels.svg"><img alt="" src="thumbs/fepixels.jpg" width="100" style="float:left"/>fePixels.svg</a><br/>
+    Static text with applied filter creating pixelation effect.
+  </th>
+  <td><a href="ftp://ftp.mozilla.org/pub/firefox/nightly/latest-trunk/"><img alt="" src="../browsers/icominefield.png"/>Firefox&nbsp;4b/20101128</a><br/>
+      <h2>90%</h2>Not so nice filtering compared to ASV/Opera, but acceptable...
+  </td>
+  <td><a href="http://www.mozilla.com/en-US/firefox/upgrade.html"><img alt="" src="../browsers/icofirefox.png"/>Firefox&nbsp;3.6.12</a><br/>
+      <h2>90%</h2>Not so nice filtering compared to ASV/Opera, but acceptable...
+  </td>
+  <td><a href="http://www.opera.com/browser/download/"><img alt="" src="../browsers/icoopera.png"/>Opera&nbsp;10.63</a><br/>
+      <h2>95%</h2>Not so nice as ASV rendering, but generaly good...
+  </td>
+  <td><a href="http://www.apple.com/safari/"><img alt="" src="../browsers/icosafari.png"/>Safari&nbsp;5.0.3</a><br/>
+      <h2>0%</h2>No image
+  </td>
+  <td><a href="http://www.google.com/chrome/"><img alt="" src="../browsers/icochrome.png"/>Chrome&nbsp;8.0.552</a><br/>
+      <h2>60%</h2>Damaged rendering, in previous version rendering was better
+  </td>
+  <td><a href="http://ie.microsoft.com/testdrive/Info/ThankYou/Default.html"><img alt="" src="../browsers/icoie.png"/>MSIE&nbsp;9&nbsp;pr7</a><br/>
+      <h2>0%</h2>No filters
+  </td>
+</tr>
+
+<tr>
+  <th><a href="fe_flame.svg"><img alt="" src="thumbs/feblazing.jpg" width="100" style="float:left"/>fe_flame.svg</a><br/>
+    Static text with flaming filter effect.
+  </th>
+  <td><a href="ftp://ftp.mozilla.org/pub/firefox/nightly/latest-trunk/"><img alt="" src="../browsers/icominefield.png"/>Firefox&nbsp;4b/20101128</a><br/>
+      <h2>80%</h2>Ugly rendering of front-end text...
+  </td>
+  <td><a href="http://www.mozilla.com/en-US/firefox/upgrade.html"><img alt="" src="../browsers/icofirefox.png"/>Firefox&nbsp;3.6.12</a><br/>
+      <h2>80%</h2>Ugly rendering of front-end text...
+  </td>
+  <td><a href="http://www.opera.com/browser/download/"><img alt="" src="../browsers/icoopera.png"/>Opera&nbsp;10.63</a><br/>
+      <h2>100%</h2>
+  </td>
+  <td><a href="http://www.apple.com/safari/"><img alt="" src="../browsers/icosafari.png"/>Safari&nbsp;5.0.3</a><br/>
+      <h2>0%</h2>No filters
+  </td>
+  <td><a href="http://www.google.com/chrome/"><img alt="" src="../browsers/icochrome.png"/>Chrome&nbsp;8.0.552</a><br/>
+      <h2>90%</h2>Almost good, except of font edges
+  </td>
+  <td><a href="http://ie.microsoft.com/testdrive/Info/ThankYou/Default.html"><img alt="" src="../browsers/icoie.png"/>MSIE&nbsp;9&nbsp;pr7</a><br/>
+      <h2>0%</h2>No filters
+  </td>
+</tr>
+
+<tr>
+  <th><a href="3_anim_filter.svg"><img alt="" src="thumbs/3anim.jpg" width="100" style="float:left"/>3_anim_filter.svg</a><br/>
+    Wonderful bumpy animated filters.
+  </th>
+  <td><a href="ftp://ftp.mozilla.org/pub/firefox/nightly/latest-trunk/"><img alt="" src="../browsers/icominefield.png"/>Firefox&nbsp;4b/20101128</a><br/>
+      <h2>80%</h2>Filter works only in horizontal axis...
+  </td>
+  <td><a href="http://www.mozilla.com/en-US/firefox/upgrade.html"><img alt="" src="../browsers/icofirefox.png"/>Firefox&nbsp;3.6.12</a><br/>
+      <h2>20%</h2>Filter is there, but no SMIL
+  </td>
+  <td><a href="http://www.opera.com/browser/download/"><img alt="" src="../browsers/icoopera.png"/>Opera&nbsp;10.63</a><br/>
+      <h2>100%</h2>
+  </td>
+  <td><a href="http://www.apple.com/safari/"><img alt="" src="../browsers/icosafari.png"/>Safari&nbsp;5.0.3</a><br/>
+      <h2>0%</h2>No filters
+  </td>
+  <td><a href="http://www.google.com/chrome/"><img alt="" src="../browsers/icochrome.png"/>Chrome&nbsp;8.0.552</a><br/>
+      <h2>100%</h2>
+  </td>
+  <td><a href="http://ie.microsoft.com/testdrive/Info/ThankYou/Default.html"><img alt="" src="../browsers/icoie.png"/>MSIE&nbsp;9&nbsp;pr7</a><br/>
+      <h2>0%</h2>No SMIL, no filters
+  </td>
+</tr>
+
+<tr>
+  <th><a href="bluranim.svg"><img alt="" src="thumbs/bluranim.jpg" width="100" style="float:left"/>bluranim.svg</a><br/>
+    Animated filter trigered on user event.
+  </th>
+  <td><a href="ftp://ftp.mozilla.org/pub/firefox/nightly/latest-trunk/"><img alt="" src="../browsers/icominefield.png"/>Firefox&nbsp;4b/20101128</a><br/>
+      <h2>0%</h2>No interaction/animation at all
+  </td>
+  <td><a href="http://www.mozilla.com/en-US/firefox/upgrade.html"><img alt="" src="../browsers/icofirefox.png"/>Firefox&nbsp;3.6.12</a><br/>
+      <h2>0%</h2>No SMIL
+  </td>
+  <td><a href="http://www.opera.com/browser/download/"><img alt="" src="../browsers/icoopera.png"/>Opera&nbsp;10.63</a><br/>
+      <h2>100%</h2>
+  </td>
+  <td><a href="http://www.apple.com/safari/"><img alt="" src="../browsers/icosafari.png"/>Safari&nbsp;5.0.3</a><br/>
+      <h2>0%</h2>No interaction/animation at all
+  </td>
+  <td><a href="http://www.google.com/chrome/"><img alt="" src="../browsers/icochrome.png"/>Chrome&nbsp;8.0.552</a><br/>
+      <h2>100%</h2>No interaction/animation at all
+  </td>
+  <td><a href="http://ie.microsoft.com/testdrive/Info/ThankYou/Default.html"><img alt="" src="../browsers/icoie.png"/>MSIE&nbsp;9&nbsp;pr7</a><br/>
+      <h2>0%</h2>No SMIL, no filters
+  </td>
+</tr>
+
+<tr>
+  <th><a href="feMarble.svg"><img alt="" src="thumbs/femarble.jpg" width="100" style="float:left"/>feMarble.svg</a><br/>
+    Static text with beatiful marble texture filter.
+  </th>
+  <td><a href="ftp://ftp.mozilla.org/pub/firefox/nightly/latest-trunk/"><img alt="" src="../browsers/icominefield.png"/>Firefox&nbsp;4b/20101128</a><br/>
+      <h2>50%</h2>Shadows are fine, but marble texture is missing...
+  </td>
+  <td><a href="http://www.mozilla.com/en-US/firefox/upgrade.html"><img alt="" src="../browsers/icofirefox.png"/>Firefox&nbsp;3.6.12</a><br/>
+      <h2>50%</h2>Shadows are fine, but marble texture is missing...
+  </td>
+  <td><a href="http://www.opera.com/browser/download/"><img alt="" src="../browsers/icoopera.png"/>Opera&nbsp;10.63</a><br/>
+      <h2>100%</h2>
+  </td>
+  <td><a href="http://www.apple.com/safari/"><img alt="" src="../browsers/icosafari.png"/>Safari&nbsp;5.0.3</a><br/>
+      <h2>0%</h2>No filters
+  </td>
+  <td><a href="http://www.google.com/chrome/"><img alt="" src="../browsers/icochrome.png"/>Chrome&nbsp;8.0.552</a><br/>
+      <h2>95%</h2>Perfect rendering, but again, too soft edges...
+  </td>
+  <td><a href="http://ie.microsoft.com/testdrive/Info/ThankYou/Default.html"><img alt="" src="../browsers/icoie.png"/>MSIE&nbsp;9&nbsp;pr7</a><br/>
+      <h2>0%</h2>No filters
+  </td>
+</tr>
+
+<tr>
+  <th><a href="hollywood.svg"><img alt="" src="thumbs/hollywood.jpg" width="100" style="float:left"/>hollywood.svg</a><br/>
+    Animated reflectors cycling over text.
+  </th>
+  <td><a href="ftp://ftp.mozilla.org/pub/firefox/nightly/latest-trunk/"><img alt="" src="../browsers/icominefield.png"/>Firefox&nbsp;4b/20101128</a><br/>
+      <h2>60%</h2>Works "somehow", but you have to click on the text several times to force re-paint...
+  </td>
+  <td><a href="http://www.mozilla.com/en-US/firefox/upgrade.html"><img alt="" src="../browsers/icofirefox.png"/>Firefox&nbsp;3.6.12</a><br/>
+      <h2>20%</h2>No SMIL
+  </td>
+  <td><a href="http://www.opera.com/browser/download/"><img alt="" src="../browsers/icoopera.png"/>Opera&nbsp;10.63</a><br/>
+      <h2>100%</h2>
+  </td>
+  <td><a href="http://www.apple.com/safari/"><img alt="" src="../browsers/icosafari.png"/>Safari&nbsp;5.0.3</a><br/>
+      <h2>0%</h2>No filters/animation at all
+  </td>
+  <td><a href="http://www.google.com/chrome/"><img alt="" src="../browsers/icochrome.png"/>Chrome&nbsp;8.0.552</a><br/>
+      <h2>95%</h2>Too slow, but good anyway...
+  </td>
+  <td><a href="http://ie.microsoft.com/testdrive/Info/ThankYou/Default.html"><img alt="" src="../browsers/icoie.png"/>MSIE&nbsp;9&nbsp;pr7</a><br/>
+      <h2>0%</h2>No SMIL, no filters
+  </td>
+</tr>
+
+<tr>
+  <th><a href="Melting.svg"><img alt="" src="thumbs/melting.jpg" width="100" style="float:left"/>Melting.svg</a><br/>
+    Text in snow-like-melting animation.
+  </th>
+  <td><a href="ftp://ftp.mozilla.org/pub/firefox/nightly/latest-trunk/"><img alt="" src="../browsers/icominefield.png"/>Firefox&nbsp;4b/20101128</a><br/>
+      <h2>100%</h2>
+  </td>
+  <td><a href="http://www.mozilla.com/en-US/firefox/upgrade.html"><img alt="" src="../browsers/icofirefox.png"/>Firefox&nbsp;3.6.12</a><br/>
+      <h2>20%</h2>No SMIL
+  </td>
+  <td><a href="http://www.opera.com/browser/download/"><img alt="" src="../browsers/icoopera.png"/>Opera&nbsp;10.63</a><br/>
+      <h2>100%</h2>
+  </td>
+  <td><a href="http://www.apple.com/safari/"><img alt="" src="../browsers/icosafari.png"/>Safari&nbsp;5.0.3</a><br/>
+      <h2>0%</h2>No filters/animation at all
+  </td>
+  <td><a href="http://www.google.com/chrome/"><img alt="" src="../browsers/icochrome.png"/>Chrome&nbsp;8.0.552</a><br/>
+      <h2>95%</h2>Rendered well, but too soft edges again
+  </td>
+  <td><a href="http://ie.microsoft.com/testdrive/Info/ThankYou/Default.html"><img alt="" src="../browsers/icoie.png"/>MSIE&nbsp;9&nbsp;pr7</a><br/>
+      <h2>0%</h2>No SMIL, no filters
+  </td>
+</tr>
+
+<tr>
+  <th><a href="100percent.svg"><img alt="" src="thumbs/100percent.jpg" width="100" style="float:left"/>100percent.svg</a><br/>
+    Static text and shapes with applied filters.
+  </th>
+  <td><a href="ftp://ftp.mozilla.org/pub/firefox/nightly/latest-trunk/"><img alt="" src="../browsers/icominefield.png"/>Firefox&nbsp;4b/20101128</a><br/>
+      <h2>100%</h2>
+  </td>
+  <td><a href="http://www.mozilla.com/en-US/firefox/upgrade.html"><img alt="" src="../browsers/icofirefox.png"/>Firefox&nbsp;3.6.12</a><br/>
+      <h2>100%</h2>
+  </td>
+  <td><a href="http://www.opera.com/browser/download/"><img alt="" src="../browsers/icoopera.png"/>Opera&nbsp;10.63</a><br/>
+      <h2>100%</h2>
+  </td>
+  <td><a href="http://www.apple.com/safari/"><img alt="" src="../browsers/icosafari.png"/>Safari&nbsp;5.0.3</a><br/>
+      <h2>10%</h2>No filters
+  </td>
+  <td><a href="http://www.google.com/chrome/"><img alt="" src="../browsers/icochrome.png"/>Chrome&nbsp;8.0.552</a><br/>
+      <h2>100%</h2>
+  </td>
+  <td><a href="http://ie.microsoft.com/testdrive/Info/ThankYou/Default.html"><img alt="" src="../browsers/icoie.png"/>MSIE&nbsp;9&nbsp;pr7</a><br/>
+      <h2>60%</h2>No filters, but rest is ok
+  </td>
+</tr>
+
+<tr>
+  <th>Total points (35 demos x 10 points max):
+  </th>
+  <td><a href="ftp://ftp.mozilla.org/pub/firefox/nightly/latest-trunk/"><img alt="" src="../browsers/icominefield.png"/>Firefox&nbsp;4b/20101128</a><br/>
+      <h2>307 / 350</h2>
+  </td>
+  <td><a href="http://www.mozilla.com/en-US/firefox/upgrade.html"><img alt="" src="../browsers/icofirefox.png"/>Firefox&nbsp;3.6.12</a><br/>
+      <h2>205 / 350</h2>
+  </td>
+  <td><a href="http://www.opera.com/browser/download/"><img alt="" src="../browsers/icoopera.png"/>Opera&nbsp;10.63</a><br/>
+      <h2>328.5 / 350</h2>
+  </td>
+  <td><a href="http://www.apple.com/safari/"><img alt="" src="../browsers/icosafari.png"/>Safari&nbsp;5.0.3</a><br/>
+      <h2>203 / 350</h2>
+  </td>
+  <td><a href="http://www.google.com/chrome/"><img alt="" src="../browsers/icochrome.png"/>Chrome&nbsp;8.0.552</a><br/>
+      <h2>282.5 / 350</h2>
+  </td>
+  <td><a href="http://ie.microsoft.com/testdrive/Info/ThankYou/Default.html"><img alt="" src="../browsers/icoie.png"/>MSIE&nbsp;9&nbsp;pr7</a><br/>
+      <h2>78 / 350</h2>
+  </td>
+</tr>
+
+</table>
+
+
+
+
+<div id="footer">
+<h4>Author: Marek Raida &lt;marek&nbsp;.&nbsp;raida&nbsp;@&nbsp;gmail&nbsp;.&nbsp;com&gt;</h4>
+</div>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-11950721-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+</body>
+</html>

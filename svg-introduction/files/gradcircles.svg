@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" height="768" width="1024" xmlns:xlink="http://www.w3.org/1999/xlink">
+<!-- from http://purl.org/dc/dcmitype/StillImage -->
+  <linearGradient id="lg3325">
+   <stop stop-color="#FFF" offset="0"/>
+   <stop stop-color="#FFF" stop-opacity="0" offset="1"/>
+  </linearGradient>
+  <linearGradient id="lg3209">
+   <stop stop-color="#0F0" offset="0"/>
+   <stop stop-color="#0F0" stop-opacity="0" offset="1"/>
+  </linearGradient>
+  <linearGradient id="lg3199">
+   <stop stop-color="#00F" offset="0"/>
+   <stop stop-color="#00F" stop-opacity="0" offset="1"/>
+  </linearGradient>
+  <linearGradient id="lg3187">
+   <stop stop-color="#F00" offset="0"/>
+   <stop stop-color="#F00" stop-opacity="0" offset="1"/>
+  </linearGradient>
+  <radialGradient id="rg3406" xlink:href="#lg3209" gradientUnits="userSpaceOnUse" cy="358.8" cx="609.2" r="518.1"/>
+  <radialGradient id="rg3408" xlink:href="#lg3187" gradientUnits="userSpaceOnUse" cy="358.8" cx="609.2" r="518.1"/>
+  <radialGradient id="rg3410" xlink:href="#lg3199" gradientUnits="userSpaceOnUse" cy="358.8" cx="609.2" r="518.1"/>
+  <radialGradient id="rg3412" xlink:href="#lg3325" gradientUnits="userSpaceOnUse" cy="358.8" cx="609.2" r="518.1"/>
+ <circle cx="515" cy="515" r="520" transform="matrix(0,0.988222,-0.988222,0,538.852,-400.766)" fill="url(#rg3406)"/>
+ <circle cx="515" cy="515" r="520" transform="matrix(0.988222,0,0,0.988222,-367.062,145.353)" fill="url(#rg3408)"/>
+ <circle cx="515" cy="515" r="520" transform="matrix(-0.988222,0,0,-0.988222,1325.37,644.075)" fill="url(#rg3410)"/>
+ <circle cx="515" cy="515" r="520" transform="matrix(-0.988222,0,0,0.988222,1410.38,277.497)" fill="url(#rg3412)"/>
+ <circle cx="515" cy="515" r="520" transform="matrix(0,0.988222,-0.988222,0,474.852,367.234)" fill="url(#rg3406)"/>
+ <circle cx="515" cy="515" r="520" transform="matrix(0.988222,0,0,0.988222,368.938,-454.647)" fill="url(#rg3408)"/>
+ <circle cx="515" cy="515" r="520" transform="matrix(-0.988222,0,0,-0.988222,1621.37,1332.08)" fill="url(#rg3410)"/>
+ <circle cx="515" cy="515" r="520" transform="matrix(-0.988222,0,0,0.988222,777.974,-357.651)" fill="url(#rg3412)"/>
+ <circle cx="515" cy="515" r="520" transform="matrix(-0.988222,0,0,0.988222,683.47,291.639)" fill="url(#rg3412)"/>
+ <circle cx="515" cy="515" r="520" transform="matrix(0.988222,0,0,0.988222,223.248,-254.248)" fill="url(#rg3412)"/>
+ <circle cx="515" cy="515" r="520" transform="matrix(0,0.988222,-0.988222,0,1503.35,88.5515)" fill="url(#rg3406)"/>
+ <circle cx="515" cy="515" r="520" transform="matrix(0.988222,0,0,-0.988222,-1.58605,1400.05)" fill="url(#rg3408)"/>
+ <circle cx="515" cy="515" r="520" transform="matrix(0.988222,0,0,0.988222,-109.066,-649.809)" fill="url(#rg3408)"/>
+ <circle cx="515" cy="515" r="520" transform="matrix(0.988222,0,0,0.988222,431.417,-409.486)" fill="url(#rg3410)"/>
+</svg>

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50" height="50">
+<defs>
+  <circle r="20" id="abc" fill="gray"/>
+</defs>
+<circle r="50"/>
+<use xlink:href="#abc"/>
+</svg>

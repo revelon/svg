@@ -1,0 +1,33 @@
+<!--
+NOTICE:  [1999-2001] Adobe Systems Incorporated.  Adobe hereby grants you the rights to reproduce, modify and distribute this file and its contents, not including any fonts, audio files or raster images included or embedded in or linked to this file, (the "Software"), and to grant such rights to other parties subject to the following:  This notice shall be included in any copy of the Software or any portion thereof.  THE SOFTWARE IS PROVIDED TO YOU AS-IS, WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT.  IN NO EVENT SHALL ADOBE BE LIABLE TO YOU OR ANY OTHER PARTY FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE.
+Modified by  Marek Raida
+-->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>circleanimation.svg</title> 
+<desc>vector object transformations</desc>
+
+        <g transform="translate(160 150)">
+                <circle id="circle1" style="fill:#3333ff;stroke-width:1;opacity:.8" cx="0" cy="0" r="30">
+                        <animateTransform attributeName="transform" type="rotate" values="0;360" additive="sum" dur="3s" repeatDur="indefinite"/>
+                        <animateTransform attributeName="transform" type="scale"  values="4 1;0.5 1;4 1"   additive="sum" dur="4s" repeatDur="indefinite"/>
+                </circle>
+                <circle id="circle2" style="fill:#99cc66;stroke-width:3;opacity:.7" cx="0" cy="0" r="30">
+                        <animateTransform attributeName="transform" type="rotate" values="0;-360" additive="sum" dur="12s" repeatDur="indefinite"/>
+                        <animateTransform attributeName="transform" type="rotate" values="0;30;-40;190;90;170;320;290;210;170;0" additive="sum" dur="7s" repeatDur="indefinite"/>
+                        <animateTransform attributeName="transform" type="scale"  values="1 5;3 0.5;1 5"   additive="sum" dur="3s" repeatDur="indefinite"/>
+                </circle>
+                <circle id="circle3" style="fill:#ccff33;stroke-width:3;opacity:.5" cx="0" cy="0" r="30">
+                        <animateTransform attributeName="transform" type="rotate" values="0;-360" additive="sum" dur="12s" repeatDur="indefinite"/>
+                        <animateTransform attributeName="transform" type="rotate" values="0;20;-30;190;90;170;220;190;210;170;0" additive="sum" dur="7s" repeatDur="indefinite"/>
+                        <animateTransform attributeName="transform" type="scale"  values="1 5;3 0.5;1 5"   additive="sum" dur="3s" repeatDur="indefinite"/>
+                </circle>
+               
+                <circle id="circle4" style="fill:#6666ff;stroke-width:3;opacity:.7" cx="0" cy="0" r="20">
+                        <animateTransform attributeName="transform" type="rotate" values="0;-360" additive="sum" dur="12s" repeatDur="indefinite"/>
+                        <animateTransform attributeName="transform" type="rotate" values="0;30;-30;190;90;70;120;290;110;170;0" additive="sum" dur="8s" repeatDur="indefinite"/>
+                        <animateTransform attributeName="transform" type="scale"  values="4 1;0.5 1;4 1"   additive="sum" dur="3s" repeatDur="indefinite"/>
+                </circle>
+        </g>
+
+<image xlink:href="http://www.google-analytics.com/__utm.gif?utmwv=4.7.1&amp;utmn=21830374&amp;utmhn=svg.kvalitne.cz&amp;utmcs=UTF-8&amp;utmsr=1920x1080&amp;utmsc=24-bit&amp;utmul=en-us&amp;utmje=1&amp;utmfl=10.0%20r45&amp;utmdt=SVG%C2%A0%E2%80%94%C2%A0It%27s%20in%20your%20hands...&amp;utmhid=1377849700&amp;utmr=-&amp;utmp=%2Findex2.htm&amp;utmac=UA-11950721-1&amp;utmcc=__utma%3D251371972.1884550355.1260220320.1272562824.1272576758.56%3B%2B__utmz%3D251371972.1263752798.41.3.utmcsr%3Dgoogle%7Cutmccn%3D(organic)%7Cutmcmd%3Dorganic%7Cutmctr%3Dsvg%2520smil%2520demo%3B" width="1" height="1"/>
+</svg>

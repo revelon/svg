@@ -1,0 +1,60 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+
+
+<title>Adobe Floor Plan Banner</title>
+<meta name="author" content="Glen H. Gersten">
+<script language="JavaScript">
+// get the search result
+function result() {
+	var str = document.searchForm.searchStr.value
+
+	if (str.length > 1) {
+		// reset state
+		parent.resetState()
+
+		// blank main and data pages
+		parent.main.location = parent.thisPath + 'blank.html'
+		parent.data.location = parent.thisPath + 'data.html'
+
+		// make sure there's time to actually load the page
+		for(i=0; i < 10000; i++) {
+			nothing = 0
+		}
+
+		// allow the submit to continue
+		return true
+	} else {
+		alert('Please Enter a Query')
+		return false
+	}
+}
+</script>
+</head><body>
+
+<form name="searchForm" method="POST" action="http://www.adobe.com/cgi-bin/svgdemo.search.cgi" target="main" onsubmit="return false;">
+<table width="850" border="0" cellpadding="0" cellspacing="0">
+	<tbody><tr valign="MIDDLE">
+		<td width="550">
+			<embed name="banner" src="banner.svg" type="image/svg+xml" width="550" height="55">
+		</td>
+		<td width="250">
+			<input name="searchStr" size="15" class="input" type="text"> &nbsp;
+			<input name="go" src="go.gif" alt="Go!" width="30" type="image" border="0" height="22">
+			<input name="source" value="frameset" type="hidden">
+
+			<br>
+
+			<embed name="links" src="help.svg" type="image/svg+xml" width="90" height="15">
+
+		</td>
+	</tr>
+</tbody></table>
+
+
+
+</form>
+
+</body></html>

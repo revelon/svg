@@ -1,0 +1,47 @@
+<!--
+NOTICE:  [1999-2001] Adobe Systems Incorporated.  Adobe hereby grants you the rights to reproduce, modify and distribute this file and its contents, not including any fonts, audio files or raster images included or embedded in or linked to this file, (the "Software"), and to grant such rights to other parties subject to the following:  This notice shall be included in any copy of the Software or any portion thereof.  THE SOFTWARE IS PROVIDED TO YOU AS-IS, WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT.  IN NO EVENT SHALL ADOBE BE LIABLE TO YOU OR ANY OTHER PARTY FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE.
+Modified by  Marek Raida
+-->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>Melting.svg</title> 
+<desc>Animated melting text filter effect</desc>
+<defs>
+	<filter id="Melting" filterUnits="objectBoundingBox" x="-10%" y="-30%" width="120%" height="200%">
+		<feTurbulence baseFrequency="0.02" numOctaves="3" result="turb"/>
+		<feDisplacementMap result="bended" in="SourceGraphic" in2="turb" scale="0" xChannelSelector="R" yChannelSelector="G">
+			<animate attributeName="scale" attributeType="XML" values="0;50" begin="2s" dur="15s" repeatCount="indefinite"/>
+		</feDisplacementMap>
+		<feGaussianBlur in="bended" stdDeviation="2" result="bb"/>
+		<feComponentTransfer in="bb" result="BendedSource">
+			<feFuncA type="linear" slope="10" intercept="-1">
+				<animate attributeName="intercept" attributeType="XML" values="-1;-1;-3;-4" begin="2s" dur="15s" repeatCount="indefinite"/>
+			</feFuncA>
+		</feComponentTransfer>
+		<feComponentTransfer in="BendedSource" result="BendedAlpha">
+			<feFuncR type="linear" slope="0" intercept="0"/>
+			<feFuncG type="linear" slope="0" intercept="0"/>
+			<feFuncB type="linear" slope="0" intercept="0"/>
+			<feFuncA type="linear" slope="1" intercept="0"/>
+		</feComponentTransfer>
+		<feGaussianBlur in="BendedAlpha" stdDeviation="4" result="blur"/>
+		<feOffset in="blur" dx="5" dy="5" result="offsetBlurredAlpha"/>
+		<feSpecularLighting in="blur" surfaceScale="5" specularConstant="1" specularExponent="10" lightColor="#FFCC88" result="specularOut">
+			<fePointLight	x="-5000" y="-10000" z="20000"/>
+		</feSpecularLighting>
+		<feComposite in="specularOut" in2="BendedAlpha" operator="in" result="specularOut"/>
+		<feComposite in="BendedSource" in2="specularOut" operator="arithmetic" k1="0" k2="1" k3="1" k4="0" result="litPaint"/>
+		<feMerge>
+			<feMergeNode in="offsetBlurredAlpha"/>
+			<feMergeNode in="litPaint"/>
+		</feMerge>
+	</filter>
+</defs>
+
+<rect style="fill:#EEDD00" x="80" y="20" width="400" height="140"/>
+<text x="100" y="100" style="font-family:Sans-Serif;font-size:50px;fill:#0066AA;filter:url(#Melting)">MELTING SVG
+<animate attributeName="fill-opacity" attributeType="CSS" values="1;0.8" begin="2s" dur="15s" repeatCount="indefinite"/>
+</text>
+
+<image xlink:href="http://www.google-analytics.com/__utm.gif?utmwv=4.7.1&amp;utmn=21830374&amp;utmhn=svg.kvalitne.cz&amp;utmcs=UTF-8&amp;utmsr=1920x1080&amp;utmsc=24-bit&amp;utmul=en-us&amp;utmje=1&amp;utmfl=10.0%20r45&amp;utmdt=SVG%C2%A0%E2%80%94%C2%A0It%27s%20in%20your%20hands...&amp;utmhid=1377849700&amp;utmr=-&amp;utmp=%2Findex2.htm&amp;utmac=UA-11950721-1&amp;utmcc=__utma%3D251371972.1884550355.1260220320.1272562824.1272576758.56%3B%2B__utmz%3D251371972.1263752798.41.3.utmcsr%3Dgoogle%7Cutmccn%3D(organic)%7Cutmcmd%3Dorganic%7Cutmctr%3Dsvg%2520smil%2520demo%3B" width="1" height="1"/>
+
+</svg>

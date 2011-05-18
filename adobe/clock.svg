@@ -1,0 +1,61 @@
+<!--
+NOTICE:  [1999-2001] Adobe Systems Incorporated.  Adobe hereby grants you the rights to reproduce, modify and distribute this file and its contents, not including any fonts, audio files or raster images included or embedded in or linked to this file, (the "Software"), and to grant such rights to other parties subject to the following:  This notice shall be included in any copy of the Software or any portion thereof.  THE SOFTWARE IS PROVIDED TO YOU AS-IS, WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT.  IN NO EVENT SHALL ADOBE BE LIABLE TO YOU OR ANY OTHER PARTY FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE.
+Modified By Marek Raida
+-->
+<svg onload="SetTime(evt)" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>SVG analog clock</title>
+<desc>this clock gets the current time from the client's system and converts it to an analog display</desc>
+
+  <defs>
+    <script language="Javascript">
+      <![CDATA[
+      
+        function SetTime(LoadEvent)
+          {
+            var Now = new Date();
+            
+            var Seconds = Now.getSeconds();
+            var Minutes = Now.getMinutes() + Seconds / 60;
+            var Hours = Now.getHours() + Minutes / 60;
+          
+            document.getElementById("seconds").setAttribute('transform', 'rotate(' + (Seconds * 6) + ')');
+            document.getElementById("minutes").setAttribute('transform', 'rotate(' + (Minutes * 6) + ')');
+            document.getElementById("hours").setAttribute('transform', 'rotate(' + (Hours * 30) + ')');
+          }
+          
+      ]]>
+    </script>
+  </defs>
+  <circle cx="100" cy="100" r="80" style="fill:white;stroke:black"/>
+  <text x="130" y="46" style="font-size:15px">1</text>
+  <text x="154" y="71" style="font-size:15px">2</text>
+  <text x="165" y="106" style="font-size:15px">3</text>
+  <text x="155" y="140" style="font-size:15px">4</text>
+  <text x="130" y="166" style="font-size:15px">5</text>
+  <text x="96" y="175" style="font-size:15px">6</text>
+  <text x="62" y="166" style="font-size:15px">7</text>
+  <text x="37" y="140" style="font-size:15px">8</text>
+  <text x="27" y="106" style="font-size:15px">9</text>
+  <text x="34" y="71" style="font-size:15px">10</text>
+  <text x="58" y="46" style="font-size:15px">11</text>
+  <text x="92" y="37" style="font-size:15px">12</text>
+  <g transform="translate(100 100)">
+    <g id="hours">
+      <line x1="0" y1="0" x2="0" y2="-35" style="stroke-width:4;stroke:black">
+        <animateTransform attributeName="transform" type="rotate" dur="43200s" values="0;360" repeatCount="indefinite"/>
+      </line>
+    </g>
+    <g id="minutes">
+      <line x1="0" y1="0" x2="0" y2="-55" style="stroke-width:2;stroke:black">
+        <animateTransform attributeName="transform" type="rotate" dur="3600s" values="0;360" repeatCount="indefinite"/>
+      </line>
+    </g>
+    <g id="seconds">
+      <line x1="0" y1="0" x2="0" y2="-75" style="stroke-width:1;stroke:red">
+        <animateTransform attributeName="transform" type="rotate" dur="60s" values="0;360" repeatCount="indefinite"/>
+      </line>
+    </g>
+  </g>  
+  <circle cx="100" cy="100" r="3" style="fill:black;stroke:black"/>
+<image xlink:href="http://www.google-analytics.com/__utm.gif?utmwv=4.7.1&amp;utmn=21830374&amp;utmhn=svg.kvalitne.cz&amp;utmcs=UTF-8&amp;utmsr=1920x1080&amp;utmsc=24-bit&amp;utmul=en-us&amp;utmje=1&amp;utmfl=10.0%20r45&amp;utmdt=SVG%C2%A0%E2%80%94%C2%A0It%27s%20in%20your%20hands...&amp;utmhid=1377849700&amp;utmr=-&amp;utmp=%2Findex2.htm&amp;utmac=UA-11950721-1&amp;utmcc=__utma%3D251371972.1884550355.1260220320.1272562824.1272576758.56%3B%2B__utmz%3D251371972.1263752798.41.3.utmcsr%3Dgoogle%7Cutmccn%3D(organic)%7Cutmcmd%3Dorganic%7Cutmctr%3Dsvg%2520smil%2520demo%3B" width="1" height="1"/>
+</svg>

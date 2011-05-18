@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="816" height="460">
+<title>Runners SVG Banner</title>
+<desc>inspired by some SWF banner, created by Marek Raida, marek.raida@gmail.com</desc>
+
+<script type="text/ecmascript" xlink:href="../fakesmile/smil.user.js"/>
+
+<g>
+    <image x="-815" y="-20" width="816" height="425" xlink:href="skydiff.jpg"/>
+    <image x="0" y="-20" width="816" height="425" xlink:href="skydiff.jpg"/>
+    <animateTransform attributeName="transform" type="translate" dur="14s" from="0 0" to="816 0" repeatCount="indefinite" begin="0s"/>
+</g>
+
+<linearGradient id="grass" gradientUnits="objectBoundingBox" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#040"/>
+    <stop offset="1" stop-color="green"/>
+</linearGradient>
+
+<linearGradient id="track" gradientUnits="objectBoundingBox" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#995141"/>
+    <stop offset="1" stop-color="#5d1909"/>
+</linearGradient>
+
+<g>
+    <rect x="-816" y="323" width="1632" height="50" fill="url(#grass)"/>
+    <rect x="-816" y="373" width="1632" height="95" fill="url(#track)"/>
+    <line x1="-816" y1="373" x2="816" y2="373" stroke="white" stroke-width="1"/>
+    <line x1="-816" y1="379" x2="816" y2="379" stroke="white" stroke-width="1"/>
+    <line x1="-816" y1="388" x2="816" y2="388" stroke="white" stroke-width="1"/>
+    <line x1="-816" y1="405" x2="816" y2="405" stroke="white" stroke-width="1"/>
+    <line x1="-816" y1="440" x2="816" y2="440" stroke="white" stroke-width="1"/>
+</g>
+
+<g>
+    <g id="trees1" transform="translate(0 -48)">
+        <image x="-50" y="135" width="256" height="256" xlink:href="tree8.png"/>
+        <image x="50" y="150" width="256" height="256" xlink:href="tree8.png"/>
+        <image x="150" y="160" width="256" height="256" xlink:href="tree8.png"/>
+        <image x="300" y="140" width="256" height="256" xlink:href="tree8.png"/>
+        <image x="420" y="155" width="256" height="256" xlink:href="tree8.png"/>
+        <image x="520" y="160" width="256" height="256" xlink:href="tree8.png"/>
+        <image x="600" y="145" width="256" height="256" xlink:href="tree8.png"/>
+    </g>
+    <g transform="translate(-815 -48)">
+        <image x="-50" y="135" width="256" height="256" xlink:href="tree8.png"/>
+        <image x="50" y="150" width="256" height="256" xlink:href="tree8.png"/>
+        <image x="150" y="160" width="256" height="256" xlink:href="tree8.png"/>
+        <image x="300" y="140" width="256" height="256" xlink:href="tree8.png"/>
+        <image x="420" y="155" width="256" height="256" xlink:href="tree8.png"/>
+        <image x="520" y="160" width="256" height="256" xlink:href="tree8.png"/>
+        <image x="600" y="145" width="256" height="256" xlink:href="tree8.png"/>
+    </g>
+    <animateTransform attributeName="transform" type="translate" dur="8s" from="0 0" to="816 0" repeatCount="indefinite" begin="0s"/>
+</g>
+
+<g opacity="0">
+    <line x1="285" y1="373" x2="72" y2="461" stroke="white" stroke-width="2.5"/>
+    <image x="10" y="230" width="274" height="219" xlink:href="runners8.png"/>
+    <animateTransform attributeName="transform" type="translate" dur="3s" begin="3s;runnersOut.end+6s" from="-290 0" to="0 0" repeatCount="1" fill="freeze" id="runnersIn"/>
+    <animateTransform attributeName="transform" type="translate" dur="1s" begin="runnersOut.begin" from="0 0" to="550 0" repeatCount="1"/>
+    <animate attributeName="opacity" dur="1s" begin="runnersIn.end+3s" from="1" to="0" repeatCount="1" fill="freeze" id="runnersOut"/>
+    <set attributeName="opacity" begin="runnersIn.begin" to="1"/>
+</g>
+
+<g font-size="60px" font-family="sans-serif" font-weight="bold" fill="none" stroke="white" stroke-width="2">
+    <text x="400" y="300" display="none">GET READY..
+        <set attributeName="display" begin="runnersIn.begin+1s" to="block"/>
+        <set attributeName="display" begin="runnersOut.begin" to="none"/>
+    </text>
+    <text x="500" y="300" display="none">!GO!
+        <set attributeName="display" begin="runnersIn.begin;runnersOut.end+0.5s" to="none"/>
+        <set attributeName="display" begin="runnersOut.begin" to="block"/>
+    </text>
+</g>
+
+<image xlink:href="http://www.google-analytics.com/__utm.gif?utmwv=4.7.1&amp;utmn=21830374&amp;utmhn=svg.kvalitne.cz&amp;utmcs=UTF-8&amp;utmsr=1920x1080&amp;utmsc=24-bit&amp;utmul=en-us&amp;utmje=1&amp;utmfl=10.0%20r45&amp;utmdt=SVG%C2%A0%E2%80%94%C2%A0It%27s%20in%20your%20hands...&amp;utmhid=1377849700&amp;utmr=-&amp;utmp=%2Findex2.htm&amp;utmac=UA-11950721-1&amp;utmcc=__utma%3D251371972.1884550355.1260220320.1272562824.1272576758.56%3B%2B__utmz%3D251371972.1263752798.41.3.utmcsr%3Dgoogle%7Cutmccn%3D(organic)%7Cutmcmd%3Dorganic%7Cutmctr%3Dsvg%2520smil%2520demo%3B" width="1" height="1"/>
+
+</svg>

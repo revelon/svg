@@ -1,0 +1,130 @@
+<!--
+NOTICE:  [1999-2001] Adobe Systems Incorporated.  Adobe hereby grants you the rights to reproduce, modify and distribute this file and its contents, not including any fonts, audio files or raster images included or embedded in or linked to this file, (the "Software"), and to grant such rights to other parties subject to the following:  This notice shall be included in any copy of the Software or any portion thereof.  THE SOFTWARE IS PROVIDED TO YOU AS-IS, WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT.  IN NO EVENT SHALL ADOBE BE LIABLE TO YOU OR ANY OTHER PARTY FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE.
+Modified by  Marek Raida
+-->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 300 200" onload="on_load(evt)">
+<script><![CDATA[
+	// Global variables.
+	var nframes = 30; // Number of frames in animation
+	var current_frame = -1; // Current frame, first frame is numbered 0.
+	var direction = 1; // Direction of animation, 1 to move up in frame
+										 // numbers, -1 to move down.
+	/*
+	
+	/*
+	* Function to save pointers to various parts of this document in global
+	* variables. These variables are used in the animation functions.
+	*/
+	function on_load (evt)
+	{
+		// This makes the next_frame function available to JavaScript functions
+		// defined outside of the SVG document. This is needed so that the
+		// setInterval function can find and call next_frame when needed.
+		window.anim2_01_next_frame = next_frame;
+		window.window.anim2_01_svgdoc = document;
+		window.setInterval ('anim2_01_next_frame()', 100);
+		
+	}
+	/*
+	* This function implements the animation. At each invocation, the function
+	* set the opacity and the scale of the SVG element based on the current
+	* frame number, then sets the opacity and transform properties of the
+	* SVG element with these values.
+	* The opacity goes from 0 to 1 and back to 0, the x-scale goes from 1 to
+	* 1.32 and back to 1, and the y-scale goes from 1 to 1.29 and back to 1.
+	*/
+	function next_frame ()
+	{
+		// There is only one SVG element involved here so we get its style
+		// object right-away.
+		var svgdoc = window.anim2_01_svgdoc;
+		var svgobj = svgdoc.getElementById('gradient_star_white');
+		var svgstyle = svgobj.style;
+		// Increment/decrement current frame number.
+		current_frame += direction;
+		// When we go beyond the last or the first frame, we change directions
+		// and set the frame number to [last frame - 1] or 1. This makes the
+		// figures look like they're bouncing back-and-forth.
+		if (current_frame >= nframes)
+		{
+			current_frame = nframes-2;
+			direction = -1;
+		}
+		else if (current_frame < 0)
+		{
+			current_frame = 1;
+			direction = 1;
+		}
+		// Calculate opacity and scales based on frame number.
+		var opacity = current_frame / (nframes-1);
+		var scalex = 1 + 0.32 * current_frame / (nframes-1);
+		var scaley = 1 + 0.29 * current_frame / (nframes-1);
+		// Set the SVG elements properties. This will override the previous
+		// settings, in effect "removing" the appearance of the element from
+		// the previous frame.
+		svgstyle.setProperty('fill-opacity', opacity+'', '');
+		svgobj.setAttribute ('transform',
+			'translate(150 100)'
+			+ 'scale('+scalex+' '+scaley+')'
+			+ 'translate(-150 -100)');
+	}
+]]></script>
+<g id="gradient_star">
+	<defs>
+		<radialGradient id="gradient1" cx="150.0005" cy="100" r="113.7914" fx="150.0005" fy="100">
+			<stop  offset="0.19" style="stop-color:#FFFF00"/>
+			<stop  offset="0.4782" style="stop-color:#FFD00D"/>
+			<stop  offset="1" style="stop-color:#FE7312"/>
+		</radialGradient>
+	</defs>
+	<path d="M34.189 147.908c12.889 11.543 53.359 11.936 90.396 0.878c1.087-0.323 2.155-0.656 3.209-0.992c5.948 16.245 23.633 28.029 44.526 28.029c25.772 0 46.666-17.931 46.666-40.048c0-0.648-0.021-1.293-0.057-1.935c30.178 5.459 58.755 3.431 69.201-5.927c12.887-11.544-6.692-29.866-43.73-40.925c-1.086-0.324-2.175-0.636-3.266-0.94c24.229-10.787 35.12-24.6 24.673-33.958c-12.887-11.543-53.357-11.936-90.396-0.876c-1.086 0.324-2.154 0.655-3.209 0.992c-5.949-16.245-23.633-28.029-44.525-28.029c-25.773 0-46.667 17.93-46.667 40.048c0 0.648 0.02 1.292 0.056 1.933c-30.177-5.458-58.751-3.43-69.199 5.928c-12.884 11.543 6.694 29.865 43.73 40.925c1.084 0.323 2.175 0.636 3.266 0.94c-24.23 10.788-35.121 24.601-24.675 33.957zM 149.314 107.558c-10.009 5.3-34.144 4.525-57.395-2.094c2.272-0.815 4.656-1.602 7.148-2.345c3.086-0.922 6.192-1.73 9.288-2.442c5.891 2.303 12.428 3.595 19.323 3.595c3.19 0 6.308-0.274 9.322-0.8c-13.879-1.833-24.648-13.031-25.194-26.753 c2.503 0.609 5.013 1.285 7.506 2.03c3.084 0.921 5.991 1.909 8.733 2.938c-0.913 3.789 0.19 7.364 3.639 10.452c1.595 1.43 3.619 2.687 6.001 3.775c-3.869-7.133 9.495-17.555 32.202-24.66c0.232 1.426 0.354 2.887 0.354 4.375c0 1.843-0.2 3.639-0.554 5.381c-6.801 1.487-12.235 3.768-15.683 6.856c-1.595 1.429-2.688 2.964-3.318 4.575c10.008-5.299 34.143-4.524 57.393 2.093c-2.271 0.817-4.656 1.603-7.149 2.347c-3.085 0.921-6.192 1.729-9.288 2.442c-5.89-2.303-12.429-3.596-19.322-3.596c-3.192 0-6.309 0.276-9.322 0.8c13.879 1.834 24.648 13.029 25.192 26.753c-2.502-0.609-5.009-1.284-7.502-2.029c-3.087-0.921-5.993-1.91-8.735-2.939c0.912-3.789-0.191-7.364-3.639-10.451c-1.596-1.43-3.617-2.688-6.002-3.773c3.869 7.131-9.495 17.553-32.202 24.659c-0.234-1.427-0.356-2.888-0.356-4.377c0-1.842 0.2-3.638 0.553-5.381c6.803-1.486 12.239-3.768 15.686-6.856c1.597-1.428 2.691-2.963 3.32-4.575zM 82.055 72.651c3.095 12.404 12.883 22.672 25.964 27.896 c-6.58 0.88-13.314 2.125-20.031 3.74c-24.678-7.778-38.222-19.47-30.367-26.504c4.073-3.649 13.125-5.343 24.434-5.132zM 161.823 55.894C142.6 63.483 130.302 73 128.097 81.471c-4.766-2.507-10.221-4.9-16.285-7.102c0.688-14.941 13.496-26.853 29.199-26.853c8.146 0 15.511 3.208 20.812 8.378zM 229.768 83.243c-22.32-4.815-44.407-5.565-59.694-2.317c1.816-3.388 3.099-7.027 3.753-10.844c25.363-7.164 51.714-7.383 59.565-0.349c4.073 3.649 2.385 8.552-3.624 13.511zM 217.942 127.349c-3.097-12.403-12.884-22.672-25.965-27.896c6.582-0.879 13.315-2.125 20.036-3.74c24.676 7.777 38.219 19.47 30.367 26.503c-4.074 3.649-13.129 5.344-24.438 5.133zM 138.173 144.106c19.224-7.591 31.525-17.108 33.73-25.578c4.766 2.506 10.217 4.899 16.281 7.102c-0.687 14.942-13.493 26.854-29.198 26.854c-8.147 0-15.511-3.208-20.813-8.378zM 70.23 116.756c22.32 4.816 44.408 5.566 59.693 2.319c-1.815 3.388-3.097 7.026-3.753 10.844c-25.362 7.162-51.711 7.383-59.565 0.349 c-4.074-3.65-2.383-8.552 3.625-13.512z" style="fill:url(#gradient1);;"/>
+</g>
+<!-- gradient_star -->
+<g id="gradient_star_white">
+	<path d="M149.314 107.558c-10.009 5.3-34.144 4.525-57.395-2.094c2.272-0.815 4.656-1.602 7.148-2.345c3.086-0.922 6.192-1.73 9.288-2.442c5.891 2.303 12.428 3.595 19.323 3.595c3.19 0 6.308-0.274 9.322-0.8c-13.879-1.833-24.648-13.031-25.194-26.753c2.503 0.609 5.013 1.285 7.506 2.03c3.084 0.921 5.991 1.909 8.733 2.938c-0.913 3.789 0.19 7.364 3.639 10.452c1.595 1.43 3.619 2.687 6.001 3.775c-3.869-7.133 9.495-17.555 32.202-24.66c0.232 1.426 0.354 2.887 0.354 4.375c0 1.843-0.2 3.639-0.554 5.381c-6.801 1.487-12.235 3.768-15.683 6.856c-1.595 1.429-2.688 2.964-3.318 4.575c10.008-5.299 34.143-4.524 57.393 2.093c-2.271 0.817-4.656 1.603-7.149 2.347c-3.085 0.921-6.192 1.729-9.288 2.442c-5.89-2.303-12.429-3.596-19.322-3.596c-3.192 0-6.309 0.276-9.322 0.8c13.879 1.834 24.648 13.029 25.192 26.753c-2.502-0.609-5.009-1.284-7.502-2.029c-3.087-0.921-5.993-1.91-8.735-2.939c0.912-3.789-0.191-7.364-3.639-10.451c-1.596-1.43-3.617-2.688-6.002-3.773 c3.869 7.131-9.495 17.553-32.202 24.659c-0.234-1.427-0.356-2.888-0.356-4.377c0-1.842 0.2-3.638 0.553-5.381c6.803-1.486 12.239-3.768 15.686-6.856c1.597-1.428 2.691-2.963 3.32-4.575z" style="fill:#FFFFFF;;"/>
+	<path d="M82.055 72.651c3.095 12.404 12.883 22.672 25.964 27.896c-6.58 0.88-13.314 2.125-20.031 3.74c-24.678-7.778-38.222-19.47-30.367-26.504c4.073-3.649 13.125-5.343 24.434-5.132z" style="fill:#FFFFFF;;"/>
+	<path d="M161.823 55.894C142.6 63.483 130.302 73 128.097 81.471c-4.766-2.507-10.221-4.9-16.285-7.102c0.688-14.941 13.496-26.853 29.199-26.853c8.146 0 15.511 3.208 20.812 8.378z" style="fill:#FFFFFF;;"/>
+	<path d="M229.768 83.243c-22.32-4.815-44.407-5.565-59.694-2.317c1.816-3.388 3.099-7.027 3.753-10.844c25.363-7.164 51.714-7.383 59.565-0.349c4.073 3.649 2.385 8.552-3.624 13.511z" style="fill:#FFFFFF;;"/>
+	<path d="M217.942 127.349c-3.097-12.403-12.884-22.672-25.965-27.896c6.582-0.879 13.315-2.125 20.036-3.74c24.676 7.777 38.219 19.47 30.367 26.503c-4.074 3.649-13.129 5.344-24.438 5.133z" style="fill:#FFFFFF;;"/>
+	<path d="M138.173 144.106c19.224-7.591 31.525-17.108 33.73-25.578c4.766 2.506 10.217 4.899 16.281 7.102c-0.687 14.942-13.493 26.854-29.198 26.854c-8.147 0-15.511-3.208-20.813-8.378z" style="fill:#FFFFFF;;"/>
+	<path d="M70.23 116.756c22.32 4.816 44.408 5.566 59.693 2.319c-1.815 3.388-3.097 7.026-3.753 10.844c-25.362 7.162-51.711 7.383-59.565 0.349c-4.074-3.65-2.383-8.552 3.625-13.512z" style="fill:#FFFFFF;;"/>
+</g>
+<!-- gradient_star_white -->
+<g id="SVG" style="fill-opacity:0.5">
+	<g style="font-size:30px;letter-spacing:0.4em;;font-family:Helvetica-BoldOblique;;">
+		<text transform="matrix(1.048 0 0 1 13.25 111.279)">.</text>
+		<text transform="matrix(1.048 0 0 1 35.087 111.279)">&#187;</text>
+		<text transform="matrix(1.048 0 0 1 65.876 111.279)">S</text>
+		<text transform="matrix(1.048 0 0 1 100.241 111.279)">&#187;</text>
+		<text transform="matrix(1.048 0 0 1 131.03 111.279)">V</text>
+		<text transform="matrix(1.048 0 0 1 165.395 111.279)">&#171;</text>
+		<text transform="matrix(1.048 0 0 1 196.184 111.279)">G</text>
+		<text transform="matrix(1.048 0 0 1 234.123 111.279)">&#187;</text>
+		<text transform="matrix(1.048 0 0 1 264.913 111.279)">.</text>
+	</g>
+	<g style="font-size:5px;;font-family:Helvetica;;">
+		<text x="203.609" y="131.688">&lt;g id="SVG"> fill-opacity:0.5</text>
+	</g>
+</g>
+<!-- SVG -->
+<g id="coordinates">
+	<path d="M299.75 0.25H0.25v199.5h299.5V0.25z" style="fill:none;stroke:#0000FF;stroke-width:0.25;stroke-miterlimit:4;;"/>
+	<path d="M274.633 32.295H25.368v135.41h249.265V32.295z" style="fill:none;stroke:#0000FF;stroke-width:0.25;stroke-miterlimit:4;;"/>
+	<path d="M55.581 0.25v199.5" style="fill:none;stroke:#0000FF;stroke-width:0.25;stroke-miterlimit:4;;"/>
+	<path d="M244.418 0.25v199.5" style="fill:none;stroke:#0000FF;stroke-width:0.25;stroke-miterlimit:4;;"/>
+	<path d="M0.25 47.516h299.5" style="fill:none;stroke:#0000FF;stroke-width:0.25;stroke-miterlimit:4;;"/>
+	<path d="M0.25 152.484h299.5" style="fill:none;stroke:#0000FF;stroke-width:0.25;stroke-miterlimit:4;;"/>
+	<g style="font-size:8px;;font-family:Helvetica;;">
+		<text x="261.442" y="195.854">(300,200)</text>
+	</g>
+	<path d="M296 200h4v-4" style="fill:#FF0000;;"/>
+	<g style="font-size:8px;;font-family:Helvetica;;">
+		<text x="2.609" y="9.688">(0,0)</text>
+	</g>
+	<path d="M4 0H0v4" style="fill:#FF0000;;"/>
+</g>
+<!-- coordinates -->
+
+<image xlink:href="http://www.google-analytics.com/__utm.gif?utmwv=4.7.1&amp;utmn=21830374&amp;utmhn=svg.kvalitne.cz&amp;utmcs=UTF-8&amp;utmsr=1920x1080&amp;utmsc=24-bit&amp;utmul=en-us&amp;utmje=1&amp;utmfl=10.0%20r45&amp;utmdt=SVG%C2%A0%E2%80%94%C2%A0It%27s%20in%20your%20hands...&amp;utmhid=1377849700&amp;utmr=-&amp;utmp=%2Findex2.htm&amp;utmac=UA-11950721-1&amp;utmcc=__utma%3D251371972.1884550355.1260220320.1272562824.1272576758.56%3B%2B__utmz%3D251371972.1263752798.41.3.utmcsr%3Dgoogle%7Cutmccn%3D(organic)%7Cutmcmd%3Dorganic%7Cutmctr%3Dsvg%2520smil%2520demo%3B" width="1" height="1"/>
+
+</svg>

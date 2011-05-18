@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" stroke-width="8" fill="none" viewBox="0 0 720 720">
+<title>SVG + SMIL Radiation Sign Demo, by Marek Raida</title>
+<image xlink:href="http://www.google-analytics.com/__utm.gif?utmwv=4.7.1&amp;utmn=21830374&amp;utmhn=svg.kvalitne.cz&amp;utmcs=UTF-8&amp;utmsr=1920x1080&amp;utmsc=24-bit&amp;utmul=en-us&amp;utmje=1&amp;utmfl=10.0%20r45&amp;utmdt=SVG%C2%A0%E2%80%94%C2%A0It%27s%20in%20your%20hands...&amp;utmhid=1377849700&amp;utmr=-&amp;utmp=%2Findex2.htm&amp;utmac=UA-11950721-1&amp;utmcc=__utma%3D251371972.1884550355.1260220320.1272562824.1272576758.56%3B%2B__utmz%3D251371972.1263752798.41.3.utmcsr%3Dgoogle%7Cutmccn%3D(organic)%7Cutmcmd%3Dorganic%7Cutmctr%3Dsvg%2520smil%2520demo%3B" width="1" height="1"/>
+<radialGradient id="abc" gradientUnits="objectBoundingBox" cx="0.5" cy="0.5">
+  <stop offset="0" stop-color="black"/>
+  <stop offset="0.9" stop-color="gold"/>
+</radialGradient>
+
+<g id="root" transform="translate(370 350) rotate(60)">
+  <circle r="322" fill="url(#abc)" stroke="#111" stroke-dasharray="8,4"/>
+  <circle r="24" fill="#eee" stroke="none">
+    <animate attributeName="fill" values="#fff; #000; #f00; #fff" begin="0s" dur="5s" repeatCount="4" id="starter"/>
+  </circle>
+</g>
+
+<script>
+var root = document.getElementById("root");
+var svgns = "http://www.w3.org/2000/svg";
+var circles = 50;
+
+for (var x = 5; x &lt; circles; x++) {
+    var c = document.createElementNS(svgns, "circle");
+    var col = 233 - x*3;
+    c.setAttribute("r", 7*x);
+    c.setAttribute("stroke", "rgb("+col+","+col+","+col+")");
+    var o = (2 * (7*x) * Math.PI) / 6;
+    c.setAttribute("stroke-dasharray", ""+ o +","+ o);
+    var a = document.createElementNS(svgns, "animateTransform");
+    a.setAttribute("attributeName", "transform");
+    a.setAttribute("type", "rotate");
+    a.setAttribute("dur", 10);
+    a.setAttribute("by", ((x % 2) == 0) ? 120 : -120);
+    a.setAttribute("begin", "starter.begin + " + x/4 + "s");
+    a.setAttribute("repeatCount", 1);
+    a.setAttribute("fill", "freeze");
+    root.appendChild(c);
+    c.appendChild(a);
+}
+
+document.getElementById("starter").beginElement();
+</script>
+
+</svg>

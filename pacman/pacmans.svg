@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>Pacman Cloud version 1.0, by marek.raida@gmail.com</title>
+<script type="text/ecmascript" xlink:href="../fakesmile/smil.user.js"/>
+
+<rect width="100%" height="100%"  fill="black"/>
+
+<mask id="pills1">
+  <rect x="0" y="0" width="130" height="40" fill="white"/>
+</mask>
+
+<g mask="url(#pills1)" transform="translate(70 60)" id="pilltrack">
+  <circle r="300" fill="none" stroke="black"/>
+  <line x1="0" y1="20" x2="400" y2="20" stroke="#ffd" stroke-width="20" stroke-linecap="round" stroke-dasharray="1,60">
+    <animateTransform attributeName="transform" type="translate" begin="0s" dur="3s" values="0 0; -185 0" repeatCount="indefinite"/>
+  </line>
+</g>
+
+<mask id="pac1">
+  <circle r="70" fill="white"/>
+  <g>
+    <rect width="100" height="100" fill="black" transform="rotate(45) translate(0 -100)"/>
+    <animateTransform attributeName="transform" type="scale" begin="0s" dur="1s" values="1 1; 1 0.1; 1" repeatCount="indefinite"/>
+  </g>
+</mask>
+<g transform="translate(80 80)">
+  <circle r="70" fill="pink" mask="url(#pac1)"/>
+  <circle cy="-35" r="6" fill="#000" stroke="white" stroke-width="3"/>
+</g>
+
+
+<use xlink:href="#pilltrack" transform="translate(30 388)"/>
+<g transform="translate(0 -500)">
+  <path fill="gold" d="m 193.78828,981.8922 a 83.490173,83.490173 0 1 1 0,-28.99583 l -82.22177,14.49792 z">
+    <animate id="xto" begin="0s; xfro.end" dur="0.5s" attributeName="d" 
+      from="m 193.78828,981.8922 a 83.490173,83.490173 0 1 1 0,-28.99583 l -82.22177,14.49792 z"
+      to="m 175.5237,1021.0607 a 83.490173,83.490173 0 1 1 0,-107.33286 l -63.95719,53.66645 z"/>
+    <animate id="xfro" begin="xto.end" dur="0.5s" attributeName="d" 
+      to="m 193.78828,981.8922 a 83.490173,83.490173 0 1 1 0,-28.99583 l -82.22177,14.49792 z"
+      from="m 175.5237,1021.0607 a 83.490173,83.490173 0 1 1 0,-107.33286 l -63.95719,53.66645 z"/>
+  </path>
+  <circle cy="930" cx="110" r="6" fill="#000" stroke="white" stroke-width="3"/>
+</g>
+
+
+<use xlink:href="#pilltrack" transform="translate(230 120)"/>
+<mask id="pac2">
+  <rect x="-100" y="-200" width="200" height="200" fill="white">
+    <animateTransform attributeName="transform" type="rotate" begin="0s" dur="1s" values="0; -20; 0" repeatCount="indefinite"/>
+  </rect>
+  <rect x="-100" width="200" height="200" fill="white">
+    <animateTransform attributeName="transform" type="rotate" begin="0s" dur="1s" values="0; 20; 0" repeatCount="indefinite"/>
+  </rect>
+</mask>
+<g transform="translate(300 200)">
+  <circle r="70" fill="gray" mask="url(#pac2)"/>
+  <circle cy="-30" r="5" fill="#000" stroke="white" stroke-width="3"/>
+</g>
+
+<use xlink:href="#pilltrack" transform="translate(340 320)"/>
+<linearGradient id="gr" gradientTransform="rotate(0)" gradientUnits="objectBoundingBox">
+  <animateTransform attributeName="gradientTransform" type="rotate" values="270 0.5 0.5; 290 0.5 0.5; 270 0.5 0.5" dur="1s" repeatCount="indefinite" begin="0"/>
+	<stop offset="0" stop-color="#0f0"/>
+	<stop offset="0.4999" stop-color="#0f0"/>
+	<stop offset="0.5" stop-color="#fff" stop-opacity="0"/>
+	<stop offset="1" stop-color="#fff" stop-opacity="0"/>
+</linearGradient>
+<g transform="translate(400 400)">
+  <circle r="80" fill="url(#gr)"/>
+  <circle r="80" fill="url(#gr)" transform="scale(1 -1)"/>
+  <circle cy="-35" r="7" fill="#000" stroke="white" stroke-width="3"/>
+</g>
+
+
+<use xlink:href="#pilltrack" transform="translate(70 210)"/>
+<g transform="translate(140 290) scale(0.7)">
+  <g id="half1">
+    <path fill="purple" d="m 508.57143,615.2193 a 108.57143,108.57143 0 1 1 -217.14286,-10e-6 L 400,615.2193 z" transform="translate(-400 -615)"/>
+    <animateTransform attributeName="transform" type="rotate" values="0; 20; 0" dur="1s" repeatCount="indefinite" begin="0"/>
+  </g>
+  <use xlink:href="#half1" transform="scale(1 -1) translate(0 0)"/>
+  <circle cy="-45" r="8" fill="#000" stroke="white" stroke-width="4"/>
+</g>
+
+<use xlink:href="#pilltrack" transform="translate(430 190)"/>
+<g transform="translate(500 270) scale(0.6)">
+  <circle r="50" fill="none" stroke="#22f" stroke-width="99" stroke-dasharray="300,2" transform="rotate(15)">
+    <animate attributeName="stroke-dasharray" dur="1s" repeatCount="indefinite" values="280,40; 300,0; 280,40"/>
+  </circle>
+  <circle cy="-40" r="8" fill="#000" stroke="white" stroke-width="4"/>
+</g>
+
+
+<use xlink:href="#pilltrack" transform="translate(330 -10)"/>
+<mask id="pac3">
+  <rect y="-50" x="-50" width="200" height="200" fill="white"/>
+  <ellipse cx="500" rx="500" ry="1" fill="black" stroke="none">
+    <animate attributeName="ry" dur="1s" repeatCount="indefinite" values="1; 30; 1"/>
+  </ellipse>
+</mask>
+<g transform="translate(400 70)">
+  <circle r="50" fill="cyan" stroke="none" mask="url(#pac3)"/>
+  <circle cy="-25" r="5" fill="#000" stroke="white" stroke-width="3"/>
+</g>
+
+
+<use xlink:href="#pilltrack" transform="translate(200 500)"/>
+<mask id="pac11">
+  <rect x="-100" y="0" width="200" height="70" fill="white"/>
+</mask>
+<g transform="translate(280 580)">
+  <circle r="70" fill="lightgreen" mask="url(#pac11)">
+    <animateTransform attributeName="transform" type="rotate" begin="0s" dur="1s" values="0; 30; 0" repeatCount="indefinite"/>
+  </circle>
+  <g>
+    <circle r="70" fill="lightgreen" mask="url(#pac11)" transform="rotate(180)"/>
+    <animateTransform attributeName="transform" type="rotate" begin="0s" dur="1s" values="0; -30; 0" repeatCount="indefinite"/>  
+  </g>
+  <circle cy="-35" r="6" fill="#000" stroke="white" stroke-width="3"/>
+</g>
+
+<image xlink:href="http://www.google-analytics.com/__utm.gif?utmwv=4.7.1&amp;utmn=21830374&amp;utmhn=svg.kvalitne.cz&amp;utmcs=UTF-8&amp;utmsr=1920x1080&amp;utmsc=24-bit&amp;utmul=en-us&amp;utmje=1&amp;utmfl=10.0%20r45&amp;utmdt=SVG%C2%A0%E2%80%94%C2%A0It%27s%20in%20your%20hands...&amp;utmhid=1377849700&amp;utmr=-&amp;utmp=%2Findex2.htm&amp;utmac=UA-11950721-1&amp;utmcc=__utma%3D251371972.1884550355.1260220320.1272562824.1272576758.56%3B%2B__utmz%3D251371972.1263752798.41.3.utmcsr%3Dgoogle%7Cutmccn%3D(organic)%7Cutmcmd%3Dorganic%7Cutmctr%3Dsvg%2520smil%2520demo%3B" width="1" height="1"/>
+
+</svg>

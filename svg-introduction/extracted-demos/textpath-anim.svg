@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="400" height="300">
+<script type="text/ecmascript" xlink:href="smil.user.js"/>
+<circle r="50" cx="100" cy="80" fill="red"/>
+<circle r="50" cx="272" cy="70" fill="orange"/>
+<defs>
+  <path id="curve1" d="M 10 100 C 200 30 300 250 350 50" stroke="black" fill="none" stroke-width="5"/>
+</defs>
+<text font-family="ariel" font-size="18pt">
+  <textPath xlink:href="#curve1" startOffset="10">
+    <animate attributeName="startOffset" dur="7s" from="-370" to="20" repeatCount="indefinite"/>
+    Hello, here is some text crawling along a bezier curve. Hello, here is some text crawling along a bezier curve.
+  </textPath>
+</text>
+</svg>

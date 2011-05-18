@@ -1,0 +1,53 @@
+<!--
+NOTICE:  [1999-2001] Adobe Systems Incorporated.  Adobe hereby grants you the rights to reproduce, modify and distribute this file and its contents, not including any fonts, audio files or raster images included or embedded in or linked to this file, (the "Software"), and to grant such rights to other parties subject to the following:  This notice shall be included in any copy of the Software or any portion thereof.  THE SOFTWARE IS PROVIDED TO YOU AS-IS, WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT.  IN NO EVENT SHALL ADOBE BE LIABLE TO YOU OR ANY OTHER PARTY FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE.
+Modified by  Marek Raida
+-->
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>nutty.svg</title>
+<desc>text transformations, including changing the font size</desc>
+
+<script type="text/ecmascript" xlink:href="../fakesmile/smil.user.js"/>
+
+<text id="background" x="100" y="45" fill="gray" fill-opacity=".5" text-anchor="middle" font-size="24"><tspan>animate individual</tspan><tspan y="105" x="100" text-anchor="middle">properties of</tspan><tspan y="165" x="100" text-anchor="middle">tspan elements</tspan></text>
+
+<rect x="0" y="0" width="200" height="200" fill="none" stroke="red"/>
+
+<g transform="translate(100,100)">
+
+<text id="all" x="0" y="18" text-anchor="middle"><tspan id="s" font-size="36" fill="red">S</tspan><tspan id="v" font-size="78" font-family="Courier" fill="green">V</tspan><tspan id="g" font-size="28" fill="blue">G</tspan></text>
+
+</g>
+
+
+
+<animateTransform xlink:href="#all" attributeName="transform" type="rotate" values="0;360" dur="8s" begin="0s" repeatCount="indefinite"/>
+
+
+
+<animate xlink:href="#s" attributeName="rotate" values="45;-45;45" dur="2s" begin="0s" repeatDur="indefinite"/>
+
+<animate xlink:href="#s" attributeName="font-size" values="36;18;36" dur="1.5s" begin="0s" repeatDur="indefinite"/>
+
+
+
+<animate xlink:href="#v" attributeName="dy" values="0;10;0" dur="1.5s" begin="0s" repeatDur="indefinite"/>
+
+<animate xlink:href="#v" attributeName="dx" values="20;-20;20" dur="3.5s" begin="0s" repeatDur="indefinite"/>
+
+<animate xlink:href="#v" attributeName="rotate" values="-10;35;-10" dur="2s" begin="0s" repeatDur="indefinite"/>
+
+<animate xlink:href="#v" attributeName="font-size" values="78;36;78" dur="3s" begin="0s" repeatDur="indefinite"/>
+
+
+
+<animate xlink:href="#g" attributeName="dy" values="0;-15;0" dur="2.5s" begin="0s" repeatDur="indefinite"/>
+
+<animate xlink:href="#g" attributeName="dx" values="-20;30;-20" dur="3s" begin="0s" repeatDur="indefinite"/>
+
+<animate xlink:href="#g" attributeName="rotate" values="20;-40;20" dur="1.5s" begin="0s" repeatDur="indefinite"/>
+
+<animate xlink:href="#g" attributeName="font-size" values="28;72;28" dur="2.5s" begin="0s" repeatDur="indefinite"/>
+
+<image xlink:href="http://www.google-analytics.com/__utm.gif?utmwv=4.7.1&amp;utmn=21830374&amp;utmhn=svg.kvalitne.cz&amp;utmcs=UTF-8&amp;utmsr=1920x1080&amp;utmsc=24-bit&amp;utmul=en-us&amp;utmje=1&amp;utmfl=10.0%20r45&amp;utmdt=SVG%C2%A0%E2%80%94%C2%A0It%27s%20in%20your%20hands...&amp;utmhid=1377849700&amp;utmr=-&amp;utmp=%2Findex2.htm&amp;utmac=UA-11950721-1&amp;utmcc=__utma%3D251371972.1884550355.1260220320.1272562824.1272576758.56%3B%2B__utmz%3D251371972.1263752798.41.3.utmcsr%3Dgoogle%7Cutmccn%3D(organic)%7Cutmcmd%3Dorganic%7Cutmctr%3Dsvg%2520smil%2520demo%3B" width="1" height="1"/>
+
+</svg>

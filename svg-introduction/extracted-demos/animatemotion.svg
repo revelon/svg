@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="210" height="210">
+  <script type="text/ecmascript" xlink:href="smil.user.js"/>
+  <path id="myAniPath" d="M10,150 A15 15 180 0 1 70 140 A15 25 180 0 0 130 130 A15 55 180 0 1 190 120 A15 10 170 0 1 10 150" stroke="maroon" stroke-width="2" fill="none"/>
+  <rect x="-10" y="-5" width="20" height="10" fill="none" stroke="black" rx="3">
+    <animateMotion begin="0s" dur="8s" repeatCount="indefinite" rotate="auto">
+      <mpath xlink:href="#myAniPath"/>
+    </animateMotion>
+  </rect>
+</svg>
