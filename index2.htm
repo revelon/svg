@@ -442,9 +442,8 @@ IMHO it is a good use and demonstration of modern technologies and almost everyt
 <h2>No more tweaks for Firefox 4.0+</h2>
 <div class="date">2010-10-06 | svg</div>
 <p>Long time ago I released some demos <em>tweaked</em> to work in Firefox trunk and the tweaks were because of lack of support for some SMIL features primarily. Well, Firefox grew to be much more featureful
-and thus I can remove some tweaks of the past. So I started with <a href="digg/cubes_step7fin.svg">Digging Animation</a> and removed scripting events and replaced and let genuine SMIL events to drive the interactivity, 
-and then moved to the <a href="hourglass/hourglass.svg">Hourglass demo</a> and removed animateTransform tweaks for animateMotion and replaced them by native animateMotion itself.<br/>
-<a href="digg/cubes_step7fin1.svg">Old version of digging</a> and <a href="hourglass/hourglass2.svg">old version of hourglass</a> are still available, for comparison, or if you like them more ;-)<br/>
+and thus I can remove some tweaks of the past. So I started with <a href="digg/cubes_step8fin.svg">Digging Animation</a> and removed scripting events and replaced and let genuine SMIL events to drive the interactivity, 
+and then moved to the <a href="hourglass/hourglass.svg">Hourglass demo</a> and removed animateTransform tweaks for animateMotion and replaced them by native animateMotion itself.<br/><br/>
 PS: Opera and Webkit implementations are of 180 degrees different opinion regarding to rotate attribute implementation of animateMotion, hmm... :-(<br/>
 <strong>Update 2010-10-06:</strong> My thanks to Daniel's Holbert for explanation; I applied workaround (avoided transform on source path for animateMotion) and now <a href="hourglass/hourglass.svg">Hourglass demo</a> works properly in all SVG+SMIL capable browsers... WOW!! ;-)<br/>
 <strong>Update 2010-10-07:</strong> Daniel created bug for this, so even this difference in behavior should be fixed soon...good...<br/>
@@ -1144,9 +1143,7 @@ Result is far from complex animation, but worth of publishing as version 1.0 (my
 like many and many other experiments, remain hidden and forgotten on some local computer... ;-)<br/>
 So here comes my <a href="rotjump/rotatefull.svg">animated text with sea water reflection effect</a> during sunset. It is really simple, couple of
 texts stupidly duplicated to another transformed group to achieve reflection and (almost) nothing else. How do you like it?<br/>
-As you may notice, animations are <em>not so fluent in Firefox</em>, but this a bit <a href="rotjump/rotate.svg">simplified version</a>
-works very fluently even in Firefox (with dropped gradient animations, transparencies and cloud movements). I believe it to be only matter of time, 
-before Mozilla guys will tweak the drawing performance a bit more (and I'm really really looking forward to the public release of version 3.7!)<br/>
+I believe it to be only matter of time, before Mozilla guys will tweak the drawing performance a bit more (and I'm really really looking forward to the public release of version 3.7+!)<br/>
 It runs great in Opera 9+, Firefox 3.6a-b2, 3.7+ with SMIL turned on (about:config => svg.smil.enabled = true) and ASV. Chrome 3+/Safari 4+ have not implemented masking yet and so there is no reflection at all :-( 
 <em>(FFX 3.6 does not animate gradient's stop colors, but 3.7+ does!)</em></p>
 
@@ -1257,9 +1254,9 @@ So I found spare 30 minutes and created <a href="ghost/spirit-org.svg">vector ve
 It runs great in Opera 9+, Chrome 3+, Safari 4+ and <a href="ftp://ftp.mozilla.org/pub/firefox/nightly/latest-trunk/">Firefox 3.6a-b2, 3.7+</a> with SMIL turned on (about:config => svg.smil.enabled = true).<br/>
 <strong>Update 2009-09-25:</strong> Added one more Good Spirit version, this time it is <a href="ghost/spirit-org2.svg">Good Spirit with drop shadow effect</a>...</p>
 
-<h2><a href="digg/cubes_step7fin.svg">Famous SVG Digging Animation Resurrected</a></h2>
+<h2><a href="digg/cubes_step8fin.svg">Famous SVG Digging Animation Resurrected</a></h2>
 <div class="date">2009-09-21 | svg</div>
-<p>Original <a href="http://www.xml.com/pub/a/2002/01/23/svg/">demo from Antoine Quint</a> has trouble running in other browsers (plugins) than ASV. I modified original file and <a href="digg/cubes_step7fin.svg">result you can see</a>.<br />
+<p>Original <a href="http://www.xml.com/pub/a/2002/01/23/svg/">demo from Antoine Quint</a> has trouble running in other browsers (plugins) than ASV. I modified original file and <a href="digg/cubes_step8fin.svg">result you can see</a>.<br />
 Now it runs great in Opera 9+, Chrome 3+, Safari 4+ and even <a href="ftp://ftp.mozilla.org/pub/firefox/nightly/latest-trunk/">Firefox 3.6a-b2, 3.7+</a> with SMIL turned on (about:config => svg.smil.enabled = true).<br />
 For Firefox very limited support of SMIL events, there is, however, some dirty trick in JS in place... but it is working at least acceptably, if not optimally...</p>
 
