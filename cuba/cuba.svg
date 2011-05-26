@@ -9,12 +9,12 @@
  <!ENTITY strShad "#000">
  <!ENTITY shadOff "2">
  <!ENTITY tileZoom "2.3; 1">
- <!ENTITY presDur "2000">
+ <!ENTITY presDur "1700">
  <!ENTITY preload "2000">
  <!ENTITY tileRot "1 1; 0 1; 1 1">
 ]>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="-450 -300 900 600" xmlns:html="http://www.w3.org/1999/xhtml">
-<title>Vacation on Cuba SVG Demo version 1.0 by Marek Raida, marek.raida@gmail.com</title>
+<title>Vacation on Cuba SVG Demo version 1.1 by Marek Raida, marek.raida@gmail.com</title>
 <desc>Cliparts taken from clker.com and wikipedia.org (and modified), sounds from freesound.org; music is taken from no-name CD bought directly on Cuba and all pictures are done by Jana Hubackova herself</desc>
 <desc>Published under Creative Commons (CC0) license ( http://creativecommons.org/publicdomain/zero/1.0/ )</desc>
 <style type="text/css">
@@ -143,31 +143,49 @@
                             document.getElementById("musicSound").play();
                             window.setTimeout(function(){
                                                                                   if (webkit) imageShow();
-                                                                                  document.getElementById("movingCamera").beginElement();
+                                                                                  if (document.getElementById("movingCamera")) document.getElementById("movingCamera").beginElement();
                                                                                 }, 900);
                             } , &preload;);
       } else {
         document.getElementById("musicSound").play();
-        document.getElementById("loadingScreen").setAttribute("display", "none");
-        document.getElementById("dominos").setAttribute("transform", "scale(0.23) translate(-1280 -850)");
-        document.getElementById("descTexts").setAttribute("transform", "scale(0.23) translate(340 -400)");
-        document.getElementById("colibri").setAttribute("transform", "translate(-225 -570)");
-        document.getElementById("wholeCar").setAttribute("transform", "translate(-355 -50)");
-        var texts = document.getElementById("descTexts").getElementsByTagName("text");
-        for (var i in texts) {
-          if (texts[i].setAttribute) {
-            texts[i].setAttribute("opacity", "1");
-            texts[i].setAttribute("display", "block");
-          }
-        }
         var rects = document.getElementById("dominos").getElementsByTagName("rect");
         for (var i in rects) if (rects[i].setAttribute) rects[i].setAttribute("class", "tileAct");
-
-        var gs = document.getElementById("dominos").getElementsByTagName("g");
-        for (var i in gs) if (gs[i].setAttribute) gs[i].setAttribute("display", "block");
-        imageCounter = imagesTotal;
+        document.getElementById("colibri").setAttribute("transform", "translate(-225 -570)");
+        document.getElementById("wholeCar").setAttribute("transform", "translate(-355 -50)");
+        bypass();
       }
     }
+  }
+
+  // bypass intro helper
+  function bypass() {
+    imageCounter = imagesTotal;
+    document.getElementById("loadingScreen").setAttribute("display", "none");
+    document.getElementById("dominos").setAttribute("transform", "scale(0.23) translate(-1280 -850)");
+    document.getElementById("descTexts").setAttribute("transform", "scale(0.23) translate(340 -400)");
+    var texts = document.getElementById("descTexts").getElementsByTagName("text");
+    for (var i in texts) {
+      if (texts[i].setAttribute) {
+        texts[i].setAttribute("opacity", "1");
+        texts[i].setAttribute("display", "block");
+      }
+    }
+    document.getElementById("iniZoomer").parentNode.removeChild(document.getElementById("iniZoomer"));
+    document.getElementById("iniTrans").parentNode.removeChild(document.getElementById("iniTrans"));
+    document.getElementById("iniPosition").parentNode.removeChild(document.getElementById("iniPosition"));
+    document.getElementById("movingCamera").parentNode.removeChild(document.getElementById("movingCamera"));
+    var anims = document.getElementById("dominoEvents").getElementsByTagName("animateTransform");
+    for (var i in anims) {
+      //if (anims[i] &amp;&amp; anims[i].getAttribute &amp;&amp; anims[i].getAttribute("restart") == "whenNotActive") {
+        //anims[i].setAttribute("dur", "0.1s");
+        //anims[i].endElement();
+        //alert(anims[i]);
+        //alert(anims[i].parentNode.removeChild(anims[i]));
+      //}
+      if (anims[i] &amp;&amp; anims[i].parentNode) anims[i].parentNode.removeChild(anims[i]);
+    }
+    var gs = document.getElementById("dominos").getElementsByTagName("g");
+    for (var i in gs) if (gs[i].setAttribute) gs[i].setAttribute("display", "block");
   }
 
   // method playing initial domino tiles sounds; not using only genuine SMIL events because of Webkit does not supports them yet :-(
@@ -179,7 +197,7 @@
 
   // method for showing / changing image details and descriptions
   function zoom(img, type, over) {
-    if (imagesTotal != imageCounter || lock || (img == image)) return;
+    if (imagesTotal &gt; imageCounter || lock || (img == image)) return;
     if (current) {
       if (current == 1) {
         if (smilSupport) {
@@ -445,7 +463,7 @@
 
 <g transform="scale(1.4)">
   <animateTransform id="iniZoomer" attributeName="transform" type="scale" begin="movingCamera.end+0.5s" dur="2s" repeatCount="1" from="1" to="0.23" additive="sum" fill="freeze"/>
-  <animateTransform attributeName="transform" type="translate" begin="iniZoomer.begin" dur="2s" repeatCount="1" by="800 0" additive="sum" fill="freeze"/>
+  <animateTransform id="iniTrans" attributeName="transform" type="translate" begin="iniZoomer.begin" dur="2s" repeatCount="1" by="800 0" additive="sum" fill="freeze"/>
   <animateTransform id="iniPosition" attributeName="transform" type="translate" begin="iniZoomer.end+2s" dur="1s" repeatCount="1" by="-420 -410" additive="sum" fill="freeze"/>
 
   <g font-size="29px" font-weight="bolder" font-family="sans-serif" id="descTexts">
@@ -1088,6 +1106,13 @@
   
   window.setTimeout(function(){if (objectCounter &lt; 35) { objectCounter = 34; checkme();}}, 10000); // Gecko audio event workaround, do not wait any longer :-(
 </script>
+
+<g onclick="bypass()" cursor="pointer" display="none">
+  <rect x="368" y="278" width="80" height="20" fill="gray" rx="3"/>
+  <text x="382" y="292" fill="white" stroke="none" font-family="sans-serif" font-size="12px">skip intro</text>
+  <set attributeName="display" to="none" begin="click;iniPosition.end"/>
+  <set attributeName="display" to="block" begin="movingCamera.begin"/>
+</g>
 
 <image xlink:href="http://www.google-analytics.com/__utm.gif?utmwv=4.7.1&amp;utmn=21830374&amp;utmhn=svg.kvalitne.cz&amp;utmcs=UTF-8&amp;utmsr=1920x1080&amp;utmsc=24-bit&amp;utmul=en-us&amp;utmje=1&amp;utmfl=10.0%20r45&amp;utmdt=SVG%C2%A0%E2%80%94%C2%A0It%27s%20in%20your%20hands...&amp;utmhid=1377849700&amp;utmr=-&amp;utmp=%2Findex2.htm&amp;utmac=UA-11950721-1&amp;utmcc=__utma%3D251371972.1884550355.1260220320.1272562824.1272576758.56%3B%2B__utmz%3D251371972.1263752798.41.3.utmcsr%3Dgoogle%7Cutmccn%3D(organic)%7Cutmcmd%3Dorganic%7Cutmctr%3Dsvg%2520smil%2520demo%3B" width="1" height="1"/>
 </svg>
