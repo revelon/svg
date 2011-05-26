@@ -141,7 +141,7 @@
         document.getElementById("loading").beginElement();
         document.getElementById("progress").firstChild.data = "...starting...";
         window.setTimeout(function() {
-                            document.getElementById("musicSound").play();
+                            if (document.getElementById("musicSound").play) document.getElementById("musicSound").play();
                             window.setTimeout(function(){
                                                                                   if (webkit) imageShow();
                                                                                   if (document.getElementById("movingCamera")) document.getElementById("movingCamera").beginElement();
