@@ -77,6 +77,7 @@
   var current = null;
   var image = "";
   var lock = false;
+  var bypassed = false;
   var smilSupport = true;
   var objectCounter = 0;
   var imageCounter = 0;
@@ -159,6 +160,7 @@
 
   // bypass intro helper
   function bypass() {
+    bypassed = true;
     imageCounter = imagesTotal;
     document.getElementById("loadingScreen").setAttribute("display", "none");
     document.getElementById("dominos").setAttribute("transform", "scale(0.23) translate(-1280 -850)");
@@ -190,6 +192,7 @@
 
   // method playing initial domino tiles sounds; not using only genuine SMIL events because of Webkit does not supports them yet :-(
   function imageShow() {
+    if (bypassed) return;
     imageCounter++;
     sound("tileSound");
     if (webkit &amp;&amp; (imageCounter &lt; imagesTotal)) window.setTimeout(imageShow, 1197); // it is not so much in sync, but better than nothing...
