@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="300" height="300">
-
+<script type="text/ecmascript" xlink:href="../fakesmile/smil.user.js"/>
 <defs>
-  <g id="bubble1" fill-opacity=".6">
+  <g id="bubble1" fill-opacity="0.6">
     <circle cx="100" cy="100" r="30" fill="#699BCE" stroke="#303972" stroke-width="1"/>
     <ellipse cx="106" cy="90" rx="15" ry="10" fill="#415AB5"/>
     <ellipse cx="110" cy="88" rx="5" ry="3" fill="white"/>

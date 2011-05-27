@@ -1,9 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
   <title>SVG Chisel TEXT</title>
   <desc>by Marek Raida, marek.raida@gmail.com</desc>
-
   <script type="text/ecmascript" xlink:href="../fakesmile/smil.user.js"/>
-
   <defs>
     <linearGradient id="grad1" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
       <stop stop-color="#406666" offset="0%"/>

@@ -16,6 +16,7 @@ Modified by  Marek Raida
 <svg xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <title>candle in the wind.svg</title> 
 <desc>flickering candle shows animated turbulence filter effect</desc>
+<script type="text/ecmascript" xlink:href="../fakesmile/smil.user.js"/>
 	<defs>
 		<filter id="heat" filterUnits="objectBoundingBox" x="-25%" y="-25%" width="150%" height="150%">
 			<feTurbulence baseFrequency="0.091 0.067" numOctaves="1" result="turb">

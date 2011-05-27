@@ -5,6 +5,7 @@ Modified by  Marek Raida
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <title>Melting.svg</title> 
 <desc>Animated melting text filter effect</desc>
+<script type="text/ecmascript" xlink:href="../fakesmile/smil.user.js"/>
 <defs>
 	<filter id="Melting" filterUnits="objectBoundingBox" x="-10%" y="-30%" width="120%" height="200%">
 		<feTurbulence baseFrequency="0.02" numOctaves="3" result="turb"/>

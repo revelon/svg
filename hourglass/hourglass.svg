@@ -1,7 +1,7 @@
   <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 250 300" width="100%" height="100%">
   <title>SVG Hourglass 1.2</title>
   <desc>by Marek Raida, marek.raida@gmail.com</desc>
-
+  <script type="text/ecmascript" xlink:href="../fakesmile/smil.user.js"/>
   <defs>
     <clipPath id="clipMask">
       <rect x="0" y="-5" width="200" height="5"/>
@@ -30,7 +30,7 @@
       <stop offset="100%" stop-color="brown" />
     </linearGradient>
 
-    <linearGradient id="sandGrad" x1="0" y1="0" x2="1" y2=".3" gradientUnits="objectBoundingBox">
+    <linearGradient id="sandGrad" x1="0" y1="0" x2="1" y2="0.3" gradientUnits="objectBoundingBox">
       <stop offset="0%" stop-color="yellow" />
       <stop offset="60%" stop-color="#f82" />
       <stop offset="100%" stop-color="yellow" />
@@ -53,12 +53,10 @@
 
 <g transform="scale(1) translate(25 50)">
 <g>
-  <animateTransform attributeName="transform" type="rotate" values="0 100 200; -2 100 200; 2 100 200; 0 100 200" begin="0s" dur="6s" repeatCount="indefinite"/>
+  <animateTransform attributeName="transform" type="rotate" values="0 100 200;-2 100 200;2 100 200;0 100 200" begin="0s" dur="6s" repeatCount="indefinite"/>
 
   <g id="hourglass">
-    <animateTransform attributeName="transform" type="rotate" values="0 100 100; 0 100 100; 0 100 100; 0 100 100; 
-                                                                                                                            180 100 100; 180 100 100; 180 100 100; 180 100 100; 180 100 100; 180 100 100; 
-                                                                                                                            360 100 100; 360 100 100" begin="0s" dur="24s" repeatCount="indefinite"/>
+    <animateTransform attributeName="transform" type="rotate" values="0 100 100;0 100 100;0 100 100;0 100 100;180 100 100;180 100 100;180 100 100;180 100 100;180 100 100;180 100 100;360 100 100;360 100 100" begin="0s" dur="24s" repeatCount="indefinite"/>
 
     <use xlink:href="#baseTop" x="0" y="0"/>
     <ellipse cx="100" cy="30" rx="100" ry="15" fill="url(#baseGrad)"/>
@@ -67,61 +65,61 @@
       <animateMotion begin="0s" dur="10s" repeatCount="indefinite" rotate="0">
         <mpath xlink:href="#rots"/>
       </animateMotion>
-      <animate attributeName="display" values="block; block; none; none" dur="10s" begin="0s" repeatCount="indefinite" calcMode="discrete"/>
+      <animate attributeName="display" values="block;block;none;none" dur="10s" begin="0s" repeatCount="indefinite" calcMode="discrete"/>
     </use>
     <use xlink:href="#pillar">
       <animateMotion begin="-5s" dur="10s" repeatCount="indefinite" rotate="0">
         <mpath xlink:href="#rots"/>
       </animateMotion>
-      <animate attributeName="display" values="none; none; block; block" dur="10s" begin="0s" repeatCount="indefinite" calcMode="discrete"/>
+      <animate attributeName="display" values="none;none;block;block" dur="10s" begin="0s" repeatCount="indefinite" calcMode="discrete"/>
     </use>
     <use xlink:href="#pillar">
       <animateMotion begin="-7.5s" dur="10s" repeatCount="indefinite" rotate="0">
         <mpath xlink:href="#rots"/>
       </animateMotion>
-      <animate attributeName="display" values="none; block; block; none" dur="10s" begin="0s" repeatCount="indefinite" calcMode="discrete"/>
+      <animate attributeName="display" values="none;block;block;none" dur="10s" begin="0s" repeatCount="indefinite" calcMode="discrete"/>
     </use>
     <use xlink:href="#pillar">
       <animateMotion begin="-2.5s" dur="10s" repeatCount="indefinite" rotate="0">
         <mpath xlink:href="#rots"/>
       </animateMotion>
-      <animate attributeName="display" values="block; none; none; block" dur="10s" begin="0s" repeatCount="indefinite" calcMode="discrete"/>
+      <animate attributeName="display" values="block;none;none;block" dur="10s" begin="0s" repeatCount="indefinite" calcMode="discrete"/>
     </use>
 
 
     <g transform="translate(0, 30)">
       <use xlink:href="#halfHourglassBg"/>
       <use xlink:href="#halfHourglassSand">
-        <animateTransform attributeName="transform" type="translate" values="0,0; 100,69; 100,69" dur="12s" begin="0s" repeatCount="indefinite"/>
-        <animateTransform attributeName="transform" type="scale" values="1; 0; 0" dur="12s" begin="0s" repeatCount="indefinite" additive="sum"/>
-        <animate attributeName="display" values="block; none" dur="24s" begin="0s" repeatCount="indefinite" calcMode="discrete"/>
+        <animateTransform attributeName="transform" type="translate" values="0,0;100,69;100,69" dur="12s" begin="0s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" type="scale" values="1;0;0" dur="12s" begin="0s" repeatCount="indefinite" additive="sum"/>
+        <animate attributeName="display" values="block;none" dur="24s" begin="0s" repeatCount="indefinite" calcMode="discrete"/>
       </use>
       <g>
-        <rect height="69" width="1" x="99.5" y="0" fill="url(#sandGrad)" fill-opacity=".5" stroke="none">
-          <animate attributeName="fill-opacity" values=".5; 0; .5" dur="1s" begin="0s" repeatCount="indefinite"/>
+        <rect height="69" width="1" x="99.5" y="0" fill="url(#sandGrad)" fill-opacity="0.5" stroke="none">
+          <animate attributeName="fill-opacity" values="0.5;0;0.5" dur="1s" begin="0s" repeatCount="indefinite"/>
         </rect>
         <use xlink:href="#halfHourglassSand">
-            <animateTransform attributeName="transform" type="scale" values="1 0; 1 1; 1 1" dur="12s" begin="0s" repeatCount="indefinite" additive="sum"/>
+            <animateTransform attributeName="transform" type="scale" values="1 0;1 1;1 1" dur="12s" begin="0s" repeatCount="indefinite" additive="sum"/>
         </use>
-        <animate attributeName="display" values="none; block" dur="24s" begin="0s" repeatCount="indefinite" calcMode="discrete"/>
+        <animate attributeName="display" values="none;block" dur="24s" begin="0s" repeatCount="indefinite" calcMode="discrete"/>
       </g>
     </g>
 
     <g transform="translate(200,170), rotate(180)">
       <use xlink:href="#halfHourglassBg"/>
       <g>
-        <rect height="69" width="1" x="99.5" y="0" fill="url(#sandGrad)" fill-opacity=".5" stroke="none">
-          <animate attributeName="fill-opacity" values=".5; 0; .5" dur="1s" begin="0s" repeatCount="indefinite"/>
+        <rect height="69" width="1" x="99.5" y="0" fill="url(#sandGrad)" fill-opacity="0.5" stroke="none">
+          <animate attributeName="fill-opacity" values="0.5;0;0.5" dur="1s" begin="0s" repeatCount="indefinite"/>
         </rect>
         <use xlink:href="#halfHourglassSand">
-          <animateTransform attributeName="transform" type="scale" values="1 0; 1 1; 1 1" dur="12s" begin="0s" repeatCount="indefinite" additive="sum"/>
+          <animateTransform attributeName="transform" type="scale" values="1 0;1 1;1 1" dur="12s" begin="0s" repeatCount="indefinite" additive="sum"/>
         </use>
-        <animate attributeName="display" values="block; none" dur="24s" begin="0s" repeatCount="indefinite" calcMode="discrete"/>
+        <animate attributeName="display" values="block;none" dur="24s" begin="0s" repeatCount="indefinite" calcMode="discrete"/>
       </g>
 
       <use xlink:href="#halfHourglassSand">
-        <animateTransform attributeName="transform" type="translate" values="0,0; 100,69; 100,69" dur="12s" begin="0s" repeatCount="indefinite"/>
-        <animateTransform attributeName="transform" type="scale" values="1; 0; 0" dur="12s" begin="0s" repeatCount="indefinite" additive="sum"/>
+        <animateTransform attributeName="transform" type="translate" values="0,0;100,69;100,69" dur="12s" begin="0s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" type="scale" values="1;0;0" dur="12s" begin="0s" repeatCount="indefinite" additive="sum"/>
         <animate attributeName="display" values="none; block" dur="24s" begin="0s" repeatCount="indefinite" calcMode="discrete"/>
       </use>
     </g>
@@ -130,25 +128,25 @@
       <animateMotion begin="0s" dur="10s" repeatCount="indefinite" rotate="0">
         <mpath xlink:href="#rots"/>
       </animateMotion>
-      <animate attributeName="display" values="none; none; block; block" dur="10s" begin="0s" repeatCount="indefinite" calcMode="discrete"/>
+      <animate attributeName="display" values="none;none;block;block" dur="10s" begin="0s" repeatCount="indefinite" calcMode="discrete"/>
     </use>
     <use xlink:href="#pillar">
       <animateMotion begin="-5s" dur="10s" repeatCount="indefinite" rotate="1">
         <mpath xlink:href="#rots"/>
       </animateMotion>
-      <animate attributeName="display" values="block; block; none; none" dur="10s" begin="0s" repeatCount="indefinite" calcMode="discrete"/>
+      <animate attributeName="display" values="block;block;none;none" dur="10s" begin="0s" repeatCount="indefinite" calcMode="discrete"/>
     </use>
     <use xlink:href="#pillar">
       <animateMotion begin="-7.5s" dur="10s" repeatCount="indefinite" rotate="1">
         <mpath xlink:href="#rots"/>
       </animateMotion>
-      <animate attributeName="display" values="block; none; none; block" dur="10s" begin="0s" repeatCount="indefinite" calcMode="discrete"/>
+      <animate attributeName="display" values="block;none;none;block" dur="10s" begin="0s" repeatCount="indefinite" calcMode="discrete"/>
     </use>
     <use xlink:href="#pillar">
       <animateMotion begin="-2.5s" dur="10s" repeatCount="indefinite" rotate="1">
         <mpath xlink:href="#rots"/>
       </animateMotion>
-      <animate attributeName="display" values="none; block; block; none" dur="10s" begin="0s" repeatCount="indefinite" calcMode="discrete"/>
+      <animate attributeName="display" values="none;block;block;none" dur="10s" begin="0s" repeatCount="indefinite" calcMode="discrete"/>
     </use>
 
     <use xlink:href="#baseTop" x="0" y="145"/>

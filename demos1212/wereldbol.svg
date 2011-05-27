@@ -1,5 +1,6 @@
 <svg width="300px" height="320px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <title>Nieuw in SVG 1.2 working draft 2</title>
+<script type="text/ecmascript" xlink:href="../fakesmile/smil.user.js"/>
 <g>
 <defs>
 <clipPath id="clip1">

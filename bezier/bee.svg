@@ -7,7 +7,7 @@
 </style>
 
 <title><!-- [bee] animation by Philippe Elsass - copyright (c) 2001 --></title>
-
+<script type="text/ecmascript" xlink:href="../fakesmile/smil.user.js"/>
 <g transform="translate(36,100) scale(0.5)">
 
 <g transform="translate(-20,10)" >

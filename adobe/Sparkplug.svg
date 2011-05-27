@@ -6,7 +6,7 @@ Modified by  Marek Raida
 
 <title>Spark plug.svg</title> 
 <desc>spark plug animation with audio</desc>
-
+<script type="text/ecmascript" xlink:href="../fakesmile/smil.user.js"/>
 	<defs>
 		<filter id="Bended" filterUnits="objectBoundingBox" x="0%" y="0%" width="100%" height="100%">
 			<feTurbulence baseFrequency="0.01" numOctaves="5" result="turb">

@@ -5,6 +5,7 @@ Modified by  Marek Raida
 <svg height="130" width="405" viewBox="-50 27 405 130" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <title>hollywood.svg</title> 
 <desc>moving spotlights</desc>
+<script type="text/ecmascript" xlink:href="../fakesmile/smil.user.js"/>
 <defs>
 <filter id="f1" x="-20%" y="-40%" width="140%" height="250%">
     <feDiffuseLighting in="SourceGraphic" result="lamp" lighting-color="red" diffuseConstant=".65" surfaceScale="10" resultScale=".2">

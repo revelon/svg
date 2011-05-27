@@ -8,13 +8,13 @@
      .bbb {display:none; cursor: pointer}
      .txt {font-size: 44px; font-family: Arial, sans-serif; font-weight: normal}
 </style>
-
+<script type="text/ecmascript" xlink:href="../fakesmile/smil.user.js"/>
 <defs>
     <path id="stalk" d="m 46.3,363 c 11,3 24,0 32,-9 12,-14 16,-33 20.7,-51 4,-30 -1.7,-60 -6.7,-90 -2,-5 0,-15 -5,-17 -7,-2 -14,-3 -19,-7 -3,-4 1,-5 2,-1 6,17 10,33 14,50 4,29 6,60 -5,88 -3,8 -7,16 -13,22 -6,5 -13,10 -20,15 z">
-      <animateTransform attributeName="transform" type="scale" values="1 0; 1 1" dur="2s" begin="0s" repeatCount="1" fill="freeze"/>
+      <animateTransform attributeName="transform" type="scale" values="1 0;1 1" dur="2s" begin="0s" repeatCount="1" fill="freeze"/>
     </path>
     <path id="leaf" d="m 166,360 c 34,-16 66,-40 86,-73 13,-23 19,-52 8,-77 -6,-13 -19,-22 -33,-24 -26,-6 -54,-1 -77,14 -25,5 -49,-12 -73.8,-8 -26,7 -39,40 -30,64 13,30 38,53 63.8,72 17,14 37,23 56,32 z">
-      <animateTransform attributeName="transform" type="scale" values="0; 1" dur="2s" begin="0s" repeatCount="1" fill="freeze"/>
+      <animateTransform attributeName="transform" type="scale" values="0;1" dur="2s" begin="0s" repeatCount="1" fill="freeze"/>
     </path>
 </defs>
 
@@ -32,22 +32,22 @@
   <use xlink:href="#leaf" transform="translate(100 -150)"/>
   <use xlink:href="#leaf" transform="translate(664 248) rotate(120)"/>
   
-  <animateTransform attributeName="transform" type="scale" id="leafing" values="1; 0.001" dur="3s" begin="4s" repeatCount="1" fill="freeze"/>
+  <animateTransform attributeName="transform" type="scale" id="leafing" values="1;0.001" dur="3s" begin="4s" repeatCount="1" fill="freeze"/>
   </g>
-  <animateTransform attributeName="transform" type="rotate" values="0 261 210; 360 261 210" dur="2s" begin="2s" repeatCount="1" fill="freeze"/>
+  <animateTransform attributeName="transform" type="rotate" values="0 261 210;360 261 210" dur="2s" begin="2s" repeatCount="1" fill="freeze"/>
   <animateTransform attributeName="transform" type="translate" by="250 0" dur="3s" begin="leafing.begin" repeatCount="1" fill="freeze"/>
 </g>
 </g>
 
 <text x="100" y="25" stroke="white" stroke-width="1" font-family="Arial, sans-serif" font-size="42px" font-weight="bolder" fill="#030">Vacation in Ireland, 11-27th June 2010
-  <animate attributeName="fill" values="#030; #010; #060; #030" dur="5s" begin="0s" repeatCount="indefinite"/>
+  <animate attributeName="fill" values="#030;#010;#060;#030" dur="5s" begin="0s" repeatCount="indefinite"/>
 </text>
 <text x="110" y="47" stroke="white" stroke-width="1" font-family="Arial, sans-serif" font-size="24px" font-weight="bolder" fill="#030">Marek Raida &amp; Jana Hubackova</text>
 <text x="690" y="800" stroke="none" stroke-width="0" font-family="Arial, sans-serif" font-size="15px" fill="#222">Click on thumbnail to show larger picture...</text>
 
 <g display="none">
   <set attributeName="display" to="block" begin="leafing.begin+1s" id="mapVisi"/>
-  <animateTransform attributeName="transform" type="scale" values="0; 1" dur="4s" begin="mapVisi.begin" repeatCount="1" fill="freeze"/>
+  <animateTransform attributeName="transform" type="scale" values="0;1" dur="4s" begin="mapVisi.begin" repeatCount="1" fill="freeze"/>
 
 <g transform="scale(0.6) translate(520 130)">
 	<g transform="matrix(1.859,0,0,1.856,-1851,-679.5)">
@@ -747,9 +747,9 @@
         <image xlink:href="ire1.jpg" x="-200" y="-133" width="400" height="267"/>
         <rect x="-200" y="-133" width="400" height="267" rx="5" class="imgBorder"/>
         <text x="-195" y="-100" class="txt">Howth Head</text>
-        <animateTransform attributeName="transform" type="rotate" begin="foto1.begin" dur="1.4s" values="-60; -370" repeatCount="1" fill="freeze"/>
+        <animateTransform attributeName="transform" type="rotate" begin="foto1.begin" dur="1.4s" values="-60;-370" repeatCount="1" fill="freeze"/>
       </g>
-      <animateTransform attributeName="transform" type="scale" begin="foto1.begin" dur="4s" values="0; 1; 1; 0.2" repeatCount="1" fill="freeze"/>
+      <animateTransform attributeName="transform" type="scale" begin="foto1.begin" dur="4s" values="0;1;1;0.2" repeatCount="1" fill="freeze"/>
     </g>
   </g>
 
@@ -760,9 +760,9 @@
         <image xlink:href="ire2.jpg" x="-200" y="-133" width="400" height="267"/>
         <rect x="-200" y="-133" width="400" height="267" rx="5" class="imgBorder"/>
         <text x="-195" y="-100" class="txt">Glendalough</text>
-        <animateTransform attributeName="transform" type="rotate" begin="foto2.begin" dur="1.4s" values="60; 370" repeatCount="1" fill="freeze"/>
+        <animateTransform attributeName="transform" type="rotate" begin="foto2.begin" dur="1.4s" values="60;370" repeatCount="1" fill="freeze"/>
       </g>
-      <animateTransform attributeName="transform" type="scale" begin="foto2.begin" dur="4s" values="0; 1; 1; 0.2" repeatCount="1" fill="freeze"/>
+      <animateTransform attributeName="transform" type="scale" begin="foto2.begin" dur="4s" values="0;1;1;0.2" repeatCount="1" fill="freeze"/>
     </g>
   </g>
 
@@ -774,9 +774,9 @@
         <image xlink:href="ire3.jpg" x="-200" y="-133" width="400" height="267"/>
         <rect x="-200" y="-133" width="400" height="267" rx="5" class="imgBorder"/>
         <text x="-195" y="-100" class="txt">Nore River</text>
-        <animateTransform attributeName="transform" type="rotate" begin="foto3.begin" dur="1.4s" values="-60; -370" repeatCount="1" fill="freeze"/>
+        <animateTransform attributeName="transform" type="rotate" begin="foto3.begin" dur="1.4s" values="-60;-370" repeatCount="1" fill="freeze"/>
       </g>
-      <animateTransform attributeName="transform" type="scale" begin="foto3.begin" dur="4s" values="0; 1; 1; 0.2" repeatCount="1" fill="freeze"/>
+      <animateTransform attributeName="transform" type="scale" begin="foto3.begin" dur="4s" values="0;1;1;0.2" repeatCount="1" fill="freeze"/>
     </g>
   </g>
 
@@ -787,9 +787,9 @@
         <image xlink:href="ire4.jpg" x="-200" y="-133" width="400" height="267"/>
         <rect x="-200" y="-133" width="400" height="267" rx="5" class="imgBorder"/>
         <text x="-195" y="-100" class="txt" fill="#eee">Cobh Cathedral</text>
-        <animateTransform attributeName="transform" type="rotate" begin="foto4.begin" dur="1.4s" values="60; 370" repeatCount="1" fill="freeze"/>
+        <animateTransform attributeName="transform" type="rotate" begin="foto4.begin" dur="1.4s" values="60;370" repeatCount="1" fill="freeze"/>
       </g>
-      <animateTransform attributeName="transform" type="scale" begin="foto4.begin" dur="4s" values="0; 1; 1; 0.2" repeatCount="1" fill="freeze"/>
+      <animateTransform attributeName="transform" type="scale" begin="foto4.begin" dur="4s" values="0;1;1;0.2" repeatCount="1" fill="freeze"/>
     </g>
   </g>
 
@@ -801,9 +801,9 @@
         <image xlink:href="ire5.jpg" x="-200" y="-133" width="400" height="267"/>
         <rect x="-200" y="-133" width="400" height="267" rx="5" class="imgBorder"/>
         <text x="-195" y="-100" class="txt">Sheep Head</text>
-        <animateTransform attributeName="transform" type="rotate" begin="foto5.begin" dur="1.4s" values="-60; -370" repeatCount="1" fill="freeze"/>
+        <animateTransform attributeName="transform" type="rotate" begin="foto5.begin" dur="1.4s" values="-60;-370" repeatCount="1" fill="freeze"/>
       </g>
-      <animateTransform attributeName="transform" type="scale" begin="foto5.begin" dur="4s" values="0; 1; 1; 0.2" repeatCount="1" fill="freeze"/>
+      <animateTransform attributeName="transform" type="scale" begin="foto5.begin" dur="4s" values="0;1;1;0.2" repeatCount="1" fill="freeze"/>
     </g>
   </g>
 
@@ -814,9 +814,9 @@
         <image xlink:href="ire6.jpg" x="-200" y="-133" width="400" height="267"/>
         <rect x="-200" y="-133" width="400" height="267" rx="5" class="imgBorder"/>
         <text x="-195" y="-100" class="txt">Torc Waterfall</text>
-        <animateTransform attributeName="transform" type="rotate" begin="foto6.begin" dur="1.4s" values="60; 370" repeatCount="1" fill="freeze"/>
+        <animateTransform attributeName="transform" type="rotate" begin="foto6.begin" dur="1.4s" values="60;370" repeatCount="1" fill="freeze"/>
       </g>
-      <animateTransform attributeName="transform" type="scale" begin="foto6.begin" dur="4s" values="0; 1; 1; 0.2" repeatCount="1" fill="freeze"/>
+      <animateTransform attributeName="transform" type="scale" begin="foto6.begin" dur="4s" values="0;1;1;0.2" repeatCount="1" fill="freeze"/>
     </g>
   </g>
 
@@ -828,9 +828,9 @@
         <image xlink:href="ire7.jpg" x="-200" y="-133" width="400" height="267"/>
         <rect x="-200" y="-133" width="400" height="267" rx="5" class="imgBorder"/>
         <text x="-195" y="-100" class="txt">Skellig Islands</text>
-        <animateTransform attributeName="transform" type="rotate" begin="foto7.begin" dur="1.4s" values="-60; -370" repeatCount="1" fill="freeze"/>
+        <animateTransform attributeName="transform" type="rotate" begin="foto7.begin" dur="1.4s" values="-60;-370" repeatCount="1" fill="freeze"/>
       </g>
-      <animateTransform attributeName="transform" type="scale" begin="foto7.begin" dur="4s" values="0; 1; 1; 0.2" repeatCount="1" fill="freeze"/>
+      <animateTransform attributeName="transform" type="scale" begin="foto7.begin" dur="4s" values="0;1;1;0.2" repeatCount="1" fill="freeze"/>
     </g>
   </g>
 
@@ -841,9 +841,9 @@
         <image xlink:href="ire8.jpg" x="-200" y="-133" width="400" height="267"/>
         <rect x="-200" y="-133" width="400" height="267" rx="5" class="imgBorder"/>
         <text x="-195" y="-100" class="txt">Dingle</text>
-        <animateTransform attributeName="transform" type="rotate" begin="foto8.begin" dur="1.4s" values="60; 370" repeatCount="1" fill="freeze"/>
+        <animateTransform attributeName="transform" type="rotate" begin="foto8.begin" dur="1.4s" values="60;370" repeatCount="1" fill="freeze"/>
       </g>
-      <animateTransform attributeName="transform" type="scale" begin="foto8.begin" dur="4s" values="0; 1; 1; 0.2" repeatCount="1" fill="freeze"/>
+      <animateTransform attributeName="transform" type="scale" begin="foto8.begin" dur="4s" values="0;1;1;0.2" repeatCount="1" fill="freeze"/>
     </g>
   </g>
 
@@ -855,9 +855,9 @@
         <image xlink:href="ire9.jpg" x="-200" y="-133" width="400" height="267"/>
         <rect x="-200" y="-133" width="400" height="267" rx="5" class="imgBorder"/>
         <text x="-195" y="-100" class="txt">Cliffs of Moher</text>
-        <animateTransform attributeName="transform" type="rotate" begin="foto9.begin" dur="1.4s" values="-60; -370" repeatCount="1" fill="freeze"/>
+        <animateTransform attributeName="transform" type="rotate" begin="foto9.begin" dur="1.4s" values="-60;-370" repeatCount="1" fill="freeze"/>
       </g>
-      <animateTransform attributeName="transform" type="scale" begin="foto9.begin" dur="4s" values="0; 1; 1; 0.2" repeatCount="1" fill="freeze"/>
+      <animateTransform attributeName="transform" type="scale" begin="foto9.begin" dur="4s" values="0;1;1;0.2" repeatCount="1" fill="freeze"/>
     </g>
   </g>
 
@@ -868,9 +868,9 @@
         <image xlink:href="ire10.jpg" x="-200" y="-133" width="400" height="267"/>
         <rect x="-200" y="-133" width="400" height="267" rx="5" class="imgBorder"/>
         <text x="-195" y="-100" class="txt">Black Head</text>
-        <animateTransform attributeName="transform" type="rotate" begin="foto10.begin" dur="1.4s" values="60; 370" repeatCount="1" fill="freeze"/>
+        <animateTransform attributeName="transform" type="rotate" begin="foto10.begin" dur="1.4s" values="60;370" repeatCount="1" fill="freeze"/>
       </g>
-      <animateTransform attributeName="transform" type="scale" begin="foto10.begin" dur="4s" values="0; 1; 1; 0.2" repeatCount="1" fill="freeze"/>
+      <animateTransform attributeName="transform" type="scale" begin="foto10.begin" dur="4s" values="0;1;1;0.2" repeatCount="1" fill="freeze"/>
     </g>
   </g>
 
@@ -882,9 +882,9 @@
         <image xlink:href="ire11.jpg" x="-200" y="-133" width="400" height="267"/>
         <rect x="-200" y="-133" width="400" height="267" rx="5" class="imgBorder"/>
         <text x="-195" y="-100" class="txt">Ashford Castle</text>
-        <animateTransform attributeName="transform" type="rotate" begin="foto11.begin" dur="1.4s" values="-60; -370" repeatCount="1" fill="freeze"/>
+        <animateTransform attributeName="transform" type="rotate" begin="foto11.begin" dur="1.4s" values="-60;-370" repeatCount="1" fill="freeze"/>
       </g>
-      <animateTransform attributeName="transform" type="scale" begin="foto11.begin" dur="4s" values="0; 1; 1; 0.2" repeatCount="1" fill="freeze"/>
+      <animateTransform attributeName="transform" type="scale" begin="foto11.begin" dur="4s" values="0;1;1;0.2" repeatCount="1" fill="freeze"/>
     </g>
   </g>
 
@@ -895,9 +895,9 @@
         <image xlink:href="ire19.jpg" x="-200" y="-133" width="400" height="267"/>
         <rect x="-200" y="-133" width="400" height="267" rx="5" class="imgBorder"/>
         <text x="-195" y="-100" class="txt">Dog's Bay</text>
-        <animateTransform attributeName="transform" type="rotate" begin="foto12.begin" dur="1.4s" values="60; 370" repeatCount="1" fill="freeze"/>
+        <animateTransform attributeName="transform" type="rotate" begin="foto12.begin" dur="1.4s" values="60;370" repeatCount="1" fill="freeze"/>
       </g>
-      <animateTransform attributeName="transform" type="scale" begin="foto12.begin" dur="4s" values="0; 1; 1; 0.2" repeatCount="1" fill="freeze"/>
+      <animateTransform attributeName="transform" type="scale" begin="foto12.begin" dur="4s" values="0;1;1;0.2" repeatCount="1" fill="freeze"/>
     </g>
   </g>
 
@@ -909,9 +909,9 @@
         <image xlink:href="ire12.jpg" x="-200" y="-133" width="400" height="267"/>
         <rect x="-200" y="-133" width="400" height="267" rx="5" class="imgBorder"/>
         <text x="-195" y="-100" class="txt">Kylemore Abbey</text>
-        <animateTransform attributeName="transform" type="rotate" begin="foto13.begin" dur="1.4s" values="-60; -370" repeatCount="1" fill="freeze"/>
+        <animateTransform attributeName="transform" type="rotate" begin="foto13.begin" dur="1.4s" values="-60;-370" repeatCount="1" fill="freeze"/>
       </g>
-      <animateTransform attributeName="transform" type="scale" begin="foto13.begin" dur="4s" values="0; 1; 1; 0.2" repeatCount="1" fill="freeze"/>
+      <animateTransform attributeName="transform" type="scale" begin="foto13.begin" dur="4s" values="0;1;1;0.2" repeatCount="1" fill="freeze"/>
     </g>
   </g>
 
@@ -922,9 +922,9 @@
         <image xlink:href="ire13.jpg" x="-200" y="-133" width="400" height="267"/>
         <rect x="-200" y="-133" width="400" height="267" rx="5" class="imgBorder"/>
         <text x="-195" y="-100" class="txt">Achill Island</text>
-        <animateTransform attributeName="transform" type="rotate" begin="foto14.begin" dur="1.4s" values="60; 370" repeatCount="1" fill="freeze"/>
+        <animateTransform attributeName="transform" type="rotate" begin="foto14.begin" dur="1.4s" values="60;370" repeatCount="1" fill="freeze"/>
       </g>
-      <animateTransform attributeName="transform" type="scale" begin="foto14.begin" dur="4s" values="0; 1; 1; 0.2" repeatCount="1" fill="freeze"/>
+      <animateTransform attributeName="transform" type="scale" begin="foto14.begin" dur="4s" values="0;1;1;0.2" repeatCount="1" fill="freeze"/>
     </g>
   </g>
 
@@ -935,9 +935,9 @@
         <image xlink:href="ire20.jpg" x="-200" y="-133" width="400" height="267"/>
         <rect x="-200" y="-133" width="400" height="267" rx="5" class="imgBorder"/>
         <text x="-195" y="-100" class="txt">Ben Bulben</text>
-        <animateTransform attributeName="transform" type="rotate" begin="foto15.begin" dur="1.4s" values="-60; -370" repeatCount="1" fill="freeze"/>
+        <animateTransform attributeName="transform" type="rotate" begin="foto15.begin" dur="1.4s" values="-60;-370" repeatCount="1" fill="freeze"/>
       </g>
-      <animateTransform attributeName="transform" type="scale" begin="foto15.begin" dur="4s" values="0; 1; 1; 0.2" repeatCount="1" fill="freeze"/>
+      <animateTransform attributeName="transform" type="scale" begin="foto15.begin" dur="4s" values="0;1;1;0.2" repeatCount="1" fill="freeze"/>
     </g>
   </g>
 
@@ -948,9 +948,9 @@
         <image xlink:href="ire14.jpg" x="-200" y="-133" width="400" height="267"/>
         <rect x="-200" y="-133" width="400" height="267" rx="5" class="imgBorder"/>
         <text x="-195" y="128" class="txt" fill="#eee">Horn Head</text>
-        <animateTransform attributeName="transform" type="rotate" begin="foto16.begin" dur="1.4s" values="60; 370" repeatCount="1" fill="freeze"/>
+        <animateTransform attributeName="transform" type="rotate" begin="foto16.begin" dur="1.4s" values="60;370" repeatCount="1" fill="freeze"/>
       </g>
-      <animateTransform attributeName="transform" type="scale" begin="foto16.begin" dur="4s" values="0; 1; 1; 0.2" repeatCount="1" fill="freeze"/>
+      <animateTransform attributeName="transform" type="scale" begin="foto16.begin" dur="4s" values="0;1;1;0.2" repeatCount="1" fill="freeze"/>
     </g>
   </g>
 
@@ -961,9 +961,9 @@
         <image xlink:href="ire15.jpg" x="-200" y="-133" width="400" height="267"/>
         <rect x="-200" y="-133" width="400" height="267" rx="5" class="imgBorder"/>
         <text x="-195" y="128" class="txt">Mount Errigal</text>
-        <animateTransform attributeName="transform" type="rotate" begin="foto17.begin" dur="1.4s" values="-60; -370" repeatCount="1" fill="freeze"/>
+        <animateTransform attributeName="transform" type="rotate" begin="foto17.begin" dur="1.4s" values="-60;-370" repeatCount="1" fill="freeze"/>
       </g>
-      <animateTransform attributeName="transform" type="scale" begin="foto17.begin" dur="4s" values="0; 1; 1; 0.2" repeatCount="1" fill="freeze"/>
+      <animateTransform attributeName="transform" type="scale" begin="foto17.begin" dur="4s" values="0;1;1;0.2" repeatCount="1" fill="freeze"/>
     </g>
   </g>
 
@@ -974,9 +974,9 @@
         <image xlink:href="ire17.jpg" x="-200" y="-133" width="400" height="267"/>
         <rect x="-200" y="-133" width="400" height="267" rx="5" class="imgBorder"/>
         <text x="-195" y="-100" class="txt" fill="#eee">Megalithic Tombs</text>
-        <animateTransform attributeName="transform" type="rotate" begin="foto18.begin" dur="1.4s" values="60; 370" repeatCount="1" fill="freeze"/>
+        <animateTransform attributeName="transform" type="rotate" begin="foto18.begin" dur="1.4s" values="60;370" repeatCount="1" fill="freeze"/>
       </g>
-      <animateTransform attributeName="transform" type="scale" begin="foto18.begin" dur="4s" values="0; 1; 1; 0.2" repeatCount="1" fill="freeze"/>
+      <animateTransform attributeName="transform" type="scale" begin="foto18.begin" dur="4s" values="0;1;1;0.2" repeatCount="1" fill="freeze"/>
     </g>
   </g>
 
@@ -987,9 +987,9 @@
         <image xlink:href="ire16.jpg" x="-200" y="-133" width="400" height="267"/>
         <rect x="-200" y="-133" width="400" height="267" rx="5" class="imgBorder"/>
         <text x="-195" y="-100" class="txt">Old Ram</text>
-        <animateTransform attributeName="transform" type="rotate" begin="foto19.begin" dur="1.4s" values="-60; -370" repeatCount="1" fill="freeze"/>
+        <animateTransform attributeName="transform" type="rotate" begin="foto19.begin" dur="1.4s" values="-60;-370" repeatCount="1" fill="freeze"/>
       </g>
-      <animateTransform attributeName="transform" type="scale" begin="foto19.begin" dur="4s" values="0; 1; 1; 0.2" repeatCount="1" fill="freeze"/>
+      <animateTransform attributeName="transform" type="scale" begin="foto19.begin" dur="4s" values="0;1;1;0.2" repeatCount="1" fill="freeze"/>
     </g>
   </g>
 
@@ -1000,9 +1000,9 @@
         <image xlink:href="ire18.jpg" x="-200" y="-133" width="400" height="267"/>
         <rect x="-200" y="-133" width="400" height="267" rx="5" class="imgBorder"/>
         <text x="-195" y="-100" class="txt">Slane Bridge</text>
-        <animateTransform attributeName="transform" type="rotate" begin="foto20.begin" dur="1.4s" values="60; 370" repeatCount="1" fill="freeze"/>
+        <animateTransform attributeName="transform" type="rotate" begin="foto20.begin" dur="1.4s" values="60;370" repeatCount="1" fill="freeze"/>
       </g>
-      <animateTransform attributeName="transform" type="scale" begin="foto20.begin" dur="4s" values="0; 1; 1; 0.2" repeatCount="1" fill="freeze"/>
+      <animateTransform attributeName="transform" type="scale" begin="foto20.begin" dur="4s" values="0;1;1;0.2" repeatCount="1" fill="freeze"/>
     </g>
   </g>
 
@@ -1105,8 +1105,8 @@
       <set attributeName="display" to="none" begin="fx20.click+4s"/>
     </image>
     <rect x="-200" y="-133" width="400" height="267" rx="5" class="imgBorder2"/>
-    <animateTransform restart="whenNotActive" attributeName="transform" type="scale" begin="fx1.click;fx2.click;fx3.click;fx4.click;fx5.click;fx6.click;fx7.click;fx8.click;fx9.click;fx10.click;fx11.click;fx12.click;fx13.click;fx14.click;fx15.click;fx16.click;fx17.click;fx17.click;fx18.click;fx19.click;fx20.click" dur="1.5s" values="0; 1.1; 1; 1" repeatCount="1" fill="freeze" id="appear"/>
-    <animateTransform restart="whenNotActive" attributeName="transform" type="scale" begin="appear.end+1s" dur="1.5s" values="1; 1.1; 0; 0" repeatCount="1" fill="freeze"/>
+    <animateTransform restart="whenNotActive" attributeName="transform" type="scale" begin="fx1.click;fx2.click;fx3.click;fx4.click;fx5.click;fx6.click;fx7.click;fx8.click;fx9.click;fx10.click;fx11.click;fx12.click;fx13.click;fx14.click;fx15.click;fx16.click;fx17.click;fx17.click;fx18.click;fx19.click;fx20.click" dur="1.5s" values="0;1.1;1;1" repeatCount="1" fill="freeze" id="appear"/>
+    <animateTransform restart="whenNotActive" attributeName="transform" type="scale" begin="appear.end+1s" dur="1.5s" values="1;1.1;0;0" repeatCount="1" fill="freeze"/>
   </g>
 </g>
 

@@ -4,6 +4,7 @@
 <!--  NOTICE: [1999-2001] Adobe Systems Incorporated.  Adobe hereby grants you the rights to reproduce, modify and distribute this file and its contents, not including any fonts, audio files or raster images included or embedded in or linked to this file, (the "Software"), and to grant such rights to other parties subject to the following:  This notice shall be included in any copy of the Software or any portion thereof.  THE SOFTWARE IS PROVIDED TO YOU AS-IS, WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT.  IN NO EVENT SHALL ADOBE BE LIABLE TO YOU OR ANY OTHER PARTY FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE.
 Modified By Marek Raida
 -->
+<script type="text/ecmascript" xlink:href="../fakesmile/smil.user.js"/>
 <defs>
 	<radialGradient id="mygradient1" cx="0.5" cy="0.50" r="0.5" fx="0.25" fy="0.25" gradientUnits="objectBoundingBox">
 		<stop id="1stop1" offset="0.0" style="stop-color:cyan;stop-opacity:0;"/>
@@ -121,7 +122,7 @@ mZGGFE6uYxYv/9k=" transform="matrix(1 0 0 1 30 80)"/>
 </g>
 <text x="100" y="158" style="text-anchor:middle;font-size:12px;fill:#333333;word-spacing:2px">Thank you for installing</text>
 <text x="45" y="180" style="text-anchor:middle;font-size:20px;filter:url(#DropShadowFilter);fill-opacity:.5"><tspan>Adobe</tspan><tspan font-size="8px" y="169">&#xAE;</tspan><tspan y="180" x="135"> SVG Viewer</tspan></text>
-<text x="45" y="180" style="text-anchor:middle;font-size:20px;"><tspan fill="#D90000">Adobe</tspan><tspan fill="#D90000" font-size="8px" y="169">&#xAE;</tspan><tspan fill="#000000" y="180" x="135"> SVG Viewer</tspan></text>
+<text x="45" y="180" style="text-anchor:middle;font-size:20px"><tspan fill="#D90000">Adobe</tspan><tspan fill="#D90000" font-size="8px" y="169">&#xAE;</tspan><tspan fill="#000000" y="180" x="135"> SVG Viewer</tspan></text>
 <!-- ANIMATION ELEMENTS -->
 <animateTransform xlink:href="#circle1" attributeName="transform" type="rotate" values="0;360" begin="0s" dur="10s" repeatDur="indefinite"/>
 <animateTransform xlink:href="#circle2" attributeName="transform" type="rotate" values="0;360" begin="0s" dur="10s" repeatDur="indefinite"/>
@@ -132,7 +133,7 @@ mZGGFE6uYxYv/9k=" transform="matrix(1 0 0 1 30 80)"/>
 <animate xlink:href="#ellipse2" attributeName="rx" values="30;0;30" begin="1.6s" dur="3s" repeatCount="indefinite"/>
 <animate xlink:href="#ellipse3" attributeName="rx" values="30;0;30" begin="0.8s" dur="3s" repeatCount="indefinite"/>
 <animate xlink:href="#ellipse4" attributeName="rx" values="30;0;30" begin="2.4s" dur="3s" repeatCount="indefinite"/>
-<animate id="start" xlink:href="#u" attributeName="font-size" to="100" begin="1s" dur="1s" repeatCount="1" fill="freeze"/>
+<animate id="start" xlink:href="#u" attributeName="opaciy" from="0.9" to="1" begin="1s" dur="1s" repeatCount="1" fill="freeze"/>
 <animate xlink:href="#u" attributeName="fill-opacity" to="0" begin="start.begin+1s" dur="1s" repeatCount="1" fill="freeze"/>
 <animate xlink:href="#r" attributeName="fill-opacity" values="0;0;1;1;0" begin="start.begin+1s" keyTimes="0;.25;.50;.75;1" dur="4s" repeatCount="1" fill="freeze"/>
 <animateTransform xlink:href="#r" attributeName="transform" type="rotate" values="-180;0" dur="1s" begin="start.begin+1s" repeatCount="1" fill="freeze"/>

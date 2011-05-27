@@ -12,7 +12,7 @@
 
         <linearGradient id="gradient1" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
             <stop stop-color="transparent" offset="0"/>
-            <stop stop-color="lightgreen" offset=".15">
+            <stop stop-color="lightgreen" offset="0.15">
                 <animate attributeName="offset" begin="label.end" dur="6s" values="0.15;0.85;0.15" repeatCount="indefinite"/>
             </stop>
             <stop stop-color="transparent" offset="1"/>
@@ -20,7 +20,7 @@
 
         <linearGradient id="gradient2" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
             <stop stop-color="transparent" offset="0"/>
-            <stop stop-color="gold" offset=".85">
+            <stop stop-color="gold" offset="0.85">
                 <animate attributeName="offset" begin="label.end" dur="6s" values="0.85;0.15;0.85" repeatCount="indefinite"/>
             </stop>
             <stop stop-color="transparent" offset="1"/>
@@ -76,7 +76,7 @@
       <set attributeName="fill" to="#6666ff" begin="lightning.begin; lightning2.begin" dur="0.25s"/>
     </rect>
 
-    <text font-size="72pt" y="100" font-weight="bold" transform="scale(1 1.83)" fill="none" stroke="white" stroke-opacity=".15" stroke-width="1" display="none">SVG
+    <text font-size="72pt" y="100" font-weight="bold" transform="scale(1 1.83)" fill="none" stroke="white" stroke-opacity="0.15" stroke-width="1" display="none">SVG
       <set attributeName="display" to="inline" begin="lightning.begin; lightning2.begin" dur="0.25s"/>
     </text>
 
@@ -107,7 +107,7 @@
       <path style="fill: yellow; fill-rule: evenodd; stroke: #555; opacity: 0; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1;" d="M 65,79 L 82,104 L 59,134 L 74,153 L 53,190 L 85,152 L 70,133 L 94,102 L 75,76 L 65,79 z">
         <set id="lightning" attributeName="opacity" to="1" begin="sky.end+2s; lightning.begin+7s" dur="0.25s"/>
         <set id="lightning2" attributeName="opacity" to="1" begin="lightning.end+0.2s" dur="0.2s"/>
-        <animateTransform attributeName="transform" type="scale" from="1" to=".85" begin="lightning2.begin" dur="0.2s"/>
+        <animateTransform attributeName="transform" type="scale" from="1" to="0.85" begin="lightning2.begin" dur="0.2s"/>
       </path>
 
       <animateTransform attributeName="transform" type="translate" from="-15 0" to="15 0" dur="2s" begin="sky.begin" fill="freeze"/>
@@ -128,7 +128,7 @@
       <ellipse cx="219" cy="29" rx="30" ry="11"/>
       <ellipse cx="202" cy="20" rx="18" ry="7"/>
     </g>
-      <animateTransform attributeName="transform" type="scale" values="1;.95;1" begin="sky.end+0.5s" dur="6.6s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="scale" values="1;0.95;1" begin="sky.end+0.5s" dur="6.6s" repeatCount="indefinite"/>
     </g>
 
     <g font-weight="bold" opacity="0">
@@ -138,25 +138,25 @@
     </g>
 
     <use xlink:href="#logo" opacity="0">
-      <set attributeName="opacity" fill="freeze" to=".4" begin="drop.end+1s"/>
+      <set attributeName="opacity" fill="freeze" to="0.4" begin="drop.end+1s"/>
     </use>
     <circle cx="243" cy="181" r="55" fill="#000" opacity="0">
-      <animate attributeName="cy" values="81; 181" dur="2s" fill="freeze" begin="laser.end+3.5s" id="drop"/>
+      <animate attributeName="cy" values="81;181" dur="2s" fill="freeze" begin="laser.end+3.5s" id="drop"/>
       <set attributeName="r" to="2" begin="drop.begin"/>
       <set attributeName="opacity" to="1" begin="drop.begin"/>
-      <animate attributeName="fill" values="#000; #f00; #fff" dur="2s" fill="freeze" begin="drop.end"/>
-      <animate attributeName="r" values="2; 58; 0" dur="2s" fill="freeze" begin="drop.end"/>
+      <animate attributeName="fill" values="#000;#f00;#fff" dur="2s" fill="freeze" begin="drop.end"/>
+      <animate attributeName="r" values="2;58;0" dur="2s" fill="freeze" begin="drop.end"/>
     </circle>
 
     <g transform="translate(230, 150)">
       <text font-size="30pt" fill="gold" transform=""><tspan>:</tspan><tspan>)<animate attributeName="font-weight" values="100;300;600;900;600;300;100" begin="laser.end+2s" dur="3s" repeatCount="indefinite"/></tspan>
-        <animateTransform attributeName="transform" fill="freeze" type="rotate" values="0; 115; 90" begin="laser.end" dur="1.2s"/>
+        <animateTransform attributeName="transform" fill="freeze" type="rotate" values="0;115;90" begin="laser.end" dur="1.2s"/>
       </text>
     </g>
 
     <g opacity="0">
       <!-- Shapes that make up UFO -->
-      <ellipse cx="220" cy="70" rx="30" ry="18" fill="aqua" fill-opacity=".6"/>
+      <ellipse cx="220" cy="70" rx="30" ry="18" fill="aqua" fill-opacity="0.6"/>
       <ellipse cx="220" cy="80" rx="50" ry="8" fill="silver" stroke="steelblue" stroke-width="3"/>
 
      <!-- Animations affecting UFO -->
@@ -167,19 +167,19 @@
 
     <!-- laser -->
     <g transform="translate(200, 60) rotate(50)">
-      <rect fill="red" width="20" height="2" display="none">
+      <rect fill="red" width="20" height="2" x="0" y="0" display="none">
         <set attributeName="display" to="inline" begin="ufoAppear.end+0.6s" dur="0.5s"/>
-        <animate id="laser" attributeName="x" by="60" begin="ufoAppear.end+0.6s" dur="0.5s"/>
+        <animate id="laser" attributeName="x" from="0" to="60" begin="ufoAppear.end+0.6s" dur="0.5s"/>
       </rect>
     </g>
 
     <g fill="black" stroke="none" transform="translate(310 50)">
       <polygon points="3,9 5,8 20,10 10,12 5,12 4,11"/>
       <polygon points="5,10 10,0 13,11">
-        <animateTransform attributeName="transform" type="translate" values="0,0; 0,20; 0,0" dur="1s" repeatCount="indefinite" additive="sum"/>
-        <animateTransform attributeName="transform" type="scale" values="1 1; 1 -0.8; 1 1" dur="1s" repeatCount="indefinite" additive="sum"/>
+        <animateTransform attributeName="transform" type="translate" values="0,0;0,20;0,0" dur="1s" repeatCount="indefinite" additive="sum"/>
+        <animateTransform attributeName="transform" type="scale" values="1 1;1 -0.8;1 1" dur="1s" repeatCount="indefinite" additive="sum"/>
       </polygon>
-      <animateTransform id="fly" attributeName="transform" type="translate" values="310 50; 102 88; 98 91; -30 100" begin="lightning.begin+1s" dur="4.5s"/>
+      <animateTransform id="fly" attributeName="transform" type="translate" values="310 50;102 88;98 91;-30 100" begin="lightning.begin+1s" dur="4.5s"/>
     </g>
 
     <!-- pseudomask -->

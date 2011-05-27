@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="300" height="300">
-
+<script type="text/ecmascript" xlink:href="../fakesmile/smil.user.js"/>
 <defs>
-  <g id="bubble1" fill-opacity=".6">
+  <g id="bubble1" fill-opacity="0.6">
     <circle cx="100" cy="100" r="30" fill="#CF372B" stroke="#93170E" stroke-width="1"/>
     <ellipse cx="106" cy="90" rx="15" ry="10" fill="#E75E53"/>
     <ellipse cx="110" cy="88" rx="5" ry="3" fill="white"/>
@@ -39,8 +39,8 @@
   </use>
 
   <use xlink:href="#bubble1" transform="translate(60,270) scale(0.5,0.5)">
-    <animate attributeName="y" begin=".5s" dur="3.5s" from="0" to="-670" repeatCount="indefinite"/>
-    <animate attributeName="x" begin=".5s" dur="1.3s" values="0;14;0;-10;0" repeatCount="indefinite"/>
+    <animate attributeName="y" begin="0.5s" dur="3.5s" from="0" to="-670" repeatCount="indefinite"/>
+    <animate attributeName="x" begin="0.5s" dur="1.3s" values="0;14;0;-10;0" repeatCount="indefinite"/>
   </use>
 
   <use xlink:href="#bubble1" transform="translate(80,270) scale(0.5,0.5)">
@@ -76,32 +76,32 @@
 
   <use xlink:href="#bubble1" transform="translate(60,300) scale(0.2,0.2)">
     <animate attributeName="y" begin="0s" dur="3.5s" from="0" to="-1600" repeatCount="indefinite"/>
-    <animate attributeName="x" begin="0s" dur=".7s" values="0;6;0;-6;0" repeatCount="indefinite"/>
+    <animate attributeName="x" begin="0s" dur="0.7s" values="0;6;0;-6;0" repeatCount="indefinite"/>
   </use>
 
   <use xlink:href="#bubble1" transform="translate(70,300) scale(0.2,0.2)">
-    <animate attributeName="y" begin=".5s" dur="5s" from="0" to="-1600" repeatCount="indefinite"/>
-    <animate attributeName="x" begin="0s" dur=".7s" values="0;6;0;-6;0" repeatCount="indefinite"/>
+    <animate attributeName="y" begin="0.5s" dur="5s" from="0" to="-1600" repeatCount="indefinite"/>
+    <animate attributeName="x" begin="0s" dur="0.7s" values="0;6;0;-6;0" repeatCount="indefinite"/>
   </use>
 
   <use xlink:href="#bubble1" transform="translate(100,300) scale(0.2,0.2)">
-    <animate attributeName="y" begin=".5s" dur="3s" from="0" to="-1600" repeatCount="indefinite"/>
-    <animate attributeName="x" begin="0s" dur=".7s" values="0;15;0;-15;0" repeatCount="indefinite"/>
+    <animate attributeName="y" begin="0.5s" dur="3s" from="0" to="-1600" repeatCount="indefinite"/>
+    <animate attributeName="x" begin="0s" dur="0.7s" values="0;15;0;-15;0" repeatCount="indefinite"/>
   </use>
 
   <use xlink:href="#bubble1" transform="translate(110,300) scale(0.2,0.2)">
-    <animate attributeName="y" begin=".5s" dur="2s" from="0" to="-1600" repeatCount="indefinite"/>
+    <animate attributeName="y" begin="0.5s" dur="2s" from="0" to="-1600" repeatCount="indefinite"/>
     <animate attributeName="x" begin="0s" dur="1s" values="0;5;0;-5;0" repeatCount="indefinite"/>
   </use>
 
   <use xlink:href="#bubble1" transform="translate(160,300) scale(0.2,0.2)">
-    <animate attributeName="y" begin=".5s" dur="4s" from="0" to="-1600" repeatCount="indefinite"/>
+    <animate attributeName="y" begin="0.5s" dur="4s" from="0" to="-1600" repeatCount="indefinite"/>
     <animate attributeName="x" begin="1s" dur="1s" values="0;15;0;-15;0" repeatCount="indefinite"/>
   </use>
 
   <use xlink:href="#bubble1" transform="translate(190,300) scale(0.2,0.2)">
-    <animate attributeName="y" begin=".3s" dur="6s" from="0" to="-1600" repeatCount="indefinite"/>
-    <animate attributeName="x" begin=".4s" dur="2s" values="0;6;0;-6;0" repeatCount="indefinite"/>
+    <animate attributeName="y" begin="0.3s" dur="6s" from="0" to="-1600" repeatCount="indefinite"/>
+    <animate attributeName="x" begin="0.4s" dur="2s" values="0;6;0;-6;0" repeatCount="indefinite"/>
   </use>
 
   <use xlink:href="#bubble1" transform="translate(120,300) scale(0.2,0.2)">
@@ -115,8 +115,8 @@
   </use>
 
   <use xlink:href="#bubble1" transform="translate(150,300) scale(0.2,0.2)">
-    <animate attributeName="y" begin=".8s" dur="4s" from="0" to="-1600" repeatCount="indefinite"/>
-    <animate attributeName="x" begin=".8s" dur="1s" values="0;9;0;-9;0" repeatCount="indefinite"/>
+    <animate attributeName="y" begin="0.8s" dur="4s" from="0" to="-1600" repeatCount="indefinite"/>
+    <animate attributeName="x" begin="0.8s" dur="1s" values="0;9;0;-9;0" repeatCount="indefinite"/>
   </use>
 
   <use xlink:href="#bubble1" transform="translate(105,300) scale(0.2,0.2)">

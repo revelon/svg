@@ -1,7 +1,7 @@
 <!--Copyright 1999 Adobe Systems. You may copy, modify, and distribute this file, if you include this notice & do not charge for the distribution. This file is provided "AS-IS" without warranties of any kind, including any implied warranties.-->
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" width="320" height="160" viewBox="-10 -10 840 420" font-family="sans-serif">
 <title>9.9.2 Demonstruje calcMode="spline" spolu s nastavenim keySplines</title>
-
+<script type="text/ecmascript" xlink:href="../fakesmile/smil.user.js"/>
 <rect style="font-family:'Helvetica';font-size:30px;fill:none;stroke:gray" x="-8" y="-8" width="420" height="416"/>
 <text style="font-family:'Helvetica';font-size:30px;fill:gray" x="440" y="50">keySplines="0 0 1 1"</text>
 <text style="font-family:'Helvetica';font-size:30px;fill:green" x="440" y="90">keySplines=".5 0 .5 1"</text>

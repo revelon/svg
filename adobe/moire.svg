@@ -3,6 +3,7 @@ NOTICE: [1999-2001] Adobe Systems Incorporated.  Adobe hereby grants you the rig
 Modified by Matek Raida
 -->
 <svg  width="204" height="224" viewBox="-2 -2 204 224" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<script type="text/ecmascript" xlink:href="../fakesmile/smil.user.js"/>
 <animate id="timeLine" begin="0s" dur="25s" repeatDur="indefinite" />
 
 <title>Moire patterns</title>

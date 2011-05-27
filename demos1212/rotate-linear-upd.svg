@@ -1,5 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <title>3D simulation in 2D by Kevin Lindsey (http://www.kevlindev.com/), modified a bit by Marek Raida</title>
+    <script type="text/ecmascript" xlink:href="../fakesmile/smil.user.js"/>
     <rect width="100%" height="100%" fill="blue"/>
     <g transform="translate(100, 100)">
         <!-- Polygon 1 -->

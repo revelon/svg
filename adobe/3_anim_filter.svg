@@ -3,7 +3,7 @@ NOTICE:  [1999-2001] Adobe Systems Incorporated.  Adobe hereby grants you the ri
 Modified by  Marek Raida
 -->
 <svg width="5in" height="5in" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-
+<script type="text/ecmascript" xlink:href="../fakesmile/smil.user.js"/>
 	<defs>
 
 		<filter id="Turb2" filterUnits="objectBoundingBox">

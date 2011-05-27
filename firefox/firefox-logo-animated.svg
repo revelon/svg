@@ -1,37 +1,38 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 220 220" width="100%" height="100%">
  <title>Firefox Logo Simplified and Animated</title>
  <desc>Authored by Jon Hicks, modified by Doug Schepers, even more modified by Marek Raida</desc>
+ <script type="text/ecmascript" xlink:href="../fakesmile/smil.user.js"/>
  <radialGradient id="x61" cx="64" cy="7" r="104" fx="64" fy="7" gradientUnits="userSpaceOnUse">
   <stop offset="0" stop-color="#67C5D5"/>
-  <stop offset=".3" stop-color="#62B9CE"/>
-  <stop offset=".5" stop-color="#5392BA"/>
-  <stop offset=".7" stop-color="#3A5097"/>
+  <stop offset="0.3" stop-color="#62B9CE"/>
+  <stop offset="0.5" stop-color="#5392BA"/>
+  <stop offset="0.7" stop-color="#3A5097"/>
   <stop offset="1" stop-color="#596AAD"/>
  </radialGradient>
  <radialGradient id="x65" cx="65" cy="19" r="57" fx="65" fy="19" gradientUnits="userSpaceOnUse">
   <stop offset="0" stop-color="#0F80BC"/>
-  <stop offset=".2" stop-color="#0B629B"/>
-  <stop offset=".8" stop-color="#031747"/>
+  <stop offset="0.2" stop-color="#0B629B"/>
+  <stop offset="0.8" stop-color="#031747"/>
   <stop offset="1" stop-color="#00022F"/>
  </radialGradient>
  <linearGradient id="x69" gradientUnits="userSpaceOnUse" x1="76" y1="16" x2="93" y2="18">
   <stop offset="0" stop-color="#0F80BC"/>
-  <stop offset=".3" stop-color="#0A5F9E"/>
+  <stop offset="0.3" stop-color="#0A5F9E"/>
   <stop offset="1" stop-color="#00145A"/>
  </linearGradient>
  <linearGradient id="x70" gradientUnits="userSpaceOnUse" x1="38" y1="19" x2="29" y2="33">
   <stop offset="0" stop-color="#0F80BC"/>
-  <stop offset=".3" stop-color="#0A5F9E"/>
+  <stop offset="0.3" stop-color="#0A5F9E"/>
   <stop offset="1" stop-color="#00145A"/>
  </linearGradient>
  <linearGradient id="x71" gradientUnits="userSpaceOnUse" x1="62" y1="34" x2="62" y2="12">
   <stop offset="0" stop-color="#000" stop-opacity="0"/>
-  <stop offset=".6" stop-color="#C4E0E3" stop-opacity=".2"/>
-  <stop offset="1" stop-color="#F2FAFC" stop-opacity=".5"/>
+  <stop offset="0.6" stop-color="#C4E0E3" stop-opacity="0.2"/>
+  <stop offset="1" stop-color="#F2FAFC" stop-opacity="0.5"/>
  </linearGradient>
  <linearGradient id="x75" gradientUnits="userSpaceOnUse" x1="42" y1="37" x2="53" y2="38">
   <stop offset="0" stop-color="#941403"/>
-  <stop offset=".9" stop-color="#E85C0A"/>
+  <stop offset="0.9" stop-color="#E85C0A"/>
  </linearGradient>
  <linearGradient id="x77" gradientUnits="userSpaceOnUse" x1="49" y1="44" x2="52" y2="43">
   <stop offset="0" stop-color="#F2C8A9"/>
@@ -62,14 +63,14 @@
   <stop offset="1" stop-color="#f2c06e"/>
  </linearGradient>
  <linearGradient id="x91" y2="480" gradientUnits="userSpaceOnUse" x2="-410" gradientTransform="matrix(1,.13,-.13,1,480,-330)" y1="430" x1="-410">
-  <stop stop-color="#de7210" offset=".06"/>
+  <stop stop-color="#de7210" offset="0.06"/>
   <stop stop-color="#f2c06e" offset="1"/>
  </linearGradient>
  <linearGradient id="x92" gradientUnits="userSpaceOnUse" x1="-414" y1="423" x2="-414" y2="470" gradientTransform="matrix(1,.3,-.3,1,555,-208)">
   <stop offset="0" stop-color="#de7210"/>
   <stop offset="1" stop-color="#f2c06e"/>
  </linearGradient>
- <linearGradient id="x93" y2="76" gradientUnits="userSpaceOnUse" x2=".5" gradientTransform="matrix(.8,-.6,.6,.8,-29,20)" y1="56" x1="14">
+ <linearGradient id="x93" y2="76" gradientUnits="userSpaceOnUse" x2="0.5" gradientTransform="matrix(.8,-.6,.6,.8,-29,20)" y1="56" x1="14">
   <stop stop-color="#de7210" offset="0"/>
   <stop stop-color="#f2c072" offset="1"/>
  </linearGradient>
@@ -151,102 +152,102 @@
  </linearGradient>
  <linearGradient id="x83" gradientUnits="userSpaceOnUse" x1="18" y1="31" x2="13" y2="17">
   <stop offset="0" stop-color="#941403"/>
-  <stop offset=".5" stop-color="#E85C0A"/>
+  <stop offset="0.5" stop-color="#E85C0A"/>
   <stop offset="1" stop-color="#F9BD5F"/>
  </linearGradient>
  <linearGradient id="x84" gradientUnits="userSpaceOnUse" x1="42" y1="34" x2="55" y2="17">
-  <stop offset=".2" stop-color="#de7210"/>
-  <stop offset=".8" stop-color="#F9BD5F"/>
+  <stop offset="0.2" stop-color="#de7210"/>
+  <stop offset="0.8" stop-color="#F9BD5F"/>
   <stop offset="1" stop-color="#FFFCCF"/>
  </linearGradient>
  <linearGradient id="x85" gradientUnits="userSpaceOnUse" x1="35" y1="57" x2="48" y2="84">
   <stop offset="0" stop-color="#941403"/>
-  <stop offset=".5" stop-color="#E35100"/>
+  <stop offset="0.5" stop-color="#E35100"/>
   <stop offset="1" stop-color="#DF731B"/>
  </linearGradient>
  <linearGradient id="x87" gradientUnits="userSpaceOnUse" x1="35" y1="48" x2="51" y2="64">
-  <stop offset=".2" stop-color="#DF731B"/>
-  <stop offset=".8" stop-color="#F9BD5F"/>
+  <stop offset="0.2" stop-color="#DF731B"/>
+  <stop offset="0.8" stop-color="#F9BD5F"/>
   <stop offset="1" stop-color="#FFFCCF"/>
  </linearGradient>
  <linearGradient id="x74" gradientUnits="userSpaceOnUse" x1="64" y1="56" x2="78" y2="48">
   <stop offset="0" stop-color="#DF731B"/>
-  <stop offset=".5" stop-color="#DF731B"/>
-  <stop offset=".7" stop-color="#EC8811"/>
-  <stop offset=".8" stop-color="#F4950B"/>
+  <stop offset="0.5" stop-color="#DF731B"/>
+  <stop offset="0.7" stop-color="#EC8811"/>
+  <stop offset="0.8" stop-color="#F4950B"/>
   <stop offset="1" stop-color="#f79a09"/>
  </linearGradient>
  <linearGradient id="x86" gradientUnits="userSpaceOnUse" x1="55" y1="41" x2="58" y2="44">
   <stop offset="0" stop-color="#EEA272"/>
-  <stop offset=".2" stop-color="#EFA777"/>
-  <stop offset=".4" stop-color="#F2B585"/>
-  <stop offset=".6" stop-color="#F6CD9C"/>
-  <stop offset=".9" stop-color="#FCEEBB"/>
+  <stop offset="0.2" stop-color="#EFA777"/>
+  <stop offset="0.4" stop-color="#F2B585"/>
+  <stop offset="0.6" stop-color="#F6CD9C"/>
+  <stop offset="0.9" stop-color="#FCEEBB"/>
   <stop offset="1" stop-color="#FFC"/>
  </linearGradient>
  <linearGradient id="x90" gradientUnits="userSpaceOnUse" x1="81" y1="68" x2="60" y2="72">
   <stop offset="0" stop-color="#FFFAEE"/>
-  <stop offset=".3" stop-color="#F3ED91"/>
-  <stop offset=".4" stop-color="#ECC267"/>
-  <stop offset=".6" stop-color="#E6A046"/>
-  <stop offset=".7" stop-color="#E2872E"/>
-  <stop offset=".9" stop-color="#E07820"/>
+  <stop offset="0.3" stop-color="#F3ED91"/>
+  <stop offset="0.4" stop-color="#ECC267"/>
+  <stop offset="0.6" stop-color="#E6A046"/>
+  <stop offset="0.7" stop-color="#E2872E"/>
+  <stop offset="0.9" stop-color="#E07820"/>
   <stop offset="1" stop-color="#DF731B"/>
  </linearGradient>
  <linearGradient id="x110" gradientUnits="userSpaceOnUse" x1="88" y1="117" x2="117" y2="73">
   <stop offset="0" stop-color="#de5c01"/>
-  <stop offset=".7" stop-color="#fefd00"/>
-  <stop offset=".9" stop-color="#ffff76"/>
+  <stop offset="0.7" stop-color="#fefd00"/>
+  <stop offset="0.9" stop-color="#ffff76"/>
   <stop offset="1" stop-color="#ffff92"/>
  </linearGradient>
  <linearGradient id="x111" gradientUnits="userSpaceOnUse" x1="105" y1="23" x2="86" y2="14">
   <stop offset="0" stop-color="#f79a09"/>
-  <stop offset=".7" stop-color="#fefd00"/>
-  <stop offset=".9" stop-color="#ffff76"/>
+  <stop offset="0.7" stop-color="#fefd00"/>
+  <stop offset="0.9" stop-color="#ffff76"/>
   <stop offset="1" stop-color="#ffff92"/>
  </linearGradient>
  <linearGradient id="x112" gradientUnits="userSpaceOnUse" x1="118" y1="42" x2="91" y2="17">
   <stop offset="0" stop-color="#de5c01"/>
-  <stop offset=".7" stop-color="#fefd00"/>
-  <stop offset=".9" stop-color="#ffff76"/>
+  <stop offset="0.7" stop-color="#fefd00"/>
+  <stop offset="0.9" stop-color="#ffff76"/>
   <stop offset="1" stop-color="#ffff92"/>
  </linearGradient>
  <linearGradient id="x113" gradientUnits="userSpaceOnUse" x1="1" y1="145" x2="-10" y2="134" gradientTransform="matrix(1,0,0,1,105,-105)">
   <stop offset="0" stop-color="#f79a09"/>
-  <stop offset=".7" stop-color="#fefd00"/>
-  <stop offset=".9" stop-color="#ffff76"/>
+  <stop offset="0.7" stop-color="#fefd00"/>
+  <stop offset="0.9" stop-color="#ffff76"/>
   <stop offset="1" stop-color="#ffff92"/>
  </linearGradient>
  <linearGradient id="x114" gradientUnits="userSpaceOnUse" x1="113" y1="56" x2="120" y2="34">
   <stop offset="0" stop-color="#f79a09"/>
-  <stop offset=".7" stop-color="#fefd00"/>
-  <stop offset=".9" stop-color="#ffff76"/>
+  <stop offset="0.7" stop-color="#fefd00"/>
+  <stop offset="0.9" stop-color="#ffff76"/>
   <stop offset="1" stop-color="#ffff92"/>
  </linearGradient>
  <linearGradient id="x115" gradientUnits="userSpaceOnUse" x1="-52" y1="213" x2="-52" y2="196" gradientTransform="matrix(1,0,0,1,152,-154)">
   <stop offset="0" stop-color="#f79a09"/>
-  <stop offset=".7" stop-color="#fefd00"/>
-  <stop offset=".9" stop-color="#ffff76"/>
+  <stop offset="0.7" stop-color="#fefd00"/>
+  <stop offset="0.9" stop-color="#ffff76"/>
   <stop offset="1" stop-color="#ffff92"/>
  </linearGradient>
  <linearGradient id="x116" gradientUnits="userSpaceOnUse" x1="-173" y1="332" x2="-161" y2="310" gradientTransform="matrix(1,0,0,1,255,-268)">
   <stop offset="0" stop-color="#f79a09"/>
-  <stop offset=".7" stop-color="#fefd00"/>
-  <stop offset=".9" stop-color="#ffff76"/>
+  <stop offset="0.7" stop-color="#fefd00"/>
+  <stop offset="0.9" stop-color="#ffff76"/>
   <stop offset="1" stop-color="#ffff92"/>
  </linearGradient>
  <linearGradient id="x117" gradientUnits="userSpaceOnUse" x1="99" y1="88" x2="101" y2="63" gradientTransform="matrix(1,0,0,1,-11,14)">
   <stop offset="0" stop-color="#de5c01"/>
-  <stop offset=".7" stop-color="#fefd00"/>
-  <stop offset=".9" stop-color="#ffff76"/>
+  <stop offset="0.7" stop-color="#fefd00"/>
+  <stop offset="0.9" stop-color="#ffff76"/>
   <stop offset="1" stop-color="#ffff92"/>
  </linearGradient>
  <linearGradient id="x118" gradientUnits="userSpaceOnUse" x1="58" y1="114" x2="106" y2="85">
   <stop offset="0" stop-color="#B30000"/>
-  <stop offset=".2" stop-color="#C0290C"/>
-  <stop offset=".4" stop-color="#D36C08"/>
-  <stop offset=".6" stop-color="#E29E05"/>
-  <stop offset=".8" stop-color="#FEFD07"/>
+  <stop offset="0.2" stop-color="#C0290C"/>
+  <stop offset="0.4" stop-color="#D36C08"/>
+  <stop offset="0.6" stop-color="#E29E05"/>
+  <stop offset="0.8" stop-color="#FEFD07"/>
   <stop offset="1" stop-color="#FFFFC7"/>
  </linearGradient>
 
@@ -268,19 +269,19 @@
    <path fill="url(#x70)" d="m38.75,6.095c-7.2,3.32-13.38,8.585-18.55,14.535,2.22,3.23-2.13,11.4,5.34,6.32,2.69-1.31,3.56-5.93,4.48-2.81,2.07,1.09,3.22,1.73,5.41,1.94-5.93,4.12,5.53,5.01,4.75-0.59-0.65-4.35,3.15-4.97,7.09-5.63,1.56,4.72,4.78,0.97,6.2,2.69,3.87-5.54,6.12-12.743,1.69-15.547-0.32,5.337,3.68-6.8976,8.38-5.941-4.96-0.8188-14.75,1.059-20.98,3.476-1.29,0.476-2.56,0.996-3.81,1.557z"/>
    <ellipse fill="url(#x71)" cx="63.7" cy="23.3" rx="31" ry="20"/>
    <animate id="globeAppear" attributeName="fill-opacity" begin="globeStretch.end-0.25s" dur="3s" values="0;1" repeatCount="1" fill="freeze"/>
-   <animateTransform  id="globeRotate" attributeName="transform" type="rotate" values="0 63.7 59.4; -360 63.7 59.4" dur="8s" begin="globeAppear.end+1.5s" repeatCount="indefinite"/>
+   <animateTransform  id="globeRotate" attributeName="transform" type="rotate" values="0 63.7 59.4;-360 63.7 59.4" dur="8s" begin="globeAppear.end+1.5s" repeatCount="indefinite"/>
   </g>
 
-  <g font-size="14px" font-family="Helvetica,sans-serif" font-weight="bold" fill-opacity="0" stroke-width=".5" stroke="white">
+  <g font-size="14px" font-family="Helvetica,sans-serif" font-weight="bold" fill-opacity="0" stroke-width="0.5" stroke="white">
     <text x="50" y="17" visibility="hidden">SVG<set attributeName="visibility" to="visible" begin="foxRotate.begin+3s"/></text>
     <text x="50" y="110" visibility="hidden">SMIL<set attributeName="visibility" to="visible" begin="foxRotate.begin+11s"/></text>
     <g>
       <text font-size="11px" x="42" y="63" fill="#c62f1b" stroke="#a60f0b" fill-opacity="1" opacity="0">FIREFOX
         <animate id="titleShow" attributeName="opacity" from="0" to="1" dur="5s" fill="freeze" begin="foxRotate.begin+4s"/>
-        <animate id="titleRotate" attributeName="opacity" begin="titleShow.end+1s" dur="9s" values="1;.5;.5;1" repeatCount="indefinite" fill="freeze" calcMode="discrete"/>      
-        <animateTransform attributeName="transform" type="scale" values="1 1; -1 1; 1 1" dur="9s" begin="titleRotate.begin" repeatCount="indefinite"/>
+        <animate id="titleRotate" attributeName="opacity" begin="titleShow.end+1s" dur="9s" values="1;0.5;0.5;1" repeatCount="indefinite" fill="freeze" calcMode="discrete"/>      
+        <animateTransform attributeName="transform" type="scale" values="1 1;-1 1;1 1" dur="9s" begin="titleRotate.begin" repeatCount="indefinite"/>
       </text>
-      <animateTransform attributeName="transform" type="translate" values="0 0; 127 0; 0 0" dur="9s" begin="titleRotate.begin" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="translate" values="0 0;127 0;0 0" dur="9s" begin="titleRotate.begin" repeatCount="indefinite"/>
     </g>
   </g>
 
@@ -339,7 +340,7 @@
    <path fill="url(#x118)" d="M111.68,72.61c0,0-4.86,29.744-38.461,32.137 c-13.157,.938-32.048-2.141-30.375,2.877c.519,1.556,2.992,8.043,8.636,9.548C66.755,121.247,107.395,119.913,111.68,72.61z "/>
    <path fill="url(#x120)" d="M70.408,106.325c0,0-24.525-4.82-32.29-21.438 c-6.635-14.197-4.879-3.779-5.178,.962c-.314,4.877-7.191-1.783-8.11-2.942c-.026-.028-.044-.047-.046-.042 C24.647,82.955,37.433,102.999,70.408,106.325z"/>
    </g>
-   <animateTransform id="foxRotate" attributeName="transform" type="rotate" values="0 63.7 59.4; 360 63.7 59.4" dur="14s" begin="foxColor.end" repeatCount="indefinite"/>
+   <animateTransform id="foxRotate" attributeName="transform" type="rotate" values="0 63.7 59.4;360 63.7 59.4" dur="14s" begin="foxColor.end" repeatCount="indefinite"/>
    </g>
 </g>
 <image xlink:href="http://www.google-analytics.com/__utm.gif?utmwv=4.7.1&amp;utmn=21830374&amp;utmhn=svg.kvalitne.cz&amp;utmcs=UTF-8&amp;utmsr=1920x1080&amp;utmsc=24-bit&amp;utmul=en-us&amp;utmje=1&amp;utmfl=10.0%20r45&amp;utmdt=SVG%C2%A0%E2%80%94%C2%A0It%27s%20in%20your%20hands...&amp;utmhid=1377849700&amp;utmr=-&amp;utmp=%2Findex2.htm&amp;utmac=UA-11950721-1&amp;utmcc=__utma%3D251371972.1884550355.1260220320.1272562824.1272576758.56%3B%2B__utmz%3D251371972.1263752798.41.3.utmcsr%3Dgoogle%7Cutmccn%3D(organic)%7Cutmcmd%3Dorganic%7Cutmctr%3Dsvg%2520smil%2520demo%3B" width="1" height="1"/>

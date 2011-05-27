@@ -1,25 +1,27 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <title>Rotozoom implementation in pure SVG and SMIL, by marek.raida@gmail.com</title>
   <rect width="100%" height="100%" fill="url(#back)"/>
-
+  <script type="text/ecmascript" xlink:href="../fakesmile/smil.user.js"/>
   <pattern id="back" patternUnits="userSpaceOnUse" x="0" y="0" width="120" height="120">
+    <g>
     <g transform="translate(60 60)">
       <ellipse rx="60" ry="10" fill="red">
-        <animateTransform attributeName="transform" type="rotate" begin="0s" dur="8s" values="0; 360" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" type="rotate" begin="0s" dur="8s" values="0;360" repeatCount="indefinite"/>
       </ellipse>
       <ellipse rx="60" ry="10" fill="green">
-        <animateTransform attributeName="transform" type="rotate" begin="4s" dur="8s" values="0; -360" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" type="rotate" begin="4s" dur="8s" values="0;-360" repeatCount="indefinite"/>
       </ellipse>
       <ellipse rx="60" ry="10" fill="blue">
-        <animateTransform attributeName="transform" type="rotate" begin="1s" dur="8s" values="0; 360" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" type="rotate" begin="1s" dur="8s" values="0;360" repeatCount="indefinite"/>
       </ellipse>
       <ellipse rx="60" ry="10" fill="yellow">
-        <animateTransform attributeName="transform" type="rotate" begin="5s" dur="8s" values="0; -360" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" type="rotate" begin="5s" dur="8s" values="0;-360" repeatCount="indefinite"/>
       </ellipse>
     </g>
-    <animate attributeName="fill-opacity" dur="13s" repeatCount="indefinite" values="1; 0.2; 1; 0.5; 0.1; 1; 1"/>
-    <animateTransform attributeName="patternTransform" type="rotate" begin="0s" dur="25s" values="0 500 500; 360 500 500; 0 500 500" repeatCount="indefinite" additive="sum" calcMode="spline" keySplines="0.7 0.1 0.3 0.9; 0.7 0.1 0.3 0.9"/>
-    <animateTransform attributeName="patternTransform" type="scale" begin="0s" dur="15s" values="1; 0.3; 1.5; 4; 1" repeatCount="indefinite" additive="sum" calcMode="spline" keySplines="0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1"/>
+    <animate attributeName="fill-opacity" dur="13s" repeatCount="indefinite" values="1;0.2;1;0.5;0.1;1;1"/>
+    <animateTransform attributeName="patternTransform" type="rotate" begin="0s" dur="25s" values="0 500 500;360 500 500;0 500 500" repeatCount="indefinite" additive="sum" calcMode="spline" keySplines="0.7 0.1 0.3 0.9;0.7 0.1 0.3 0.9"/>
+    </g>
+    <animateTransform attributeName="patternTransform" type="scale" begin="0s" dur="15s" values="1;0.3;1.5;4;1" repeatCount="indefinite" additive="sum" calcMode="spline" keySplines="0.5 0 0.5 1;0.5 0 0.5 1;0.5 0 0.5 1;0.5 0 0.5 1"/>
   </pattern>
 
 <image xlink:href="http://www.google-analytics.com/__utm.gif?utmwv=4.7.1&amp;utmn=21830374&amp;utmhn=svg.kvalitne.cz&amp;utmcs=UTF-8&amp;utmsr=1920x1080&amp;utmsc=24-bit&amp;utmul=en-us&amp;utmje=1&amp;utmfl=10.0%20r45&amp;utmdt=SVG%C2%A0%E2%80%94%C2%A0It%27s%20in%20your%20hands...&amp;utmhid=1377849700&amp;utmr=-&amp;utmp=%2Findex2.htm&amp;utmac=UA-11950721-1&amp;utmcc=__utma%3D251371972.1884550355.1260220320.1272562824.1272576758.56%3B%2B__utmz%3D251371972.1263752798.41.3.utmcsr%3Dgoogle%7Cutmccn%3D(organic)%7Cutmcmd%3Dorganic%7Cutmctr%3Dsvg%2520smil%2520demo%3B" width="1" height="1"/>

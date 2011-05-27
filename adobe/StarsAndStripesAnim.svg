@@ -6,8 +6,6 @@ Modified By Marek Raida
 <title>StarsAndStripesAnim.svg</title>
 <desc>flag--each star reuses a defined path element</desc>
 
-<script type="text/ecmascript" xlink:href="../fakesmile/smil.user.js"/>
-
 <g transform="translate(10 60)">
 
 	<defs>
