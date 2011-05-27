@@ -1,5 +1,6 @@
 <svg width="200" height="280" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" font-family="sans-serif">
 <title>a02 - Animace masky, autor: Martin Hejral</title> 
+<script type="text/ecmascript" xlink:href="../fakesmile/smil.user.js"/>
 <!-- orezova cesta -->
   <clipPath id="clip">
   <circle cx="90" cy="128" r="50">

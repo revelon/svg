@@ -9,7 +9,7 @@
   Testovano v Adobe SVG prohlizeci v.3.
   Autor: Martin Hejral
 </desc>
-
+<script type="text/ecmascript" xlink:href="../fakesmile/smil.user.js"/>
 <script type="text/ecmascript">
 <![CDATA[
 function handler(evt) {

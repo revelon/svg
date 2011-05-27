@@ -89,11 +89,13 @@
 
     <g transform="translate(0, 30)">
       <use xlink:href="#halfHourglassBg"/>
+      <g>
       <use xlink:href="#halfHourglassSand">
-        <animateTransform attributeName="transform" type="translate" values="0,0;100,69;100,69" dur="12s" begin="0s" repeatCount="indefinite"/>
         <animateTransform attributeName="transform" type="scale" values="1;0;0" dur="12s" begin="0s" repeatCount="indefinite" additive="sum"/>
         <animate attributeName="display" values="block;none" dur="24s" begin="0s" repeatCount="indefinite" calcMode="discrete"/>
       </use>
+        <animateTransform attributeName="transform" type="translate" values="0,0;100,69;100,69" dur="12s" begin="0s" repeatCount="indefinite"/>
+      </g>
       <g>
         <rect height="69" width="1" x="99.5" y="0" fill="url(#sandGrad)" fill-opacity="0.5" stroke="none">
           <animate attributeName="fill-opacity" values="0.5;0;0.5" dur="1s" begin="0s" repeatCount="indefinite"/>
@@ -116,12 +118,13 @@
         </use>
         <animate attributeName="display" values="block;none" dur="24s" begin="0s" repeatCount="indefinite" calcMode="discrete"/>
       </g>
-
+      <g>
+      <animateTransform attributeName="transform" type="translate" values="0,0;100,69;100,69" dur="12s" begin="0s" repeatCount="indefinite"/>
       <use xlink:href="#halfHourglassSand">
-        <animateTransform attributeName="transform" type="translate" values="0,0;100,69;100,69" dur="12s" begin="0s" repeatCount="indefinite"/>
         <animateTransform attributeName="transform" type="scale" values="1;0;0" dur="12s" begin="0s" repeatCount="indefinite" additive="sum"/>
         <animate attributeName="display" values="none; block" dur="24s" begin="0s" repeatCount="indefinite" calcMode="discrete"/>
       </use>
+      </g>
     </g>
 
     <use xlink:href="#pillar">

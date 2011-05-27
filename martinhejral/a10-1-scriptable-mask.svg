@@ -8,6 +8,7 @@
   tuto Flashovou animaci (bez skriptu!).
   Autor: Martin Hejral
 </desc>
+<script type="text/ecmascript" xlink:href="../fakesmile/smil.user.js"/>
 <defs>
 <!-- z anim. objektu vyrobime orez -->
 <clipPath id="orez" x="0" y="0" width="200" height="192"
@@ -50,7 +51,7 @@
 	</path>
   <!-- animace: otaceni a zmena velikosti -->
   <animateTransform attributeName="transform" 
-    type="scale" values=".5;2.5;.5" dur="14s" 
+    type="scale" values="0.5;2.5;0.5" dur="14s" 
     additive="sum" repeatCount="indefinite" />
   <animateTransform attributeName="transform" 
     type="rotate" values="-29;9;-29" dur="4s" 

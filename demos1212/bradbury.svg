@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
      width="800" height="531" version="1.1">
-
+<script type="text/ecmascript" xlink:href="../fakesmile/smil.user.js"/>
 <defs >
 <font id="Arial" horiz-adv-x="904" ><font-face
     font-family="Arial"
