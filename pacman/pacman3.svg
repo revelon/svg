@@ -4,10 +4,10 @@
 
 <mask id="pac2">
   <rect x="-100" y="-200" width="200" height="200" fill="white">
-    <animateTransform attributeName="transform" type="rotate" begin="0s" dur="1s" values="0; -20; 0" repeatCount="indefinite"/>
+    <animateTransform attributeName="transform" type="rotate" begin="0s" dur="1s" values="0;-20;0" repeatCount="indefinite"/>
   </rect>
   <rect x="-100" width="200" height="200" fill="white">
-    <animateTransform attributeName="transform" type="rotate" begin="0s" dur="1s" values="0; 20; 0" repeatCount="indefinite"/>
+    <animateTransform attributeName="transform" type="rotate" begin="0s" dur="1s" values="0;20;0" repeatCount="indefinite"/>
   </rect>
 </mask>
 <g transform="translate(80 80)">

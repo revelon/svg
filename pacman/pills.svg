@@ -9,7 +9,7 @@
 <g mask="url(#pills1)" transform="translate(70 60)" id="pilltrack">
   <circle r="300" fill="none" stroke="black"/>
   <line x1="0" y1="20" x2="400" y2="20" stroke="#dd0" stroke-width="20" stroke-linecap="round" stroke-dasharray="1,60">
-    <animateTransform attributeName="transform" type="translate" begin="0s" dur="3s" values="0 0; -185 0" repeatCount="indefinite"/>
+    <animateTransform attributeName="transform" type="translate" begin="0s" dur="3s" values="0 0;-185 0" repeatCount="indefinite"/>
   </line>
 </g>
 

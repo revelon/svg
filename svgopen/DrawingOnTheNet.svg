@@ -2,6 +2,7 @@
   id="drawing" width="231" height="210" viewBox="0 -24 308 280" overflow="visible">
   <title>Drawing on the Net</title>
   <desc>SVG Open 2003 Conference Logo</desc>
+  <script type="text/ecmascript" xlink:href="../fakesmile/smil.user.js"/>
   <defs>
     <style type="text/css"><![CDATA[
       .ocean {fill:navy}

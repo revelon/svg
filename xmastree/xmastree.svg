@@ -46,11 +46,11 @@
 
   <ellipse fill="white" stroke="#006D39" stroke-width="2.3" cx="96" cy="64" rx="8" ry="0.5">
     <animate id="leftEye" attributeName="ry" from="0.5" to="10" dur="1s" begin="banka1.end+1s" fill="freeze"/>
-    <animate attributeName="ry" values="10; 12; 10" dur="3s" begin="centerEyes.end+1s" fill="freeze"/>
+    <animate attributeName="ry" values="10;12;10" dur="3s" begin="centerEyes.end+1s" fill="freeze"/>
   </ellipse>
   <ellipse fill="white" stroke="#006D39" stroke-width="2.3" cx="118" cy="64" rx="8" ry="0.5">
     <animate id="rightEye" attributeName="ry" from="0.5" to="10" dur="1s" begin="leftEye.begin+0.2s" fill="freeze"/>
-    <animate attributeName="ry" values="10; 12; 10" dur="3s" begin="centerEyes.end+1s" fill="freeze"/>
+    <animate attributeName="ry" values="10;12;10" dur="3s" begin="centerEyes.end+1s" fill="freeze"/>
   </ellipse>
 
   <g opacity="0">
@@ -67,7 +67,7 @@
 
   <path id="mouth" stroke="#006D39" opacity="0" fill="black" stroke-width="2.5" d="M89.335 88.7627c6.1481,0.9759 12.3553,4.2221 18.4442,2.9277 7.0565,-1.5002 12.4912,-7.2215 18.737,-10.8323 -3.5132,7.4168 -4.0693,17.2019 -10.5396,22.2501 -4.2492,3.3153 -11.3568,1.0912 -16.1021,-1.4638 -4.8847,-2.6302 -7.0263,-8.5879 -10.5395,-12.8817z">
     <animate id="showMouth" attributeName="opacity" from="0" to="1" dur="7s" begin="banka4.end" fill="freeze"/>
-    <animate attributeName="stroke-width" values="2.5; 1.5; 3.5; 2.5" dur="3s" begin="centerEyes.end+3s" repeatCount="1" fill="freeze"/>
+    <animate attributeName="stroke-width" values="2.5;1.5;3.5;2.5" dur="3s" begin="centerEyes.end+3s" repeatCount="1" fill="freeze"/>
   </path>
 
   <g transform="translate(80 60)" opacity="0">

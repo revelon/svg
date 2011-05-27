@@ -7,11 +7,11 @@
 </mask>
 <g transform="translate(80 80)">
   <circle r="70" fill="lightgreen" mask="url(#pac11)">
-    <animateTransform attributeName="transform" type="rotate" begin="0s" dur="1s" values="0; 30; 0" repeatCount="indefinite"/>
+    <animateTransform attributeName="transform" type="rotate" begin="0s" dur="1s" values="0;30;0" repeatCount="indefinite"/>
   </circle>
   <g>
     <circle r="70" fill="lightgreen" mask="url(#pac11)" transform="rotate(180)"/>
-    <animateTransform attributeName="transform" type="rotate" begin="0s" dur="1s" values="0; -30; 0" repeatCount="indefinite"/>  
+    <animateTransform attributeName="transform" type="rotate" begin="0s" dur="1s" values="0;-30;0" repeatCount="indefinite"/>  
   </g>
   <circle cy="-35" r="6" fill="#000" stroke="white" stroke-width="3"/>
 </g>

@@ -5,7 +5,7 @@
 <g transform="translate(85 85) scale(0.7)">
   <g id="half1">
     <path fill="purple" d="m 508.57143,615.2193 a 108.57143,108.57143 0 1 1 -217.14286,-10e-6 L 400,615.2193 z" transform="translate(-400 -615)"/>
-    <animateTransform attributeName="transform" type="rotate" values="0; 20; 0" dur="1s" repeatCount="indefinite" begin="0"/>
+    <animateTransform attributeName="transform" type="rotate" values="0;20;0" dur="1s" repeatCount="indefinite" begin="0"/>
   </g>
   <use xlink:href="#half1" transform="scale(1 -1) translate(0 0)"/>
   <circle cy="-45" r="8" fill="#000" stroke="white" stroke-width="4"/>
