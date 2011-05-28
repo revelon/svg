@@ -82,7 +82,7 @@
   var objectCounter = 0;
   var imageCounter = 0;
   var imagesTotal = 31;
-  var webkit = (window.navigator.userAgent.indexOf("WebKit") != -1);
+  var webkit = (window.navigator &amp;&amp; window.navigator.userAgent &amp;&amp; window.navigator.userAgent.indexOf("WebKit") != -1);
   var sounds = new Array();
   var desc = new Array();
   desc["cubav1.jpg"] = "Exit from subterranean Indiana caves near Vinales";

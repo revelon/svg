@@ -2,7 +2,7 @@
 NOTICE:  [1999-2001] Adobe Systems Incorporated.  Adobe hereby grants you the rights to reproduce, modify and distribute this file and its contents, not including any fonts, audio files or raster images included or embedded in or linked to this file, (the "Software"), and to grant such rights to other parties subject to the following:  This notice shall be included in any copy of the Software or any portion thereof.  THE SOFTWARE IS PROVIDED TO YOU AS-IS, WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT.  IN NO EVENT SHALL ADOBE BE LIABLE TO YOU OR ANY OTHER PARTY FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE.
 Modified by  Marek Raida
 -->
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 620 420">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 620 420" xmlns:html="http://www.w3.org/1999/xhtml">
 <title>audio.svg</title> 
 <desc>combined audio and graphics animation</desc>
 
@@ -24,16 +24,10 @@ Modified by  Marek Raida
     <stop id="greyblack_1" offset="1" style="stop-color:#000000"/>
   </radialGradient> 
 
-<!--a:audio xlink:href="rev3.mp3" volume="10" begin="1.56s">
-</a:audio>
-<a:audio xlink:href="Sound002.wav" volume="10" begin="37s" repeatDur="indefinite">
-</a:audio-->
-
-<foreignObject x="0" y="0" width="0" height="0">
-  <body xmlns="http://www.w3.org/1999/xhtml">
-    <audio src="rev3.ogg" autoplay="true"/>
-  </body>
-</foreignObject>
+<html:audio autoplay="true" loop="true">
+  <html:source src="rev3.ogg" type="audio/ogg"/>
+  <html:source src="rev3.mp3" type="audio/mp3"/>
+</html:audio>
 
 <g transform="translate(310 210)">
 <rect id="bckgnd" x="-310" y="-210" width="620" height="420" style="fill:white">
