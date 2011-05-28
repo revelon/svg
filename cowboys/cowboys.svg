@@ -167,14 +167,14 @@
         <line x1="0" y1="25" x2="50" y2="25" shape-rendering="optimizeSpeed"/> 
         <line x1="25" y1="0" x2="25" y2="50" shape-rendering="optimizeSpeed"/>
         <circle cx="25" cy="25" r="20" fill="none" stroke-width="1">
-            <animateColor id="gunShot" begin="gun_fire.begin" attributeName="fill" values="none;green;none" dur="0.2s" repeatCount="1" restart="whenNotActive"/>
+            <animate id="gunShot" begin="gun_fire.begin" attributeName="fill" values="none;green;none" dur="0.2s" repeatCount="1" restart="whenNotActive"/>
             <set begin="gunShot.begin" attributeName="fill-opacity" to="0.3" />
             <set begin="gunShot.end" attributeName="fill-opacity" to="1" />
         </circle>
         <circle cx="25" cy="25" r="10" fill="none" stroke-width="1"/> 
         <circle cx="25" cy="25" r="3"  fill="black" stroke-width="1"/> 
-        <animateColor id="reload" begin="indefinite" attributeName="stroke" values="#ffffff;yellow;#ffffff" dur="0.75s" repeatCount="1"/> 
-        <animateColor id="emptyGun" begin="indefinite" attributeName="stroke" values="#ffffff;#0000ff;#ffffff" dur="0.5s" repeatCount="1"/>
+        <animate id="reload" begin="indefinite" attributeName="stroke" values="#ffffff;yellow;#ffffff" dur="0.75s" repeatCount="1"/> 
+        <animate id="emptyGun" begin="indefinite" attributeName="stroke" values="#ffffff;#0000ff;#ffffff" dur="0.5s" repeatCount="1"/>
     </g>
 
     <g id="bullet">
@@ -304,7 +304,7 @@
     <text id="score" x="591" y="33" fill="black" font-stretch="ultra-expanded">Score: </text>
 
     <circle cx="355" cy="110" r="50" fill="gold" stroke="none">
-        <animateColor id="q_SUN" begin="indefinite" end="indefinite" attributeName="fill" values="orange;gold;orange" dur="10s" repeatCount="indefinite"/> 
+        <animate id="q_SUN" begin="indefinite" end="indefinite" attributeName="fill" values="orange;gold;orange" dur="10s" repeatCount="indefinite"/> 
     </circle>
 
 <g transform="translate(11 11) scale(0.9)" color-rendering="optimizeSpeed">

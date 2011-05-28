@@ -1,23 +1,23 @@
 <svg width="100%" height="100%"	xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-
+<script type="text/ecmascript" xlink:href="../fakesmile/smil.user.js"/>
 <filter id="turbF">
-	<feTurbulence baseFrequency=".04" numOctaves="2" result="turb">
-		<animate attributeName="baseFrequency" dur="3s" values=".04; .015; .04" begin="bb1.click" id="baseFrequency" repeatCount="3"/>
-		<animate attributeName="numOctaves" dur="4s" values="1; 4; 1" begin="bb3.click" id="numOctaves" repeatCount="2"/>
+	<feTurbulence baseFrequency="0.04" numOctaves="2" result="turb">
+		<animate attributeName="baseFrequency" dur="3s" values="0.04;0.015;0.04" begin="bb1.click" id="baseFrequency" repeatCount="3"/>
+		<animate attributeName="numOctaves" dur="4s" values="1;4;1" begin="bb3.click" id="numOctaves" repeatCount="2"/>
 	</feTurbulence>
 	<feDisplacementMap in="SourceGraphic" in2="turb" scale="150" xChannelSelector="R" yChannelSelector="B">
-		<animate attributeName="scale" dur="4s"	values="1; 400; 200; 300; 1" begin="bb2.click" id="scale" repeatCount="2"/>
+		<animate attributeName="scale" dur="4s"	values="1;400;200;300;1" begin="bb2.click" id="scale" repeatCount="2"/>
 	</feDisplacementMap>
 
 </filter>
 <radialGradient id="gradient1" cx="250" cy="90" r="150"  gradientUnits="userSpaceOnUse">
-	<animate attributeName="cx" dur="4s" values="1; 400; 1" begin="bb4.click" id="cx" repeatCount="2"/>
+	<animate attributeName="cx" dur="4s" values="1;400;1" begin="bb4.click" id="cx" repeatCount="2"/>
 	<stop offset="0" stop-color="#8cf"/>
 	<stop offset="0.10" stop-color="#f40"/>
 	<stop offset="0.4" stop-color="yellow"/>
 	<stop offset="0.8" stop-color="orange"/>
 	<stop offset="0.96" stop-color="#482"/>
-	<stop offset="1" stop-color="#eee" stop-opacity=".5"/>
+	<stop offset="1" stop-color="#eee" stop-opacity="0.5"/>
 </radialGradient>
 
 <rect id="Q" x="0" y="0" width="100%" height="100%" fill="#dea"/>
