@@ -5,7 +5,7 @@ Modified By Marek Raida
 <svg onload="SetTime(evt)" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <title>SVG analog clock</title>
 <desc>this clock gets the current time from the client's system and converts it to an analog display</desc>
-
+<script type="text/ecmascript" xlink:href="../fakesmile/smil.user.js"/>
   <defs>
     <script language="Javascript">
       <![CDATA[

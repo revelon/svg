@@ -175,10 +175,12 @@
 
     <g fill="black" stroke="none" transform="translate(310 50)">
       <polygon points="3,9 5,8 20,10 10,12 5,12 4,11"/>
-      <polygon points="5,10 10,0 13,11">
-        <animateTransform attributeName="transform" type="translate" values="0,0;0,20;0,0" dur="1s" repeatCount="indefinite" additive="sum"/>
-        <animateTransform attributeName="transform" type="scale" values="1 1;1 -0.8;1 1" dur="1s" repeatCount="indefinite" additive="sum"/>
-      </polygon>
+      <g>
+        <polygon points="5,10 10,0 13,11">
+          <animateTransform attributeName="transform" type="scale" values="1 1;1 -0.8;1 1" dur="1s" repeatCount="indefinite"/>
+        </polygon>
+        <animateTransform attributeName="transform" type="translate" values="0,0;0,20;0,0" dur="1s" repeatCount="indefinite"/>
+      </g>
       <animateTransform id="fly" attributeName="transform" type="translate" values="310 50;102 88;98 91;-30 100" begin="lightning.begin+1s" dur="4.5s"/>
     </g>
 

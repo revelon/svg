@@ -4,3 +4,6 @@
 - extract bump for Batik
 - investigate pasic/ab
 - study fakeSMILE how to involve / create animations from script...
+- hudba k irsku,norsku, clouds
+- alternativni hudby do MP3 kdy je to jen mozne, sjednotit zpusob hrani...
+- fakeSMILE dalsim adobe demum???
