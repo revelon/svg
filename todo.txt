@@ -1,0 +1,6 @@
+- fix StarWars for fakeSMILe
+- alternative hourglass
+- replace flashplayer by html5 player
+- extract bump for Batik
+- investigate pasic/ab
+- study fakeSMILE how to involve / create animations from script...
