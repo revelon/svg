@@ -17,7 +17,10 @@
 <h1>Demos Resume | <span>Evaluation page...</span></h1>
 <hr />
 
-<p><strong>Update on 2011-02-28:</strong> Initial release<br/>
+<p><strong>Update on 2011-05-29:</strong> First update<br/>
+More tests added (originally 102, now 144) and I did compatibility/fakeSMILe changes to many demos to <strong>improve MSIE 9 / Firefox 3.6 compatibility</strong>. Original maximum number of test points was 510, now is 720 and 
+Firefox and Opera are still by far the most SVG/SMIL capable browsers around...<br/>
+<strong>Update on 2011-02-28:</strong> Initial release<br/>
 Following test is my another attempt to provide browser support evaluation based on all (well, majority, not all) files hosted on my site. You can expect more changes to come in the future.<br/>
 Some demos utilize FakeSMILe to add <em>at least some SMIL support to MSIE9</em> and is a way of cheating, but I feel it is good to use workarounds where there are available and easy to use.<br/>
 <strong>Some of the tests are not fair to other browsers</strong> (like lmc-org or xhtml test for Batik) but I hope to solve these handicaps in the future as well...<br/>
@@ -43,10 +46,18 @@ Some demos utilize FakeSMILe to add <em>at least some SMIL support to MSIE9</em>
 <script type="text/javascript">
 
 var data = new Array(
+  {src:"ireland/irelandvacation.svg", ff:5, op:5, sf:5, cr:4, ie:4, bt:5},
+  {src:"citysunset/citysunset.svg", ff:5, op:5, sf:5, cr:4, ie:4, bt:2},
+  {src:"clouds/clouds_v1b.svg", ff:5, op:4, sf:4, cr:4, ie:4, bt:4},
   {src:"ab-pasic/intro-ab.svg", ff:5, op:5, sf:4, cr:5, ie:0, bt:0},
   {src:"ab-pasic/intro-pasic.svg", ff:4, op:5, sf:5, cr:5, ie:0, bt:0},
+  {src:"cuba/cuba.svg", ff:5, op:4, sf:4, cr:4, ie:3, bt:3},
+  {src:"cuba/car.svg", ff:5, op:5, sf:5, cr:5, ie:5, bt:5},
+  {src:"cuba/colibri.svg", ff:5, op:5, sf:5, cr:5, ie:5, bt:5},
+  {src:"starwars/starwars.svg", ff:5, op:4, sf:5, cr:5, ie:4, bt:4},
   {src:"banner/banner.svg", ff:5, op:5, sf:5, cr:5, ie:3, bt:5},
   {src:"banner/banner2.svg", ff:5, op:5, sf:2, cr:4, ie:3, bt:5},
+  {src:"matrix/matrix.svg", ff:5, op:5, sf:5, cr:5, ie:2, bt:5},
   {src:"bezier/beez.svg", ff:5, op:5, sf:5, cr:5, ie:5, bt:5},
   {src:"bezier/demo.svg", ff:5, op:5, sf:5, cr:5, ie:4, bt:5},
   {src:"bezier/bee.svg", ff:5, op:5, sf:5, cr:5, ie:5, bt:5},
@@ -66,12 +77,7 @@ var data = new Array(
   {src:"circles/circles-hypnotize.svg", ff:5, op:5, sf:1, cr:4, ie:1, bt:1},
   {src:"circles/circles-radiation-sign.svg", ff:5, op:5, sf:5, cr:5, ie:1, bt:5},
   {src:"circles/circles-ying-yang.svg", ff:5, op:5, sf:5, cr:5, ie:1, bt:1},
-  {src:"citysunset/citysunset.svg", ff:5, op:5, sf:5, cr:4, ie:3, bt:2},
-  {src:"clouds/clouds_v1b.svg", ff:5, op:4, sf:4, cr:4, ie:4, bt:4},
   {src:"cowboys/cowboys.xhtmlz", ff:5, op:5, sf:3, cr:4, ie:1, bt:0},// recheck online
-  {src:"cuba/cuba.svg", ff:5, op:4, sf:4, cr:4, ie:3, bt:3},
-  {src:"cuba/car.svg", ff:5, op:5, sf:5, cr:5, ie:5, bt:5},
-  {src:"cuba/colibri.svg", ff:5, op:5, sf:5, cr:5, ie:5, bt:5},
   {src:"dance/dance.svg", ff:5, op:5, sf:5, cr:5, ie:5, bt:5},
   {src:"demos1212/bowling.svg", ff:4, op:5, sf:2, cr:2, ie:1, bt:4},
   {src:"demos1212/bradbury.svg", ff:3, op:4, sf:3, cr:3, ie:3, bt:0},
@@ -110,7 +116,6 @@ var data = new Array(
   {src:"svg-introduction/extracted-demos/boyface.svg", ff:5, op:5, sf:3, cr:3, ie:5, bt:5},
   {src:"svg-introduction/extracted-demos/animatemotion.svg", ff:5, op:5, sf:5, cr:5, ie:3, bt:5},
   {src:"hourglass/hourglass.svg", ff:5, op:5, sf:5, cr:5, ie:3, bt:4},
-  {src:"ireland/irelandvacation.svg", ff:5, op:5, sf:5, cr:4, ie:4, bt:5},
   {src:"jack/jack-o-lantern-upd.svg", ff:5, op:5, sf:5, cr:5, ie:4, bt:2}, // ******************* from server again
   {src:"lmc-org/index.html", ff:5, op:0, sf:0, cr:0, ie:0, bt:0},
   {src:"map/map-czech-republic-minified.svg", ff:5, op:5, sf:5, cr:3, ie:5, bt:4},
@@ -126,7 +131,6 @@ var data = new Array(
   {src:"martinhejral/a10-1-scriptable-mask.svg", ff:5, op:5, sf:3, cr:0, ie:3, bt:1},
   {src:"martinhejral/a10-2-scriptable-mask.svg", ff:5, op:5, sf:1, cr:0, ie:4, bt:1},
   {src:"martinhejral/a10-3-scriptable-mask.svg", ff:5, op:5, sf:1, cr:0, ie:5, bt:1},
-  {src:"matrix/matrix.svg", ff:5, op:5, sf:5, cr:5, ie:2, bt:5},
   {src:"mousecatch/mousecatch.svg", ff:5, op:5, sf:5, cr:5, ie:1, bt:3},
   {src:"mouseovertoy/mouseovertoy.svg", ff:5, op:5, sf:5, cr:5, ie:1, bt:5},
   {src:"norway/norwayvacation-static.svg", ff:5, op:5, sf:3, cr:3, ie:1, bt:2},
@@ -141,7 +145,6 @@ var data = new Array(
   {src:"pacman/pacman8.svg", ff:5, op:5, sf:5, cr:0, ie:5, bt:5},
   {src:"pacman/pacmans.svg", ff:5, op:5, sf:3, cr:2, ie:3, bt:2},
   {src:"rotjump/rotatefull.svg", ff:5, op:5, sf:4, cr:4, ie:5, bt:5},
-  {src:"starwars/starwars.svg", ff:5, op:4, sf:5, cr:5, ie:4, bt:4},
   {src:"submarine/index.htm", ff:5, op:5, sf:1, cr:5, ie:5, bt:2}, // test submarine live
   {src:"svg-introduction/index.xhtml", ff:5, op:5, sf:4, cr:4, ie:2, bt:0}, // test again
   {src:"svgopen/DrawingOnTheNet.svg", ff:5, op:3, sf:3, cr:4, ie:4, bt:3},
@@ -213,7 +216,6 @@ function render(dataSet, setNumbering, returnRow) {
         var cell = document.createElement("td");
         cell.appendChild(document.createTextNode(dataSet[i][ii]));
         counter[ii] = counter[ii] + dataSet[i][ii]
-
       }
       row.appendChild(cell);
     }

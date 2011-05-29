@@ -7,3 +7,4 @@
 - hudba k irsku,norsku, clouds
 - alternativni hudby do MP3 kdy je to jen mozne, sjednotit zpusob hrani...
 - fakeSMILE dalsim adobe demum???
+- napsat ze MSIE vyzaduje konzoli k prehrani starwars apod?

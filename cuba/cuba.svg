@@ -1072,19 +1072,19 @@
 
 <html:audio id="musicSound" preload="true" oncanplaythrough="checkme()" onended="this.play()">
   <html:source src="cubansong.ogg" type="audio/ogg"/>
-  <html:source src="cubansong.mp3" type="audio/mp3"/>
+  <html:source src="cubansong.mp3" type="audio/mpeg"/>
 </html:audio>
 <html:audio id="colibriSound" preload="true" oncanplaythrough="checkme()">
   <html:source src="bird.ogg" type="audio/ogg"/>
-  <html:source src="bird.mp3" type="audio/mp3"/>
+  <html:source src="bird.mp3" type="audio/mpeg"/>
 </html:audio>
 <html:audio id="carSound" preload="true" oncanplaythrough="checkme()">
   <html:source src="car.ogg" type="audio/ogg"/>
-  <html:source src="car.mp3" type="audio/mp3"/>
+  <html:source src="car.mp3" type="audio/mpeg"/>
 </html:audio>
 <html:audio id="tileSound" preload="true" oncanplaythrough="checkme()">
   <html:source src="whip.ogg" type="audio/ogg"/>
-  <html:source src="whip.mp3" type="audio/mp3"/>
+  <html:source src="whip.mp3" type="audio/mpeg"/>
 </html:audio>
 
 

@@ -26,7 +26,7 @@ Modified by  Marek Raida
 
 <html:audio autoplay="true" loop="true">
   <html:source src="rev3.ogg" type="audio/ogg"/>
-  <html:source src="rev3.mp3" type="audio/mp3"/>
+  <html:source src="rev3.mp3" type="audio/mpeg"/>
 </html:audio>
 
 <g transform="translate(310 210)">

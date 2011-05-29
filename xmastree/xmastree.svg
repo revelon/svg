@@ -3,8 +3,11 @@
   <desc>Original clipart from: http://upload.wikimedia.org/wikipedia/commons/c/c3/Smiling_Christmas_Tree.svg, modified a lot, audio is live record of classical Czech Christmas Carol</desc>
   <script type="text/ecmascript" xlink:href="../fakesmile/smil.user.js"/>
 
-  <html:audio src="narodilse.ogg" autoplay="true"/>
- 
+  <html:audio autoplay="true">
+    <html:source src="narodilse.ogg" type="audio/ogg"/>
+    <html:source src="narodilse.mp3" type="audio/mpeg"/>
+  </html:audio>
+
   <radialGradient id="ban1" gradientUnits="objectBoundingBox" cx="0.66" cy="0.66">
     <stop offset="0" stop-color="red"/>
     <stop offset="1" stop-color="maroon"/>
