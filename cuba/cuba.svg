@@ -174,8 +174,8 @@
     }
     if (document.getElementById("iniZoomer")) document.getElementById("iniZoomer").parentNode.removeChild(document.getElementById("iniZoomer"));
     if (document.getElementById("iniTrans")) document.getElementById("iniTrans").parentNode.removeChild(document.getElementById("iniTrans"));
-    if (document.getElementById("iniTrans")) document.getElementById("iniPosition").parentNode.removeChild(document.getElementById("iniPosition"));
-    if (document.getElementById("iniTrans")) document.getElementById("movingCamera").parentNode.removeChild(document.getElementById("movingCamera"));
+    if (document.getElementById("iniPosition")) document.getElementById("iniPosition").parentNode.removeChild(document.getElementById("iniPosition"));
+    if (document.getElementById("movingCamera")) document.getElementById("movingCamera").parentNode.removeChild(document.getElementById("movingCamera"));
     var anims = document.getElementById("dominoEvents").getElementsByTagName("animateTransform");
     for (var i in anims) {
       //if (anims[i] &amp;&amp; anims[i].getAttribute &amp;&amp; anims[i].getAttribute("restart") == "whenNotActive") {
