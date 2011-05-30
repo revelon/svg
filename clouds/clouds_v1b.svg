@@ -11,19 +11,19 @@
         </radialGradient>
 
         <linearGradient id="gradient1" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
-            <stop stop-color="transparent" offset="0"/>
-            <stop stop-color="lightgreen" offset="0.15">
+            <stop stop-color="transparent" offset="0" stop-opacity="0"/>
+            <stop stop-color="lightgreen" offset="0.15" stop-opacity="1">
                 <animate attributeName="offset" begin="label.end" dur="6s" values="0.15;0.85;0.15" repeatCount="indefinite"/>
             </stop>
-            <stop stop-color="transparent" offset="1"/>
+            <stop stop-color="transparent" offset="1" stop-opacity="0"/>
         </linearGradient>
 
         <linearGradient id="gradient2" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
-            <stop stop-color="transparent" offset="0"/>
-            <stop stop-color="gold" offset="0.85">
+            <stop stop-color="gold" offset="0" stop-opacity="0"/>
+            <stop stop-color="gold" offset="0.85" stop-opacity="1">
                 <animate attributeName="offset" begin="label.end" dur="6s" values="0.85;0.15;0.85" repeatCount="indefinite"/>
             </stop>
-            <stop stop-color="transparent" offset="1"/>
+            <stop stop-color="gold" offset="1" stop-opacity="0"/>
         </linearGradient>
 
         <g id="rain" fill="cyan">
@@ -71,8 +71,8 @@
     </defs>
 
 
-    <rect style="fill: rgb(0, 238, 238);" width="300" height="192" x="0" y="0">
-      <animate id="sky" attributeName="fill" attributeType="CSS" to="#2222bb" begin="0s" dur="4s" fill="freeze"/>
+    <rect fill="cyan" width="300" height="192" x="0" y="0">
+      <animate id="sky" attributeName="fill" to="#2222bb" begin="0s" dur="4s" fill="freeze"/>
       <set attributeName="fill" to="#6666ff" begin="lightning.begin; lightning2.begin" dur="0.25s"/>
     </rect>
 
