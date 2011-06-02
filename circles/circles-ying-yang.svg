@@ -34,8 +34,9 @@ for (var x = 0; x &lt; circles; x++) {
 }
 
 setTimeout("document.documentElement.pauseAnimations()", 21000);
-document.getElementById("starter").beginElement();
+setTimeout('document.getElementById("starter").beginElement()', 500);
 
 </script>
 
+<script type="text/ecmascript" xlink:href="../fakesmile/smil.user.js"/>
 </svg>

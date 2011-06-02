@@ -37,7 +37,8 @@ for (var x = 5; x &lt; circles; x++) {
     c.appendChild(a);
 }
 
-document.getElementById("starter").beginElement();
+setTimeout('document.getElementById("starter").beginElement()', 500);
 </script>
 
+<script type="text/ecmascript" xlink:href="../fakesmile/smil.user.js"/>
 </svg>
