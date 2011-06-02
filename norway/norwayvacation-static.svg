@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1025 620" width="100%" height="100%">
-  <title>SVG Demo: Vacation in Norway, ver. 1.3u Static, by Marek Raida</title>
+  <title>SVG Demo: Vacation in Norway, ver. 1.3v Static, by Marek Raida</title>
   <desc>Used cliparts from: freesvgfiles.com, commons.wikimedia.org, www.openclipart.org</desc>
 
   <style type="text/css">
@@ -313,7 +313,7 @@
     <set attributeName="display" to="none" begin="mooseHide.end"/>
 
     <g id="detail">
-      <image id="imgDetail" xlink:href="" x="230" y="170" width="480" height="320" rx="12" mask="url(#norwayFlagMask)">
+      <image id="imgDetail" xlink:href="" x="230" y="170" width="480" height="320" rx="12">
         <animate id="imgDetailQuick" attributeName="opacity" values="1; 0; 1" dur="1s" begin="indefinite" repeatCount="1"/>
       </image>
       <g display="none">
@@ -372,6 +372,8 @@
     var showPosition = document.getElementById("showPosition");
     var mm = document.getElementById("maskMoose");
     var ethalon = document.getElementById("thumbDemo").firstChild;
+    var webkit = (window.navigator &amp;&amp; window.navigator.userAgent &amp;&amp; window.navigator.userAgent.indexOf("WebKit") != -1);
+    if (!webkit) document.getElementById("imgDetail").setAttribute("mask", "url(#norwayFlagMask)"); // Webkit corrupted masking temporary fake
 
     var thumbNames = new Array( 
                                   {i:"IMG_0242.JPG",n:"Beautiful sunset over fjord",t:"462 246"},
@@ -412,7 +414,6 @@
       showPosition.parentNode.removeChild(showPosition);
       document.getElementById("showPosition").beginElement();
       lastPos = thumbNames[lastId].t;
-      window.setTimeout(function(){document.getElementById("imgDetail").setAttribute("mask", "url(#norwayFlagMask)")}, 3000); // Webkit5 temporary fake
     }
 
     function prevPhoto() {
@@ -446,7 +447,6 @@
       showPosition.parentNode.removeChild(showPosition);
 
       lastPos = thumbNames[lastId].t;
-      document.getElementById("imgDetail").setAttribute("mask", "url(#norwayFlagMask)"); // Webkit5 temporary fake
     }
 
   </script>
