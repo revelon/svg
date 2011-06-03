@@ -1,6 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1025 620" width="100%" height="100%">
-  <title>SVG Demo: Vacation in Norway, ver. 1.3v Static, by Marek Raida</title>
-  <desc>Used cliparts from: freesvgfiles.com, commons.wikimedia.org, www.openclipart.org</desc>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1025 620" width="100%" height="100%" xmlns:html="http://www.w3.org/1999/xhtml">
+  <title>SVG Demo: Vacation in Norway, ver. 1.4 Static, by Marek Raida</title>
+  <desc>Used cliparts from: freesvgfiles.com, commons.wikimedia.org, www.openclipart.org, music: Edvard Grieg: Peer Gynt No. 4, performed by Czech Filharmony</desc>
+
+  <html:audio autoplay="true">
+    <html:source src="peergynt4.ogg" type="audio/ogg"/>
+    <html:source src="peergynt4.mp3" type="audio/mpeg"/>
+  </html:audio>
 
   <style type="text/css">
     image, g.thmb rect, g.thmbx rect, #activeRect, #lrght, #llft {cursor:pointer}
@@ -410,7 +415,7 @@
       newPos.setAttribute("to", thumbNames[lastId].t);
       newPos.setAttribute("begin", document.documentElement.getCurrentTime());
       showPosition.parentNode.appendChild(newPos);
-      if (navigator.userAgent.indexOf("Gecko/") == -1) newPos.beginElement();
+      if (navigator.userAgent.indexOf("Gecko/") == -1 &amp;&amp; newPos.beginElement) newPos.beginElement();
       showPosition.parentNode.removeChild(showPosition);
       document.getElementById("showPosition").beginElement();
       lastPos = thumbNames[lastId].t;

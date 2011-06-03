@@ -103,9 +103,6 @@ function smile(animating) {
         (namespaceURI==smil3ns && !impl.hasFeature(smil3ns, "3.0")) ||
         (namespaceURI==timesheetns && !impl.hasFeature(timesheetns, "1.0"))) {
       if (nodeName=="set" || nodeName=="animate" || nodeName=="animateColor" || nodeName=="animateMotion" || nodeName=="animateTransform") {
-        
-
-        // registering animation and its target(s) ***********************************************************
         var targets = getTargets(anim);
         var elAnimators = new Array();
         for(var i=0; i<targets.length ;i++) {
@@ -123,7 +120,6 @@ function smile(animating) {
   }
 }
 
-// method for returning animation target(s)
 function getTargets(anim) {
   if (anim.hasAttribute("select"))
     return select(anim);
@@ -139,7 +135,6 @@ function getTargets(anim) {
   return [];
 }
 
-// animation target's by select attribute
 function select(element) {
   var selector = element.getAttribute("select");
   var parent = element.parentNode;
@@ -232,7 +227,6 @@ Animator.prototype = {
           element.addEventListener(event, call, false);
         }
       } else {
-        if (time[0] == "-") time = time.substring(1); // hack by marek raida to allow even negatively scheduled animations to start, although much later
         time = toMillis(time);
         func.call(me, time);
       }
