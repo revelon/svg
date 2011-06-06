@@ -8,7 +8,7 @@
       <stop stop-color="#406666" offset="50%"/>
       <stop stop-color="#fcfcfc" offset="80%"/>
       <stop stop-color="#507676" offset="100%"/>
-      <animate attributeName="y2" begin="0s" dur="8s" values="1;.4;1" repeatCount="indefinite"/>
+      <animate attributeName="y2" begin="0s" dur="8s" values="1;0.4;1" repeatCount="indefinite"/>
     </linearGradient>
     <linearGradient id="grad2" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
       <stop stop-color="#fcfcfc" offset="0%"/>
@@ -16,7 +16,7 @@
       <stop stop-color="#fcfcfc" offset="50%"/>
       <stop stop-color="#406666" offset="80%"/>
       <stop stop-color="#fcfcfc" offset="100%"/>
-      <animate attributeName="y1" begin="0s" dur="4s" values="0;.2;0" repeatCount="indefinite"/>
+      <animate attributeName="y1" begin="0s" dur="4s" values="0;0.2;0" repeatCount="indefinite"/>
     </linearGradient>
   </defs>
 

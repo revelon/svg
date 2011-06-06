@@ -141,7 +141,7 @@
 				<defs>
 					<rect id="B5c29aa0" transform="matrix(1 0 0 1 -7 -7)" style="stroke-width:1.25;" width="13" height="13"/> 
 				</defs>
-				<use xlink:href="#B5c29aa0"  id="U5b90b30" style="fill:#FFFFFF;fill-opacity:.5;stroke-width:1.25;stroke:#FFFFFF"/>
+				<use xlink:href="#B5c29aa0"  id="U5b90b30" style="fill:#FFFFFF;fill-opacity:0.5;stroke-width:1.25;stroke:#FFFFFF"/>
 				<set xlink:href="#j_text" attributeName="display" to="inline" begin="U5b90b30.click" dur="indefinite" fill="freeze"/>
 				<set xlink:href="#e_text" attributeName="display" to="none" begin="U5b90b30.click" dur="indefinite" fill="freeze"/>
 				<set xlink:href="#faith_link" attributeName="xlink:href" to="01_faith.svg" begin="U5b90b30.click" dur="indefinite" fill="freeze"/>
@@ -151,7 +151,7 @@
 				<defs>
 					<rect id="B5c2a870" transform="matrix(1 0 0 1 -7 -7)" style="stroke-width:1.25;" width="13" height="13"/> 
 				</defs>
-				<use xlink:href="#B5c2a870"  id="U5c290f0" style="fill:#FFFFFF;fill-opacity:.5;stroke-width:1.25;stroke:#FFFFFF"/>
+				<use xlink:href="#B5c2a870"  id="U5c290f0" style="fill:#FFFFFF;fill-opacity:0.5;stroke-width:1.25;stroke:#FFFFFF"/>
 				<set xlink:href="#e_text" attributeName="display" to="inline" begin="U5c290f0.click" dur="indefinite" fill="freeze"/>
 				<set xlink:href="#j_text" attributeName="display" to="none" begin="U5c290f0.click" dur="indefinite" fill="freeze"/>
 				<set xlink:href="#faith_link" attributeName="xlink:href" to="01_faith.svg" begin="U5c290f0.click" dur="indefinite" fill="freeze"/>
@@ -592,7 +592,7 @@
 		<use xlink:href="#B12e5820"  id="U12e7750"/>
 	</g>
 	
-	<g id="button_fills" style="fill:#FFFFFF;fill-opacity:.5;stroke-width:1.25;stroke:#FFFFFF">
+	<g id="button_fills" style="fill:#FFFFFF;fill-opacity:0.5;stroke-width:1.25;stroke:#FFFFFF">
 		<g id="P12cfa50" transform="matrix(1 0 0 1 985 11)">
 			<a id="renewal_link" xlink:href="03_renewal.svg">
 			<defs>
@@ -624,7 +624,7 @@
 					<defs>
 						<text id="B12cf3a0" transform="matrix(1.0184 0 0 1 0 0)">3 // renewal</text>
 					</defs>
-					<use xlink:href="#B12cf3a0"  id="renewal_shadow" style="fill-opacity:.5; fill:black"/>
+					<use xlink:href="#B12cf3a0"  id="renewal_shadow" style="fill-opacity:0.5; fill:black"/>
 					<use xlink:href="#B12cf3a0"  id="U12d78a0"/>
 					<animate xlink:href="#P5c55290" attributeName="opacity" attributeType="CSS"  begin="P12cfa50.mouseover" dur="1s" fill="freeze" values="0;1" />
 					<animate xlink:href="#P5c55290" attributeName="opacity" attributeType="CSS"  begin="P12cfa50.mouseout" dur="0.6667s" fill="freeze" values="1;0" />
@@ -639,7 +639,7 @@
 						<text id="B12d4240" transform="matrix(1.0328 0 0 1 0 0)">2 // snow</text>
 					</defs>
 					<g transform="matrix(1.0184 0 0 -1 0 0)">
-						<use xlink:href="#B12d4240"  id="snow_shadow" style="fill-opacity:.5; fill:black"/>
+						<use xlink:href="#B12d4240"  id="snow_shadow" style="fill-opacity:0.5; fill:black"/>
 					</g>
 					<use xlink:href="#B12d4240"  id="U12d2de0"/>
 					<animate xlink:href="#P5ba66c0" attributeName="opacity" attributeType="CSS"  begin="P12d3250.mouseover" dur="1s" fill="freeze" values="0;1" />
@@ -654,7 +654,7 @@
 					<defs>
 						<text id="B5beeee0" transform="matrix(1.0318 0 0 1 0 0)">1 // faith</text>
 					</defs>
-					<use xlink:href="#B5beeee0"  id="faith_shadow" style="fill-opacity:.5; fill:black"/>
+					<use xlink:href="#B5beeee0"  id="faith_shadow" style="fill-opacity:0.5; fill:black"/>
 					<use xlink:href="#B5beeee0"  id="U12af9f0"/>
 					<animate xlink:href="#P5c2ce20" attributeName="opacity" attributeType="CSS"  begin="P12dc9e0.mouseover" dur="1s" fill="freeze" values="0;1" />
 					<animate xlink:href="#P5c2ce20" attributeName="opacity" attributeType="CSS"  begin="P12dc9e0.mouseout" dur="0.6667s" fill="freeze" values="1;0" />

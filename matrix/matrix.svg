@@ -25,70 +25,70 @@ tspan {
 <rect x="-3" y="0" width="700" height="400" fill="url(#bcg)"/>
 
 <image xlink:href="matrixx.jpg" x="200" y="200" width="280" height="200" opacity="0" display="none">
-  <animate attributeName="opacity" values="0;0.3;0" dur="8s" begin="9.5s" repeatCount="1" fill="freeze" id="imgr"/>
-  <set attributeName="display" to="block" begin="imgr.begin"/>
-  <set attributeName="display" to="none" begin="imgr.end"/>
+  <animate attributeName="opacity" values="0;0.3;0" dur="8s" begin="9.5s" repeatCount="1" fill="freeze" id="imgr" attributeType="XML"/>
+  <set attributeName="display" to="block" begin="imgr.begin" attributeType="XML"/>
+  <set attributeName="display" to="none" begin="imgr.end" attributeType="XML"/>
 </image>
 
 <text x="350" text-anchor="middle" y="200" font-family="monospace" font-size="21px" fill="#000500" display="none">The SVG Matrix
-    <animate attributeName="fill" values="#000500; #fff; #000500; #000500" dur="14s" begin="3s" repeatCount="indefinite" id="txtr"/>
-    <set attributeName="display" to="block" begin="txtr.begin"/>
+    <animate attributeName="fill" values="#000500; #fff; #000500; #000500" dur="14s" begin="3s" repeatCount="indefinite" id="txtr" attributeType="XML"/>
+    <set attributeName="display" to="block" begin="txtr.begin" attributeType="XML"/>
 </text>
 
 <g transform="rotate(90)" id="patternx">
-  <text transform="translate(-300 0)">q8wertyuioklsdfghzx<tspan>c<animate attributeName="fill" values="#fff;#555;#fff" dur="3s" begin="0.3s" repeatCount="indefinite"/></tspan>
+  <text transform="translate(-300 0)">q8wertyuioklsdfghzx<tspan>c<animate attributeName="fill" values="#fff;#555;#fff" dur="3s" begin="0.3s" repeatCount="indefinite" attributeType="XML"/></tspan>
     <animateTransform attributeName="transform" type="translate" by="400 0" dur="4s" begin="0s" repeatCount="indefinite"/>
-    <animate attributeName="fill" values="#000;#0F0;#0F0;#000" dur="4s" begin="0s" repeatCount="indefinite"/>
+    <animate attributeName="fill" values="#000;#0F0;#0F0;#000" dur="4s" begin="0s" repeatCount="indefinite" attributeType="XML"/>
   </text>
 
-  <text transform="translate(-350 -20)">dndhswodpddjdi2 3 wubcmdldppoiddjdnd<tspan>q<animate attributeName="fill" values="#fff;#555;#fff" dur="2s" begin="0s" repeatCount="indefinite"/></tspan>
+  <text transform="translate(-350 -20)">dndhswodpddjdi2 3 wubcmdldppoiddjdnd<tspan>q<animate attributeName="fill" values="#fff;#555;#fff" dur="2s" begin="0s" repeatCount="indefinite" attributeType="XML"/></tspan>
     <animateTransform attributeName="transform" type="translate" by="500 0" dur="3s" begin="0s" repeatCount="indefinite"/>
-    <animate attributeName="fill" values="#000;#0F0;#0F0;#000" dur="3s" begin="0s" repeatCount="indefinite"/>
+    <animate attributeName="fill" values="#000;#0F0;#0F0;#000" dur="3s" begin="0s" repeatCount="indefinite" attributeType="XML"/>
   </text>
 
-  <text transform="translate(-250 -40)">plmkouhjbbcz55 gai<tspan>w<animate attributeName="fill" values="#fff;#555;#fff" dur="3s" begin="1s" repeatCount="indefinite"/></tspan>
+  <text transform="translate(-250 -40)">plmkouhjbbcz55 gai<tspan>w<animate attributeName="fill" values="#fff;#555;#fff" dur="3s" begin="1s" repeatCount="indefinite" attributeType="XML"/></tspan>
     <animateTransform attributeName="transform" type="translate" by="300 0" dur="2s" begin="0s" repeatCount="indefinite"/>
-    <animate attributeName="fill" values="#000;#0F0;#0F0;#000" dur="2s" begin="0s" repeatCount="indefinite"/>
+    <animate attributeType="XML" attributeName="fill" values="#000;#0F0;#0F0;#000" dur="2s" begin="0s" repeatCount="indefinite"/>
   </text>
 
-  <text transform="translate(-450 -60)">xcfdretyugfd43d vbghthjkoiyutrwessqwsded<tspan>j<animate attributeName="fill" values="#fff;#555;#fff" dur="4s" begin="0s" repeatCount="indefinite"/></tspan>
+  <text transform="translate(-450 -60)">xcfdretyugfd43d vbghthjkoiyutrwessqwsded<tspan>j<animate attributeType="XML" attributeName="fill" values="#fff;#555;#fff" dur="4s" begin="0s" repeatCount="indefinite"/></tspan>
     <animateTransform attributeName="transform" type="translate" by="350 0" dur="4s" begin="0s" repeatCount="indefinite"/>
-    <animate attributeName="fill" values="#000;#0F0;#0F0;#000" dur="4s" begin="0s" repeatCount="indefinite"/>
+    <animate attributeType="XML" attributeName="fill" values="#000;#0F0;#0F0;#000" dur="4s" begin="0s" repeatCount="indefinite"/>
   </text>
 
-  <text transform="translate(-420 -80)">pwowlsk65s ueyetehsnsgqrsus<tspan>a<animate attributeName="fill" values="#fff;#555;#fff" dur="2s" begin="0s" repeatCount="indefinite"/></tspan>
+  <text transform="translate(-420 -80)">pwowlsk65s ueyetehsnsgqrsus<tspan>a<animate attributeType="XML" attributeName="fill" values="#fff;#555;#fff" dur="2s" begin="0s" repeatCount="indefinite"/></tspan>
     <animateTransform attributeName="transform" type="translate" by="370 0" dur="2s" begin="0s" repeatCount="indefinite"/>
-    <animate attributeName="fill" values="#000;#0F0;#0F0;#000" dur="2s" begin="0s" repeatCount="indefinite"/>
+    <animate attributeType="XML" attributeName="fill" values="#000;#0F0;#0F0;#000" dur="2s" begin="0s" repeatCount="indefinite"/>
   </text>
 
-  <text transform="translate(-240 -100)">bvgrf25xdsaerwty<tspan>f<animate attributeName="fill" values="#fff;#555;#fff" dur="2s" begin="0.3s" repeatCount="indefinite"/></tspan>
+  <text transform="translate(-240 -100)">bvgrf25xdsaerwty<tspan>f<animate attributeType="XML" attributeName="fill" values="#fff;#555;#fff" dur="2s" begin="0.3s" repeatCount="indefinite"/></tspan>
     <animateTransform attributeName="transform" type="translate" by="440 0" dur="2.5s" begin="0s" repeatCount="indefinite"/>
-    <animate attributeName="fill" values="#000;#0F0;#0F0;#000" dur="2.5s" begin="0s" repeatCount="indefinite"/>
+    <animate attributeType="XML" attributeName="fill" values="#000;#0F0;#0F0;#000" dur="2.5s" begin="0s" repeatCount="indefinite"/>
   </text>
 
-  <text transform="translate(-310 -120)">bvhplkouy65whs09232<tspan>i<animate attributeName="fill" values="#fff;#555;#fff" dur="3s" begin="0s" repeatCount="indefinite"/></tspan>
+  <text transform="translate(-310 -120)">bvhplkouy65whs09232<tspan>i<animate attributeType="XML" attributeName="fill" values="#fff;#555;#fff" dur="3s" begin="0s" repeatCount="indefinite"/></tspan>
     <animateTransform attributeName="transform" type="translate" by="500 0" dur="4s" begin="0s" repeatCount="indefinite"/>
-    <animate attributeName="fill" values="#000;#0F0;#0F0;#000" dur="4s" begin="0s" repeatCount="indefinite"/>
+    <animate attributeType="XML" attributeName="fill" values="#000;#0F0;#0F0;#000" dur="4s" begin="0s" repeatCount="indefinite"/>
   </text>
 
-  <text transform="translate(-360 -140)">98876543210okijiuhhsfwrwqy wq<tspan>p<animate attributeName="fill" values="#fff;#555;#fff" dur="4s" begin="0s" repeatCount="indefinite"/></tspan>
+  <text transform="translate(-360 -140)">98876543210okijiuhhsfwrwqy wq<tspan>p<animate attributeType="XML" attributeName="fill" values="#fff;#555;#fff" dur="4s" begin="0s" repeatCount="indefinite"/></tspan>
     <animateTransform attributeName="transform" type="translate" by="600 0" dur="3s" begin="0s" repeatCount="indefinite"/>
-    <animate attributeName="fill" values="#000;#0F0;#0F0;#000" dur="3s" begin="0s" repeatCount="indefinite"/>
+    <animate attributeType="XML" attributeName="fill" values="#000;#0F0;#0F0;#000" dur="3s" begin="0s" repeatCount="indefinite"/>
   </text>
 
-  <text transform="translate(-280 -160)">ewasdsplo4ueyeh8739323bv<tspan>h<animate attributeName="fill" values="#fff;#555;#fff" dur="3s" begin="-0.5s" repeatCount="indefinite"/></tspan>
+  <text transform="translate(-280 -160)">ewasdsplo4ueyeh8739323bv<tspan>h<animate attributeType="XML" attributeName="fill" values="#fff;#555;#fff" dur="3s" begin="-0.5s" repeatCount="indefinite"/></tspan>
     <animateTransform attributeName="transform" type="translate" by="440 0" dur="3.3s" begin="0s" repeatCount="indefinite"/>
-    <animate attributeName="fill" values="#000;#0F0;#0F0;#000" dur="3.3s" begin="0s" repeatCount="indefinite"/>
+    <animate attributeType="XML" attributeName="fill" values="#000;#0F0;#0F0;#000" dur="3.3s" begin="0s" repeatCount="indefinite"/>
   </text>
 
-  <text transform="translate(-200 -180)">14578vgflpo975 38shs<tspan>5<animate attributeName="fill" values="#fff;#555;#fff" dur="2s" begin="0s" repeatCount="indefinite"/></tspan>
+  <text transform="translate(-200 -180)">14578vgflpo975 38shs<tspan>5<animate attributeType="XML" attributeName="fill" values="#fff;#555;#fff" dur="2s" begin="0s" repeatCount="indefinite"/></tspan>
     <animateTransform attributeName="transform" type="translate" by="260 0" dur="2s" begin="0s" repeatCount="indefinite"/>
-    <animate attributeName="fill" values="#000;#0F0;#0F0;#000" dur="2s" begin="0s" repeatCount="indefinite"/>
+    <animate attributeType="XML" attributeName="fill" values="#000;#0F0;#0F0;#000" dur="2s" begin="0s" repeatCount="indefinite"/>
   </text>
 
-  <text transform="translate(-270 -200)">qaswe34rtftgtyhuswew<tspan>s<animate attributeName="fill" values="#fff;#555;#fff" dur="4s" begin="0.5s" repeatCount="indefinite"/></tspan>
+  <text transform="translate(-270 -200)">qaswe34rtftgtyhuswew<tspan>s<animate attributeType="XML" attributeName="fill" values="#fff;#555;#fff" dur="4s" begin="0.5s" repeatCount="indefinite"/></tspan>
     <animateTransform attributeName="transform" type="translate" by="260 0" dur="2.6s" begin="0s" repeatCount="indefinite"/>
-    <animate attributeName="fill" values="#000;#0F0;#0F0;#000" dur="2.6s" begin="0s" repeatCount="indefinite"/>
+    <animate attributeType="XML" attributeName="fill" values="#000;#0F0;#0F0;#000" dur="2.6s" begin="0s" repeatCount="indefinite"/>
   </text>
 </g>
 

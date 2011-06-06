@@ -9,7 +9,7 @@
       <stop stop-color="#406666" offset="50%"/>
       <stop stop-color="#fcfcfc" offset="80%"/>
       <stop stop-color="#507676" offset="100%"/>
-      <animate attributeName="y2" begin="0s" dur="8s" values="1;.4;1" repeatCount="indefinite"/>
+      <animate attributeName="y2" begin="0s" dur="8s" values="1;0.4;1" repeatCount="indefinite" attributeType="XML"/>
     </linearGradient>
     <linearGradient id="grad2" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
       <stop stop-color="#fcfcfc" offset="0%"/>
@@ -17,7 +17,7 @@
       <stop stop-color="#fcfcfc" offset="50%"/>
       <stop stop-color="#406666" offset="80%"/>
       <stop stop-color="#fcfcfc" offset="100%"/>
-      <animate attributeName="y1" begin="0s" dur="10s" values="0;.1;0" repeatCount="indefinite"/>
+      <animate attributeName="y1" begin="0s" dur="10s" values="0;0.1;0" repeatCount="indefinite" attributeType="XML"/>
     </linearGradient>
     <linearGradient id="grad3" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
       <stop stop-color="#222" offset="0%"/>
@@ -29,7 +29,7 @@
   <g font-size="120px" font-family="sans-serif" font-weight="bold" text-anchor="middle">
     <g>
       <text x="600" y="100" fill="white" stroke-width="9" stroke="url(#grad3)" id="t1">MAREK RAIDA</text>
-      <animate attributeName="opacity" begin="0s" dur="2s" values="1;0.3;1" repeatCount="indefinite"/>
+      <animate attributeName="opacity" begin="0s" dur="2s" values="1;0.3;1" repeatCount="indefinite" attributeType="XML"/>
     </g>
     <text x="600" y="100" fill="url(#grad1)" stroke-width="6" stroke="url(#grad2)" id="t2">MAREK RAIDA</text>
   </g>

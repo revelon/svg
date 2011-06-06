@@ -16,7 +16,7 @@ Modified by  Marek Raida
  <!ENTITY st10 "fill:#CC33FF;">
  <!ENTITY st11 "fill:#000000;">
  <!ENTITY st12 "font-size:18px;fill:#990000;">
- <!ENTITY st13 "font-size:41px;fill:#FFFFFF;fill-opacity:.5;stroke:#CC0000;stroke-miterlimit:4;">
+ <!ENTITY st13 "font-size:41px;fill:#FFFFFF;fill-opacity:0.5;stroke:#CC0000;stroke-miterlimit:4;">
 ]>
 <svg xml:space="preserve" width="3in" height="2in"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 

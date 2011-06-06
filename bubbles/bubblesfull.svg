@@ -149,7 +149,7 @@
   <text x="60" y="100" font-weight="bold" font-size="33px" font-family="sans-serif" fill="white" visibility="hidden">SVG proud 
     <tspan y="150" x="40">v komunikaci</tspan>
     <tspan y="275" x="240">VF</tspan>
-    <animate begin="5s" attributeName="opacity" from="0" to="1" dur="1s" repeatCount="1" fill="freeze" />
+    <animate begin="5s" attributeName="opacity" from="0" to="1" dur="1s" repeatCount="1" fill="freeze" attributeType="XML" />
   	<set attributeName="visibility" to="visible" begin="5s" />
   </text>
 

@@ -4,7 +4,7 @@ Modified By Marek Raida
 -->
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20001102//EN" "http://www.w3.org/TR/2000/CR-SVG-20001102/DTD/svg-20001102.dtd" [
 	<!ENTITY st0 "fill:none;stroke:none;">
-	<!ENTITY st1 "fill-rule:nonzero;clip-rule:nonzero;fill:none;stroke:#FFFFFF;stroke-miterlimit:4;stroke-opacity:.5;">
+	<!ENTITY st1 "fill-rule:nonzero;clip-rule:nonzero;fill:none;stroke:#FFFFFF;stroke-miterlimit:4;stroke-opacity:0.5;">
 	<!ENTITY st2 "fill-rule:nonzero;clip-rule:nonzero;stroke:#000000;stroke-miterlimit:4;">
 	<!ENTITY st3 "clip-path:url(#aiclp1);">
 	<!ENTITY st4 "clip-path:url(#aiclp2);">
@@ -35,7 +35,7 @@ Modified By Marek Raida
 			</g>
 		</g>
 	</g>
-	<g id="shield" style="fill:#000000;fill-opacity:.15;">
+	<g id="shield" style="fill:#000000;fill-opacity:0.15;">
 				<rect x="400" y="0" width="400" height="300"/>
 				<animateTransform attributeName="transform" type="translate" values="-300 0;0 0;-250 0;-400 0;0 0;-150 0;0 0" dur="10s"/>
 				<animateTransform attributeName="transform" type="scale"  values="0.025 1;0.75 1;0.5 1;0.025 1"   additive="sum" dur="10s" repeatDur="indefinite"/>
@@ -72,43 +72,43 @@ Modified By Marek Raida
 			<rect x="25" y="0" width="9" height="9"/>
 			<animateTransform attributeName="transform" type="translate" values="0 70;0 200;0 150;0 220;0 25;0 350;0 150" additive="sum" dur="5s" repeatDur="indefinite"/>
 	</g>
-	<g id="wonder_1" style="&st5;fill:#FFFFFF;opacity:0;">
+	<g id="wonder_1" style="&st5;fill:#FFFFFF;opacity:0">
 		
 				<text id="txt_01" transform="matrix(1 0 0 1 195 129)"><tspan x="-20" y="0" style="&st9;">Just wondering how I ever got here...</tspan></text>
 			
 			<animate attributeName="opacity" attributeType="CSS"  begin="2s" dur="8s"  values="0;1;1;0;0" repeatDur="indefinite"/>
 	</g>
-	<g id="wonder_2" style="&st8;fill:#FFFFFF;opacity:0;">
+	<g id="wonder_2" style="&st8;fill:#FFFFFF;opacity:0">
 			
 			<text id="txt_02" transform="matrix(1 0 0 1 195 146)"><tspan x="-20" y="0" style="&st9;">Just wondering how I ever got here...</tspan></text>
 				
 			<animate attributeName="opacity" attributeType="CSS"  begin="3s" dur="7s"  values="0;1;1;0;0" repeatDur="indefinite"/>
 	</g>
-	<g id="wonder_3" style="&st5;fill:#FFFFFF;opacity:0;">
+	<g id="wonder_3" style="&st5;fill:#FFFFFF;opacity:0">
 			
 			<text id="txt_03" transform="matrix(1 0 0 1 195 163)"><tspan x="-20" y="0" style="&st9;">Just wondering how I ever got here...</tspan></text>
 				
 			<animate attributeName="opacity" attributeType="CSS"  begin="4s" dur="8s"  values="0;1;1;1;0" repeatDur="indefinite"/>
 	</g>
-	<g id="wonder_4" style="&st8;fill:#FFFFFF;opacity:0;">
+	<g id="wonder_4" style="&st8;fill:#FFFFFF;opacity:0">
 			
 			<text id="txt_04" transform="matrix(1 0 0 1 195 180)"><tspan x="-20" y="0" style="&st9;">Just wondering how I ever got here...</tspan></text>
 				
 			<animate attributeName="opacity" attributeType="CSS"  begin="5s" dur="5s"  values="0;1;0;0" repeatDur="indefinite"/>
 	</g>
-	<g id="wonder_5" style="&st5;fill:#FFFFFF;opacity:0;">
+	<g id="wonder_5" style="&st5;fill:#FFFFFF;opacity:0">
 			
 			<text id="txt_05" transform="matrix(1 0 0 1 195 197)"><tspan x="-20" y="0" style="&st9;">Just wondering how I ever got here...</tspan></text>
 				
 			<animate attributeName="opacity" attributeType="CSS"  begin="6s" dur="9s"  values="0;1;0;0" repeatDur="indefinite"/>
 	</g>
-	<g id="wonder_6" style="&st8;fill:#FFFFFF;opacity:0;">
+	<g id="wonder_6" style="&st8;fill:#FFFFFF;opacity:0">
 			
 			<text id="txt_06" transform="matrix(1 0 0 1 195 214)"><tspan x="-20" y="0" style="&st9;">Just wondering how I ever got here...</tspan></text>
 				
 			<animate attributeName="opacity" attributeType="CSS"  begin="7s" dur="5s"  values="0;1;0;0" repeatDur="indefinite"/>
 	</g>
-	<g id="wonder_7" style="&st5;fill:#FFFFFF;opacity:0;">
+	<g id="wonder_7" style="&st5;fill:#FFFFFF;opacity:0">
 			
 			<text id="txt_06" transform="matrix(1 0 0 1 195 231)"><tspan x="-20" y="0" style="&st9;">Just wondering how I ever got here...</tspan></text>
 			

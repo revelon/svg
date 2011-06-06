@@ -13,7 +13,7 @@
         <linearGradient id="gradient1" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
             <stop stop-color="transparent" offset="0" stop-opacity="0"/>
             <stop stop-color="lightgreen" offset="0.15" stop-opacity="1">
-                <animate attributeName="offset" begin="label.end" dur="6s" values="0.15;0.85;0.15" repeatCount="indefinite"/>
+                <animate attributeName="offset" begin="label.end" dur="6s" values="0.15;0.85;0.15" repeatCount="indefinite" attributeType="XML"/>
             </stop>
             <stop stop-color="transparent" offset="1" stop-opacity="0"/>
         </linearGradient>
@@ -21,7 +21,7 @@
         <linearGradient id="gradient2" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
             <stop stop-color="gold" offset="0" stop-opacity="0"/>
             <stop stop-color="gold" offset="0.85" stop-opacity="1">
-                <animate attributeName="offset" begin="label.end" dur="6s" values="0.85;0.15;0.85" repeatCount="indefinite"/>
+                <animate attributeType="XML" attributeName="offset" begin="label.end" dur="6s" values="0.85;0.15;0.85" repeatCount="indefinite"/>
             </stop>
             <stop stop-color="gold" offset="1" stop-opacity="0"/>
         </linearGradient>
@@ -72,7 +72,7 @@
 
 
     <rect fill="cyan" width="300" height="192" x="0" y="0">
-      <animate id="sky" attributeName="fill" to="#2222bb" begin="0s" dur="4s" fill="freeze"/>
+      <animate attributeType="XML" id="sky" attributeName="fill" to="#2222bb" begin="0s" dur="4s" fill="freeze"/>
       <set attributeName="fill" to="#6666ff" begin="lightning.begin; lightning2.begin" dur="0.25s"/>
     </rect>
 
@@ -87,7 +87,7 @@
         <use xlink:href="#rain" x="20" y="80"/>
         <use xlink:href="#rain" x="10" y="120"/>
         <use xlink:href="#rain" x="-5" y="150"/>
-        <animateTransform attributeName="transform" type="translate" from="0 -200" to="20 200" dur="4s" begin="sky.end" repeatCount="indefinite" />
+        <animateTransform attributeType="XML" attributeName="transform" type="translate" from="0 -200" to="20 200" dur="4s" begin="sky.end" repeatCount="indefinite" />
     </g>
 
     <g transform="translate(0 -200)">
@@ -97,7 +97,7 @@
         <use xlink:href="#rain" x="20" y="80"/>
         <use xlink:href="#rain" x="10" y="120"/>
         <use xlink:href="#rain" x="-5" y="150"/>
-        <animateTransform attributeName="transform" type="translate" from="0 -200" to="20 200" dur="4s" begin="sky.end+2s" repeatCount="indefinite"/>
+        <animateTransform attributeType="XML" attributeName="transform" type="translate" from="0 -200" to="20 200" dur="4s" begin="sky.end+2s" repeatCount="indefinite"/>
     </g>
 
     <!-- cloud1 -->
@@ -105,52 +105,52 @@
     <g fill="url(#greyRad2)">
       <!-- lightning -->
       <path style="fill: yellow; fill-rule: evenodd; stroke: #555; opacity: 0; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1;" d="M 65,79 L 82,104 L 59,134 L 74,153 L 53,190 L 85,152 L 70,133 L 94,102 L 75,76 L 65,79 z">
-        <set id="lightning" attributeName="opacity" to="1" begin="sky.end+2s; lightning.begin+7s" dur="0.25s"/>
-        <set id="lightning2" attributeName="opacity" to="1" begin="lightning.end+0.2s" dur="0.2s"/>
-        <animateTransform attributeName="transform" type="scale" from="1" to="0.85" begin="lightning2.begin" dur="0.2s"/>
+        <set attributeType="CSS" id="lightning" attributeName="opacity" to="1" begin="sky.end+2s; lightning.begin+7s" dur="0.25s"/>
+        <set attributeType="CSS" id="lightning2" attributeName="opacity" to="1" begin="lightning.end+0.2s" dur="0.2s"/>
+        <animateTransform attributeType="XML" attributeName="transform" type="scale" from="1" to="0.85" begin="lightning2.begin" dur="0.2s"/>
       </path>
 
-      <animateTransform attributeName="transform" type="translate" from="-15 0" to="15 0" dur="2s" begin="sky.begin" fill="freeze"/>
+      <animateTransform attributeType="XML" attributeName="transform" type="translate" from="-15 0" to="15 0" dur="2s" begin="sky.begin" fill="freeze"/>
           <ellipse cx="43" cy="60" rx="29" ry="12"/>
           <ellipse cx="79" cy="55" rx="26" ry="14"/>
           <ellipse cx="81" cy="69" rx="28" ry="14"/>
           <ellipse cx="112" cy="67" rx="26" ry="13"/>
     </g>
-      <animateTransform attributeName="transform" type="scale" values="1;1.05;1" begin="sky.end" dur="5s" repeatCount="indefinite"/>
+      <animateTransform attributeType="XML" attributeName="transform" type="scale" values="1;1.05;1" begin="sky.end" dur="5s" repeatCount="indefinite"/>
     </g>
 
     <!-- cloud2 -->
     <g>
     <g fill="url(#greyRad2)">
-      <animateTransform attributeName="transform" type="translate" from="-80 0" to="0 0" dur="2s" begin="sky.begin" fill="freeze"/>
+      <animateTransform attributeType="XML" attributeName="transform" type="translate" from="-80 0" to="0 0" dur="2s" begin="sky.begin" fill="freeze"/>
       <ellipse cx="186" cy="33" rx="31" ry="11"/>
       <ellipse cx="215" cy="43" rx="26" ry="11"/>
       <ellipse cx="219" cy="29" rx="30" ry="11"/>
       <ellipse cx="202" cy="20" rx="18" ry="7"/>
     </g>
-      <animateTransform attributeName="transform" type="scale" values="1;0.95;1" begin="sky.end+0.5s" dur="6.6s" repeatCount="indefinite"/>
+      <animateTransform attributeType="XML" attributeName="transform" type="scale" values="1;0.95;1" begin="sky.end+0.5s" dur="6.6s" repeatCount="indefinite"/>
     </g>
 
     <g font-weight="bold" opacity="0">
       <text x="50" y="130" font-size="20pt" fill="url(#gradient1)">SMIL</text>
       <text x="48" y="144" font-size="8pt" fill="url(#gradient2)">with syncbase</text>
-      <animate id="label" attributeName="opacity" fill="freeze" from="0" to="1" begin="sky.begin+2s" dur="2s"/>
+      <animate attributeType="XML" id="label" attributeName="opacity" fill="freeze" from="0" to="1" begin="sky.begin+2s" dur="2s"/>
     </g>
 
     <use xlink:href="#logo" opacity="0">
       <set attributeName="opacity" fill="freeze" to="0.4" begin="drop.end+1s"/>
     </use>
     <circle cx="243" cy="181" r="55" fill="#000" opacity="0">
-      <animate attributeName="cy" values="81;181" dur="2s" fill="freeze" begin="laser.end+3.5s" id="drop"/>
+      <animate attributeType="XML" attributeName="cy" values="81;181" dur="2s" fill="freeze" begin="laser.end+3.5s" id="drop"/>
       <set attributeName="r" to="2" begin="drop.begin"/>
       <set attributeName="opacity" to="1" begin="drop.begin"/>
-      <animate attributeName="fill" values="#000;#f00;#fff" dur="2s" fill="freeze" begin="drop.end"/>
-      <animate attributeName="r" values="2;58;0" dur="2s" fill="freeze" begin="drop.end"/>
+      <animate attributeType="XML" attributeName="fill" values="#000;#f00;#fff" dur="2s" fill="freeze" begin="drop.end"/>
+      <animate attributeType="XML" attributeName="r" values="2;58;0" dur="2s" fill="freeze" begin="drop.end"/>
     </circle>
 
     <g transform="translate(230, 150)">
-      <text font-size="30pt" fill="gold" transform=""><tspan>:</tspan><tspan>)<animate attributeName="font-weight" values="100;300;600;900;600;300;100" begin="laser.end+2s" dur="3s" repeatCount="indefinite"/></tspan>
-        <animateTransform attributeName="transform" fill="freeze" type="rotate" values="0;115;90" begin="laser.end" dur="1.2s"/>
+      <text font-size="30pt" fill="gold" transform=""><tspan>:</tspan><tspan>)<animate attributeType="XML" attributeName="font-weight" values="100;300;600;900;600;300;100" begin="laser.end+2s" dur="3s" repeatCount="indefinite"/></tspan>
+        <animateTransform attributeType="XML" attributeName="transform" fill="freeze" type="rotate" values="0;115;90" begin="laser.end" dur="1.2s"/>
       </text>
     </g>
 
@@ -160,16 +160,16 @@
       <ellipse cx="220" cy="80" rx="50" ry="8" fill="silver" stroke="steelblue" stroke-width="3"/>
 
      <!-- Animations affecting UFO -->
-      <animate id="ufoAppear" attributeName="opacity" to="1" begin="sky.begin+2.5s" dur="0.6s" fill="freeze"/>
-      <animateTransform attributeName="transform" type="translate" by="-100 -150" begin="ufoAppear.begin+0.5s" dur="2s" fill="freeze"/>
-      <animateTransform attributeName="transform" fill="freeze" type="rotate" from="0" to="10" begin="ufoAppear.begin" dur="0.8s"/>
+      <animate attributeType="XML" id="ufoAppear" attributeName="opacity" to="1" begin="sky.begin+2.5s" dur="0.6s" fill="freeze"/>
+      <animateTransform attributeType="XML" attributeName="transform" type="translate" by="-100 -150" begin="ufoAppear.begin+0.5s" dur="2s" fill="freeze"/>
+      <animateTransform attributeType="XML" attributeName="transform" fill="freeze" type="rotate" from="0" to="10" begin="ufoAppear.begin" dur="0.8s"/>
     </g>
 
     <!-- laser -->
     <g transform="translate(200, 60) rotate(50)">
       <rect fill="red" width="20" height="2" x="0" y="0" display="none">
         <set attributeName="display" to="inline" begin="ufoAppear.end+0.6s" dur="0.5s"/>
-        <animate id="laser" attributeName="x" from="0" to="60" begin="ufoAppear.end+0.6s" dur="0.5s"/>
+        <animate attributeType="XML" id="laser" attributeName="x" from="0" to="60" begin="ufoAppear.end+0.6s" dur="0.5s"/>
       </rect>
     </g>
 
@@ -177,11 +177,11 @@
       <polygon points="3,9 5,8 20,10 10,12 5,12 4,11"/>
       <g>
         <polygon points="5,10 10,0 13,11">
-          <animateTransform attributeName="transform" type="scale" values="1 1;1 -0.8;1 1" dur="1s" repeatCount="indefinite"/>
+          <animateTransform attributeType="XML" attributeName="transform" type="scale" values="1 1;1 -0.8;1 1" dur="1s" repeatCount="indefinite"/>
         </polygon>
-        <animateTransform attributeName="transform" type="translate" values="0,0;0,20;0,0" dur="1s" repeatCount="indefinite"/>
+        <animateTransform attributeType="XML" attributeName="transform" type="translate" values="0,0;0,20;0,0" dur="1s" repeatCount="indefinite"/>
       </g>
-      <animateTransform id="fly" attributeName="transform" type="translate" values="310 50;102 88;98 91;-30 100" begin="lightning.begin+1s" dur="4.5s"/>
+      <animateTransform attributeType="XML" id="fly" attributeName="transform" type="translate" values="310 50;102 88;98 91;-30 100" begin="lightning.begin+1s" dur="4.5s"/>
     </g>
 
     <!-- pseudomask -->

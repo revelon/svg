@@ -8,25 +8,25 @@ Modified by  Marek Raida
 <script type="text/ecmascript" xlink:href="../fakesmile/smil.user.js"/>
   <g transform="translate(160 150)">
     <g>
-      <circle id="circle1" style="fill:#3333ff;stroke-width:1;opacity:.8" cx="0" cy="0" r="30">
+      <circle id="circle1" style="fill:#3333ff;stroke-width:1;opacity:0.8" cx="0" cy="0" r="30">
         <animateTransform attributeName="transform" type="scale" values="4 1;0.5 1;4 1" dur="4s" repeatDur="indefinite"/>
       </circle>
       <animateTransform attributeName="transform" type="rotate" values="0;360" dur="3s" repeatDur="indefinite"/>
     </g>
     <g>
-      <circle id="circle2" style="fill:#99cc66;stroke-width:3;opacity:.7" cx="0" cy="0" r="30">
+      <circle id="circle2" style="fill:#99cc66;stroke-width:3;opacity:0.7" cx="0" cy="0" r="30">
          <animateTransform attributeName="transform" type="scale"  values="1 5;3 0.5;1 5" dur="3s" repeatDur="indefinite"/>
       </circle>
       <animateTransform attributeName="transform" type="rotate" values="0;-360" dur="12s" repeatDur="indefinite"/>
     </g>
     <g>
-      <circle id="circle3" style="fill:#ccff33;stroke-width:3;opacity:.5" cx="0" cy="0" r="30">
+      <circle id="circle3" style="fill:#ccff33;stroke-width:3;opacity:0.5" cx="0" cy="0" r="30">
         <animateTransform attributeName="transform" type="scale"  values="1 5;3 0.5;1 5"  dur="3s" repeatDur="indefinite"/>
       </circle>
       <animateTransform attributeName="transform" type="rotate" values="0;-360" dur="5s" repeatDur="indefinite"/>                
     </g>
     <g>
-      <circle id="circle4" style="fill:#6666ff;stroke-width:3;opacity:.7" cx="0" cy="0" r="20">
+      <circle id="circle4" style="fill:#6666ff;stroke-width:3;opacity:0.7" cx="0" cy="0" r="20">
         <animateTransform attributeName="transform" type="scale" values="4 1;0.5 1;4 1" dur="3s" repeatDur="indefinite"/>
       </circle>
       <animateTransform attributeName="transform" type="rotate" values="0;360" dur="7s" repeatDur="indefinite"/>                  

@@ -16,8 +16,8 @@
 </mask>
 
 <g id="skFlag" transform="scale(1.55) translate(20 9)" opacity="0">
-  <animate begin="beCzech.begin" dur="&durr;" attributeName="opacity" repeatCount="1" fill="freeze" from="0" to="1"/>
-  <animate begin="beSlovak.begin" dur="&durr;" attributeName="opacity" repeatCount="1" fill="freeze" from="1" to="0"/>  
+  <animate begin="beCzech.begin" dur="&durr;" attributeName="opacity" repeatCount="1" fill="freeze" from="0" to="1" attributeType="XML"/>
+  <animate begin="beSlovak.begin" dur="&durr;" attributeName="opacity" repeatCount="1" fill="freeze" from="1" to="0" attributeType="XML"/>  
   <rect width="450" height="300" fill="#fff"/>
   <rect width="450" height="200" y="100" fill="#0038a8"/>
   <rect width="450" height="100" y="200" fill="#ce1126"/>
@@ -41,8 +41,8 @@
 </g>
 
 <g id="crFlag" transform="scale(8.6) translate(0 -3)" opacity="1">
-  <animate begin="beSlovak.begin" dur="&durr;" attributeName="opacity" repeatCount="1" fill="freeze" from="0" to="1"/>
-  <animate begin="beCzech.begin" dur="&durr;" attributeName="opacity" repeatCount="1" fill="freeze" from="1" to="0"/>  
+  <animate begin="beSlovak.begin" dur="&durr;" attributeName="opacity" repeatCount="1" fill="freeze" from="0" to="1" attributeType="XML"/>
+  <animate begin="beCzech.begin" dur="&durr;" attributeName="opacity" repeatCount="1" fill="freeze" from="1" to="0" attributeType="XML"/>  
 	<path d="M0,0h90v60h-90z" fill="#d7141a"/>
 	<path d="M0,0h90v30h-90z" fill="#fff"/>
 	<path d="M45,30L0,0v60z" fill="#11457e"/>

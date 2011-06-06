@@ -6,7 +6,7 @@ Modified by  Marek Raida
 -->
 <desc>tests composition of transformations</desc>
 
-<script type="text/javascript" xlink:href="Matrix.js"/>
+<script type="text/javascript" xlink:href="Matrixx.js"/>
 <script type="text/javascript"><![CDATA[
 
 var doc;

@@ -18,23 +18,23 @@ Modified by Matek Raida
 <g transform="matrix(1 0 0 1 100 100)">
 <g>
 
-<text id="text1" style="text-anchor:middle;font-size:40px;fill:#666600;stroke:#FFFF66;text-rendering:geometricPrecision;display:none;"><tspan x="0" y="-10">I</tspan><tspan x="0" y="30">Believe</tspan></text>
+<text id="text1" style="opacity:1;text-anchor:middle;font-size:40px;fill:#666600;stroke:#FFFF66;text-rendering:geometricPrecision;display:none;"><tspan x="0" y="-10">I</tspan><tspan x="0" y="30">Believe</tspan></text>
 </g>
 </g>
-<set id="txt1Show" xlink:href="#text1" attributeName="display" to="inline" begin="10s" dur="3s" repeatCount="1"/>
-<animate xlink:href="#text1" attributeName="opacity" values="0;1;1;0" begin="10s" dur="3s" fill="freeze"/>
-<animateTransform id="txt1Scale" xlink:href="#text1" attributeName="transform" type="scale" values="1.25;1;.25" begin="10s" dur="3s" repeatCount="1"/>
+<set id="txt1Show" xlink:href="#text1" attributeName="display" to="inline" begin="10s" dur="3s" repeatCount="1" attributeType="CSS"/>
+<animate xlink:href="#text1" attributeName="opacity" values="0;1;1;0" begin="10s" dur="3s" fill="freeze" attributeType="CSS"/>
+<animateTransform id="txt1Scale" xlink:href="#text1" attributeName="transform" type="scale" values="1.25;1;0.25" begin="10s" dur="3s" repeatCount="1"/>
 
 <g transform="matrix(1 0 0 1 100 100)">
-<text id="text2" style="text-anchor:middle;font-size:40px;fill:#666600;stroke:#FFFF66;text-rendering:geometricPrecision;display:none;"><tspan x="0" y="-10">It's</tspan><tspan x="0" y="30">SVG!</tspan></text>
+<text id="text2" style="opacity:1;text-anchor:middle;font-size:40px;fill:#666600;stroke:#FFFF66;text-rendering:geometricPrecision;display:none;"><tspan x="0" y="-10">It's</tspan><tspan x="0" y="30">SVG!</tspan></text>
 </g>
 
-<set xlink:href="#text2" attributeName="display" to="inline" begin="10s" dur="5s" repeatCount="1"/>
-<animate xlink:href="#text2" attributeName="opacity" values="0;1;1;0" begin="10s" dur="5s" fill="freeze"/>
-<animateTransform id="text2Scale" xlink:href="#text2" attributeName="transform" type="scale" values="1.25;1;.25" begin="10s" dur="5s" repeatCount="1"/>
+<set xlink:href="#text2" attributeName="display" to="inline" begin="10s" dur="5s" repeatCount="1" attributeType="CSS"/>
+<animate xlink:href="#text2" attributeName="opacity" values="0;1;1;0" begin="10s" dur="5s" fill="freeze" attributeType="CSS"/>
+<animateTransform id="text2Scale" xlink:href="#text2" attributeName="transform" type="scale" values="1.25;1;0.25" begin="10s" dur="5s" repeatCount="1"/>
 		<radialGradient id="aigrd1" cx="100.5" cy="100.5" r="107.0187" fx="100.5" fy="100.5" gradientUnits="userSpaceOnUse">
 			<stop  offset="0.80" style="stop-color:#FFFFFF;stop-opacity:0"/>
-			<stop  offset="1" style="stop-color:#000000;stop-opacity:.85"/>
+			<stop  offset="1" style="stop-color:#000000;stop-opacity:0.85"/>
 		</radialGradient>
 <circle cx="100" cy="100" r="100" style="fill:url(#aigrd1);stroke:grey;stroke-width:2;"/>
 

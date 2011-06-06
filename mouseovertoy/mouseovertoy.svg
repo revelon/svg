@@ -2,14 +2,14 @@
 <title>MouseOver and Click Toy, by Marek Raida, ver. 1.0</title>
 <defs>
 <linearGradient id="gr" x1="0" y1="0" x2="1" y2="1" gradientUnits="objectBoundingBox"> 
-  <animateTransform attributeName="gradientTransform" dur="3s" repeatCount="indefinite" type="rotate" values="0 .5 .5;360 .5 .5"/>
+  <animateTransform attributeName="gradientTransform" dur="3s" repeatCount="indefinite" type="rotate" values="0 .5 .5;360 .5 .5" attributeType="XML"/>
   <stop offset="0" stop-color="#77f"/> 
   <stop offset="1" stop-color="#7f5"/> 
 </linearGradient>
 
 <g id="master"><circle r="20" fill="white" stroke="none">
-    <animate attributeName="r" values="20; 7; 0; 0; 0; 24; 20" dur="4s" begin="mouseover" repeatCount="1" restart="whenNotActive"/>
-    <animate attributeName="fill-opacity" values="1; 0; 1" dur="4s" begin="mouseover" repeatCount="1" restart="whenNotActive"/>
+    <animate attributeName="r" values="20; 7; 0; 0; 0; 24; 20" dur="4s" begin="mouseover" repeatCount="1" restart="whenNotActive" attributeType="XML"/>
+    <animate attributeName="fill-opacity" values="1; 0; 1" dur="4s" begin="mouseover" repeatCount="1" restart="whenNotActive" attributeType="XML"/>
     <set attributeName="fill" to="url(#gr)" begin="click"/>
   </circle>
 </g>

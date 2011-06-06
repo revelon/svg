@@ -57,18 +57,18 @@
     <image x="10" y="230" width="274" height="219" xlink:href="runners8.png"/>
     <animateTransform attributeName="transform" type="translate" dur="3s" begin="3s;runnersOut.end+6s" from="-290 0" to="0 0" repeatCount="1" fill="freeze" id="runnersIn"/>
     <animateTransform attributeName="transform" type="translate" dur="1s" begin="runnersOut.begin" from="0 0" to="550 0" repeatCount="1"/>
-    <animate attributeName="opacity" dur="1s" begin="runnersIn.end+3s" from="1" to="0" repeatCount="1" fill="freeze" id="runnersOut"/>
-    <set attributeName="opacity" begin="runnersIn.begin" to="1"/>
+    <animate attributeName="opacity" dur="1s" begin="runnersIn.end+3s" from="1" to="0" repeatCount="1" fill="freeze" id="runnersOut" attributeType="XML"/>
+    <set attributeName="opacity" begin="runnersIn.begin" to="1" attributeType="XML"/>
 </g>
 
 <g font-size="60px" font-family="sans-serif" font-weight="bold" fill="none" stroke="white" stroke-width="2">
     <text x="400" y="300" display="none">GET READY..
-        <set attributeName="display" begin="runnersIn.begin+1s" to="block"/>
-        <set attributeName="display" begin="runnersOut.begin" to="none"/>
+        <set attributeName="display" begin="runnersIn.begin+1s" to="block" attributeType="XML"/>
+        <set attributeName="display" begin="runnersOut.begin" to="none" attributeType="XML"/>
     </text>
     <text x="500" y="300" display="none">!GO!
-        <set attributeName="display" begin="runnersIn.begin;runnersOut.end+0.5s" to="none"/>
-        <set attributeName="display" begin="runnersOut.begin" to="block"/>
+        <set attributeName="display" begin="runnersIn.begin;runnersOut.end+0.5s" to="none" attributeType="XML"/>
+        <set attributeName="display" begin="runnersOut.begin" to="block" attributeType="XML"/>
     </text>
 </g>
 

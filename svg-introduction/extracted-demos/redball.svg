@@ -30,7 +30,7 @@
     <animateTransform id="rotoy" attributeName="transform" type="rotate" begin="rotox.end" dur="1.2s" by="-360" repeatCount="1"/>
     <animateTransform attributeName="transform" type="rotate" begin="rotoy.end" dur="0.8s" by="-360" repeatCount="8"/>
 
-    <animate id="ending" attributeName="opacity" begin="ball3.begin+1s" dur="2.5s" from="1" to="0" repeatCount="1"/>
+    <animate id="ending" attributeName="opacity" begin="ball3.begin+1s" dur="2.5s" from="1" to="0" repeatCount="1" attributeType="XML"/>
   </g>
 </g>
 

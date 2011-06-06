@@ -140,7 +140,7 @@
   <text x="60" y="100">GECKO has</text>
   <text x="120" y="150">got</text>
   <text x="25" y="200">SVG-AS-IMAGE</text>
-    <animate begin="5s" attributeName="opacity" from="0" to="1" dur="1s" repeatCount="1" fill="freeze" />
+    <animate begin="5s" attributeName="opacity" from="0" to="1" dur="1s" repeatCount="1" fill="freeze" attributeType="XML" />
   	<set attributeName="visibility" to="visible" begin="5s" />
   </g>
 
