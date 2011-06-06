@@ -59,10 +59,10 @@
       <use xlink:href="#mooseHead" fill="white" display="none" transform="">
         <animateTransform id="mooseShow" attributeName="transform" type="scale" values="0.1; 62" dur="1.5s" begin="showPosition.end" repeatCount="1" fill="freeze"/>
         <animateTransform attributeName="transform" type="scale" to="100" dur="0.001s" begin="mooseShow.end" repeatCount="1" fill="freeze"/>
-        <set attributeName="display" to="block" begin="mooseShow.begin"/>
+        <set attributeName="display" to="block" begin="mooseShow.begin" attributeType="XML"/>
 
         <animateTransform id="mooseHide" attributeName="transform" type="scale" values="62; 0.1" dur="1.5s" begin="darkeningOff.end" repeatCount="1" fill="freeze"/>
-        <set attributeName="display" to="none" begin="mooseHide.end"/>
+        <set attributeName="display" to="none" begin="mooseHide.end" attributeType="XML"/>
       </use>
     </g>
   </mask>
@@ -311,30 +311,30 @@
 
   <g display="none" pointer-events="all">
     <rect fill="black" x="0" y="0" width="1025" height="620" fill-opacity="0">
-      <animate id="darkeningOn" attributeName="fill-opacity" begin="mooseShow.end" dur="0.3s" repeatCount="1" from="0" to="0.5" fill="freeze"/>
-      <animate id="darkeningOff" attributeName="fill-opacity" begin="hideDesc.end" dur="0.3s" repeatCount="1" from="0.5" to="0" fill="freeze"/>
+      <animate id="darkeningOn" attributeName="fill-opacity" begin="mooseShow.end" dur="0.3s" repeatCount="1" from="0" to="0.5" fill="freeze" attributeType="XML"/>
+      <animate id="darkeningOff" attributeName="fill-opacity" begin="hideDesc.end" dur="0.3s" repeatCount="1" from="0.5" to="0" fill="freeze" attributeType="XML"/>
     </rect>
-    <set id="deactOn" attributeName="display" to="block" begin="showPosition.begin"/>
-    <set attributeName="display" to="none" begin="mooseHide.end"/>
+    <set id="deactOn" attributeName="display" to="block" begin="showPosition.begin" attributeType="XML"/>
+    <set attributeName="display" to="none" begin="mooseHide.end" attributeType="XML"/>
 
     <g id="detail">
       <image id="imgDetail" xlink:href="" x="230" y="170" width="480" height="320" rx="12">
-        <animate id="imgDetailQuick" attributeName="opacity" values="1; 0; 1" dur="1s" begin="indefinite" repeatCount="1"/>
+        <animate id="imgDetailQuick" attributeName="opacity" values="1; 0; 1" dur="1s" begin="indefinite" repeatCount="1" attributeType="XML"/>
       </image>
       <g display="none">
         <rect id="activeRect" x="230" y="170" width="480" height="320" fill="none" stroke="#bbb" stroke-width="1" rx="4"/>
-        <set attributeName="display" to="block" begin="showDesc.end+0.25s"/>
-        <set attributeName="display" to="none" begin="activeRect.click"/>
+        <set attributeName="display" to="block" begin="showDesc.end+0.25s" attributeType="XML"/>
+        <set attributeName="display" to="none" begin="activeRect.click" attributeType="XML"/>
 
           <polyline points="280,300 240,330 280,360" stroke-width="10" stroke="white" stroke-linejoin="round" fill="none" stroke-opacity="0.08">
-            <animate attributeName="stroke-opacity" begin="llft.mouseover" dur="0.33s" repeatCount="1" from="0.08" to="0.6" fill="freeze"/>
-            <animate attributeName="stroke-opacity" begin="llft.mouseout" dur="0.33s" repeatCount="1" from="0.6" to="0.08" fill="freeze"/>
+            <animate attributeName="stroke-opacity" begin="llft.mouseover" dur="0.33s" repeatCount="1" from="0.08" to="0.6" fill="freeze" attributeType="XML"/>
+            <animate attributeName="stroke-opacity" begin="llft.mouseout" dur="0.33s" repeatCount="1" from="0.6" to="0.08" fill="freeze" attributeType="XML"/>
           </polyline>
           <rect x="230" y="170" width="60" height="320" fill="none" stroke="none" stroke-width="0" rx="2" pointer-events="all" onclick="prevPhoto()" id="llft"/>
 
           <polyline points="660,300 700,330 660,360" stroke-width="10" stroke="white" stroke-linejoin="round" fill="none" stroke-opacity="0.08">
-            <animate attributeName="stroke-opacity" begin="lrght.mouseover" dur="0.33s" repeatCount="1" from="0.08" to="0.6" fill="freeze"/>
-            <animate attributeName="stroke-opacity" begin="lrght.mouseout" dur="0.33s" repeatCount="1" from="0.6" to="0.08" fill="freeze"/>
+            <animate attributeName="stroke-opacity" begin="lrght.mouseover" dur="0.33s" repeatCount="1" from="0.08" to="0.6" fill="freeze" attributeType="XML"/>
+            <animate attributeName="stroke-opacity" begin="lrght.mouseout" dur="0.33s" repeatCount="1" from="0.6" to="0.08" fill="freeze" attributeType="XML"/>
           </polyline>
           <rect x="650" y="170" width="60" height="320" fill="none" stroke="none" stroke-width="0" rx="2" pointer-events="all" onclick="nextPhoto()" id="lrght"/>
       </g>
@@ -358,8 +358,8 @@
     <animateTransform id="showPositionQuick" attributeName="transform" type="translate" begin="indefinite" dur="1s" repeatCount="1" from="0 0" to="0 0" fill="freeze"/>
     <animateTransform id="showPositionFake" attributeName="transform" type="translate" begin="indefinite" dur="1s" repeatCount="1" from="0 0" to="0 0" fill="freeze"/>
   </g>
-  <set attributeName="opacity" to="1" begin="mooseHide.end"/>
-  <set attributeName="opacity" to="0.2" begin="mooseShow.begin"/>
+  <set attributeName="opacity" to="1" begin="mooseHide.end" attributeType="XML"/>
+  <set attributeName="opacity" to="0.2" begin="mooseShow.begin" attributeType="XML"/>
 </g>
 
 <use xlink:href="#norwayMap" transform="translate(10 470) scale(0.4)"/>
