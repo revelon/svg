@@ -123,6 +123,25 @@ function smile(animating) {
   }
 }
 
+// mr's attempt for dynamic smiling
+function runner(anim) {
+  // registering animation and its target(s) ***********************************************************
+  var targets = getTargets(anim);
+  var elAnimators = new Array();
+  for(var i=0; i<targets.length ;i++) {
+    var target = targets[i];
+    var animator = new Animator(anim, target, i);
+    animators.push(animator);
+    elAnimators[i] = animator;
+  }
+  anim.animators = elAnimators;
+  var id = anim.getAttribute("id");
+  if (id)
+    id2anim[id] = anim;
+  alert(animators);
+}
+
+
 // method for returning animation target(s)
 function getTargets(anim) {
   if (anim.hasAttribute("select"))

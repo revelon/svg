@@ -24,7 +24,7 @@
 
 
 <g transform="scale(0.5) translate(0 -600)" style="opacity:1">
-  <animate attributeName="opacity" dur="5s" repeatCount="indefinite" values="1;0.2;1;0.5;0.1;1;1" attributeType="CSS" />
+  <aanimate attributeName="opacity" dur="5s" repeatCount="indefinite" values="1;0.2;1;0.5;0.1;1;1" attributeType="CSS" />
   <aanimateTransform attributeName="transform" type="rotate" begin="-5s" dur="30s" repeatCount="indefinite" from="1" to="360"/>
   <g id="globe" transform="scale(0.95)">
   <circle r="260"  stroke="#000" stroke-width="3" fill="url(#rg)"/>
@@ -40,5 +40,27 @@
   </g>
   </g>
 </g>
+
+<ellipse fill="green" rx="100" ry="200" id="testik"/>
+
+<script>
+var svgns = "http://www.w3.org/2000/svg";
+
+function ha() {
+  //alert('ha');
+  var a = document.createElementNS(svgns, "animateTransform");
+  a.setAttribute("attributeName", "transform");
+  a.setAttribute("type", "rotate");
+  a.setAttribute("dur", 2);
+  a.setAttribute("from", 0);
+  a.setAttribute("to", 180);
+  a.setAttribute("begin", "2s");
+  a.setAttribute("repeatCount", 1);
+  document.getElementById("testik").appendChild(a);
+  runner(a);
+}
+setTimeout("ha()", 500);
+
+</script>
 
 </svg>
