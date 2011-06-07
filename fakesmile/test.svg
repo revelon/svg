@@ -14,17 +14,18 @@
 <g>
   <rect x="-750" y="-600" width="500" height="100" fill="lightgray" stroke="none"/>
   <text x="-500" y="-535" class="ttx2" text-anchor="middle">The Most Wonderful</text>
-  <animateTransform id="txt1" attributeName="transform" type="translate" begin="0s;txt2.end+1s" dur="8s" repeatCount="1" values="0 0;500 0;500 0;1000 0"/>
+  <aanimateTransform id="txt1" attributeName="transform" type="translate" begin="0s;txt2.end+1s" dur="8s" repeatCount="1" values="0 0;500 0;500 0;1000 0"/>
 </g>
 <g>
   <rect x="-750" y="-600" width="500" height="100" fill="lightgray" stroke="none"/>
   <text x="-500" y="-535" class="ttx2" text-anchor="middle">Landmarks To See</text>
-  <animateTransform id="txt2" attributeName="transform" type="translate" begin="txt1.end+0.5s" dur="8s" repeatCount="1" values="0 0;500 0;500 0;1000 0"/>
+  <aanimateTransform id="txt2" attributeName="transform" type="translate" begin="txt1.end+0.5s" dur="8s" repeatCount="1" values="0 0;500 0;500 0;1000 0"/>
 </g>
 
 
-<g transform="scale(0.5) translate(0 -600)">
-  <animateTransform attributeName="transform" type="rotate" begin="-5s" dur="30s" repeatCount="indefinite" from="1" to="360"/>
+<g transform="scale(0.5) translate(0 -600)" style="opacity:1">
+  <animate attributeName="opacity" dur="5s" repeatCount="indefinite" values="1;0.2;1;0.5;0.1;1;1" attributeType="CSS" />
+  <aanimateTransform attributeName="transform" type="rotate" begin="-5s" dur="30s" repeatCount="indefinite" from="1" to="360"/>
   <g id="globe" transform="scale(0.95)">
   <circle r="260"  stroke="#000" stroke-width="3" fill="url(#rg)"/>
   <g fill-opacity="0.6" fill-rule="evenodd" transform="translate(355,-292)" fill="#000">

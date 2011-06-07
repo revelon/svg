@@ -23,7 +23,7 @@ Copyright 2009, The Dojo Foundation
 /*
 Copyright 2008 David Leunen
 */
-var mpf = 25; // milliseconds per frame
+var mpf = 2500; // milliseconds per frame
 var splinePrecision = 25;
 
 var svgns="http://www.w3.org/2000/svg";
@@ -502,7 +502,8 @@ Animator.prototype = {
       // workaround a gecko and webkit bug
       if (attributeName=="font-size" && !isNaN(value))
         value += "px";
-      this.target.style.setProperty(attributeName, value, "");
+      //alert(this.target.style.setProperty);
+      this.target.style.setProperty(attributeName, ""+value, null);
     } else {
       //var animAtt = this.target[attributeName];
       //if (animAtt && animAtt.animVal)

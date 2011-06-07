@@ -502,7 +502,7 @@ Animator.prototype = {
       // workaround a gecko and webkit bug
       if (attributeName=="font-size" && !isNaN(value))
         value += "px";
-      this.target.style.setProperty(attributeName, value, "");
+      this.target.style.setProperty(attributeName, "" + value, null);
     } else {
       //var animAtt = this.target[attributeName];
       //if (animAtt && animAtt.animVal)
