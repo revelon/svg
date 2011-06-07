@@ -293,7 +293,7 @@
 <rect x="50" y="50" width="400" height="280" class="ram">
 	<animateTransform id="Ramecek4" begin="Odjezd_Ram3.end+1s" attributeName="transform" type="scale" from="4" to="1" calcMode="spline" dur="0.6s" keySplines="1 0 0.25 0.25" repeatCount="1" fill="freeze" />
 	<set attributeName="visibility" attributeType="CSS" to="visible" begin="Ramecek4.begin" />
-	<animate id="Ram4_roh" begin="Ramecek4.end+0.5s" attributeName="rx" values="0; 20" dur="0.33s" calcMode="paced" repeatCount="1" fill="freeze" attributeType="XML" />
+	<animate id="Ram4_roh" begin="Ramecek4.end+0.5s" attributeName="rx" values="0;20" dur="0.33s" calcMode="paced" repeatCount="1" fill="freeze" attributeType="XML" />
 	<animateTransform id="Ram4_smrsk" begin="Obr4.end+1.5s" attributeName="transform" type="scale" from="1" to="0.3" calcMode="spline" dur="0.6s" keySplines="1 0 0.25 0.25" repeatCount="1" fill="freeze" />
 	<animate id="Odjezd_Ram4" begin="Obr4_smrsk.end+0.6s" attributeName="x" by="1700" dur="0.33s" calcMode="paced" repeatCount="1" fill="freeze" attributeType="XML" />
 </rect>
@@ -312,7 +312,7 @@
 <rect x="50" y="50" width="400" height="280" class="ram">
 	<animateTransform id="Ramecek3" begin="Odjezd_Ram2.end+1s" attributeName="transform" type="scale" from="4" to="1" calcMode="spline" dur="0.6s" keySplines="1 0 0.25 0.25" repeatCount="1" fill="freeze" />
 	<set attributeName="visibility" attributeType="CSS" to="visible" begin="Ramecek3.begin" />
-	<animate id="Ram3_roh" begin="Ramecek3.end+0.5s" attributeName="rx" values="0; 20" dur="0.33s" calcMode="paced" repeatCount="1" fill="freeze" />
+	<animate id="Ram3_roh" begin="Ramecek3.end+0.5s" attributeName="rx" values="0;20" dur="0.33s" calcMode="paced" repeatCount="1" fill="freeze" />
 	<animateTransform id="Ram3_smrsk" begin="Obr3.end+1.5s" attributeName="transform" type="scale" from="1" to="0.3" calcMode="spline" dur="0.6s" keySplines="1 0 0.25 0.25" repeatCount="1" fill="freeze" />
 	<animate id="Odjezd_Ram3" begin="Obr3_smrsk.end+0.6s" attributeName="x" by="1700" dur="0.33s" calcMode="paced" repeatCount="1" fill="freeze" />
 </rect>
@@ -331,7 +331,7 @@
 <rect x="50" y="50" width="400" height="280" class="ram">
 	<animateTransform id="Ramecek2" begin="Odjezd_Ram1.end+1s" attributeName="transform" type="scale" from="4" to="1" calcMode="spline" dur="0.6s" keySplines="1 0 0.25 0.25" repeatCount="1" fill="freeze" />
 	<set attributeName="visibility" attributeType="CSS" to="visible" begin="Ramecek2.begin" />
-	<animate id="Ram2_roh" begin="Ramecek2.end+0.5s" attributeName="rx" values="0; 20" dur="0.33s" calcMode="paced" repeatCount="1" fill="freeze" />
+	<animate id="Ram2_roh" begin="Ramecek2.end+0.5s" attributeName="rx" values="0;20" dur="0.33s" calcMode="paced" repeatCount="1" fill="freeze" />
 	<animateTransform id="Ram2_smrsk" begin="Obr2.end+1.5s" attributeName="transform" type="scale" from="1" to="0.3" calcMode="spline" dur="0.6s" keySplines="1 0 0.25 0.25" repeatCount="1" fill="freeze" />
 	<animate id="Odjezd_Ram2" begin="Obr2_smrsk.end+0.6s" attributeName="x" by="1700" dur="0.33s" calcMode="paced" repeatCount="1" fill="freeze" />
 </rect>
@@ -350,7 +350,7 @@
 <rect x="50" y="50" width="400" height="280" class="ram">
 	<animateTransform id="Ramecek" begin="BVQiOut.end+0.5s" attributeName="transform" type="scale" from="4" to="1" calcMode="spline" dur="0.6s" keySplines="1 0 0.25 0.25" repeatCount="1" fill="freeze" />
 	<set attributeName="visibility" attributeType="CSS" to="visible" begin="Ramecek.begin" />
-	<animate id="Ram_roh" begin="Ramecek.end+0.5s" attributeName="rx" values="0; 20" dur="0.33s" calcMode="paced" repeatCount="1" fill="freeze" />
+	<animate id="Ram_roh" begin="Ramecek.end+0.5s" attributeName="rx" values="0;20" dur="0.33s" calcMode="paced" repeatCount="1" fill="freeze" />
 	<animateTransform id="Ram1_smrsk" begin="Obr1.end+1.5s" attributeName="transform" type="scale" from="1" to="0.3" calcMode="spline" dur="0.6s" keySplines="1 0 0.25 0.25" repeatCount="1" fill="freeze" />
 	<animate id="Odjezd_Ram1" begin="Obr1_smrsk.end+0.6s" attributeName="x" by="1700" dur="0.33s" calcMode="paced" repeatCount="1" fill="freeze" />
 </rect>

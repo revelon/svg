@@ -7,7 +7,7 @@
 <circle cx="200" cy="100" r="70" fill="yellow"/>
 
 <g transform="translate(467,346)" viewBox="110 108 859 503" style="stroke:black;fill:blue;stroke-width:3px">
-<animate attributeName="fill" begin="0s" dur="7s" values="blue; blue; darkblue; blue" repeatCount="indefinite"/>
+<animate attributeName="fill" begin="0s" dur="7s" values="blue;blue;darkblue;blue" repeatCount="indefinite"/>
 
 <desc><!-- [house2] animation - frame #1 --></desc>
 <path id="house2" d="

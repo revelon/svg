@@ -9,7 +9,7 @@
 <g id="root" transform="translate(370 350) rotate(60)">
   <circle r="322" fill="url(#abc)" stroke="#111" stroke-dasharray="8,4"/>
   <circle r="24" fill="#eee" stroke="none">
-    <animate attributeName="fill" values="#fff; #000; #f00; #fff" begin="0s" dur="5s" repeatCount="4" id="starter"/>
+    <animate attributeName="fill" values="#fff;#000;#f00;#fff" begin="0s" dur="5s" repeatCount="4" id="starter"/>
   </circle>
 </g>
 

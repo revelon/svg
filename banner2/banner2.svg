@@ -90,7 +90,7 @@ text.hw {font: 30px/32px 'BelligerentMadnessRegular', Arial, sans-serif;}
   <g id="paper">
     <rect width="300" height="300" fill="lightgray" transform="translate(-28 -48)" stroke="none"/>
     <rect width="300" height="300" fill="url(#papergr)" transform="translate(-30 -50)" stroke="none" filter="url(#abc)">
-      <set id="render" attributeName="width" to="300" begin="pap1.end; pap2.end; pap3.end; finalFadeOff.end"/>
+      <set id="render" attributeName="width" to="300" begin="pap1.end;pap2.end;pap3.end;finalFadeOff.end"/>
     </rect>
   </g>
 </defs>
@@ -127,7 +127,7 @@ text.hw {font: 30px/32px 'BelligerentMadnessRegular', Arial, sans-serif;}
     <circle cx="135" cy="-20" r="16" fill="url(#zch)"/>
     <g visibility="hidden" stroke="none">
       <set attributeName="visibility" to="visible" begin="pap1.end"/>
-      <set attributeName="visibility" to="hidden" begin="finalFadeOff.end; pap1.begin"/>
+      <set attributeName="visibility" to="hidden" begin="finalFadeOff.end;pap1.begin"/>
       <text class="hw" x="0" y="30" fill="navy" mask="url(#shw1)">Do experiments</text>
       <text class="hw" x="4" y="74" fill="navy" mask="url(#shw2)">with every aspect</text>
       <text class="hw" x="0" y="123" fill="navy" mask="url(#shw3)">of the SVG &amp; SMIL</text>
@@ -142,7 +142,7 @@ text.hw {font: 30px/32px 'BelligerentMadnessRegular', Arial, sans-serif;}
     <circle cx="115" cy="-24" r="16" fill="url(#zch)"/>
     <g visibility="hidden" stroke="none">
       <set attributeName="visibility" to="visible" begin="pap2.end"/>
-      <set attributeName="visibility" to="hidden" begin="finalFadeOff.end; pap3.begin"/>
+      <set attributeName="visibility" to="hidden" begin="finalFadeOff.end;pap3.begin"/>
       <text class="hw" x="0" y="30" fill="navy" mask="url(#shw1)">Support in modern</text>
       <text class="hw" x="2" y="82" fill="navy" mask="url(#shw2)">browsers is good</text>
       <text class="hw" x="-2" y="125" fill="navy" mask="url(#shw3)">and improving</text>
@@ -157,7 +157,7 @@ text.hw {font: 30px/32px 'BelligerentMadnessRegular', Arial, sans-serif;}
     <circle cx="135" cy="-11" r="16" fill="url(#zch)"/>
     <g visibility="hidden" stroke="none">
       <set attributeName="visibility" to="visible" begin="pap3.end"/>
-      <set attributeName="visibility" to="hidden" begin="finalFadeOff.end; pap3.begin"/>
+      <set attributeName="visibility" to="hidden" begin="finalFadeOff.end;pap3.begin"/>
       <text class="hw" x="0" y="35" fill="navy" mask="url(#shw1)">You can do graphs,</text>
       <text class="hw" x="3" y="82" fill="navy" mask="url(#shw2)">rich presentations,</text>
       <text class="hw" x="12" y="123" fill="navy" mask="url(#shw3)">maps, games</text>
@@ -195,14 +195,14 @@ text.hw {font: 30px/32px 'BelligerentMadnessRegular', Arial, sans-serif;}
       <use xlink:href="#elp" transform="rotate(-30)"/>
       <circle cy="-20" r="44" fill="url(#circ)"/>
       <text x="0" y="0" text-anchor="middle" font-style="normal" font-size="28px" font-family="Verdana, sans-serif" font-weight="bold" fill="url(#grad2)" stroke="none">SMIL &amp; SVG</text>
-      <animateTransform id="showLogo" attributeName="transform" type="scale" begin="pap3.end+6s" dur="4s" values="0 ;3; 2; 2" repeatCount="1" fill="freeze"/>
-      <animateTransform id="hideLogo" attributeName="transform" type="scale" begin="finalFadeOff.begin-0.3s" dur="0.3s" values="2; 2.5; 0; 0" repeatCount="1" fill="freeze"/>
+      <animateTransform id="showLogo" attributeName="transform" type="scale" begin="pap3.end+6s" dur="4s" values="0;3;2;2" repeatCount="1" fill="freeze"/>
+      <animateTransform id="hideLogo" attributeName="transform" type="scale" begin="finalFadeOff.begin-0.3s" dur="0.3s" values="2;2.5;0;0" repeatCount="1" fill="freeze"/>
       <set attributeName="visibility" to="visible" begin="showLogo.begin"/>
       <set attributeName="visibility" to="hidden" begin="hideLogo.end"/>
     </g>
   </g>
 
-  <animate id="finalFadeOff" attributeName="opacity" begin="showLogo.end+6s" dur="3s" values="1; 0; 0" repeatCount="1"/>
+  <animate id="finalFadeOff" attributeName="opacity" begin="showLogo.end+6s" dur="3s" values="1;0;0" repeatCount="1"/>
   </g>
 
 <image xlink:href="http://www.google-analytics.com/__utm.gif?utmwv=4.7.1&amp;utmn=21830374&amp;utmhn=svg.kvalitne.cz&amp;utmcs=UTF-8&amp;utmsr=1920x1080&amp;utmsc=24-bit&amp;utmul=en-us&amp;utmje=1&amp;utmfl=10.0%20r45&amp;utmdt=SVG%C2%A0%E2%80%94%C2%A0It%27s%20in%20your%20hands...&amp;utmhid=1377849700&amp;utmr=-&amp;utmp=%2Findex2.htm&amp;utmac=UA-11950721-1&amp;utmcc=__utma%3D251371972.1884550355.1260220320.1272562824.1272576758.56%3B%2B__utmz%3D251371972.1263752798.41.3.utmcsr%3Dgoogle%7Cutmccn%3D(organic)%7Cutmcmd%3Dorganic%7Cutmctr%3Dsvg%2520smil%2520demo%3B" width="1" height="1"/>

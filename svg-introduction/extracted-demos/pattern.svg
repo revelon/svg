@@ -21,7 +21,7 @@
 <pattern id="back2" patternUnits="userSpaceOnUse" x="0" y="0" width="17" height="17">
   <rect x="-30" y="-30" width="60" height="60" fill="deepskyblue" stroke="none"/>
   <rect width="12" height="12" fill="none" stroke="white" stroke-width="0.5" transform="rotate(45) translate(6 -6)">
-    <animate attributeName="stroke-width" begin="0s" dur="8s" values="0.25; 2; 0.25" repeatCount="indefinite" attributeType="XML"/>
+    <animate attributeName="stroke-width" begin="0s" dur="8s" values="0.25;2;0.25" repeatCount="indefinite" attributeType="XML"/>
   </rect>
 </pattern>
 

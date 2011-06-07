@@ -122,7 +122,7 @@
       <animateTransform attributeName="transform" type="translate" values="0,0;100,69;100,69" dur="12s" begin="0s" repeatCount="indefinite"/>
       <use xlink:href="#halfHourglassSand">
         <animateTransform attributeName="transform" type="scale" values="1;0;0" dur="12s" begin="0s" repeatCount="indefinite" additive="sum"/>
-        <animate attributeName="display" values="none; block" dur="24s" begin="0s" repeatCount="indefinite" calcMode="discrete"/>
+        <animate attributeName="display" values="none;block" dur="24s" begin="0s" repeatCount="indefinite" calcMode="discrete"/>
       </use>
       </g>
     </g>

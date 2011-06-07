@@ -8,10 +8,10 @@
  <!ENTITY strCol "url(#tileGrad)">
  <!ENTITY strShad "#000">
  <!ENTITY shadOff "2">
- <!ENTITY tileZoom "2.3; 1">
+ <!ENTITY tileZoom "2.3;1">
  <!ENTITY presDur "1700">
  <!ENTITY preload "2000">
- <!ENTITY tileRot "1 1; 0 1; 1 1">
+ <!ENTITY tileRot "1 1;0 1;1 1">
 ]>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="-450 -300 900 600" xmlns:html="http://www.w3.org/1999/xhtml">
 <title>Vacation on Cuba SVG Demo version 1.11 by Marek Raida, marek.raida@gmail.com</title>
@@ -476,7 +476,7 @@
   
     <text x="-1450" y="140" display="&iniState;" fill="white">...click on some domino tile to show picture detail...
       <set attributeName="display" to="block" begin="iniPosition.end+0.5s"/>
-      <animate attributeName="fill" begin="0s" dur="3s" values="white; black; red; black; white" repeatCount="indefinite"/>
+      <animate attributeName="fill" begin="0s" dur="3s" values="white;black;red;black;white" repeatCount="indefinite"/>
     </text>
 
     <text x="-1555" y="244" font-size="40px" id="description" font-style="italic" opacity="0">
@@ -1043,8 +1043,8 @@
 
   <image id="carPresenter" xlink:href="" x="500" y="-250" width="300" height="600"/>
   
-  <animateTransform id="carIn" attributeName="transform" type="translate" values="900 -50; -355 -50" dur="&presDur;ms" begin="indefinite" repeatCount="1" fill="freeze"/>
-  <animateTransform id="carOut" attributeName="transform" type="translate" values="-355 -50; -1400 -50" dur="&presDur;ms" begin="indefinite" repeatCount="1" fill="freeze"/>
+  <animateTransform id="carIn" attributeName="transform" type="translate" values="900 -50;-355 -50" dur="&presDur;ms" begin="indefinite" repeatCount="1" fill="freeze"/>
+  <animateTransform id="carOut" attributeName="transform" type="translate" values="-355 -50;-1400 -50" dur="&presDur;ms" begin="indefinite" repeatCount="1" fill="freeze"/>
   <set attributeName="display" to="none" begin="carOut.end"/>
   <set attributeName="display" to="block" begin="carIn.begin"/>
 </g>
@@ -1083,8 +1083,8 @@
     </g>
   </g>
 
-  <animateTransform id="colibriIn" attributeName="transform" type="translate" values="0 -1200; -225 -570" dur="&presDur;ms" begin="indefinite" repeatCount="1" fill="freeze"/>
-  <animateTransform id="colibriOut" attributeName="transform" type="translate" values="-225 -570; -700 -1200" dur="&presDur;ms" begin="indefinite" repeatCount="1" fill="freeze"/>
+  <animateTransform id="colibriIn" attributeName="transform" type="translate" values="0 -1200;-225 -570" dur="&presDur;ms" begin="indefinite" repeatCount="1" fill="freeze"/>
+  <animateTransform id="colibriOut" attributeName="transform" type="translate" values="-225 -570;-700 -1200" dur="&presDur;ms" begin="indefinite" repeatCount="1" fill="freeze"/>
   <set attributeName="display" to="none" begin="colibriOut.end"/>
   <set attributeName="display" to="block" begin="colibriIn.begin"/>
 </g>

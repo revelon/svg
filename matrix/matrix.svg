@@ -31,7 +31,7 @@ tspan {
 </image>
 
 <text x="350" text-anchor="middle" y="200" font-family="monospace" font-size="21px" fill="#000500" display="none">The SVG Matrix
-    <animate attributeName="fill" values="#000500; #fff; #000500; #000500" dur="14s" begin="3s" repeatCount="indefinite" id="txtr" attributeType="XML"/>
+    <animate attributeName="fill" values="#000500;#fff;#000500;#000500" dur="14s" begin="3s" repeatCount="indefinite" id="txtr" attributeType="XML"/>
     <set attributeName="display" to="block" begin="txtr.begin" attributeType="XML"/>
 </text>
 

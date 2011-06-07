@@ -5,13 +5,13 @@
 <ellipse fill="#ECC19C" stroke="#000000" stroke-width="0.5" cx="20" cy="261.6" rx="19.7" ry="34.6"/>
 <ellipse fill="#ECC19C" stroke="#000000" cx="357.7" cy="272.9" rx="339" ry="266.6"/>
 <path stroke="#000000" d="M696.8,276.1c0-142-155.3-238.2-337.2-238.2l0,0c-75,0-77.4,58.9-132.9,88.1c-34.8,18.3-78.5-1.9-115,16.4  c-46.4,23.3-89.3,87-89.3,133.6h-7.3c0-152,152.5-275.6,344.4-275.6c191.9,0,344.4,123.7,344.4,275.6H696.8z">
-  <animate attributeName="opacity" begin="0s" dur="6s" values="1; 0" repeatCount="indefinite" calcMode="discrete"/>
+  <animate attributeName="opacity" begin="0s" dur="6s" values="1;0" repeatCount="indefinite" calcMode="discrete"/>
 </path>
 <ellipse fill="#FFFFFF" stroke="#000000" cx="264.1" cy="209.7" rx="41.8" ry="49.3">
-  <animate attributeName="ry" begin="0s" dur="6s" values="49.3; 64" repeatCount="indefinite" calcMode="discrete"/>
+  <animate attributeName="ry" begin="0s" dur="6s" values="49.3;64" repeatCount="indefinite" calcMode="discrete"/>
 </ellipse>
 <ellipse fill="#FFFFFF" stroke="#000000" cx="438.8" cy="209.7" rx="41.8" ry="49.3">
-  <animate attributeName="ry" begin="0s" dur="6s" values="49.3; 70" repeatCount="indefinite" calcMode="discrete"/>
+  <animate attributeName="ry" begin="0s" dur="6s" values="49.3;70" repeatCount="indefinite" calcMode="discrete"/>
 </ellipse>
 <path d="M346.5,314.8l-0.9-7.2c14.1-1.8,33.9-0.9,39.1-13.1c7.9-5.3-1.4-26.6-19.9-32.6c-11.9-8.5-9.3-32.1-9-34.8l4.7,0.6  c-0.9,5.8-5.5,22.1,8.5,28.3c11,7.9,29.4,29,22,42.1C384.5,309.6,352.8,314.1,346.5,314.8L346.5,314.8z"/>
 <path d="M264.1,259c11.7,0,22.3-5.7,29.9-14.9c-4.6-28.6-16.2-49-29.9-49c-13.7,0-25.3,20.4-29.9,49  C241.8,253.3,252.4,259,264.1,259z"/>

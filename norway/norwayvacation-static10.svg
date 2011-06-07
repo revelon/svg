@@ -52,11 +52,11 @@
   <mask id="norwayFlagMask" maskUnits="userSpaceOnUse">
     <g id="maskMoose" transform="translate(362, 357)">
       <use xlink:href="#mooseHead" fill="white" display="none" transform="">
-        <animateTransform id="mooseShow" attributeName="transform" type="scale" values="0.1; 62" dur="1.5s" begin="showPosition.end" repeatCount="1" fill="freeze"/>
+        <animateTransform id="mooseShow" attributeName="transform" type="scale" values="0.1;62" dur="1.5s" begin="showPosition.end" repeatCount="1" fill="freeze"/>
         <animateTransform attributeName="transform" type="scale" to="100" dur="0.001s" begin="mooseShow.end" repeatCount="1" fill="freeze"/>
         <set attributeName="display" to="block" begin="mooseShow.begin"/>
 
-        <animateTransform id="mooseHide" attributeName="transform" type="scale" values="62; 0.1" dur="1.5s" begin="darkeningOff.end" repeatCount="1" fill="freeze"/>
+        <animateTransform id="mooseHide" attributeName="transform" type="scale" values="62;0.1" dur="1.5s" begin="darkeningOff.end" repeatCount="1" fill="freeze"/>
         <set attributeName="display" to="none" begin="mooseHide.end"/>
       </use>
     </g>
@@ -323,11 +323,11 @@
         <set attributeName="display" to="none" begin="click"/>
       </rect>
       <g transform="translate(10, 322)">
-        <text id="imgDesc" x="0" y="15" fill="#002868" font-family="sans-serif" font-size="17px" transform="scale(1, 0.01)">Trondheim's buildings<animate id="showDesc" attributeName="fill" begin="darkeningOn.end" dur="0.3s" repeatCount="1" values="#002868; #002868; #fff" fill="freeze"/>
-          <animate id="hideDesc" attributeName="fill" begin="activeRect.click+0.25s" dur="0.3s" repeatCount="1" values="#fff; #fff; #002868" fill="freeze"/>
+        <text id="imgDesc" x="0" y="15" fill="#002868" font-family="sans-serif" font-size="17px" transform="scale(1, 0.01)">Trondheim's buildings<animate id="showDesc" attributeName="fill" begin="darkeningOn.end" dur="0.3s" repeatCount="1" values="#002868;#002868;#fff" fill="freeze"/>
+          <animate id="hideDesc" attributeName="fill" begin="activeRect.click+0.25s" dur="0.3s" repeatCount="1" values="#fff;#fff;#002868" fill="freeze"/>
 
-          <animateTransform attributeName="transform" type="scale" values="1 0.01; 1 1" dur="0.3s" begin="darkeningOn.end" repeatCount="1" fill="freeze"/>
-          <animateTransform attributeName="transform" type="scale" values="1 1; 1 0.01" dur="0.3s" begin="hideDesc.begin" repeatCount="1" fill="freeze"/>
+          <animateTransform attributeName="transform" type="scale" values="1 0.01;1 1" dur="0.3s" begin="darkeningOn.end" repeatCount="1" fill="freeze"/>
+          <animateTransform attributeName="transform" type="scale" values="1 1;1 0.01" dur="0.3s" begin="hideDesc.begin" repeatCount="1" fill="freeze"/>
         </text>
       </g>
     </g>

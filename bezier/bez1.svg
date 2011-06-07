@@ -7,8 +7,8 @@
 <path id="bez1" d="
 M141,-79C141,-79 76,-222 0,-141C-76,-60 -95,-3 -109,95C-123,193 -63,291 0,286C63,281 162,197 136,165C110,133 9,193 9,193C9,193 -101,173 14,-22C129,-217 62,-43 61,-49C60,-55 66,-17 105,-27C144,-37 141,-79 141,-79z"
   />
-<animate attributeName="fill" begin="0s" dur="5s" values="orange; red; gold; black; orange" repeatCount="indefinite"/>
-<animate attributeName="stroke-width" begin="0s" dur="3s" values="2px; 5px; 2px" repeatCount="indefinite"/>
+<animate attributeName="fill" begin="0s" dur="5s" values="orange;red;gold;black;orange" repeatCount="indefinite"/>
+<animate attributeName="stroke-width" begin="0s" dur="3s" values="2px;5px;2px" repeatCount="indefinite"/>
 
 <animate id="bez1_frame1" xlink:href="#bez1" begin="0s;bez1_frame8.end" dur="1s"
   attributeName="d" attributeType="XML" fill="freeze"

@@ -7,11 +7,11 @@
 <g>
 <path stroke-width="3" stroke="#000000" fill="#FF0000" d="m107,328l24,-40l89,-22l37,-45l52,-10l61,16l26,28l20,24l44,5l20,17l13,25l-2,18l-23,3l-17,-32l-29,-7l-31,5l-12,28l-161,-1l-17,-26l-30,-11l-30,8l-19,26l-15,-9z"/>
 <path stroke-width="3" stroke="#000000" fill="#00fffa" d="m245,269l-5,-14l25,-28l40,-6l-2,42l13,-1l-1,-41l47,10l32,40l-149,-2z"/>
-<animateTransform attributeName="transform" type="translate" dur="1s" values="0 0; 0 -4; 0 2; 0 0" repeatCount="indefinite"/>
+<animateTransform attributeName="transform" type="translate" dur="1s" values="0 0;0 -4;0 2;0 0" repeatCount="indefinite"/>
 </g>
 <rect x="140" y="320" width="60" height="60" rx="22" fill="steelblue" stroke-width="17" stroke="#000000" id="wheel">
   <animateTransform attributeName="transform" type="rotate" dur="1s" from="0 170 350" to="360 170 350" repeatCount="indefinite"/>
-  <animate attributeName="rx" dur="2s" values="22; 28; 22" repeatCount="indefinite"/>
+  <animate attributeName="rx" dur="2s" values="22;28;22" repeatCount="indefinite"/>
 </rect>
 <use xlink:href="#wheel" transform="translate(252 0)"/>
 <animateTransform attributeName="transform" type="translate" dur="5s" from="-550 -200" to="400 -200" repeatCount="1" id="one" begin="0s;two.end"/>

@@ -9,7 +9,7 @@
     <defs>
         <set xlink:href="#root" attributeName="viewBox" attributeType="XML" to="5 5 80 105" begin="0s" dur="2s" repeatCount="indefinite" end="showMoon.end+1s"/>
         <animate xlink:href="#root" attributeName="viewBox" attributeType="XML" 
-            values="5 5 80 105; 0 0 177.379 209" begin="showMoon.end+1s" dur="2s" />
+            values="5 5 80 105;0 0 177.379 209" begin="showMoon.end+1s" dur="2s" />
 
         <!-- <set xlink:href="#Haunted_house" attributeName="display" to="none" dur="1s" end="0.5s" /> -->
         <set xlink:href="#Moon" attributeName="display" to="none" dur="1s" fill="freeze" />
@@ -43,7 +43,7 @@
         <set xlink:href="#Moon" attributeName="display" to="inline" begin="showMoon.begin" dur="1s" fill="freeze" />
 
         <animateTransform id="showMoon" xlink:href="#Moon" attributeName="transform" attributeType="XML" type="translate"
-                         values="0,50; 0,5" begin="0.2s" dur="5s" fill="freeze"/>
+                         values="0,50;0,5" begin="0.2s" dur="5s" fill="freeze"/>
         <set xlink:href="#RainLayer" attributeName="display" to="inline" begin="showMoon.end+2s" dur="1s" fill="freeze" />
 
     </defs>
@@ -54,7 +54,7 @@
                 <g id="Background_1_">
                     <path id="Night_Sky" fill="#3E277E" stroke="#000000" d="M176.833,208.5h-176V0.5h176V208.5z"/>
                     <rect x="0" y="0" width="178" height="150" fill="#9C9FF3" display="none">
-                        <set id="flashOne" attributeName="display" attributeType="CSS" to="inline" begin="showMoon.end+1s; flashOne.end+5s" dur="0.2s" />
+                        <set id="flashOne" attributeName="display" attributeType="CSS" to="inline" begin="showMoon.end+1s;flashOne.end+5s" dur="0.2s" />
                         <set id="flashTwo" attributeName="display" attributeType="CSS" to="inline" begin="flashOne.end+0.5s" dur="0.1s" />
                         <set id="flashThree" attributeName="display" attributeType="CSS" to="inline" begin="flashTwo.end+0.1s" dur="0.1s" />
                     </rect>
@@ -532,56 +532,56 @@
                     <g id="rainLine">
                     <use xlink:href="#RainDrop">
                         <animateTransform attributeName="transform" attributeType="XML" type="translate"
-                         values="0,-100; 0,150" begin="0s" dur="1.5s" fill="freeze" repeatCount="indefinite"/>            
+                         values="0,-100;0,150" begin="0s" dur="1.5s" fill="freeze" repeatCount="indefinite"/>            
                     </use>
                     <use xlink:href="#RainDrop">
                         <animateTransform attributeName="transform" attributeType="XML" type="translate"
-                         values="-20,-80; -20,100" begin="0s" dur="1.5s" fill="freeze" repeatCount="indefinite"/>            
+                         values="-20,-80;-20,100" begin="0s" dur="1.5s" fill="freeze" repeatCount="indefinite"/>            
                     </use>
                     <use xlink:href="#RainDrop">
                         <animateTransform attributeName="transform" attributeType="XML" type="translate"
-                         values="-50,-50; -50,80" begin="0s" dur="1.5s" fill="freeze" repeatCount="indefinite"/>            
+                         values="-50,-50;-50,80" begin="0s" dur="1.5s" fill="freeze" repeatCount="indefinite"/>            
                     </use>
                     <use xlink:href="#RainDrop">
                         <animateTransform attributeName="transform" attributeType="XML" type="translate"
-                         values="0,-100; 0,150" begin="0.75s" dur="1.5s" fill="freeze" repeatCount="indefinite"/>            
+                         values="0,-100;0,150" begin="0.75s" dur="1.5s" fill="freeze" repeatCount="indefinite"/>            
                     </use>
                     <use xlink:href="#RainDrop">
                         <animateTransform attributeName="transform" attributeType="XML" type="translate"
-                         values="-20,-80; -20,100" begin="0.75s" dur="1.5s" fill="freeze" repeatCount="indefinite"/>            
+                         values="-20,-80;-20,100" begin="0.75s" dur="1.5s" fill="freeze" repeatCount="indefinite"/>            
                     </use>
                     <use xlink:href="#RainDrop">
                         <animateTransform attributeName="transform" attributeType="XML" type="translate"
-                         values="-50,-50; -50,160" begin="0.75s" dur="1.5s" fill="freeze" repeatCount="indefinite"/>            
+                         values="-50,-50;-50,160" begin="0.75s" dur="1.5s" fill="freeze" repeatCount="indefinite"/>            
                     </use>
                     <use xlink:href="#RainDrop">
                         <animateTransform attributeName="transform" attributeType="XML" type="translate"
-                         values="-90,-50; -90,80" begin="0.75s" dur="1.5s" fill="freeze" repeatCount="indefinite"/>            
+                         values="-90,-50;-90,80" begin="0.75s" dur="1.5s" fill="freeze" repeatCount="indefinite"/>            
                     </use>
 
                     <use xlink:href="#RainDrop">
                         <animateTransform attributeName="transform" attributeType="XML" type="translate"
-                         values="20,-90; 30,100" begin="0s" dur="1.5s" fill="freeze" repeatCount="indefinite"/>            
+                         values="20,-90;30,100" begin="0s" dur="1.5s" fill="freeze" repeatCount="indefinite"/>            
                     </use>
                     <use xlink:href="#RainDrop">
                         <animateTransform attributeName="transform" attributeType="XML" type="translate"
-                         values="40,-80; 40,90" begin="0s" dur="1.5s" fill="freeze" repeatCount="indefinite"/>            
+                         values="40,-80;40,90" begin="0s" dur="1.5s" fill="freeze" repeatCount="indefinite"/>            
                     </use>
                     <use xlink:href="#RainDrop">
                         <animateTransform attributeName="transform" attributeType="XML" type="translate"
-                         values="60,-50; 60,160" begin="0s" dur="1.5s" fill="freeze" repeatCount="indefinite"/>            
+                         values="60,-50;60,160" begin="0s" dur="1.5s" fill="freeze" repeatCount="indefinite"/>            
                     </use>
                     <use xlink:href="#RainDrop">
                         <animateTransform attributeName="transform" attributeType="XML" type="translate"
-                         values="90,-100; 90,100" begin="0.75s" dur="1.5s" fill="freeze" repeatCount="indefinite"/>            
+                         values="90,-100;90,100" begin="0.75s" dur="1.5s" fill="freeze" repeatCount="indefinite"/>            
                     </use>
                     <use xlink:href="#RainDrop">
                         <animateTransform attributeName="transform" attributeType="XML" type="translate"
-                         values="20,-80; 20,100" begin="0.75s" dur="1.5s" fill="freeze" repeatCount="indefinite"/>            
+                         values="20,-80;20,100" begin="0.75s" dur="1.5s" fill="freeze" repeatCount="indefinite"/>            
                     </use>
                     <use xlink:href="#RainDrop">
                         <animateTransform attributeName="transform" attributeType="XML" type="translate"
-                         values="60,-50; 60,80" begin="0.75s" dur="1.5s" fill="freeze" repeatCount="indefinite"/>            
+                         values="60,-50;60,80" begin="0.75s" dur="1.5s" fill="freeze" repeatCount="indefinite"/>            
                     </use>
                     </g>
                 </defs>
@@ -602,8 +602,8 @@
              </g>
             <!--
              <animateTransform id="textAnim_1" attributeName="transform" attributeType="XML" type="scale"
-                               values="1;5;1" begin="0.1s; textAnim_1.end + 6.1s" dur="1s" additive="sum" accumulate="sum" />
-             <animate attributeName="fill" attributeType="CSS" values="black;#D34808;#EFFA99;#D34808;black;" begin="0s; textAnim_1.end + 6s" dur="1.5s" />
+                               values="1;5;1" begin="0.1s;textAnim_1.end + 6.1s" dur="1s" additive="sum" accumulate="sum" />
+             <animate attributeName="fill" attributeType="CSS" values="black;#D34808;#EFFA99;#D34808;black;" begin="0s;textAnim_1.end + 6s" dur="1.5s" />
             -->
          </g>
          <g transform="translate(18.769001007080078, 9.527999818325043)">

@@ -6,7 +6,7 @@
   <g>
     <circle cx="120" cy="0" r="25" fill="black" stroke="none"/>
     <circle cx="-120" cy="0" r="25" fill="white" stroke="none"/>
-    <animate attributeName="fill-opacity" values="0; 1" begin="19.5s" dur="1s" repeatCount="1" fill="freeze"/>
+    <animate attributeName="fill-opacity" values="0;1" begin="19.5s" dur="1s" repeatCount="1" fill="freeze"/>
     <set attributeName="fill-opacity" to="0" begin="indefinite" id="starter"/>
   </g>
 </g>
