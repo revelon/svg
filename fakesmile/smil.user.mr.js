@@ -23,7 +23,7 @@ Copyright 2009, The Dojo Foundation
 /*
 Copyright 2008 David Leunen
 */
-var mpf = 2500; // milliseconds per frame
+var mpf = 25; // milliseconds per frame
 var splinePrecision = 25;
 
 var svgns="http://www.w3.org/2000/svg";
@@ -225,7 +225,8 @@ Animator.prototype = {
         }
         var event = time.substring(io+1);
         var call = funk(func, me, offset);
-        for(var j=0; j<elements.length ;j++) {
+        if (!elements) alert(elements + " * " + this.target + " * " + id); // elements == null is case when there is named animation event which is not defined at all!!!
+        for(var j=0; j<elements.length;j++) {
           var element = elements[j];
           if(element==null)
             continue;

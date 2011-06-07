@@ -2,6 +2,7 @@
 <title>Demo Content</title>
 <desc>Copyright 2004 Ikivo AB, (Ikivo Stockholm Sweden).
 All Rights Reserved. Ikivo reserves all right, title, and interest in the material herein. User shall not remove or obscure any copyright notices or proprietary legends contained within this source file.</desc>
+<script type="text/ecmascript" xlink:href="../fakesmile/smil.user.js"/>
 	<g  id="Background" transform="matrix(0.498753,0,0,0.498753,129,100.484)" xml:space="preserve" display="inline">
 		<animateMotion  begin="0" dur="indefinite" fill="freeze" path="M-54.135 0 C-54.135 0 -54.135 0 -54.135 0 " keySplines="0 0 1 1" calcMode="spline" keyPoints="0;1" keyTimes="0;1"/>
 		<animateTransform attributeName="transform" attributeType="XML" type="translate"  begin="0" dur="indefinite" fill="freeze" restart="never" calcMode="linear" values="200.5 200.5;200.5 200.5" keyTimes="0;1" additive="sum"/>

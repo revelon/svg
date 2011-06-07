@@ -8,8 +8,8 @@
 </linearGradient>
 
 <g id="master"><circle r="20" fill="white" stroke="none">
-    <animate attributeName="r" values="20; 7; 0; 0; 0; 24; 20" dur="4s" begin="mouseover" repeatCount="1" restart="whenNotActive" attributeType="XML"/>
-    <animate attributeName="fill-opacity" values="1; 0; 1" dur="4s" begin="mouseover" repeatCount="1" restart="whenNotActive" attributeType="XML"/>
+    <animate attributeName="r" values="20;7;0;0;0;24;20" dur="4s" begin="mouseover" repeatCount="1" restart="whenNotActive" attributeType="XML"/>
+    <animate attributeName="fill-opacity" values="1;0;1" dur="4s" begin="mouseover" repeatCount="1" restart="whenNotActive" attributeType="XML"/>
     <set attributeName="fill" to="url(#gr)" begin="click"/>
   </circle>
 </g>
