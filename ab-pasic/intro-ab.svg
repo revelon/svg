@@ -133,9 +133,10 @@
 
 </defs>
 
-    <html:audio src="intro.ogg" autoplay="true">
-      <html:audio src="intro.mp3" autoplay="true" />
-    </html:audio>
+<html:audio autoplay="true" loop="true">
+  <html:source src="intro.ogg" type="audio/ogg"/>
+  <html:source src="intro.mp3" type="audio/mpeg"/>
+</html:audio>
 
 <!-- prvni udalost -->
 <rect class="rol" x="0" y="0" width="100%" height="100%">
@@ -231,9 +232,10 @@
 
 <!-- ********************************* LOGO ********************************************** -->
 
-<use x="272" y="205" xlink:href="#Logo" transform="scale(0.59)" fill="green">
-	<animateTransform id="LogoOut" begin="Shw9.end+0.5s" attributeName="transform" type="translate" dur="1s" by="-170 401" fill="freeze" />
-</use>
+<g>
+  <use x="272" y="205" xlink:href="#Logo" transform="scale(0.59)" fill="green"/>
+  <animateTransform id="LogoOut" begin="Shw9.end+0.5s" attributeName="transform" type="translate" dur="1s" by="-100 238" fill="freeze" />
+</g>
 
 
 

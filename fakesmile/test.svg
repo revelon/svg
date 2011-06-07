@@ -14,12 +14,12 @@
 <g>
   <rect x="-750" y="-600" width="500" height="100" fill="lightgray" stroke="none"/>
   <text x="-500" y="-535" class="ttx2" text-anchor="middle">The Most Wonderful</text>
-  <aanimateTransform id="txt1" attributeName="transform" type="translate" begin="0s;txt2.end+1s" dur="8s" repeatCount="1" values="0 0;500 0;500 0;1000 0"/>
+  <animateTransform id="txt1" attributeName="transform" type="translate" begin="0s;txt2.end+1s" dur="8s" repeatCount="1" values="0 0;500 0;500 0;1000 0"/>
 </g>
 <g>
   <rect x="-750" y="-600" width="500" height="100" fill="lightgray" stroke="none"/>
   <text x="-500" y="-535" class="ttx2" text-anchor="middle">Landmarks To See</text>
-  <aanimateTransform id="txt2" attributeName="transform" type="translate" begin="txt1.end+0.5s" dur="8s" repeatCount="1" values="0 0;500 0;500 0;1000 0"/>
+  <animateTransform id="txt2" attributeName="transform" type="translate" begin="txt1.end+0.5s" dur="8s" repeatCount="1" values="0 0;500 0;500 0;1000 0"/>
 </g>
 
 

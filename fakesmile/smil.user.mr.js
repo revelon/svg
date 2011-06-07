@@ -138,7 +138,9 @@ function runner(anim) {
   var id = anim.getAttribute("id");
   if (id)
     id2anim[id] = anim;
-  alert(animators);
+  //alert(animators);
+  for (var i=0; i<elAnimators.length; i++)
+    elAnimators[i].register();
 }
 
 
@@ -244,12 +246,15 @@ Animator.prototype = {
         }
         var event = time.substring(io+1);
         var call = funk(func, me, offset);
-        if (!elements) alert(elements + " * " + this.target + " * " + id); // elements == null is case when there is named animation event which is not defined at all!!!
-        for(var j=0; j<elements.length;j++) {
-          var element = elements[j];
-          if(element==null)
-            continue;
-          element.addEventListener(event, call, false);
+        if (!elements) {
+          //alert(elements + " * " + this.target + " * " + id); // elements == null is case when there is named animation event which is not defined at all!!!
+        } else { // another MR hack
+          for(var j=0; j<elements.length;j++) {
+            var element = elements[j];
+            if(element==null)
+              continue;
+            element.addEventListener(event, call, false);
+          }
         }
       } else {
         if (time[0] == "-") time = time.substring(1); // hack by marek raida to allow even negatively scheduled animations to start, although much later
