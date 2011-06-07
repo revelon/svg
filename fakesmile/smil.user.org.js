@@ -1428,7 +1428,6 @@ Date.prototype.setISO8601 = function (string) {
   this.setTime(Number(time));
 }
 
-try { // marek raida's conditional loading
-  var test = document.createElementNS(svgns, "animateTransform");
-  if (!test.beginElement) window.addEventListener("load", initSMIL, false);
+try {
+  window.addEventListener("load", initSMIL, false);
 } catch(exc) {}
