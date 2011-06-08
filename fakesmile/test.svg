@@ -11,7 +11,7 @@
 <stop stop-color="#00196e" offset="1"/>
 </radialGradient>
 
-<g>
+<g id="abcd">
   <rect x="-750" y="-600" width="500" height="100" fill="lightgray" stroke="none"/>
   <text x="-500" y="-535" class="ttx2" text-anchor="middle">The Most Wonderful</text>
   <animateTransform id="txt1" attributeName="transform" type="translate" begin="0s;txt2.end+1s" dur="8s" repeatCount="1" values="0 0;500 0;500 0;1000 0"/>
@@ -42,23 +42,37 @@
 </g>
 
 <ellipse fill="green" rx="100" ry="200" id="testik"/>
+<ellipse fill="red" rx="15" ry="30" cy="-100" id="testik2">
+  <animate id="usertest" attributeName="opacity" dur="2s" repeatCount="indefinite" begin="indefinite" values="1;0;1" attributeType="XML"/>
+</ellipse>
+
+<g transform="translate(100 100)" id="place"/>
 
 <script>
 var svgns = "http://www.w3.org/2000/svg";
 
 function ha() {
-  //alert('ha');
   var a = document.createElementNS(svgns, "animateTransform");
   a.setAttribute("attributeName", "transform");
   a.setAttribute("type", "rotate");
   a.setAttribute("dur", 2);
   a.setAttribute("from", 0);
   a.setAttribute("to", 180);
-  a.setAttribute("begin", "2s");
+  a.setAttribute("begin", 1);
   a.setAttribute("repeatCount", 1);
   document.getElementById("testik").appendChild(a);
-  runner(a);
+  var ani = document.getElementById("abcd").cloneNode(true)
+  document.getElementById("place").appendChild(ani);
+  addDynamicFragment(ani);
+  addDynamicAnimation(a);
+  
+  if (document.getElementById("usertest")) 
+    document.getElementById("usertest").beginElement();
+  else if (id2anim["usertest"]) 
+    id2anim["usertest"].beginElement();
+  
 }
+
 setTimeout("ha()", 500);
 
 </script>

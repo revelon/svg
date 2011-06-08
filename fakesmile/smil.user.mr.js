@@ -124,7 +124,15 @@ function smile(animating) {
 }
 
 // mr's attempt for dynamic smiling
-function runner(anim) {
+function addDynamicFragment(fragment) {
+  var animates = fragment.getElementsByTagName("*");
+  for(var j=0; j<animates.length ;j++) {
+    var nodeName = animates[j].nodeName;
+    if (nodeName=="set" || nodeName=="animate" || nodeName=="animateColor" || nodeName=="animateMotion" || nodeName=="animateTransform") addDynamicAnimation(animates[j]);
+  }
+}
+
+function addDynamicAnimation(anim) {
   // registering animation and its target(s) ***********************************************************
   var targets = getTargets(anim);
   var elAnimators = new Array();
@@ -138,7 +146,6 @@ function runner(anim) {
   var id = anim.getAttribute("id");
   if (id)
     id2anim[id] = anim;
-  //alert(animators);
   for (var i=0; i<elAnimators.length; i++)
     elAnimators[i].register();
 }
