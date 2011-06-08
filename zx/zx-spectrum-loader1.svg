@@ -1,7 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events" width="340" height="256">
-  <title>ZX Spectrum Loader 1.0</title>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events" width="340" height="256" xmlns:html="http://www.w3.org/1999/xhtml">
+  <title>ZX Spectrum Loader 1.01</title>
   <desc>by Marek Raida, marek.raida@gmail.com</desc>
-  <script type="text/javascript" src="soundmanager.js"></script>
+
+  <html:audio id="zxrealload2" preload="true">
+    <html:source src="zxrealload2.ogg" type="audio/ogg"/>
+    <html:source src="zxrealload2.mp3" type="audio/mpeg"/>
+  </html:audio>
 
   <defs>
     <g id="searchX">
@@ -231,8 +235,7 @@ function changeScr() {
   ttl.firstChild.data = "Program: " + prog.substring(0, (prog.length-4));
   tts.setAttributeNS("http://www.w3.org/1999/xlink", "href", "zx-screens/" + prog);
   document.getElementById("veryFirst").beginElement();
-  top.soundManager.play("zxload", 1, 1);
-  //top.soundWrap("zxload");
+  document.getElementById("zxrealload2").play();
   window.setTimeout("changeScr()", 6500);
 }
 window.setTimeout("changeScr()", 3000);

@@ -799,7 +799,7 @@ element as well; so workaround to trigger them add one and it will start working
 <p>Although there is no official buzz around Gecko SMIL/SVG improvements, gus at Mozilla are not sleeping and working hard. 
 I assume this from the fact that recent Gecko version is able to correctly render and animate many demos failing in the past. For example:</p>
 <ul>
-  <li><a href="zx/loader.htm">ZX Spectrum loader (Gecko was crashing on animated re-used elements)</a></li>
+  <li><a href="zx/c:\srv\git\svg\zx\zx-spectrum-loader1.svg">ZX Spectrum loader (Gecko was crashing on animated re-used elements)</a></li>
   <li><a href="adobe/3_anim_filter.svg">Adobe Animated Filters (Gecko was not animating at all)</a></li>
   <li><a href="adobe/Melting.svg">Adobe Melting Filter Effect (Gecko was not animating at all)</a></li>
 </ul>
@@ -1269,7 +1269,7 @@ Runs well in Opera 9+, Chrome 3+/Safari 4+, ASV and Firefox (it works good and w
 <h2><a href="zx/imggallery2.svg">SVG Image Gallery Firefox Update</a></h2>
 <div class="date">2009-10-19 | svg</div>
 <p>Firefox has been patched and supports now floating values for SMIL animations. So, as a results,
-now works properly <a href="adobe/wonder.svg">old <em>wonder</em> Adobe SVG demo</a> and I prepared also different version of my <a href="zx/imggallery2.svg">SVG Image Gallery</a>
+now works properly <a href="adobe/wonder.svg">old <em>wonder</em> Adobe SVG demo</a> <strike  and I prepared also different version of my <a href="zx/imggallery2.svg">SVG Image Gallery</a>
 (and yes, also the <a href="zx/plainimggall2.svg">simplified static version</a>).<br/>
 Because Firefox does not support &lt;set&gt; yet I used &lt;animate&gt; with calcMode="discrete" instead, to do the trick 
 of semi-transparency, which Gecko has been not supporting previously!)<br/>
@@ -1279,35 +1279,35 @@ crash reports already)</del> - <strong>Patched - thx Daniel! ;-)</strong><br/>
 Updated code runs great in Opera 9+, ASV and <a href="ftp://ftp.mozilla.org/pub/firefox/nightly/latest-trunk/">Firefox 3.7+</a> with SMIL turned on (about:config => svg.smil.enabled = true); 
 in Chrome 3+/Safari 4+ dynamic insertion (via JavaScript) of SMIL events does not work and it is known bug, 
 so I'm not able to fix it in no way...<br/>
-<strong>Update 2009-10-19, one hour later:</strong> I discovered that if SMIL animation finishes before removing from DOM, we're able to avoid the problem ;-) , but it's <a href="zx/imggallery2o.svg">still there :-(</a>...
+<strong>Update 2009-10-19, one hour later:</strong> I discovered that if SMIL animation finishes before removing from DOM, we're able to avoid the problem ;-) , but it's <a href="zx/imggallery2.svg">still there :-(</a>...
 </p>
 
-<h2><a href="zx/imggallery.svg">SVG Image Gallery (ZX Nostalgy Vol. II)</a></h2>
+<h2><a href="zx/imggallery2.svg">SVG Image Gallery (ZX Nostalgy Vol. II)</a></h2>
 <div class="date">2009-10-15 | svg</div>
 <p>So, I worked a bit on my next idea - <em>animated SVG image gallery</em> - and there comes my first attempt. It is far from complete state, but working already.
 I used again ZX Spectrum screenshots as presentable images (<a href="zx/zxgallery2.htm">static gallery</a> of 256! nice speccy titles), 
-but they could be easily reconfigured to something else. Goal is to prepare easily installable and configurable image <a href="zx/imggallery.svg">gallery script</a>.<br/>
+but they could be easily reconfigured to something else. Goal is to prepare easily installable and configurable image <a href="zx/imggallery2.svg">gallery script</a>.<br/>
 It uses SMIL and scripting altogether and works great in most of browsers, except of Webkit, but it is just a matter of time to find out what's wrong (I hope).<br/>
 It runs great in Opera 9+ and ASV. <a href="ftp://ftp.mozilla.org/pub/firefox/nightly/latest-trunk/">Firefox 3.6a-b2, 3.7+</a> with SMIL turned on (about:config => svg.smil.enabled = true) 
 runs fine, but without semi-transparencies during flipping image; Chrome 3+/Safari 4+ seems to be not working on dynamic creation of SMIL animations... :-(<br/>
-However, there is <a href="zx/plainimggall.svg">compatible, more simple version of gallery</a>, working in Chrome/Safari as well! ;-)<br/>
+However, there is <a href="zx/plainimggall2.svg">compatible, more simple version of gallery</a>, working in Chrome/Safari as well! ;-)<br/>
 <em>Animated GIFs with blink effects were converted to static images to avoid problems in Opera etc., so Bruce Lee and Batman are back!</em></p>
 
-<h2><a href="zx/loader.htm">ZX Spectrum SVG Loader 1.0 (with sound)</a></h2>
+<h2><a href="zx/zx-spectrum-loader1.svg">ZX Spectrum SVG Loader 1.0 (with sound)</a></h2>
 <div class="date">2009-10-11 | svg</div>
 <p>Not satisfied with synchronization issues and really really missing sound support, there is final version of my ZX Loader.<br/>
 Using good old sound manager (SWF based, for achieving cross browser functionality), and thus also HTML/iframe encapsulation is must.
 Also synchronization problems were solved; not relying anymore on SMIL &amp; JS sync, animations are chunked and every chunk is
-started from <a href="zx/loader.htm">script always</a> (so SMIL and JS are both still in use, but keeping sync via scripting.)<br/>
+started from <a href="zx/zx-spectrum-loader1.svg">script always</a> (so SMIL and JS are both still in use, but keeping sync via scripting.)<br/>
 Also random screenshot picking mechanism had been changed to array shuffle, to achieve better order experience. ;-)<br/>
 <em>Please, be patient for animation to start for the first time...</em><br/>
 No changes to compatibility - it still runs great in Opera 9+, Chrome 3+/Safari 4+ and ASV but not Firefox.</p>
 
 
-<h2><a href="zx/zx-spectrum-loader.svg">ZX Spectrum SVG Loader 0.75</a></h2>
+<h2><a href="zx/zx-spectrum-loader1.svg">ZX Spectrum SVG Loader 0.75</a></h2>
 <div class="date">2009-10-07 | svg</div>
 <p>Keeping another of my promises, here comes ZX Spectrum Loader demo. It contains more than <em>one hundred</em> randomly loaded 
-title screens from the most famous Speccy games. SVG and SMIL is in use for for creating loading border stripes and I hope final effect is very close to the <a href="zx/zx-spectrum-loader.svg">real ZX loading effect</a> 
+title screens from the most famous Speccy games. SVG and SMIL is in use for for creating loading border stripes and I hope final effect is very close to the <a href="zx/zx-spectrum-loader1.svg">real ZX loading effect</a> 
 (you can compare it to for example <a href="http://www.youtube.com/watch?v=pYryKa3CQTE">this video</a> ;-)<br/>
 It runs great in Opera 9+, Chrome 3+/Safari 4+ and of course ASV. <em>Sadly, no Firefox this time, it freezes hopelessly on used animations and do not support's SMIL event starts</em>... :-(<br/>
 SMIL timed events and JS timed events are <em>not synchronized</em> and after some time you'll be able to notice it, but never mind... it's juts short demo! ;-)<br/>
