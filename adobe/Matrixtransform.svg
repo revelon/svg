@@ -20,7 +20,7 @@ var uis = new Array();
 
 function getUIObj( evt )
 {
-	var id = evt.target.parentNode.getAttribute( "id" ) + "";
+	var id = (evt.target.correspondingUseElement) ? evt.target.correspondingUseElement.parentNode.getAttribute( "id" ) + "" : evt.target.parentNode.getAttribute( "id" ) + "";
 	return uis[id.substr(2)-0];
 }
 
@@ -70,13 +70,13 @@ function makeMatrix()
 
 function activate(evt)
 {
-	evt.target.setAttribute( 'style', 'opacity:1' );
+	(evt.target.correspondingUseElement) ? evt.target.correspondingUseElement.setAttribute( 'style', 'opacity:1' ) : evt.target.setAttribute( 'style', 'opacity:1' );
 	currTransformText.data = "" + getUIObj(evt).transform;
 }
 
 function deactivate(evt)
 {
-	evt.target.setAttribute( 'style', 'opacity:0.4' );
+	(evt.target.correspondingUseElement) ? evt.target.correspondingUseElement.setAttribute( 'style', 'opacity:0.4' ) : evt.target.setAttribute( 'style', 'opacity:0.4' );
 	currTransformText.data = "" + totalTransform;
 	window.clearInterval(timerID);
 }
@@ -86,7 +86,7 @@ function onpress(evt)
 	var uiObj = getUIObj(evt);
 	uiObj.value = uiObj.mul ? 1 : 0;
 	updateTransform( uiObj );
-	var xlink = "" + evt.target.getAttribute( "xlink:href" );
+	var xlink = (evt.target.correspondingUseElement) ? "" + evt.target.correspondingUseElement.getAttribute( "xlink:href" ) : "" + evt.target.getAttribute( "xlink:href" );
 	timerID = window.setInterval( "window.incrementTransform(" + uiObj.index + "," + (xlink == "#plus") + ")", 50 ); 
 }
 
