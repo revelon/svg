@@ -8,6 +8,9 @@ Modified by  Marek Raida
 <script type="text/javascript" xlink:href="Matrix.js"/>
 <script type="text/javascript"><![CDATA[
 
+var svgns = "http://www.w3.org/2000/svg";
+var xlinkns = "http://www.w3.org/1999/xlink";
+
 var doc;
 var object;
 var currTransformText;
@@ -86,7 +89,7 @@ function onpress(evt)
 	var uiObj = getUIObj(evt);
 	uiObj.value = uiObj.mul ? 1 : 0;
 	updateTransform( uiObj );
-	var xlink = (evt.target.correspondingUseElement) ? "" + evt.target.correspondingUseElement.getAttribute( "xlink:href" ) : "" + evt.target.getAttribute( "xlink:href" );
+	var xlink = (evt.target.correspondingUseElement) ? "" + evt.target.correspondingUseElement.getAttributeNS( xlinkns, "href" ) : "" + evt.target.getAttributeNS( xlinkns, "href" );
 	timerID = window.setInterval( "window.incrementTransform(" + uiObj.index + "," + (xlink == "#plus") + ")", 50 ); 
 }
 
