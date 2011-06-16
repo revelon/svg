@@ -659,7 +659,8 @@ function Fighter () { // constructor
   this.forceShield = document.getElementById("forceShieldDom");
   this.timer = null; // general timer for movement
   this.timerColl = null; // general timer for collisions
-  this.BB = this.fighter.getBBox(); // store it for better performance
+  var tmpBB = this.fighter.getBBox();
+  this.BB = {x: tmpBB.x, y: tmpBB.y, width: tmpBB.width, height: tmpBB.height}; // store it for better performance
   this.states = {normal:"normal", crash:"crash", forward:"forward", backward:"backward"};
   this.state = "normal";
   this.missile = null; // missile element
