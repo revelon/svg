@@ -128,7 +128,9 @@ function addDynamicFragment(fragment) {
   var animates = fragment.getElementsByTagName("*");
   for(var j=0; j<animates.length ;j++) {
     var nodeName = animates[j].nodeName;
-    if (nodeName=="set" || nodeName=="animate" || nodeName=="animateColor" || nodeName=="animateMotion" || nodeName=="animateTransform") addDynamicAnimation(animates[j]);
+    if (nodeName=="set" || nodeName=="animate" || nodeName=="animateColor" || nodeName=="animateMotion" || nodeName=="animateTransform") {
+      addDynamicAnimation(animates[j]);
+    }
   }
 }
 
@@ -149,6 +151,29 @@ function addDynamicAnimation(anim) {
   for (var i=0; i<elAnimators.length; i++)
     elAnimators[i].register();
 }
+
+function removeDynamicFragment(fragment) {
+  var animates = fragment.getElementsByTagName("*");
+  for(var j=0; j<animates.length ;j++) {
+    var nodeName = animates[j].nodeName;
+    if (nodeName=="set" || nodeName=="animate" || nodeName=="animateColor" || nodeName=="animateMotion" || nodeName=="animateTransform") {
+      removeDynamicAnimation(animates[j]);
+    }
+  }
+}
+
+function removeDynamicAnimation(anim) {
+  var id = anim.getAttribute("id");
+  if (id)
+    delete id2anim[id];
+  for (var i=0; i<animators.length; i++) {
+    if (animators[i].anim == anim) {
+      animators[i].stop();
+      animators.splice(i, 1);
+    }
+  }
+}
+
 
 
 // method for returning animation target(s)

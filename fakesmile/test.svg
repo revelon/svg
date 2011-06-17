@@ -59,7 +59,7 @@ function ha() {
   a.setAttribute("from", 0);
   a.setAttribute("to", 180);
   a.setAttribute("begin", 1);
-  a.setAttribute("repeatCount", 1);
+  a.setAttribute("repeatCount", "indefinite");
   document.getElementById("testik").appendChild(a);
   var ani = document.getElementById("abcd").cloneNode(true)
   document.getElementById("place").appendChild(ani);
@@ -71,9 +71,14 @@ function ha() {
   else if (id2anim["usertest"]) 
     id2anim["usertest"].beginElement();
   
+  setTimeout(function(){
+                removeDynamicFragment(ani);
+                ani.parentNode.removeChild(ani);
+                removeDynamicAnimation(a);
+                        }, 3000);
 }
 
-setTimeout("ha()", 500);
+setTimeout("ha()", 1000);
 
 </script>
 
