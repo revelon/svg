@@ -101,6 +101,30 @@
         document.documentElement.addEventListener("keydown", pressKey, false);
         // generate letters
         abeceda();
+/*
+        document.getElementById('gun_fire').beginElement = function() {this.play()};
+        document.getElementById('gun_reload').beginElement = function() {this.play()};
+        document.getElementById('gun_fire_enemy').beginElement = function() {this.play()};
+        document.getElementById('gunIsEmpty').beginElement = function() {this.play()};
+        document.getElementById('ugh1').beginElement = function() {this.play()};
+        document.getElementById('ugh2').beginElement = function() {this.play()};
+        document.getElementById('ugh3').beginElement = function() {this.play()};
+        document.getElementById('ugh4').beginElement = function() {this.play()};
+        document.getElementById('ugh5').beginElement = function() {this.play()};
+        document.getElementById('babkaugh').beginElement = function() {this.play()};
+        document.getElementById('innough').beginElement = function() {this.play()};
+        document.getElementById('haha').beginElement = function() {this.play()};
+        document.getElementById('creak').beginElement = function() {this.play()};
+        document.getElementById('catandbird').beginElement = function() {this.play()};
+        document.getElementById('endSong').beginElement = function() {this.play()};
+        document.getElementById('music').beginElement = function() {this.play()};
+        document.getElementById('colt1').beginElement = function() {this.play()};
+        document.getElementById('colt2').beginElement = function() {this.play()};
+        document.getElementById('colt3').beginElement = function() {this.play()};
+        document.getElementById('colt4').beginElement = function() {this.play()};
+        document.getElementById('colt5').beginElement = function() {this.play()};
+        document.getElementById('colt6').beginElement = function() {this.play()};
+*/
     }
 
     // first initialization
@@ -289,7 +313,8 @@
             if (quality)
                 document.getElementById("rotateMagazine").beginElement();
             // fire's sound
-            //document.getElementById('gun_fire').beginElement();
+            document.getElementById('gunShot').beginElement();
+            document.getElementById('gun_fire').play();
             bullets--;
             //alert (bandits.length + " : " + bandits.toString());
 
@@ -323,6 +348,7 @@
             } else {
                 // nothing
                 document.getElementById('emptyGun').beginElement();
+                document.getElementById('gunIsEmpty').play();
             }
         }
     }
@@ -346,10 +372,10 @@
             document.getElementById('ammo'+i).setAttributeNS(null, "opacity", 1);
         if (quality){
             document.getElementById('reload').beginElement();
-            //document.getElementById('gun_reload').beginElement();
+            document.getElementById('gun_reload').play();
             document.getElementById("reloadMagazine").beginElement();
         } else {
-            document.getElementById('gun_reload').beginElement();
+            document.getElementById('gun_reload').play();
         }
     }
 
@@ -524,7 +550,7 @@
 
         // play SFX, if available
         if (tmpDefs[this.type]['appear']['audio']) {
-            //document.getElementById(tmpDefs[this.type]['appear']['audio']).beginElement();
+            document.getElementById(tmpDefs[this.type]['appear']['audio']).play();
         }
         return ani;
     }
@@ -564,7 +590,7 @@
         //alert(printNode(ani));
         // play SFX, if available
         if (tmpDefs[this.type]['die']['audio']) {
-            //document.getElementById(tmpDefs[this.type]['die']['audio']).beginElement();
+            document.getElementById(tmpDefs[this.type]['die']['audio']).play();
         }
         // apply dying procedure
         this.currAnim = ani;
@@ -609,12 +635,13 @@
     
                     // show blood
                     document.getElementById('hit').beginElement();
+                    document.getElementById('ugh1').play();
                     // decrement health
                     health -= 10;
                     healthMask.setAttributeNS(null, "x", healthMask.getAttribute("x")-10);
     
                     if (tmpDefs[bandits[i].type]['fire']['audio']) {
-                        //document.getElementById(tmpDefs[bandits[i].type]['fire']['audio']).beginElement();
+                        document.getElementById(tmpDefs[bandits[i].type]['fire']['audio']).play();
                     }
                     // and call the firing again
                     bandits[i].countDown = setTimeout("doFire('"+id+"')", tmpDefs[bandits[i].type]['appear']['dur']+tmpDefs[bandits[i].type]['fire']['timeOffset']);
@@ -798,12 +825,12 @@
         music = (music) ? false : true;
 
         if (music){
-            document.getElementById("music").beginElement();
+            document.getElementById("music").play();
 
             document.getElementById("q_MUSIC_BACK").setAttributeNS(null, "fill", "navy");
             document.getElementById("q_MUSIC_SKRT").setAttributeNS(null, "visibility", "hidden");
         } else {
-            document.getElementById("music").endElement();
+            document.getElementById("music").stop();
 
             document.getElementById("q_MUSIC_BACK").setAttributeNS(null, "fill", "#bb00bb");
             document.getElementById("q_MUSIC_SKRT").setAttributeNS(null, "visibility", "visible");
@@ -913,15 +940,15 @@
             // solve what to do
             if(letter.length==1){
                 playerName += letter;
-                document.getElementById("gun_fire").beginElement();
+                document.getElementById("gun_fire").play();
             } else {
                 if (abcConv[letter]['do']){
                     playerName += abcConv[letter]['do'];
-                    document.getElementById("gun_fire").beginElement();
+                    document.getElementById("gun_fire").play();
                 } else {
                     if (letter=='delete' && playerName){
                         playerName = playerName.substring(0, playerName.length-1);
-                        document.getElementById("gun_fire").beginElement();
+                        document.getElementById("gun_fire").play();
                     }
                     if (letter=='enter' && playerName)
                         showScoreList(true);
@@ -931,7 +958,7 @@
         } else {
             if (letter=='delete'){
                 playerName = playerName.substring(0, playerName.length-1);
-                document.getElementById("gun_fire").beginElement();
+                document.getElementById("gun_fire").play();
             }
             if (letter=='enter' && playerName)
                 showScoreList(true);
@@ -1001,7 +1028,7 @@
         document.getElementById("hideHighScoreScreen").beginElement();
         document.getElementById("showStartScreen").beginElement();
         if (music)
-            document.getElementById("music").beginElement();
+            document.getElementById("music").play();
     }
 
 

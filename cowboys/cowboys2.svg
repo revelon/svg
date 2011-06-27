@@ -620,40 +620,87 @@
 /* ***************************  SOUNDS START  ****************************** */
 /* ************************************************************************* */
 
-<html:audio id="gun_reloadx" begin="reload.begin;indefinite" volume="1.0" xlink:href="sounds/reload.wav"/>
+<html:audio id="gun_reload" begin="reload.begin;indefinite" volume="1.0" xlink:href="sounds/reload.wav">
+  <html:source src="sounds/reload.ogg" type="audio/ogg"/>
+  <html:source src="sounds/reload.mp3" type="audio/mpeg"/>
+</html:audio>
 <g>
-  <set id="gun_reload" attributeName="visibility" to="visible" begin="indefinite"/>
+  <set id="gun_reloadx" attributeName="visibility" to="visible" begin="indefinite"/>
 </g>
-<html:audio id="gun_firex" begin="indefinite" volume="0.8" xlink:href="sounds/colt.wav"/>
+<html:audio id="gun_fire" begin="indefinite" volume="0.8" xlink:href="sounds/colt.wav">
+  <html:source src="sounds/colt.ogg" type="audio/ogg"/>
+  <html:source src="sounds/colt.mp3" type="audio/mpeg"/>
+</html:audio>
 <g>
-  <set id="gun_fire" attributeName="visibility" to="visible" begin="indefinite"/>
+  <set id="gun_firex" attributeName="visibility" to="visible" begin="indefinite"/>
 </g>
-<html:audio id="gun_fire_enemy" begin="indefinite" volume="0.75" xlink:href="sounds/coltb.wav"/>
-<html:audio id="gunIsEmpty" begin="emptyGun.begin" volume="1.0" xlink:href="sounds/empty.wav"/>
+<html:audio id="gun_fire_enemy" begin="indefinite" volume="0.75" xlink:href="sounds/coltb.wav">
+  <html:source src="sounds/coltb.ogg" type="audio/ogg"/>
+  <html:source src="sounds/coltb.mp3" type="audio/mpeg"/>
+</html:audio>
+<html:audio id="gunIsEmpty" begin="emptyGun.begin;indefinite" volume="1.0" xlink:href="sounds/empty.wav">
+  <html:source src="sounds/empty.ogg" type="audio/ogg"/>
+  <html:source src="sounds/empty.mp3" type="audio/mpeg"/>
+</html:audio>
 
-<html:audio id="ugh1" begin="hit.begin;indefinite" volume="1.0" xlink:href="sounds/ugh1.wav"/>
+<html:audio id="ugh1" begin="hit.begin;indefinite" volume="1.0" xlink:href="sounds/ugh1.wav">
+  <html:source src="sounds/ugh1.ogg" type="audio/ogg"/>
+  <html:source src="sounds/ugh1.mp3" type="audio/mpeg"/>
+</html:audio>
 
-<html:audio id="ugh2" begin="indefinite" volume="1.0" xlink:href="sounds/ugh2.wav"/>
-<html:audio id="ugh3" begin="indefinite" volume="1.0" xlink:href="sounds/ugh3.wav"/>
-<html:audio id="ugh4" begin="indefinite" volume="1.0" xlink:href="sounds/ugh4.wav"/>
-<html:audio id="ugh5" begin="indefinite" volume="1.0" xlink:href="sounds/innough.wav"/>
+<html:audio id="ugh2" begin="indefinite" volume="1.0" xlink:href="sounds/ugh2.wav">
+  <html:source src="sounds/ugh2.ogg" type="audio/ogg"/>
+  <html:source src="sounds/ugh2.mp3" type="audio/mpeg"/>
+</html:audio>
+<html:audio id="ugh3" begin="indefinite" volume="1.0" xlink:href="sounds/ugh3.wav">
+  <html:source src="sounds/ugh3.ogg" type="audio/ogg"/>
+  <html:source src="sounds/ugh3.mp3" type="audio/mpeg"/>
+</html:audio>
+<html:audio id="ugh4" begin="indefinite" volume="1.0" xlink:href="sounds/ugh4.wav">
+  <html:source src="sounds/ugh4.ogg" type="audio/ogg"/>
+  <html:source src="sounds/ugh4.mp3" type="audio/mpeg"/>
+</html:audio>
+<html:audio id="ugh5" begin="indefinite" volume="1.0" xlink:href="sounds/ugh4.wav">
+  <html:source src="sounds/ugh4.ogg" type="audio/ogg"/>
+  <html:source src="sounds/ugh4.mp3" type="audio/mpeg"/>
+</html:audio>
 
-<html:audio id="ugh5" begin="indefinite" volume="1.0" xlink:href="sounds/ugh4.wav"/>
-<html:audio id="babkaugh" begin="indefinite;babkaKilled.begin+0.3s" volume="1.0" xlink:href="sounds/babka01.wav"/>
-<html:audio id="innough" begin="indefinite" volume="1.0" xlink:href="sounds/wow.wav"/>
+<html:audio id="babkaugh" begin="indefinite;babkaKilled.begin+0.3s" volume="1.0" xlink:href="sounds/babka01.wav">
+  <html:source src="sounds/babka01.ogg" type="audio/ogg"/>
+  <html:source src="sounds/babka01.mp3" type="audio/mpeg"/>
+</html:audio>
+<html:audio id="innough" begin="indefinite" volume="1.0" xlink:href="sounds/wow.wav">
+  <html:source src="sounds/wow.ogg" type="audio/ogg"/>
+  <html:source src="sounds/wow.mp3" type="audio/mpeg"/>
+</html:audio>
 
-<html:audio id="haha" begin="indefinite" volume="0.8" xlink:href="sounds/haha.wav"/>
-<html:audio id="creak" begin="displayHelp.click;onlyView.click;indefinite" volume="1.0" xlink:href="sounds/creak.wav"/>
+<html:audio id="haha" begin="indefinite" volume="0.8" xlink:href="sounds/haha.wav">
+  <html:source src="sounds/haha.ogg" type="audio/ogg"/>
+  <html:source src="sounds/haha.mp3" type="audio/mpeg"/>
+</html:audio>
+<html:audio id="creak" begin="displayHelp.click;onlyView.click;indefinite" volume="1.0" xlink:href="sounds/creak.wav">
+  <html:source src="sounds/creak.ogg" type="audio/ogg"/>
+  <html:source src="sounds/creak.mp3" type="audio/mpeg"/>
+</html:audio>
 
-<html:audio volume="1.0" xlink:href="sounds/catbird.wav" begin="sup1Killed.begin+0.3s;sup2Killed.begin+0.3s;kotKilled.begin+0.3s;"/>
+<html:audio id="catandbird" volume="1.0" xlink:href="sounds/catbird.wav" begin="sup1Killed.begin+0.3s;sup2Killed.begin+0.3s;kotKilled.begin+0.3s;">
+  <html:source src="sounds/catbird.ogg" type="audio/ogg"/>
+  <html:source src="sounds/catbird.mp3" type="audio/mpeg"/>
+</html:audio>
 
-<html:audio xlink:href="sounds/end.mp3" repeatCount="1" begin="showDeathScreen.begin+0.7s"/>
+<html:audio id="endSong" xlink:href="sounds/end.mp3" repeatCount="1" begin="showDeathScreen.begin+0.7s">
+  <html:source src="sounds/end.ogg" type="audio/ogg"/>
+  <html:source src="sounds/end.mp3" type="audio/mpeg"/>
+</html:audio>
 
 <!-- music, with some hacking of loading from beginning -->
 <!--a:audio xlink:href="sounds/picking3.mp3" repeatCount="indefinite" id="music" begin="0.44s;0.51s;showStartScreen.begin+0.4s" end="0.5;showDeathScreen.begin"/-->
-<html:audio id="musicx" xlink:href="sounds/picking3.mp3" repeatCount="indefinite" begin="0.44s;0.53s;indefinite" end="0.5;showDeathScreen.begin;indefinite"/>
+<html:audio id="music" xlink:href="sounds/picking3.mp3" repeatCount="indefinite" begin="0.44s;0.53s;indefinite" end="0.5;showDeathScreen.begin;indefinite">
+  <html:source src="sounds/picking3.ogg" type="audio/ogg"/>
+  <html:source src="sounds/picking3.mp3" type="audio/mpeg"/>
+</html:audio>
 <g>
-  <set id="music" attributeName="visibility" to="visible" begin="indefinite"/>
+  <set id="musicx" attributeName="visibility" to="visible" begin="indefinite"/>
 </g>
 
 /* ************************************************************************* */
@@ -704,7 +751,9 @@ fill="none" stroke="#ffffff" stroke-width="0.3px"/-->
         <g visibility="hidden" transform="scale(0.7)">
             <use x="70" y="-20" xlink:href="#bulhole">
                 <set id="bulshot1" attributeName="visibility" to="visible" begin="hutFly.begin+1.5"/>
-                <html:audio volume="0.5" xlink:href="sounds/colt.wav" begin="hutFly.begin+1.5" end="hideStartScreen.begin">
+                <html:audio id="colt1" volume="0.5" xlink:href="sounds/colt.wav" begin="hutFly.begin+1.5" end="hideStartScreen.begin">
+                    <html:source src="sounds/colt.ogg" type="audio/ogg"/>
+                    <html:source src="sounds/colt.mp3" type="audio/mpeg"/>
                     <html:set attributeName="volume" to="0" begin="hideStartScreen.begin"/>
                     <html:set attributeName="volume" to="0.5" begin="showStartScreen.begin"/>
                 </html:audio>
@@ -712,7 +761,9 @@ fill="none" stroke="#ffffff" stroke-width="0.3px"/-->
             </use>
             <use x="170" y="-20" xlink:href="#bulhole">
                 <set attributeName="visibility" to="visible" begin="bulshot1.begin+1.5s"/>
-                <html:audio volume="0.5" xlink:href="sounds/colt.wav" begin="bulshot1.begin+1.5s" end="hideStartScreen.begin">
+                <html:audio id="colt2" volume="0.5" xlink:href="sounds/colt.wav" begin="bulshot1.begin+1.5s" end="hideStartScreen.begin">
+                    <html:source src="sounds/colt.ogg" type="audio/ogg"/>
+                    <html:source src="sounds/colt.mp3" type="audio/mpeg"/>
                     <html:set attributeName="volume" to="0" begin="hideStartScreen.begin"/>
                     <html:set attributeName="volume" to="0.5" begin="showStartScreen.begin"/>
                 </html:audio>
@@ -720,7 +771,9 @@ fill="none" stroke="#ffffff" stroke-width="0.3px"/-->
             </use>
             <use x="200" y="60" xlink:href="#bulhole">
                 <set attributeName="visibility" to="visible" begin="bulshot1.begin+2.7s"/>
-                <html:audio volume="0.5" xlink:href="sounds/colt.wav" begin="bulshot1.begin+2.7s" end="hideStartScreen.begin">
+                <html:audio id="colt3" volume="0.5" xlink:href="sounds/colt.wav" begin="bulshot1.begin+2.7s" end="hideStartScreen.begin">
+                    <html:source src="sounds/colt.ogg" type="audio/ogg"/>
+                    <html:source src="sounds/colt.mp3" type="audio/mpeg"/>
                     <html:set attributeName="volume" to="0" begin="hideStartScreen.begin"/>
                     <html:set attributeName="volume" to="0.5" begin="showStartScreen.begin"/>
                 </html:audio>
@@ -780,7 +833,9 @@ fill="none" stroke="#ffffff" stroke-width="0.3px"/-->
     <g visibility="hidden">
         <g>
             <use x="170" y="225" xlink:href="#bulhole"/>
-            <html:audio volume="0.5" xlink:href="sounds/colt.wav" begin="bulshot1b.begin" end="hideStartScreen.begin">
+            <html:audio id="colt4" volume="0.5" xlink:href="sounds/colt.wav" begin="bulshot1b.begin" end="hideStartScreen.begin">
+                <html:source src="sounds/colt.ogg" type="audio/ogg"/>
+                <html:source src="sounds/colt.mp3" type="audio/mpeg"/>
                 <html:set attributeName="volume" to="0" begin="hideStartScreen.begin"/>
                 <html:set attributeName="volume" to="0.5" begin="showStartScreen.begin"/>
             </html:audio>
@@ -791,7 +846,9 @@ fill="none" stroke="#ffffff" stroke-width="0.3px"/-->
 
         <g>
             <use x="360" y="120" xlink:href="#bulhole"/>
-            <html:audio volume="0.5" xlink:href="sounds/colt.wav" begin="bulshot1b.begin+0.5s" end="hideStartScreen.begin">
+            <html:audio id="colt5" volume="0.5" xlink:href="sounds/colt.wav" begin="bulshot1b.begin+0.5s" end="hideStartScreen.begin">
+                <html:source src="sounds/colt.ogg" type="audio/ogg"/>
+                <html:source src="sounds/colt.mp3" type="audio/mpeg"/>
                 <html:set attributeName="volume" to="0" begin="hideStartScreen.begin"/>
                 <html:set attributeName="volume" to="0.5" begin="showStartScreen.begin"/>
             </html:audio>
@@ -802,7 +859,9 @@ fill="none" stroke="#ffffff" stroke-width="0.3px"/-->
 
         <g>
             <use x="550" y="170" xlink:href="#bulhole"/>
-            <html:audio volume="0.5" xlink:href="sounds/colt.wav" begin="bulshot1b.begin+1s" end="hideStartScreen.begin">
+            <html:audio id="colt6" volume="0.5" xlink:href="sounds/colt.wav" begin="bulshot1b.begin+1s" end="hideStartScreen.begin">
+                <html:source src="sounds/colt.ogg" type="audio/ogg"/>
+                <html:source src="sounds/colt.mp3" type="audio/mpeg"/>
                 <html:set attributeName="volume" to="0" begin="hideStartScreen.begin"/>
                 <html:set attributeName="volume" to="0.5" begin="showStartScreen.begin"/>
             </html:audio>
