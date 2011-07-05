@@ -101,30 +101,17 @@
         document.documentElement.addEventListener("keydown", pressKey, false);
         // generate letters
         abeceda();
-/*
-        document.getElementById('gun_fire').beginElement = function() {this.play()};
-        document.getElementById('gun_reload').beginElement = function() {this.play()};
-        document.getElementById('gun_fire_enemy').beginElement = function() {this.play()};
-        document.getElementById('gunIsEmpty').beginElement = function() {this.play()};
-        document.getElementById('ugh1').beginElement = function() {this.play()};
-        document.getElementById('ugh2').beginElement = function() {this.play()};
-        document.getElementById('ugh3').beginElement = function() {this.play()};
-        document.getElementById('ugh4').beginElement = function() {this.play()};
-        document.getElementById('ugh5').beginElement = function() {this.play()};
-        document.getElementById('babkaugh').beginElement = function() {this.play()};
-        document.getElementById('innough').beginElement = function() {this.play()};
-        document.getElementById('haha').beginElement = function() {this.play()};
-        document.getElementById('creak').beginElement = function() {this.play()};
-        document.getElementById('catandbird').beginElement = function() {this.play()};
-        document.getElementById('endSong').beginElement = function() {this.play()};
-        document.getElementById('music').beginElement = function() {this.play()};
-        document.getElementById('colt1').beginElement = function() {this.play()};
-        document.getElementById('colt2').beginElement = function() {this.play()};
-        document.getElementById('colt3').beginElement = function() {this.play()};
-        document.getElementById('colt4').beginElement = function() {this.play()};
-        document.getElementById('colt5').beginElement = function() {this.play()};
-        document.getElementById('colt6').beginElement = function() {this.play()};
-*/
+        document.getElementById('music').play();
+        document.getElementById('gun_reload').play();
+
+        document.getElementById("bulshot1").addEventListener("beginEvent", function(){document.getElementById("colt1").play()}, false);
+        document.getElementById("bulshot12").addEventListener("beginEvent", function(){document.getElementById("colt2").play()}, false);
+        document.getElementById("bulshot13").addEventListener("beginEvent", function(){document.getElementById("colt3").play()}, false);
+
+        document.getElementById("bulshot1b").addEventListener("beginEvent", function(){document.getElementById("colt4").play()}, false);
+        document.getElementById("bulshot1b2").addEventListener("beginEvent", function(){document.getElementById("colt5").play()}, false);
+        document.getElementById("latestIntroEvent").addEventListener("beginEvent", function(){document.getElementById("colt6").play()}, false);
+
     }
 
     // first initialization
@@ -767,6 +754,8 @@
         document.getElementById("finalScore").firstChild.data = score;
 
         document.getElementById("showDeathScreen").beginElement();
+        document.getElementById('music').pause();
+        document.getElementById('endsong').play();
         // call for next action
         setTimeout("afterDeath()", 5000);
     }
@@ -830,7 +819,7 @@
             document.getElementById("q_MUSIC_BACK").setAttributeNS(null, "fill", "navy");
             document.getElementById("q_MUSIC_SKRT").setAttributeNS(null, "visibility", "hidden");
         } else {
-            document.getElementById("music").stop();
+            document.getElementById("music").pause();
 
             document.getElementById("q_MUSIC_BACK").setAttributeNS(null, "fill", "#bb00bb");
             document.getElementById("q_MUSIC_SKRT").setAttributeNS(null, "visibility", "visible");
@@ -1021,6 +1010,7 @@
         document.getElementById("hideDeathScreen").beginElement();
         document.getElementById("hideSignatureScreen").beginElement();
         document.getElementById("showHighScoreScreen").beginElement();
+        document.getElementById('creak').play()
     }
 
     // hide score list and get from beginning

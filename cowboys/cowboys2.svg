@@ -6,6 +6,7 @@
      onmouseup="DoMouseUp(evt)" 
      onmousemove="DoMouseMove(evt)" 
      onkeydown="pressKey(evt)"
+     font-family="Arial, sans-serif" 
      onload="ini(evt)">
     <title>Cowboys Game 2.02</title>
     <script type="text/ecmascript" xlink:href="scripts2.js"/>
@@ -258,9 +259,9 @@
 
     <g mask="url(#healthMaskX)">
         <rect id="q_HEALTH" x="592" y="7" width="100" height="15" fill="#198C00" rx="2" />
-        <text x="595" y="19" fill="white" font-stretch="ultra-expanded">Health</text>
+        <text x="595" y="19" fill="white" font-stretch="ultra-expanded" font-size="13px">Health</text>
     </g>
-    <text id="score" x="591" y="33" fill="black" font-stretch="ultra-expanded">Score: </text>
+    <text id="score" x="591" y="33" fill="black" font-stretch="ultra-expanded" font-size="13px">Score: </text>
 
     <circle cx="355" cy="110" r="50" fill="gold" stroke="none">
         <animate id="q_SUN" begin="indefinite" end="indefinite" attributeName="fill" values="orange;gold;orange" dur="10s" repeatCount="indefinite"/> 
@@ -317,7 +318,7 @@
     <!-- babka -->
     <polygon id="babkaAct" points="15,212 45,212 45,258 15,258" 
     fill="none" stroke="none" stroke-width="0.3px"/>
-    <g transform="scale(-0.45 0.45) translate(-550 260)">
+    <g transform="scale(-0.45 0.45) translate(-550 260)" onclick="document.getElementById('babkaough').play()">
         <image xlink:href="pics/babka.svg" x="400" y="100" width="150" height="300">
             <animateTransform id="q_BABKA" begin="indefinite" end="indefinite" attributeName="transform" type="rotate" values="-5 470 300;10 470 300;-5 470 300" dur="6s" repeatCount="indefinite" />
         </image>
@@ -328,7 +329,7 @@
     <g transform="translate(45 145)" display="none">
         <polygon points="10,45 0,80 30,45" fill="white" stroke="black" stroke-width="2"/>
         <rect x="10" y="15" width="77" height="50" fill="white" stroke="black" rx="10" stroke-width="2"/>
-        <text x="20" y="20" stroke="none" fill="black" font-size="10">
+        <text x="20" y="20" stroke="none" fill="black" font-size="10px">
             <tspan x="15" dy="12">Hey, dear boy.</tspan>
             <tspan x="15" dy="12">I'm too old...</tspan>
             <tspan x="15" dy="12" fill="red">Hit me, please!</tspan>
@@ -341,7 +342,7 @@
     <!-- kot -->
     <polygon id="kotAct" points="665,305 725,305 725,358 665,358" 
     fill="none" stroke="none" stroke-width="0.3px"/>
-    <g>
+    <g onclick="document.getElementById('catandbird').play()">
         <!-- cat's tail -->
         <g transform="translate(710,365) scale(0.3)" id="q_TAIL_FLY" display="none">
             <desc><!-- [oc] animation - frame #1 --></desc>
@@ -425,7 +426,7 @@
     <g transform="translate(672 220)" display="none">
         <polygon points="10,45 0,80 30,45" fill="white" stroke="black" stroke-width="2"/>
         <rect x="10" y="15" width="95" height="50" fill="white" stroke="black" rx="10" stroke-width="2"/>
-        <text x="20" y="20" stroke="none" fill="black" font-size="10">
+        <text x="20" y="20" stroke="none" fill="black" font-size="10px">
             <tspan x="15" dy="12">Miiaauu.. yesterday</tspan>
             <tspan x="15" dy="12" fill="red">I massacred your</tspan>
             <tspan x="15" dy="12">dog, stupid cowboy!</tspan>
@@ -438,7 +439,7 @@
     <!-- sup1 -->
     <polygon id="sup1Act" points="705,92 729,92 729,122 705,122" 
     fill="none" stroke="none" stroke-width="0.3px"/>
-    <g>
+    <g onclick="document.getElementById('catandbird').play()">
         <image x="668" y="79" width="100" height="60" xlink:href="pics/sup1.svg"/>
         <animateTransform id="sup1Killed" attributeName="transform" type="translate" by="0 150" begin="indefinite" dur="0.7s"/>
         <set attributeName="display" to="none" begin="sup1Killed.end"/>
@@ -447,7 +448,7 @@
     <g transform="translate(610 110)" display="none">
         <polygon transform="rotate(180) translate(-95 -83)" points="10,45 0,80 30,45" fill="white" stroke="black" stroke-width="2"/>
         <rect x="10" y="15" width="75" height="50" fill="white" stroke="black" rx="10" stroke-width="2"/>
-        <text x="20" y="20" stroke="none" fill="black" font-size="10">
+        <text x="20" y="20" stroke="none" fill="black" font-size="10px">
             <tspan x="15" dy="12">Kroaach! Ugh!</tspan>
             <tspan x="15" dy="12">I'm so ugly bird</tspan>
             <tspan x="15" dy="12" fill="red"> ! Disggusting !</tspan>
@@ -461,7 +462,7 @@
     <polygon id="sup2Act" points="474,46 495,46 495,60 474,60" 
     fill="none" stroke="none" stroke-width="0.3px"/>
 
-    <g>
+    <g onclick="document.getElementById('catandbird').play()">
         <g transform="translate(488,50) scale(0.08)" id="q_WINGS_FLY" display="none">
             <g transform="translate(-348,47)">
             <desc><!-- [wings2] animation - frame #1 --></desc>
@@ -546,7 +547,7 @@
     <g transform="translate(482 54)" display="none">
         <polygon points="10,45 0,80 30,45" fill="white" stroke="black" stroke-width="2" transform="scale(1 -1) translate(0 -86)"/>
         <rect x="10" y="15" width="83" height="50" fill="white" stroke="black" rx="10" stroke-width="2"/>
-        <text x="20" y="20" stroke="none" fill="black" font-size="10">
+        <text x="20" y="20" stroke="none" fill="black" font-size="10px">
             <tspan x="15" dy="12">I'm so young and</tspan>
             <tspan x="15" dy="12">so hungry! I'm</tspan>
             <tspan x="15" dy="12" fill="red">going to eat You!</tspan>
@@ -568,7 +569,7 @@
     <g transform="translate(485 185)" display="none">
         <polygon points="10,45 0,80 30,45" fill="white" stroke="black" stroke-width="2"/>
         <rect x="10" y="15" width="70" height="50" fill="white" stroke="black" rx="10" stroke-width="2"/>
-        <text x="20" y="20" stroke="none" fill="black" font-size="10">
+        <text x="20" y="20" stroke="none" fill="black" font-size="10px">
             <tspan x="15" dy="12">Ssss Sssss...</tspan>
             <tspan x="15" dy="12">I'm going to</tspan>
             <tspan x="15" dy="12" fill="red">kill you, boy!</tspan>
@@ -590,22 +591,22 @@
 <use xlink:href="#gunLayer" x="25" y="25" id="gunSight" stroke="black"/>
 <circle id="theMiddle" cx="25" cy="25" r="3" fill="none" stroke="none"/>
 
-<text x="230" y="45" stroke="black" fill="white" font-size="40" font-weight="bolder" visibility="hidden" font-stretch="ultra-expanded">
+<text x="230" y="45" stroke="black" fill="white" font-size="40px" font-weight="bolder" visibility="hidden" font-stretch="ultra-expanded">
     IT HURTS!
     <set id="hit" attributeName="visibility" to="visible" begin="indefinite" end="hit.begin+0.66s" restart="whenNotActive" repeatCount="1"/>
 </text>
 
-<text x="258" y="45" stroke="black" fill="purple" font-size="40" font-weight="bolder" visibility="hidden" font-stretch="ultra-expanded">
+<text x="258" y="45" stroke="black" fill="purple" font-size="40px" font-weight="bolder" visibility="hidden" font-stretch="ultra-expanded">
     OH NO!
     <set id="hit2" attributeName="visibility" to="visible" begin="indefinite" end="hit2.begin+0.7s" restart="whenNotActive" repeatCount="1"/>
 </text>
 
-<text x="264" y="45" stroke="black" fill="lightgreen" font-size="40" font-weight="bolder" visibility="hidden" font-stretch="ultra-expanded">
+<text x="264" y="45" stroke="black" fill="lightgreen" font-size="40px" font-weight="bolder" visibility="hidden" font-stretch="ultra-expanded">
     BINGO!
     <set id="hit3" attributeName="visibility" to="visible" begin="indefinite" end="hit3.begin+0.7s" restart="whenNotActive" repeatCount="1"/>
 </text>
 
-<text x="230" y="45" stroke="black" fill="#dd0000" font-size="40" font-weight="bolder" visibility="hidden" font-stretch="ultra-expanded">
+<text x="230" y="45" stroke="black" fill="#dd0000" font-size="40px" font-weight="bolder" visibility="hidden" font-stretch="ultra-expanded">
     RELOAD!
     <set id="mustReload" attributeName="visibility" to="visible" begin="emptyGun.begin" end="mustReload.begin+0.66s" restart="whenNotActive" repeatCount="1"/>
 </text>
@@ -620,34 +621,26 @@
 /* ***************************  SOUNDS START  ****************************** */
 /* ************************************************************************* */
 
-<html:audio id="gun_reload" begin="reload.begin;indefinite" volume="1.0" xlink:href="sounds/reload.wav">
+<html:audio id="gun_reload" begin="indefinite" volume="1.0" xlink:href="sounds/reload.wav">
   <html:source src="sounds/reload.ogg" type="audio/ogg"/>
   <html:source src="sounds/reload.mp3" type="audio/mpeg"/>
 </html:audio>
-<g>
-  <set id="gun_reloadx" attributeName="visibility" to="visible" begin="indefinite"/>
-</g>
 <html:audio id="gun_fire" begin="indefinite" volume="0.8" xlink:href="sounds/colt.wav">
   <html:source src="sounds/colt.ogg" type="audio/ogg"/>
   <html:source src="sounds/colt.mp3" type="audio/mpeg"/>
 </html:audio>
-<g>
-  <set id="gun_firex" attributeName="visibility" to="visible" begin="indefinite"/>
-</g>
 <html:audio id="gun_fire_enemy" begin="indefinite" volume="0.75" xlink:href="sounds/coltb.wav">
   <html:source src="sounds/coltb.ogg" type="audio/ogg"/>
   <html:source src="sounds/coltb.mp3" type="audio/mpeg"/>
 </html:audio>
-<html:audio id="gunIsEmpty" begin="emptyGun.begin;indefinite" volume="1.0" xlink:href="sounds/empty.wav">
+<html:audio id="gunIsEmpty" begin="indefinite" volume="1.0" xlink:href="sounds/empty.wav">
   <html:source src="sounds/empty.ogg" type="audio/ogg"/>
   <html:source src="sounds/empty.mp3" type="audio/mpeg"/>
 </html:audio>
-
-<html:audio id="ugh1" begin="hit.begin;indefinite" volume="1.0" xlink:href="sounds/ugh1.wav">
+<html:audio id="ugh1" begin="indefinite" volume="1.0" xlink:href="sounds/ugh1.wav">
   <html:source src="sounds/ugh1.ogg" type="audio/ogg"/>
   <html:source src="sounds/ugh1.mp3" type="audio/mpeg"/>
 </html:audio>
-
 <html:audio id="ugh2" begin="indefinite" volume="1.0" xlink:href="sounds/ugh2.wav">
   <html:source src="sounds/ugh2.ogg" type="audio/ogg"/>
   <html:source src="sounds/ugh2.mp3" type="audio/mpeg"/>
@@ -664,8 +657,7 @@
   <html:source src="sounds/ugh4.ogg" type="audio/ogg"/>
   <html:source src="sounds/ugh4.mp3" type="audio/mpeg"/>
 </html:audio>
-
-<html:audio id="babkaugh" begin="indefinite;babkaKilled.begin+0.3s" volume="1.0" xlink:href="sounds/babka01.wav">
+<html:audio id="babkaugh" begin="indefinite" volume="1.0" xlink:href="sounds/babka01.wav">
   <html:source src="sounds/babka01.ogg" type="audio/ogg"/>
   <html:source src="sounds/babka01.mp3" type="audio/mpeg"/>
 </html:audio>
@@ -673,29 +665,24 @@
   <html:source src="sounds/wow.ogg" type="audio/ogg"/>
   <html:source src="sounds/wow.mp3" type="audio/mpeg"/>
 </html:audio>
-
 <html:audio id="haha" begin="indefinite" volume="0.8" xlink:href="sounds/haha.wav">
   <html:source src="sounds/haha.ogg" type="audio/ogg"/>
   <html:source src="sounds/haha.mp3" type="audio/mpeg"/>
 </html:audio>
-<html:audio id="creak" begin="displayHelp.click;onlyView.click;indefinite" volume="1.0" xlink:href="sounds/creak.wav">
+<html:audio id="creak" begin="indefinite" volume="1.0" xlink:href="sounds/creak.wav">
   <html:source src="sounds/creak.ogg" type="audio/ogg"/>
   <html:source src="sounds/creak.mp3" type="audio/mpeg"/>
 </html:audio>
-
-<html:audio id="catandbird" volume="1.0" xlink:href="sounds/catbird.wav" begin="sup1Killed.begin+0.3s;sup2Killed.begin+0.3s;kotKilled.begin+0.3s;">
+<html:audio id="catandbird" volume="1.0" xlink:href="sounds/catbird.wav" begin="indefinite">
   <html:source src="sounds/catbird.ogg" type="audio/ogg"/>
   <html:source src="sounds/catbird.mp3" type="audio/mpeg"/>
 </html:audio>
-
-<html:audio id="endSong" xlink:href="sounds/end.mp3" repeatCount="1" begin="showDeathScreen.begin+0.7s">
+<html:audio id="endsong" xlink:href="sounds/end.mp3" repeatCount="1" begin="showDeathScreen.begin+0.7s">
   <html:source src="sounds/end.ogg" type="audio/ogg"/>
   <html:source src="sounds/end.mp3" type="audio/mpeg"/>
 </html:audio>
-
 <!-- music, with some hacking of loading from beginning -->
-<!--a:audio xlink:href="sounds/picking3.mp3" repeatCount="indefinite" id="music" begin="0.44s;0.51s;showStartScreen.begin+0.4s" end="0.5;showDeathScreen.begin"/-->
-<html:audio id="music" xlink:href="sounds/picking3.mp3" repeatCount="indefinite" begin="0.44s;0.53s;indefinite" end="0.5;showDeathScreen.begin;indefinite">
+<html:audio id="music" loop="loop" xlink:href="sounds/picking3.mp3" repeatCount="indefinite" begin="indefinite" end="showDeathScreen.begin;indefinite" onended="this.play()">
   <html:source src="sounds/picking3.ogg" type="audio/ogg"/>
   <html:source src="sounds/picking3.mp3" type="audio/mpeg"/>
 </html:audio>
@@ -754,28 +741,22 @@ fill="none" stroke="#ffffff" stroke-width="0.3px"/-->
                 <html:audio id="colt1" volume="0.5" xlink:href="sounds/colt.wav" begin="hutFly.begin+1.5" end="hideStartScreen.begin">
                     <html:source src="sounds/colt.ogg" type="audio/ogg"/>
                     <html:source src="sounds/colt.mp3" type="audio/mpeg"/>
-                    <html:set attributeName="volume" to="0" begin="hideStartScreen.begin"/>
-                    <html:set attributeName="volume" to="0.5" begin="showStartScreen.begin"/>
                 </html:audio>
                 <set attributeName="visibility" to="hidden" begin="showStartScreen.begin"/>
             </use>
             <use x="170" y="-20" xlink:href="#bulhole">
-                <set attributeName="visibility" to="visible" begin="bulshot1.begin+1.5s"/>
+                <set id="bulshot12" attributeName="visibility" to="visible" begin="bulshot1.begin+1.5s"/>
                 <html:audio id="colt2" volume="0.5" xlink:href="sounds/colt.wav" begin="bulshot1.begin+1.5s" end="hideStartScreen.begin">
                     <html:source src="sounds/colt.ogg" type="audio/ogg"/>
                     <html:source src="sounds/colt.mp3" type="audio/mpeg"/>
-                    <html:set attributeName="volume" to="0" begin="hideStartScreen.begin"/>
-                    <html:set attributeName="volume" to="0.5" begin="showStartScreen.begin"/>
                 </html:audio>
                 <set attributeName="visibility" to="hidden" begin="showStartScreen.begin"/>
             </use>
             <use x="200" y="60" xlink:href="#bulhole">
-                <set attributeName="visibility" to="visible" begin="bulshot1.begin+2.7s"/>
+                <set id="bulshot13" attributeName="visibility" to="visible" begin="bulshot1.begin+2.7s"/>
                 <html:audio id="colt3" volume="0.5" xlink:href="sounds/colt.wav" begin="bulshot1.begin+2.7s" end="hideStartScreen.begin">
                     <html:source src="sounds/colt.ogg" type="audio/ogg"/>
                     <html:source src="sounds/colt.mp3" type="audio/mpeg"/>
-                    <html:set attributeName="volume" to="0" begin="hideStartScreen.begin"/>
-                    <html:set attributeName="volume" to="0.5" begin="showStartScreen.begin"/>
                 </html:audio>
                 <set attributeName="visibility" to="hidden" begin="showStartScreen.begin"/>
             </use>
@@ -789,8 +770,8 @@ fill="none" stroke="#ffffff" stroke-width="0.3px"/-->
 
 
     <g display="none">
-        <text x="120" y="150" stroke="#aaaaaa" stroke-width="0.8" fill="none" font-size="100" font-weight="bolder" font-family="sans-serif">SVG</text>
-        <text x="562" y="340" stroke="#aaaaaa" stroke-width="0.8" fill="none" font-size="60" font-weight="bolder" font-family="sans-serif">1.0</text>
+        <text x="120" y="150" stroke="#aaaaaa" stroke-width="0.8" fill="none" font-size="100px" font-weight="bolder" font-family="sans-serif">SVG</text>
+        <text x="562" y="340" stroke="#aaaaaa" stroke-width="0.8" fill="none" font-size="60px" font-weight="bolder" font-family="sans-serif">1.0</text>
         <image x="50" y="40" width="660" height="300" xlink:href="pics/cowboys.svg"/>
         <set attributeName="display" to="block" begin="hutFly.end+0.3s" />
         <set attributeName="display" to="none" begin="hideStartScreen.begin;showStartScreen.begin" />
@@ -836,10 +817,8 @@ fill="none" stroke="#ffffff" stroke-width="0.3px"/-->
             <html:audio id="colt4" volume="0.5" xlink:href="sounds/colt.wav" begin="bulshot1b.begin" end="hideStartScreen.begin">
                 <html:source src="sounds/colt.ogg" type="audio/ogg"/>
                 <html:source src="sounds/colt.mp3" type="audio/mpeg"/>
-                <html:set attributeName="volume" to="0" begin="hideStartScreen.begin"/>
-                <html:set attributeName="volume" to="0.5" begin="showStartScreen.begin"/>
             </html:audio>
-            <text x="440" y="280" stroke="none" fill="black" font-size="18" font-weight="bold" font-style="italic" font-family="serif">by</text>
+            <text x="440" y="280" stroke="none" fill="black" font-size="18px" font-weight="bold" font-style="italic" font-family="serif">by</text>
             <set id="bulshot1b" attributeName="visibility" to="visible" begin="hutFly.end+1.5s"/>
             <set attributeName="visibility" to="hidden" begin="showStartScreen.begin"/>
         </g>
@@ -849,11 +828,9 @@ fill="none" stroke="#ffffff" stroke-width="0.3px"/-->
             <html:audio id="colt5" volume="0.5" xlink:href="sounds/colt.wav" begin="bulshot1b.begin+0.5s" end="hideStartScreen.begin">
                 <html:source src="sounds/colt.ogg" type="audio/ogg"/>
                 <html:source src="sounds/colt.mp3" type="audio/mpeg"/>
-                <html:set attributeName="volume" to="0" begin="hideStartScreen.begin"/>
-                <html:set attributeName="volume" to="0.5" begin="showStartScreen.begin"/>
             </html:audio>
-            <text x="466" y="280" stroke="none" fill="black" font-size="18" font-weight="bold" font-style="italic" font-family="serif">Marek</text>
-            <set attributeName="visibility" to="visible" begin="bulshot1b.begin+0.5s"/>
+            <text x="466" y="280" stroke="none" fill="black" font-size="18px" font-weight="bold" font-style="italic" font-family="serif">Marek</text>
+            <set id="bulshot1b2" attributeName="visibility" to="visible" begin="bulshot1b.begin+0.5s"/>
             <set attributeName="visibility" to="hidden" begin="showStartScreen.begin"/>
         </g>
 
@@ -862,16 +839,14 @@ fill="none" stroke="#ffffff" stroke-width="0.3px"/-->
             <html:audio id="colt6" volume="0.5" xlink:href="sounds/colt.wav" begin="bulshot1b.begin+1s" end="hideStartScreen.begin">
                 <html:source src="sounds/colt.ogg" type="audio/ogg"/>
                 <html:source src="sounds/colt.mp3" type="audio/mpeg"/>
-                <html:set attributeName="volume" to="0" begin="hideStartScreen.begin"/>
-                <html:set attributeName="volume" to="0.5" begin="showStartScreen.begin"/>
             </html:audio>
-            <text x="522" y="280" stroke="none" fill="black" font-size="18" font-weight="bold" font-style="italic" font-family="serif">Raida</text>
+            <text x="522" y="280" stroke="none" fill="black" font-size="18px" font-weight="bold" font-style="italic" font-family="serif">Raida</text>
             <set id="latestIntroEvent" attributeName="visibility" to="visible" begin="bulshot1b.begin+1s"/>
             <set attributeName="visibility" to="hidden" begin="showStartScreen.begin"/>
         </g>
     </g>
 
-    <text x="265" y="399" stroke="none" fill="#004400" font-weight="bold" font-style="italic" font-family="serif" font-size="15" visibility="hidden">
+    <text x="265" y="399" stroke="none" fill="#004400" font-weight="bold" font-style="italic" font-family="serif" font-size="15px" visibility="hidden">
         ...click on the screen to start the game...
         <set attributeName="visibility" to="visible" begin="latestIntroEvent.begin+1s"/>
         <set attributeName="visibility" to="hidden" begin="showStartScreen.begin"/>
@@ -884,9 +859,9 @@ fill="none" stroke="#ffffff" stroke-width="0.3px"/-->
 
     <g>
         <a>
-            <text x="518" y="440" stroke="none" fill="black" font-size="28" 
+            <text x="518" y="440" stroke="none" fill="black" font-size="28px" 
             font-weight="bold" font-style="italic" font-family="serif">Game instructions</text>
-            <rect id="displayHelp" x="510" y="415" width="233" height="33" fill="none" 
+            <rect id="displayHelp" x="510" y="415" width="233" height="33" fill="none" onclick="document.getElementById('creak').play()"
             stroke="white" stroke-width="3" pointer-events="all" rx="10">
                 <set attributeName="stroke" to="maroon" begin="mouseover"/>
                 <set attributeName="stroke-width" to="1" begin="mouseover"/>
@@ -894,7 +869,7 @@ fill="none" stroke="#ffffff" stroke-width="0.3px"/-->
                 <set attributeName="stroke-width" to="3" begin="mouseout"/>
             </rect>
 
-            <text x="42" y="440" stroke="none" fill="black" font-size="28" 
+            <text x="42" y="440" stroke="none" fill="black" font-size="28px" 
             font-weight="bold" font-style="italic" font-family="serif">Show High Scores</text>
             <rect id="onlyView" x="35" y="415" width="230" height="33" fill="none" 
             stroke="white" stroke-width="3" pointer-events="all" rx="10" onclick="showScoreList(false)">
@@ -930,38 +905,38 @@ fill="none" stroke="#ffffff" stroke-width="0.3px"/-->
 
 
 /* ************************************************************************* */
-/* ************************  SIGNATUTING SCREEN  *************************** */
+/* ************************  SIGNATURING SCREEN  *************************** */
 /* ************************************************************************* */
 
 <g id="signatureScreen" display="none">
     <rect x="-2" y="-3" width="784" height="485" fill="#65B5F3" fill-opacity="0.96" stroke="maroon" stroke-width="6"/>
 
     <use x="570" y="40" xlink:href="#bulhole2" />
-    <text x="480" y="50" stroke="#333333" stroke-width="1" fill="white" font-size="40" font-weight="bolder" font-family="monospace">SIGNATURING</text>
+    <text x="480" y="50" stroke="#333333" stroke-width="1" fill="white" font-size="40px" font-weight="bolder" font-family="monospace">SIGNATURING</text>
     <image xlink:href="pics/lump1.svg" x="490" y="210" width="200" height="200"/>
 
     <rect x="35" y="30" width="350" height="90" fill="gold" stroke="#4E3D10" rx="10" stroke-width="5"/>
     <image x="45" y="-20" width="330" height="190" xlink:href="pics/cowboys.svg"/>
 
     <g transform="translate(-10 0)">
-        <text x="460" y="140" stroke="none" fill="#dddddd" font-size="20">You've reached score:</text>
+        <text x="460" y="140" stroke="none" fill="#dddddd" font-size="20px">You've reached score:</text>
 
         <rect x="460" y="150" width="150" height="30" fill="white" rx="10" stroke="#aaaaaa"/>
-        <text id="finalScore" x="466" y="176" stroke="none" fill="black" font-size="30">000</text>
+        <text id="finalScore" x="466" y="176" stroke="none" fill="black" font-size="30px">000</text>
 
-        <text x="460" y="220" stroke="none" fill="#dddddd" font-size="20">Write down your famous name:</text>
+        <text x="460" y="220" stroke="none" fill="#dddddd" font-size="20px">Write down your famous name:</text>
 
         <rect x="460" y="230" width="297" height="30" fill="white" rx="10" stroke="#aaaaaa"/>
-        <text id="playerName" x="465" y="256" stroke="none" fill="black" font-size="30">NOBODY</text>
+        <text id="playerName" x="465" y="256" stroke="none" fill="black" font-size="30px">NOBODY</text>
     </g>
 
     <rect x="0" y="0" width="100%" height="100%" fill="none" stroke="none"/>
 
     <a transform="translate(5 20)">
     <g id="abeceda" transform="translate(30 80)"/>
-        <text x="160" y="354" stroke="none" fill="white" font-weight="bold" font-size="14" id="letx-delete" onclick="getLetter(evt)">SPC</text>
-        <text x="280" y="354" stroke="none" fill="white" font-weight="bold" font-size="14" id="letx-delete" onclick="getLetter(evt)">DEL</text>
-        <text x="340" y="354" stroke="none" fill="white" font-weight="bold" font-size="14" id="letx-enter" onclick="getLetter(evt)">END</text>
+        <text x="160" y="354" stroke="none" fill="white" font-weight="bold" font-size="14px" id="letx-delete" onclick="getLetter(evt)">SPC</text>
+        <text x="280" y="354" stroke="none" fill="white" font-weight="bold" font-size="14px" id="letx-delete" onclick="getLetter(evt)">DEL</text>
+        <text x="340" y="354" stroke="none" fill="white" font-weight="bold" font-size="14px" id="letx-enter" onclick="getLetter(evt)">END</text>
     <g id="textCovers" transform="translate(30 80)"/>
     </a>
 
@@ -969,7 +944,7 @@ fill="none" stroke="#ffffff" stroke-width="0.3px"/-->
     <set id="hideSignatureScreen" attributeName="display" begin="indefinite" to="none" />
 
     <a>
-        <text x="457" y="440" stroke="none" fill="black" font-size="28" 
+        <text x="457" y="440" stroke="none" fill="black" font-size="28px" 
         font-weight="bold" font-style="italic" font-family="serif">Continue to High Scores</text>
         <rect id="texx-enter" x="450" y="415" width="300" height="33" fill="none" onclick="getLetter(evt)"
         stroke="white" stroke-width="3" pointer-events="all" rx="10">
@@ -992,7 +967,7 @@ fill="none" stroke="#ffffff" stroke-width="0.3px"/-->
     <use x="560" y="40" xlink:href="#bulhole2" />
     <use x="450" y="155" xlink:href="#bulhole2" />
     <use x="670" y="95" xlink:href="#bulhole2" />
-    <text x="480" y="50" stroke="#333333" stroke-widht="1" fill="white" font-size="40" font-weight="bolder" font-family="monospace">HIGH SCORES</text>
+    <text x="480" y="50" stroke="#333333" stroke-widht="1" fill="white" font-size="40px" font-weight="bolder" font-family="monospace">HIGH SCORES</text>
     <image xlink:href="pics/lady01.svg" x="520" y="200" width="330" height="330"/>
     <image xlink:href="pics/lump6.svg" x="495" y="135" width="220" height="220"/>
 
@@ -1001,12 +976,12 @@ fill="none" stroke="#ffffff" stroke-width="0.3px"/-->
     <image x="450" y="290" width="150" height="180" xlink:href="pics/sud.svg"/>
 
     <rect x="30" y="20" width="360" height="440" fill="beige" stroke="gray" stroke-width="4" rx="25"/>
-    <text x="38" y="180" stroke="none" font-size="115" fill="black" font-weight="bold" font-stretch="ultra-condensed" fill-opacity="0.1">WANTED</text>
+    <text x="38" y="180" stroke="none" font-size="115px" fill="black" font-weight="bold" font-stretch="ultra-condensed" fill-opacity="0.1">WANTED</text>
     <use x="40" y="32" xlink:href="#bulhole" />
     <use x="350" y="32" xlink:href="#bulhole" />
     <use x="40" y="420" xlink:href="#bulhole" />
     <use x="350" y="420" xlink:href="#bulhole" />
-    <text x="120" y="28" stroke="none" fill="#2E2201" font-family="sans-serif" sont-weight="bold" font-size="11" id="HallOfFame" font-stretch="ultra-expanded"> </text>
+    <text x="120" y="28" stroke="none" fill="#2E2201" font-family="sans-serif" sont-weight="bold" font-size="11px" id="HallOfFame" font-stretch="ultra-expanded"> </text>
 
     <a>
         <rect x="0" y="0" width="100%" height="100%" fill="none" stroke="none" pointer-events="all" onclick="hideScoreList()"/>
@@ -1030,7 +1005,7 @@ fill="none" stroke="#ffffff" stroke-width="0.3px"/-->
     <rect x="-2" y="-3" width="784" height="485" fill="beige" fill-opacity="0.96" stroke="maroon" stroke-width="6"/>
 
     <use x="585" y="40" xlink:href="#bulhole2" />
-    <text x="480" y="50" stroke="#333333" stroke-widht="1" fill="white" font-size="40" font-weight="bolder" font-family="monospace">ABOUT GAME</text>
+    <text x="480" y="50" stroke="#333333" stroke-widht="1" fill="white" font-size="40px" font-weight="bolder" font-family="monospace">ABOUT GAME</text>
     <image xlink:href="pics/lump3.svg" x="470" y="200" width="220" height="220"/>
     <image xlink:href="pics/babka.svg" x="520" y="200" width="250" height="250"/>
 
@@ -1040,7 +1015,7 @@ fill="none" stroke="#ffffff" stroke-width="0.3px"/-->
     <use x="30" y="290" xlink:href="#bulhole" />
     <use x="30" y="420" xlink:href="#bulhole" />
 
-    <text x="65" y="26" stroke="none" font-family="serif" font-weight="normal" font-size="16">
+    <text x="65" y="26" stroke="none" font-family="serif" font-weight="normal" font-size="16px">
         <tspan x="50" dx="0" dy="24" font-style="italic" fill="navy" font-weight="bold">Game instructions:</tspan>
         <tspan x="65" dx="0" dy="20">Kill all the bandits trying to kill you ;-)</tspan>
         <tspan x="65" dx="0" dy="17">Remeber that you've only six bullets in your Smith&amp;Wesson.</tspan>
@@ -1091,18 +1066,18 @@ fill="none" stroke="#ffffff" stroke-width="0.3px"/-->
 
 
 
-<text x="322" y="220" stroke="none" fill="#004000" font-size="16" font-weight="bold">... please wait ...
+<text x="322" y="220" stroke="none" fill="#004000" font-size="16px" font-weight="bold">... please wait ...
     <set attributeName="display" to="none" begin="2.5s"/>
 </text>
 
 <!-- quality options -->
 <rect id="q_SET_BACK" x="757" y="5" width="20" height="13" fill="green" stroke="none"/>
-<text id="q_SET_TEXT" x="760" y="15" stroke="none" fill="white" font-size="10" font-family="sans-serif">LQ</text>
+<text id="q_SET_TEXT" x="760" y="15" stroke="none" fill="white" font-size="10px" font-family="sans-serif">LQ</text>
 <rect x="757" y="5" width="20" height="13" fill="none" stroke="none" onclick="setQuality(evt)" pointer-events="all"/>
 
 <!-- quality options -->
 <rect id="q_MUSIC_BACK" x="757" y="20" width="20" height="13" fill="navy" stroke="none"/>
-<text x="758" y="29.5" stroke="none" fill="white" font-size="10" font-family="sans-serif" font-stretch="extra-condensed">music</text>
+<text x="758" y="29.5" stroke="none" fill="white" font-size="10px" font-family="sans-serif" font-stretch="extra-condensed">music</text>
 <polygon id="q_MUSIC_SKRT" points="757,20 777,33 777,20 757,33" fill="none" stroke="black" visibility="hidden"/>
 <rect x="757" y="20" width="20" height="13" fill="none" stroke="none" onclick="setMusic(evt)" pointer-events="all"/>
 
