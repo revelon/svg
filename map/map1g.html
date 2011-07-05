@@ -35,10 +35,10 @@
     for (var i in regions) {
       (function (obj) {
         obj[0].onmouseover = function(evt) {
-          obj.attr("fill", "lightgreen");
+          obj.animate({fill: "lightgreen"}, 500);
         }
         obj[0].onmouseout = function(evt) {
-          obj.attr("fill", "#c4dab9");
+          obj.animate({fill: "#c4dab9"}, 500);
         }
         obj[0].onclick = function(evt) {
           window.location = "http://www.jobs.cz/";
