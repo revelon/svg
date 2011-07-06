@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" onmousemove="mouseTracker(evt)">
+<script type="text/ecmascript" xlink:href="2D.js"/>
+  <title>SVG Testicek</title>
+  <desc>
+    xxx
+  </desc>
+
+  <text id="txt" x="300" y="300">abcd</text>
+  <circle id="myc" cx="105" cy="115" r="80" fill="blue" opacity="0.5">
+    <animate attributeName="r" begin="0s" dur="5s" values="80;10;80" repeatCount="indefinite"/>
+  </circle>
+  <line id="myl" x1="0" y1="0" x2="200" y2="15" stroke="orange" stroke-width="5" opacity="0.5"/>
+
+<script type="text/ecmascript">
+  var txt = document.getElementById("txt").firstChild;
+  var c = document.getElementById("myc");
+  var l = document.getElementById("myl");
+
+  function check() {
+    var cc = new Circle(c);
+    var ll = new Line(l);
+    var inter = Intersection.intersectShapes(cc, ll);
+    txt.data = inter.status;
+  }
+
+  window.setInterval(check, 500);
+ 
+  function mouseTracker(evt) {
+    l.setAttribute("x2", evt.clientX);
+    l.setAttribute("y2", evt.clientY);
+  }
+</script>
+
+</svg>
