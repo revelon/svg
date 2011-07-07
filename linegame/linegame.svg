@@ -1,34 +1,103 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" onmousemove="mouseTracker(evt)">
-<script type="text/ecmascript" xlink:href="2D.js"/>
-  <title>SVG Testicek</title>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" onmousemove="mouseTracker(evt)" cursor="url(hand.cur),default">
+  <script type="text/ecmascript" xlink:href="2D.js"/>
+  <title>SVG Meteors'n'Chains Game</title>
   <desc>
-    xxx
+    experiment
   </desc>
 
-  <text id="txt" x="300" y="300">abcd</text>
-  <circle id="myc" cx="105" cy="115" r="80" fill="blue" opacity="0.5">
-    <animate attributeName="r" begin="0s" dur="5s" values="80;10;80" repeatCount="indefinite"/>
-  </circle>
-  <line id="myl" x1="0" y1="0" x2="200" y2="15" stroke="orange" stroke-width="5" opacity="0.5"/>
+  <defs>
+    <g id="meteor"><circle cx="105" cy="115" r="20" fill="gray" opacity="0.5"/></g>
+    <g id="chain"><line x1="0" y1="0" x2="200" y2="15" stroke="orange" stroke-width="5" opacity="0.5"/></g>
+  </defs>
+
+  <rect width="900" height="500" fill="beige"/>
+  <text id="txt" x="10" y="30" font-size="26px" font-family="sans-serif" font-weight="bold">Status</text>
+  <g id="meteors"/>
+  <g id="chains"/>
+  
 
 <script type="text/ecmascript">
-  var txt = document.getElementById("txt").firstChild;
-  var c = document.getElementById("myc");
-  var l = document.getElementById("myl");
+  var gameScreen = {width:900, height:500}
+  var txt = document.getElementById("txt");
+  var chains = new Array();
+  var meteors = new Array();
+  var lastMouseEvent = null;
+  var chainsNode = document.getElementById("chains");
+  var meteorsNode = document.getElementById("meteors");
+  var chainPrototype = document.getElementById("chain").firstChild;
+  var meteorPrototype = document.getElementById("meteor").firstChild;
+
+  function generateMeteor() {
+    var met = meteorPrototype.cloneNode(true);
+    met.setAttribute("cx", Math.round(Math.random()*gameScreen.width));
+    met.setAttribute("cy", Math.round(Math.random()*gameScreen.height));
+    meteorsNode.appendChild(met);
+    meteors.push(met);
+  }
+
+  function generateChain() {
+    var whichSide = Math.round(Math.random()*4);
+    switch (whichSide) {
+      case 0: // top side
+      case 1: // top side
+        var x1 = Math.round(Math.random()*gameScreen.width);
+        var y1 = 0;
+        break;
+      case 2: // left side
+        var x1 = 0;
+        var y1 = Math.round(Math.random()*gameScreen.height);
+        break;
+      case 3: // bottom side
+        var x1 = Math.round(Math.random()*gameScreen.width);
+        var y1 = gameScreen.height;
+        break;
+      case 4: // right side
+        var x1 = gameScreen.width;
+        var y1 = Math.round(Math.random()*gameScreen.height);
+        break;
+    }
+    var ch = chainPrototype.cloneNode(true);
+    ch.setAttribute("x1", x1);
+    ch.setAttribute("y1", y1);
+    ch.setAttribute("x2", (lastMouseEvent) ? lastMouseEvent.clientX : 0);
+    ch.setAttribute("y2", (lastMouseEvent) ? lastMouseEvent.clientY : 0);
+    chainsNode.appendChild(ch);
+    chains.push(ch);
+  }
 
   function check() {
-    var cc = new Circle(c);
-    var ll = new Line(l);
-    var inter = Intersection.intersectShapes(cc, ll);
-    txt.data = inter.status;
+    var crash = false;
+    for (var m = 0; m &lt; meteors.length; m++) {
+      for (var c = 0; c &lt; chains.length; c++) {
+        var inter = Intersection.intersectShapes(new Line(chains[c]), new Circle(meteors[m]));
+        if (inter.status != "Outside") crash = true;
+        if (crash) break;
+      }
+      if (crash) break;
+    }
+    if (crash) {
+      txt.firstChild.data = "Conflict!";
+      txt.setAttribute("fill", "red");
+    } else {
+      txt.firstChild.data = "No conflict";
+      txt.setAttribute("fill", "green");
+    }
   }
 
-  window.setInterval(check, 500);
- 
   function mouseTracker(evt) {
-    l.setAttribute("x2", evt.clientX);
-    l.setAttribute("y2", evt.clientY);
+    for (var c = 0; c &lt; chains.length; c++) {
+      chains[c].setAttribute("x2", evt.clientX);
+      chains[c].setAttribute("y2", evt.clientY);
+    }
+    lastMouseEvent = evt;
   }
+
+  generateChain();
+  
+  window.setInterval(generateChain, 5000);
+  window.setInterval(generateMeteor, 1000);
+  window.setInterval(check, 100);
+
 </script>
 
 </svg>
