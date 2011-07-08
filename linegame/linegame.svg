@@ -6,7 +6,7 @@
   </desc>
 
   <defs>
-    <g id="meteor"><circle cx="105" cy="115" r="20" fill="gray" opacity="0.5"/></g>
+    <g id="meteor"><circle cx="105" cy="115" r="20" fill="gray" opacity="0"/></g>
     <g id="chain"><line x1="0" y1="0" x2="200" y2="15" stroke="orange" stroke-width="5" opacity="0.5"/></g>
   </defs>
 
@@ -17,6 +17,7 @@
   
 
 <script type="text/ecmascript">
+  var refreshRate = 50; // in ms
   var gameScreen = {width:900, height:500}
   var txt = document.getElementById("txt");
   var chains = new Array();
@@ -33,6 +34,8 @@
     met.setAttribute("cy", Math.round(Math.random()*gameScreen.height));
     meteorsNode.appendChild(met);
     meteors.push(met);
+    simpleAnimate(met, "opacity", 1, 0.05);
+    //simpleAnimate(met, "r", 1, -0.5);
   }
 
   function generateChain() {
@@ -92,10 +95,18 @@
     lastMouseEvent = evt;
   }
 
+  function simpleAnimate(obj, what, to, by) {
+    var val = obj.getAttributeNS(null, what);
+    val = (1*val) + by;
+    obj.setAttributeNS(null, what, val);
+    if (val == to) return; // stupid logic, should be more robust
+    else setTimeout(function(){simpleAnimate(obj, what, to, by)}, refreshRate);
+  }
+
   generateChain();
   
-  window.setInterval(generateChain, 5000);
-  window.setInterval(generateMeteor, 1000);
+  window.setInterval(generateChain, 8000);
+  window.setInterval(generateMeteor, 3000);
   window.setInterval(check, 100);
 
 </script>
