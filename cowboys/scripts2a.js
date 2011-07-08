@@ -539,6 +539,7 @@
         // prepare temporary modifier according to the animation type
         var axis = (tmpDefs[this.type]['appear']['attr'] == "x") ? x : y;
         var ani = document.createElementNS(svgns, tmpDefs[this.type]['appear']['elem']);
+        ani.setAttributeNS(null, "attributeType", "XML");
         ani.setAttributeNS(null, "attributeName", tmpDefs[this.type]['appear']['attr']);
         ani.setAttributeNS(null, "dur", ''+tmpDefs[this.type]['appear']['dur']+'ms');
         ani.setAttributeNS(null, "by", tmpDefs[this.type]['appear']['by']);
@@ -577,6 +578,7 @@
         // create animation and apply it (from tmpDefs PARAMS)
         // prepare temporary modifier according to the animation type
         var ani = document.createElementNS(svgns, tmpDefs[this.type]['die']['elem']);
+        ani.setAttributeNS(null, "attributeType", "XML");
         ani.setAttributeNS(null, "attributeName", tmpDefs[this.type]['die']['attr']);
         ani.setAttributeNS(null, "dur", ''+tmpDefs[this.type]['die']['dur']+'ms');
         ani.setAttributeNS(null, "by", tmpDefs[this.type]['die']['by']);
@@ -653,6 +655,7 @@
                     // prepare temporary modifier according to the animation type
                     // var axis = (tmpDefs[bandits[i].type]['appear']['attr'] == "x") ? x : y;
                     var ani = document.createElementNS(svgns, tmpDefs[bandits[i].type]['appear']['elem']);
+                    ani.setAttributeNS(null, "attributeType", "XML");
                     ani.setAttributeNS(null, "attributeName", tmpDefs[bandits[i].type]['appear']['attr']);
                     ani.setAttributeNS(null, "dur", ''+tmpDefs[bandits[i].type]['appear']['dur']+'ms');
                     ani.setAttributeNS(null, "by", (-1*tmpDefs[bandits[i].type]['appear']['by']) );
@@ -1034,8 +1037,8 @@
     function hideScoreList(){
         getElementById2("hideHighScoreScreen").beginElement();
         getElementById2("showStartScreen").beginElement();
-        document.getElementById("klobouk").setAttribute("visibility", "visible");
-        getElementById2("hutFly").beginElement();
+        //document.getElementById("klobouk").setAttribute("visibility", "visible");
+        //getElementById2("hutFly").beginElement();
         if (music)
             document.getElementById("music").play();
     }

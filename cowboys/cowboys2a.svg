@@ -8,8 +8,8 @@
      onkeydown="pressKey(evt)"
      font-family="Arial, sans-serif" 
      onload="inix(evt)">
-    <title>Cowboys Game 2.02</title>
-    <script type="text/ecmascript" xlink:href="scripts2.js"/>
+    <title>Cowboys Game 2.04</title>
+    <script type="text/ecmascript" xlink:href="scripts2a.js"/>
     <script type="text/ecmascript" xlink:href="setup2.js"/>
 
 /* ************************************************************************* */
@@ -127,25 +127,25 @@
         <line x1="0" y1="25" x2="50" y2="25" shape-rendering="optimizeSpeed"/> 
         <line x1="25" y1="0" x2="25" y2="50" shape-rendering="optimizeSpeed"/>
         <circle cx="25" cy="25" r="20" fill="none" stroke-width="1">
-            <animate id="gunShot" begin="gun_fire.begin" attributeName="fill" values="none;green;none" dur="0.2s" repeatCount="1" restart="whenNotActive"/>
-            <set begin="gunShot.begin" attributeName="fill-opacity" to="0.3" />
-            <set begin="gunShot.end" attributeName="fill-opacity" to="1" />
+            <animate id="gunShot" begin="gun_fire.begin" attributeName="fill" values="none;green;none" dur="0.2s" repeatCount="1" restart="whenNotActive" attributeType="XML"/>
+            <set begin="gunShot.begin" attributeName="fill-opacity" to="0.3" attributeType="XML"/>
+            <set begin="gunShot.end" attributeName="fill-opacity" to="1" attributeType="XML"/>
         </circle>
         <circle cx="25" cy="25" r="10" fill="none" stroke-width="1"/> 
         <circle cx="25" cy="25" r="3"  fill="black" stroke-width="1"/> 
-        <animate id="reload" begin="indefinite" attributeName="stroke" values="#ffffff;yellow;#ffffff" dur="0.75s" repeatCount="1"/> 
-        <animate id="emptyGun" begin="indefinite" attributeName="stroke" values="#ffffff;#0000ff;#ffffff" dur="0.5s" repeatCount="1"/>
+        <animate id="reload" begin="indefinite" attributeName="stroke" values="#ffffff;yellow;#ffffff" dur="0.75s" repeatCount="1" attributeType="XML"/> 
+        <animate id="emptyGun" begin="indefinite" attributeName="stroke" values="#ffffff;#0000ff;#ffffff" dur="0.5s" repeatCount="1" attributeType="XML"/>
     </g>
 
     <g id="bullet">
-        <circle cx="0" cy="0" r="12" fill="#EBC952" stroke="black" stroke-width="2px" />
-        <circle cx="0" cy="0" r="7" fill="#EBC952" stroke="#7C5C25" stroke-width="1px" />
-        <circle cx="0" cy="0" r="2" fill="#EBC952" stroke="#7C5C25" stroke-width="2px" />
+        <circle cx="0" cy="0" r="12" fill="#EBC952" stroke="black" stroke-width="2px"/>
+        <circle cx="0" cy="0" r="7" fill="#EBC952" stroke="#7C5C25" stroke-width="1px"/>
+        <circle cx="0" cy="0" r="2" fill="#EBC952" stroke="#7C5C25" stroke-width="2px"/>
     </g>
 
     <g id="magazine">
         <path fill="#444444" stroke="gray" stroke-width="3px" d="M88 32C76.1758 28.2139 81.5306 21.777 77.2924 14.0039C73.0337 6.19298 62.1508 1.88655 54 0C44.5347 10.5527 39.5921 -2.01629 29 1.69907C24.0017 3.45231 15.1778 7.26192 13.8125 13.0147C12.8622 17.0188 15.422 19.937 12.848 23.9066C10.1218 28.111 3.89973 28.3766 1.70293 32.314C-1.0115 37.1793 -1.79054 51.9824 2.73843 56.0162C6.59451 59.4507 11.6856 59.3626 13.8673 65.0147C15.1653 68.3774 12.7499 71.7225 14.1319 74.9606C16.6899 80.9539 29.4797 87.6612 35.9606 86.5926C40.2552 85.8845 42.4958 81.0004 47.0008 80.6435C52.1226 80.2378 54.763 86.2412 60.0147 85.1535C66.258 83.8605 75.2369 77.8587 77.9329 71.9992C79.252 69.1322 77.9601 65.9468 79.1289 63.0147C80.8282 58.7516 85.4313 57.4028 87.4861 53.6211C90.8586 47.4144 88.5201 38.5907 88 32z"/>
-        <circle cx="45" cy="43" r="4" fill="black" stroke="#AAAAAA" stroke-width="1.5px" />
+        <circle cx="45" cy="43" r="4" fill="black" stroke="#AAAAAA" stroke-width="1.5px"/>
     </g>
 
     <g id="environment">
@@ -213,7 +213,7 @@
     <mask id="dying" maskUnits="userSpaceOnUse">
         <rect x="0" y="0" width="100%" height="100%" fill="white"/>
         <circle cx="390" cy="240" r="500" fill="black" shape-rendering="optimizeSpeed">
-            <animate attributeName="r" dur="6s" calcMode="discrete" 
+            <animate attributeName="r" dur="6s" calcMode="discrete" attributeType="XML" 
             values="450;425;400;375;350;325;300;275;250;225;200;175;150;125;100;75;50;25;0;0;0" 
             begin="6s;showDeathScreen.begin" repeatCount="1"/>
         </circle>
@@ -248,38 +248,38 @@
 
 
     <use xlink:href="#ripX" x="420" y="58" display="none">
-        <set attributeName="display" to="block" begin="sup2Killed.end"/>
-        <set attributeName="display" to="none" begin="sup2Alive.begin"/>
+        <set attributeName="display" to="block" begin="sup2Killed.end" attributeType="XML"/>
+        <set attributeName="display" to="none" begin="sup2Alive.begin" attributeType="XML"/>
     </use>
 
 <use xlink:href="#environment"/>
 
     <g mask="url(#healthMaskX)">
-        <rect id="q_HEALTH" x="592" y="7" width="100" height="15" fill="#198C00" rx="2" />
+        <rect id="q_HEALTH" x="592" y="7" width="100" height="15" fill="#198C00" rx="2"/>
         <text x="595" y="19" fill="white" font-stretch="ultra-expanded" font-size="13px">Health</text>
     </g>
     <text id="score" x="591" y="33" fill="black" font-stretch="ultra-expanded" font-size="13px">Score: </text>
 
     <circle cx="355" cy="110" r="50" fill="gold" stroke="none">
-        <animate id="q_SUN" begin="indefinite" end="indefinite" attributeName="fill" values="orange;gold;orange" dur="10s" repeatCount="indefinite"/> 
+        <animate id="q_SUN" begin="indefinite" end="indefinite" attributeName="fill" values="orange;gold;orange" dur="10s" repeatCount="indefinite" attributeType="XML"/> 
     </circle>
 
 <g transform="translate(11 11) scale(0.9)" color-rendering="optimizeSpeed">
     <g transform="rotate(30 45 44)">
         <use xlink:href="#magazine">
             <animate id="reloadMagazine" attributeName="opacity" begin="indefinite" values="1;0;1" 
-            dur="0.7s" repeatCount="1" restart="whenNotActive" />
+            dur="0.7s" repeatCount="1" restart="whenNotActive" attributeType="XML"/>
         </use>
-        <use xlink:href="#bullet" x="32" y="20" id="ammo6" />
-        <use xlink:href="#bullet" x="58" y="20" id="ammo5" />
-        <use xlink:href="#bullet" x="72" y="43" id="ammo4" />
-        <use xlink:href="#bullet" x="58" y="66" id="ammo3" />
-        <use xlink:href="#bullet" x="32" y="66" id="ammo2" />
-        <use xlink:href="#bullet" x="18" y="43" id="ammo1" />
+        <use xlink:href="#bullet" x="32" y="20" id="ammo6"/>
+        <use xlink:href="#bullet" x="58" y="20" id="ammo5"/>
+        <use xlink:href="#bullet" x="72" y="43" id="ammo4"/>
+        <use xlink:href="#bullet" x="58" y="66" id="ammo3"/>
+        <use xlink:href="#bullet" x="32" y="66" id="ammo2"/>
+        <use xlink:href="#bullet" x="18" y="43" id="ammo1"/>
     </g>
 
-    <animateTransform id="rotateMagazine" attributeName="transform" type="rotate" begin="indefinite;0s" 
-    from="0 45 44" to="60 45 44" dur="700ms" repeatCount="1" restart="whenNotActive" fill="freeze" />
+    <animateTransform id="rotateMagazine" attributeName="transform" type="rotate" begin="indefinite;0s" attributeType="XML" 
+    from="0 45 44" to="60 45 44" dur="700ms" repeatCount="1" restart="whenNotActive" fill="freeze"/>
 </g>
 
 
@@ -296,20 +296,20 @@
 
 
     <use xlink:href="#ripX" x="-27" y="174" display="none">
-        <set attributeName="display" to="block" begin="babkaKilled.end"/>
-        <set attributeName="display" to="none" begin="babkaAlive.begin"/>
+        <set attributeName="display" to="block" begin="babkaKilled.end" attributeType="XML"/>
+        <set attributeName="display" to="none" begin="babkaAlive.begin" attributeType="XML"/>
     </use>
     <use xlink:href="#ripX" x="407" y="263" display="none">
-        <set attributeName="display" to="block" begin="snakeKilled.end"/>
-        <set attributeName="display" to="none" begin="snakeAlive.begin"/>
+        <set attributeName="display" to="block" begin="snakeKilled.end" attributeType="XML"/>
+        <set attributeName="display" to="none" begin="snakeAlive.begin" attributeType="XML"/>
     </use>
     <use xlink:href="#ripX" x="632" y="386" display="none">
-        <set attributeName="display" to="block" begin="kotKilled.end"/>
-        <set attributeName="display" to="none" begin="kotAlive.begin"/>
+        <set attributeName="display" to="block" begin="kotKilled.end" attributeType="XML"/>
+        <set attributeName="display" to="none" begin="kotAlive.begin" attributeType="XML"/>
     </use>
     <use xlink:href="#ripX" x="660" y="170" display="none">
-        <set attributeName="display" to="block" begin="sup1Killed.end"/>
-        <set attributeName="display" to="none" begin="sup1Alive.begin"/>
+        <set attributeName="display" to="block" begin="sup1Killed.end" attributeType="XML"/>
+        <set attributeName="display" to="none" begin="sup1Alive.begin" attributeType="XML"/>
     </use>
 
     <!-- babka -->
@@ -317,11 +317,11 @@
     fill="none" stroke="none" stroke-width="0.3px"/>
     <g transform="scale(-0.45 0.45) translate(-550 260)" onclick="document.getElementById('babkaough').play()">
         <image xlink:href="pics/babka.svg" x="400" y="100" width="150" height="300">
-            <animateTransform id="q_BABKA" begin="indefinite" end="indefinite" attributeName="transform" type="rotate" values="-5 470 300;10 470 300;-5 470 300" dur="6s" repeatCount="indefinite" />
+            <animateTransform id="q_BABKA" begin="indefinite" end="indefinite" attributeName="transform" type="rotate" values="-5 470 300;10 470 300;-5 470 300" dur="6s" repeatCount="indefinite" attributeType="XML"/>
         </image>
-        <animateTransform id="babkaKilled" attributeName="transform" type="skewY" by="50" begin="indefinite" dur="0.7s"/>
-        <set attributeName="display" to="none" begin="babkaKilled.end"/>
-        <set id="babkaAlive" attributeName="display" to="block" begin="showStartScreen.begin"/>
+        <animateTransform id="babkaKilled" attributeName="transform" type="skewY" by="50" begin="indefinite" dur="0.7s" attributeType="XML"/>
+        <set attributeName="display" to="none" begin="babkaKilled.end" attributeType="XML"/>
+        <set id="babkaAlive" attributeName="display" to="block" begin="showStartScreen.begin" attributeType="XML"/>
     </g>
     <g transform="translate(45 145)" display="none">
         <polygon points="10,45 0,80 30,45" fill="white" stroke="black" stroke-width="2"/>
@@ -331,8 +331,8 @@
             <tspan x="15" dy="12">I'm too old...</tspan>
             <tspan x="15" dy="12" fill="red">Hit me, please!</tspan>
         </text>
-        <set id="babkaShowDialog" attributeName="display" to="block" begin="indefinite" end="indefinite"/>
-        <set id="babkaHideDialog" attributeName="display" to="none" begin="showStartScreen.begin;indefinite" end="indefinite"/>
+        <set id="babkaShowDialog" attributeName="display" to="block" begin="indefinite" end="indefinite" attributeType="XML"/>
+        <set id="babkaHideDialog" attributeName="display" to="none" begin="showStartScreen.begin;indefinite" end="indefinite" attributeType="XML"/>
     </g>
 
 
@@ -345,7 +345,7 @@
             <desc><!-- [oc] animation - frame #1 --></desc>
             <path id="oc" d="
             M-28,-106C-28,-106 10,-117 30,-100C50,-83 71,-105 120,-70C169,-35 194,47 129,-19C64,-85 53,-55 22,-73"
-              />
+             />
             <desc><!-- [oc] animation - from #1 to #2 --></desc>
             <animate id="oc_frame1" xlink:href="#oc" begin="0s;oc_frame8.end" dur="1s"
               attributeName="d" attributeType="XML" fill="freeze"
@@ -353,7 +353,7 @@
             M-28,-106C-28,-106 10,-117 30,-100C50,-83 71,-105 120,-70C169,-35 194,47 129,-19C64,-85 53,-55 22,-73"
               to="
             M-28,-106C-28,-106 10,-117 30,-100C50,-83 77,-122 126,-87C175,-52 214,24 142,-40C70,-104 53,-55 22,-73"
-              />
+             />
             <desc><!-- [oc] animation - from #2 to #3 --></desc>
             <animate id="oc_frame2" xlink:href="#oc" begin="oc_frame1.end" dur="1s"
               attributeName="d" attributeType="XML" fill="freeze"
@@ -361,7 +361,7 @@
             M-28,-106C-28,-106 10,-117 30,-100C50,-83 77,-122 126,-87C175,-52 214,24 142,-40C70,-104 53,-55 22,-73"
               to="
             M-28,-106C-28,-106 8,-120 28,-103C48,-86 97,-142 146,-107C195,-72 234,1 162,-63C90,-127 74,-73 22,-75"
-              />
+             />
             <desc><!-- [oc] animation - from #3 to #4 --></desc>
             <animate id="oc_frame3" xlink:href="#oc" begin="oc_frame2.end" dur="1s"
               attributeName="d" attributeType="XML" fill="freeze"
@@ -369,7 +369,7 @@
             M-28,-106C-28,-106 8,-120 28,-103C48,-86 97,-142 146,-107C195,-72 234,1 162,-63C90,-127 74,-73 22,-75"
               to="
             M-28,-106C-28,-106 8,-120 28,-103C48,-86 74,-121 146,-107C218,-93 268,-48 167,-78C66,-108 74,-73 22,-75"
-              />
+             />
             <desc><!-- [oc] animation - from #4 to #5 --></desc>
             <animate id="oc_frame4" xlink:href="#oc" begin="oc_frame3.end" dur="1s"
               attributeName="d" attributeType="XML" fill="freeze"
@@ -377,7 +377,7 @@
             M-28,-106C-28,-106 8,-120 28,-103C48,-86 74,-121 146,-107C218,-93 268,-48 167,-78C66,-108 74,-73 22,-75"
               to="
             M-28,-106C-28,-106 -2,-112 28,-103C58,-94 71,-130 149,-135C227,-140 276,-98 168,-113C60,-128 74,-73 22,-75"
-              />
+             />
             <desc><!-- [oc] animation - from #5 to #6 --></desc>
             <animate id="oc_frame5" xlink:href="#oc" begin="oc_frame4.end" dur="1s"
               attributeName="d" attributeType="XML" fill="freeze"
@@ -385,7 +385,7 @@
             M-28,-106C-28,-106 -2,-112 28,-103C58,-94 71,-130 149,-135C227,-140 276,-98 168,-113C60,-128 74,-73 22,-75"
               to="
             M-28,-106C-28,-106 0,-118 30,-109C60,-100 69,-139 145,-153C221,-167 287,-113 186,-128C85,-143 75,-86 23,-88"
-              />
+             />
             <desc><!-- [oc] animation - from #6 to #7 --></desc>
             <animate id="oc_frame6" xlink:href="#oc" begin="oc_frame5.end" dur="1s"
               attributeName="d" attributeType="XML" fill="freeze"
@@ -393,7 +393,7 @@
             M-28,-106C-28,-106 0,-118 30,-109C60,-100 69,-139 145,-153C221,-167 287,-113 186,-128C85,-143 75,-86 23,-88"
               to="
             M-28,-106C-28,-106 0,-118 30,-109C60,-100 119,-99 156,-137C193,-175 252,-178 187,-119C122,-60 77,-82 25,-84"
-              />
+             />
             <desc><!-- [oc] animation - from #7 to #8 --></desc>
             <animate id="oc_frame7" xlink:href="#oc" begin="oc_frame6.end" dur="1s"
               attributeName="d" attributeType="XML" fill="freeze"
@@ -401,7 +401,7 @@
             M-28,-106C-28,-106 0,-118 30,-109C60,-100 119,-99 156,-137C193,-175 252,-178 187,-119C122,-60 77,-82 25,-84"
               to="
             M-28,-106C-28,-106 0,-118 30,-109C60,-100 122,-55 159,-93C196,-131 251,-134 186,-75C121,-16 77,-82 25,-84"
-              />
+             />
             <desc><!-- [oc] animation - from #8 to #1 --></desc>
             <animate id="oc_frame8" xlink:href="#oc" begin="oc_frame7.end" dur="1s"
               attributeName="d" attributeType="XML" fill="freeze"
@@ -409,16 +409,16 @@
             M-28,-106C-28,-106 0,-118 30,-109C60,-100 122,-55 159,-93C196,-131 251,-134 186,-75C121,-16 77,-82 25,-84"
               to="
             M-28,-106C-28,-106 10,-117 30,-100C50,-83 71,-105 120,-70C169,-35 194,47 129,-19C64,-85 53,-55 22,-73"
-              />
+             />
         </g>
 
         <g mask="none" id="q_KOT_ITSELF">
             <image xlink:href="pics/kot.svg" x="110" y="100" width="150" height="300" transform="scale(-0.85 0.85) translate(-1020 142)"/>
         </g>
 
-        <animateTransform id="kotKilled" attributeName="transform" type="translate" by="10 240" begin="indefinite" dur="0.7s"/>
-        <set attributeName="display" to="none" begin="kotKilled.end"/>
-        <set id="kotAlive" attributeName="display" to="block" begin="showStartScreen.begin"/>
+        <animateTransform id="kotKilled" attributeName="transform" type="translate" by="10 240" begin="indefinite" dur="0.7s" attributeType="XML"/>
+        <set attributeName="display" to="none" begin="kotKilled.end" attributeType="XML"/>
+        <set id="kotAlive" attributeName="display" to="block" begin="showStartScreen.begin" attributeType="XML"/>
     </g>
     <g transform="translate(672 220)" display="none">
         <polygon points="10,45 0,80 30,45" fill="white" stroke="black" stroke-width="2"/>
@@ -428,8 +428,8 @@
             <tspan x="15" dy="12" fill="red">I massacred your</tspan>
             <tspan x="15" dy="12">dog, stupid cowboy!</tspan>
         </text>
-        <set id="kotShowDialog" attributeName="display" to="block" begin="indefinite" end="indefinite"/>
-        <set id="kotHideDialog" attributeName="display" to="none" begin="showStartScreen.begin;indefinite" end="indefinite"/>
+        <set id="kotShowDialog" attributeName="display" to="block" begin="indefinite" end="indefinite" attributeType="XML"/>
+        <set id="kotHideDialog" attributeName="display" to="none" begin="showStartScreen.begin;indefinite" end="indefinite" attributeType="XML"/>
     </g>
 
 
@@ -438,9 +438,9 @@
     fill="none" stroke="none" stroke-width="0.3px"/>
     <g onclick="document.getElementById('catandbird').play()">
         <image x="668" y="79" width="100" height="60" xlink:href="pics/sup1.svg"/>
-        <animateTransform id="sup1Killed" attributeName="transform" type="translate" by="0 150" begin="indefinite" dur="0.7s"/>
-        <set attributeName="display" to="none" begin="sup1Killed.end"/>
-        <set id="sup1Alive" attributeName="display" to="block" begin="showStartScreen.begin"/>
+        <animateTransform id="sup1Killed" attributeName="transform" type="translate" by="0 150" begin="indefinite" dur="0.7s" attributeType="XML"/>
+        <set attributeName="display" to="none" begin="sup1Killed.end" attributeType="XML"/>
+        <set id="sup1Alive" attributeName="display" to="block" begin="showStartScreen.begin" attributeType="XML"/>
     </g>
     <g transform="translate(610 110)" display="none">
         <polygon transform="rotate(180) translate(-95 -83)" points="10,45 0,80 30,45" fill="white" stroke="black" stroke-width="2"/>
@@ -450,8 +450,8 @@
             <tspan x="15" dy="12">I'm so ugly bird</tspan>
             <tspan x="15" dy="12" fill="red"> ! Disggusting !</tspan>
         </text>
-        <set id="sup1ShowDialog" attributeName="display" to="block" begin="indefinite" end="indefinite"/>
-        <set id="sup1HideDialog" attributeName="display" to="none" begin="showStartScreen.begin;indefinite" end="indefinite"/>
+        <set id="sup1ShowDialog" attributeName="display" to="block" begin="indefinite" end="indefinite" attributeType="XML"/>
+        <set id="sup1HideDialog" attributeName="display" to="none" begin="showStartScreen.begin;indefinite" end="indefinite" attributeType="XML"/>
     </g>
 
 
@@ -465,7 +465,7 @@
             <desc><!-- [wings2] animation - frame #1 --></desc>
             <path id="wings2" d="
             M15,32C15,32 71,-12 82,-89C93,-166 153,-113 156,-107C159,-101 212,-57 251,-32C290,-7 206,-11 201,-10C196,-9 152,-30 143,-29C134,-28 129,24 106,21C83,18 89,3 92,11C95,19 72,34 72,34C72,34 40,31 55,24"
-              />
+             />
             <desc><!-- [wings2] animation - from #1 to #2 --></desc>
             <animate id="wings2_frame1" xlink:href="#wings2" begin="0s;wings2_frame3.end" dur="1s"
               attributeName="d" attributeType="XML" fill="freeze"
@@ -473,7 +473,7 @@
             M15,32C15,32 71,-12 82,-89C93,-166 153,-113 156,-107C159,-101 212,-57 251,-32C290,-7 206,-11 201,-10C196,-9 152,-30 143,-29C134,-28 129,24 106,21C83,18 89,3 92,11C95,19 72,34 72,34C72,34 40,31 55,24"
               to="
             M-57,-17C-57,-17 26,-31 82,-89C138,-147 148,-112 157,-104C166,-96 212,-57 251,-32C290,-7 206,-11 201,-10C196,-9 144,-54 135,-53C126,-52 111,16 88,13C65,10 62,-7 65,1C68,9 21,17 21,17C21,17 -5,8 10,1"
-              />
+             />
             <desc><!-- [wings2] animation - from #2 to #3 --></desc>
             <animate id="wings2_frame2" xlink:href="#wings2" begin="wings2_frame1.end" dur="1s"
               attributeName="d" attributeType="XML" fill="freeze"
@@ -481,7 +481,7 @@
             M-57,-17C-57,-17 26,-31 82,-89C138,-147 148,-112 157,-104C166,-96 212,-57 251,-32C290,-7 206,-11 201,-10C196,-9 144,-54 135,-53C126,-52 111,16 88,13C65,10 62,-7 65,1C68,9 21,17 21,17C21,17 -5,8 10,1"
               to="
             M-92,-97C-92,-97 7,-14 63,-72C119,-130 142,-93 151,-85C160,-77 212,-57 251,-32C290,-7 201,-10 201,-10C201,-10 139,-40 130,-39C121,-38 13,-14 -10,-17C-33,-20 -35,-38 -32,-30C-29,-22 -57,-23 -57,-23C-57,-23 -70,-38 -55,-45"
-              />
+             />
             <desc><!-- [wings2] animation - from #3 to #1 --></desc>
             <animate id="wings2_frame3" xlink:href="#wings2" begin="wings2_frame2.end" dur="1s"
               attributeName="d" attributeType="XML" fill="freeze"
@@ -489,14 +489,14 @@
             M-92,-97C-92,-97 7,-14 63,-72C119,-130 142,-93 151,-85C160,-77 212,-57 251,-32C290,-7 201,-10 201,-10C201,-10 139,-40 130,-39C121,-38 13,-14 -10,-17C-33,-20 -35,-38 -32,-30C-29,-22 -57,-23 -57,-23C-57,-23 -70,-38 -55,-45"
               to="
             M15,32C15,32 71,-12 82,-89C93,-166 153,-113 156,-107C159,-101 212,-57 251,-32C290,-7 206,-11 201,-10C196,-9 152,-30 143,-29C134,-28 129,24 106,21C83,18 89,3 92,11C95,19 72,34 72,34C72,34 40,31 55,24"
-              />
+             />
             </g>
             
             <g>
             <desc><!-- [wingsa] animation - frame #1 --></desc>
             <path id="wingsa" d="
             M-37,-11C-37,-11 -29,-208 60,-192C149,-176 257,-232 269,-233C281,-234 269,-176 260,-159C251,-142 210,-107 166,-108C122,-109 53,-154 46,-122C39,-90 -2,-1 -2,-1"
-              />
+             />
             <desc><!-- [wingsa] animation - from #1 to #2 --></desc>
             <animate id="wingsa_frame1" xlink:href="#wingsa" begin="0s;wingsa_frame4.end" dur="1s"
               attributeName="d" attributeType="XML" fill="freeze"
@@ -504,7 +504,7 @@
             M-37,-11C-37,-11 -29,-208 60,-192C149,-176 257,-232 269,-233C281,-234 269,-176 260,-159C251,-142 210,-107 166,-108C122,-109 53,-154 46,-122C39,-90 -2,-1 -2,-1"
               to="
             M-37,-11C-37,-11 0,-179 89,-163C178,-147 283,-195 295,-196C307,-197 265,-129 256,-112C247,-95 197,-90 153,-91C109,-92 64,-136 57,-104C50,-72 -2,-1 -2,-1"
-              />
+             />
             <desc><!-- [wingsa] animation - from #2 to #3 --></desc>
             <animate id="wingsa_frame2" xlink:href="#wingsa" begin="wingsa_frame1.end" dur="1s"
               attributeName="d" attributeType="XML" fill="freeze"
@@ -512,7 +512,7 @@
             M-37,-11C-37,-11 0,-179 89,-163C178,-147 283,-195 295,-196C307,-197 265,-129 256,-112C247,-95 197,-90 153,-91C109,-92 64,-136 57,-104C50,-72 -2,-1 -2,-1"
               to="
             M-38,-11C-38,-11 -29,-122 93,-141C215,-160 317,-168 303,-146C289,-124 261,-104 252,-87C243,-70 191,-74 147,-75C103,-76 88,-118 50,-81C12,-44 -3,-1 -3,-1"
-              />
+             />
             <desc><!-- [wingsa] animation - from #3 to #4 --></desc>
             <animate id="wingsa_frame3" xlink:href="#wingsa" begin="wingsa_frame2.end" dur="1s"
               attributeName="d" attributeType="XML" fill="freeze"
@@ -520,7 +520,7 @@
             M-38,-11C-38,-11 -29,-122 93,-141C215,-160 317,-168 303,-146C289,-124 261,-104 252,-87C243,-70 191,-74 147,-75C103,-76 88,-118 50,-81C12,-44 -3,-1 -3,-1"
               to="
             M-38,-11C-38,-11 -26,-100 96,-119C218,-138 319,-86 300,-54C281,-22 257,-81 248,-64C239,-47 198,-60 154,-61C110,-62 85,-98 47,-61C9,-24 -3,-1 -3,-1"
-              />
+             />
             <desc><!-- [wingsa] animation - from #4 to #1 --></desc>
             <animate id="wingsa_frame4" xlink:href="#wingsa" begin="wingsa_frame3.end" dur="1s"
               attributeName="d" attributeType="XML" fill="freeze"
@@ -528,7 +528,7 @@
             M-38,-11C-38,-11 -26,-100 96,-119C218,-138 319,-86 300,-54C281,-22 257,-81 248,-64C239,-47 198,-60 154,-61C110,-62 85,-98 47,-61C9,-24 -3,-1 -3,-1"
               to="
             M-37,-11C-37,-11 -29,-208 60,-192C149,-176 257,-232 269,-233C281,-234 269,-176 260,-159C251,-142 210,-107 166,-108C122,-109 53,-154 46,-122C39,-90 -2,-1 -2,-1"
-              />
+             />
             </g>
         </g>
 
@@ -536,9 +536,9 @@
             <image x="468" y="29" width="37" height="37" xlink:href="pics/sup2.svg"/>
         </g>
 
-        <animateTransform id="sup2Killed" attributeName="transform" type="translate" by="0 80" begin="indefinite" dur="0.6s"/>
-        <set attributeName="display" to="none" begin="sup2Killed.end"/>
-        <set id="sup2Alive" attributeName="display" to="block" begin="showStartScreen.begin"/>
+        <animateTransform id="sup2Killed" attributeName="transform" type="translate" by="0 80" begin="indefinite" dur="0.6s" attributeType="XML"/>
+        <set attributeName="display" to="none" begin="sup2Killed.end" attributeType="XML"/>
+        <set id="sup2Alive" attributeName="display" to="block" begin="showStartScreen.begin" attributeType="XML"/>
     </g>
 
     <g transform="translate(482 54)" display="none">
@@ -549,8 +549,8 @@
             <tspan x="15" dy="12">so hungry! I'm</tspan>
             <tspan x="15" dy="12" fill="red">going to eat You!</tspan>
         </text>
-        <set id="sup2ShowDialog" attributeName="display" to="block" begin="indefinite" end="indefinite"/>
-        <set id="sup2HideDialog" attributeName="display" to="none" begin="showStartScreen.begin;indefinite" end="indefinite"/>
+        <set id="sup2ShowDialog" attributeName="display" to="block" begin="indefinite" end="indefinite" attributeType="XML"/>
+        <set id="sup2HideDialog" attributeName="display" to="none" begin="showStartScreen.begin;indefinite" end="indefinite" attributeType="XML"/>
     </g>
 
 
@@ -559,9 +559,9 @@
     fill="none" stroke="none" stroke-width="0.3px"/>
     <g>
         <image x="448" y="250" width="60" height="60" xlink:href="pics/snake.svg"/>
-        <animateTransform id="snakeKilled" attributeName="transform" type="translate" by="0 80" begin="indefinite" dur="0.6s"/>
-        <set attributeName="display" to="none" begin="snakeKilled.end"/>
-        <set id="snakeAlive" attributeName="display" to="block" begin="showStartScreen.begin"/>
+        <animateTransform id="snakeKilled" attributeName="transform" type="translate" by="0 80" begin="indefinite" dur="0.6s" attributeType="XML"/>
+        <set attributeName="display" to="none" begin="snakeKilled.end" attributeType="XML"/>
+        <set id="snakeAlive" attributeName="display" to="block" begin="showStartScreen.begin" attributeType="XML"/>
     </g>
     <g transform="translate(485 185)" display="none">
         <polygon points="10,45 0,80 30,45" fill="white" stroke="black" stroke-width="2"/>
@@ -571,8 +571,8 @@
             <tspan x="15" dy="12">I'm going to</tspan>
             <tspan x="15" dy="12" fill="red">kill you, boy!</tspan>
         </text>
-        <set id="snakeShowDialog" attributeName="display" to="block" begin="indefinite" end="indefinite"/>
-        <set id="snakeHideDialog" attributeName="display" to="none" begin="showStartScreen.begin;indefinite" end="indefinite"/>
+        <set id="snakeShowDialog" attributeName="display" to="block" begin="indefinite" end="indefinite" attributeType="XML"/>
+        <set id="snakeHideDialog" attributeName="display" to="none" begin="showStartScreen.begin;indefinite" end="indefinite" attributeType="XML"/>
     </g>
 
 
@@ -590,22 +590,22 @@
 
 <text x="230" y="45" stroke="black" fill="white" font-size="40px" font-weight="bolder" visibility="hidden" font-stretch="ultra-expanded">
     IT HURTS!
-    <set id="hit" attributeName="visibility" to="visible" begin="indefinite" end="hit.begin+0.66s" restart="whenNotActive" repeatCount="1"/>
+    <set id="hit" attributeName="visibility" to="visible" begin="indefinite" end="hit.begin+0.66s" restart="whenNotActive" repeatCount="1" attributeType="XML"/>
 </text>
 
 <text x="258" y="45" stroke="black" fill="purple" font-size="40px" font-weight="bolder" visibility="hidden" font-stretch="ultra-expanded">
     OH NO!
-    <set id="hit2" attributeName="visibility" to="visible" begin="indefinite" end="hit2.begin+0.7s" restart="whenNotActive" repeatCount="1"/>
+    <set id="hit2" attributeName="visibility" to="visible" begin="indefinite" end="hit2.begin+0.7s" restart="whenNotActive" repeatCount="1" attributeType="XML"/>
 </text>
 
 <text x="264" y="45" stroke="black" fill="lightgreen" font-size="40px" font-weight="bolder" visibility="hidden" font-stretch="ultra-expanded">
     BINGO!
-    <set id="hit3" attributeName="visibility" to="visible" begin="indefinite" end="hit3.begin+0.7s" restart="whenNotActive" repeatCount="1"/>
+    <set id="hit3" attributeName="visibility" to="visible" begin="indefinite" end="hit3.begin+0.7s" restart="whenNotActive" repeatCount="1" attributeType="XML"/>
 </text>
 
 <text x="230" y="45" stroke="black" fill="#dd0000" font-size="40px" font-weight="bolder" visibility="hidden" font-stretch="ultra-expanded">
     RELOAD!
-    <set id="mustReload" attributeName="visibility" to="visible" begin="emptyGun.begin" end="mustReload.begin+0.66s" restart="whenNotActive" repeatCount="1"/>
+    <set id="mustReload" attributeName="visibility" to="visible" begin="emptyGun.begin" end="mustReload.begin+0.66s" restart="whenNotActive" repeatCount="1" attributeType="XML"/>
 </text>
 
 
@@ -684,7 +684,7 @@
   <html:source src="sounds/picking3.mp3" type="audio/mpeg"/>
 </html:audio>
 <g>
-  <set id="musicx" attributeName="visibility" to="visible" begin="indefinite"/>
+  <set id="musicx" attributeName="visibility" to="visible" begin="indefinite" attributeType="XML"/>
 </g>
 
 /* ************************************************************************* */
@@ -729,37 +729,37 @@ fill="none" stroke="#ffffff" stroke-width="0.3px"/-->
     <rect x="-2" y="-3" width="784" height="485" fill="beige" fill-opacity="0.8" stroke="maroon" stroke-width="6"/>
     <g transform="translate(70 -60)">
         <image x="0" y="-75" width="200" height="200" xlink:href="pics/hat.svg" visibility="hidden" id="klobouk">
-            <set attributeName="visibility" to="visible" begin="hutFly.begin" />
-            <set attributeName="visibility" to="hidden" begin="hideStartScreen.begin" />
+            <set attributeName="visibility" to="visible" begin="hutFly.begin" attributeType="XML"/>
+            <set attributeName="visibility" to="hidden" begin="hideStartScreen.begin" attributeType="XML"/>
         </image>
         <g visibility="hidden" transform="scale(0.7)">
             <use x="70" y="-20" xlink:href="#bulhole">
-                <set id="bulshot1" attributeName="visibility" to="visible" begin="hutFly.begin+1.5"/>
+                <set id="bulshot1" attributeName="visibility" to="visible" begin="hutFly.begin+1.5" attributeType="XML"/>
                 <html:audio id="colt1" volume="0.5" xlink:href="sounds/colt.wav" begin="hutFly.begin+1.5" end="hideStartScreen.begin">
                     <html:source src="sounds/colt.ogg" type="audio/ogg"/>
                     <html:source src="sounds/colt.mp3" type="audio/mpeg"/>
                 </html:audio>
-                <set attributeName="visibility" to="hidden" begin="showStartScreen.begin"/>
+                <set attributeName="visibility" to="hidden" begin="showStartScreen.begin" attributeType="XML"/>
             </use>
             <use x="170" y="-20" xlink:href="#bulhole">
-                <set id="bulshot12" attributeName="visibility" to="visible" begin="bulshot1.begin+1.5s"/>
+                <set id="bulshot12" attributeName="visibility" to="visible" begin="bulshot1.begin+1.5s" attributeType="XML"/>
                 <html:audio id="colt2" volume="0.5" xlink:href="sounds/colt.wav" begin="bulshot1.begin+1.5s" end="hideStartScreen.begin">
                     <html:source src="sounds/colt.ogg" type="audio/ogg"/>
                     <html:source src="sounds/colt.mp3" type="audio/mpeg"/>
                 </html:audio>
-                <set attributeName="visibility" to="hidden" begin="showStartScreen.begin"/>
+                <set attributeName="visibility" to="hidden" begin="showStartScreen.begin" attributeType="XML"/>
             </use>
             <use x="200" y="60" xlink:href="#bulhole">
-                <set id="bulshot13" attributeName="visibility" to="visible" begin="bulshot1.begin+2.7s"/>
+                <set id="bulshot13" attributeName="visibility" to="visible" begin="bulshot1.begin+2.7s" attributeType="XML"/>
                 <html:audio id="colt3" volume="0.5" xlink:href="sounds/colt.wav" begin="bulshot1.begin+2.7s" end="hideStartScreen.begin">
                     <html:source src="sounds/colt.ogg" type="audio/ogg"/>
                     <html:source src="sounds/colt.mp3" type="audio/mpeg"/>
                 </html:audio>
-                <set attributeName="visibility" to="hidden" begin="showStartScreen.begin"/>
+                <set attributeName="visibility" to="hidden" begin="showStartScreen.begin" attributeType="XML"/>
             </use>
         </g>
 
-        <animateMotion id="hutFly" begin="showStartScreen.begin+1s;2.2s;indefinite" end="hideStartScreen.begin" dur="5s" repeatCount="1" fill="freeze" 
+        <animateMotion id="hutFly" begin="showStartScreen.begin+1s;2.2s;indefinite" end="hideStartScreen.begin" dur="5s" repeatCount="1" fill="freeze" attributeType="XML" 
         path="M 84.65907 -22.26250 C 84.65907 -22.26250 334.5399 125.2083 314.0580 100.6298 C 333.1746 40.54916 116.0649 155.2486 88.75553 193.4818 C 87.39007 148.4212 75.10077 168.9032 259.4392 242.6386 C 264.9010 183.9234 173.4145 257.6587 143.3741 321.8358"/>
 
     </g>
@@ -769,15 +769,15 @@ fill="none" stroke="#ffffff" stroke-width="0.3px"/-->
         <text x="120" y="150" stroke="#aaaaaa" stroke-width="0.8" fill="none" font-size="100px" font-weight="bolder" font-family="sans-serif">SVG</text>
         <text x="562" y="340" stroke="#aaaaaa" stroke-width="0.8" fill="none" font-size="60px" font-weight="bolder" font-family="sans-serif">1.0</text>
         <image x="50" y="40" width="660" height="300" xlink:href="pics/cowboys.svg"/>
-        <set attributeName="display" to="block" begin="hutFly.end+0.3s" />
-        <set attributeName="display" to="none" begin="hideStartScreen.begin;showStartScreen.begin" />
+        <set attributeName="display" to="block" begin="hutFly.end+0.3s" attributeType="XML"/>
+        <set attributeName="display" to="none" begin="hideStartScreen.begin;showStartScreen.begin" attributeType="XML"/>
     </g>
 
     <g transform="translate(343,243) scale(0.23)" stroke="none" fill="#ffffff" fill-opacity="0.5" id="smoke" display="none">
         <desc><!-- [kour1] animation - frame #1 --></desc>
         <path id="kour1" d="
         M9,-175C9,-175 -51,-147 -49,-115C-47,-83 -8,-104 -17,-39C-26,26 -6,20 2,52C10,84 22,16 23,-42C24,-100 -29,-101 -11,-128"
-          />
+         />
         <desc><!-- [kour1] animation - from #1 to #2 --></desc>
         <animate id="kour1_frame1" xlink:href="#kour1" begin="0s;kour1_frame3.end" dur="1s"
           attributeName="d" attributeType="XML" fill="freeze"
@@ -785,7 +785,7 @@ fill="none" stroke="#ffffff" stroke-width="0.3px"/-->
         M9,-175C9,-175 -51,-147 -49,-115C-47,-83 -8,-104 -17,-39C-26,26 -6,20 2,52C10,84 22,16 23,-42C24,-100 -29,-101 -11,-128"
           to="
         M24,-162C24,-162 -45,-150 -37,-116C-29,-82 -35,-106 -17,-39C1,28 -6,20 2,52C10,84 35,20 23,-42C11,-104 -39,-113 -11,-128"
-          />
+         />
         <desc><!-- [kour1] animation - from #2 to #3 --></desc>
         <animate id="kour1_frame2" xlink:href="#kour1" begin="kour1_frame1.end" dur="1s"
           attributeName="d" attributeType="XML" fill="freeze"
@@ -793,7 +793,7 @@ fill="none" stroke="#ffffff" stroke-width="0.3px"/-->
         M24,-162C24,-162 -45,-150 -37,-116C-29,-82 -35,-106 -17,-39C1,28 -6,20 2,52C10,84 35,20 23,-42C11,-104 -39,-113 -11,-128"
           to="
         M-13,-176C-13,-176 -30,-153 -37,-116C-44,-79 -24,-99 -15,-42C-6,15 14,-9 2,52C-10,113 55,24 23,-42C-9,-108 -32,-88 -11,-128"
-          />
+         />
         <desc><!-- [kour1] animation - from #3 to #1 --></desc>
         <animate id="kour1_frame3" xlink:href="#kour1" begin="kour1_frame2.end" dur="1s"
           attributeName="d" attributeType="XML" fill="freeze"
@@ -801,9 +801,9 @@ fill="none" stroke="#ffffff" stroke-width="0.3px"/-->
         M-13,-176C-13,-176 -30,-153 -37,-116C-44,-79 -24,-99 -15,-42C-6,15 14,-9 2,52C-10,113 55,24 23,-42C-9,-108 -32,-88 -11,-128"
           to="
         M9,-175C9,-175 -51,-147 -49,-115C-47,-83 -8,-104 -17,-39C-26,26 -6,20 2,52C10,84 22,16 23,-42C24,-100 -29,-101 -11,-128"
-          />    
-        <set attributeName="display" to="block" begin="hutFly.end"/>
-        <set attributeName="display" to="none" begin="showStartScreen.begin"/>
+         />    
+        <set attributeName="display" to="block" begin="hutFly.end" attributeType="XML"/>
+        <set attributeName="display" to="none" begin="showStartScreen.begin" attributeType="XML"/>
     </g>
 
 
@@ -815,8 +815,8 @@ fill="none" stroke="#ffffff" stroke-width="0.3px"/-->
                 <html:source src="sounds/colt.mp3" type="audio/mpeg"/>
             </html:audio>
             <text x="440" y="280" stroke="none" fill="black" font-size="18px" font-weight="bold" font-style="italic" font-family="serif">by</text>
-            <set id="bulshot1b" attributeName="visibility" to="visible" begin="hutFly.end+1.5s"/>
-            <set attributeName="visibility" to="hidden" begin="showStartScreen.begin"/>
+            <set id="bulshot1b" attributeName="visibility" to="visible" begin="hutFly.end+1.5s" attributeType="XML"/>
+            <set attributeName="visibility" to="hidden" begin="showStartScreen.begin" attributeType="XML"/>
         </g>
 
         <g>
@@ -826,8 +826,8 @@ fill="none" stroke="#ffffff" stroke-width="0.3px"/-->
                 <html:source src="sounds/colt.mp3" type="audio/mpeg"/>
             </html:audio>
             <text x="466" y="280" stroke="none" fill="black" font-size="18px" font-weight="bold" font-style="italic" font-family="serif">Marek</text>
-            <set id="bulshot1b2" attributeName="visibility" to="visible" begin="bulshot1b.begin+0.5s"/>
-            <set attributeName="visibility" to="hidden" begin="showStartScreen.begin"/>
+            <set id="bulshot1b2" attributeName="visibility" to="visible" begin="bulshot1b.begin+0.5s" attributeType="XML"/>
+            <set attributeName="visibility" to="hidden" begin="showStartScreen.begin" attributeType="XML"/>
         </g>
 
         <g>
@@ -837,19 +837,19 @@ fill="none" stroke="#ffffff" stroke-width="0.3px"/-->
                 <html:source src="sounds/colt.mp3" type="audio/mpeg"/>
             </html:audio>
             <text x="522" y="280" stroke="none" fill="black" font-size="18px" font-weight="bold" font-style="italic" font-family="serif">Raida</text>
-            <set id="latestIntroEvent" attributeName="visibility" to="visible" begin="bulshot1b.begin+1s"/>
-            <set attributeName="visibility" to="hidden" begin="showStartScreen.begin"/>
+            <set id="latestIntroEvent" attributeName="visibility" to="visible" begin="bulshot1b.begin+1s" attributeType="XML"/>
+            <set attributeName="visibility" to="hidden" begin="showStartScreen.begin" attributeType="XML"/>
         </g>
     </g>
 
     <text x="265" y="399" stroke="none" fill="#004400" font-weight="bold" font-style="italic" font-family="serif" font-size="15px" visibility="hidden">
         ...click on the screen to start the game...
-        <set attributeName="visibility" to="visible" begin="latestIntroEvent.begin+1s"/>
-        <set attributeName="visibility" to="hidden" begin="showStartScreen.begin"/>
+        <set attributeName="visibility" to="visible" begin="latestIntroEvent.begin+1s" attributeType="XML"/>
+        <set attributeName="visibility" to="hidden" begin="showStartScreen.begin" attributeType="XML"/>
     </text>
 
-    <set id="showStartScreen" attributeName="display" begin="indefinite" to="block" />
-    <set id="hideStartScreen" attributeName="display" begin="indefinite" to="none" />
+    <set id="showStartScreen" attributeName="display" begin="indefinite" to="block" attributeType="XML"/>
+    <set id="hideStartScreen" attributeName="display" begin="indefinite" to="none" attributeType="XML"/>
 
     <a><rect x="0" y="0" width="100%" height="100%" fill="none" stroke="none" pointer-events="all" onclick="init(evt)"/></a>
 
@@ -859,20 +859,20 @@ fill="none" stroke="#ffffff" stroke-width="0.3px"/-->
             font-weight="bold" font-style="italic" font-family="serif">Game instructions</text>
             <rect id="displayHelp" x="510" y="415" width="233" height="33" fill="none" onclick="document.getElementById('creak').play()"
             stroke="white" stroke-width="3" pointer-events="all" rx="10">
-                <set attributeName="stroke" to="maroon" begin="mouseover"/>
-                <set attributeName="stroke-width" to="1" begin="mouseover"/>
-                <set attributeName="stroke" to="white" begin="mouseout"/>
-                <set attributeName="stroke-width" to="3" begin="mouseout"/>
+                <set attributeName="stroke" to="maroon" begin="mouseover" attributeType="XML"/>
+                <set attributeName="stroke-width" to="1" begin="mouseover" attributeType="XML"/>
+                <set attributeName="stroke" to="white" begin="mouseout" attributeType="XML"/>
+                <set attributeName="stroke-width" to="3" begin="mouseout" attributeType="XML"/>
             </rect>
 
             <text x="42" y="440" stroke="none" fill="black" font-size="28px" 
             font-weight="bold" font-style="italic" font-family="serif">Show High Scores</text>
             <rect id="onlyView" x="35" y="415" width="230" height="33" fill="none" 
             stroke="white" stroke-width="3" pointer-events="all" rx="10" onclick="showScoreList(false)">
-                <set attributeName="stroke" to="maroon" begin="mouseover"/>
-                <set attributeName="stroke-width" to="1" begin="mouseover"/>
-                <set attributeName="stroke" to="white" begin="mouseout"/>
-                <set attributeName="stroke-width" to="3" begin="mouseout"/>
+                <set attributeName="stroke" to="maroon" begin="mouseover" attributeType="XML"/>
+                <set attributeName="stroke-width" to="1" begin="mouseover" attributeType="XML"/>
+                <set attributeName="stroke" to="white" begin="mouseout" attributeType="XML"/>
+                <set attributeName="stroke-width" to="3" begin="mouseout" attributeType="XML"/>
             </rect>
 
         </a>
@@ -894,8 +894,8 @@ fill="none" stroke="#ffffff" stroke-width="0.3px"/-->
 
     <a><rect x="0" y="0" width="100%" height="100%" fill="none" stroke="none" pointer-events="all" onclick="afterDeath()"/></a>
 
-    <set id="showDeathScreen" attributeName="display" begin="indefinite" to="block" />
-    <set id="hideDeathScreen" attributeName="display" begin="indefinite" to="none" />
+    <set id="showDeathScreen" attributeName="display" begin="indefinite" to="block" attributeType="XML"/>
+    <set id="hideDeathScreen" attributeName="display" begin="indefinite" to="none" attributeType="XML"/>
 
 </g>
 
@@ -907,7 +907,7 @@ fill="none" stroke="#ffffff" stroke-width="0.3px"/-->
 <g id="signatureScreen" display="none">
     <rect x="-2" y="-3" width="784" height="485" fill="#65B5F3" fill-opacity="0.96" stroke="maroon" stroke-width="6"/>
 
-    <use x="570" y="40" xlink:href="#bulhole2" />
+    <use x="570" y="40" xlink:href="#bulhole2"/>
     <text x="480" y="50" stroke="#333333" stroke-width="1" fill="white" font-size="40px" font-weight="bolder" font-family="monospace">SIGNATURING</text>
     <image xlink:href="pics/lump1.svg" x="490" y="210" width="200" height="200"/>
 
@@ -936,18 +936,18 @@ fill="none" stroke="#ffffff" stroke-width="0.3px"/-->
     <g id="textCovers" transform="translate(30 80)"/>
     </a>
 
-    <set id="showSignatureScreen" attributeName="display" begin="indefinite" to="block" />
-    <set id="hideSignatureScreen" attributeName="display" begin="indefinite" to="none" />
+    <set id="showSignatureScreen" attributeName="display" begin="indefinite" to="block" attributeType="XML"/>
+    <set id="hideSignatureScreen" attributeName="display" begin="indefinite" to="none" attributeType="XML"/>
 
     <a>
         <text x="457" y="440" stroke="none" fill="black" font-size="28px" 
         font-weight="bold" font-style="italic" font-family="serif">Continue to High Scores</text>
         <rect id="texx-enter" x="450" y="415" width="300" height="33" fill="none" onclick="getLetter(evt)"
         stroke="white" stroke-width="3" pointer-events="all" rx="10">
-            <set attributeName="stroke" to="maroon" begin="mouseover"/>
-            <set attributeName="stroke-width" to="1" begin="mouseover"/>
-            <set attributeName="stroke" to="white" begin="mouseout"/>
-            <set attributeName="stroke-width" to="3" begin="mouseout"/>
+            <set attributeName="stroke" to="maroon" begin="mouseover" attributeType="XML"/>
+            <set attributeName="stroke-width" to="1" begin="mouseover" attributeType="XML"/>
+            <set attributeName="stroke" to="white" begin="mouseout" attributeType="XML"/>
+            <set attributeName="stroke-width" to="3" begin="mouseout" attributeType="XML"/>
         </rect>
     </a>
 
@@ -960,9 +960,9 @@ fill="none" stroke="#ffffff" stroke-width="0.3px"/-->
 <g id="highScoreScreen" display="none">
     <rect x="-2" y="-3" width="784" height="485" fill="#D8EF3D" fill-opacity="0.96" stroke="maroon" stroke-width="6"/>
 
-    <use x="560" y="40" xlink:href="#bulhole2" />
-    <use x="450" y="155" xlink:href="#bulhole2" />
-    <use x="670" y="95" xlink:href="#bulhole2" />
+    <use x="560" y="40" xlink:href="#bulhole2"/>
+    <use x="450" y="155" xlink:href="#bulhole2"/>
+    <use x="670" y="95" xlink:href="#bulhole2"/>
     <text x="480" y="50" stroke="#333333" stroke-widht="1" fill="white" font-size="40px" font-weight="bolder" font-family="monospace">HIGH SCORES</text>
     <image xlink:href="pics/lady01.svg" x="520" y="200" width="330" height="330"/>
     <image xlink:href="pics/lump6.svg" x="495" y="135" width="220" height="220"/>
@@ -973,22 +973,22 @@ fill="none" stroke="#ffffff" stroke-width="0.3px"/-->
 
     <rect x="30" y="20" width="360" height="440" fill="beige" stroke="gray" stroke-width="4" rx="25"/>
     <text x="38" y="180" stroke="none" font-size="115px" fill="black" font-weight="bold" font-stretch="ultra-condensed" fill-opacity="0.1">WANTED</text>
-    <use x="40" y="32" xlink:href="#bulhole" />
-    <use x="350" y="32" xlink:href="#bulhole" />
-    <use x="40" y="420" xlink:href="#bulhole" />
-    <use x="350" y="420" xlink:href="#bulhole" />
+    <use x="40" y="32" xlink:href="#bulhole"/>
+    <use x="350" y="32" xlink:href="#bulhole"/>
+    <use x="40" y="420" xlink:href="#bulhole"/>
+    <use x="350" y="420" xlink:href="#bulhole"/>
     <text x="120" y="28" stroke="none" fill="#2E2201" font-family="sans-serif" sont-weight="bold" font-size="11px" id="HallOfFame" font-stretch="ultra-expanded"> </text>
 
     <a>
         <rect x="0" y="0" width="100%" height="100%" fill="none" stroke="none" pointer-events="all" onclick="hideScoreList()"/>
         <rect id="highOff2" x="0" y="0" width="100%" height="100%" fill="none" stroke="none" pointer-events="all" display="none">
-            <set attributeName="display" to="block" begin="onlyView.click"/>
-            <set attributeName="display" to="none" begin="click"/>
+            <set attributeName="display" to="block" begin="onlyView.click" attributeType="XML"/>
+            <set attributeName="display" to="none" begin="click" attributeType="XML"/>
         </rect>
     </a>
 
-    <set id="showHighScoreScreen" attributeName="display" begin="indefinite" to="block" />
-    <set id="hideHighScoreScreen" attributeName="display" begin="indefinite;highOff2.click" to="none" />
+    <set id="showHighScoreScreen" attributeName="display" begin="indefinite" to="block" attributeType="XML"/>
+    <set id="hideHighScoreScreen" attributeName="display" begin="indefinite;highOff2.click" to="none" attributeType="XML"/>
 
 </g>
 
@@ -1000,16 +1000,16 @@ fill="none" stroke="#ffffff" stroke-width="0.3px"/-->
 <g id="helpScreen" display="none">
     <rect x="-2" y="-3" width="784" height="485" fill="beige" fill-opacity="0.96" stroke="maroon" stroke-width="6"/>
 
-    <use x="585" y="40" xlink:href="#bulhole2" />
+    <use x="585" y="40" xlink:href="#bulhole2"/>
     <text x="480" y="50" stroke="#333333" stroke-widht="1" fill="white" font-size="40px" font-weight="bolder" font-family="monospace">ABOUT GAME</text>
     <image xlink:href="pics/lump3.svg" x="470" y="200" width="220" height="220"/>
     <image xlink:href="pics/babka.svg" x="520" y="200" width="250" height="250"/>
 
     <a><rect id="unDisplayHelp" x="0" y="0" width="100%" height="100%" fill="none" stroke="none" pointer-events="all"/></a>
 
-    <use x="30" y="120" xlink:href="#bulhole" />
-    <use x="30" y="290" xlink:href="#bulhole" />
-    <use x="30" y="420" xlink:href="#bulhole" />
+    <use x="30" y="120" xlink:href="#bulhole"/>
+    <use x="30" y="290" xlink:href="#bulhole"/>
+    <use x="30" y="420" xlink:href="#bulhole"/>
 
     <text x="65" y="26" stroke="none" font-family="serif" font-weight="normal" font-size="16px">
         <tspan x="50" dx="0" dy="24" font-style="italic" fill="navy" font-weight="bold">Game instructions:</tspan>
@@ -1027,43 +1027,43 @@ fill="none" stroke="#ffffff" stroke-width="0.3px"/-->
         <tspan x="65" dx="0" dy="17">Sounds taken mostly from many old Amiga game modules ;-)</tspan>
         <tspan x="65" dx="0" dy="17" font-weight="bold">Special Cowboy's thanx to following programs:</tspan>
         <tspan x="65" dx="0" dy="17"> ... "Potrace" by <a xlink:href="http://potrace.sourceforge.net/" fill="maroon">Peter Selinger
-                                                        <set attributeName="fill" to="blue" begin="mouseover"/>
-                                                        <set attributeName="fill" to="maroon" begin="mouseout"/>
+                                                        <set attributeName="fill" to="blue" begin="mouseover" attributeType="XML"/>
+                                                        <set attributeName="fill" to="maroon" begin="mouseout" attributeType="XML"/>
                                                        </a> (vectorizing BW bitmaps)</tspan>
         <tspan x="65" dx="0" dy="17"> ... "Sodipodi" by <a xlink:href="http://www.sodipodi.com/" fill="maroon">Lauris Kaplinski &amp; others 
-                                                         <set attributeName="fill" to="blue" begin="mouseover"/>
-                                                         <set attributeName="fill" to="maroon" begin="mouseout"/>
+                                                         <set attributeName="fill" to="blue" begin="mouseover" attributeType="XML"/>
+                                                         <set attributeName="fill" to="maroon" begin="mouseout" attributeType="XML"/>
                                                         </a> (colorizing many images)</tspan>
         <tspan x="65" dx="0" dy="17"> ... "GoldWave" by <a xlink:href="http://www.goldwave.com/" fill="maroon">GoldWave Inc.
-                                                         <set attributeName="fill" to="blue" begin="mouseover"/>
-                                                         <set attributeName="fill" to="maroon" begin="mouseout"/>
+                                                         <set attributeName="fill" to="blue" begin="mouseover" attributeType="XML"/>
+                                                         <set attributeName="fill" to="maroon" begin="mouseout" attributeType="XML"/>
                                                         </a> (editing sounds)</tspan>
         <tspan x="65" dx="0" dy="17"> ... "beez::svg bezier animator" by <a xlink:href="http://beez.sourceforge.net/" fill="maroon">Philippe Elsass
-                                                         <set attributeName="fill" to="blue" begin="mouseover"/>
-                                                         <set attributeName="fill" to="maroon" begin="mouseout"/>
+                                                         <set attributeName="fill" to="blue" begin="mouseover" attributeType="XML"/>
+                                                         <set attributeName="fill" to="maroon" begin="mouseout" attributeType="XML"/>
                                                         </a> (path based animations)</tspan>
         <tspan x="65" dx="0" dy="17"> ... "SVG Convertor" by <a xlink:href="http://www.guide.cz/svg/" fill="maroon">Marek Raida
-                                                              <set attributeName="fill" to="blue" begin="mouseover"/>
-                                                              <set attributeName="fill" to="maroon" begin="mouseout"/>
+                                                              <set attributeName="fill" to="blue" begin="mouseover" attributeType="XML"/>
+                                                              <set attributeName="fill" to="maroon" begin="mouseout" attributeType="XML"/>
                                                              </a> (merge of all parts together)</tspan>
         <tspan x="50" dx="0" dy="24" fill="navy" font-style="italic" font-weight="bold">Author:</tspan>
         <tspan x="65" dx="0" dy="20"><a xlink:href="mailto:raida@guide.cz" fill="maroon">Marek Raida
-                                      <set attributeName="fill" to="blue" begin="mouseover"/>
-                                      <set attributeName="fill" to="maroon" begin="mouseout"/>
+                                      <set attributeName="fill" to="blue" begin="mouseover" attributeType="XML"/>
+                                      <set attributeName="fill" to="maroon" begin="mouseout" attributeType="XML"/>
                                      </a></tspan>
         <tspan x="65" dx="0" dy="17">December 2003 - February 2004</tspan>
         <tspan x="65" dx="0" dy="17">Based on many and many existing shooting games :-)</tspan>
     </text>
 
-    <set id="showHelpScreen" attributeName="display" begin="displayHelp.click" to="block" />
-    <set id="hideHelpScreen" attributeName="display" begin="unDisplayHelp.click" to="none" />
+    <set id="showHelpScreen" attributeName="display" begin="displayHelp.click" to="block" attributeType="XML"/>
+    <set id="hideHelpScreen" attributeName="display" begin="unDisplayHelp.click" to="none" attributeType="XML"/>
 
 </g>
 
 
 
 <text x="322" y="220" stroke="none" fill="#004000" font-size="16px" font-weight="bold">... please wait ...
-    <set attributeName="display" to="none" begin="2.5s"/>
+    <set attributeName="display" to="none" begin="2.5s" attributeType="XML"/>
 </text>
 
 <!-- quality options -->
