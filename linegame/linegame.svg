@@ -10,7 +10,7 @@
     <g id="chain"><line x1="0" y1="0" x2="200" y2="15" stroke="orange" stroke-width="5" opacity="0.5"/></g>
   </defs>
 
-  <rect width="900" height="500" fill="beige"/>
+  <rect width="900" height="500" fill="beige" id="background"/>
   <text id="txt" x="10" y="30" font-size="26px" font-family="sans-serif" font-weight="bold">Status</text>
   <g id="meteors"/>
   <g id="chains"/>
@@ -18,7 +18,7 @@
 
 <script type="text/ecmascript">
   var refreshRate = 50; // in ms
-  var gameScreen = {width:900, height:500}
+  var gameScreen = {width:window.innerWidth, height:window.innerHeight}
   var txt = document.getElementById("txt");
   var chains = new Array();
   var meteors = new Array();
@@ -105,9 +105,9 @@
 
   generateChain();
   
-  window.setInterval(generateChain, 8000);
-  window.setInterval(generateMeteor, 3000);
-  window.setInterval(check, 100);
+  window.setInterval(generateChain, 10000);
+  window.setInterval(generateMeteor, 5000);
+  window.setInterval(check, 200);
 
 </script>
 

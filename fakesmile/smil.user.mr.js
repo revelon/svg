@@ -25,6 +25,7 @@ Copyright 2008 David Leunen
 */
 var mpf = 25; // milliseconds per frame
 var splinePrecision = 25;
+var fakedSmilSupport = false;
 
 var svgns="http://www.w3.org/2000/svg";
 var smilanimns="http://www.w3.org/2001/smil-animation";
@@ -122,59 +123,6 @@ function smile(animating) {
     }
   }
 }
-
-// mr's attempt for dynamic smiling
-function addDynamicFragment(fragment) {
-  var animates = fragment.getElementsByTagName("*");
-  for(var j=0; j<animates.length ;j++) {
-    var nodeName = animates[j].nodeName;
-    if (nodeName=="set" || nodeName=="animate" || nodeName=="animateColor" || nodeName=="animateMotion" || nodeName=="animateTransform") {
-      addDynamicAnimation(animates[j]);
-    }
-  }
-}
-
-function addDynamicAnimation(anim) {
-  // registering animation and its target(s) ***********************************************************
-  var targets = getTargets(anim);
-  var elAnimators = new Array();
-  for(var i=0; i<targets.length ;i++) {
-    var target = targets[i];
-    var animator = new Animator(anim, target, i);
-    animators.push(animator);
-    elAnimators[i] = animator;
-  }
-  anim.animators = elAnimators;
-  var id = anim.getAttribute("id");
-  if (id)
-    id2anim[id] = anim;
-  for (var i=0; i<elAnimators.length; i++)
-    elAnimators[i].register();
-}
-
-function removeDynamicFragment(fragment) {
-  var animates = fragment.getElementsByTagName("*");
-  for(var j=0; j<animates.length ;j++) {
-    var nodeName = animates[j].nodeName;
-    if (nodeName=="set" || nodeName=="animate" || nodeName=="animateColor" || nodeName=="animateMotion" || nodeName=="animateTransform") {
-      removeDynamicAnimation(animates[j]);
-    }
-  }
-}
-
-function removeDynamicAnimation(anim) {
-  var id = anim.getAttribute("id");
-  if (id)
-    delete id2anim[id];
-  for (var i=0; i<animators.length; i++) {
-    if (animators[i].anim == anim) {
-      animators[i].stop();
-      animators.splice(i, 1);
-    }
-  }
-}
-
-
 
 // method for returning animation target(s)
 function getTargets(anim) {
@@ -1494,5 +1442,66 @@ Date.prototype.setISO8601 = function (string) {
 
 try { // marek raida's conditional loading
   var test = document.createElementNS(svgns, "animateTransform");
-  if (!test.beginElement) window.addEventListener("load", initSMIL, false);
+  if (!test.beginElement) {
+    fakedSmilSupport = true;
+    window.addEventListener("load", initSMIL, false);
+  }
 } catch(exc) {}
+
+
+
+// mr's attempt for dynamic smiling
+function addDynamicFragment(fragment) {
+  if (!fakedSmilSupport) return;
+  var animates = fragment.getElementsByTagName("*");
+  for(var j=0; j<animates.length ;j++) {
+    var nodeName = animates[j].nodeName;
+    if (nodeName=="set" || nodeName=="animate" || nodeName=="animateColor" || nodeName=="animateMotion" || nodeName=="animateTransform") {
+      addDynamicAnimation(animates[j]);
+    }
+  }
+}
+
+function addDynamicAnimation(anim) {
+  if (!fakedSmilSupport) return;
+  // registering animation and its target(s) ***********************************************************
+  var targets = getTargets(anim);
+  var elAnimators = new Array();
+  for(var i=0; i<targets.length ;i++) {
+    var target = targets[i];
+    var animator = new Animator(anim, target, i);
+    animators.push(animator);
+    elAnimators[i] = animator;
+  }
+  anim.animators = elAnimators;
+  var id = anim.getAttribute("id");
+  if (id)
+    id2anim[id] = anim;
+  for (var i=0; i<elAnimators.length; i++)
+    elAnimators[i].register();
+}
+
+function removeDynamicFragment(fragment) {
+  if (!fakedSmilSupport) return;
+  var animates = fragment.getElementsByTagName("*");
+  for(var j=0; j<animates.length ;j++) {
+    var nodeName = animates[j].nodeName;
+    if (nodeName=="set" || nodeName=="animate" || nodeName=="animateColor" || nodeName=="animateMotion" || nodeName=="animateTransform") {
+      removeDynamicAnimation(animates[j]);
+    }
+  }
+}
+
+function removeDynamicAnimation(anim) {
+  if (!fakedSmilSupport) return;
+  var id = anim.getAttribute("id");
+  if (id)
+    delete id2anim[id];
+  for (var i=0; i<animators.length; i++) {
+    if (animators[i].anim == anim) {
+      animators[i].stop();
+      animators.splice(i, 1);
+    }
+  }
+}
+
