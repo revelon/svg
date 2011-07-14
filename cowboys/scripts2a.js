@@ -92,12 +92,6 @@
 /* *********************  FUNCTION SECTION START  ************************** */
 /* ************************************************************************* */
 
-    // mr's wrapper for getElementById
-    function getElementById2(id) {
-      if (document.getElementById(id)) return document.getElementById(id)
-      else return id2anim[id];
-    }
-
     // zero ini
     function inix(evt){
       window.setTimeout("ini()", 1000); // postpone it manually to begin after! fakemile is finished/ready
@@ -115,13 +109,13 @@
         document.getElementById('music').play();
         document.getElementById('gun_reload').play();
 
-        getElementById2("bulshot1").addEventListener("beginEvent", function(){document.getElementById("colt1").play()}, false);
-        getElementById2("bulshot12").addEventListener("beginEvent", function(){document.getElementById("colt2").play()}, false);
-        getElementById2("bulshot13").addEventListener("beginEvent", function(){document.getElementById("colt3").play()}, false);
+        document.getElementById("bulshot1").addEventListener("beginEvent", function(){document.getElementById("colt1").play()}, false);
+        document.getElementById("bulshot12").addEventListener("beginEvent", function(){document.getElementById("colt2").play()}, false);
+        document.getElementById("bulshot13").addEventListener("beginEvent", function(){document.getElementById("colt3").play()}, false);
 
-        getElementById2("bulshot1b").addEventListener("beginEvent", function(){document.getElementById("colt4").play()}, false);
-        getElementById2("bulshot1b2").addEventListener("beginEvent", function(){document.getElementById("colt5").play()}, false);
-        getElementById2("latestIntroEvent").addEventListener("beginEvent", function(){document.getElementById("colt6").play()}, false);
+        document.getElementById("bulshot1b").addEventListener("beginEvent", function(){document.getElementById("colt4").play()}, false);
+        document.getElementById("bulshot1b2").addEventListener("beginEvent", function(){document.getElementById("colt5").play()}, false);
+        document.getElementById("latestIntroEvent").addEventListener("beginEvent", function(){document.getElementById("colt6").play()}, false);
     }
 
     // first initialization
@@ -153,7 +147,7 @@
         setQuality(null, 1);
 
         // hide starting screen and start action
-        getElementById2("hideStartScreen").beginElement();
+        document.getElementById("hideStartScreen").beginElement();
         setTimeout ('addBandit()', levels[level]+1500); // a bit longer for the begin
 
         // call innocemts for the first time
@@ -196,7 +190,7 @@
         // do and show all needed
         if (current != -1){
             innocents[current]['bonus'] = true;
-            getElementById2(innocents[current]['name']+'ShowDialog').beginElement();
+            document.getElementById(innocents[current]['name']+'ShowDialog').beginElement();
 
             // prepare countDown
             innoCountDown = setTimeout('disableInnoBonus('+current+', false)', 1100);
@@ -211,24 +205,24 @@
         if (byGun){
             // super, you'll got a bonus ;-)
             if (innocents[whichOne]['bonus']){
-                getElementById2(innocents[whichOne]['name']+'HideDialog').beginElement();
-                getElementById2(innocents[whichOne]['name']+'Killed').beginElement();
+                document.getElementById(innocents[whichOne]['name']+'HideDialog').beginElement();
+                document.getElementById(innocents[whichOne]['name']+'Killed').beginElement();
                 innocents[whichOne]['living'] = 0;
                 score += 50;    // add score to player
                 document.getElementById('score').firstChild.data = 'Score: ' + score;
-                getElementById2('hit3').beginElement();
+                document.getElementById('hit3').beginElement();
 
             // oh man, you killed me
             } else {
-                getElementById2(innocents[whichOne]['name']+'Killed').beginElement();
+                document.getElementById(innocents[whichOne]['name']+'Killed').beginElement();
                 innocents[whichOne]['living'] = 0;
                 score -= 50;    // get score off
                 document.getElementById('score').firstChild.data = 'Score: ' + score;
-                getElementById2('hit2').beginElement();
+                document.getElementById('hit2').beginElement();
             }
         // was not shooted at all, just reset him
         } else {
-            getElementById2(innocents[whichOne]['name']+'HideDialog').beginElement();
+            document.getElementById(innocents[whichOne]['name']+'HideDialog').beginElement();
             innocents[whichOne]['bonus'] = false;
         }
 
@@ -308,9 +302,9 @@
         if ((btn==0) && (bullets>0)){
             document.getElementById('ammo'+bullets).setAttributeNS(null, "opacity", 0.4);
             if (quality)
-                getElementById2("rotateMagazine").beginElement();
+                document.getElementById("rotateMagazine").beginElement();
             // fire's sound
-            getElementById2('gunShot').beginElement();
+            document.getElementById('gunShot').beginElement();
             document.getElementById('gun_fire').play();
             bullets--;
             //alert (bandits.length + " : " + bandits.toString());
@@ -344,7 +338,7 @@
                 loadMagazine();
             } else {
                 // nothing
-                getElementById2('emptyGun').beginElement();
+                document.getElementById('emptyGun').beginElement();
                 document.getElementById('gunIsEmpty').play();
             }
         }
@@ -368,9 +362,9 @@
         for (var i = 1; i <= 6; i++)
             document.getElementById('ammo'+i).setAttributeNS(null, "opacity", 1);
         if (quality){
-            getElementById2('reload').beginElement();
+            document.getElementById('reload').beginElement();
             document.getElementById('gun_reload').play();
-            getElementById2("reloadMagazine").beginElement();
+            document.getElementById("reloadMagazine").beginElement();
         } else {
             document.getElementById('gun_reload').play();
         }
@@ -573,7 +567,7 @@
 
         // solve if negative scorepoints - innocent people
         if (tmpDefs[this.type]['points']<0)
-            getElementById2('hit2').beginElement();
+            document.getElementById('hit2').beginElement();
 
         // create animation and apply it (from tmpDefs PARAMS)
         // prepare temporary modifier according to the animation type
@@ -636,7 +630,7 @@
                     activeElements.appendChild(bandits[i].firing);
     
                     // show blood
-                    getElementById2('hit').beginElement();
+                    document.getElementById('hit').beginElement();
                     document.getElementById('ugh1').play();
                     // decrement health
                     health -= 10;
@@ -773,7 +767,7 @@
 
         document.getElementById("finalScore").firstChild.data = score;
 
-        getElementById2("showDeathScreen").beginElement();
+        document.getElementById("showDeathScreen").beginElement();
         document.getElementById('music').pause();
         document.getElementById('endsong').play();
         // call for next action
@@ -790,8 +784,8 @@
             document.getElementById("q_SKY").setAttributeNS(null, "fill", "url(#sky_grad)");
             document.getElementById("q_STREET").setAttributeNS(null, "fill", "url(#street_grad)");
             document.getElementById("q_HEALTH").setAttributeNS(null, "fill", "url(#health_grad)");
-            getElementById2("q_BABKA").beginElement();
-            getElementById2("q_SUN").beginElement();
+            document.getElementById("q_BABKA").beginElement();
+            document.getElementById("q_SUN").beginElement();
             document.getElementById("q_FILLTOMADLO").setAttributeNS(null, "fill", "url(#madlo_ver)");
             document.getElementById("q_MADLOHOR").setAttributeNS(null, "fill", "url(#madlo_hor)");
             document.getElementById("gunSight").setAttributeNS(null, "display", "block");
@@ -806,8 +800,8 @@
             document.getElementById("q_SKY").setAttributeNS(null, "fill", "#FF9D00");
             document.getElementById("q_STREET").setAttributeNS(null, "fill", "#FAE773");
             document.getElementById("q_HEALTH").setAttributeNS(null, "fill", "#198C00");
-            getElementById2("q_BABKA").endElement();
-            getElementById2("q_SUN").endElement();
+            document.getElementById("q_BABKA").endElement();
+            document.getElementById("q_SUN").endElement();
             document.getElementById("q_FILLTOMADLO").setAttributeNS(null, "fill", "#9c4931");
             document.getElementById("q_MADLOHOR").setAttributeNS(null, "fill", "#9c4931");
             document.getElementById("gunSight").setAttributeNS(null, "display", "none");
@@ -851,9 +845,9 @@
     // what to do, when killed
     function afterDeath(){
         if (newGameAllowed){
-            getElementById2("hideDeathScreen").beginElement();
+            document.getElementById("hideDeathScreen").beginElement();
             if (score>1){
-                getElementById2("showSignatureScreen").beginElement();
+                document.getElementById("showSignatureScreen").beginElement();
             } else {
                 showScoreList(false);
             }
@@ -1027,18 +1021,18 @@
         }
 
         // do some action of getting new score list + show it
-        getElementById2("hideDeathScreen").beginElement();
-        getElementById2("hideSignatureScreen").beginElement();
-        getElementById2("showHighScoreScreen").beginElement();
+        document.getElementById("hideDeathScreen").beginElement();
+        document.getElementById("hideSignatureScreen").beginElement();
+        document.getElementById("showHighScoreScreen").beginElement();
         document.getElementById('creak').play()
     }
 
     // hide score list and get from beginning
     function hideScoreList(){
-        getElementById2("hideHighScoreScreen").beginElement();
-        getElementById2("showStartScreen").beginElement();
+        document.getElementById("hideHighScoreScreen").beginElement();
+        document.getElementById("showStartScreen").beginElement();
         //document.getElementById("klobouk").setAttribute("visibility", "visible");
-        //getElementById2("hutFly").beginElement();
+        //document.getElementById("hutFly").beginElement();
         if (music)
             document.getElementById("music").play();
     }

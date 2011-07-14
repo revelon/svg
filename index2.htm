@@ -11,6 +11,54 @@
 <h1>SVG | <span>Dedicated blog...</span></h1>
 
 <hr />
+<h2><a href="cowboys/cowboys2a.svg"><img src="cowboys/pics/hat.svg" width="200" height="200" align="right" alt="SVG Cowboys"/>SVG Cowboys Game compatibility update No.II</a></h2>
+<div class="date">2011-07-14 | svg | game</div>
+<p>Back in the early 2004, I created game called <strong><a href="http://svg.kvalitne.cz/cowboys/cowboys.svgz">SVG Cowboys for Adobe SVG Viewer</a></strong>, which utilized SMIL heavily.
+Year ago, when SMIL support became significant in modern browsers, I did <a href="cowboys/cowboys.xhtmlz">first attempt</a> to make the game compatible with them. Well, it was quite <strong>painful work then, because</strong>:</p>
+<ul>
+<li>Gecko was not supporting SVG-as-image at all and Webkit not supported viewBox properly - so I was forced to convert all the images to be part of the SVG document (very despiriting manual work :-( )</li>
+<li>performance was very very poor, until I significantly reduced number of SVG DOM vector objects by converting background to the bitmap image</li>
+<li>no one of browsers supported <em>audio</em> element in SVG DOM - so all sounds were forced to be triggered via scripting, but timing was far from elegance and accuracy of syncbased SMIL</li>
+<li>Webkit based browsers had serious masking bugs, so I added switch to disable masking completely</li>
+<li>many features were discarded, like pretty aiming cross, repetitive animations and a lot of other small effects</li>
+<li>some animateMotion elements were converted to animateTransform, because Gecko didn't supported it</li>
+<li>sounds were converted to OGG Vorbis format or individual wav files (for Opera)</li>
+<li>MSIE was not supporting SVG/SMIL in any version</li>
+</ul>
+<p><strong>However, as a proof-of-evolution, I can say that my <a href="cowboys/cowboys2a.svg">second conversion attempt</a> was much more easy and more fun</strong> 
+and, as a bonus, I added at least <strong>partial support for MSIE9+</strong> as well (via hacked version of <a href="http://leunen.d.free.fr/fakesmile/index.html">FakeSMILe</a>). To be more specific, difference between browser 
+SVG/SMIL support then (one year ago) and now are:</p>
+
+<ul>
+<li>all moder browsers have <strong>good implementation of both SVG-as-image and viewBox</strong>, so I can leave clliparts as individual files/images <em>(like in original game version)</em></li>
+<li><strong>performance of browsers is better</strong> and better, so I left <strong>whole scene vector based</strong> (with only some street image tweaks for Webkit -> masking minor issue)</li>
+<li>still, no one browser supports <em>audio</em> element in SVG DOM, but at least <strong>Opera and Gecko are firing SMIL events</strong>, which can be handled via scripting and do the syncbased work properly</li>
+<li>Webkit based browsers are still suffering some masking problems, but at least no so bad as one year ago (in Chrome case), so I'm leaving it as it is and imperfect</li>
+<li>majority of decorations can stay as they are, although framerate/performance is, esp. in high quality (LQ / HQ switch in top right corner) mode, very poor</li>
+<li><strong>Gecko supports animateMotion</strong> now</li>
+<li>sounds were converted to <strong>OGG Vorbis format and MP3</strong> for best cross-browser compatibility (MP3 for MSIE + Safari, OGG for the rest)</li>
+<li><strong>MSIE9+ has SVG support</strong> now, <em>although without SMIL</em>, but it can be replaced via scripting and FakeSMILe <em>(behaving a bit strange, yes I know, I simply do not have enough energy to solve the issue right now...  ;-)</em></li>
+</ul>
+<p>
+This <strong>second re-work took me approx. 20% of time/effort of previous one</strong> and the <strong>result is much better, compatible and featureful</strong>. And everything is only result of <strong>browser evolution</strong>, wow!! 
+So, <strong>what puzzles me a bit is mainly rendering performance => Adobe's SVG Viewer renders game so much more effectively and smoothly</strong>, compared to modern browsers, that it is still <em>Performance-King-of-This-Game</em>, even although it is sooooo oooold.... 
+To not talk only about user feeling (although it is very important, and ASV is the only one where animation is fluent and lighting fast and audio without pauses and glitches), <strong>average CPU consumption on my notebook is</strong>:</p>
+
+<table border="1">
+<tbody id="tbl"><tr>
+  <th>HQ Game Mode</th>
+  <th><img alt="" src="browsers/icofirefox.png"/>Firefox&nbsp;7&nbsp;Aurora<br/><strong>72% CPU</strong> - choppy animation</th>
+  <th><img alt="" src="browsers/icoopera.png"/>Opera&nbsp;11.50<br/><strong>85% CPU</strong> - choppy animation</th>
+  <th><img alt="" src="browsers/icosafari.png"/>Safari&nbsp;5.0.5<br/><strong>75% CPU</strong> - very choppy animation</th>
+  <th><img alt="" src="browsers/icochrome.png"/>Chrome&nbsp;13 Beta<br/><strong>80% CPU</strong> - choppy animation and crashy</th>
+  <th><img alt="" src="browsers/icoie.png"/>MSIE&nbsp;9<br/><strong>66% CPU</strong> - smooth animation, but script based</th>
+  <th><img alt="" src="browsers/icoasv.png"/>Adobe SVG Viewer&nbsp;3.03<br/><strong>53% CPU</strong> - smooth animation</a></th>
+</tr>
+</tbody>
+</table>
+
+<p><em>PS 1: During loading be please patient, I'm not compiling all the work into the one file only, like I did for previous versions, so your browser must download tens of not very size optimized files...<br/>
+PS 2: <strong>Chrome tends to be a bit crashy</strong> during this game/experiments and is down quite often for me, sometimes after 10s, sometimes after a minute, but stil...</em></p>
 
 <h2>Unsorted news</h2>
 <div class="date">2011-07-12 | svg</div>

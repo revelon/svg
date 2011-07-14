@@ -729,8 +729,7 @@ fill="none" stroke="#ffffff" stroke-width="0.3px"/-->
     <rect x="-2" y="-3" width="784" height="485" fill="beige" fill-opacity="0.8" stroke="maroon" stroke-width="6"/>
     <g transform="translate(70 -60)">
         <image x="0" y="-75" width="200" height="200" xlink:href="pics/hat.svg" visibility="hidden" id="klobouk">
-            <set attributeName="visibility" to="visible" begin="hutFly.begin" attributeType="XML"/>
-            <set attributeName="visibility" to="hidden" begin="hideStartScreen.begin" attributeType="XML"/>
+          <set attributeName="visibility" to="visible" begin="hutFly.begin" attributeType="XML"/>
         </image>
         <g visibility="hidden" transform="scale(0.7)">
             <use x="70" y="-20" xlink:href="#bulhole">
@@ -739,7 +738,6 @@ fill="none" stroke="#ffffff" stroke-width="0.3px"/-->
                     <html:source src="sounds/colt.ogg" type="audio/ogg"/>
                     <html:source src="sounds/colt.mp3" type="audio/mpeg"/>
                 </html:audio>
-                <set attributeName="visibility" to="hidden" begin="showStartScreen.begin" attributeType="XML"/>
             </use>
             <use x="170" y="-20" xlink:href="#bulhole">
                 <set id="bulshot12" attributeName="visibility" to="visible" begin="bulshot1.begin+1.5s" attributeType="XML"/>
@@ -747,7 +745,6 @@ fill="none" stroke="#ffffff" stroke-width="0.3px"/-->
                     <html:source src="sounds/colt.ogg" type="audio/ogg"/>
                     <html:source src="sounds/colt.mp3" type="audio/mpeg"/>
                 </html:audio>
-                <set attributeName="visibility" to="hidden" begin="showStartScreen.begin" attributeType="XML"/>
             </use>
             <use x="200" y="60" xlink:href="#bulhole">
                 <set id="bulshot13" attributeName="visibility" to="visible" begin="bulshot1.begin+2.7s" attributeType="XML"/>
@@ -755,11 +752,10 @@ fill="none" stroke="#ffffff" stroke-width="0.3px"/-->
                     <html:source src="sounds/colt.ogg" type="audio/ogg"/>
                     <html:source src="sounds/colt.mp3" type="audio/mpeg"/>
                 </html:audio>
-                <set attributeName="visibility" to="hidden" begin="showStartScreen.begin" attributeType="XML"/>
             </use>
         </g>
 
-        <animateMotion id="hutFly" begin="showStartScreen.begin+1s;2.2s;indefinite" end="hideStartScreen.begin" dur="5s" repeatCount="1" fill="freeze" attributeType="XML" 
+        <animateMotion id="hutFly" begin="2.2s;showStartScreen.begin+1s;indefinite" end="hideStartScreen.begin" dur="5s" repeatCount="1" fill="freeze" attributeType="XML" 
         path="M 84.65907 -22.26250 C 84.65907 -22.26250 334.5399 125.2083 314.0580 100.6298 C 333.1746 40.54916 116.0649 155.2486 88.75553 193.4818 C 87.39007 148.4212 75.10077 168.9032 259.4392 242.6386 C 264.9010 183.9234 173.4145 257.6587 143.3741 321.8358"/>
 
     </g>
@@ -770,7 +766,6 @@ fill="none" stroke="#ffffff" stroke-width="0.3px"/-->
         <text x="562" y="340" stroke="#aaaaaa" stroke-width="0.8" fill="none" font-size="60px" font-weight="bolder" font-family="sans-serif">1.0</text>
         <image x="50" y="40" width="660" height="300" xlink:href="pics/cowboys.svg"/>
         <set attributeName="display" to="block" begin="hutFly.end+0.3s" attributeType="XML"/>
-        <set attributeName="display" to="none" begin="hideStartScreen.begin;showStartScreen.begin" attributeType="XML"/>
     </g>
 
     <g transform="translate(343,243) scale(0.23)" stroke="none" fill="#ffffff" fill-opacity="0.5" id="smoke" display="none">
@@ -803,7 +798,6 @@ fill="none" stroke="#ffffff" stroke-width="0.3px"/-->
         M9,-175C9,-175 -51,-147 -49,-115C-47,-83 -8,-104 -17,-39C-26,26 -6,20 2,52C10,84 22,16 23,-42C24,-100 -29,-101 -11,-128"
          />    
         <set attributeName="display" to="block" begin="hutFly.end" attributeType="XML"/>
-        <set attributeName="display" to="none" begin="showStartScreen.begin" attributeType="XML"/>
     </g>
 
 
@@ -816,7 +810,6 @@ fill="none" stroke="#ffffff" stroke-width="0.3px"/-->
             </html:audio>
             <text x="440" y="280" stroke="none" fill="black" font-size="18px" font-weight="bold" font-style="italic" font-family="serif">by</text>
             <set id="bulshot1b" attributeName="visibility" to="visible" begin="hutFly.end+1.5s" attributeType="XML"/>
-            <set attributeName="visibility" to="hidden" begin="showStartScreen.begin" attributeType="XML"/>
         </g>
 
         <g>
@@ -827,7 +820,6 @@ fill="none" stroke="#ffffff" stroke-width="0.3px"/-->
             </html:audio>
             <text x="466" y="280" stroke="none" fill="black" font-size="18px" font-weight="bold" font-style="italic" font-family="serif">Marek</text>
             <set id="bulshot1b2" attributeName="visibility" to="visible" begin="bulshot1b.begin+0.5s" attributeType="XML"/>
-            <set attributeName="visibility" to="hidden" begin="showStartScreen.begin" attributeType="XML"/>
         </g>
 
         <g>
@@ -838,14 +830,12 @@ fill="none" stroke="#ffffff" stroke-width="0.3px"/-->
             </html:audio>
             <text x="522" y="280" stroke="none" fill="black" font-size="18px" font-weight="bold" font-style="italic" font-family="serif">Raida</text>
             <set id="latestIntroEvent" attributeName="visibility" to="visible" begin="bulshot1b.begin+1s" attributeType="XML"/>
-            <set attributeName="visibility" to="hidden" begin="showStartScreen.begin" attributeType="XML"/>
         </g>
     </g>
 
     <text x="265" y="399" stroke="none" fill="#004400" font-weight="bold" font-style="italic" font-family="serif" font-size="15px" visibility="hidden">
         ...click on the screen to start the game...
         <set attributeName="visibility" to="visible" begin="latestIntroEvent.begin+1s" attributeType="XML"/>
-        <set attributeName="visibility" to="hidden" begin="showStartScreen.begin" attributeType="XML"/>
     </text>
 
     <set id="showStartScreen" attributeName="display" begin="indefinite" to="block" attributeType="XML"/>
@@ -972,7 +962,7 @@ fill="none" stroke="#ffffff" stroke-width="0.3px"/-->
     <image x="450" y="290" width="150" height="180" xlink:href="pics/sud.svg"/>
 
     <rect x="30" y="20" width="360" height="440" fill="beige" stroke="gray" stroke-width="4" rx="25"/>
-    <text x="38" y="180" stroke="none" font-size="115px" fill="black" font-weight="bold" font-stretch="ultra-condensed" fill-opacity="0.1">WANTED</text>
+    <text x="38" y="180" stroke="none" font-size="80px" fill="black" font-weight="bold" fill-opacity="0.1">WANTED</text>
     <use x="40" y="32" xlink:href="#bulhole"/>
     <use x="350" y="32" xlink:href="#bulhole"/>
     <use x="40" y="420" xlink:href="#bulhole"/>
@@ -1079,5 +1069,5 @@ fill="none" stroke="#ffffff" stroke-width="0.3px"/-->
 
 <image xlink:href="http://www.google-analytics.com/__utm.gif?utmwv=4.7.1&amp;utmn=21830374&amp;utmhn=svg.kvalitne.cz&amp;utmcs=UTF-8&amp;utmsr=1920x1080&amp;utmsc=24-bit&amp;utmul=en-us&amp;utmje=1&amp;utmfl=10.0%20r45&amp;utmdt=SVG%C2%A0%E2%80%94%C2%A0It%27s%20in%20your%20hands...&amp;utmhid=1377849700&amp;utmr=-&amp;utmp=%2Findex2.htm&amp;utmac=UA-11950721-1&amp;utmcc=__utma%3D251371972.1884550355.1260220320.1272562824.1272576758.56%3B%2B__utmz%3D251371972.1263752798.41.3.utmcsr%3Dgoogle%7Cutmccn%3D(organic)%7Cutmcmd%3Dorganic%7Cutmctr%3Dsvg%2520smil%2520demo%3B" width="1" height="1"/>
 
-    <script type="text/ecmascript" xlink:href="../fakesmile/smil.user.mr.js"/>
+<script type="text/ecmascript" xlink:href="../fakesmile/smil.user.mr.js"/>
 </svg>
