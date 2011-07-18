@@ -14,7 +14,9 @@
   <text id="txt" x="10" y="30" font-size="26px" font-family="sans-serif" font-weight="bold">Status</text>
   <g id="meteors"/>
   <g id="chains"/>
-  
+
+  <rect x="200" y="20" width="100" height="30" fill="green" onclick="beginGame()"/>
+  <rect x="400" y="20" width="100" height="30" fill="red" onclick="endGame()"/>  
 
 <script type="text/ecmascript">
   var refreshRate = 50; // in ms
@@ -27,6 +29,25 @@
   var meteorsNode = document.getElementById("meteors");
   var chainPrototype = document.getElementById("chain").firstChild;
   var meteorPrototype = document.getElementById("meteor").firstChild;
+  var detector = null;
+  var meteorTimer = null;
+  var chainTimer = null;
+
+  function beginGame() {
+    generateChain();
+    detector = window.setInterval(check, 200);
+    meteorTimer = window.setInterval(generateChain, 10000);
+    chainTimer = window.setInterval(generateMeteor, 5000);
+  }
+
+  function endGame() {
+    window.clearInterval(detector);
+    window.clearInterval(meteorTimer);
+    window.clearInterval(chainTimer);
+    lastMouseEvent = null;
+    while (chainsNode.hasChildNodes()) chainsNode.removeChild(chainsNode.firstChild);
+    while (meteorsNode.hasChildNodes()) meteorsNode.removeChild(meteorsNode.firstChild);
+  }
 
   function generateMeteor() {
     var met = meteorPrototype.cloneNode(true);
@@ -102,12 +123,6 @@
     if (val == to) return; // stupid logic, should be more robust
     else setTimeout(function(){simpleAnimate(obj, what, to, by)}, refreshRate);
   }
-
-  generateChain();
-  
-  window.setInterval(generateChain, 10000);
-  window.setInterval(generateMeteor, 5000);
-  window.setInterval(check, 200);
 
 </script>
 
