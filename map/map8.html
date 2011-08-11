@@ -1,10 +1,27 @@
+<!DOCTYPE html>
 <html>
 <head>
-<script src="src/svg.js" data-path="src/"></script>
+<script src="../svgweb/svg.js" data-path="../svgweb/"></script>
 <script>
 
 var colors = {normal: {'fill-opacity':1}, normalHover: {'fill-opacity':0.3}, active: {'fill-opacity':0}, activeHover: {'fill-opacity':0} };
 var selectedOnes = {};
+var regionCounts = {
+"Zlinsky" : 4,
+"Ustecky" : 29,
+"Stredocesky" : 100,
+"Praha" : 21,
+"Plzensky" : 87,
+"Pardubicky" : 59,
+"Moravskoslezsky" : 6,
+"Olomoucky" : 3,
+"Kralovehradecky" : 79,
+"Karlovarsky" : 29,
+"Liberecky" : 39,
+"Vysocina" : 19,
+"Jihocesky" : 9,
+"Jihomoravsky" : 10
+            }
 
 function getCoords( oElement ) {
   var iReturnValue = {x:0,y:0};
@@ -61,30 +78,12 @@ window.onload = function() {
   }
 }
 
-var regionCounts = {
-"Zlinsky" : 4,
-"Ustecky" : 29,
-"Stredocesky" : 100,
-"Praha" : 21,
-"Plzensky" : 87,
-"Pardubicky" : 59,
-"Moravskoslezsky" : 6,
-"Olomoucky" : 3,
-"Kralovehradecky" : 79,
-"Karlovarsky" : 29,
-"Liberecky" : 39,
-"Vysocina" : 19,
-"Jihocesky" : 9,
-"Jihomoravsky" : 10
-            }
-
-
 </script>
 
  </head>
  <body>
    
-<h1>Test map 7 - plain clickable application with region names + opacity</h1>
+<h1>Test map 8 - plain clickable application with region names in mouse-tracked hover box</h1>
 
 <table>
 <tr>
