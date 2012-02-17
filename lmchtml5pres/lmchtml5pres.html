@@ -1,0 +1,2242 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<title>LMC's HTML 5 Presentation, by Marek Raida, version 1.01</title>
+
+<!-- This presentation utilizes DZslides by Paul Roget, http://paulrouget.com/dzslides/ -->
+<!-- SVG images are taken from clker.com and openclipart.org -->
+
+<!-- Maybe a font from http://www.google.com/webfonts ? -->
+<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet'>
+
+<style>
+  html { background-color: black; }
+  body { background-color: white; }
+  /* A section is a slide. It's size is 800x600, and this will never change */
+  section {
+      /* The font from Google */
+      font-family: 'Oswald', arial, serif;
+      font-size: 40px;
+  }
+  h1, h2 {
+    margin-top: 200px;
+    text-align: center;
+    font-size: 80px;
+  }
+  h3, h4 {
+    background-image: -ms-linear-gradient(left, #FFFFFF 0%, aquamarine 66%, #FFFFFF 100%);
+    background-image: -moz-linear-gradient(left, #FFFFFF 0%, aquamarine 66%, #FFFFFF 100%);
+    background-image: -o-linear-gradient(left, #FFFFFF 0%, aquamarine 66%, #FFFFFF 100%);
+    background-image: -webkit-linear-gradient(left, #FFFFFF 0%, aquamarine 66%, #FFFFFF 100%);
+    background-image: linear-gradient(left, #FFFFFF 0%, aquamarine 66%, #FFFFFF 100%);
+    text-shadow: 2px 2px 7px gray;
+    -o-text-shadow: 2px 2px 7px gray;
+    -moz-text-shadow: 2px 2px 7px gray;
+    -webkit-text-shadow: 2px 2px 7px gray;
+    -ms-text-shadow: 2px 2px 7px gray;
+    margin-bottom: 3px;
+  }
+  q span {
+    color: cyan;
+    text-shadow: 4px 4px 4px steelblue;
+    -o-text-shadow: 2px 2px 7px steelblue;
+    -moz-text-shadow: 4px 4px 4px steelblue;
+    -webkit-text-shadow: 2px 2px 7px steelblue;
+    -ms-text-shadow: 2px 2px 7px steelblue;
+  }
+  mark {
+   border-radius: 6px; border: 3px solid gold; margin: 1px; padding: 0 2px; display: inline-block;
+  }
+  h3 {
+    margin: 100px 0 50px 100px;
+  }
+  p.smaller {
+    font-size: 13pt;
+    margin-bottom: 10pt;
+  }
+  ul, ol {
+      margin: 20px 60px;
+  }
+  pre {
+      background-color: lightgray;
+  }
+  pre.smaller {
+      font-size: 0.8em;
+      background-color: lightgray;
+  }
+  pre.smaller2 {
+      font-size: 0.72em;
+      background-color: lightgray;
+  }
+  pre.smallest {
+      font-size: 0.7em;
+      color: white;
+      background-color: gray;
+  }
+  
+  code strong {
+    text-shadow: 3px 3px 1px gray;
+    -o-text-shadow: 3px 3px 1px gray;
+    -moz-text-shadow: 3px 3px 1px gray;
+    -webkit-text-shadow: 3px 3px 1px gray;
+    -ms-text-shadow: 3px 3px 1px gray;
+  }
+  
+  q {
+    display: inline-block;
+    width: 700px;
+    height: 600px;
+    background-color: black;
+    color: white;
+    font-size: 60px;
+    padding: 50px;
+  }
+
+  img.full, video.full {
+    width: 800px;
+    height: 600px;
+    position: absolute;
+    top: 0;
+    background-color: black;
+    z-index: -1;
+  }
+
+  video, audio {
+    margin-left: 8px;
+  }
+
+  footer {
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+  }
+
+  .icon {width:28px;height:26px;background-image:url('browser_icons_whitebg_small.jpg');background-repeat:no-repeat;overflow:hidden;border:0px solid black;float:right;font: 11pt sans-serif;color:black;border-radius:12px}
+  .msie {background-position:-4px -3px}
+  .firefox {background-position:-34px -2px}
+  .safari {background-position:-64px -2px}
+  .opera {background-position:-91px -3px}
+  .chrome {background-position:-174px -3px}
+
+ .acti {
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: green;
+  border: 1px solid darkgreen;
+  color: gold;
+  display: inline-block;
+  padding: 3px;
+  margin: 2px;
+ }
+ .acti:hover {
+  color: darkgreen;
+  background-color: gold;
+ }
+
+  /* Transition effect */
+  /* Feel free to change the transition effect for original
+     animations. See here:
+     https://developer.mozilla.org/en/CSS/CSS_transitions
+     How to use CSS3 Transitions: */
+  section {
+      -moz-transition: left 400ms linear 0s;
+      -webkit-transition: left 400ms linear 0s;
+      -ms-transition: left 400ms linear 0s;
+      transition: left 400ms linear 0s;
+  }
+
+  /* Before */
+  section { left: -150%; }
+  /* Now */
+  section[aria-selected] { left: 0; }
+  /* After */
+  section[aria-selected] ~ section { left: +150%; }
+
+  /* Incremental elements */
+
+  /* By default, visible */
+  .incremental > * { opacity: 1; }
+
+  /* The current item */
+  .incremental > *[aria-selected] { color: red; opacity: 1; }
+
+  /* The items to-be-selected */
+  .incremental > *[aria-selected] ~ * { opacity: 0.2; }
+
+  * { margin: 0; padding: 0; }
+  details { display: none; }
+  body {
+    width: 800px; height: 600px;
+    margin-left: -400px; margin-top: -300px;
+    position: absolute; top: 50%; left: 50%;
+    overflow: hidden;
+  }
+  section {
+    position: absolute;
+    pointer-events: none;
+    width: 100%; height: 100%;
+  }
+  section[aria-selected] { pointer-events: auto; }
+  html { overflow: hidden; }
+  body { display: none; }
+  body.loaded { display: block; }
+  .incremental {visibility: hidden; }
+  .incremental[active] {visibility: visible; }
+
+  .dates {background-color: lightgreen; border-radius: 6px; border: 2px solid darkgreen; margin: 3px; padding-left: 4px; width: 90px; display: inline-block}
+  input, textarea {font-size:12pt}
+  form#tst1 input[required] {
+    background-color: lightgreen;
+  }
+  form#tst1 input:invalid {
+    background-color: pink;
+  }
+ fieldset#tstfld {font-size:20pt}
+ fieldset#tstfld[disabled] {color: gray}
+  .st1 { text-transform: uppercase; }
+  .st2 { color: magenta}
+  div p {font-size:19pt}
+  div#ED ol {font-size:17pt;margin:1px 40px}
+  #threeColumnsArea {
+      column-count: 2;
+      column-gap: 5mm;
+      -moz-column-count: 2;
+      -moz-column-gap: 5mm;
+      -webkit-column-count: 2;
+      -webkit-column-gap: 5mm;
+  }
+  #fixedWidthColumns {
+      column-width: 220px;
+      -moz-column-width: 220px;
+      -webkit-column-width: 220px;
+  }
+  table#striped td {
+    padding: 2px;
+  }
+  table#striped {
+    font-size:14pt;
+    margin: auto;
+  }
+  table#striped tr:nth-child(even) {
+    background: silver;
+  }
+  table#striped tr:nth-child(odd) {
+    background: darkgray;
+    color: white;
+  }
+ #rnd {
+    margin: 0.5mm 3mm;
+    background: #B0EAA1;
+    padding: 3mm;
+    font-size: 25pt;
+    border-radius: 5mm 2mm 4mm 12mm;
+    box-shadow: black 2mm 4mm 7mm;
+ }
+p#trans {
+   margin: 3pt 8pt;
+   padding: 3pt;
+   background-color: white;
+   color: black;
+   transition: all .4s linear;
+   -o-transition: all .4s linear;
+   -moz-transition: all .4s linear;
+   -webkit-transition: all .4s linear;
+   -ms-transition: all .4s linear;
+   border-radius: 6mm;
+   border: 2px solid maroon;
+   
+}
+p#trans:hover {
+   background-color: #333;
+   color: #eee;
+   border-radius: 2mm;
+   border-color: white;
+}
+p#shad {
+   margin: 2pt 8pt;
+   background-color: black;
+   color: white;
+   text-shadow: 2px 2px 6px rgba(255, 255, 255, 0.8);
+   -o-text-shadow: 2px 2px 6px rgba(255, 255, 255, 0.8);
+   -moz-text-shadow: 2px 2px 6px rgba(255, 255, 255, 0.8);
+   -webkit-text-shadow: 2px 2px 6px rgba(255, 255, 255, 0.8);
+   -ms-text-shadow: 2px 2px 6px rgba(255, 255, 255, 0.8);
+   border-radius: 4mm;
+   padding: 4pt;
+}
+#mqt {
+  background-color: green;
+  margin: 8pt;
+  border-radius: 4mm;
+  padding: 4pt;
+}
+#mqt p {
+  font-size: 22pt;
+}
+#mqt em {
+  font-size: 16pt;
+}
+#mqt h5 span {
+  color: red;
+  display: none;
+}
+@media screen and (min-width: 0) and (max-width: 499px) {
+  #mqt {
+    background-color: red;
+  }
+  #mqt p {
+    display: none;
+  }
+  #mqt h5 span {
+    display: none;
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 800px) {
+  #mqt {
+    background-color: yellow;
+  }
+  #mqt h5 span {
+    display: inline-block;
+  }  
+}
+div#transformed {
+  background-color: purple;
+  margin-left: 14pt;
+  border-radius: 4mm;
+  padding: 4pt;
+  border: 4px dashed pink;  
+  width: 210px;
+  font-size: 15pt;
+  color: white;
+	transform: skew(35deg) rotate(10deg) translate(250px, -20px) scale(3, 0.6);
+	-moz-transform: skew(35deg) rotate(10deg) translate(250px, -20px) scale(3, 0.6);
+	-o-transform: skew(35deg) rotate(10deg) translate(250px, -20px) scale(3, 0.6);
+	-ms-transform: skew(35deg) rotate(10deg) translate(250px, -20px) scale(3, 0.6);
+	-webkit-transform: skew(35deg) rotate(10deg) translate(250px, -20px) scale(3, 0.6);
+}
+@-webkit-keyframes roto {
+ 0% {-webkit-transform: rotate(0deg)}
+ 100% {-webkit-transform: rotate(360deg)}
+}
+@-moz-keyframes roto {
+ 0% {-moz-transform: rotate(0deg)}
+ 100% {-moz-transform: rotate(360deg)}
+}
+@keyframes roto {
+ 0% {transform: rotate(0deg)}
+ 100% {transform: rotate(360deg)}
+}
+div#animated {
+  background-color: steelblue;
+  margin: 20pt 80pt;
+  border-radius: 4mm;
+  padding: 3pt;
+  border: 3px solid navy;
+  width: 120px;
+  height: 120px;  
+  font-size: 15pt;
+  color: white;
+  animation: roto 8s infinite ease-in-out;
+  -webkit-animation: roto 8s infinite ease-in-out;
+  -moz-animation: roto 8s infinite ease-in-out;
+  -ms-animation: roto 8s infinite ease-in-out;
+}
+p#gradient {
+  margin: 3pt;
+  border-radius: 6mm;
+  padding: 3pt;
+  border: 3px solid darkgreen;  
+  font-size: 24pt;
+  color: black;
+  background-image: -ms-linear-gradient(top, white 0%, orange 60%, green 100%);
+  background-image: -moz-linear-gradient(top, white 0%, orange 60%, green 100%);
+  background-image: -o-linear-gradient(top, white 0%, orange 60%, green 100%);
+  background-image: -webkit-linear-gradient(top, white 0%, orange 60%, green 100%);
+  background-image: linear-gradient(top, white 0%, orange 60%, green 100%);
+}
+</style>
+</head>
+
+
+<section>
+    <h1>HTML5 Presentation</h1>
+    <svg viewBox="-45.5 -119.5 704 1050" width="704" height="1050">
+    <g transform="scale(0.2) translate(999 -300)">
+    <rect height="25.3" width="25.3" y="886" x="240" fill="#FFF"/>
+    <rect height="25.3" width="25.3" y="882" x="351" fill="#FFF"/>
+    <rect height="18.7" width="93.7" y="863" x="182" fill="#FFDBBD"/>
+    <rect height="18.7" width="93.7" y="859" x="338" fill="#FFDBBD"/>
+    <polygon points="433,850,433,759,337,759,337,850" fill="#3F4B54"/>
+    <rect height="21.8" width="103" y="844" x="333" fill="#53626B"/>
+    <polygon points="278,850,278,759,181,759,181,850" fill="#3F4B54"/>
+    <rect height="21.8" width="103" y="844" x="178" fill="#53626B"/>
+    <path d="M84.5,732l-49.1-550h540l-49.1,550-222,62.2" fill="#E34F26"/>
+    <path d="M307,747l178-49,41.8-471h-220" fill="#EF652A"/>
+    <path d="M307,431h-89.6l-5.98-69.3h95.6v-66.9h-170l1.2,17.9,17,186h152v-67.9zm0,176h-1.2l-75.3-20.3-4.78-53.8h-66.9l8.37,106,139,38.2h1.2v-70.2z" fill="#EBEBEB"/>
+    <path d="M305,431v68.2h83.7l-8.37,87.3-75.3,20.3v70.5l139-38.2,1.2-12,15.5-178,2.39-17.9h-159zm0-136v66.9h164l1.2-14.3,3.59-34.7,1.2-17.9h-170z" fill="#FFF"/>
+    <path opacity="0.3" d="M1000,50.4c-13.6-10.4-25.1-62.1-6.99-74.1s53.1-16.7,78.4-8.93c30,7.8-40,106-70,83z" fill="#FFF"/>
+    <path d="M580,265c-2.78-4.63-142-13.9-173-10.2-46.4,4.72-63.7,24.2-102,24.2-38.5,0-46.4-19.4-101-22.6-30.9-1.75-170,5.56-173,10.2-2.78,4.64,0.929,37.1,3.72,39.3,2.79,2.16,17.7,0.773,17.7,12.1,0.006,29.7,11.2,65.9,17.7,77,6.52,11.1,11.5,23.5,45.6,33.7,31.1,9.31,66,7.11,89.3-4.02,18.4-8.8,46.5-31.5,60.5-65.9,11.1-27.3,14.1-54.5,40-54.5,26,0,29.8,25.6,40.9,53,13.9,34.3,42.1,57.1,60.5,65.9,23.2,11.1,58.2,13.3,89.3,4.02,34.1-10.2,39.1-22.6,45.6-33.7,6.52-11.1,17.7-47.3,17.7-77,0-11.3,14.9-9.9,17.7-12.1,0-2,4-35,1-39zm-330,79c-4.65,20.4-23.2,56.6-56.7,69.6s-71.6,6.49-94.9-6.49c-23.2-13-24.2-46.4-25.1-77.9-0.936-31.5,4.65-39,17.7-47.3,7.82-5.02,50.2-10.2,75.3-10.2s60.9,3.06,78.1,14.8c18,11,11,36,6,56zm287-16c-0.934,31.5-1.87,64.9-25.1,77.9-23.3,13-61.4,19.5-94.9,6.5s-52.1-49.2-56.7-69.6c-4.65-20.4-12.1-45.5,5.58-57.5,17.3-11.8,53-14.8,78.1-14.8s67.5,5.19,75.3,10.2c14,10,19,17,18,49z" fill="#111"/>
+    <path d="M97.8,926h182v-53.5h-95.4c-87.2,1-87.2,13-87.2,54z" fill="#231F20"/>
+    <path d="M97.1,915c-1.02,5.13,0.101,11.4,0.101,11.4h183v-11.4h-183z" fill="#FFF"/>
+    <path d="M262,896c0-5.44-4.41-9.84-9.83-9.84s-9.84,4.4-9.84,9.84c0,5.43,4.42,9.84,9.84,9.84,6,0,10-5,10-10z" fill="#FFF"/>
+    <path d="M188,872v12c0,1.42,1.15,2.58,2.57,2.58s2.57-1.16,2.57-2.58v-12h-6z" fill="#FFF"/>
+    <path d="M182,886c1.42,0,2.57-1.16,2.57-2.58v-12c-1.75,0-3.46,0.005-5.15,0.018v11.9c-1,2,0,3,2,3z" fill="#FFF"/>
+    <path d="M163,886c1.42,0,2.57-1.16,2.57-2.58v-11.7c-1.77,0.049-3.47,0.105-5.15,0.175v11.6c0,2,1,3,2,3z" fill="#FFF"/>
+    <path d="M172,886c1.42,0,2.57-1.16,2.57-2.58v-11.9c-1.75,0.024-3.47,0.049-5.15,0.084v11.8c0,2,1,3,2,3z" fill="#FFF"/>
+    <path d="M154,886c1.42,0,2.57-1.16,2.57-2.58v-11.4c-1.77,0.089-3.48,0.185-5.14,0.295v11.1c-1,2,1,3,2,3z" fill="#FFF"/>
+    <rect height="8.57" width="183" y="923" x="97.2" fill="#231F20"/>
+    <path d="M432,872h-95.4v53.5h182c-1-41-1-54-87-54z" fill="#231F20"/>
+    <path d="M336,915v11.4h183s1.12-6.28,0.102-11.4h-183z" fill="#FFF"/>
+    <path d="M364,906c5.42,0,9.84-4.41,9.84-9.84,0-5.44-4.42-9.84-9.84-9.84s-9.83,4.4-9.83,9.84c0,5,5,10,10,10z" fill="#FFF"/>
+    <path d="M423,872v12c0,1.42,1.15,2.58,2.57,2.58s2.58-1.15,2.58-2.58v-12h-6z" fill="#FFF"/>
+    <path d="M437,884v-11.9c-1.68-0.013-3.39-0.018-5.15-0.018v12c0,1.42,1.15,2.58,2.57,2.58,1-1,2-2,2-3z" fill="#FFF"/>
+    <path d="M456,884v-11.6c-1.68-0.069-3.38-0.126-5.15-0.175v11.7c0,1.42,1.15,2.58,2.57,2.58,1-1,2-2,2-3z" fill="#FFF"/>
+    <path d="M447,884v-11.8c-1.67-0.035-3.4-0.06-5.15-0.084v11.9c0,1.42,1.15,2.58,2.57,2.58s2-2,2-3z" fill="#FFF"/>
+    <path d="M465,884v-11.1c-1.67-0.11-3.37-0.206-5.15-0.295v11.4c0,1.42,1.15,2.58,2.57,2.58,1-1,2-2,2-3z" fill="#FFF"/>
+    <rect height="8.57" width="183" y="923" x="336" fill="#231F20"/>
+    <rect height="195" width="61" y="413" x="-19.9" fill="#FFDBBD"/>
+    <path d="M10.6,379l25,2.15,5.55,19h-61l5.55-19" fill="#EF652A"/>
+    <path d="M9.34,365c-19.2,0-34.8,13.8-34.8,30.9v36.9h69.5v-36.9c0.1-17-15.5-31-34.7-31z" fill="#E34F26"/>
+    <rect height="27.9" width="78.4" y="429" x="-29.8" fill="#EF652A"/>
+    <rect height="195" width="61" y="400" x="574" fill="#FFDBBD"/>
+    <path d="M605,379l25,2.15,5.54,19h-61l5.55-19" fill="#EF652A"/>
+    <path d="M604,365c-19.2,0-34.8,13.8-34.8,30.9v36.9h69.5v-36.9c-1-17-16-31-35-31z" fill="#E34F26"/>
+    <rect height="27.9" width="78.4" y="429" x="564" fill="#EF652A"/>
+    <path d="M580,657l-5.55-62.1h61l-5.54,62.1-25,7.02" fill="#FFDBBD"/>
+    <path d="M-14.3,670l-5.55-62.1h61l-5.6,62-25,7.02" fill="#FFDBBD"/>
+    <path d="M298-121l47.8,4.11c9.82,2.46,19.9,3.64,29.6,6.66,19.1,4.89,37.1,13.1,54,23,9.53,5.66,18.7,12,26.8,19.6,14.1,11.9,27.2,24.8,39.7,38.3,5.72,6.8,11.5,13.6,17.1,20.4,9.55,12.9,19.9,25.6,25.2,41,2.22,5.96,3.23,12.3,4.14,18.5,11.7,2.78,21.5,11,27.3,21.4,2.56,4.8,3.67,10.2,5.76,15.2,7.86,19.7,15.7,39.5,23.6,59.2,3.64,8.33,4.53,17.4,4.76,26.4,0.377,5.34-2.55,10.6-7.06,13.4-11.5,6.11-24,10.2-36.7,12.8-21.5,3.03-42.1,11.1-63.8,13.3-53.9,11.3-108,20-163,25.3-69.8,7.58-140,13.2-210,16.2-7.25,0.451-14.4-1.1-21.7-0.756-10.1,0.575-20-1.69-30-2.09-14.8-0.787-29.4-3.5-43.9-6.4-5.91-1.74-11.7-3.85-17.8-4.9-4.88-1.18-10.5-1.16-14.4-4.7-4.2-4.6-4.91-11.1-5.86-17l2.96-34.4c1.79-5.9,2.34-12.1,3.66-18.1,3.96-21.8,11.3-42.9,19.4-63.5,0.658-1.51,1.37-3.31,3.12-3.82,4.99-1.74,10.4-1.75,15.6-1.58-2.62-4.34-5.11-8.92-5.58-14.1-2.22-14.1,3.69-27.7,9.32-40.3,8.26-20.1,19.6-38.8,33.3-55.7,9.1-14.4,21.9-26.7,35.2-38.4,5.32-5.78,12.3-9.62,18.1-14.9,45-34,101-52.4,157-53.6,5-1,11,0,16-1z"/>
+    <path d="M282-104c7.6,0.274,15.2-0.34,22.8,0.54,10.6,1.22,21.4,1.26,31.9,3.6,16.1,2.25,32.3,5.07,47.7,10.7,7.27,2.98,14,7.08,20.9,10.8,11.3,6.35,23.1,11.8,33.8,19,16.3,11,31.4,23.8,44.9,38.1,4.74,5.5,9.34,11.1,14.1,16.6,7.49,8.93,11.6,20,16.4,30.4,3.26,7.4,6.81,14.7,9.58,22.3-8.95-0.22-17.7,1.67-26.6,2.27-13.7,0.339-27.2,1.84-40.9,2.27,0.969-14.6-5.04-28.8-13.5-40.5-6.7-9.51-17.1-15.1-25.6-22.8-8.83-7.78-18.2-14.9-27.4-22.3-6.94-5.07-14.6-9.05-22.3-12.9-13.6-6.16-28.6-7.75-42.6-12.7-11.7-4.3-24.2-3.91-36.4-5.25-7.67-0.729-15.6-2.18-23.1,0.197-7.69,2.36-15.5,4.39-23.4,6-24,5.08-47.5,13-69.4,24.2-11.5,5.73-22.3,12.6-33.1,19.5-7.21,4.72-14.6,9.51-20.1,16.2-9.22,11.1-15,24.7-18.1,38.7-1.83,9.67-3.08,19.7-0.965,29.5,1.75,8.45,8.21,14.6,13,21.5-4.21,1.26-8.59,1.48-12.9,1.76-14.4,1.54-28.9,1.48-43.3,2.23-5.59,0.3-11.2,0.598-16.8,0.163,2.14-9.39,3.12-19,5.66-28.3,6.01-22.5,15.6-44.1,29.1-63.1,11.6-19.2,26.7-36.2,43.4-51.1,10.7-8.72,22.1-16.5,34-23.5,17.4-9.62,35.9-16.9,55-22.3,22-6.8,47-11.3,72-12.3z" fill="#417DA5"/>
+    <path d="M266-63.3c7.54-2.38,15.5-0.927,23.1-0.197,12.2,1.33,24.8,0.947,36.4,5.25,14,4.99,29,6.58,42.6,12.7,7.66,3.84,15.3,7.82,22.3,12.9,9.19,7.36,18.6,14.5,27.4,22.3,8.46,7.66,18.9,13.3,25.6,22.8,8.44,11.6,14.4,25.9,13.5,40.5-2.27,2.19-6.06,1.77-9.04,2.34-32.6,1.85-65.1,3.62-97.7,5.51-56.7,5.18-113,13.1-169,25-1.45,0.106-3.11,0.729-4.46-0.085-0.527-1.19-1.38-1.72-2.57-1.57-6.09,0.474-12,1.98-18,3.11-10.6,2.03-21.3,3.22-32,4.67-3.49,0.398-7.03,0.952-10.5,0.4-4.77-6.83-11.2-13-13-21.5-2.12-9.72-0.862-19.8,0.965-29.5,3.08-14,8.91-27.6,18.1-38.7,5.53-6.71,12.9-11.5,20.1-16.2,10.8-6.91,21.7-13.8,33.1-19.5,21.9-11.2,45.4-19.1,69.4-24.2,11-1.6,18-3.6,26-6z" fill="#488BB7"/>
+    <path d="M485,62.3c14-1.91,28.6-2.51,42.3,1.2,4.2,0.934,7.16,4.12,9.5,7.52,0.926-0.526,1.86-1.04,2.81-1.57,9.83,7.79,16.6,18.9,20.8,30.6,5.26,12.7,9.22,25.8,12.4,39.1,2.94,12.1,10.3,22.3,14.9,33.7-9.71,4.73-20.4,6.66-30.5,10.2-11,3.79-22.3,6.9-33.4,10.4-13.1,4.23-26.6,6.83-39.9,10.2-10.8,2.81-21.9,4.64-32.7,7.48-20.9,5.46-42.3,8.6-63.6,12.2-43.2,6.43-86.5,11.8-130,14.5-50.8,4.06-102,6.2-153,5.1-6.21,0.338-12.4-0.436-18.6-0.819-9.13-0.167-18.3,0.217-27.4-0.123-12.5-1.05-25-2.27-37.6-3.16-3.36-0.29-7.42-0.501-9.26-3.84-4.56-7.59-8.43-15.9-9.33-24.8-1.2-10.5,2.28-20.7,4.51-30.9,3.01-13.9,6.82-27.7,8.11-41.8,1.49-7.36,2.41-14.8,3.01-22.3,10.2-1.13,20.2-3.62,30.5-4.1,10.5-0.389,21.1-0.285,31.6-0.237,5.76-0.055,11.3-1.81,17.1-2.16,6.73-0.498,13.3-1.94,20.1-2.48-4.45,3.17-8.99,6.27-14,8.42-11.6,5.13-23,12.5-29.6,23.7-3.98,6.6-3.06,15.1,1.4,21.2,5.48,7.63,10.2,16.7,18.9,21,9.67,4.87,19.9,9.21,30.8,9.95,19.6,1.74,39.7,1.74,59-2.66,67.8-12.8,135-26.6,203-40.9,11.6-2.32,23-5.79,34.9-6.25,16.5-0.742,33.1-2.51,49.2-6.59,5.98-1.62,12.3-2.21,17.9-5.09,6.02-3.76,8.1-11.4,7.74-18.1,0.057-11.6-4.47-23.5-13.5-31-5.9-4.68-12.5-8.4-18.9-12.3,8,0.6,14-1.9,22-3.4z" fill="#417DA5"/>
+    <path d="M429,72.7c11.6-0.73,23-2.98,34.4-5.03,6.42,3.92,13,7.64,18.9,12.3,9.07,7.49,13.6,19.4,13.5,31,0.358,6.74-1.73,14.4-7.74,18.1-5.57,2.88-11.9,3.47-17.9,5.09-16.1,4.08-32.6,5.85-49.2,6.59-11.9,0.456-23.3,3.93-34.9,6.25-67.5,14.3-135,28.1-203,40.9-19.3,4.4-39.4,4.39-59,2.66-10.9-0.744-21.2-5.08-30.8-9.95-8.77-4.35-13.4-13.4-18.9-21-4.47-6.11-5.38-14.6-1.4-21.2,6.6-11.2,18-18.5,29.6-23.7,5.05-2.15,9.59-5.26,14-8.42,4.41-2.45,9.74-1.74,14.6-2.73,11.3-2.08,22-6.71,32.5-11.4,8.95,5.28,19.6,2.81,29.3,2.22,79-6.5,157-13.6,236-22.1z" fill="#488BB7"/>
+    <path d="M175,84.1c1.19-0.15,2.04,0.381,2.57,1.57-3,0.8-3,0.3-3-1.6z" fill="#FFF"/>
+    </g>
+    </svg>
+    <footer>by Marek Raida</footer>
+</section>
+
+
+<section>
+  <q>
+    This presentation requires at least <span>basic knowledge</span> of English, HTML, EcmaScript and CSS...
+  </q>
+</section>
+
+
+<section>
+  <q>
+    HTML is <span>lingua franca</span> of the World (Wide Web) and you all should want to learn it and understand it. And I hope these slides will help you a bit...
+  </q>
+</section>
+
+
+<section>
+  <h4>Brief language history</h4>
+  <ul>
+    <li><span class=dates>1980</span> <mark>HTML</mark> (<span style="font-size:27pt">invented by</span> Tim Bernes-Lee)</li>
+    <li><span class=dates>1991</span> <mark>HTML 1.0</mark> (first spec - HTML tags) </li>
+    <li><span class=dates>1995</span> <mark>HTML 2.0</mark> (tables, forms)</li>
+    <li><span class=dates>1997</span> <mark>HTML 4.0</mark> (CSS, frames)</li>
+    <li><span class=dates>2000</span> <mark>XHTML 1.0</mark> (XML strict syntax)</li>
+    <li><span class=dates>2008</span> <mark>HTML 5</mark> (we'll talk about it now ;-)</li>
+  </ul>
+</section>
+
+
+<section>
+  <q><span>HTML</span> = content to share<br><br><span>CSS</span> = how it will look like<br><br><span>JS</span> - smart and interactive</q>
+</section>
+
+
+<section>
+  <h3>Four main parts of presentation</h3>
+  <ol class="incremental">
+    <li>Semantics & Markup
+    <li>Forms (Web Forms 2.0)
+    <li>Multimedia and applications
+    <li>Related specifications
+  </ol>
+</section>
+
+
+<section>
+  <q>
+    Not full HTML5 spec is presented there, but only what I <span>personally find interesting</span>, useful and usable... (these days)
+  </q>
+</section>
+
+
+<section>
+    <h2>1. Semantics & Markup</h2>
+    <svg width="600" height="220">
+      <path transform="scale(0.3) translate(1000 100)" fill="green" d="M 7.6885391,404.61420 C 7.6885391,404.61420 122.85389,534.30185 145.88696,587.27791 L 244.92916,587.27791 C 286.38869,460.59602 447.62018,158.16034 585.81860,52.208207 C 614.45182,15.394067 542.52080,0.19798715 484.47310,24.568517 C 396.98668,61.298507 231.98485,341.73657 201.16633,409.22081 C 157.40350,420.73735 111.33735,335.51499 111.33735,335.51499 L 7.6885391,404.61420 z"/>
+    </svg>
+</section>
+
+
+<section>
+  <q>
+    You can write HTML5 in good old <span>HTML</span> syntax or in <span>XML/XHTML syntax</span>, choose what do you prefer...
+  </q>
+</section>
+
+
+<section>
+  <h4>Selected closing tags</h4>
+  <p>...are in HTML5 <a href="http://dev.w3.org/html5/spec/Overview.html#syntax-tag-omission">optional</a> now, like <mark>&lt;li></mark></p>
+  <pre><code>
+  &lt;ul>
+    <strong>&lt;li></strong>first
+    <strong>&lt;li></strong>second
+    <strong>&lt;li></strong>last
+  &lt;/ul>
+  </code></pre>
+  <p>Other popular examples are: <mark>p</mark>, <mark>option</mark>, <mark>tr</mark>, <mark>th</mark>, <mark>td</mark>, <mark>dd</mark>, <mark>dt</mark>, <mark>body</mark>, <mark>html</mark> and more...</p>
+</section>
+
+
+<section>
+  <h4>Scripting and formatting</h4>
+  <pre><code><strong>&lt;script></strong> text/ecmascript=default
+ <em>...some scripting...</em>
+<strong>&lt;/script></strong>
+<strong>&lt;style></strong> text/css=default
+ <em>...some formatting...</em>
+<strong>&lt;/style></strong></code></pre>
+  <p>Omitting <em>type</em> and <em>language</em> attributes is preferred now. Warning, <mark>&lt;noscript></mark> tag in XHTML syntax is <strong>deprecated</strong>, so rather avoid it.</p>
+</section>
+
+
+<section>
+  <h4>Hyperlinking of groups</h4>
+  <p>..of structural tags is allowed by spec</p>
+  <pre><code> <strong>&lt;a href=page.html></strong>
+   &lt;h1>This is murder!&lt;/h1>
+   &lt;h2>She wrote...&lt;/h2>
+   &lt;p>On one rainy day was
+   in deep shadows of...&lt;/p>
+ <strong>&lt;/a></strong></code></pre>
+  <a href="" onclick="return false">
+    <h5>This is murder!</h5>
+    <h6>She wrote...</h6>
+    <p class="smaller">On one rainy day was in deep shadows of...</p>
+  </a>
+  <p>PS: <mark>href</mark> attribute for <mark>&lt;a></mark> is optional now!</p>
+</section>
+
+
+<section>
+  <h4>Traditional page structure</h4>
+  <img src="structure-div.gif" alt="Current structure">
+  <svg width="170" height="150" style="float:right">
+    <g>
+     <path fill="orange" fill-rule="nonzero" stroke="#000000" stroke-width="3" d="m146.58931,73.544647a72.044647,72.044647 0 1 1 -144.08931,0a72.044647,72.044647 0 1 1 144.08931,0z"/>
+     <path fill="none" fill-rule="evenodd" stroke="#000000" stroke-width="4.745511" d="m21.553955,89.637848c36.530212,-1.034454 70.696518,0.619476 104.994492,0"/>
+     <path fill="#000000" fill-rule="nonzero" stroke="#000000" stroke-width="3" d="m52.832581,47.884918a5.92148,5.92148 0 1 1 -11.842957,0a5.92148,5.92148 0 1 1 11.842957,0z"/>
+     <path fill="#000000" fill-rule="nonzero" stroke="#000000" stroke-width="3" d="m102.832581,47.884918a5.92148,5.92148 0 1 1 -11.842957,0a5.92148,5.92148 0 1 1 11.842957,0z"/>
+   </g>
+  </svg>
+  <p>Although using some IDs is common habit and almost inevitable in web design, <mark>naming differs</mark> from page to page, from language to language...</p>
+</section>
+
+
+<section>
+  <h4>New unified page structure</h4>
+  <img src="structure-html5.gif" alt="Future structure">
+  <svg width="150" height="150" viewBox="0 0 280 257" style="float:right">
+  <path
+   d="M 208.4,161 C 211.11,165.5 216.45,176.63 221.04,178.4 C 222.88,179.12 225.99,179 228,179 C 228,179 245,179 245,179 C 247.83,179.01 253.21,178.96 255.4,180.93 C 257.67,182.98 257.03,190.02 257,193 C 256.86,204.7 251.84,215.98 242,222.64 C 231.38,229.83 218.47,231.15 206,231.55 C 202.19,231.99 197.64,230.39 194.04,231.55 C 190.56,232.21 188.42,235.53 185.96,237.96 C 182.85,241.04 179.75,243.32 176,245.55 C 162.79,253.38 152.55,253.02 138,253 C 127.78,252.98 128.31,251.55 123,251.21 C 123,251.21 108,252 108,252 C 84.22,251.96 61.81,238.61 49.87,218 C 45.97,211.26 41.79,201.56 39.89,194 C 38.94,190.21 37.79,180.91 36.07,178.3 C 33.58,174.55 26.88,172.23 21.31,160 C 16.42,149.26 18.75,144.11 15.7,138 C 9.82,126.21 0.46,121.51 0.01,102 C -0.3,87.97 6.39,78.08 17,69.33 C 22.54,64.76 26.47,64.4 28.91,60.79 C 30.58,58.32 31.53,53.04 32.44,50 C 33.92,45.04 36.8,38.44 39.45,34 C 50.8,14.97 70.74,3.11 93,3 C 93,3 104,3 104,3 C 128.34,3.29 151.18,17.99 161.51,40 C 166.76,51.17 167.28,63.16 168.56,65.79 C 170.61,70.01 177.17,70.17 183.35,79 C 189.81,88.23 190.99,105.54 187.3,116 C 184.98,122.59 182.28,126.14 179,132 C 191.61,136.01 201.81,150.08 208.4,161 z"
+   style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:1" />
+  <path
+   d="M 129.22,124 C 117.56,148.41 86.65,160.06 66.09,138.96 C 58.63,131.31 54.49,122.52 53,112 C 51.4,100.68 50.97,99.02 61,99 C 61,99 112,99 112,99 C 117.75,99 128.49,100.32 133,97 C 137.27,104.35 132.62,116.86 129.22,124 z"
+   style="fill:#fffefe;fill-opacity:1;stroke:none;stroke-width:1" />
+  <path
+   d="M 125,169.24 C 114.13,174.76 100.25,178.85 88,179 C 68.72,179.22 41.76,176.74 31.35,158 C 25.94,148.27 28.18,140.08 25.7,135 C 20.02,123.35 10.71,119.01 10.04,102 C 9.59,90.62 16.04,82.21 25,75.79 C 28.6,73.21 35.52,70.5 37.57,66.79 C 38.45,65.21 40.82,53.87 45.27,45 C 55.03,25.53 71.87,13.03 94,13 C 103.89,12.98 110.29,12.56 120,15.75 C 146.59,24.47 158.42,48.45 159,75 C 180.04,78.95 184.5,105.53 175.48,122 C 168.88,134.07 160.61,137.88 151,146 C 159.71,145.52 164.84,136.98 174,140.11 C 187.23,144.62 196.65,160.63 203.4,172 C 205.7,175.88 209.68,183.98 213.1,186.41 C 218.34,190.12 239.73,189 247,189 C 247,194.37 247.13,197.85 245.07,203 C 237.73,221.34 211.94,223.23 195,221 C 195.2,216.75 195.94,215.35 192,213 C 187.58,228.14 171.78,238.73 157,242.11 C 152.68,243.1 146.15,244.59 142,243 C 156.4,234.72 166.34,219.04 170,203 C 165.24,207.2 164.21,211.81 160.56,217 C 155.29,224.51 148.23,231.04 140,235.19 C 121.45,244.55 95.72,244.93 78,233.45 C 61.07,222.49 50.65,202.66 48,183 C 72.4,191.13 100.57,189.92 123,176.55 C 132.24,171.04 136.56,166.44 144,159 C 138.58,159.51 130.68,166.36 125,169.24 z M 49.37,70.02 C 49.32,71.62 49.93,73.09 51.31,73.96 C 54.29,75.85 58.43,73.37 62,73.37 C 65.15,73.36 68.15,75.07 70.89,74.48 C 74.86,73.62 75.62,69.31 72.68,66.51 C 69.74,63.7 63.86,63.1 60,63.3 C 56.04,63.94 49.53,64.78 49.37,70.02 z M 112.08,70.96 C 112.34,72.24 113.11,73.29 114.24,73.94 C 117.19,75.63 121.13,73.31 125,73.35 C 125,73.35 132.98,74.5 132.98,74.5 C 137.04,73.95 138.99,69.7 135.68,66.51 C 132.76,63.7 126.85,63.1 123,63.3 C 119.14,63.93 110.93,65.25 112.08,70.96 z M 43,107 C 43.11,131.27 61.99,158.69 88,159 C 111.86,159.28 128.67,149.05 138.69,127 C 143.39,116.66 144.07,110.1 144,99 C 143.98,96.87 144.26,93.49 142.4,92.02 C 140.81,90.77 136.99,91 135,91 C 135,91 75,91 75,91 C 68.79,91 50.24,90.4 45.43,91.57 C 41.54,94.93 42.98,102.25 43,107 z"
+   style="fill:#04fe3a;fill-opacity:1;stroke:none;stroke-width:1" />
+  </svg>
+  <p>HTML5 brings cross language/site semantic structure for optimal search, contextual parsing and <mark>accessibility</mark>/<mark>screenreaders</mark>. All of them could be nested as necessary...</p>
+</section>
+
+
+<section>
+  <h4>Grouping media and related text</h4>
+  <pre><code><strong>&lt;figure></strong>
+    &lt;img src=image.png>
+    <strong>&lt;figcaption></strong>This chart 
+       represents data of...
+    <strong>&lt;/figcaption>
+&lt;/figure></strong>
+  </code></pre>
+  <p>Pair of <mark>figure</mark> and <mark>figcaption</mark> represents the preferred way how to <em>bind together</em> some <em>image</em>, graph or scheme <em>and its description</em>.</p>
+</section>
+
+
+<section>
+  <q>
+    HTML5 strictly sets detailed <span>rules for error handling</span> of invalid HTML documents, to provide <span>consistent</span> results across different implementations
+  </q>
+</section>
+
+
+<section>
+  <div class="icon msie">10</div>
+  <div class="icon firefox"></div>
+  <div class="icon safari">X</div>
+  <div class="icon opera"></div>
+  <div class="icon chrome"></div>
+  <h4>Progress element (<a href="http://www.useragentman.com/blog/2012/01/03/cross-browser-html5-progress-bars-in-depth/" target=_blank>also stylable</a>)</h4>
+  <pre><code>
+<strong>&lt;progress</strong> max=10>
+  ...work in progress...
+<strong>&lt;/progress></strong>
+ <progress max=10>...work in progress...</progress> <em>unknown state</em><br>
+<strong>&lt;progress</strong> max=10 value=6/>
+ <progress max=10 value=6></progress> <em>60 of 100%</em><br>
+<strong>&lt;progress</strong> max="10" id="progId"/>
+ <progress max="10" value=10 id="progId"></progress> <em>Script control</em>
+  </code></pre>
+  <script>
+    var progressExample = document.getElementById ('progId');
+    progressExample.min = 1;
+    progressExample.max = 10;
+    setInterval (function () { progressExample.value = progressExample.min + Math.random () * (progressExample.max - progressExample.min); }, 1000);
+  </script>
+</section>
+
+
+<section>
+  <h4>Other semantic elements</h4>
+  <ul style="margin-top:6px">
+    <li><mark>&lt;hgroup></mark>&lt;h1>Level 1&lt;/h1><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;h2>Level 2&lt;/h2><mark>&lt;/hgroup></mark></li>
+    <li><mark>&lt;details></mark>Info for insiders...<mark>&lt;/details></mark></li>
+    <li><mark>&lt;summary></mark>Conclusions...<mark>&lt;/summary></mark></li>
+    <li><mark>&lt;output></mark>result of computing<mark>&lt;/output></mark></li>
+    <li><mark>&lt;mark></mark><em>search phrase</em><mark>&lt;/mark></mark> highlight</li>
+    <li><mark>&lt;meter</mark><span style="font-size:28pt"> min="0" max="10" low="4" high="9" optimum="6" value="7">7 of 10</span><mark>&lt;/meter></mark></li>
+  </ul>
+</section>
+
+
+<section>
+  <q>
+    HTML5 continues to enforce strong <span>separation of content</span> (HTML) <span>and</span> its <span>formatting</span> (CSS); results are following element and attribute deprecations
+  </q>
+</section>
+
+
+<section>
+  <h4>Elements marked as deprecated</h4>
+  <p>These are: <mark>applet</mark>, <mark>center</mark>, <mark>font</mark>, <mark>frame</mark>, <mark>frameset</mark>, <mark>noframes</mark>, <mark>big</mark>, <mark>strike</mark>, 
+        <mark>u</mark>, <mark>tt</mark>, <mark>xmp</mark>, <mark>acronym</mark>, <mark>basefont</mark>, <mark>dir</mark>, <mark>isindex</mark>, <mark><em>noscript</em></mark></p>
+  <p>Many widely used elements are to be avoided now and you should <em>change your your way of using others</em> as well (like <mark>embed</mark> for plugins, instead of <mark>object</mark> or 
+        <mark>mark</mark> instead of <mark>strong</mark>, other meaning of <mark>i</mark>, <mark>b</mark>, <mark>em</mark> etc.)</p>
+</section>
+
+
+<section>
+  <h4>Deprecated attributes</h4>
+  <p>for some popular elements are: <mark>link[target]</mark>, <mark>html[version]</mark>, <mark>img[name,hspace,vspace]</mark>, <mark>object[classid,codebase...]</mark>, <mark>*[align,valign]</mark>, 
+    <mark style="font-size:25pt">table,td,th[width,bgcolor,border,cellspacing,cellpadding]</mark>, <mark>br[clear]</mark>, <mark>hr[size,noshade]</mark>, <mark>td,th[nowrap]</mark>, <mark>ul,ol[type]</mark>
+  <em> &nbsp; ...and there is much more of them in the specification, but I've rarely seen them to be widely adopted and in common use...</em></p>
+</section>
+
+
+<section>
+  <h4>..and last but not least...</h4>
+  <svg width="150" height="95" style="float:right">
+   <g transform="scale(0.1)" fill="none" stroke="#000" stroke-width="14">
+    <path d="m800.258606,364.845215l80.025452,185.126587l102.254761,-219.568634"/>
+    <path d="m803.921143,350.150543l-157.759216,208.507355l29.612854,-176.591614"/>
+    <path d="m986.984802,339.013702l177.444153,159.295013l-35.410889,-179.360992"/>
+    <path d="m512.429993,566.794006c61.475037,60.794006 438.997009,373.187988 438.997009,373.187988l-185.976013,-378.789001l-253.020996,5.601013z"/>
+    <path d="m953.798828,937.377869l76.303955,-403.860413l-279.318237,29.477844l203.014282,374.382568z"/>
+    <path d="m508.932007,563.690002l158.859009,-185l142.078979,-31.949005l-57.950012,213.586029l-242.987976,3.362976z"/>
+    <path d="m978.782837,326.138397l148.420898,-11.384735l156.635376,148.378021l-254.492188,67.318451l-50.564087,-204.311737z"/>
+    <path d="m809.739868,346.756958l172.097107,-21.503998l49.265808,208.264496l-276.872681,29.177734l55.509766,-215.938232z"/>
+    <path d="m953.798828,937.377869l330.485962,-473.54657l-254.182007,69.686157l-76.303955,403.860413l0,0z"/>
+   </g>
+  </svg>
+  <p>in this section is <mark>wbr</mark> element, true <strong>hidden gem</strong>. It is so common, that you need to display very long one-word text, whole, without compromises and in areas of various or limited space.</p>
+  <pre><code>mySomeVeryVeryLongWord<strong>&lt;wbr></strong>OrComm
+andWhichShouldStayAsWhole<strong>&lt;wbr></strong>Be
+causeItIsWhatItIs</code></pre>
+  <p><em>... it indicates possible and preferred word wrap</em></p>
+</section>
+
+
+<section>
+  <q>
+    The <span>tabindex attribute</span> is available to <span>all HTML elements</span> now, to improve accessibility and compatibility with modern web applications...
+  </q>
+</section>
+
+
+<section>
+  <svg height="150" width="150" style="margin-top:30px;margin-left:320px">
+  <g transform="scale(3)">
+  <defs>
+  <linearGradient id="linearGradient3414">
+  <stop stop-color="#000" offset="0"/>
+  <stop stop-color="#000" stop-opacity="0" offset="1"/>
+  </linearGradient>
+  <linearGradient id="linearGradient3221">
+  <stop stop-color="#FFF" offset="0"/>
+  <stop stop-color="#FFF" stop-opacity="0" offset="1"/>
+  </linearGradient>
+  <linearGradient id="linearGradient3099" y2="1.56" gradientUnits="userSpaceOnUse" x2="8.12" y1="18.6" x1="8.12">
+  <stop stop-color="#2e3436" offset="0"/>
+  <stop stop-color="#555753" offset="1"/>
+  </linearGradient>
+  <linearGradient id="linearGradient3121" y2="5.62" gradientUnits="userSpaceOnUse" x2="10.2" gradientTransform="translate(0,1)" y1="11.1" x1="10.4">
+  <stop stop-color="#FFF" offset="0"/>
+  <stop stop-color="#FFF" stop-opacity="0" offset="1"/>
+  </linearGradient>
+  <linearGradient id="linearGradient3129" y2="52.6" gradientUnits="userSpaceOnUse" x2="35.1" y1="21.1" x1="11.6">
+  <stop stop-color="#888a85" offset="0"/>
+  <stop stop-color="#babdb6" offset="1"/>
+  </linearGradient>
+  <linearGradient id="linearGradient3227" y2="22.2" xlink:href="#linearGradient3221" gradientUnits="userSpaceOnUse" x2="15.2" y1="20.8" x1="14.5"/>
+  <linearGradient id="linearGradient3231" y2="21.9" xlink:href="#linearGradient3221" gradientUnits="userSpaceOnUse" x2="15" gradientTransform="translate(-6,0)" y1="20.8" x1="14.5"/>
+  <radialGradient id="radialGradient3251" gradientUnits="userSpaceOnUse" cy="21.7" cx="15.9" gradientTransform="matrix(1.959694,0,0,1.657851,-14.97639,-13.84084)" r="3">
+  <stop stop-color="#babdb6" offset="0"/>
+  <stop stop-color="#888a85" offset="1"/>
+  </radialGradient>
+  <linearGradient id="linearGradient3357" y2="22.6" xlink:href="#linearGradient3221" gradientUnits="userSpaceOnUse" x2="14.9" gradientTransform="translate(-0.999989,4.291534e-6)" y1="20.8" x1="14.5"/>
+  <linearGradient id="linearGradient3371" y2="24.9" xlink:href="#linearGradient3221" gradientUnits="userSpaceOnUse" x2="17.7" gradientTransform="translate(-0.999989,4.291534e-6)" y1="20.8" x1="14.5"/>
+  <linearGradient id="linearGradient3402" y2="22.6" gradientUnits="userSpaceOnUse" x2="9.19" y1="4.94" x1="7.62">
+  <stop stop-color="#FFF" offset="0"/>
+  <stop stop-color="#FFF" stop-opacity="0" offset="1"/>
+  </linearGradient>
+  <radialGradient id="radialGradient3420" xlink:href="#linearGradient3414" gradientUnits="userSpaceOnUse" cy="43" cx="3" gradientTransform="matrix(2,0,0,2,-13,-129)" r="2"/>
+  <radialGradient id="radialGradient3424" xlink:href="#linearGradient3414" gradientUnits="userSpaceOnUse" cy="43" cx="3" gradientTransform="matrix(2,0,0,2,35,-43)" r="2"/>
+  <linearGradient id="linearGradient3434" y2="47" gradientUnits="userSpaceOnUse" x2="11.5" y1="39" x1="11.5">
+  <stop stop-color="#000" stop-opacity="0" offset="0"/>
+  <stop stop-color="#000" offset="0.5"/>
+  <stop stop-color="#000" stop-opacity="0" offset="1"/>
+  </linearGradient>
+  </defs>
+  <g opacity="0.4" transform="matrix(1,0,0,1.118068,0,-5.549194)" fill-rule="nonzero">
+  <rect style="marker-end:none;marker-start:none;marker-mid:none;" transform="scale(-1,-1)" height="8" width="4" y="-47" x="-7" fill="url(#radialGradient3420)"/>
+  <rect style="marker-end:none;marker-start:none;marker-mid:none;" height="8" width="4" y="39" x="41" fill="url(#radialGradient3424)"/>
+  <rect style="marker-end:none;marker-start:none;marker-mid:none;" height="8" width="34" y="39" x="7" fill="url(#linearGradient3434)"/>
+  </g>
+  <rect stroke-linejoin="miter" style="marker-end:none;marker-start:none;marker-mid:none;" stroke-dasharray="none" fill-rule="nonzero" stroke-dashoffset="1.4" rx="2.88" ry="2.88" height="36.5" width="37" stroke="#555753" stroke-linecap="round" stroke-miterlimit="6" y="8.04" x="5.5" stroke-width="1" fill="url(#linearGradient3129)"/>
+  <rect opacity="0.3" stroke-linejoin="miter" style="marker-end:none;marker-start:none;marker-mid:none;" stroke-dasharray="none" stroke-dashoffset="1.4" rx="1.92" ry="1.92" height="41" width="35" stroke="#FFF" stroke-linecap="round" stroke-miterlimit="6" y="2.5" x="6.5" stroke-width="1" fill="none"/>
+  <path stroke-linejoin="miter" style="marker-end:none;marker-start:none;marker-mid:none;" d="M42.5,17v-12.6c0-1.6-1.3-2.88-2.9-2.88h-31.2c-1.6,0-2.88,1.28-2.88,2.88v12.6" fill-rule="nonzero" stroke-dashoffset="1.4" stroke="#2e3436" stroke-linecap="round" stroke-miterlimit="6" stroke-dasharray="none" stroke-width="1.00000024" fill="url(#linearGradient3099)"/>
+  <rect style="marker-end:none;marker-start:none;marker-mid:none;" fill-rule="nonzero" rx="1.18" ry="1.18" height="9" width="32" y="7" x="8" fill="#8ae234"/>
+  <path opacity="0.2" stroke-linejoin="miter" style="marker-end:none;marker-start:none;marker-mid:none;" d="M41.5,16.5v-12.2c0-1.05-0.8-1.85-1.8-1.85h-31.4c-1.05,0-1.85,0.8-1.85,1.85v12.2" stroke-dashoffset="1.4" stroke="url(#linearGradient3402)" stroke-linecap="square" stroke-miterlimit="6" stroke-dasharray="none" stroke-width="1.00000036" fill="none"/>
+  <rect opacity="0.6" style="marker-end:none;marker-start:none;marker-mid:none;" fill-rule="nonzero" height="5" width="22" y="9" x="13" fill="#FFF"/>
+  <path opacity="0.3" style="marker-end:none;marker-start:none;marker-mid:none;" d="M13,9v0.5,4.5h0.5v-4.5h21.5v-0.5h-21.5-0.5z" fill-rule="nonzero" fill="#000"/>
+  <path opacity="0.4" style="marker-end:none;marker-start:none;marker-mid:none;" d="M9.19,7c-0.65,0-1.19,0.54-1.19,1.19v5.01c11.7-4.64,24.2-2.2,32,1.3v-6.31c0-0.65-0.5-1.19-1.2-1.19h-29.6z" fill-rule="nonzero" fill="url(#linearGradient3121)"/>
+  <g id="g3253" stroke-dashoffset="1.4" transform="translate(4.887581e-6,4.172325e-6)" stroke-linecap="square" stroke-miterlimit="6" stroke-dasharray="none">
+  <rect stroke-linejoin="miter" style="marker-end:none;marker-start:none;marker-mid:none;" fill-rule="nonzero" rx="1.05" ry="1.05" height="4" width="5" stroke="#555753" y="19.5" x="13.5" stroke-width="1" fill="url(#radialGradient3251)"/>
+  <rect opacity="0.4" stroke-linejoin="round" style="marker-end:none;marker-start:none;marker-mid:none;" rx="0" ry="0" height="2" width="3" stroke="url(#linearGradient3227)" y="20.5" x="14.5" stroke-width="1" fill="none"/>
+  </g>
+  <g id="g3279" stroke-miterlimit="6" stroke-linecap="square" stroke-dasharray="none" stroke-dashoffset="1.4">
+  <rect stroke-linejoin="miter" style="marker-end:none;marker-start:none;marker-mid:none;" fill-rule="nonzero" rx="1.02" ry="1.02" height="4" width="4" stroke="#2e3436" y="19.5" x="7.5" stroke-width="1" fill="#555753"/>
+  <rect opacity="0.3" stroke-linejoin="round" style="marker-end:none;marker-start:none;marker-mid:none;" rx="0" ry="0" height="2" width="2" stroke="url(#linearGradient3231)" y="20.5" x="8.5" stroke-width="1" fill="none"/>
+  </g>
+  <use id="use3283" xlink:href="#g3279" transform="translate(0,6)" height="48" width="48" y="0" x="0"/>
+  <use id="use3285" xlink:href="#use3283" transform="translate(0,6)" height="48" width="48" y="0" x="0"/>
+  <use xlink:href="#use3285" transform="translate(0,6)" height="48" width="48" y="0" x="0"/>
+  <use xlink:href="#g3253" transform="translate(-4.887581e-6,5.999996)" height="48" width="48" y="0" x="0"/>
+  <use xlink:href="#g3253" transform="translate(-4.887581e-6,12)" height="48" width="48" y="0" x="0"/>
+  <use xlink:href="#g3253" transform="translate(6.999995,-4.172325e-6)" height="48" width="48" y="0" x="0"/>
+  <use xlink:href="#g3253" transform="translate(6.999995,5.999996)" height="48" width="48" y="0" x="0"/>
+  <use xlink:href="#g3253" transform="translate(6.999995,12)" height="48" width="48" y="0" x="0"/>
+  <use xlink:href="#g3253" transform="translate(6.999995,18)" height="48" width="48" y="0" x="0"/>
+  <use xlink:href="#g3253" transform="translate(14,-4.172325e-6)" height="48" width="48" y="0" x="0"/>
+  <use xlink:href="#g3253" transform="translate(14,12)" height="48" width="48" y="0" x="0"/>
+  <use xlink:href="#g3253" transform="translate(14,5.999996)" height="48" width="48" y="0" x="0"/>
+  <g id="g3349" stroke-dashoffset="1.4" transform="translate(22,0)" stroke-linecap="square" stroke-miterlimit="6" stroke-dasharray="none">
+  <rect stroke-linejoin="miter" style="marker-end:none;marker-start:none;marker-mid:none;" fill-rule="nonzero" rx="1.05" ry="1.05" height="4" width="6" stroke="#555753" y="19.5" x="12.5" stroke-width="1" fill="#888a85"/>
+  <rect opacity="0.4" stroke-linejoin="round" style="marker-end:none;marker-start:none;marker-mid:none;" rx="0" ry="0" height="2" width="4" stroke="url(#linearGradient3357)" y="20.5" x="13.5" stroke-width="1" fill="none"/>
+  </g>
+  <use xlink:href="#g3349" transform="translate(0,6)" height="48" width="48" y="0" x="0"/>
+  <g stroke-miterlimit="6" stroke-linecap="square" stroke-dasharray="none" transform="translate(22,12)" stroke-dashoffset="1.4">
+  <rect stroke-linejoin="miter" style="marker-end:none;marker-start:none;marker-mid:none;" fill-rule="nonzero" rx="1.05" ry="1.05" height="10" width="6" stroke="#555753" y="19.5" x="12.5" stroke-width="1" fill="#888a85"/>
+  <rect opacity="0.4" stroke-linejoin="round" style="marker-end:none;marker-start:none;marker-mid:none;" rx="0" ry="0" height="8" width="4" stroke="url(#linearGradient3371)" y="20.5" x="13.5" stroke-width="1" fill="none"/>
+  </g>
+  <use xlink:href="#g3253" transform="translate(-4.887581e-6,18)" height="48" width="48" y="0" x="0"/>
+  <g stroke-miterlimit="6" stroke-linecap="square" stroke-dasharray="none" transform="translate(14,18)" stroke-dashoffset="1.4">
+  <rect stroke-linejoin="miter" style="marker-end:none;marker-start:none;marker-mid:none;" fill-rule="nonzero" rx="1.05" ry="1.05" height="4" width="5" stroke="#555753" y="19.5" x="13.5" stroke-width="1" fill="#888a85"/>
+  <rect opacity="0.4" stroke-linejoin="round" style="marker-end:none;marker-start:none;marker-mid:none;" rx="0" ry="0" height="2" width="3" stroke="url(#linearGradient3227)" y="20.5" x="14.5" stroke-width="1" fill="none"/>
+  </g>
+  <path fill="#eeeeec" d="M12.5,3.74v0.45c-0.1-0.05-0.1-0.09-0.2-0.11-0.1-0.03-0.2-0.04-0.3-0.04s-0.2,0.04-0.3,0.14c-0.1,0.09-0.1,0.21-0.1,0.37,0,0.17,0,0.29,0.1,0.38s0.2,0.14,0.3,0.14,0.2-0.02,0.3-0.04c0.1-0.03,0.1-0.07,0.2-0.12v0.46c-0.1,0.03-0.2,0.05-0.3,0.07,0,0.02-0.1,0.02-0.2,0.02-0.3,0-0.6-0.08-0.8-0.24-0.1-0.16-0.2-0.38-0.2-0.67,0-0.28,0.1-0.51,0.2-0.67,0.2-0.16,0.5-0.24,0.8-0.24,0.1,0,0.2,0.01,0.2,0.03,0.1,0.01,0.2,0.04,0.3,0.07m1.3,0.3c-0.1,0-0.2,0.04-0.3,0.13,0,0.09-0.1,0.22-0.1,0.38,0,0.17,0.1,0.3,0.1,0.39,0.1,0.08,0.2,0.13,0.3,0.13s0.2-0.05,0.3-0.13c0.1-0.09,0.1-0.22,0.1-0.39,0-0.16,0-0.29-0.1-0.38s-0.2-0.13-0.3-0.13m0-0.4c0.3,0,0.6,0.08,0.7,0.24,0.2,0.17,0.3,0.39,0.3,0.67,0,0.29-0.1,0.51-0.3,0.67-0.1,0.16-0.4,0.24-0.7,0.24s-0.5-0.08-0.7-0.24-0.2-0.38-0.2-0.67c0-0.28,0-0.5,0.2-0.67,0.2-0.16,0.4-0.24,0.7-0.24m2.8,0.1v0.45c-0.1-0.05-0.2-0.09-0.3-0.11,0-0.03-0.1-0.04-0.2-0.04s-0.3,0.04-0.3,0.14c-0.1,0.09-0.2,0.21-0.2,0.37,0,0.17,0.1,0.29,0.2,0.38,0,0.09,0.2,0.14,0.3,0.14s0.2-0.02,0.3-0.04c0-0.03,0.1-0.07,0.2-0.12v0.46c-0.1,0.03-0.2,0.05-0.3,0.07s-0.2,0.02-0.3,0.02c-0.3,0-0.5-0.08-0.7-0.24s-0.3-0.38-0.3-0.67c0-0.28,0.1-0.51,0.3-0.67s0.4-0.24,0.7-0.24c0.1,0,0.2,0.01,0.3,0.03,0.1,0.01,0.2,0.04,0.3,0.07m1.3,0.3c-0.1,0-0.2,0.04-0.3,0.13s-0.1,0.22-0.1,0.38c0,0.17,0,0.3,0.1,0.39,0.1,0.08,0.2,0.13,0.3,0.13s0.2-0.05,0.3-0.13c0-0.09,0.1-0.22,0.1-0.39,0-0.16-0.1-0.29-0.1-0.38-0.1-0.09-0.2-0.13-0.3-0.13m0-0.4c0.3,0,0.5,0.08,0.7,0.24,0.2,0.17,0.2,0.39,0.2,0.67,0,0.29,0,0.51-0.2,0.67s-0.4,0.24-0.7,0.24-0.6-0.08-0.7-0.24c-0.2-0.16-0.3-0.38-0.3-0.67,0-0.28,0.1-0.5,0.3-0.67,0.1-0.16,0.4-0.24,0.7-0.24m2.1,1c-0.1,0-0.2,0.02-0.2,0.06-0.1,0.04-0.1,0.09-0.1,0.17v0.17c0.1,0.04,0.2,0.06,0.2,0.06,0.1,0,0.2-0.04,0.3-0.12,0.1-0.07,0.1-0.17,0.1-0.28v-0.06h-0.3m0.9-0.21v0.99h-0.6v-0.26c-0.1,0.11-0.2,0.18-0.2,0.23-0.1,0.05-0.3,0.07-0.4,0.07-0.2,0-0.3-0.05-0.4-0.15-0.1-0.11-0.2-0.24-0.2-0.41,0-0.2,0.1-0.35,0.2-0.45,0.2-0.09,0.4-0.14,0.7-0.14h0.3v-0.04c0-0.09,0-0.16-0.1-0.2s-0.2-0.06-0.3-0.06-0.3,0.01-0.4,0.04c-0.1,0.02-0.2,0.06-0.2,0.1v-0.42c0.1-0.03,0.2-0.05,0.3-0.06,0.1-0.02,0.3-0.03,0.4-0.03,0.3,0,0.5,0.06,0.7,0.19,0.1,0.12,0.2,0.32,0.2,0.6" transform="scale(0.910679,1.098081)"/>
+  <rect opacity="0.3" style="marker-end:none;marker-start:none;marker-mid:none;" fill-rule="nonzero" height="2" width="8" y="4" x="31" fill="#fcaf3e"/>
+  <path fill="#FFF" d="M16.5,34h-0.4v-0.7c-0.2,0-0.4,0.1-0.6,0.1v-0.1c0.1-0.1,0.2-0.1,0.4-0.1,0.1-0.1,0.2-0.1,0.2-0.2h0.4v1"/>
+  <path fill="#FFF" d="M23.8,33.8v0.2h-1.6c0.1-0.1,0.1-0.1,0.2-0.2s0.2-0.1,0.5-0.2c0.2-0.1,0.3-0.2,0.3-0.2,0.1,0,0.1-0.1,0.1-0.1,0-0.1,0-0.1-0.1-0.1h-0.2-0.2s-0.1,0.1-0.1,0.1h-0.4c0-0.1,0.1-0.2,0.2-0.2,0.2-0.1,0.3-0.1,0.5-0.1,0.3,0,0.4,0,0.6,0.1,0.1,0,0.2,0.1,0.2,0.2,0,0-0.1,0.1-0.1,0.1s-0.1,0.1-0.2,0.1c0,0.1-0.1,0.1-0.3,0.2-0.1,0-0.2,0.1-0.2,0.1h-0.1,0.9"/>
+  <path fill="#FFF" d="M29.3,33.7h0.4c0,0.1,0,0.1,0.1,0.1s0.1,0.1,0.2,0.1,0.2-0.1,0.2-0.1c0.1,0,0.1-0.1,0.1-0.1v-0.1c-0.1,0-0.2-0.1-0.3-0.1l-0.2,0.1,0.1-0.2h0.3v-0.1-0.1h-0.2-0.2l-0.1,0.1h-0.4c0-0.1,0.1-0.1,0.1-0.2,0.1,0,0.2,0,0.3-0.1h0.3c0.2,0,0.4,0,0.5,0.1,0.1,0,0.2,0.1,0.2,0.2,0,0-0.1,0.1-0.3,0.2h0.3c0,0.1,0.1,0.1,0.1,0.2s-0.1,0.2-0.2,0.2c-0.2,0.1-0.4,0.1-0.6,0.1s-0.4,0-0.5-0.1c-0.1,0-0.2-0.1-0.2-0.2"/>
+  <path fill="#FFF" d="M30.8,27.2l-0.5,0.1v-0.1h-0.2-0.2c-0.1,0-0.1,0.1-0.2,0.2h0.4,0.5c0.1,0.1,0.2,0.2,0.2,0.3s-0.1,0.2-0.2,0.2c-0.1,0.1-0.3,0.1-0.5,0.1s-0.4,0-0.6-0.1c-0.1-0.1-0.2-0.2-0.2-0.4s0.1-0.3,0.2-0.4c0.2-0.1,0.4-0.1,0.6-0.1s0.3,0,0.5,0.1c0.1,0,0.1,0.1,0.2,0.1m-1,0.5l0.1,0.1s0.1,0.1,0.2,0.1,0.1-0.1,0.2-0.1,0.1-0.1,0.1-0.1c0-0.1,0-0.1-0.1-0.2h-0.2-0.2c-0.1,0.1-0.1,0.1-0.1,0.2"/>
+  <path fill="#FFF" d="M22.3,27.7h0.4c0,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.2,0.1,0.3,0.1,0,0,0.1-0.1,0.2-0.1,0,0,0.1-0.1,0.1-0.1,0-0.1-0.1-0.1-0.1-0.2h-0.3c-0.1,0-0.2,0-0.3,0.1l-0.3-0.1,0.2-0.5h1.1v0.2h-0.8l-0.1,0.2c0.1-0.1,0.2-0.1,0.3-0.1,0.2,0,0.4,0.1,0.5,0.1,0.2,0.1,0.2,0.2,0.2,0.3,0,0,0,0.1-0.1,0.2-0.2,0.1-0.4,0.1-0.7,0.1-0.2,0-0.3,0-0.5-0.1-0.1,0-0.2-0.1-0.2-0.2"/>
+  <path fill="#FFF" d="M16.1,28v-0.2h-0.9v-0.2l1-0.6h0.4v0.6h0.3v0.2h-0.3v0.2h-0.5m0-0.4v-0.3l-0.5,0.3h0.5"/>
+  <path fill="#FFF" d="M15.3,21.2v-0.2h1.5v0.2c-0.1,0-0.3,0.1-0.4,0.2s-0.2,0.2-0.3,0.3-0.1,0.2-0.1,0.3h-0.4c0-0.1,0.1-0.3,0.2-0.4,0.1-0.2,0.3-0.3,0.5-0.4h-1"/>
+  <path fill="#FFF" d="M22.7,21.5c-0.1-0.1-0.2-0.1-0.3-0.1,0-0.1-0.1-0.1-0.1-0.1,0-0.1,0.1-0.2,0.2-0.2,0.1-0.1,0.3-0.1,0.5-0.1s0.4,0,0.5,0.1c0.1,0,0.2,0.1,0.2,0.2l-0.1,0.1-0.2,0.1c0.1,0,0.2,0,0.3,0.1l0.1,0.1c0,0.1-0.1,0.2-0.2,0.2-0.2,0.1-0.3,0.1-0.6,0.1-0.2,0-0.3,0-0.5-0.1-0.1,0-0.2-0.1-0.2-0.2,0,0,0-0.1,0.1-0.1,0-0.1,0.1-0.1,0.3-0.1m0.1-0.2v0.1h0.2,0.2c0.1-0.1,0.1-0.1,0.1-0.1,0-0.1,0-0.1-0.1-0.1h-0.2-0.2v0.1m-0.1,0.4l0.1,0.1c0.1,0,0.1,0.1,0.2,0.1s0.2,0,0.3-0.1l0.1-0.1-0.1-0.1c-0.1,0-0.2-0.1-0.3-0.1s-0.2,0.1-0.2,0.1c-0.1,0-0.1,0.1-0.1,0.1"/>
+  <path fill="#FFF" d="M29.3,21.8l0.4-0.1c0,0.1,0.1,0.1,0.1,0.1,0,0.1,0.1,0.1,0.2,0.1s0.1-0.1,0.2-0.1,0.1-0.1,0.1-0.2c-0.1,0-0.2,0.1-0.4,0.1s-0.3-0.1-0.4-0.1c-0.2-0.1-0.2-0.2-0.2-0.3s0-0.1,0.2-0.2c0.1-0.1,0.3-0.1,0.5-0.1s0.4,0,0.6,0.1c0.1,0.1,0.2,0.2,0.2,0.4s-0.1,0.3-0.3,0.4c-0.1,0.1-0.3,0.1-0.6,0.1h-0.4l-0.2-0.2m1-0.4c0-0.1,0-0.2-0.1-0.2h-0.2-0.2c-0.1,0-0.1,0.1-0.1,0.1,0,0.1,0,0.1,0.1,0.2h0.2,0.2c0.1,0,0.1-0.1,0.1-0.1"/>
+  <path fill="#FFF" d="M23,39c0.2,0,0.4,0,0.5,0.1,0.2,0.1,0.3,0.2,0.3,0.4s-0.1,0.3-0.3,0.4c-0.1,0.1-0.3,0.1-0.5,0.1s-0.4,0-0.5-0.1-0.2-0.2-0.2-0.4,0.1-0.3,0.2-0.4,0.3-0.1,0.5-0.1m0,0.2h-0.1c-0.1,0-0.1,0-0.1,0.1,0,0-0.1,0.1-0.1,0.2s0.1,0.2,0.1,0.3h0.1c0,0.1,0.1,0.1,0.1,0.1,0.1,0,0.1,0,0.2-0.1h0.1v-0.3-0.2l-0.1-0.1h-0.2"/>
+  </g>
+  </svg>
+  <h2 style="margin-top:20px">2. Forms<br>(Web Forms 2.0)</h2>
+  <p>What you had to solve by scripting previously, it is in easy markup for everyone now...</p>
+</section>
+
+
+<section>
+  <div class="icon msie">10</div>
+  <div class="icon firefox"></div>
+  <div class="icon safari"></div>
+  <div class="icon opera"></div>
+  <div class="icon chrome"></div>
+
+  <h4>Placeholder text</h4>
+  <pre><code>
+  &lt;input type=text 
+    <strong>placeholder="Input hint..."</strong>>
+    <input type=text placeholder="Input hint...">
+  </code></pre>
+  <p>It displays descriptive text/hint in the input as long as there is <mark>no user input</mark> presented. <em>Applicable to most of the input elements, except of radio, checkbox, range and select.</em></p>
+</section>
+
+
+<section>
+  <q>
+    <span>Graceful degradation</span> = different, less comfortable or fair user experience, while still <span>keeping</span> the very <span>basic purpose</span> (like Minimum <span>Viable</span> Product).
+  </q>
+</section>
+
+
+<section>
+  <q>
+    <span>Progressive enhancement</span> = reversed strategy and generally better approach. <span>Start with the minimal must-have</span> and everything else is only more nice way.
+  </q>
+</section>
+
+
+<section>
+  <div class="icon msie">10</div>
+  <div class="icon firefox"></div>
+  <div class="icon safari"></div>
+  <div class="icon opera"></div>
+  <div class="icon chrome"></div>
+
+  <h4>Required attribute</h4>
+
+  <form id="tst1" onsubmit="return false">
+  <pre><code>&lt;style>
+ <strong>[required]</strong>{background-color:pink}
+ <strong>:invalid</strong>{background-color:red}
+&lt;/style>
+&lt;input type=text name="id"
+  <strong>required</strong> placeholder="Must...">
+    <input type=text name="id" placeholder="Must be filled in!" required><input type=submit></code></pre>
+  </form>
+  <p><mark>required</mark> attribute can be used both for styling mandatory items and for enforcing their presence on submit <em>(unless overridden)</em></p>
+</section>
+
+
+<section>
+  <div class="icon msie">10</div>
+  <div class="icon firefox"></div>
+  <div class="icon safari"></div>
+  <div class="icon opera"></div>
+  <div class="icon chrome"></div>
+
+  <h4>Autofocus attribute</h4>
+  <pre><code>&lt;form action=search.php>
+  &lt;input type=<strong>search</strong> 
+    <strong>autofocus</strong>>&lt;input type=submit>
+&lt;/form> 
+<em>(unfortunately, it's not possible 
+to demonstrate in slides 
+like these ones...)</em>
+  </code></pre>
+  <p>Move user input focus to specified (non hidden) form element, after page is loaded. <mark>Search</mark> field is the most typical example of use...</p>
+</section>
+
+
+<section>
+  <h4>New semantic input element types</h4>
+  <ul style="font-size:27pt">
+    <li>&lt;input type=<mark>search</mark> name=srch_phrase></li>
+    <li>&lt;input type=<mark>tel</mark> name=telephone_number></li>
+    <li>&lt;input type=<mark>url</mark> name=page_url></li>
+    <li>&lt;input type=<mark>email</mark> name=email_address></li>
+    <li>&lt;input type=<mark>number</mark> name=your_age></li>
+  </ul>
+  <p>Line breaks are stripped before form submit for all of them and except of <mark>email</mark> and <mark>url</mark>, there is no default input format validation.</p>
+</section>
+
+
+<section>
+  <div class="icon msie">10</div>
+  <div class="icon firefox">part.</div>
+  <div class="icon safari">part.</div>
+  <div class="icon opera">part.</div>
+  <div class="icon chrome"></div>
+
+  <h4>New form input validation attributes</h4>
+  <form onsubmit="return false" action="do">
+  <ul>
+      <li>&lt;input type=text <mark>pattern="[0-9]{3}"</mark>... <br><em>regular expression pattern</em> <input type="text" pattern="[0-9]{3}" required placeholder="Test pattern" style="background-color:cyan;"></li>
+      <li>&lt;input type=number <mark>min=2 max=8 step=2</mark><span style="font-size:18pt">...</span><br><em>step can exist as addition to min/max</em><input style="background-color:cyan;" type=number required min=2 max=8 step=2 pattern="[2|4|6|8]" placeholder="Test min/max"></li>
+      <li>&lt;textarea <mark>maxlength=20</mark>... <textarea style="background-color:cyan;display:inline-block" required cols=12 rows=3 maxlength=20 placeholder="Test textarea"></textarea><input type=submit></li>
+  </ul>
+  </form>
+</section>
+
+
+<section>
+  <div class="icon msie">10</div>
+  <div class="icon firefox"></div>
+  <div class="icon safari"></div>
+  <div class="icon opera"></div>
+  <div class="icon chrome"></div>
+
+  <h4>File input improvements</h4>
+  <pre><code>&lt;form action=upload.php>
+ &lt;input type=file <strong>multiple</strong>
+  <strong>accept="image/*"</strong>> ...<svg width="130" height="70" style="float:right">
+    <g transform="scale(0.15) translate(0 -300)">
+    <path fill="#0c6dce" fill-rule="nonzero" stroke="#4c4c4c" stroke-width="25.25" stroke-miterlimit="4" stroke-dashoffset="1.25" marker-start="none" marker-mid="none" marker-end="none" id="rect1061" d="m100.556252,363.891266c-9.311035,2.21225 -15.030731,11.496857 -12.818474,20.807922l77.087204,340.016876c2.21225,9.311035 11.466476,15.037903 20.777512,12.825684l434.194138,-103.162109c9.311035,-2.212219 15.030701,-11.496887 12.818481,-20.807922l-54.214844,-263.797424c-2.21228,-9.311066 -11.496887,-14.310974 -20.807922,-12.818481l-253.262177,37.673645c0,0 -23.540588,-41.654602 -32.851654,-39.442322l-170.922264,28.704132z"/>
+    <path opacity="0.824903" fill="#0c6dce" fill-rule="nonzero" stroke="#4c4c4c" stroke-width="25.25" stroke-miterlimit="4" stroke-dashoffset="1.25" marker-start="none" marker-mid="none" marker-end="none" id="rect1063" d="m657.005066,396.908386l-426.679031,70.658508c-9.31105,2.21225 -17.25206,9.953339 -18.255798,18.939453l-46.740738,239.102966c1.967331,8.280212 11.047028,14.437683 20.358078,12.225403l434.179062,-103.158508c9.311035,-2.212219 12.343994,-10.119385 14.245483,-18.309631l43.251038,-208.505188c0.582275,-15.163574 -11.766846,-11.725677 -20.358093,-10.953003z"/>
+    </g>
+  </svg>
+&lt;/form> <input type=file accept="image/*" multiple>
+  </code></pre>
+  <p>Upload of more files with <em>Ctrl/Apple+select/click</em> ; data type is <em>preselected as filter</em> only, 
+    not constraint; possible values include IANA MIME types, like <em>audio/*, video/*</em> etc.</p>
+</section>
+
+
+<section>
+  <div class="icon msie">10</div>
+  <div class="icon firefox"></div>
+  <div class="icon safari"></div>
+  <div class="icon opera"></div>
+  <div class="icon chrome"></div>
+
+  <h4>Form behavior dynamic changes</h4>
+  <ul>
+      <li><mark>formmethod=get/post</mark>...how is form send</li>
+      <li><mark>formtarget=name/_self/_blank/_top...</mark></li>
+      <li><mark>formaction=url</mark>...where is form send</li>
+      <li><mark>formenctype=mime-type/text/plain...</mark></li>
+  </ul>
+  <p>Those attributes can be used to input type=<em>submit/image</em> to override form actions <em>(where there is more different submit ways)</em></p>
+</section>
+
+
+<section>
+  <div class="icon msie">10</div>
+  <div class="icon firefox"></div>
+  <div class="icon safari">NO</div>
+  <div class="icon opera"></div>
+  <div class="icon chrome">NO</div>
+
+  <h4>Fieldset element &amp; disabled attribute</h4>
+  <pre><code>
+&lt;fieldset <strong>disabled</strong>>
+  &lt;input type=search>
+  &lt;input type=text>
+&lt;/fieldset>
+  </code></pre>
+  <form>
+  <fieldset id="tstfld" style="margin: 5px 10px">
+  <legend align=center>Personal:</legend>
+   name: <input type=text value=mark>
+   age: <input type=text value=35>
+   gender: <input type=text value=male>
+  </fieldset>
+  </form>
+  <script>function tstfld () {var a = document.getElementById('tstfld'); var b = a.getAttribute('disabled'); if (b) {a.removeAttribute('disabled')} else {a.setAttribute('disabled', 'disabled');} return false;}</script>
+  <p><span class="acti" onclick="tstfld()">Click me to show</span> disabling of entire fieldset...<br>
+  <em>PS: Disabled elements aren't send to server</em></p>
+</section>
+
+
+<section>
+  <h4>Split up your forms with form attribute</h4>
+  <pre><code><strong>&lt;form</strong> name=<strong>questionnaire</strong>>
+ &lt;input type=text name=name>
+<strong>&lt;/form></strong>
+
+&lt;p>Add additional info...&lt;/p>
+&lt;input type=text name=more_info
+   <strong>form=questionnaire</strong>>
+&lt;hr>
+&lt;p>Don't forget to send form&lt;/p>
+&lt;input type=submit name=Submit
+   <strong>form=questionnaire</strong>>
+  </code></pre>
+</section>
+
+
+<section>
+  <div class="icon msie">NO</div>
+  <div class="icon firefox">NO</div>
+  <div class="icon safari">part.</div>
+  <div class="icon opera"></div>
+  <div class="icon chrome">part.</div>
+
+  <h4>More advanced form input types</h4>
+  <form onsubmit="return false" action="do">
+  <ul>
+      <li>&lt;input type=<mark>date</mark> ... <input type=date min="2010-08-14" max="2011-08-14" value="2010-08-14" pattern="[0-9]{4}-[0-9]{1,2}-[0-9]{1,2}" placeholder="date in format YYYY-MM-DD" size="26"></li>
+      <li>&lt;input type=<mark>time</mark> ... <input type=time min="10:00" max="22:00" value="11:22" pattern="[0-9]{1,2}:[0-9]{1,2}" placeholder="time in format HH:MM" size="5"></li>
+      <li>&lt;input type=<mark>color</mark> ... <input type=color placeholder="e.g. #bbbbbb" pattern="#[0-9]{3,6}"></li>
+      <li>&lt;input type=<mark>range</mark> ... <input type=range min=0 max=50 value=10 placeholder="value of min. 0, max. 50"  pattern="[0-9]{1,2}"></li>
+  </ul>
+  <input type=submit>
+  </form>
+  <p>More of time/date types exist. Implementation of these in current browsers is very limited :-(</p>
+</section>
+
+
+<section>
+  <div class="icon msie">10</div>
+  <div class="icon firefox"></div>
+  <div class="icon safari">NO</div>
+  <div class="icon opera"></div>
+  <div class="icon chrome">NO</div>
+  
+  <h4>Datalist enumeration</h4>
+  <datalist id="profession">
+  <option value="Painter"></option>
+  <option value="Driver"></option>
+  <option value="Developer"></option>
+  <option value="Manager"></option>
+  </datalist>
+  <pre><code>&lt;<strong>datalist id="profession"</strong>> <input list=profession name=prof/>
+ &lt;option value="Painter"/>
+ &lt;option value="Driver"/>
+ &lt;option value="Developer"/>
+ &lt;option value="Manager"/>
+&lt;/<strong>datalist</strong>>
+&lt;input type=text <strong>list=profession</strong>>
+  </code></pre>
+  <p>Could be used as <strong>autocomplete</strong> from given list of items. <em>No browser has implemented loading from external source yet :(</em></p>
+</section>
+
+
+<section>
+  <svg height="128" width="128" style="margin-top:50px;margin-left:320px">
+  <defs>
+  <linearGradient id="linearGradient2982" y2="21.9" gradientUnits="userSpaceOnUse" x2="24.9" y1="49.3" x1="24.9">
+  <stop stop-color="#FFF" offset="0.0056"/>
+  <stop stop-color="#f8f8fa" offset="0.045"/>
+  <stop stop-color="#e4e4ec" offset="0.103"/>
+  <stop stop-color="#c4c4d4" offset="0.171"/>
+  <stop stop-color="#bdbdcf" offset="0.185"/>
+  <stop stop-color="#bebed0" offset="0.19"/>
+  <stop stop-color="#cacad8" offset="0.275"/>
+  <stop stop-color="#cecedb" offset="0.359"/>
+  <stop stop-color="#e9e9ef" offset="0.786"/>
+  </linearGradient>
+  <linearGradient id="linearGradient2984" y2="23.1" gradientUnits="userSpaceOnUse" x2="24.9" y1="21" x1="24.9">
+  <stop stop-color="#616161" offset="0"/>
+  <stop stop-color="#88888a" offset="0.157"/>
+  <stop stop-color="#ababae" offset="0.326"/>
+  <stop stop-color="#c6c6ca" offset="0.496"/>
+  <stop stop-color="#d9d9df" offset="0.666"/>
+  <stop stop-color="#e5e5eb" offset="0.834"/>
+  <stop stop-color="#e9e9ef" offset="1"/>
+  </linearGradient>
+  <linearGradient id="linearGradient2986" y2="20.5" gradientUnits="userSpaceOnUse" x2="24.2" y1="18.9" x1="24.2">
+  <stop stop-color="#FFF" offset="0"/>
+  <stop stop-color="#e9e9ef" offset="1"/>
+  </linearGradient>
+  <linearGradient id="linearGradient2988" y2="23.2" gradientUnits="userSpaceOnUse" x2="311" gradientTransform="matrix(1,0,0.2679,1,-292.7053,0)" y1="17.5" x1="311">
+  <stop stop-color="#cecedb" offset="0"/>
+  <stop stop-color="#828282" offset="0.298"/>
+  <stop stop-color="#000" offset="1"/>
+  </linearGradient>
+  <linearGradient id="linearGradient2990" y2="11.2" gradientUnits="userSpaceOnUse" x2="23.2" y1="9.32" x1="22.7">
+  <stop stop-color="#FFF" offset="0"/>
+  <stop stop-color="#cecedb" offset="1"/>
+  </linearGradient>
+  <linearGradient id="linearGradient2992" y2="14.8" gradientUnits="userSpaceOnUse" x2="24.2" y1="7.85" x1="22.4">
+  <stop stop-color="#cecedb" offset="0"/>
+  <stop stop-color="#cbcbd7" offset="0.0054"/>
+  <stop stop-color="#a5a5ad" offset="0.0705"/>
+  <stop stop-color="#87878c" offset="0.134"/>
+  <stop stop-color="#727274" offset="0.194"/>
+  <stop stop-color="#656566" offset="0.25"/>
+  <stop stop-color="#616161" offset="0.298"/>
+  <stop stop-color="#000" offset="1"/>
+  </linearGradient>
+  <linearGradient id="linearGradient3759" y2="57.5" gradientUnits="userSpaceOnUse" x2="4.61" y1="71.8" x1="7.14">
+  <stop stop-color="#FFF" offset="0"/>
+  <stop stop-color="#FFF" stop-opacity="0" offset="1"/>
+  </linearGradient>
+  <linearGradient id="linearGradient2956-3" y2="602" gradientUnits="userSpaceOnUse" x2="474" gradientTransform="matrix(0.99774802,-0.23885728,0.2465656,1.3985211,-147.2425,-126.35141)" y1="597" x1="475">
+  <stop stop-color="#FFF" offset="0"/>
+  <stop stop-color="#FFF" stop-opacity="0" offset="1"/>
+  </linearGradient>
+  <linearGradient id="linearGradient2954" y2="593" gradientUnits="userSpaceOnUse" x2="489" y1="653" x1="482">
+  <stop stop-color="#000" offset="0"/>
+  <stop stop-color="#000" stop-opacity="0" offset="1"/>
+  </linearGradient>
+  <linearGradient id="linearGradient2952" y2="651" gradientUnits="userSpaceOnUse" x2="464" gradientTransform="matrix(0.99928335,0.03785226,-0.03785226,0.99928335,21.177498,-17.71529)" y1="584" x1="452">
+  <stop stop-color="#FFF" offset="0"/>
+  <stop stop-color="#649efa" offset="1"/>
+  </linearGradient>
+  <linearGradient id="linearGradient2948" y2="629" gradientUnits="userSpaceOnUse" x2="439" y1="590" x1="439">
+  <stop stop-color="#a8d5ff" offset="0"/>
+  <stop stop-color="#56abfe" offset="0.5"/>
+  <stop stop-color="#152aa9" offset="1"/>
+  </linearGradient>
+  <linearGradient id="linearGradient2946" y2="558" gradientUnits="userSpaceOnUse" x2="413" y1="558" x1="471">
+  <stop stop-color="#FFF" offset="0"/>
+  <stop stop-color="#FFF" stop-opacity="0.2" offset="1"/>
+  </linearGradient>
+  <linearGradient id="linearGradient2944" y2="578" gradientUnits="userSpaceOnUse" x2="475" y1="644" x1="475">
+  <stop stop-color="#000078" offset="0"/>
+  <stop stop-color="#3ea0ff" offset="0.326"/>
+  <stop stop-color="#40a1ff" offset="0.672"/>
+  <stop stop-color="#0064ed" offset="1"/>
+  </linearGradient>
+  <radialGradient id="radialGradient2942" gradientUnits="userSpaceOnUse" cy="59.4" cx="74.9" gradientTransform="matrix(1.0814113,0.05597562,-0.05275683,1.383964,402.8492,518.28692)" r="10">
+  <stop stop-color="#c0c0ca" offset="0"/>
+  <stop stop-color="#5c5c6e" offset="1"/>
+  </radialGradient>
+  <linearGradient id="linearGradient2940" y2="604" gradientUnits="userSpaceOnUse" x2="456" y1="600" x1="487">
+  <stop stop-color="#FFF" offset="0"/>
+  <stop stop-color="#FFF" stop-opacity="0" offset="1"/>
+  </linearGradient>
+  <linearGradient id="linearGradient2938" y2="600" gradientUnits="userSpaceOnUse" x2="475" gradientTransform="matrix(1.076171,0,0,1,-38.023641,-0.2076699)" y1="600" x1="496">
+  <stop stop-color="#FFF" stop-opacity="0.89999998" offset="0"/>
+  <stop stop-color="#CCC" stop-opacity="0" offset="1"/>
+  </linearGradient>
+  <filter id="filter3746" color-interpolation-filters="sRGB">
+  <feGaussianBlur stdDeviation="1.4857634"/>
+  </filter>
+  </defs>
+  <g transform="matrix(1.6400874,-1.1875007,1.1875007,1.6400874,-11.640908,54.608088)">
+  <path opacity="0.2" d="M44.5,17.5h-33.9l32.7-8.74c0.2-0.06,0.4-0.18,0.5-0.34,0.1-0.17,0.1-0.37,0.1-0.56l-1.1-4.03c-0.1-0.19-0.2-0.35-0.4-0.45-0.1-0.09-0.3-0.12-0.5-0.07l-0.3,0.07s0.041,0.021,0.051,0.027c-0.27,0.034-0.743,0.159-1.66,0.406l-35.9,9.58c-0.19,0.1-0.35,0.2-0.45,0.4-0.06,0.1-0.09,0.2-0.09,0.3,0,0.064,0.008,0.128,0.025,0.19l1.07,4v4.1c0,0.402,0.327,0.729,0.729,0.729h1.52v21.5c0,0.366,0.273,0.678,0.636,0.725l0.22,0.027c0.238,0.029,0.863,0.096,1.59,0.096h32.8c1.35,0,2.45-1.11,2.45-2.48v-19.7c0.378-0.027,0.68-0.34,0.68-0.724v-4.17c0-0.402-0.328-0.73-0.731-0.73z"/>
+  <path opacity="0.2" d="M44.1,17.1h-33.8l32.8-8.73c0.1-0.05,0.3-0.17,0.4-0.34s0.1-0.37,0.1-0.56l-1.1-4.03c-0.1-0.18-0.2-0.35-0.4-0.44-0.1-0.1-0.3-0.13-0.5-0.08l-0.3,0.07s0.042,0.021,0.052,0.026c-0.271,0.035-0.743,0.159-1.66,0.406l-35.9,9.67c-0.188,0.05-0.345,0.171-0.443,0.339-0.065,0.114-0.098,0.239-0.098,0.365,0,0.063,0.008,0.127,0.025,0.19l1.07,4v4.09c0,0.403,0.328,0.73,0.73,0.73h1.53v21.5c0,0.366,0.273,0.677,0.636,0.725l0.219,0.027c0.238,0.029,0.863,0.096,1.59,0.096h32.8c1.35,0,2.45-1.12,2.45-2.48v-19.8c0.378-0.027,0.679-0.34,0.679-0.725v-4.17c0-0.403-0.327-0.73-0.73-0.73z"/>
+  <path d="m43.7,16.8-0.256,0-33.6,0,32.7-8.77c0.2-0.1,0.4-0.22,0.5-0.39s0.1-0.37,0.1-0.56l-1.1-4.03c-0.1-0.18-0.2-0.35-0.3-0.44-0.2-0.1-0.4-0.13-0.6-0.07l-0.248,0.067s0.042,0.021,0.052,0.026c-0.271,0.034-0.743,0.159-1.66,0.406l-35.9,9.63c-0.188,0.05-0.345,0.171-0.443,0.339-0.065,0.114-0.098,0.239-0.098,0.365,0,0.063,0.008,0.128,0.025,0.19l1.07,4v4.09c0,0.402,0.328,0.73,0.73,0.73h1.52v21.7c0,0.411,0.228,0.631,0.636,0.631l34.6-0.0002c1.35,0,2.45-1.11,2.45-2.48v-19.8c0.378-0.027,0.679-0.339,0.679-0.725v-4.17c0-0.4-0.4-0.7-0.8-0.7z"/>
+  <path fill="#FFF" d="m7.1,43.7,34.2,0c0.81,0,1.47-0.671,1.47-1.5v-21.5c0-0.828-0.657-1.5-1.47-1.5h-32.8c-0.81,0-1.47,0.671-1.47,1.5v23z"/>
+  <path opacity="0.8" fill="url(#linearGradient2982)" d="m7.1,43.7,34.2,0c0.81,0,1.47-0.671,1.47-1.5v-21.5c0-0.828-0.657-1.5-1.47-1.5h-32.8c-0.81,0-1.47,0.671-1.47,1.5v23z"/>
+  <path opacity="0.5" fill="#FFF" d="m41.3,19.2-32.8,0c-0.81,0-1.47,0.671-1.47,1.5v23h34.2c0.81,0,1.47-0.671,1.47-1.5v-21.5c0-0.828-0.657-1.5-1.47-1.5zm0.444,23c0,0.262-0.199,0.474-0.443,0.474h-33.2v-21.9c0-0.261,0.199-0.475,0.443-0.475h32.8c0.244,0,0.443,0.213,0.443,0.475v21.5h0.001z"/>
+  <path opacity="0.8" fill="url(#linearGradient2984)" d="m7.1,23.7s0.657,0.016,1.47,0.016h32.8c0.81,0,1.47-0.123,1.47-0.274v-3.92c0-0.15-0.657-0.273-1.47-0.273h-32.7c-0.81,0-1.47,0.123-1.47,0.273v4.18z"/>
+  <path d="M43.5,17.1h-38.9c-0.188,0-0.341,0.153-0.341,0.341v4.17c0,0.188,0.153,0.341,0.341,0.341h39.1c0.189,0,0.342-0.153,0.342-0.341v-4.12c0-0.188-0.152-0.341-0.342-0.341h-0.255z"/>
+  <rect height="3.66" width="38.6" y="17.7" x="4.85" fill="url(#linearGradient2986)"/>
+  <path fill="url(#linearGradient2988)" d="m7.76,21.4h3.66l-1.6-3.7h-3.66l1.63,3.66m17-3.66h-3.66l1.63,3.66h3.66l-1.63-3.66m-7.49,0h-3.66l1.63,3.66h3.66l-1.63-3.66m22.5,0h-3.66l1.63,3.66h3.66l-1.63-3.66m-7.49,0h-3.66l1.63,3.66h3.66l-1.63-3.66z"/>
+  <path d="m41.2,2.91-0.248,0.067h0.001l-37.6,10c-0.088,0.023-0.162,0.081-0.208,0.159s-0.058,0.171-0.034,0.258l1.08,4.03c0.049,0.182,0.236,0.29,0.418,0.241l37.8-10.1c0.182-0.049,0.29-0.236,0.24-0.418l-1.1-4.03c0-0.08-0.1-0.16-0.1-0.21-0.1-0.04-0.2-0.05-0.3-0.03z"/>
+  <polygon points="42.1,7.09,41.1,3.56,3.81,13.5,4.76,17.1" fill="url(#linearGradient2990)"/>
+  <path fill="url(#linearGradient2992)" d="M7.57,16.3,11.1,15.4,9.54,12,6,13l1.57,3.37m16.4-8.19-3.54,0.948,1.57,3.37,3.54-0.948-1.57-3.37m-7.23,1.94-3.54,0.948,1.57,3.37,3.54-0.949-1.57-3.37m21.7-5.82-3.54,0.947,1.57,3.37,3.54-0.947-1.57-3.37m-7.3,1.82-3.5,0.95,1.6,3.35,3.5-0.93-1.6-3.37z"/>
+  </g>
+  <g transform="matrix(0.80217245,0,0,0.80217245,-280.50895,-406.55933)">
+  <path opacity="0.5" d="m482,547c-7.61,5.87-8.31,6.87-15.1,14-8.35,9.76-19,23.7-26.5,31.5l-25.5,5.18c-3.02,9.96-2.81,23,5.28,34.2l24.4-0.599c13.5,9,20.7,15.4,36.2,23.9,4.87,2.66,11.8-9.12,14.4-16.1,3.56-9.98,5.9-25.4,6.17-37.2,0.276-11.7-0.999-29.3-3.55-38.8-3-9.7-9.29-21.2-15.8-16.1z" fill-rule="evenodd" filter="url(#filter3746)" fill="#000"/>
+  <path fill="#4d4d4d" d="m496,599c0.508,29.4-7.82,52.3-15.3,53.1-10.5,1.11-19.1-32-18.8-53.5,0.508-36.2,13-50.7,20.2-51.6,8.67-1.06,14.3,20.1,13.8,52.1z"/>
+  <path fill="url(#linearGradient2938)" d="m496,599c0.508,29.4-7.91,54.8-15.8,52.8-13.4-3.34-19.2-31.7-18.9-53.3,0.508-36.2,13-50.3,20.2-51.2,8.67-1.06,15,19.7,14.5,51.7z"/>
+  <path opacity="0.67699118" fill="url(#linearGradient2940)" d="m490,601c-0.64,29.4-6.6,41-12.6,40.7-5.73-0.31-12.6-20.4-12.6-42s9.38-39.7,12.8-39.5c5.04,0.236,12.1,6.09,12.5,40.9z"/>
+  <path d="m481,605c0,10.4-3.72,13.9-8.93,15.5-2.91,0.902-4.94-2.51-6.43-3.25-4.87-2.42-2.67-7.32-2.77-15.1-0.0442-3.47-0.854-5.57,1.61-8.42,1.29-1.49,2.7-4.86,5.74-4.9,7.01-0.101,10.8,5.96,10.8,16.1z" stroke-dashoffset="0" stroke="#000" stroke-miterlimit="4" stroke-dasharray="none" stroke-width="1.35235834" fill="#000"/>
+  <path d="m480,605c0,10.4-3.72,13.9-8.93,15.5-2.91,0.902-4.94-2.51-6.43-3.25-4.87-2.42-2.67-7.32-2.77-15.1-0.0442-3.47-0.854-5.57,1.61-8.42,1.29-1.49,2.7-4.86,5.74-4.9,7.01-0.101,10.8,5.96,10.8,16.1z" stroke-dashoffset="0" stroke="#000" stroke-miterlimit="4" stroke-dasharray="none" stroke-width="1.35235834" fill="#5a596b"/>
+  <path fill="url(#radialGradient2942)" d="m469,590c-0.897,0.118-1.67,0.446-2.32,0.882-0.0949,0.0765-0.207,0.137-0.297,0.22-1.11,1.03-1.91,2.55-2.81,3.59-1.15,1.34-1.48,2.37-1.57,3.56-0.0896,1.18,0.112,2.58,0.135,4.38,0.0512,3.94-0.473,7.12-0.405,9.48,0.034,1.18,0.215,2.12,0.621,2.9,0.407,0.78,1.05,1.45,2.19,2.02,0.964,0.479,1.79,1.55,2.78,2.33,0.62,0.489,1.26,0.882,1.95,1.01,0.412,0.0754,0.832,0.0494,1.3-0.0945,2.53-0.784,4.63-2.01,6.11-4.22s2.38-5.51,2.38-10.6c0-4.99-0.912-8.89-2.62-11.5-1.69-2.57-4.15-3.94-7.43-3.94z"/>
+  <path fill-rule="evenodd" fill="url(#linearGradient2944)" d="m420,630,23.8-1.42c6.86,4.02,18,13.1,28.3,19.9-12.7-42.3-7.29-56.4,0.0366-93.3l-31.9,36.1-26.4,6.61c-2.38,9.07-3.28,18.7,6.14,32.1z"/>
+  <path opacity="0.5" d="m413,605,30.5-6.28,21.3-23.6c0.954-5.56,3.23-13,5.26-16.9-4.67,4.96-19.9,23.3-29.8,35l-26.7,5.11c-0.304,3.44-0.56,5.93-0.663,6.76z" fill-rule="evenodd" fill="url(#linearGradient2946)"/>
+  <path opacity="0.88999999" stroke-linejoin="miter" d="m443,628c-4.43-16.1-3.21-26.5-1.66-36.5" stroke="url(#linearGradient2948)" stroke-linecap="butt" stroke-miterlimit="4" stroke-dasharray="none" stroke-width="1.73874652" fill="none"/>
+  <path opacity="0.9" style="enable-background:accumulate;color:#000000;" d="M9.62,59.1,4.79,60c-0.89,9.2,1.59,17.1,6.41,24.6l3.3-0.3c-6.45-9.9-5.81-18-4.88-25.2z" fill-rule="evenodd" transform="matrix(0.96597031,0,0,0.96597031,410.15195,546.44209)" fill="url(#linearGradient3759)"/>
+  <path opacity="0.96160003" d="m479,551-6.35,3.15c-14.1,17.4-14.1,69.5-1.68,94.1l4.37,2.68c-0.426-1,0.214-0.422-0.414-2.01-9.98-25.2-12.1-76.3,4.07-97.9z" fill-rule="evenodd" fill="url(#linearGradient2952)"/>
+  <path fill-rule="evenodd" fill="#000080" d="m481,546c-7.61,5.87-8.31,6.87-15.1,14-8.35,9.76-19,23.7-26.5,31.5l-25.5,5.18c-3.02,9.96-2.81,23,5.28,34.2l24.4-0.599c13.5,9,20.7,15.4,36.2,23.9,4.87,2.66,11.8-9.12,14.4-16.1,3.56-9.98,5.9-25.4,6.17-37.2,0.276-11.7-0.999-29.3-3.55-38.8-3-9.7-9.29-21.2-15.8-16.1zm11.9,19c2.17,9.44,2.94,25.2,2.67,36.8-0.274,11.7-0.998,19.7-3.61,29.9-2.62,10.2-7.07,23.1-12.2,20.2-19-11-23.6-15.9-35.9-24.3l-24.1,1.11c-7.69-10.8-6.49-20.1-5.38-30.1l26.6-5.13c4.96-5.01,16-19.2,24.4-29,6.14-6.53,9.67-12.3,16.5-15.1,6.12-2.49,9.58,9.94,11,15.6z"/>
+  <path fill-rule="evenodd" fill="url(#linearGradient2954)" d="m481,546c-8.89,6.34-9.51,7.72-17,16.4-8.35,9.76-17.2,21.3-24.6,29.1l-25.5,5.18c-3.02,9.96-2.81,23,5.28,34.2l24.4-0.599c13.5,9,20.7,15.4,36.2,23.9,4.87,2.66,11.8-9.12,14.4-16.1,3.56-9.98,5.9-25.4,6.17-37.2,0.276-11.7-1.82-28.8-4.01-38.3-1.5-5.56-8.63-21.4-15.4-16.6zm11.9,19c2.17,9.44,2.94,25.2,2.67,36.8-0.274,11.7-0.998,19.7-3.61,29.9-2.62,10.2-7.07,23.1-12.2,20.2-19-11-23.6-15.9-35.9-24.3l-24.1,1.11c-7.69-10.8-6.49-20.1-5.38-30.1l26.6-5.13c4.96-5.01,16-19.2,24.4-29,6.14-6.53,9.67-12.3,16.5-15.1,6.12-2.49,9.58,9.94,11,15.6z"/>
+  <path opacity="0.8" fill="url(#linearGradient2956-3)" d="m477,597a6.2,3.82,82.1,0,1,-7.46,1.79,6.2,3.82,82.1,1,1,7.46,-1.79z"/>
+  </g>
+  </svg>
+  <h2 style="margin-top:20px">3. Multimedia and applications</h2>
+</section>
+
+
+<section>
+  <div class="icon msie">9</div>
+  <div class="icon firefox"></div>
+  <div class="icon safari"></div>
+  <div class="icon opera"></div>
+  <div class="icon chrome"></div>
+
+  <h4>Canvas element + 2D drawing API</h4>
+  <pre class="smaller"><code><strong>&lt;canvas</strong> id="draw" width="99" height="99"/>
+&lt;script>
+ cnv = document.getElementById('draw');
+ ctx = cnv.<strong>getContext('2d')</strong>;
+  ctx.<strong>beginPath</strong>();
+  ctx.<strong>moveTo</strong>(25,25); // x,y coords
+  ctx.<strong>lineTo</strong>(99,45);
+  ctx.<strong>lineTo</strong>(35,99);
+  ctx.<strong>fillStyle</strong> = 'blue'; // color to use
+  ctx.<strong>fill</strong>();
+&lt;/script></code></pre>
+
+  <table>
+    <tr>
+      <td>
+        <canvas id="draw" width="110" height="99"></canvas>
+        <script>
+          // get the canvas element using the DOM
+          var canvas = document.getElementById('draw');
+          // Make sure we don't execute when canvas isn't supported
+          if (canvas.getContext){
+            // use getContext to use the canvas for drawing
+            var ctx = canvas.getContext('2d');
+            ctx.beginPath();
+            ctx.moveTo(25,25);
+            ctx.lineTo(99,45);
+            ctx.lineTo(35,99);
+            ctx.fillStyle = 'blue';
+            ctx.fill();
+          } else {
+            alert('You browser supporting canvas!');
+          }
+        </script>
+      </td>
+      <td>...many other commands available...</td>
+    </tr>
+  </table>
+</section>
+
+
+<section>
+  <div class="icon msie">9</div>
+  <div class="icon firefox"></div>
+  <div class="icon safari"></div>
+  <div class="icon opera"></div>
+  <div class="icon chrome"></div>
+
+  <h4>SVG inline integration</h4>
+  <pre class="smaller2"><code>...HTML page... 
+<strong>&lt;svg></strong> <em>namespace is not necessary!!</em>
+ &lt;circle cx="0" cy="0" r="35" fill="blue"/>
+ &lt;circle cx="80" cy="0" r="35" fill="black"/>
+ &lt;circle cx="160" cy="0" r="35" fill="red"/>
+ &lt;circle cx="40" cy="35" r="35" fill="yellow"/>
+ &lt;circle cx="120" cy="35" r="35" fill="green"/>
+<strong>&lt;/svg></strong> ...HTML page continues...</code></pre>
+  <svg width="600" height="250">
+    <style type="text/css">
+     circle {stroke:black; stroke-width:8px; fill-opacity:0.8; stroke-opacity:0.7;}
+     circle:hover{fill-opacity:0.4; stroke-opacity:1;}
+    </style>
+      <g transform="translate(150 100) scale(2)">
+        <circle cx="0" cy="0" r="35" fill="blue"/>
+        <circle cx="80" cy="0" r="35" fill="black"/>
+        <circle cx="160" cy="0" r="35" fill="red"/>
+        <circle cx="40" cy="35" r="35" fill="yellow"/>
+        <circle cx="120" cy="35" r="35" fill="green"/>
+      </g>
+  </svg>
+</section>
+
+
+<section>
+  <div class="icon msie">NO</div>
+  <div class="icon firefox"></div>
+  <div class="icon safari"></div>
+  <div class="icon opera"></div>
+  <div class="icon chrome">NO</div>
+
+  <h4>MathML inline integration</h4>
+  <pre class="smaller"><code>...HTML page... 
+<strong>&lt;math></strong> <em>namespace is not necessary!!</em>
+ &lt;mrow>
+  &lt;msup>&lt;mi>a&lt;/mi>&lt;mn>2&lt;/mn>&lt;/msup>
+  &lt;mo>+&lt;/mo>
+  &lt;msup>&lt;mi>b&lt;/mi>&lt;mn>2&lt;/mn>&lt;/msup>
+  &lt;mo>=&lt;/mo>
+  &lt;msup>&lt;mi>c&lt;/mi>&lt;mn>2&lt;/mn>&lt;/msup>
+ &lt;/mrow>
+<strong>&lt;/math></strong> ...HTML page continues...</code></pre>
+
+  <math display="block">
+    <mrow>
+      <mi>x</mi>
+      <mo>=</mo>
+      <mfrac>
+        <mrow>
+          <mo form="prefix">&minus;</mo>
+          <mi>b</mi>
+          <mo>&PlusMinus;</mo>
+          <msqrt>
+            <msup>
+              <mi>b</mi>
+              <mn>2</mn>
+            </msup>
+            <mo>&minus;</mo>
+            <mn>4</mn>
+            <mo>&InvisibleTimes;</mo>
+            <mi>a</mi>
+            <mo>&InvisibleTimes;</mo>
+            <mi>c</mi>
+          </msqrt>
+        </mrow>
+        <mrow>
+          <mn>2</mn>
+          <mo>&InvisibleTimes;</mo>
+          <mi>a</mi>
+        </mrow>
+      </mfrac>
+    </mrow>
+  </math>
+</section>
+
+
+<section>
+  <div class="icon msie">9</div>
+  <div class="icon firefox"></div>
+  <div class="icon safari"></div>
+  <div class="icon opera"></div>
+  <div class="icon chrome"></div>
+
+  <h4>Video element with fallback syntax</h4>
+  <pre class="smaller"><code><strong>&lt;video</strong> poster="poster.jpg" 
+ controls autoplay loop>
+ <strong>&lt;source</strong> src='video.mp4' type='video/mp4'>
+ <strong>&lt;source</strong> src='video.ogv' type='video/ogg'>
+ <em>&lt;object data="player.swf" 
+  type="application/x-shockwave-flash"
+  width="200" height="100">
+   &lt;param name="movie" value="video.mp4"/>
+   &lt;img src="poster.jpg" alt="Just image">
+ &lt;/object></em>
+<strong>&lt;/video></strong></code></pre>
+  <p>Some other handy attributes also available:<br><em>&nbsp; preload, muted, width, height...</em></p>
+</section>
+
+
+<section>
+  <h4>Video element example + JS API</h4>
+  <!-- warning: playback does not work on iPad/iPhone if you include the poster attribute! fixed in iOS4 -->
+  <video width="640" height="360" id="myVid" controls>
+  	<!-- MP4 must be first for iPad! -->
+  	<source src="http://clips.vorwaerts-gmbh.de/VfE_html5.mp4" type="video/mp4"/><!-- Safari / iOS, IE9 -->
+  	<source src="http://clips.vorwaerts-gmbh.de/VfE.webm" type="video/webm"/><!-- Chrome10+, Ffx4+, Opera10.6+ -->
+  	<source src="http://clips.vorwaerts-gmbh.de/VfE.ogv" type="video/ogg"/><!-- Firefox3.6+ / Opera 10.5+ -->
+  	<!-- fallback to Flash: -->
+  	<object width="640" height="360" type="application/x-shockwave-flash" data="http://camendesign.com/code/video_for_everybody/player.swf">
+  		<!-- Firefox uses the `data` attribute above, IE/Safari uses the param below -->
+  		<param name="movie" value="http://camendesign.com/code/video_for_everybody/player.swf" />
+  		<param name="flashvars" value="autostart=true&amp;controlbar=over&amp;image=http://camendesign.com/code/video_for_everybody/poster.jpg&amp;file=http://clips.vorwaerts-gmbh.de/VfE_flash.mp4" />
+  		<!-- fallback image -->
+  		<img src="http://camendesign.com/code/video_for_everybody/poster.jpg" width="640" height="360" alt="Big Buck Bunny"
+  		     title="No video playback capabilities, please download the video..." />
+  	</object>
+  </video>
+  <pre class="smaller"><code>&lt;script> //  JS API is easy (<mark class="acti" onclick="javascript:document.getElementById('myVid').play()">PLAY</mark> <mark class="acti" onclick="javascript:document.getElementById('myVid').pause()">PAUSE</mark>)
+ var v = document.getElementById('myVid');
+ v.<strong>play();</strong>
+ v.<strong>pause();</strong></code></pre>
+</section>
+
+
+<section>
+  <div class="icon msie">9</div>
+  <div class="icon firefox"></div>
+  <div class="icon safari"></div>
+  <div class="icon opera"></div>
+  <div class="icon chrome"></div>
+
+  <h4>Audio element  + JS API</h4>
+  <pre class="smaller"><code><strong>&lt;audio</strong> controls autoplay loop>
+ <strong>&lt;source</strong> src='sound.mp3' type='audio/mp3'>
+ <strong>&lt;source</strong> src='sound.ogg' type='audio/ogg'>
+ &lt;p>Unsupported browser...&lt;/p>
+<strong>&lt;/audio></strong>
+  </code></pre>
+  <p>The syntax and API is same like for <mark>video</mark> element, except of some attributes, which have no sense for audio, like <em>poster, width, height...</em></p>
+  <audio id="carSnd" controls>
+    <source src="http://svg.kvalitne.cz/cuba/car.ogg" type="audio/ogg"/>
+    <source src="http://svg.kvalitne.cz/cuba/car.mp3" type="audio/mp3"/>
+  </audio>
+  <p>JS API example: ( <mark class="acti" onclick="javascript:document.getElementById('carSnd').play()">PLAY</mark> <mark class="acti" onclick="javascript:document.getElementById('carSnd').pause()">PAUSE</mark> )</p>
+</section>
+
+
+<section>
+  <div class="icon msie">10</div>
+  <div class="icon firefox"></div>
+  <div class="icon safari"></div>
+  <div class="icon opera"></div>
+  <div class="icon chrome"></div>
+
+  <h4>classList manipulation API</h4>
+  <pre class="smaller"><code>&lt;style&gt; 
+ .st1 {text-transform: uppercase}
+ .st2 {color: darkgreen}
+&lt;/style&gt;
+  </code></pre>
+  <ul style="margin-top:5pt">
+    <li>element.classList.<mark class="acti" onclick="javascript:alert(document.getElementById('clTest').classList.contains('st2'))">contains</mark>('st2')
+    <li>element.classList.<mark class="acti" onclick="javascript:document.getElementById('clTest').classList.add('st1')">add</mark>('st1')
+    <li>element.classList.<mark class="acti" onclick="javascript:document.getElementById('clTest').classList.remove('st1')">remove</mark>('st1')
+    <li>element.classList.<mark class="acti" onclick="javascript:document.getElementById('clTest').classList.toggle('st2')">toggle</mark>('st2')
+    <li id="clTest" style="border: 1px dotted brown">"classList API testing element"
+  </ul>
+</section>
+
+
+<section>
+  <div class="icon msie">10</div>
+  <div class="icon firefox"></div>
+  <div class="icon safari"></div>
+  <div class="icon opera"></div>
+  <div class="icon chrome"></div>
+
+  <h4>History API for single-page apps</h4>
+  <pre class="smaller"><code>&lt;script&gt; 
+ window.<strong>onpopstate</strong> = function(event) {  
+  document.location, event.<strong>state</strong>) }
+ element1.onclick = <strong>history.pushState</strong>(
+  {page:1}, "Title 1", "?page=1");
+ element2.onclick = <strong>history.pushState</strong>(
+  {page:2}, "Title 2", "?page=2");  
+ element3.onclick = <strong>history.replaceState</strong>(
+ {page:3}, "Title 3", "?page=3");
+&lt;/script&gt;</code></pre>
+  <p style="font-size:27pt">You can handle <mark>FORWARD</mark> events and <mark>BACK</mark> returns. It is not possible to be part of this slideshow, but <a href="http://html5doctor.com/demos/history/bob" target="_blank">external demo is available</a>...</p>
+</section>
+
+
+<section>
+  <q>
+    Current trend of modern web-apps could be called "<span>The Return Of The Thick Client</span>" and HTML5 + CSS3 + JS are in the center of this massive movement! 
+  </q>
+</section>
+
+
+<section>
+  <div class="icon msie">10</div>
+  <div class="icon firefox"></div>
+  <div class="icon safari"></div>
+  <div class="icon opera"></div>
+  <div class="icon chrome"></div>
+
+  <h4>Custom data-* attributes + API</h4>
+  <p>...and stop abusing <em>rel</em>&nbsp; attribute, please...</p>
+  <pre class="smaller"><code>&lt;p <strong>data-</strong><em>gender</em>="M" <strong>data-</strong><em>age</em>="9">Mark&lt;/p> 
+&lt;p <strong>data-</strong><em>gender</em>="F" <strong>data-</strong><em>age</em>="7">Rachel&lt;/p>
+&lt;p <strong>data-</strong><em>gender</em>="F" <strong>data-</strong><em>age</em>="13">Chloe&lt;/p>
+&lt;script>
+ alert(element.<strong>dataset</strong>.<em>gender</em>); <em>// read</em>
+ alert(element.<strong>dataset</strong>.<em>age</em>);    <em>// read</em>
+ element.<strong>dataset</strong>.<em>gender</em> = "M";  <em>// set</em>
+ element.<strong>dataset</strong>.<em>age</em> = null;    <em>// delete</em>
+&lt;/script></code></pre>
+  <mark class="acti" id="dataAX" data-gender="M" data-age="9" onclick="javascript:alert('age: '+this.dataset.age+' , gender: '+this.dataset.gender); return false">Click Me To Show Data-*</mark>
+  <button onclick="javascript:document.getElementById('dataAX').dataset.age = Math.floor(Math.random()*100)">Generate random age to the link beside</button>
+  <p><em>Its easier than using get/setAttribute methods.</em></p>
+</section>
+
+
+<section>
+  <div class="icon msie">10</div>
+  <div class="icon firefox"></div>
+  <div class="icon safari"></div>
+  <div class="icon opera"></div>
+  <div class="icon chrome"></div>
+
+  <h4>Application cache for offline use</h4>
+  <pre class="smaller"><code>&lt;html <strong>manifest="/offline.appcache"</strong>></code></pre>
+  <p style="margin:0;font-size:26pt">File with mimetype <mark>text/cache-manifest</mark> is:</p>
+  <pre class="smaller"><code><strong>CACHE MANIFEST</strong> <em>#modify content to re-cache</em>
+<strong>CACHE:</strong> <em>#what to store</em>
+/css/offline.css
+/js/screen.js
+/img/logo.png
+<strong>FALLBACK:</strong> <em>#map online to offline URL</em>
+/ /offline.html
+<strong>NETWORK:</strong> <em>#available only when online</em>
+*</code></pre>
+  <p style="margin:0;font-size:26pt">Wildcards are possible to use in <mark>FALLBACK</mark> and <mark>NETWORK</mark> sections only, not <mark>CACHE</mark>!!</p>
+</section>
+
+
+<section>
+  <q>
+    HTML5 specification is in working draft, but there is <span>no reason to hesitate</span> - it will not be proclaimed final before at least <span>two complete</span> implementations!</q>
+</section>
+
+
+<section>
+  <div class="icon msie"></div>
+  <div class="icon firefox"></div>
+  <div class="icon safari"></div>
+  <div class="icon opera"></div>
+  <div class="icon chrome"></div>
+
+  <h4>Online Editable Content</h4>
+  <pre><code>&lt;section id="ED" <strong>contenteditable</strong>>
+ &lt;p>Editable &lt;em>content&lt;/em>
+&lt;/section>
+&lt;script>
+ alert(document.getElementById(
+  'ED').innerHTML);
+&lt;/script>  <span class="acti" onclick="alert(document.getElementById('ED').innerHTML)">Show me editable HTML</span></code></pre>
+  <div id="ED" contenteditable="true" style="border:1px dotted gray;margin: 6px; background-color:lightblue">
+    <p><strong>Editable rich content</strong><br>directly on HTML page is, if you don't know yet:</p>
+    <ol>
+      <li>easy to use</li>
+      <li><em>in elegant way</em></li>
+      <li>ready for you</li>
+    </ol>
+  </div>
+</section>
+
+
+<section>
+  <h2>4. Related specifications</h2>
+  <svg height="170" width="600">
+  <g transform="scale(0.6) translate(500 0)">
+  <g stroke-linejoin="round" transform="matrix(1.2893871,0,0,1.2893871,-221.23847,-64.784815)" stroke="#000" stroke-linecap="round" stroke-dasharray="none" stroke-miterlimit="4" stroke-width="3.45">
+  <path d="M300,130l30,90h20s10-10,10-10c10,0,10-10,10-10h50v-70h-50c-20-10-40-30-60-30" fill-rule="nonzero" fill="#f7c1b6"/>
+  <path d="M170,130h50c10-20,30-20,40-20,30-13,50,20,60,20v10c20,10,20,10,30,20s10,10,10,20v30c0,10-10,10-20,10,0,10-10,10-10,10-10,10-10,10-20,10h-10c-50,0-70-20-80-40h-50v-70z" fill-rule="nonzero" fill="#dbb66c"/>
+  <path d="M220,210l10-10c10-10,20,0,10,10l-10,20c-10,0-10-10-10-20z" fill-rule="nonzero" fill="#f7c1b6"/>
+  <path d="M230,220c10-10,20-20,30-30s20,0,20,10c-10,10-30,30-30,30-10,10-20,0-20-10z" fill-rule="nonzero" fill="#f7c1b6"/>
+  <path d="M310,240v-30s-20-10-30-20" fill="none"/>
+  <path d="M250,230c20-10,30-30,40-40s20,0,10,10c0,10-30,40-30,40-10,0-20,0-20-10z" fill-rule="nonzero" fill="#f7c1b6"/>
+  <path d="M310,100c-10,0-20,10-30,20-10,30-20,40-10,40,10,10,30-20,30-30h20" fill-rule="nonzero" fill="#f7c1b6"/>
+  <path d="M330,230v-30l-30-20v-10" fill="none"/>
+  <path d="M310,150v10c10,0,30,20,30,20v40" fill="none"/>
+  <path d="M270,240c10,0,20-20,30-30s20,0,10,10-10,20-20,30c-10,0-20,0-20-10z" fill-rule="nonzero" fill="#f7c1b6"/>
+  </g>
+  </g>
+  </svg>
+</section>
+
+
+<section>
+  <q>
+    Only a <span>handful</span> of HTML5 related and most-attractive specifications is mentioned there, because of <span>limited time, space</span> and my bounded knowledge ;-)
+  </q>
+</section>
+
+
+<section>
+  <div class="icon msie">9</div>
+  <div class="icon firefox"></div>
+  <div class="icon safari"></div>
+  <div class="icon opera"></div>
+  <div class="icon chrome"></div>
+
+  <h4>Selectors and DOM API</h4>
+  <p style="font-size:26pt">Following methods are great way to <em>access elements on page via CSS notation</em> and selectors</p>
+  <pre class="smaller2"><code class="abc cde">&lt;style>
+ code.abc {font-weight:bold}
+ .cde {font-weight:normal}
+&lt;/style></code></pre>
+  <script>
+  function selap1() {var a = document.getElementsByClassName('abc cde'); alert(a + ' of length ' + a.length);}
+  function selap2() {var a = document.querySelectorAll('code.abc > .cde'); alert(a + ' of length ' + a.length);}
+  function selap3() {var a = document.querySelector('code.abc > .cde'); alert(a + ' (only one)');}
+  </script>
+  <pre class="smallest"><code class="abc cde">&lt;script>
+ document.<mark class="cde acti" onclick="selap1()">getElementsByClassName</mark>('abc cde');
+ <span style="color:black">// get all elements with classes abc and cde</span>
+ document.<mark class="cde acti" onclick="selap2()">querySelectorAll</mark>('pre.abc > .cde');
+ <span style="color:black">// get all elements having class cde and
+ // are direct childs of CODE with class abc</span>
+ document.<mark class="cde acti" onclick="selap3()">querySelector</mark>('pre.abc > .cde');
+ <span style="color:black">// like previous but get only one (first one)</span></code></pre>
+</section>
+
+
+<section>
+  <div class="icon msie">9</div>
+  <div class="icon firefox"></div>
+  <div class="icon safari"></div>
+  <div class="icon opera"></div>
+  <div class="icon chrome"></div>
+
+  <h4>Geolocation JS API</h4>
+  <script src="http://api4.mapy.cz/loader.js"></script>
+  <script>Loader.load();</script>
+  <script>
+    function geos() { 
+      if (navigator.geolocation) {
+       navigator.geolocation.getCurrentPosition(function(position) {
+        document.getElementById('map').src = "http://maps.google.com/maps/api/staticmap?center="+position.coords.latitude+","+position.coords.longitude+"&zoom=15&markers="+position.coords.latitude+","+position.coords.longitude+"&sensor=false&size=630x265&maptype=hybrid";
+       }, function() {alert('map error')});
+      }
+    }
+  </script>
+  <pre class="smaller"><code>if (<strong>navigator.geolocation</strong>) {
+ <strong>navigator.geolocation.getCurrentPosition</strong>(
+  function (position) {
+   alert('position.<strong>coords.latitude</strong>, 
+   position.<strong>coords.longitude</strong>);
+ }, function() {alert('Error occured')});
+}      <span class="acti" onclick="geos()">Show Me On The Map Below</span></code></pre>
+  <img id=map alt="map" width=630 height=265 src="http://maps.google.com/maps/api/staticmap?center=49.9343100,17.8884819&amp;zoom=15&amp;sensor=false&amp;size=630x265&amp;maptype=hybrid" style="margin-left:60px;border: 2px dashed brown"/>
+</section>
+
+
+<section>
+  <div class="icon msie">8</div>
+  <div class="icon firefox"></div>
+  <div class="icon safari"></div>
+  <div class="icon opera"></div>
+  <div class="icon chrome"></div>
+
+  <h4>Local and Session Storage</h4>
+  <pre class="smaller"><code>&lt;script>
+ <strong>localStorage</strong>.user = 'Marek Raida';
+ <strong>sessionStorage</strong>.userAge = '35'; 
+ alert('Your name:'+<strong>localStorage</strong>.user);
+ window.addEventListener('<strong>storage</strong>', 
+   function(){<em>event in other tab</em>}, false);
+ <strong>delete localStorage</strong>.user;  // unset
+&lt;/script>    <button onclick="localStorage.user = 'Marek Raida'">Set data</button><button onclick="alert(localStorage.user)">Get data</button><button onclick="delete localStorage.user">Unset data</button></code></pre>
+  <p style="font-size:28pt">localStorage is scoped to <mark>protocol</mark>, <mark>host</mark> and <mark>port</mark>, and is <mark>not shared with server</mark> 
+  <em>(unlike cookies)</em>. Is persistent and <strong>survives browser restart</strong> (sessionStorage ends by window close)</p>
+</section>
+
+
+<section>
+  <div class="icon msie">8noC</div>
+  <div class="icon firefox"></div>
+  <div class="icon safari"></div>
+  <div class="icon opera"></div>
+  <div class="icon chrome"></div>
+
+  <h4>XMLHttpRequest API with CORS</h4>
+  <p style="font-size:27pt"><mark>C</mark>ross-<mark>O</mark>rigin <mark>R</mark>esource <mark>S</mark>haring allows to make AJAX request via JS API from other domains.</p>
+  <pre class="smaller"><code>var req = new XMLHttpRequest();
+ if (req.<strong>withCredentials</strong> !== undefined) {
+  req.open('GET','<strong>http://other.site/api</strong>');
+  req.onreadystatechange = function() {};
+  req.send();
+ }             <span style="color:black">--- script corsTest.php ---</span>
+</code></pre>
+
+  <pre class="smallest"><code><span style="color:black">--- BROWSER REQUEST ---</span>
+GET /api/ HTTP/1.1
+<strong>Origin: http://my.site/corsTest.php</strong>
+<span style="color:black">--- SERVER RESPONSE ---</span>
+<strong>Access-Control-Allow-Origin: http://my.site</strong>
+Content-Type: application/xml
+  </code></pre>
+</section>
+
+
+<section>
+  <div class="icon msie">10</div>
+  <div class="icon firefox"></div>
+  <div class="icon safari"></div>
+  <div class="icon opera"></div>
+  <div class="icon chrome"></div>
+
+  <h4>CSS Multi-Column Layout</h4>
+  <pre class="smaller"><code>&lt;style>
+<svg width="277" height="200" style="float:right">
+    <g transform="scale(0.4) translate(150 150)">
+     <path d="m455.091217,-55.799911c25.40979,18.076324 17.050232,57.089441 3.669983,78.240465c-21.095337,33.350447 -72.433533,36.927313 -114.405762,32.579206c-4.460052,38.795448 -5.228058,77.770859 -5.29425,116.698273c-0.033112,18.665909 0.055145,37.330093 0.055145,55.995972c0,9.222427 0,18.444839 0,27.667221c0,7.455353 2.526855,9.176147 12.234863,8.737366c6.565399,-0.294769 27.711517,-5.55127 28.453003,2.92392c0.487732,5.561523 -4.945587,15.448883 -0.035278,20.074677c4.407074,4.149323 12.815186,5.451874 19.133453,6.843536c8.22937,1.813293 17.160522,5.187958 25.747406,5.595856c6.585297,0.31189 3.16684,9.325226 3.019012,12.914093c-0.32663,8.020966 0.172119,15.884277 0.70401,23.870941c0.529602,7.949005 -2.999176,7.179443 -12.232666,7.873596c-48.47583,3.641998 -98.289063,0.584442 -146.939301,0.498718c-50.331787,-0.089111 -100.674683,0.133698 -150.968979,1.737854c-48.731857,1.552795 -97.472555,1.431152 -146.208832,2.610291c-19.861725,0.479889 -39.922073,1.321411 -59.741875,1.424225c-7.311325,0.03772 -7.4636,-2.308594 -6.477127,-6.990906c1.602173,-7.599396 1.030602,-15.277557 1.030602,-22.962646c0,-4.067017 -2.370171,-13.207153 2.957191,-16.107056c6.483772,-3.532318 15.781242,-4.699463 22.953529,-7.309723c20.159683,-7.328552 14.214386,-13.352844 14.545418,-28.004822c0.161095,-7.090332 11.974434,-1.878418 18.5266,-1.977814c9.624105,-0.149139 5.72238,-7.544525 5.64736,-13.469421c-0.141253,-10.854004 -0.454618,-21.706329 -0.843023,-32.555176c-1.410183,-39.472458 -2.608513,-78.963745 -4.455647,-118.424179c-0.432545,-9.254974 -0.776825,-18.51165 -1.041641,-27.771767c-0.127998,-4.437241 3.204361,-19.570827 -4.705021,-19.32402c-19.24823,0.598145 -37.766003,-1.172302 -55.281818,-7.815308c-73.788559,-27.989418 -53.818695,-117.411263 26.109322,-127.519745c20.543655,-2.598244 41.96784,-1.048889 62.67259,-0.875793c25.981358,0.21595 51.962695,0.279366 77.946261,0.269081c51.020378,-0.022278 102.040733,-0.197098 153.054497,-0.952919c44.649185,-0.663269 89.346878,-2.713074 134.004868,-2.680511c35.848206,0.025711 73.23465,5.163933 96.166107,28.186516"/>
+     <path fill="#BFBFBF" d="m440.768707,-62.040157c38.022003,29.531914 29.589539,90.537573 -21.810394,108.16486c-24.520416,8.40831 -65.031708,11.400745 -87.897003,-1.343681c-10.522247,-5.861485 -23.472107,-14.033279 -29.115051,-23.288244c-6.157135,-10.099907 -1.562469,-25.123807 4.314392,-34.743831c11.352081,-18.576776 35.228088,-32.820857 62.339355,-31.26979c28.837036,1.650467 47.116425,17.531307 42.402588,40.180265c-3.716339,17.858659 -28.611938,39.146788 -53.520752,27.384422c-10.998962,-5.196495 -18.286011,-16.317881 -14.115051,-26.234405c2.383392,-5.660953 18.592804,-15.046181 22.300293,-5.134793c-7.982178,-1.599051 -7.653381,9.532611 -6.355713,12.792423c3.738403,9.393784 18.694275,9.052723 26.634552,2.894748c24.107727,-18.693326 -10.608368,-48.771966 -39.341705,-37.818544c-33.665619,12.831844 -34.126801,47.95787 -2.544464,62.513874c29.779327,13.724785 70.191345,2.349743 86.758209,-20.050715c14.898529,-20.143258 10.025787,-50.64866 -13.196991,-66.061608c-14.150391,-9.392078 -35.603241,-9.906242 -53.251526,-11.31163c-25.078705,-1.994957 -50.334045,-2.147491 -75.516541,-1.686455c-100.751892,1.845848 -201.380257,4.516079 -302.18516,4.910271c-23.207331,0.090836 -58.936377,-5.258194 -78.784864,6.15284c-19.766838,11.364758 -31.789803,31.801094 -28.958405,50.782347c5.439903,36.454292 59.258575,59.024412 100.994696,40.882963c18.491271,-8.0364 32.222356,-23.425344 29.755076,-40.377368c-2.312781,-15.880836 -19.221736,-29.643315 -40.460551,-29.612466c-23.032988,0.034279 -41.497778,17.942642 -30.061827,34.601583c4.550533,6.627583 18.745056,9.746855 25.679008,3.424337c4.945566,-4.507508 2.767399,-13.640795 -6.468307,-12.715297c10.665754,-8.951611 26.292522,2.593102 25.114058,12.240544c-1.374872,11.253358 -16.878061,19.084091 -29.997843,20.607731c-33.45377,3.885376 -52.472477,-19.923889 -45.311214,-43.311529c8.823013,-28.808657 47.136288,-36.920465 80.711442,-29.160006c39.507207,9.133278 42.998433,35.580207 29.880883,62.205373c-27.493063,55.810885 -143.61577,47.543117 -154.716272,-12.729001c-5.296463,-28.752098 14.168037,-62.255081 50.364937,-73.059402c15.576012,-4.649757 32.59531,-4.744026 49.047436,-4.61377c24.149657,0.190239 48.301523,0.425041 72.4534,0.534737c71.976688,0.32563 144.114498,0.251938 216.069134,-1.247711c36.110855,-0.752396 72.184128,-2.18177 108.317032,-1.381386c27.17749,0.603287 59.836761,0.942635 80.473145,16.878315"/>
+     <path fill="#808080" d="m430.290527,-30.434443c6.697784,20.381495 -1.215973,46.321106 -25.762878,57.559038c-22.836578,10.456402 -62.608582,7.721043 -74.695557,-12.941531c-10.030212,-17.142254 5.375916,-44.530101 32.641632,-42.37918c15.198639,1.199718 24.114349,10.00565 23.366241,21.634346c-0.368591,5.700372 -2.08551,11.29106 -10.219971,12.749576c-7.609253,1.364251 -15.430359,-2.603388 -10.826843,-8.951612c8.926727,9.486335 11.261566,-11.568713 -2.996918,-14.245799c-13.784027,-2.589674 -23.812012,6.605306 -24.257813,16.39158c-1.087952,23.893239 31.690521,40.020883 58.157349,26.188128c25.661377,-13.412842 30.741577,-48.388054 7.249512,-64.85504c-13.887726,-9.736572 -34.409302,-11.15395 -52.24295,-11.865211c-24.498322,-0.97691 -49.051849,0.91864 -73.510468,1.784153c-49.285767,1.746445 -98.560516,3.683136 -147.850723,5.381592c-23.220566,0.798672 -46.449944,1.420811 -69.685978,1.926407c-11.197605,0.243374 -22.395187,0.462746 -33.59502,0.647846c-11.338835,0.18681 -21.234376,-5.571835 -31.132148,-9.033878c-30.280305,-10.59351 -73.792947,-4.02248 -89.026902,20.484327c-12.459915,20.04558 -3.793587,51.639294 26.963409,57.82984c23.736969,4.778309 68.882688,-9.356094 55.321537,-33.777206c-5.261152,-9.472631 -21.70446,-12.96381 -32.875584,-7.763891c-3.376484,1.571633 -12.574673,13.983572 -3.857574,11.793227c2.299541,-0.577576 4.03413,-2.949588 6.737534,-2.64623c4.482132,0.503883 4.120209,2.839904 0.999702,4.579489c-13.673698,7.625068 -20.817299,-6.872668 -17.356941,-15.340961c5.561291,-13.615089 29.075367,-17.430185 43.706841,-11.172798c29.953704,12.809556 19.460082,44.115341 -5.066943,55.867437c-31.875879,15.27412 -76.772215,5.218765 -91.666304,-21.922274c-13.121964,-23.90867 4.084915,-58.750193 38.56488,-64.764212c20.978409,-3.660851 45.145721,-0.798668 66.490449,-0.658127c26.652237,0.176529 53.306685,0.200523 79.958922,0.075409c50.982857,-0.239944 101.895088,-1.072891 152.820564,-2.995869c42.267929,-1.59391 85.533463,-4.031052 127.878647,-2.022381c28.157318,1.335114 69.602112,6.24025 75.770294,32.443804"/>
+     <path fill="#5E5E5E" d="m338.068115,-46.169601c-9.244537,2.497124 -15.284698,8.740803 -22.145813,13.771049c-8.664154,6.351646 -17.120819,5.959169 -28.455261,5.239342c-30.344299,-1.926407 -61.767761,-0.01543 -92.215775,0.138819c-32.560013,0.162823 -64.967743,1.14316 -97.461533,2.757641c-16.231445,0.807241 -32.462891,1.647039 -48.707592,2.291456c-7.476837,0.296501 -17.03915,3.179258 -18.590565,-2.827902c-1.174065,-4.552071 -4.74696,-8.39974 -7.505522,-12.417082c57.347433,-0.819233 114.55583,-2.606819 171.819426,-5.069664c28.133041,-1.210003 56.462463,-2.898178 84.633026,-3.227242c11.369751,-0.133682 22.71521,0.378769 34.036377,-0.603287c7.242889,-0.628998 17.659271,-2.639381 24.593231,-0.053131"/>
+     <path fill="#E3E3E3" d="m306.280487,-23.517212c-6.752991,11.496726 -13.486084,22.506707 -13.057953,35.432814c0.143433,4.342983 0.781219,8.876196 3.705292,12.68959c3.22644,4.214436 9.235748,6.843529 10.857758,11.813787c3.118317,9.566895 -1.145386,20.794548 -1.496246,30.536259c-0.514221,14.175529 -1.110046,28.351036 -1.524933,42.526581c-0.823151,27.92086 -1.065918,55.848564 -1.425659,83.77459c-0.178741,13.966431 -0.3862,27.936295 -0.708405,41.90274c-0.127991,5.49469 4.261444,28.00827 -5.698059,29.788971c-9.284271,1.662476 -19.967682,2.24176 -20.281067,-6.564178c-0.45462,-12.73584 0.130188,-25.372314 0.412689,-38.111603c0.653259,-29.612473 0.328827,-59.235214 0.975433,-88.849411c0.613495,-28.078537 1.551453,-56.151939 2.288513,-84.230469c0.344269,-13.12149 0.489929,-26.24984 0.907013,-39.371323c0.355286,-11.119675 -11.557312,-20.228959 -16.518341,-30.529396c13.400055,-3.475752 27.839539,0.065125 41.563965,-0.808952"/>
+     <path fill="#E3E3E3" d="m190.13353,-22.838514c-2.601898,8.737377 -17.279739,10.694626 -19.815414,18.767015c-3.636902,11.587562 -1.286621,25.816218 -1.644104,37.717423c-0.896011,29.840412 -1.950867,59.680836 -1.257935,89.531521c0.679718,29.233704 1.582321,58.43483 1.582321,87.6754c0,13.72818 0,27.456406 0,41.181183c0,12.351959 0.293518,13.704193 -15.653229,12.854095c-15.25824,-0.814087 -8.269119,-27.127335 -8.229385,-35.664185c0.130188,-29.007446 0.262619,-58.013229 0.392807,-87.018967c0.134644,-29.828423 -0.211838,-59.691101 0.968842,-89.509243c0.545074,-13.78133 1.535965,-27.482109 1.30864,-41.277153c-0.242752,-14.670837 -6.238785,-20.31123 -17.736511,-31.408617c19.938995,-1.986393 40.129547,-1.067751 60.083969,-2.848473"/>
+     <path fill="#E3E3E3" d="m258.426941,-22.838514c-2.160492,8.344896 -12.234833,12.989515 -18.970154,18.960688c-9.617493,8.528279 -5.177277,21.387539 -5.327362,31.746246c-0.423721,29.204567 -3.345581,58.25317 -2.906433,87.526279c0.421524,28.419601 1.317505,56.832367 1.555847,85.251953c0.119141,14.194382 0.075027,28.390472 -0.271439,42.584869c-0.152298,6.259094 0.465652,12.92955 -0.620132,19.142349c-0.904816,5.177643 -12.219376,3.484314 -17.072266,3.679718c-3.956909,0.161102 -3.184494,-137.206604 -3.098419,-149.515732c0.187561,-27.583221 0.238342,-55.204159 1.403549,-82.775387c0.419312,-9.990229 1.061493,-19.812489 2.564377,-29.727302c1.672806,-11.027122 -7.300293,-18.503081 -17.337082,-26.061303c7.284821,-3.141548 17.943985,-1.13802 25.780518,-0.766104c11.259445,0.534729 23.052887,0.716404 34.298996,-0.046276"/>
+     <path fill="#E3E3E3" d="m120.270973,-19.313057c-2.831398,3.691704 -6.583054,7.037202 -11.003395,9.630309c-3.453728,2.027518 -8.503014,2.812476 -10.92836,5.818635c-3.244087,4.022483 1.321915,8.984174 1.321915,13.171182c0,7.225739 -1.332962,14.444602 -1.582321,21.675477c-0.966606,28.001417 -1.021782,56.009695 -0.600258,84.016256c0.428123,28.369881 1.30645,56.726082 3.714134,85.04113c0.858482,10.079376 11.274849,64.983597 -5.77314,66.646042c-7.677673,0.750671 -19.457878,2.303467 -20.111122,-5.410736c-1.101196,-12.986038 -1.103424,-26.078415 -1.657349,-39.086792c-1.213753,-28.375046 -2.533463,-56.748352 -3.171242,-85.137115c-0.626755,-27.953438 -0.620125,-55.920563 0.507561,-83.867134c0.562759,-13.985294 1.405777,-27.962008 2.586449,-41.923298c1.048256,-12.391374 -8.765633,-18.054039 -12.510677,-29.218273c19.740368,-0.303362 39.447613,-2.001812 59.207806,-1.355682"/>
+     <path fill="#969696" d="m208.82341,-4.93358c-1.176254,54.648866 -2.621735,109.273744 -2.621735,163.932878c0,26.251556 0,52.503098 0,78.752945c0,7.912994 1.670609,15.836243 1.465332,23.708115c-0.150085,5.777496 -18.09404,6.401367 -18.414032,0.724976c-3.118301,-55.231567 -4.069443,-110.62767 -3.433884,-165.908989c0.315582,-27.262733 1.701538,-54.516895 2.687973,-81.767635c0.297958,-8.236928 -3.235229,-23.75785 2.253204,-31.192667c5.09787,-6.900095 15.280273,10.024496 18.063141,11.750378"/>
+     <path fill="#E3E3E3" d="m49.360188,-15.242585c-3.976757,7.616494 -14.015739,11.712676 -19.38726,18.583632c0.260429,-5.540979 -2.372356,-12.235413 1.149782,-17.416477c2.089891,-3.074702 19.259256,-5.609536 18.237478,-1.167154"/>
+     <path fill="#969696" d="m141.578217,-2.220503c-1.906754,49.937407 -1.913361,99.903952 -2.125214,149.858473c-0.105911,25.442596 -0.214081,50.883484 -0.322205,76.32605c-0.050751,11.890945 0.386185,23.855545 -0.196411,35.739655c-0.293518,6.014008 -4.588043,5.455261 -11.197601,5.580353c-7.031044,0.131989 -4.409302,-9.405777 -4.70723,-14.106964c-0.401657,-6.324234 -0.798889,-12.650177 -1.187286,-18.97438c-0.77462,-12.65361 -1.509499,-25.308914 -2.149467,-37.965927c-1.282204,-25.315796 -2.173767,-50.641815 -2.332664,-75.97644c-0.156685,-25.245483 2.028107,-50.372726 2.434158,-75.58223c0.194214,-12.067451 -0.397232,-24.141758 -0.397232,-36.21092c0,-9.028738 -2.264236,-16.422426 6.289558,-23.063721c5.534798,4.627486 10.08976,9.931954 15.891594,14.376053"/>
+     <path fill="#969696" d="m275.192474,58.274418c-1.915558,47.615093 -3.274994,95.245617 -3.941498,142.881268c-0.27359,19.519394 1.394745,39.583832 -0.421478,59.026108c-0.470062,5.045685 -8.829651,8.334625 -14.673401,4.677185c-6.225571,-3.897369 -4.716064,-20.071289 -4.83963,-25.257507c-0.538498,-22.265045 2.158279,-44.425537 1.191681,-66.716309c-0.966599,-22.268478 -0.019882,-44.485535 0.644424,-66.75058c0.664246,-22.285622 1.326309,-44.572956 2.001617,-66.85857c0.551712,-18.117458 -4.99855,-39.011405 6.066635,-55.876011c22.905029,20.525478 15.745972,50.144791 13.971649,74.874416"/>
+     <path fill="#969696" d="m68.921791,4.696729c-3.862007,48.969058 -4.841843,98.054675 -3.83551,147.104266c0.476669,23.241974 1.646317,46.466797 2.714409,69.695068c0.547318,11.884033 1.085793,23.766388 1.622063,35.650452c0.505371,11.196838 -5.214821,8.029541 -16.396976,8.931061c-3.482407,-48.955338 -6.132847,-97.943283 -6.572021,-146.97744c-0.205235,-22.839226 -0.130196,-45.68528 0.403862,-68.521057c0.26704,-11.465881 0.986465,-22.924894 1.246876,-34.390764c0.23394,-10.329576 0.130196,-20.892235 7.543041,-29.93811c4.424747,6.147699 8.849514,12.297109 13.274258,18.446525"/>
+     <path fill="#BFBFBF" d="m179.653152,65.870346c2.180359,42.946487 2.54892,85.932373 2.610718,128.907959c0.028687,19.466278 0.011032,38.935989 0.011032,58.403992c0,3.054153 1.436661,8.533401 -0.94455,11.27562c-4.749146,5.467316 -5.356064,-3.929932 -5.39798,-5.10907c-0.3862,-10.456406 -0.688538,-20.912781 -0.816513,-31.374344c-0.514221,-41.414261 -0.907013,-82.734253 -2.160538,-124.141663c-0.606873,-20.107277 0.152267,-40.187122 1.151993,-60.280682c0.53627,-10.78548 1.132126,-21.570942 1.566833,-32.361549c0.282516,-7.054338 -1.966278,-14.765092 6.598541,-19.517698c0.6091,24.74164 -0.090485,49.527811 -2.619537,74.197435"/>
+     <path fill="#BFBFBF" d="m113.983643,3.341046c-2.590843,48.720542 -3.082985,97.432521 -1.681625,146.180484c0.675293,23.456207 1.456528,46.908997 2.524658,70.356613c0.54509,11.956055 1.087959,23.906952 1.564651,35.8647c0.249382,6.257401 2.07003,9.517197 -7.47242,10.336472c-2.08989,-50.616135 -4.899231,-101.227097 -6.064453,-151.86377c-0.547318,-23.769844 -1.107849,-47.807045 0.692955,-71.551167c0.814331,-10.715208 3.149185,-21.512663 1.628662,-32.256992c-1.043854,-7.371415 -2.398849,-12.790712 7.234085,-16.696649c0.580414,3.196389 1.396935,6.39449 1.573486,9.630309"/>
+     <path fill="#BFBFBF" d="m251.263519,-2.8992c-2.341492,50.45499 -4.99855,100.827728 -4.283493,151.32727c0.353104,24.909607 -0.591446,49.812302 -0.862885,74.720154c-0.125778,11.366486 -0.075043,22.73465 0.421524,34.094269c0.103714,2.351471 1.580093,5.866638 -0.300125,8.010712c-2.198059,2.505707 -6.558807,0.569 -7.412888,-1.623047c-2.701202,-6.925812 -0.289078,-16.828613 -0.467834,-23.972092c-0.317795,-12.52504 -0.611282,-25.050125 -0.858459,-37.57518c-0.494354,-25.05011 -0.792252,-50.105362 -0.681915,-75.158905c0.112534,-25.080948 0.430328,-50.177345 1.290985,-75.249729c0.593658,-17.351353 -4.943344,-43.775989 11.581635,-56.60612c0.492096,0.579298 1.321869,1.461939 1.573456,2.032668"/>
+     <path fill="#BFBFBF" d="m40.627655,61.801594c0.333241,42.88306 -0.172134,85.7747 1.286606,128.649197c0.745899,21.915421 2.663677,43.808563 3.080753,65.727402c0.070644,3.775726 3.321342,10.82489 -4.693974,9.42807c-3.817856,-0.664978 -2.782845,-25.130646 -2.979259,-28.722946c-2.281891,-41.683365 -5.219215,-83.373566 -5.876879,-125.098022c-0.328802,-20.945374 -1.052668,-41.83931 0.571577,-62.758976c1.27116,-16.377861 -3.39855,-37.139836 10.359009,-50.432709c-1.891285,21.041315 0.019863,42.161499 -1.747833,63.207985"/>
+     <path fill="#E3E3E3" d="m28.225094,170.451477c0.346497,17.569 1.174067,35.127747 2.120802,52.681335c0.653227,12.094849 5.42668,27.931168 2.431971,39.952332c-1.604382,6.435638 -22.04873,6.391083 -22.247357,-0.16452c-0.562739,-18.599091 -1.994996,-37.148438 -3.043255,-55.732071c-2.065627,-36.598267 -2.326027,-73.23764 -2.332645,-109.866745c-0.00221,-16.119064 -1.200549,-32.407806 -0.692965,-48.494316c0.271448,-8.644825 6.282928,-12.773567 11.402848,-19.865612c5.073573,-7.030344 7.829946,-14.871367 12.365022,-22.097078c-2.416504,54.508326 -2.436369,109.080069 -0.004419,163.586676"/>
+     <path fill="#BFBFBF" d="m317.81134,42.54097c0.699585,37.405502 -1.747803,74.541916 -1.747803,111.878845c0,18.403687 0,36.810776 0,55.214447c0,9.393799 0,18.789291 0,28.18483c0,4.541763 3.720734,22.019928 -1.350616,25.116943c-9.008392,5.501556 -5.587738,-15.246719 -5.55246,-18.479111c0.114777,-9.45549 0.203033,-18.91098 0.284698,-28.368164c0.1633,-18.912704 0.293518,-37.827103 0.507599,-56.739807c0.44577,-39.397049 1.255707,-78.800926 3.491241,-118.163666c1.454285,0.450748 2.913025,0.903221 4.36734,1.355682"/>
+     <path fill="#BFBFBF" d="m-0.243377,180.760483c1.727978,28.657822 3.943655,57.307114 4.541724,85.997513c-5.298672,-0.226227 -10.597344,-0.454163 -15.896016,-0.67868c9.072402,-4.821167 0.783441,-30.822479 0.456828,-38.291611c-1.072534,-24.446823 -2.034726,-48.891922 -2.855677,-73.343887c-0.81875,-24.318283 -2.493752,-48.597145 -3.676626,-72.903435c-0.267038,-5.475868 -5.572319,-26.167572 -1.396946,-30.106071c4.193028,-3.957348 12.415788,-5.911179 18.127139,-8.212925c0.145651,22.923183 0.291302,45.846363 0.436963,68.769558c0.145641,22.907738 2.979253,45.892632 0.26261,68.769539"/>
+     <path fill="#E3E3E3" d="m338.068115,53.526958c0.984283,37.129559 -1.569092,74.233395 -2.897583,111.337284c-0.653229,18.254547 -0.787842,36.514252 -0.993134,54.773972c-0.066193,6.003708 3.590607,43.177826 -4.347504,43.729706c-13.044739,0.903198 -7.439301,-34.994034 -7.395142,-41.18631c0.139008,-18.595642 0.291321,-37.187836 0.399414,-55.783478c0.229523,-39.659233 0.258209,-79.321907 1.260132,-118.974304c5.402374,0.994045 8.586853,5.181061 13.973816,6.10313"/>
+     <path fill="#E3E3E3" d="m-25.046259,52.849976c1.94203,38.401276 4.228338,76.790512 6.051199,115.19519c0.953365,20.095276 1.769907,40.190567 2.299555,60.294403c0.194199,7.398849 -5.413431,32.073608 2.480507,37.739685c-10.266302,0 -8.322073,-3.849365 -8.825228,-10.915695c-0.940128,-13.202072 -1.692667,-26.436661 -1.8339,-39.659241c-0.269238,-25.514587 -0.139032,-51.089157 -1.6397,-76.579727c-0.275856,-4.684036 -10.844507,-86.653904 1.467567,-86.074615"/>
+     <path fill="#BFBFBF" d="m373.525696,267.434998c5.60321,15.544922 -5.245728,18.036865 -21.761871,18.988129c-21.040192,1.2117 -42.26355,1.24939 -63.352325,1.319641c-44.827881,0.150818 -89.65802,0.063446 -134.485916,0.227966c-42.755714,0.155975 -85.129608,2.210907 -127.825689,3.254669c-20.095673,0.491852 -40.562076,0.586121 -60.551817,-1.285461c-8.763435,-0.820923 -11.074005,0.250244 -11.484486,-6.54187c-0.236126,-3.917938 -0.041927,-7.839294 -0.240555,-11.755493c70.381153,0 140.865997,-3.324951 211.214043,-2.229767c35.7798,0.557007 71.488968,0.637543 107.268799,0.738678c33.822327,0.092529 67.346741,-2.716492 101.219818,-2.716492"/>
+     <path fill="#E3E3E3" d="m408.978912,300.394623c-83.110321,3.758545 -166.988647,-0.850098 -249.942261,4.149323c-80.607742,4.857117 -162.387308,3.677979 -243.290733,2.090912c32.747555,-16.07962 69.249004,-11.056244 105.737209,-10.411835c44.333584,0.783234 88.777523,-3.919647 133.183956,-4.09787c45.192032,-0.179962 90.377441,0.778107 135.571747,0.565552c22.108307,-0.104523 44.093048,-0.851776 66.143982,-2.106354c19.934601,-1.131134 34.160004,5.417633 52.5961,9.810272"/>
+     <path fill="#BFBFBF" d="m422.255341,337.56192c-2.826965,0.154205 -3.39856,2.841614 -6.163757,2.84848c-4.830811,0.013672 -9.663788,0.025665 -14.494629,0.037689c-13.07785,0.03598 -26.155701,0.068573 -39.231323,0.104553c-26.160126,0.070251 -52.318024,0.137085 -78.478119,0.207367c-52.858704,0.138855 -105.695297,0.246765 -158.538551,1.324829c-52.946953,1.079742 -105.882874,2.301758 -158.849697,2.749054c-14.699886,0.123413 -29.4086,0.298279 -44.110699,0.318817c-7.342224,0.008575 -10.087555,1.806427 -10.248657,-4.464691c-0.253784,-9.950806 -0.505363,-19.898163 -0.759155,-29.84726c51.437466,3.940216 103.84595,1.662445 155.471016,1.897308c52.567368,0.241608 105.143578,-4.178497 157.721992,-5.193085c52.445984,-1.012909 104.896423,-1.59903 157.355682,-1.590485c8.138855,0.001678 38.066101,-6.036316 40.595123,1.890381c3.060944,9.599487 -0.269226,19.994141 -0.269226,29.717041"/>
+    </g></svg> p.threeColumnsArea {
+  <strong>column-count</strong>: 2;
+  <strong>column-gap</strong>: 5mm;
+ }
+ p.fixedWidthColumns {
+  <strong>column-width</strong>: 220px;
+ }
+&lt;/style></code></pre>
+  <hr>
+  <p id="threeColumnsArea" class="smaller">There are more column settings to fine-tune your web layout and page typography. These are <mark>column-rule</mark> (lines between the columns, to further aid readability and/or to distinguish between separate stories), <mark>column-break</mark>, <mark>column-span</mark> (similar to colspan attribute in table layout) and <mark>column-fill</mark>.</p>
+  <hr>
+  <p id="fixedWidthColumns" class="smaller">There are more column settings to fine-tune your web layout and page typography. These are <strong>column-rule</strong> (lines between the columns, to further aid readability and/or to distinguish between separate stories), <strong>column-break</strong>, <strong>column-span</strong> (similar to colspan in table layout) and <strong>column-fill</strong>.</p>
+  <hr>
+</section>
+
+
+<section>
+  <div class="icon msie">9</div>
+  <div class="icon firefox"></div>
+  <div class="icon safari"></div>
+  <div class="icon opera"></div>
+  <div class="icon chrome"></div>
+
+  <h4>CSS nth-child Selector</h4>
+  <pre class="smaller"><code>&lt;style>                 <mark>(even = 2n)</mark>
+  table#striped tr<strong>:nth-child(even)</strong> {
+    background: silver;
+  }                     <mark>(odd = 2n+1)</mark>
+  table#striped tr<strong>:nth-child(odd)</strong> {
+    background: darkgray;
+    color: white;
+  }
+&lt;/style></code></pre>
+  <table id="striped">
+    <tr>
+      <th>First Line Of This</th>
+      <td>Lovely Table</td>
+    </tr>
+    <tr>
+      <th>Second Line Of This</th>
+      <td>Lovely Table</td>
+    </tr>
+    <tr>
+      <th>Third Line Of This</th>
+      <td>Lovely Table</td>
+    </tr>
+    <tr>
+      <th>Fourth Line Of This</th>
+      <td>Lovely Table</td>
+    </tr>
+  </table>
+  <p style="font-size:25pt">...so adding <mark>extra class</mark> to every second row is past now</p>
+</section>
+
+
+<section>
+  <q>
+    <span>Classic</span> web-making: <span>HTML, CSS, Photoshop</span> and Flash for multimedia..<br><span>New era</span> web: <span>HTML + CSS + EcmaScript</span>  (without need for authoring tools)
+  </q>
+</section>
+
+
+<section>
+  <div class="icon msie">9</div>
+  <div class="icon firefox"></div>
+  <div class="icon safari"></div>
+  <div class="icon opera"></div>
+  <div class="icon chrome"></div>
+
+  <h4>CSS Rounded corners &amp; shadows</h4>
+  <pre><code>&lt;style>
+ #rnd {
+  <strong>border-radius</strong>: 5mm;
+  <strong>box-shadow</strong>: black 2mm 4mm 7mm;
+ }
+&lt;/style></code></pre>
+  <div id="rnd">
+    I'm the very sexy rounded corners example. Radius could be different for every corner and <mark>box-shadow</mark> 
+    properties are <mark>x</mark> and <mark>y</mark> offsets and <mark>blur</mark> radius <em>(optional spread, color, inset)</em>
+  </div>
+</section>
+
+
+<section>
+  <div class="icon msie">10</div>
+  <div class="icon firefox"></div>
+  <div class="icon safari"></div>
+  <div class="icon opera"></div>
+  <div class="icon chrome"></div>
+
+  <h4>Fancy CSS Transitions</h4>
+  <pre class="smaller"><code>&lt;style>
+ p {            <em>/* original styling */</em>
+   background-color: white;
+   <strong>transition: all .4s linear;</strong>
+ }
+ p:hover {      <em>/* transitioned styling */</em>
+   background-color: darkgray;
+ }
+&lt;/style></code></pre>
+  <p id="trans">
+    CSS Transitions allows you to define way how to <mark>change styling</mark> of element from one to another and back on user generated event...
+  </p>
+</section>
+
+<section>
+  <div class="icon msie">10/9</div>
+  <div class="icon firefox"></div>
+  <div class="icon safari"></div>
+  <div class="icon opera"></div>
+  <div class="icon chrome"></div>
+
+  <h4>CSS Text Shadow and RGBA</h4>
+  <pre class="smaller"><code>&lt;style>
+p {
+  background-color: black;
+  color: white;
+  <strong>text-shadow</strong>: 2px 2px 6px 
+    <strong>rgba</strong>(255, 255, 255, 0.8);
+} ...</code></pre>
+  <p id="shad">
+    <mark>text-shadow</mark> allows you to easily create popular <mark>drop-shadow effect</mark> on some text and <mark>rgba</mark> color mode gives you the option to specify color+opacity in one single definition...
+  </p>
+</section>
+
+
+<section>
+  <div class="icon msie">9</div>
+  <div class="icon firefox"></div>
+  <div class="icon safari"></div>
+  <div class="icon opera"></div>
+  <div class="icon chrome"></div>
+
+  <h4>Flexible CSS Media Queries</h4>
+  <pre class="smaller"><code>&lt;style><em>#mqt</em> {background-color: green}
+<strong>@media screen and (min-width</strong>: 0px) 
+ <strong>and (max-width</strong>: 399px) {
+  <em>#mqt</em> {background-color: red}
+  <em>#mqt p</em> {display: none}}
+<strong>@media screen and (min-width</strong>: 400px) 
+ <strong>and (max-width</strong>: 799px) {
+  <em>#mqt</em> {background-color: yellow}
+}&lt;/style></code></pre>
+  <div id="mqt">
+    <h5>Header is <mark>always visible</mark> <span>!!space is running out!!</span></h5>
+    <p style="margin:5;padding:0">This text is <mark>visible only if</mark> screen width is more than 500px</p>
+    <em style="display:block;margin-top:12px">Background-color changes on width thresholds of 500 and 800px</em>
+  </div>
+</section>
+
+
+<section>
+  <div class="icon msie">9</div>
+  <div class="icon firefox"></div>
+  <div class="icon safari"></div>
+  <div class="icon opera"></div>
+  <div class="icon chrome"></div>
+
+  <h4>CSS Transforms (2D)</h4>
+  <pre class="smaller2"><code>&lt;style>
+ div {
+  <strong>transform: scale</strong>(3, 0.5)	
+             <strong>rotate</strong>(10deg);
+             <strong>translate</strong>(250px, -20px);
+             <strong>skew</strong>(35deg);
+ } <em>X/Y suffix shorthands exist for <mark>scale</mark>,</em>
+&lt;/style>    <em><mark>translate</mark> and <mark>skew</mark> as well</em></code></pre>
+  <div id="transformed">
+    This element is scaled 3:0.5, rotated by 10 degrees, moved 250 pixels right and 20 pixels up and then skewed by additional 35 degrees
+  </div>
+</section>
+
+
+<section>
+  <div class="icon msie">10</div>
+  <div class="icon firefox"></div>
+  <div class="icon safari"></div>
+  <div class="icon opera">NO</div>
+  <div class="icon chrome"></div>
+
+  <h4>CSS Animations</h4>
+  <pre class="smaller2"><code>&lt;style>
+ <strong>@keyframes</strong> roto {
+  <strong>from</strong> { transform: rotate(0deg) }
+  <strong>to</strong> { transform: rotate(360deg) }
+ }
+ div {
+  <strong>animation</strong>: roto <strong>8s infinite ease-in-out</strong>;
+ }
+&lt;/style>    <em>+ other <mark>animation properties</mark>:</em></code></pre>
+  <ul style="float:right;width:250px;font-size:15pt;margin-top:0;color:maroon">
+    <li>animation-name
+    <li>animation-duration
+    <li>animation-timing-function
+    <li>animation-delay
+    <li>animation-iteration-count
+    <li>animation-direction
+    <li>animation-play-state
+  </ul>
+  <div id="animated">
+    I like to spin, first slow, then faster &amp; slow again...
+  </div>
+</section>
+
+
+<section>
+  <div class="icon msie">10</div>
+  <div class="icon firefox"></div>
+  <div class="icon safari"></div>
+  <div class="icon opera"></div>
+  <div class="icon chrome"></div>
+
+  <h4>CSS Gradients</h4>
+  <pre class="smaller2"><code>&lt;style>
+ p {
+  background-image: <strong>linear-gradient
+  (top, white 0%, orange 60%, green 100%)</strong>;
+ }
+&lt;/style></code></pre>
+  <p id="gradient">
+    This paragraph element has <mark>vertical</mark> background gradient (<em>top</em> type), from white through orange to green. And there could be even more color stops, of course (like in 20%, 50%...). It could be of <mark>diagonal</mark> orientation (like <em>top left, bottom right</em>...) 
+    and there is also another powerful gradient type, the <mark>radial-gradient</mark>, at your service...
+  </p>
+</section>
+
+
+<section>
+  <q>
+    Many great technologies, like <span>WebFonts, SVG&amp;SMIL, Drag&amp;Drop, multiple back-<wbr>grounds</span> etc. were not sufficiently covered in this presentation, sorry... :-(((
+  </q>
+</section>
+
+
+<section>
+  <h2>End.</h2>
+  <svg style="margin-left:230px" height="190" width="310"><g transform="scale(0.5)">
+  <ellipse cx="325" cy="205" rx="144" ry="60" fill="darkgreen" transform="rotate(120 325 205)" style="stroke:none;fill-opacity:1"/>
+  <ellipse cx="325" cy="205" rx="144" ry="60" fill="lightgreen" transform="rotate(-120 325 205)" style="stroke:none;fill-opacity:1"/>
+  <ellipse cx="325" cy="205" rx="144" ry="60" fill="green" style="stroke:none;fill-opacity:1"/>
+  <path d="m297,376c0.639-1.22,14.9-32,31.7-68.5l30.5-66.3,6.74-3.42c12.2-6.17,26.5-9.04,36.9-7.37,15.7,2.51,29.1,12.4,52.5,38.7,17.1,19.2,26.5,27.2,37.4,31.9,8.38,3.58,8.66,3.62,21.1,3.59,14-0.0364,19.3-1.3,30.6-7.29l5.85-3.09,32.2-70c17.7-38.5,32.2-70.6,32.2-71.3,0.00324-0.874-1.8-0.398-5.75,1.51-13.7,6.66-27.9,9.53-38,7.73-15.7-2.8-28-11.8-50.7-37.1-15.3-17-24.7-25.8-32.4-30.3-15.8-9.32-35.1-9.85-54.3-1.48-7.23,3.15-7.43,3.19-7.43,1.39,0-1.12-4.59-2.77-8-2.89-0.764-0.0256-131,282-131,284,0,0.354,1.19,0.9,2.64,1.21,1.45,0.315,3.41,0.828,4.36,1.14,1.13,0.376,2.12-0.188,2.88-1.65zm202-74.5c-3.01-0.986-8.67-3.77-12.6-6.18l-7.13-4.39,1.83-3.99c1.01-2.19,3.86-8.35,6.33-13.7l4.49-9.68,6.53,4.24c6.46,4.2,16.1,8.02,20.3,8.02,1.18,0,2.15,0.493,2.15,1.1,0,0.603-2.55,6.78-5.67,13.7-6.39,14.2-6.21,14.1-16.2,10.8zm23-25.2c0-0.265,2.71-6.32,6.03-13.5,3.32-7.13,6.03-13.3,6.03-13.6,0-0.372-2.84-1.38-6.3-2.25-6.67-1.66-11.4-3.84-18-8.2-2.2-1.47-4.24-2.67-4.54-2.67s-3.14,5.64-6.31,12.5c-3.17,6.9-6.23,13-6.79,13.5-1.16,1.07-6.97-4.2-17.5-15.9-3.64-4.03-6.73-7.33-6.86-7.33-0.128,0-2.86,5.75-6.07,12.8-3.21,7.03-6.22,12.8-6.69,12.8-0.469,0-3.2-2.66-6.08-5.92-2.87-3.25-8.1-8.53-11.6-11.7l-6.39-5.8,5.36-11.7c2.95-6.44,5.7-12.5,6.11-13.5,0.678-1.63,1.27-1.39,5.76,2.37,2.75,2.3,8.2,7.7,12.1,12,3.91,4.29,7.28,7.81,7.48,7.81,0.205,0,3.18-6.2,6.61-13.8,3.43-7.58,6.37-13.6,6.52-13.5,0.158,0.158,4.23,4.55,9.04,9.75,4.82,5.21,10.2,10.6,12,12.1l3.24,2.62,5.8-13c3.19-7.17,6.2-13.4,6.69-13.9,0.489-0.458,3.03,0.686,5.67,2.55,5.31,3.76,14.8,7.88,20.3,8.78,1.96,0.323,3.56,0.874,3.56,1.23,0,0.351-2.71,6.48-6.03,13.6-3.32,7.13-6.03,13.2-6.03,13.5,0,1.01,10.8,0.42,16.8-0.925,3.44-0.774,9.71-2.91,13.9-4.74,4.22-1.84,7.67-3.2,7.67-3.04,0,0.161-2.84,6.45-6.32,14l-6.32,13.7-8.2,3.54c-4.51,1.95-10.9,4.15-14.2,4.91-5.86,1.33-16.4,1.98-16.4,1.01zm-153-52.2c3.09-6.7,6.17-12.7,6.83-13.4,1.85-1.93,10.4-5.41,18.7-7.63,8.49-2.26,19.9-2.75,19-0.818-0.302,0.651-3.15,6.83-6.33,13.7l-5.78,12.5h-6.82c-7.36,0-17.7,2.46-25.7,6.09-2.71,1.24-5.08,2.13-5.25,1.98-0.176-0.146,2.21-5.75,5.3-12.5zm180-4.38c-0.29-0.653,2.14-6.93,5.41-14,3.27-7.02,5.71-13.1,5.43-13.5-0.279-0.39-1.2-0.71-2.05-0.71-3.6,0-14.1-4.21-20.2-8.12-6.54-4.16-6.64-4.19-7.58-2.07-4.05,9.07-11.5,24.9-11.9,25.3-0.624,0.605-8.43-6.92-16.9-16.3-3.64-4.03-6.97-7.13-7.41-6.9-0.436,0.233-3.4,6.21-6.59,13.3-3.19,7.07-6.15,12.7-6.59,12.6-0.437-0.152-4.76-4.53-9.61-9.74s-10.1-10.5-11.6-11.7l-2.83-2.27-1.02,2.27c-0.561,1.25-3.31,7.36-6.11,13.6-2.8,6.23-5.27,11.5-5.48,11.7-0.216,0.187-2.78-1.24-5.71-3.18-5.6-3.71-15.6-7.96-18.8-7.98-5.28-0.0406-5.18-1.18,1.35-15.3,3.46-7.47,6.39-13.7,6.51-13.8,0.123-0.111,2.67,0.356,5.65,1.04,6.72,1.54,12.9,4.23,18.5,8.06,2.34,1.61,4.56,2.93,4.93,2.93,0.369-0.00418,3.34-5.86,6.59-13,3.26-7.15,6.1-13.2,6.33-13.4,0.734-0.752,10.3,7.86,17,15.3,3.64,4.03,6.96,7.33,7.39,7.33,0.429,0,3.42-5.77,6.64-12.8,3.22-7.06,6.16-13,6.52-13.2,0.359-0.192,4.18,3.56,8.49,8.33,7.83,8.67,15.3,15.5,16,14.8,0.212-0.225,3.01-6.16,6.22-13.2,3.21-7.03,5.97-12.9,6.12-13.1,0.157-0.177,2.91,1.37,6.12,3.43,7.52,4.84,9.99,5.92,17.5,7.72l6.19,1.48-5.92,12.7c-3.26,7-5.92,13.3-5.92,14.1,0,1.07,1.39,1.2,7.24,0.658,8.11-0.75,15.8-2.81,24.3-6.54,3.15-1.38,5.73-2.14,5.73-1.7,0,2.69-11.4,25.6-13.6,27.3-7.2,5.55-34.8,12.1-36.3,8.64zm-154-51.9l6.32-13.6,6.79-3.1c11.2-5.11,31-8.7,31-5.62,0,0.669-2.66,6.95-5.92,14l-5.92,12.7-7.17,0.626c-8.9,0.778-17,2.87-24.8,6.4-3.32,1.5-6.16,2.61-6.32,2.48-0.163-0.133,2.55-6.37,6.03-13.9zm60.7-18.8c-2.17-0.941-5.92-2.23-8.33-2.86-2.41-0.631-4.97-1.3-5.68-1.49-0.862-0.231,0.738-4.75,4.75-13.4,3.33-7.19,6.49-13.5,7.02-13.9,2.25-2.02,15.8,2.99,26,9.62l3.28,2.13,6.01-13c3.31-7.13,6.54-13.1,7.18-13.3,1.09-0.314,18.6,17.2,22,22,1.45,2.05,1.12,3.23-4.31,15.1-3.24,7.09-6.18,13-6.52,13.2-0.347,0.185-4.31-3.68-8.8-8.58-8.28-9.03-15-15.3-15.7-14.5-0.322,0.338-8.33,17.5-11.8,25.3-0.953,2.14-0.958,2.14-6.07-1.24-2.82-1.86-6.9-4.15-9.07-5.09zm-40.7-24.2c0-0.252,2.49-5.89,5.53-12.5,6.27-13.7,7.5-14.9,19.3-19.2,7.43-2.68,23.7-5.66,25-4.56,0.319,0.275-2.25,6.74-5.7,14.4l-6.28,13.9-6.62,0.0126c-6.91,0.0132-21.9,3.86-27,6.92-2.58,1.56-4.32,2.01-4.32,1.12z" fill="#000"/>
+  <path d="m355,377c-0.638-1.22-14.9-32-31.6-68.5l-30.5-66.3-6.73-3.42c-12.2-6.17-26.5-9.04-36.9-7.37-15.7,2.51-29.1,12.4-52.5,38.7-17.1,19.2-26.4,27.2-37.4,31.9-8.37,3.58-8.64,3.62-21.1,3.59-13.9-0.0364-19.2-1.3-30.6-7.29l-5.84-3.09-32.2-70c-17.7-38.5-32.2-70.6-32.2-71.3-0.00321-0.874,1.8-0.398,5.74,1.51,13.7,6.66,27.8,9.53,37.9,7.73,15.6-2.8,27.9-11.8,50.7-37.1,15.3-17,24.7-25.8,32.3-30.3,15.8-9.32,35-9.85,54.2-1.48,7.22,3.15,7.42,3.19,7.42,1.39,0-1.12,4.59-2.77,7.99-2.89,0.763-0.0256,131,282,131,284,0,0.354-1.19,0.9-2.63,1.21-1.45,0.315-3.41,0.828-4.35,1.14-1.13,0.376-2.11-0.188-2.88-1.65zm-201-74.5c3-0.986,8.66-3.77,12.6-6.18l7.12-4.39-1.83-3.99c-1.01-2.19-3.85-8.35-6.32-13.7l-4.49-9.68-6.52,4.24c-6.46,4.2-16.1,8.02-20.2,8.02-1.18,0-2.15,0.493-2.15,1.1,0,0.603,2.55,6.78,5.66,13.7,6.38,14.2,6.2,14.1,16.2,10.8zm-22.9-25.2c0-0.265-2.71-6.32-6.02-13.5-3.31-7.13-6.02-13.3-6.02-13.6,0-0.372,2.83-1.38,6.29-2.25,6.67-1.66,11.4-3.84,17.9-8.2,2.19-1.47,4.23-2.67,4.53-2.67s3.14,5.64,6.3,12.5c3.17,6.9,6.22,13,6.78,13.5,1.16,1.07,6.96-4.2,17.5-15.9,3.64-4.03,6.72-7.33,6.85-7.33,0.128,0,2.86,5.75,6.06,12.8,3.21,7.03,6.21,12.8,6.68,12.8,0.469,0,3.2-2.66,6.07-5.92,2.87-3.25,8.09-8.53,11.6-11.7l6.39-5.8-5.35-11.7c-2.94-6.44-5.69-12.5-6.1-13.5-0.677-1.63-1.27-1.39-5.75,2.37-2.75,2.3-8.19,7.7-12.1,12-3.9,4.29-7.27,7.81-7.47,7.81-0.205,0-3.18-6.2-6.6-13.8-3.43-7.58-6.36-13.6-6.52-13.5-0.157,0.158-4.22,4.55-9.03,9.75-4.81,5.21-10.2,10.6-12,12.1l-3.24,2.62-5.8-13c-3.19-7.17-6.2-13.4-6.68-13.9-0.489-0.458-3.02,0.686-5.66,2.55-5.3,3.76-14.8,7.88-20.3,8.78-1.96,0.323-3.56,0.874-3.56,1.23,0,0.351,2.71,6.48,6.02,13.6,3.31,7.13,6.02,13.2,6.02,13.5,0,1.01-10.8,0.42-16.7-0.925-3.44-0.774-9.7-2.91-13.9-4.74-4.21-1.84-7.66-3.2-7.66-3.04,0,0.161,2.84,6.45,6.31,14l6.31,13.7,8.19,3.54c4.51,1.95,10.9,4.15,14.2,4.91,5.86,1.33,16.4,1.98,16.4,1.01zm153-52.2c-3.09-6.7-6.16-12.7-6.82-13.4-1.84-1.93-10.4-5.41-18.7-7.63-8.48-2.26-19.9-2.75-19-0.818,0.302,0.651,3.15,6.83,6.33,13.7l5.78,12.5h6.81c7.35,0,17.7,2.46,25.6,6.09,2.71,1.24,5.07,2.13,5.25,1.98,0.176-0.146-2.21-5.75-5.3-12.5zm-180-4.38c0.29-0.653-2.14-6.93-5.4-14-3.26-7.02-5.7-13.1-5.42-13.5,0.279-0.39,1.2-0.71,2.04-0.71,3.59,0,14.1-4.21,20.2-8.12,6.53-4.16,6.63-4.19,7.57-2.07,4.04,9.07,11.5,24.9,11.9,25.3,0.623,0.605,8.42-6.92,16.9-16.3,3.63-4.03,6.96-7.13,7.4-6.9,0.435,0.233,3.4,6.21,6.58,13.3,3.18,7.07,6.14,12.7,6.58,12.6,0.437-0.152,4.75-4.53,9.6-9.74,4.84-5.21,10.1-10.5,11.6-11.7l2.82-2.27,1.02,2.27c0.56,1.25,3.31,7.36,6.1,13.6,2.79,6.23,5.26,11.5,5.47,11.7,0.216,0.187,2.78-1.24,5.7-3.18,5.59-3.71,15.6-7.96,18.7-7.98,5.27-0.0406,5.17-1.18-1.34-15.3-3.45-7.47-6.38-13.7-6.5-13.8-0.123-0.111-2.66,0.356-5.65,1.04-6.72,1.54-12.9,4.23-18.4,8.06-2.34,1.61-4.56,2.93-4.93,2.93-0.369-0.00418-3.33-5.86-6.58-13-3.25-7.15-6.09-13.2-6.32-13.4-0.733-0.752-10.3,7.86-17,15.3-3.63,4.03-6.96,7.33-7.38,7.33-0.429,0-3.41-5.77-6.63-12.8-3.22-7.06-6.15-13-6.51-13.2-0.359-0.192-4.18,3.56-8.48,8.33-7.82,8.67-15.3,15.5-16,14.8-0.212-0.225-3.01-6.16-6.21-13.2-3.21-7.03-5.96-12.9-6.11-13.1-0.157-0.177-2.91,1.37-6.12,3.43-7.51,4.84-9.97,5.92-17.5,7.72l-6.19,1.48,5.91,12.7c3.25,7,5.91,13.3,5.91,14.1,0,1.07-1.39,1.2-7.23,0.658-8.1-0.75-15.8-2.81-24.3-6.54-3.15-1.38-5.72-2.14-5.72-1.7,0,2.69,11.4,25.6,13.6,27.3,7.19,5.55,34.7,12.1,36.3,8.64zm154-51.9l-6.32-13.6-6.78-3.1c-11.2-5.11-31-8.7-31-5.62,0,0.669,2.66,6.95,5.91,14l5.91,12.7,7.16,0.626c8.89,0.778,17,2.87,24.8,6.4,3.31,1.5,6.15,2.61,6.32,2.48,0.163-0.133-2.55-6.37-6.02-13.9zm-60.6-18.8c2.17-0.941,5.91-2.23,8.32-2.86,2.41-0.631,4.96-1.3,5.68-1.49,0.861-0.231-0.737-4.75-4.74-13.4-3.32-7.19-6.48-13.5-7.01-13.9-2.24-2.02-15.8,2.99-26,9.62l-3.28,2.13-6-13c-3.3-7.13-6.53-13.1-7.17-13.3-1.09-0.314-18.6,17.2-22,22-1.45,2.05-1.12,3.23,4.31,15.1,3.24,7.09,6.17,13,6.51,13.2,0.346,0.185,4.3-3.68,8.79-8.58,8.27-9.03,15-15.3,15.7-14.5,0.322,0.338,8.32,17.5,11.8,25.3,0.951,2.14,0.957,2.14,6.07-1.24,2.81-1.86,6.89-4.15,9.05-5.09zm40.6-24.2c0-0.252-2.49-5.89-5.52-12.5-6.26-13.7-7.49-14.9-19.3-19.2-7.42-2.68-23.7-5.66-25-4.56-0.319,0.275,2.24,6.74,5.7,14.4l6.28,13.9,6.61,0.0126c6.9,0.0132,21.9,3.86,26.9,6.92,2.58,1.56,4.31,2.01,4.31,1.12z" fill="#000"/>
+  </g></svg>
+</section>
+
+
+<script>
+  var Dz = {
+    remoteWindows: [],
+    idx: -1,
+    step: 0,
+    slides: null,
+    params: {
+      autoplay: "1"
+    }
+  };
+
+  Dz.init = function() {
+    document.body.className = "loaded";
+    this.slides = $$("body > section");
+    this.setupParams();
+    this.onhashchange();
+    this.setupTouchEvents();
+    this.onresize();
+  }
+  
+  Dz.setupParams = function() {
+    var p = window.location.search.substr(1).split('&');
+    p.forEach(function(e, i, a) {
+      var keyVal = e.split('=');
+      Dz.params[keyVal[0]] = decodeURIComponent(keyVal[1]);
+    });
+  }
+
+  Dz.onkeydown = function(aEvent) {
+    // Don't intercept keyboard shortcuts
+    if (aEvent.altKey
+      || aEvent.ctrlKey
+      || aEvent.metaKey
+      || aEvent.shiftKey) {
+      return;
+    }
+    if ( aEvent.keyCode == 37 // left arrow
+      || aEvent.keyCode == 38 // up arrow
+      || aEvent.keyCode == 33 // page up
+    ) {
+      aEvent.preventDefault();
+      this.back();
+    }
+    if ( aEvent.keyCode == 39 // right arrow
+      || aEvent.keyCode == 40 // down arrow
+      || aEvent.keyCode == 34 // page down
+    ) {
+      aEvent.preventDefault();
+      this.forward();
+    }
+    if (aEvent.keyCode == 35) { // end
+      aEvent.preventDefault();
+      this.goEnd();
+    }
+    if (aEvent.keyCode == 36) { // home
+      aEvent.preventDefault();
+      this.goStart();
+    }
+    if (aEvent.keyCode == 32) { // space
+      aEvent.preventDefault();
+      this.toggleContent();
+    }
+  }
+
+  /* Touch Events */
+
+  Dz.setupTouchEvents = function() {
+    var orgX, newX;
+    var tracking = false;
+
+    var db = document.body;
+    db.addEventListener("touchstart", start.bind(this), false);
+    db.addEventListener("touchmove", move.bind(this), false);
+
+    function start(aEvent) {
+      aEvent.preventDefault();
+      tracking = true;
+      orgX = aEvent.changedTouches[0].pageX;
+    }
+
+    function move(aEvent) {
+      if (!tracking) return;
+      newX = aEvent.changedTouches[0].pageX;
+      if (orgX - newX > 100) {
+        tracking = false;
+        this.forward();
+      } else {
+        if (orgX - newX < -100) {
+          tracking = false;
+          this.back();
+        }
+      }
+    }
+  }
+
+  /* Adapt the size of the slides to the window */
+
+  Dz.onresize = function() {
+    var db = document.body;
+    var sx = db.clientWidth / window.innerWidth;
+    var sy = db.clientHeight / window.innerHeight;
+    var transform = "scale(" + (1/Math.max(sx, sy)) + ")";
+
+    db.style.MozTransform = transform;
+    db.style.WebkitTransform = transform;
+    db.style.OTransform = transform;
+    db.style.msTransform = transform;
+    db.style.transform = transform;
+  }
+
+
+  Dz.getDetails = function(aIdx) {
+    var s = $("section:nth-of-type(" + aIdx + ")");
+    var d = s.$("details");
+    return d ? d.innerHTML : "";
+  }
+
+  Dz.onmessage = function(aEvent) {
+    var argv = aEvent.data.split(" "), argc = argv.length;
+    argv.forEach(function(e, i, a) { a[i] = decodeURIComponent(e) });
+    var win = aEvent.source;
+    if (argv[0] === "REGISTER" && argc === 1) {
+      this.remoteWindows.push(win);
+      this.postMsg(win, "REGISTERED", document.title, this.slides.length);
+      this.postMsg(win, "CURSOR", this.idx + "." + this.step);
+      return;
+    }
+    if (argv[0] === "BACK" && argc === 1)
+      this.back();
+    if (argv[0] === "FORWARD" && argc === 1)
+      this.forward();
+    if (argv[0] === "START" && argc === 1)
+      this.goStart();
+    if (argv[0] === "END" && argc === 1)
+      this.goEnd();
+    if (argv[0] === "TOGGLE_CONTENT" && argc === 1)
+      this.toggleContent();
+    if (argv[0] === "SET_CURSOR" && argc === 2)
+      window.location.hash = "#" + argv[1];
+    if (argv[0] === "GET_CURSOR" && argc === 1)
+      this.postMsg(win, "CURSOR", this.idx + "." + this.step);
+    if (argv[0] === "GET_NOTES" && argc === 1)
+      this.postMsg(win, "NOTES", this.getDetails(this.idx));
+  }
+
+  Dz.toggleContent = function() {
+    // If a Video is present in this new slide, play it.
+    // If a Video is present in the previous slide, stop it.
+    var s = $("section[aria-selected]");
+    if (s) {
+      var video = s.$("video");
+      if (video) {
+        if (video.ended || video.paused) {
+          video.play();
+        } else {
+          video.pause();
+        }
+      }
+    }
+  }
+
+  Dz.setCursor = function(aIdx, aStep) {
+    // If the user change the slide number in the URL bar, jump
+    // to this slide.
+    aStep = (aStep != 0 && typeof aStep !== "undefined") ? "." + aStep : ".0";
+    window.location.hash = "#" + aIdx + aStep;
+  }
+
+  Dz.onhashchange = function() {
+    var cursor = window.location.hash.split("#"),
+        newidx = 1,
+        newstep = 0;
+    if (cursor.length == 2) {
+      newidx = ~~cursor[1].split(".")[0];
+      newstep = ~~cursor[1].split(".")[1];
+      if (newstep > Dz.slides[newidx - 1].$$('.incremental > *').length) {
+        newstep = 0;
+        newidx++;
+      }
+    }
+    if (newidx != this.idx) {
+      this.setSlide(newidx);
+    }
+    if (newstep != this.step) {
+      this.setIncremental(newstep);
+    }
+    for (var i = 0; i < this.remoteWindows.length; i++) {
+      this.postMsg(this.remoteWindows[i], "CURSOR", this.idx + "." + this.step);
+    }
+  }
+
+  Dz.back = function() {
+    if (this.idx == 1 && this.step == 0) {
+      return;
+    }
+    if (this.step == 0) {
+      this.setCursor(this.idx - 1,
+                     this.slides[this.idx - 2].$$('.incremental > *').length);
+    } else {
+      this.setCursor(this.idx, this.step - 1);
+    }
+  }
+
+  Dz.forward = function() {
+    if (this.idx >= this.slides.length &&
+        this.step >= this.slides[this.idx - 1].$$('.incremental > *').length) {
+        return;
+    }
+    if (this.step >= this.slides[this.idx - 1].$$('.incremental > *').length) {
+      this.setCursor(this.idx + 1, 0);
+    } else {
+      this.setCursor(this.idx, this.step + 1);
+    }
+  }
+
+  Dz.goStart = function() {
+    this.setCursor(1, 0);
+  }
+
+  Dz.goEnd = function() {
+    var lastIdx = this.slides.length;
+    var lastStep = this.slides[lastIdx - 1].$$('.incremental > *').length;
+    this.setCursor(lastIdx, lastStep);
+  }
+
+  Dz.setSlide = function(aIdx) {
+    this.idx = aIdx;
+    var old = $("section[aria-selected]");
+    var next = $("section:nth-of-type("+ this.idx +")");
+    if (old) {
+      old.removeAttribute("aria-selected");
+      var video = old.$("video");
+      if (video) {
+        video.pause();
+      }
+    }
+    if (next) {
+      next.setAttribute("aria-selected", "true");
+      var video = next.$("video");
+      if (video && !!+this.params.autoplay) {
+        //video.play(); // MR's hack
+      }
+    } else {
+      // That should not happen
+      this.idx = -1;
+      // console.warn("Slide doesn't exist.");
+    }
+  }
+
+  Dz.setIncremental = function(aStep) {
+    this.step = aStep;
+    var old = this.slides[this.idx - 1].$('.incremental > *[aria-selected]');
+    if (old) {
+      old.removeAttribute('aria-selected');
+    }
+    var incrementals = this.slides[this.idx - 1].$$('.incremental');
+    if (this.step <= 0) {
+      incrementals.forEach(function(aNode) {
+        aNode.removeAttribute('active');
+      });
+      return;
+    }
+    var next = this.slides[this.idx - 1].$$('.incremental > *')[this.step - 1];
+    if (next) {
+      next.setAttribute('aria-selected', true);
+      next.parentNode.setAttribute('active', true);
+      var found = false;
+      incrementals.forEach(function(aNode) {
+        if (aNode != next.parentNode)
+          if (found)
+            aNode.removeAttribute('active');
+          else
+            aNode.setAttribute('active', true);
+        else
+          found = true;
+      });
+    } else {
+      setCursor(this.idx, 0);
+    }
+    return next;
+  }
+  
+  Dz.postMsg = function(aWin, aMsg) { // [arg0, [arg1...]]
+    aMsg = [aMsg];
+    for (var i = 2; i < arguments.length; i++)
+      aMsg.push(encodeURIComponent(arguments[i]));
+    aWin.postMessage(aMsg.join(" "), "*");
+  }
+
+  window.onload = Dz.init.bind(Dz);
+  window.onkeydown = Dz.onkeydown.bind(Dz);
+  window.onresize = Dz.onresize.bind(Dz);
+  window.onhashchange = Dz.onhashchange.bind(Dz);
+  window.onmessage = Dz.onmessage.bind(Dz);
+</script>
+
+
+<script> // Helpers
+  if (!Function.prototype.bind) {
+    Function.prototype.bind = function (oThis) {
+
+      // closest thing possible to the ECMAScript 5 internal IsCallable
+      // function 
+      if (typeof this !== "function")
+      throw new TypeError(
+        "Function.prototype.bind - what is trying to be fBound is not callable"
+      );
+
+      var aArgs = Array.prototype.slice.call(arguments, 1),
+          fToBind = this,
+          fNOP = function () {},
+          fBound = function () {
+            return fToBind.apply( this instanceof fNOP ? this : oThis || window,
+                   aArgs.concat(Array.prototype.slice.call(arguments)));
+          };
+
+      fNOP.prototype = this.prototype;
+      fBound.prototype = new fNOP();
+
+      return fBound;
+    };
+  }
+
+  var $ = (HTMLElement.prototype.$ = function(aQuery) {
+    return this.querySelector(aQuery);
+  }).bind(document);
+
+  var $$ = (HTMLElement.prototype.$$ = function(aQuery) {
+    return this.querySelectorAll(aQuery);
+  }).bind(document);
+
+  NodeList.prototype.forEach = function(fun) {
+    if (typeof fun !== "function") throw new TypeError();
+    for (var i = 0; i < this.length; i++) {
+      fun.call(this, this[i]);
+    }
+  }
+
+</script>
+
+</body>
+</html>
