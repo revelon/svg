@@ -72,6 +72,9 @@ var FRAME_TIMES = [];
 var particles = [];
 var svgsvg = null;
 
+requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame ||  
+                        window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+
 window.onload = init;
 
 function init()
@@ -108,11 +111,11 @@ function init()
 	
 	// Start the animation
 	//setInterval(animate, 1);
-     window.addEventListener("MozBeforePaint", animate, false);
-     window.mozRequestAnimationFrame();
+     //window.addEventListener("MozBeforePaint", animate, false);
+     requestAnimationFrame(animate);
 }
 
-function animate(event)
+function animate()
 {
 	// Limit the frame time array to the last 30 frames
 	if (FRAME_TIMES.length > 30)
@@ -120,8 +123,8 @@ function animate(event)
 		FRAME_TIMES.splice(0, 1);
 	}
 	
-	//var currTime = new Date().getTime();
-     var currTime = event.timeStamp;
+	var currTime = new Date().getTime();
+  //var currTime = event.timeStamp;
 	
 	FRAME_TIMES.push(currTime);
 	
@@ -149,7 +152,7 @@ function animate(event)
 	}
 	// now re-add the group
 	svgsvg.unsuspendRedraw(handle);
-     window.mozRequestAnimationFrame();
+     requestAnimationFrame(animate);
 }
 
 function Particle()

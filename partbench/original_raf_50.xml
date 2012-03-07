@@ -73,6 +73,10 @@ var particles = [];
 
 window.onload = init;
 
+requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame ||  
+                        window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+
+
 function init()
 {
 	var location = window.location.href;
@@ -106,8 +110,8 @@ function init()
 	
 	// Start the animation
 	//setInterval(animate, 1);
-     window.addEventListener("MozBeforePaint", animate, false);
-     window.mozRequestAnimationFrame();
+     //window.addEventListener("MozBeforePaint", animate, false);
+     requestAnimationFrame(animate);
 }
 
 function animate(event)
@@ -118,8 +122,8 @@ function animate(event)
 		FRAME_TIMES.splice(0, 1);
 	}
 	
-	//var currTime = new Date().getTime();
-     var currTime = event.timeStamp;
+	var currTime = new Date().getTime();
+  //var currTime = event.timeStamp;
 	
 	FRAME_TIMES.push(currTime);
 	
@@ -143,7 +147,7 @@ function animate(event)
 	{
 		particles[particle].draw(timeDelta);
 	}
-    window.mozRequestAnimationFrame();
+    requestAnimationFrame(animate);
 }
 
 function Particle()
