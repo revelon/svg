@@ -10,6 +10,41 @@
 
 <h1>SVG | <span>Dedicated blog...</span></h1>
 
+<h2>Renewed Benchmarking of SVG Particles in Recent Browser Versions</h2>
+<div class="date">2012-03-08 | svg, benchmark</div>
+
+<h3>Results of the tests, measured after running for more than 30 seconds, on 32-bit versions of all browsers, running 64-bit Windows&nbsp;7 with NVidia GPU, 1920×1080 resolution, full screen (the same HW as before, only graphic driver was upgraded)</h3>
+
+
+
+<table border="1" class="partbench">
+<tr><th class="desc hh">50 particles</th>                                                                                    <th class="ff4">Firefox 10.0.2</th>                <th class="ff4">Firefox 13 Nightly</th>             <th class="ff4">Firefox 13 Nightly Azure</th>     </tr>
+<tr><th class="desc"><a href="partbench/original_50.xml">original demo</a></th>             <td>110&nbsp;FPS / 48%&nbsp;CPU</td> <td>162&nbsp;FPS / 12%&nbsp;CPU</td>     <td>167&nbsp;FPS / 25%&nbsp;CPU</td>   </tr>
+<tr><th class="desc"><a href="partbench/suspend_50.xml">suspend redraw</a></th>      <td>128&nbsp;FPS / 26%&nbsp;CPU</td>  <td>191&nbsp;FPS / 3%&nbsp;CPU</td>    <td>170&nbsp;FPS / 5%&nbsp;CPU</td>   </tr>
+<tr><th class="desc"><a href="partbench/offscreen_50.xml">offscreen rendering</a></th><td>145&nbsp;FPS / 25%&nbsp;CPU</td>  <td>192&nbsp;FPS / 3%&nbsp;CPU</td>   <td>190&nbsp;FPS / 7%&nbsp;CPU</td>   </tr>
+<tr><th class="desc"><a href="partbench/original_raf_50.xml">original+RAF</a></th>         <td>32&nbsp;FPS / 3%&nbsp;CPU</td>  <td>64&nbsp;FPS / 3%&nbsp;CPU</td>       <td>64&nbsp;FPS / 5%&nbsp;CPU</td>   </tr>
+<tr><th class="desc"><a href="partbench/suspend_raf_50.xml">suspend redraw+RAF</a></th>         <td>32&nbsp;FPS / 3%&nbsp;CPU</td>  <td>64&nbsp;FPS / 3%&nbsp;CPU</td>  <td>64&nbsp;FPS / 4%&nbsp;CPU</td>   </tr>
+<tr><th class="desc"><a href="partbench/offscreen_raf_50.xml">offscreen rendering+RAF</a></th>         <td>32&nbsp;FPS / 3%&nbsp;CPU</td>  <td>64&nbsp;FPS / 3%&nbsp;CPU</td>  <td>64&nbsp;FPS / 3%&nbsp;CPU</td>   </tr>
+
+<tr><th class="desc hh">500 particles</th>                                                                                                                  <th class="ff4">Firefox 10.0.2</th>                <th class="ff4">Firefox 13 Nightly</th>                                           <th class="ff4">Firefox 13 Nightly Azure</th>    </tr>
+<tr class="partbenchko"><th class="desc"><a href="partbench/original.xml">original demo</a></th>                     <td>2.8&nbsp;FPS / 76%&nbsp;CPU</td>  <td>25&nbsp;FPS / 52%&nbsp;CPU</td>    <td>24&nbsp;FPS / 52%&nbsp;CPU</td>     </tr>
+<tr><th class="desc"><a href="partbench/suspend.xml">suspend redraw</a></th>              <td class="ko">6.3&nbsp;FPS / 71%&nbsp;CPU</td>  <td>35&nbsp;FPS / 53%&nbsp;CPU</td>            <td>32&nbsp;FPS / 52%&nbsp;CPU</td>   </tr>
+<tr><th class="desc"><a href="partbench/offscreen.xml">offscreen rendering</a></th>       <td>36&nbsp;FPS / 52%&nbsp;CPU</td>  <td>34&nbsp;FPS / 53%&nbsp;CPU</td>                                 <td>31.5&nbsp;FPS / 52%&nbsp;CPU</td>    </tr>
+<tr class="partbenchko"><th class="desc"><a href="partbench/original_raf.xml">original+RAF</a></th>                <td>3&nbsp;FPS / 76%&nbsp;CPU</td>  <td>25&nbsp;FPS / 52%&nbsp;CPU</td>     <td>23&nbsp;FPS / 53%&nbsp;CPU</td>   </tr>
+<tr><th class="desc"><a href="partbench/suspend_raf.xml">suspend redraw+RAF</a></th>         <td class="ko">6.1&nbsp;FPS / 73%&nbsp;CPU</td>  <td>35&nbsp;FPS / 53%&nbsp;CPU</td>        <td>32&nbsp;FPS / 52%&nbsp;CPU</td>   </tr>
+<tr><th class="desc"><a href="partbench/offscreen_raf.xml">offscreen rendering+RAF</a></th>         <td>36&nbsp;FPS / 52%&nbsp;CPU</td>  <td>34&nbsp;FPS / 53%&nbsp;CPU</td>                        <td>31&nbsp;FPS / 53%&nbsp;CPU</td>   </tr>
+
+<tr><th class="desc hh">2500 particles</th>                                                                                                                            <th class="ff4">Firefox 10.0.2</th>                 <th class="ff4">Firefox 13 Nightly</th>                    <th class="ff4">Firefox 13 Nightly Azure</th> </tr>
+<tr class="partbenchko"><th class="desc"><a href="partbench/original_500x5.xml">original demo</a></th>               <td>0.45&nbsp;FPS / 80%&nbsp;CPU</td>    <td>5.4&nbsp;FPS / 52%&nbsp;CPU</td>       <td>5.1&nbsp;FPS / 52%&nbsp;CPU</td>   </tr>
+<tr class="partbenchko"><th class="desc"><a href="partbench/suspend_500x5.xml">suspend redraw</a></th>        <td>0.7&nbsp;FPS / 78%&nbsp;CPU</td> <td>8&nbsp;FPS / 53%&nbsp;CPU</td>              <td>7.2&nbsp;FPS / 52%&nbsp;CPU</td>   </tr>
+<tr class="partbenchko"><th class="desc"><a href="partbench/offscreen_500x5.xml">offscreen rendering</a></th>  <td>7.4&nbsp;FPS / 52%&nbsp;CPU</td> <td>7.2&nbsp;FPS / 52%&nbsp;CPU</td>           <td>6.6&nbsp;FPS / 52%&nbsp;CPU</td>   </tr>
+<tr class="partbenchko"><th class="desc"><a href="partbench/original_raf_500x5.xml">original RAF</a></th>                                                <td>0.5&nbsp;FPS / 77%&nbsp;CPU</td>  <td>5.4&nbsp;FPS / 52%&nbsp;CPU</td>    <td>5&nbsp;FPS / 52%&nbsp;CPU</td>   </tr>
+<tr class="partbenchko"><th class="desc"><a href="partbench/suspend_raf_500x5.xml">suspend redraw+RAF</a></th>         <td>0.8&nbsp;FPS / 79%&nbsp;CPU</td>  <td>7.9&nbsp;FPS / 52%&nbsp;CPU</td>                       <td>7.1&nbsp;FPS / 52%&nbsp;CPU</td>   </tr>
+<tr class="partbenchko"><th class="desc"><a href="partbench/offscreen_raf_500x5.xml">offscreen rendering+RAF</a></th>         <td>7.6&nbsp;FPS / 52%&nbsp;CPU</td>  <td>7.2&nbsp;FPS / 52%&nbsp;CPU</td>                <td>6.6&nbsp;FPS / 52%&nbsp;CPU</td>   </tr>
+
+<tr><th class="desc">Color legend</th><td>&nbsp;more than 30 FPS = OK</td><td class="ko">&nbsp;less than 30 FPS = KO</td><th class="desc" colspan="9">...</th></tr>
+</table>
+
 <h2><a href="lmchtml5pres/embedder.html"><img src="lmchtml5pres/html5logo.svg" width="200" height="220" align="right" alt="HTML5 Logo"/>Presentation: HTML5 Introduction (for LMC purposes)</a></h2>
 <div class="date">2012-02-17 | html5 | evangelization</div>
 <p>For internal learning purposes of my employing company LMC (Alma media), I created short presentation about HTML5. 
