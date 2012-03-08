@@ -13,131 +13,277 @@
 <h2>Renewed Benchmarking of SVG Particles in Recent Browser Versions</h2>
 <div class="date">2012-03-08 | svg, benchmark</div>
 
+<p>More than <strong>year ago</strong> I measured various browser performance on particles benchmark and today I did it again, on more recent browser versions, of course. I did not benchmarked <em>Safari</em> 
+(which is very weird and unusual on Windows platform), old <em>Firefox 3.6</em>, <em>SW mode</em> (forced) rendering nor <em>MSIE10</em> (because of its only availability for different OS at this moment).<br/>
+I had to <strong>update RAF demos to follow later specification (and incompatible) changes</strong>. And what are my <strong>brief results</strong> from this benchmarking? <em>(I don't have time to do result evaluation properly, sorry :-( )</em></p>
+
+<ul>
+<li><strong>Opera</strong> in one year did some optimizations so it is passing 30 FPS threshold for at least 50 particles; RAF is not implemented and HW acceleration of <strong>NEXT</strong> version is not, so far, very nice user experience :-(</li>
+<li><strong>Chrome</strong> in stable version <strong>is surprisingly much slower than year ago</strong>; it has implemented <strong>RAF</strong>; <strong>Canary</strong> version promises HW acceleration and return to performance level from the past</li>
+<li><strong>MSIE 9</strong> is slightly faster than before and is still the king-of-the-hill for 50 and 500 particles category and very stable results; RAF is to be implemented in version 10</li>
+<li><strong>Firefox</strong> is somewhat faster than before year; <strong>Nightly version has improved rendering performance A LOT</strong>, esp. for <em>'original' and 'suspend redraw'</em> modes; it's low <strong>CPU usage for 50 particles demo is simply awesome</strong>; incoming <strong>Azure</strong> rendering engine is not yet so optimized as it should be, and is actually slower than current rendering engine, but looks promising...</li>
+<li><strong>Request Animation Frame (RAF)</strong> mode works nice for 50 particles benchmark, with some bug in stable Chrome giving a lower frame-rate than it should (60); Chrome's implementation is probably far from optimal, today, because for 500 and 5000 benchmarks it is even causing some performance drop</li>
+</ul>
+
 <h3>Results of the tests, measured after running for more than 30 seconds, on 32-bit versions of all browsers, running 64-bit Windows&nbsp;7 with NVidia GPU, 1920×1080 resolution, full screen (the same HW as before, only graphic driver was upgraded)</h3>
 
-OP 12 Alpha 
-138 / 92                   very wide range!!
-136 / 91
-136 / 92
-
--
--
--
-
-25 / 54             very wide range!!
-112 / 56   flashing, not usable at all
-46 / 56     flashing, although less
-
--
--
--
-
-2.1 / 53       very wide range!!
-13 / 52   flashing, not usable at all
-6.6 / 54  flashing, not usable at all
-
--
--
--
-
-
-Opera 11.51
-33 / 58
-33 / 58
-33 / 58
-
--
--
--
-
-13.5 / 56
-13.6 / 56
-17 / 56
-
--
--
--
-
-
-Chrome 17
-
-92 / 76
-92 / 76 cca
-92 / 76 cca
-
-47 / 76
-47 / 76
-47 / 76    ale ze se neusporilo smysl dava, nedosahl na 60fps
-
-32 / 68
-32 / 68
-28 / 68
-
-28 / 68
-28 / 68
-25 / 66
-
-10.5 / 56
-10.5 / 56
-8.8  / 56
-
-10.4 / 58
-10.4 / 58
-8.5 / 56
-
-
-Chrome Canary
-
-128 / 78
-totez *2
-
-58 / 48
-totez *2
-
-48 / 68
-48 / 68
-38 / 62
-
-44 / 64
-44 / 64
-32 / 60
-
-13.6 / 55
-13.6 / 55
-10 / 56
-
-13.6 / 56
-13.6 / 56
-9.6 / 56
-
-
 <table border="1" class="partbench">
-<tr><th class="desc hh">50 particles</th>                                                                                    <th class="ff4">Firefox 10.0.2</th>                <th class="ff4">Firefox 13 Nightly</th>             <th class="ff4">Firefox 13 Nightly Azure</th>     </tr>
-<tr><th class="desc"><a href="partbench/original_50.xml">original demo</a></th>             <td>110&nbsp;FPS / 48%&nbsp;CPU</td> <td>162&nbsp;FPS / 12%&nbsp;CPU</td>     <td>167&nbsp;FPS / 25%&nbsp;CPU</td>   </tr>
-<tr><th class="desc"><a href="partbench/suspend_50.xml">suspend redraw</a></th>      <td>128&nbsp;FPS / 26%&nbsp;CPU</td>  <td>191&nbsp;FPS / 3%&nbsp;CPU</td>    <td>170&nbsp;FPS / 5%&nbsp;CPU</td>   </tr>
-<tr><th class="desc"><a href="partbench/offscreen_50.xml">offscreen rendering</a></th><td>145&nbsp;FPS / 25%&nbsp;CPU</td>  <td>192&nbsp;FPS / 3%&nbsp;CPU</td>   <td>190&nbsp;FPS / 7%&nbsp;CPU</td>   </tr>
-<tr><th class="desc"><a href="partbench/original_raf_50.xml">original+RAF</a></th>         <td>32&nbsp;FPS / 3%&nbsp;CPU</td>  <td>64&nbsp;FPS / 3%&nbsp;CPU</td>       <td>64&nbsp;FPS / 5%&nbsp;CPU</td>   </tr>
-<tr><th class="desc"><a href="partbench/suspend_raf_50.xml">suspend redraw+RAF</a></th>         <td>32&nbsp;FPS / 3%&nbsp;CPU</td>  <td>64&nbsp;FPS / 3%&nbsp;CPU</td>  <td>64&nbsp;FPS / 4%&nbsp;CPU</td>   </tr>
-<tr><th class="desc"><a href="partbench/offscreen_raf_50.xml">offscreen rendering+RAF</a></th>         <td>32&nbsp;FPS / 3%&nbsp;CPU</td>  <td>64&nbsp;FPS / 3%&nbsp;CPU</td>  <td>64&nbsp;FPS / 3%&nbsp;CPU</td>   </tr>
+<tr>
+<th class="desc hh">50 particles</th>
+<th class="ff4">Firefox 10.0.2</th>
+<th class="ff4">Firefox 13 Nightly</th>
+<th class="ff4">Firefox 13 Nightly Azure</th>
+<th class="op">Opera 11.51</th>
+<th class="op">Opera 12 Next **</th>
+<th class="cr">Chrome 17</th>
+<th class="cr">Chrome 20 Canary</th>
+<th class="ie">MSIE 9.0.5</th>
+</tr>
 
-<tr><th class="desc hh">500 particles</th>                                                                                                                  <th class="ff4">Firefox 10.0.2</th>                <th class="ff4">Firefox 13 Nightly</th>                                           <th class="ff4">Firefox 13 Nightly Azure</th>    </tr>
-<tr class="partbenchko"><th class="desc"><a href="partbench/original.xml">original demo</a></th>                     <td>2.8&nbsp;FPS / 76%&nbsp;CPU</td>  <td>25&nbsp;FPS / 52%&nbsp;CPU</td>    <td>24&nbsp;FPS / 52%&nbsp;CPU</td>     </tr>
-<tr><th class="desc"><a href="partbench/suspend.xml">suspend redraw</a></th>              <td class="ko">6.3&nbsp;FPS / 71%&nbsp;CPU</td>  <td>35&nbsp;FPS / 53%&nbsp;CPU</td>            <td>32&nbsp;FPS / 52%&nbsp;CPU</td>   </tr>
-<tr><th class="desc"><a href="partbench/offscreen.xml">offscreen rendering</a></th>       <td>36&nbsp;FPS / 52%&nbsp;CPU</td>  <td>34&nbsp;FPS / 53%&nbsp;CPU</td>                                 <td>31.5&nbsp;FPS / 52%&nbsp;CPU</td>    </tr>
-<tr class="partbenchko"><th class="desc"><a href="partbench/original_raf.xml">original+RAF</a></th>                <td>3&nbsp;FPS / 76%&nbsp;CPU</td>  <td>25&nbsp;FPS / 52%&nbsp;CPU</td>     <td>23&nbsp;FPS / 53%&nbsp;CPU</td>   </tr>
-<tr><th class="desc"><a href="partbench/suspend_raf.xml">suspend redraw+RAF</a></th>         <td class="ko">6.1&nbsp;FPS / 73%&nbsp;CPU</td>  <td>35&nbsp;FPS / 53%&nbsp;CPU</td>        <td>32&nbsp;FPS / 52%&nbsp;CPU</td>   </tr>
-<tr><th class="desc"><a href="partbench/offscreen_raf.xml">offscreen rendering+RAF</a></th>         <td>36&nbsp;FPS / 52%&nbsp;CPU</td>  <td>34&nbsp;FPS / 53%&nbsp;CPU</td>                        <td>31&nbsp;FPS / 53%&nbsp;CPU</td>   </tr>
+<tr>
+<th class="desc"><a href="partbench/original_50.xml">original demo</a></th>
+<td>110&nbsp;FPS / 48%&nbsp;CPU</td>
+<td>162&nbsp;FPS / 12%&nbsp;CPU</td>
+<td>167&nbsp;FPS / 25%&nbsp;CPU</td>
+<td>33&nbsp;FPS / 58%&nbsp;CPU</td>
+<td>136&nbsp;FPS / 92%&nbsp;CPU</td>
+<td>92&nbsp;FPS / 76%&nbsp;CPU</td>
+<td>128&nbsp;FPS / 78%&nbsp;CPU</td>
+<td>260&nbsp;FPS / 33%&nbsp;CPU</td>
+</tr>
 
-<tr><th class="desc hh">2500 particles</th>                                                                                                                            <th class="ff4">Firefox 10.0.2</th>                 <th class="ff4">Firefox 13 Nightly</th>                    <th class="ff4">Firefox 13 Nightly Azure</th> </tr>
-<tr class="partbenchko"><th class="desc"><a href="partbench/original_500x5.xml">original demo</a></th>               <td>0.45&nbsp;FPS / 80%&nbsp;CPU</td>    <td>5.4&nbsp;FPS / 52%&nbsp;CPU</td>       <td>5.1&nbsp;FPS / 52%&nbsp;CPU</td>   </tr>
-<tr class="partbenchko"><th class="desc"><a href="partbench/suspend_500x5.xml">suspend redraw</a></th>        <td>0.7&nbsp;FPS / 78%&nbsp;CPU</td> <td>8&nbsp;FPS / 53%&nbsp;CPU</td>              <td>7.2&nbsp;FPS / 52%&nbsp;CPU</td>   </tr>
-<tr class="partbenchko"><th class="desc"><a href="partbench/offscreen_500x5.xml">offscreen rendering</a></th>  <td>7.4&nbsp;FPS / 52%&nbsp;CPU</td> <td>7.2&nbsp;FPS / 52%&nbsp;CPU</td>           <td>6.6&nbsp;FPS / 52%&nbsp;CPU</td>   </tr>
-<tr class="partbenchko"><th class="desc"><a href="partbench/original_raf_500x5.xml">original RAF</a></th>                                                <td>0.5&nbsp;FPS / 77%&nbsp;CPU</td>  <td>5.4&nbsp;FPS / 52%&nbsp;CPU</td>    <td>5&nbsp;FPS / 52%&nbsp;CPU</td>   </tr>
-<tr class="partbenchko"><th class="desc"><a href="partbench/suspend_raf_500x5.xml">suspend redraw+RAF</a></th>         <td>0.8&nbsp;FPS / 79%&nbsp;CPU</td>  <td>7.9&nbsp;FPS / 52%&nbsp;CPU</td>                       <td>7.1&nbsp;FPS / 52%&nbsp;CPU</td>   </tr>
-<tr class="partbenchko"><th class="desc"><a href="partbench/offscreen_raf_500x5.xml">offscreen rendering+RAF</a></th>         <td>7.6&nbsp;FPS / 52%&nbsp;CPU</td>  <td>7.2&nbsp;FPS / 52%&nbsp;CPU</td>                <td>6.6&nbsp;FPS / 52%&nbsp;CPU</td>   </tr>
+<tr>
+<th class="desc"><a href="partbench/suspend_50.xml">suspend redraw</a></th>
+<td>128&nbsp;FPS / 26%&nbsp;CPU</td>
+<td>191&nbsp;FPS / 3%&nbsp;CPU</td>
+<td>170&nbsp;FPS / 5%&nbsp;CPU</td>
+<td>33&nbsp;FPS / 58%&nbsp;CPU</td>
+<td>136&nbsp;FPS / 92%&nbsp;CPU</td>
+<td>92&nbsp;FPS / 76%&nbsp;CPU</td>
+<td>128&nbsp;FPS / 78%&nbsp;CPU</td>
+<td>260&nbsp;FPS / 33%&nbsp;CPU</td>
+</tr>
 
-<tr><th class="desc">Color legend</th><td>&nbsp;more than 30 FPS = OK</td><td class="ko">&nbsp;less than 30 FPS = KO</td><th class="desc" colspan="9">...</th></tr>
+<tr>
+<th class="desc"><a href="partbench/offscreen_50.xml">offscreen rendering</a></th>
+<td>145&nbsp;FPS / 25%&nbsp;CPU</td>
+<td>192&nbsp;FPS / 3%&nbsp;CPU</td>
+<td>190&nbsp;FPS / 7%&nbsp;CPU</td>
+<td>33&nbsp;FPS / 58%&nbsp;CPU</td>
+<td>136&nbsp;FPS / 92%&nbsp;CPU</td>
+<td>92&nbsp;FPS / 76%&nbsp;CPU</td>
+<td>128&nbsp;FPS / 78%&nbsp;CPU</td>
+<td>260&nbsp;FPS / 33%&nbsp;CPU</td>
+</tr>
+
+<tr>
+<th class="desc"><a href="partbench/original_raf_50.xml">original+RAF</a></th>
+<td>32&nbsp;FPS / 3%&nbsp;CPU</td>
+<td>64&nbsp;FPS / 3%&nbsp;CPU</td>
+<td>64&nbsp;FPS / 5%&nbsp;CPU</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>47&nbsp;FPS / 76%&nbsp;CPU</td>
+<td>58&nbsp;FPS / 48%&nbsp;CPU</td>
+<td>N/A</td>
+</tr>
+
+<tr>
+<th class="desc"><a href="partbench/suspend_raf_50.xml">suspend redraw+RAF</a></th>
+<td>32&nbsp;FPS / 3%&nbsp;CPU</td>
+<td>64&nbsp;FPS / 3%&nbsp;CPU</td>
+<td>64&nbsp;FPS / 4%&nbsp;CPU</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>47&nbsp;FPS / 76%&nbsp;CPU</td>
+<td>58&nbsp;FPS / 48%&nbsp;CPU</td>
+<td>N/A</td>
+</tr>
+
+<tr>
+<th class="desc"><a href="partbench/offscreen_raf_50.xml">offscreen rendering+RAF</a></th>
+<td>32&nbsp;FPS / 3%&nbsp;CPU</td>
+<td>64&nbsp;FPS / 3%&nbsp;CPU</td>
+<td>64&nbsp;FPS / 3%&nbsp;CPU</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>47&nbsp;FPS / 76%&nbsp;CPU</td>
+<td>58&nbsp;FPS / 48%&nbsp;CPU</td>
+<td>N/A</td>
+</tr>
+
+<tr>
+<th class="desc hh">500 particles</th>
+<th class="ff4">Firefox 10.0.2</th>
+<th class="ff4">Firefox 13 Nightly</th>
+<th class="ff4">Firefox 13 Nightly Azure</th>
+<th class="op">Opera 11.51</th>
+<th class="op">Opera 12 Next **</th>
+<th class="cr">Chrome 17</th>
+<th class="cr">Chrome 20 Canary</th>
+<th class="ie">MSIE 9.0.5</th>
+</tr>
+
+
+<tr>
+<th class="desc"><a href="partbench/original_50.xml">original demo</a></th>
+<td class="ko">2.8&nbsp;FPS / 76%&nbsp;CPU</td>
+<td class="ko">25&nbsp;FPS / 52%&nbsp;CPU</td>
+<td class="ko">24&nbsp;FPS / 52%&nbsp;CPU</td>
+<td class="ko">13.5&nbsp;FPS / 56%&nbsp;CPU</td>
+<td class="ko">25&nbsp;FPS / 54%&nbsp;CPU</td>
+<td>32&nbsp;FPS / 68%&nbsp;CPU</td>
+<td>48&nbsp;FPS / 68%&nbsp;CPU</td>
+<td>52&nbsp;FPS / 49%&nbsp;CPU</td>
+</tr>
+
+<tr>
+<th class="desc"><a href="partbench/suspend_50.xml">suspend redraw</a></th>
+<td class="ko">6.3&nbsp;FPS / 71%&nbsp;CPU</td>
+<td>35&nbsp;FPS / 53%&nbsp;CPU</td>
+<td>32&nbsp;FPS / 52%&nbsp;CPU</td>
+<td class="ko">13.6&nbsp;FPS / 56%&nbsp;CPU</td>
+<td>112&nbsp;FPS / 56%&nbsp;CPU</td>
+<td>32&nbsp;FPS / 68%&nbsp;CPU</td>
+<td>48&nbsp;FPS / 68%&nbsp;CPU</td>
+<td>52&nbsp;FPS / 49%&nbsp;CPU</td>
+</tr>
+
+<tr>
+<th class="desc"><a href="partbench/offscreen_50.xml">offscreen rendering</a></th>
+<td>36&nbsp;FPS / 52%&nbsp;CPU</td>
+<td>34&nbsp;FPS / 53%&nbsp;CPU</td>
+<td>31.5&nbsp;FPS / 52%&nbsp;CPU</td>
+<td class="ko">17&nbsp;FPS / 56%&nbsp;CPU</td>
+<td>46&nbsp;FPS / 56%&nbsp;CPU</td>
+<td class="ko">28&nbsp;FPS / 68%&nbsp;CPU</td>
+<td>38&nbsp;FPS / 62%&nbsp;CPU</td>
+<td>39&nbsp;FPS / 49%&nbsp;CPU</td>
+</tr>
+
+<tr>
+<th class="desc"><a href="partbench/original_raf_50.xml">original+RAF</a></th>
+<td class="ko">3&nbsp;FPS / 76%&nbsp;CPU</td>
+<td class="ko">25&nbsp;FPS / 52%&nbsp;CPU</td>
+<td class="ko">23&nbsp;FPS / 53%&nbsp;CPU</td>
+<td>N/A</td>
+<td>N/A</td>
+<td class="ko">28&nbsp;FPS / 68%&nbsp;CPU</td>
+<td>44&nbsp;FPS / 64%&nbsp;CPU</td>
+<td>N/A</td>
+</tr>
+
+<tr>
+<th class="desc"><a href="partbench/suspend_raf_50.xml">suspend redraw+RAF</a></th>
+<td class="ko">6.1&nbsp;FPS / 73%&nbsp;CPU</td>
+<td>35&nbsp;FPS / 53%&nbsp;CPU</td>
+<td>32&nbsp;FPS / 52%&nbsp;CPU</td>
+<td>N/A</td>
+<td>N/A</td>
+<td class="ko">28&nbsp;FPS / 68%&nbsp;CPU</td>
+<td>44&nbsp;FPS / 64%&nbsp;CPU</td>
+<td>N/A</td>
+</tr>
+
+<tr>
+<th class="desc"><a href="partbench/offscreen_raf_50.xml">offscreen rendering+RAF</a></th>
+<td>36&nbsp;FPS / 52%&nbsp;CPU</td>
+<td>34&nbsp;FPS / 53%&nbsp;CPU</td>
+<td>31&nbsp;FPS / 53%&nbsp;CPU</td>
+<td>N/A</td>
+<td>N/A</td>
+<td class="ko">25&nbsp;FPS / 66%&nbsp;CPU</td>
+<td>32&nbsp;FPS / 60%&nbsp;CPU</td>
+<td>N/A</td>
+</tr>
+
+<tr>
+<th class="desc hh">500 particles</th>
+<th class="ff4">Firefox 10.0.2</th>
+<th class="ff4">Firefox 13 Nightly</th>
+<th class="ff4">Firefox 13 Nightly Azure</th>
+<th class="op">Opera 11.51</th>
+<th class="op">Opera 12 Next **</th>
+<th class="cr">Chrome 17</th>
+<th class="cr">Chrome 20 Canary</th>
+<th class="ie">MSIE 9.0.5</th>
+</tr>
+
+<tr>
+<th class="desc"><a href="partbench/original_50.xml">original demo</a></th>
+<td class="ko">0.45&nbsp;FPS / 80%&nbsp;CPU</td>
+<td class="ko">5.4&nbsp;FPS / 52%&nbsp;CPU</td>
+<td class="ko">5.1&nbsp;FPS / 52%&nbsp;CPU</td>
+<td class="ko">2&nbsp;FPS / 52%&nbsp;CPU</td>
+<td class="ko">2.1&nbsp;FPS / 53%&nbsp;CPU</td>
+<td class="ko">10.5&nbsp;FPS / 56%&nbsp;CPU</td>
+<td class="ko">13.6&nbsp;FPS / 56%&nbsp;CPU</td>
+<td class="ko">10.4&nbsp;FPS / 52%&nbsp;CPU</td>
+</tr>
+
+<tr>
+<th class="desc"><a href="partbench/suspend_50.xml">suspend redraw</a></th>
+<td class="ko">0.7&nbsp;FPS / 78%&nbsp;CPU</td>
+<td class="ko">8&nbsp;FPS / 53%&nbsp;CPU</td>
+<td class="ko">7.2&nbsp;FPS / 52%&nbsp;CPU</td>
+<td class="ko">2&nbsp;FPS / 52%&nbsp;CPU</td>
+<td class="ko">13&nbsp;FPS / 52%&nbsp;CPU</td>
+<td class="ko">10.5&nbsp;FPS / 56%&nbsp;CPU</td>
+<td class="ko">13.6&nbsp;FPS / 56%&nbsp;CPU</td>
+<td class="ko">10.4&nbsp;FPS / 52%&nbsp;CPU</td>
+</tr>
+
+<tr>
+<th class="desc"><a href="partbench/offscreen_50.xml">offscreen rendering</a></th>
+<td class="ko">7.4&nbsp;FPS / 52%&nbsp;CPU</td>
+<td class="ko">7.2&nbsp;FPS / 52%&nbsp;CPU</td>
+<td class="ko">6.6&nbsp;FPS / 52%&nbsp;CPU</td>
+<td class="ko">5.5&nbsp;FPS / 52%&nbsp;CPU</td>
+<td class="ko">6.6&nbsp;FPS / 54%&nbsp;CPU</td>
+<td class="ko">8.8&nbsp;FPS / 56%&nbsp;CPU</td>
+<td class="ko">10&nbsp;FPS / 56%&nbsp;CPU</td>
+<td class="ko">8.4&nbsp;FPS / 52%&nbsp;CPU</td>
+</tr>
+
+<tr>
+<th class="desc"><a href="partbench/original_raf_50.xml">original+RAF</a></th>
+<td class="ko">0.5&nbsp;FPS / 77%&nbsp;CPU</td>
+<td class="ko">5.4&nbsp;FPS / 52%&nbsp;CPU</td>
+<td class="ko">5&nbsp;FPS / 52%&nbsp;CPU</td>
+<td>N/A</td>
+<td>N/A</td>
+<td class="ko">10.4&nbsp;FPS / 58%&nbsp;CPU</td>
+<td class="ko">13.6&nbsp;FPS / 56%&nbsp;CPU</td>
+<td>N/A</td>
+</tr>
+
+<tr>
+<th class="desc"><a href="partbench/suspend_raf_50.xml">suspend redraw+RAF</a></th>
+<td class="ko">0.8&nbsp;FPS / 79%&nbsp;CPU</td>
+<td class="ko">7.9&nbsp;FPS / 52%&nbsp;CPU</td>
+<td class="ko">7.1&nbsp;FPS / 52%&nbsp;CPU</td>
+<td>N/A</td>
+<td>N/A</td>
+<td class="ko">10.4&nbsp;FPS / 58%&nbsp;CPU</td>
+<td class="ko">13.6&nbsp;FPS / 56%&nbsp;CPU</td>
+<td>N/A</td>
+</tr>
+
+<tr>
+<th class="desc"><a href="partbench/offscreen_raf_50.xml">offscreen rendering+RAF</a></th>
+<td class="ko">7.6&nbsp;FPS / 52%&nbsp;CPU</td>
+<td class="ko">7.2&nbsp;FPS / 52%&nbsp;CPU</td>
+<td class="ko">6.6&nbsp;FPS / 52%&nbsp;CPU</td>
+<td>N/A</td>
+<td>N/A</td>
+<td class="ko">8.5&nbsp;FPS / 56%&nbsp;CPU</td>
+<td class="ko">9.6&nbsp;FPS / 56%&nbsp;CPU</td>
+<td>N/A</td>
+</tr>
+
+<tr><th class="desc">Color legend</th><td>&nbsp;more than 30 FPS = OK</td><td class="ko">&nbsp;less than 30 FPS = KO</td><td>N/A = not available</td><th class="desc" colspan="9">** Opera 12 Next rendering experience is VERY flashy/jerky and cannot be considered acceptable / frame rate is VERY misleading there...</th></tr>
 </table>
+
 
 <h2><a href="lmchtml5pres/embedder.html"><img src="lmchtml5pres/html5logo.svg" width="200" height="220" align="right" alt="HTML5 Logo"/>Presentation: HTML5 Introduction (for LMC purposes)</a></h2>
 <div class="date">2012-02-17 | html5 | evangelization</div>
