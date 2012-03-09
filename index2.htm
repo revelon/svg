@@ -11,9 +11,9 @@
 <h1>SVG | <span>Dedicated blog...</span></h1>
 
 <h2>Renewed Benchmarking of SVG Particles in Recent Browser Versions</h2>
-<div class="date">2012-03-08 | svg, benchmark</div>
+<div class="date">2012-03-09 | svg, benchmark</div>
 
-<p>More than <strong>year ago</strong> I measured various browser performance on particles benchmark and today I did it again, on more recent browser versions, of course. I did not benchmarked <em>Safari</em> 
+<p><strong>Updated: Added some graphs...</strong><br/>More than <strong>year ago</strong> I measured various browser performance on particles benchmark and today I did it again, on more recent browser versions, of course. I did not benchmarked <em>Safari</em> 
 (which is very weird and unusual on Windows platform), old <em>Firefox 3.6</em>, <em>SW mode</em> (forced) rendering nor <em>MSIE10</em> (because of its only availability for different OS at this moment).<br/>
 I had to <strong>update RAF demos to follow later specification (and incompatible) changes</strong>. And what are my <strong>brief results</strong> from this benchmarking? <em>(I don't have time to do result evaluation properly, sorry :-( )</em></p>
 
@@ -32,11 +32,11 @@ I had to <strong>update RAF demos to follow later specification (and incompatibl
 <th class="desc hh">50 particles</th>
 <th class="ff">Firefox 10.0.2</th>
 <th class="ff4">Firefox 13 Nightly</th>
-<th class="ff4">Firefox 13 Nightly Azure</th>
+<th class="ff4sw">Firefox 13 Nightly Azure</th>
 <th class="op">Opera 11.51</th>
-<th class="op">Opera 12 Next **</th>
+<th class="iesw">Opera 12 Next **</th>
 <th class="cr">Chrome 17</th>
-<th class="cr">Chrome 20 Canary</th>
+<th class="sf">Chrome 20 Canary</th>
 <th class="ie">MSIE 9.0.5</th>
 </tr>
 
@@ -116,11 +116,11 @@ I had to <strong>update RAF demos to follow later specification (and incompatibl
 <th class="desc hh">500 particles</th>
 <th class="ff">Firefox 10.0.2</th>
 <th class="ff4">Firefox 13 Nightly</th>
-<th class="ff4">Firefox 13 Nightly Azure</th>
+<th class="ff4sw">Firefox 13 Nightly Azure</th>
 <th class="op">Opera 11.51</th>
-<th class="op">Opera 12 Next **</th>
+<th class="iesw">Opera 12 Next **</th>
 <th class="cr">Chrome 17</th>
-<th class="cr">Chrome 20 Canary</th>
+<th class="sf">Chrome 20 Canary</th>
 <th class="ie">MSIE 9.0.5</th>
 </tr>
 
@@ -201,11 +201,11 @@ I had to <strong>update RAF demos to follow later specification (and incompatibl
 <th class="desc hh">500 particles</th>
 <th class="ff">Firefox 10.0.2</th>
 <th class="ff4">Firefox 13 Nightly</th>
-<th class="ff4">Firefox 13 Nightly Azure</th>
+<th class="ff4sw">Firefox 13 Nightly Azure</th>
 <th class="op">Opera 11.51</th>
-<th class="op">Opera 12 Next **</th>
+<th class="iesw">Opera 12 Next **</th>
 <th class="cr">Chrome 17</th>
-<th class="cr">Chrome 20 Canary</th>
+<th class="sf">Chrome 20 Canary</th>
 <th class="ie">MSIE 9.0.5</th>
 </tr>
 
@@ -283,6 +283,20 @@ I had to <strong>update RAF demos to follow later specification (and incompatibl
 
 <tr><th class="desc">Color legend</th><td>&nbsp;more than 30 FPS = OK</td><td class="ko">&nbsp;less than 30 FPS = KO</td><td>N/A = not available</td><th class="desc" colspan="9">** Opera 12 Next rendering experience is VERY flashy/jerky and cannot be considered acceptable / frame rate is VERY misleading there...</th></tr>
 </table>
+
+<h3>Graphical representation of scaling across different browsers / number of particles + Firefox CPU demands</h3>
+<table border="0" cellspacing="10">
+<tr><td>
+<image src="partbench/graph-original2.svg" width="300" height="300" alt=""/>
+</td><td>
+<image src="partbench/graph-suspend2.svg" width="300" height="300" alt=""/>
+</td><td>
+<image src="partbench/graph-offscreen2.svg" width="300" height="300" alt=""/>
+</td><td>
+<image src="partbench/graphffcpu2.svg" width="300" height="300" alt=""/>
+</td></tr>
+</table>
+
 
 
 <h2><a href="lmchtml5pres/embedder.html"><img src="lmchtml5pres/html5logo.svg" width="200" height="220" align="right" alt="HTML5 Logo"/>Presentation: HTML5 Introduction (for LMC purposes)</a></h2>
