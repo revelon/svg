@@ -8,3 +8,31 @@
 - alternativni hudby do MP3 kdy je to jen mozne, sjednotit zpusob hrani...
 - fakeSMILE dalsim adobe demum???
 - napsat ze MSIE vyzaduje konzoli k prehrani starwars apod?
+
+
+FFX 11
+
+104 / 58
+145 / 58
+172 / 58
+
+32 / 3
+32 / 3
+32 / 2
+
+3 / 74
+6 / 73
+36 / 54
+
+3 / 73
+6 / 73
+36 / 53
+
+0.6 / 75
+0.83 / 75
+7.6 / 52
+
+0.6 / 75
+0.86 / 75
+7.8 / 52
+
