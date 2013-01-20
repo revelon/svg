@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Indonesia Vacation of Marek and Jana Raida, September 2012</title>
+
+
+
+  <style type="text/css" media="screen">
+
+    body {
+      background-color: black;
+      color: white;
+      font-family: 'Lucida Grande', Verdana, Arial, sans-serif;
+      font-size: 12px;
+      overflow: hidden;
+    }
+
+    .trd {
+      -webkit-transform-style: preserve-3d;
+      -moz-transform-style: preserve-3d;
+      -ms-transform-style: preserve-3d;
+      -o-transform-style: preserve-3d;
+      transform-style: preserve-3d;
+    }
+
+    #container {
+      width: 100%;
+      height: 700px;
+      -webkit-perspective: 1700; /* For compatibility with iPhone 3.0, we leave off the units here */
+      -moz-perspective: 1700px;
+      -ms-perspective: 1700px;
+      -o-perspective: 1700px;
+      perspective: 1700px;
+      -webkit-perspective-origin: 50% 220px;
+      -moz-perspective-origin: 50% 220px;
+      -ms-perspective-origin: 50% 220px;
+      -o-perspective-origin: 50% 220px;
+      perspective-origin: 50% 220px;
+    }
+
+    .stage {
+      width: 100%;
+      height: 100%;
+    }
+
+    .shape {
+      position: relative;
+      margin: auto;
+      padding-top: 80px;
+      height: 300px;
+      width: 400px;
+      -webkit-animation-play-state: paused;
+      -moz-animation-play-state: paused;
+      -ms-animation-play-state: paused;
+      -o-animation-play-state: paused;
+      animation-play-state: paused;
+    }
+    
+    #shapel, #shapell {
+      -webkit-animation: spinl 30s infinite linear;
+      -moz-animation: spinl 30s infinite linear;
+      -ms-animation: spinl 30s infinite linear;
+      -o-animation: spinl 30s infinite linear;
+      animation: spinl 30s infinite linear;
+    }
+
+    #shaper, #shaperr {
+      -webkit-animation: spinr 30s infinite linear;
+      -moz-animation: spinr 30s infinite linear;
+      -ms-animation: spinr 30s infinite linear;
+      -o-animation: spinr 30s infinite linear;
+      animation: spinr 30s infinite linear;
+    }
+
+    .agfa {
+      position: absolute;
+      height: 300px;
+      width: 400px;
+      border: 1px solid white;
+      border-radius: 9px;
+      text-align: center;
+      color: white;
+      background-color: gray;
+      background-size:100% 100%;
+      pointer-events: all;
+      -webkit-animation: fonty 3s infinite linear;
+      -moz-animation: fonty 3s infinite linear;
+      -ms-animation: fonty 3s infinite linear;
+      -o-animation: fonty 3s infinite linear;
+      animation: fonty 3s infinite linear;
+      /*-webkit-backface-visibility: hidden;
+      -moz-backface-visibility: hidden;
+      -ms-backface-visibility: hidden;
+      -o-backface-visibility: hidden;
+      backface-visibility: hidden;*/
+    }
+
+    @-webkit-keyframes fonty {
+      0% { color: white }
+      50% { color: black }
+      100% { color: white }
+    }
+
+    @-moz-keyframes fonty {
+      0% { color: white }
+      50% { color: black }
+      100% { color: white }
+    }
+
+    @-webkit-keyframes spinl {
+      from { -webkit-transform: rotateY(0); }
+      to   { -webkit-transform: rotateY(360deg); }
+    }
+
+    @-moz-keyframes spinl {
+      from { -moz-transform: rotateY(0); }
+      to   { -moz-transform: rotateY(360deg); }
+    }
+
+    @-ms-keyframes spinl {
+      from { -ms-transform: rotateY(0); }
+      to   { -ms-transform: rotateY(360deg); }
+    }
+
+    @-o-keyframes spinl {
+      from { -o-transform: rotateY(0); }
+      to   { -o-transform: rotateY(360deg); }
+    }
+
+    @keyframes spinl {
+      from { transform: rotateY(0); }
+      to   { transform: rotateY(360deg); }
+    }
+
+    @-webkit-keyframes spinr {
+      from { -webkit-transform: rotateY(0); }
+      to   { -webkit-transform: rotateY(-360deg); }
+    }
+
+    @-moz-keyframes spinr {
+      from { -moz-transform: rotateY(0); }
+      to   { -moz-transform: rotateY(-360deg); }
+    }
+
+    @-ms-keyframes spinr {
+      from { -ms-transform: rotateY(0); }
+      to   { -ms-transform: rotateY(-360deg); }
+    }
+
+    @-o-keyframes spinr {
+      from { -o-transform: rotateY(0); }
+      to   { -o-transform: rotateY(-360deg); }
+    }
+
+    @keyframes spinr {
+      from { transform: rotateY(0); }
+      to   { transform: rotateY(-360deg); }
+    }
+
+
+
+    .zoomer {
+      -webkit-animation: zoomin 2s 1 ease-in;
+      animation: zoomin 2s 1 ease-in;
+      -webkit-transform: scale(0.05);
+      transform: scale(0.05);
+      -webkit-animation-play-state: paused;
+      animation-play-state: paused;
+      -webkit-animation-fill-mode: forwards;
+      animation-fill-mode: forwards;
+    }
+
+    @-webkit-keyframes zoomin {
+      from { -webkit-transform: scale(0.05) rotateX(180deg); }
+      to { -webkit-transform: scale(0.5) rotateX(0deg); }
+    }
+
+    @keyframes zoomin {
+      from { transform: scale(0.05) rotateX(180deg); }
+      to { transform: scale(0.5) rotateX(0deg); }
+    }
+
+
+    div.controls div {
+        position: absolute;
+        border: 1px solid gray;
+        height: 100%;
+        top: 0;
+        pointer-events: all;
+    }
+  
+    .leftFast {
+        left: 0;
+        width: 10%;
+    }
+    .leftSlow {
+        left: 10%;
+        width: 20%;
+    }
+    .middleStop1 {
+        left: 30%;
+        width: 5%;
+    }
+    .middleStop2 {
+        left: 65%;
+        width: 5%;
+    }
+    .rightSlow {
+        left: 70%;
+        width: 20%;
+    }
+    .rightFast {
+        left: 90%;
+        width: 10%;
+    }
+    div.zoomerControl {
+        left: 30%;
+        top: -12%;
+        width: 60px;
+        height: 100px;
+        display: block;
+        z-index: 100;
+        position: absolute;
+    }
+    div.zoomerControl > div {
+        background-color: green;
+        width: 100%;
+        height: 40px;
+        margin-bottom: 4px;
+    }
+    #detailed {
+        left: 0;
+        top: 0;
+        margin: auto;
+        width: 1200px;
+        height: 880px;
+        display: block;
+        z-index: 110;
+        position: absolute;
+        display: none;
+    }
+  </style>
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+
+    <div id="container">
+        <div class="trd zoomer" id="zoomer">
+            <div class="stage trd">
+                <div id="shaperr" class="shape trd">
+                    <div id="shapell" class="shape trd">
+                        <div id="shaper" class="shape trd">
+                            <div id="shapel" class="shape trd"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+     <div class="controls">
+         <div class="leftFast" onmouseover="adjustSpeed(1, 1, 0, 0, 0)"></div>
+         <div class="leftSlow" onmouseover="adjustSpeed(0, 1, 0, 0, 0)"></div>
+         <div class="middleStop1" onmouseover="adjustSpeed(0, 0, 0, 0, 1)"></div>
+         <div class="middleStop2" onmouseover="adjustSpeed(0, 0, 0, 0, 1)"></div>
+         <div class="rightSlow" onmouseover="adjustSpeed(0, 0, 1, 0, 0)"></div>
+         <div class="rightFast" onmouseover="adjustSpeed(0, 0, 1, 1, 1)"></div>
+    </div>
+
+
+    <div class="zoomerControl">
+<svg xmlns="http://www.w3.org/2000/svg" height="1050" width="744" font-weight="bold" font-size="28px" font-family="sans-serif" stroke-width="1">
+<style>
+    #java {
+        fill: gold;
+    }
+    #java:hover {
+        fill: yellow;
+        stroke-width: 4px;
+    }
+    #bali {
+        fill: #b70000;
+    }
+    #bali:hover {
+        fill: red;
+        stroke-width: 4px;
+    }
+    #lombok {
+        fill: #20a500;
+    }
+    #lombok:hover {
+        fill: darkgreen;
+        stroke-width: 4px;
+    }
+    #flores {
+        fill: #2009e5;
+    }
+    #flores:hover {
+        stroke-width: 4px;
+        fill: magenta;
+    }
+</style>
+<g transform="scale(1.5)">
+<g stroke-dashoffset="0" stroke="#a08070" stroke-miterlimit="4" stroke-dasharray="8, 4, 2, 4" stroke-width="2" fill="none">
+<path d="m298,198s13.8-26.1,15-31.3c1.23-5.17,7.86-27.2,8.62-29.3l1.51-4.29"/>
+<path d="m391,227s-5.42-14.5-1.97-25.6,1.97-8.12,9.36-18.5c7.39-10.3,6.4-6.89,9.36-15.8,2.95-8.86,5.42-21.7,5.42-21.7"/>
+<path d="m278,191,3.3-8.68,1.59-13.1c0.184-1.52-1.45-2.68-2.73-3.61-2.08-1.59-4.49-4.23-4.12-7.16-0.0751-2.33-0.584-3.84-0.67-5.19-0.0861-1.36,0.826-2.17,1.87-4.32,0.834-1.72,2.43-7.23,3.21-7.98l4.69-4.48,17.1-3.36,7.4-8.44,3.46-11"/>
+</g>
+<g stroke="#00809e" fill="none">
+<path d="m450,205,0.401,1.61-1.6,2-1.6,2.01-2.01,0.803-2.01-0.198-2.21,1.4-2,0.198-2.01-0.8-2.2-0.407-2.21-0.198-2.01-1.61-2.2-2.01-0.8-2.21-0.602-0.605-0.602-0.8-2.01-1-2.01-0.404-2.2-1.4-1.61-2.21-2.01-0.602-2.2-0.201-2-0.201-2.01,0.404-2-0.602-2.01-0.201-2.2-0.407-0.803-0.195-2.01-1.21-1.4-2-1.2-1.81,0.404-0.605,1.6-2,2-0.805,2.01-0.803,2.2-0.198,2.01-0.198,2.2,0,2.01-0.407,2.01,0.407,2.2-0.803,2.01,0.803,2.01,0.399,2.21-0.998,2-1.21,2.01,1.21,1,0.998,1.4,2.01,2.2,0.404,2,0.803,0.201,2.21,1.81,2.01,2.2-0.401,2-0.201,1.4,2.01,2,1,0.805,2.21,1.4,2.01,2.01,1,2.01,2"/>
+<path d="m370,175-1.61,0-2,0.401-2.2-0.401-2.01,1.2-2,1.2-2.2,0.602-2.01,0.404-2.01-0.201-2.21-0.605-2.01,1.61-2.2,0.803-2.01-0.404-2.2-0.602-2.01-0.401-2-1.01-0.401-2-0.201-2.01,1.61-2.01-0.602-2.01-0.401-2.21,1-2.01,2-1.41,2.01-0.8,2-1,2-2.01,2.21-0.605,2.01,0.803,2,1.21,2.21,1,2.01-1.4,2.01-0.198,1.8,2.01,0.803,2,2.01,0.407,0.599,2.01,1.8,2,2.21,0.407,2.01,0.195,2.2-2.01,2.01-0.599,2,0.399,2.21-0.8-1.81-2.21-2-1-2.01-1.61-2.01,0.401-2.01-1.21-2.21-1.61-1.8-2-2.01-1.61,0.602-2.2,2.01-1.2,2.2-0.602,2-0.404,2.01,0.8,2.2,0.203,1.4,2,0.998,2.21,2.01,1.81,2.21,0.399,2.01-1.8,2.2-1,2.01,0.599,2.01,1.01,1,2.01-0.203,2,0,2.21,1.21-2.21-0.203-2,2.01-2.21,2.01-0.201,2.2,0,1.4,2.2,1,2.01,0.198,2.01-0.399,2.21,2,1.2,2.01-1.8,0,4.21-2.21,0.803-2,0-2.21-0.803-2,0-2.01-0.203-2.01,1.21,2.01,0.401,2.01,0,2,1.81-2,0.198-2.01-0.805-2.01-0.599-2.2,0.599-2,0.608-2.01,0.602-2.2-0.404-0.803-2.01,1.4-2.01-1-2.21-1.6,2.01-1.4,2.21-2.21,1.4-2,1.2-2.01-0.401-2.2,1-2.01,0.794"/>
+</g>
+
+<g id="java" onclick="setImages('java')">
+<g stroke="#00809e">
+<path d="m155,147-1.2-0.401-1.2-0.404-2-0.399-2.21-0.602-2.2-0.803-2.01-0.602-2,0-2.01-0.404-2.2,0.404-2.01-1.81-2.21-0.401-2-0.201-2.01,0.201-2.2,0.602-2.01-0.404-2-0.599-0.401-2.01-2.01,1.61-1.8,0.401-2.21,0.599-2-0.399-2.01,1.2-2,2.01-2.01-0.198-2.2-0.201-2.21-0.203-2.01-0.399-2-0.404-2.2-0.803-2.01,0-1.61-0.399-1.6-1.2-2.01-0.201-2.2-2.21-2.01-1.01-2-1-2.01-0.404-2.01-0.201-2.2,0-2.21-0.602-2-0.399-2.2,0-2.01-0.401-2.21,0-2-0.201-2.01-0.201-2-0.203-2.21,0-2.2-1.2-2-0.203-0.602-2.21,0.399-2,1.81-2.21,2-1.4,0-2.21-2-0.803-2.2,0.803-2.01-0.201-2-1.4-2.01-0.8-2.01-1.41-2.2-0.8-2-0.206-2.21,0.602-2.01,0.404-2.2-0.602-2,0.399-2.21,0.602-2.01-0.198-3.86,1.06-0.348-2.46-2,0.605-0.602-2.01,2.21-1,2-1.21,1,2.01,2,1.2,0.803-2.01,2.01-1.81,0.8-2.21,2.01-1.8,2-0.602,1.4-2.21,0-2.01,0.201-2.21,0.401-2.01,0.602-2.01,1.61-2.21,1.6-2.01,1.4-2,2,1,0.401,2.01,2.01,0.399,2-2.01,2.01,1.2,2.21,0.805,2,0.8,2.01-0.8,2.2,0,2,1.2,1,1.2,2.01,0.201,2.2-0.602,2.01-0.198,0.401-0.407,0-2.01,0.401-2,1.6,0.399,2.01,1.2,2.2-0.201,2.01-0.401,2.01,1.21,1.6,2.21,1.4,2,2,0.602,2.21,1.81,2,0.201,2.01-1,2.2,0.201,0.401,0.401,2.01,1,2.2,1.2,2.01,0.803,2.2-0.201,1.2-2.21,0.803,0.201,2,1,1.61,2.21,2,2,2.01,1.4,0.401,2.21,0.201,2.01,0.602,2.21,2.2,1.01,2.01,1.2,2-0.399,2.21,0.399,0.803,0.803,2.2-1.4,2.21,0.803,2,0.803,2.01,0.404,2.2,0.401,2.21-0.401,2-0.803,2.2,0,2.01,0.399,2.01,0.404,2,0.602,2.01,0.605,2.2,0.399,2.01,0.201,1.2-0.401,2-0.404,2.01-0.803,2.2,1.61,2.21,1.2,2-0.399,2.01-1,1.8-2.01,1-2,0-0.602,0.803-0.803,0.599-2.01,0.401-2.21,0.401-2.01,2.21-1.6,2.01-0.401,2-0.602,2.2,0.803,2.01,0.8,0.602,2.21,0.602,2.01,2,2,1,0.401,2.2,0,2.01,0.201,2-0.803,2.21-1,2.01,0.399,2,2.01,1,0.805,2,0.8,2.21,0.602,2.01-0.8,2,0.8,1.61,2.21,2,0.407,2.21-0.206,2-0.399,2.01-0.404,2.2,0,2.01,1.21,2.21-0.605-0.605,2.01,1,2.21-0.201,1.2,1.81,2-0.401,2.01,2-0.803,2.01,1,0.401,2.01-0.201,2.21-1.4,2.01,0,2,2.21,1.4,2,0.803,2.01,0.803,2.21,0.602,2,1.61,2,0.203,2.21,1.4,2.2-1.01,2.01-0.602,2-0.803,2.01,0.203,2.2,0.201,2.21,0.198,2-1,2.21,0,2.2-1.61,2.01,0,2.21,2,2,0.203,2.01,0.803,2.2,0.399,2.01,1.21,0.599,2.01-0.8,2.01,0,2.21-0.401,2.01-0.201,0.201-0.401,2.01-0.401,2.21-0.602,2.01-0.201,2,1.61,2.21,0,2.01,1.2,2.01,2.21,0.803,2.01,1.4-1.2,2.01-1.2,0-1.81-0.803-2.61,0,0.401-1.01-0.602-2.01-2.2-0.803-2.01,1.01-2-0.602-2.21,0.198-2.01-0.198-2.2-1.4-2-0.803-2.01-0.404-2.01-0.803-2.2-1.6-2.2-0.404-2.01-1.4-2.01-0.805-2-1.4-2.21-0.602-2,0.198-2.21,0.404-2,0.599-1.81,2.01-2.2-0.399-2.01,0.399-2,1-2.01,0-2-0.803-2.21-0.201-2.01-0.602-2-1-2.2,0.399-2.01-1-2,0-2.21-0.401-2.01,0.201-2-1.01-2.21-0.399-2,1.2-0.201,2-2.01-1.2-2.2-0.602-2.01,0.201-2.2-1-2-0.602-2.21,0.201-2.01,0.599-2.2-2-2,1.2-2.01-0.803-0.602-0.201-2.21-0.404-1.2-0.198-2.01,0-2.2-1-2.01-0.602-2-0.602-2.21-1-2.01-1.2-2-0.803-2.01-1.21-2-0.8-2.2-1.2"/>
+<path d="m234,119-2,0.198-2.01,2.01-2.01,1.41,0,2.21,2.01,1.6,2.21,0.203,2,0.602,2.2,0.404,2.01,0.602,0.201-2.21,2.01,2.01,2-0.201,2.2,0.201,2.01,0.201,2.01-0.201,2,0,1.2-2.01,2-1,2.21,0,2.01,0.201,1.6-2.01,2.21-0.404,2-0.805,2.21-0.8-2.21-1.8-2.2-1.21-2.01,0-2.2,0.602-2.01-0.201-2.2,0.201-2.21,0.198-2.01,0-2-0.198-4.21,0-2,0.198-2.21-0.198-2.01-0.201-2.2,0.201-0.602,0.198"/>
+</g>
+<g stroke-linejoin="miter" stroke-dashoffset="0" stroke="#a08070" stroke-miterlimit="4" stroke-dasharray="none" stroke-width="2" fill="none">
+<path d="m62.1,95.5s-2.61,8.44,1,9.84c3.62,1.41,4.02,2.81,5.83,1s2.41-8.88,2.41-8.88"/>
+<path d="m64.5,106s-2.61,1.21-5.22,0.603c-2.61-0.603-5.42-1-4.62,3.01,0.804,4.02,1.81,5.02,1.21,7.43-0.603,2.41-1.13,4.4-1.13,4.4"/>
+<path d="m121,117s-0.091,6.38-1.1,7.98c-1,1.61-12.4,4.03-3.62,9.64,2.21,1.41,1.81,5.48,1.81,5.48"/>
+<path d="m155,146c3.2-4.43,5.79-7.09,8.25-6.59,2.46,0.492,1.23,1.97,5.17,4.43s5.42,0.246,6.15,3.69c0.739,3.45,0.492,7.18,0.492,7.18"/>
+<path d="m180,155s-0.894-1.42,0.583-2.16c1.48-0.739,5.91-3.2,5.91-3.2s3.2-2.71,1.48-5.17-0.739,1.72-1.23-4.19c-0.492-5.91-0.492-7.39-0.492-7.39s0.246-3.2,3.69-2.22c3.45,0.985,2.95,1.23,4.68-0.739,1.72-1.97,2.46-1.48,2.71-6.4,0.246-4.92,3.08-8.32,3.08-8.32"/>
+</g>
+<text transform="matrix(0.96947274,0.24519912,-0.24519912,0.96947274,0,0)" y="93" x="170" fill="black" stroke="none">JAVA</text>
+</g>
+
+<g id="lombok" onclick="setImages('lombok')">
+<path d="m327,156-2.21,1-2,2.01-2.01,1.61-1.81,2.21,1.2,4.41-0.401,2.01-2.2,1.2-2.01,0.608-2.2-0.404,0.401,2,2,1.01,2.21,1.4,2-1.2,2.21,0.401,2,0.803,2.01,0,2.2,1.4,0.803-2.01,2.01,0.602,2-0.201-1.6-2.01,1.4-2.01,1-2.21,1.2-2.01,0.803-2.21,0.8-2.01,1-2-1.61-2.01-2-0.803-2.01-0.602-2.2-1-2.21-0.404-0.8,0.407" stroke="#00809e"/>
+<text transform="matrix(0.98938175,-0.1453401,0.1453401,0.98938175,0,0)" y="246" x="232" stroke="black" stroke-width="1">LOMBOK</text>
+</g>
+
+<g id="flores" stroke="#00809e" onclick="setImages('flores')">
+<path d="m427,172,0.602,0,2.21-0.605,2.01-0.401,2,1.4,2.2,0,2.01-0.602,2.01,0,2.2-0.404,2,1.21,2.21,0.803,2.01-1.21,2.01,0.805,1.6,2.01,2.21,0.602,2.01-0.201,2.21-1,2.01-0.198,2.2,0.803,2.01-1.21,1.61-2.01,2.2,0.399,2.01,0.203,2,1.2,2.21,0.404,2.01-0.404,2-1.2,2.01-0.401,2.01-0.605,2.21-1.6,2.01,0,2.2,0.401,2.01,0,2-0.203,2.2-0.602,1.41-0.998,2-0.803,2.01-0.605,2.01-0.401,2.2-0.803-0.602-2.01-0.203-2.01,2.21-0.803,0.605-2.01,2.2-0.198,0.201-2.01-1-2.01-1.4-2.21-2.21-0.8-1.8,2.01,0,2.21,2.01-1,2.01,0.803-2.01,2.01-2.2,1.61-2.01,0.602-2.01,0.201-2,2.01-1,2-1.4,2.01-2.01,0.195-2.2,0.605-2.21-0.198-2.01-1.81-2.01-1.2-1.6-0.203,0.198-2.21-2.2,0.602-2.01,1.21-2.01,0.195-2.2-0.195-2.01-0.201-2,1.2-2.01,1.81-2.2-0.407-2-0.998-1.61-2.01-2.21-0.8-2-0.407-2.01-0.599-2.21-1.81-2,0-2.21-0.401-2.01,0.201-2-1.21-2.2-0.605-2.01-0.399-2,0.198-2.01,0.404-2-0.203-2.21,0.605-2,2.01-2.01,0.605-2.2,1.61-1.6,0.195-2.01-0.602,0.198,2.01-2,2.21,0,4.02,1.4,2.01,2,2.01,2-1.6"/>
+<path d="m412,161,2.2,1.4,1.4,2.21-2.21,0.407-0.8,2.01-0.602,2-2.01,0.602,0.803-2.21-0.803-2,1.01-2.21,0.602-2,0.401-0.206m4.81,4.62,2.21,1.8,2-1.2-2,2.21,0.198,2-2.01,0,0.404-2-0.803-2.01,0-0.8"/>
+<text transform="matrix(0.99709349,0.0761877,-0.0761877,0.99709349,0,0)" y="118" x="384" stroke="black" stroke-width="1">FLORES</text>
+</g>
+
+<g id="bali" stroke="#00809e" onclick="setImages('bali')">
+<path d="m276,152,1.61,1.2,2.01-0.201,2.2,0.404,2.01,0.803,2,0.599,2.2-0.198,2.21,0,2.01-1.4,2-1.8,2.21,0,2,0.803,2.21,0.8,2,0.803,2.21,1.21,1.8,2,2.01,1.81,0.803,2.01-2.01,2-2,0.803-2.01,1.4-2.21,0.602-2,1.01-1.61,2.21-0.803,2-1.2,2.01-0.602,0.198-2.01-0.198,0.401-1.21,1.61-2.01-1.2-2.01-2-2.21-2.01-1.81-2.2-1.4-2.01-0.805-2.2-0.803-2.01-0.198-2.2-0.198-1.81-2.21-1.4-2.01-0.599-2.01,0.599-2.01"/>
+<path d="m307,172-2-1.01-0.602-2,2-0.805,1.4,2.21-0.803,1.61"/>
+<text transform="matrix(0.96299159,0.26953144,-0.26953144,0.96299159,0,0)" y="61" x="297" stroke="black" stroke-width="1">BALI</text>
+</g>
+</g>
+</svg>
+    </div>
+
+
+
+
+
+    <img src="" id="detailed" width="1200" height="800" onclick="hideDetail()"/>
+
+
+
+
+
+
+
+<script>
+      var rings = [document.getElementById('shapell'), document.getElementById('shapel'), document.getElementById('shaper'), document.getElementById('shaperr')];
+      var state = ['paused', 'running'];
+      var zoomer = document.getElementById('zoomer');
+      var detailed = document.getElementById('detailed');
+      var titles = document.getElementsByClassName('agfa');
+
+      function adjustSpeed (a1, a2, a3, a4, a5) {
+          for (var i = 0; i < titles.length; ++i) {
+              titles[i].style.webkitAnimationPlayState = state[a5];
+              titles[i].style.mozAnimationPlayState = state[a5];
+              titles[i].style.msAnimationPlayState = state[a5];
+              titles[i].style.oAnimationPlayState = state[a5];
+              titles[i].style.animationPlayState = state[a5];
+          }
+
+          rings[0].style.webkitAnimationPlayState = state[a1];
+          rings[0].style.mozAnimationPlayState = state[a1];
+          rings[0].style.msAnimationPlayState = state[a1];
+          rings[0].style.oAnimationPlayState = state[a1];
+          rings[0].style.animationPlayState = state[a1];
+
+          rings[1].style.webkitAnimationPlayState = state[a2];
+          rings[1].style.mozAnimationPlayState = state[a2];
+          rings[1].style.msAnimationPlayState = state[a2];
+          rings[1].style.oAnimationPlayState = state[a2];
+          rings[1].style.animationPlayState = state[a2];
+
+          rings[2].style.webkitAnimationPlayState = state[a3];
+          rings[2].style.mozAnimationPlayState = state[a3];
+          rings[2].style.msAnimationPlayState = state[a3];
+          rings[2].style.oAnimationPlayState = state[a3];
+          rings[2].style.animationPlayState = state[a3];
+
+          rings[3].style.webkitAnimationPlayState = state[a4];
+          rings[3].style.mozAnimationPlayState = state[a4];
+          rings[3].style.msAnimationPlayState = state[a4];
+          rings[3].style.oAnimationPlayState = state[a4];
+          rings[3].style.animationPlayState = state[a4];
+     }
+
+      function showDetail (evt) {
+          console.log(evt);
+          detailed.src = evt.target.getAttribute('detail');
+          detailed.style.display = 'block';
+      }
+
+      function hideDetail () {
+          detailed.src = '';
+          detailed.style.display = 'none';
+      }
+
+      function setImages (source) {
+          while (rings[1].hasChildNodes()) {
+              rings[1].removeChild(rings[1].firstChild);
+          }
+          var posterAngle = 360 / 15;
+          for (var i = 0; i < 15; i ++) {
+              var poster = document.createElement('div');
+              poster.className = 'agfa';
+              var transform = 'rotateY(' + (posterAngle * i) + 'deg) translateZ(1000px)';
+              poster.style.webkitTransform = transform;
+              poster.style.mozTransform = transform;
+              poster.style.msTransform = transform;
+              poster.style.oTransform = transform;
+              poster.style.transform = transform;
+              poster.style.backgroundImage = 'url(pics/' + source + '/'+ data[source][i].img + ')';
+              poster.textContent = data[source][i].dsc;
+              rings[1].appendChild(poster);
+              poster.setAttribute('detail', data[source][i].pcs + '/s1200/' + data[source][i].img)
+              poster.addEventListener('click', showDetail, true);
+          }
+          titles = document.getElementsByClassName('agfa');
+
+          zoomer.style.webkitAnimationPlayState = 'running';
+          zoomer.style.animationPlayState = 'running';
+      }
+
+      var data = {
+            'java':[
+{'img':'IMG_6478.JPG', 'dsc':'Pretty dancer of Ramayana performance', 'pcs':'https://lh3.googleusercontent.com/-Czy6ALJruds/UI0v-ARNToI/AAAAAAAADOk/WnldDAmxzbQ'},
+{'img':'IMG_6842.JPG', 'dsc':'Playful children near temple Mendut', 'pcs':'https://lh4.googleusercontent.com/-yQROodor9O8/UI0wDrIIusI/AAAAAAAADPU/0dM8XdsTSVA'},
+{'img':'IMG_6919.JPG', 'dsc':'View from magnificent Borobudur buddhist temple', 'pcs':'https://lh6.googleusercontent.com/-7arEi_QBW_g/UI0wJDyoLII/AAAAAAAADQA/IPDxd-FKNPo'},
+{'img':'IMG_7348.JPG', 'dsc':'Noisy and smelly crater on Dieng plateau', 'pcs':'https://lh6.googleusercontent.com/-LN13ifpyx7Y/UI0wjeXT8nI/AAAAAAAADTg/XTWbF45TtzY'},
+{'img':'IMG_7388.JPG', 'dsc':'Cascading potato fields near Dieng', 'pcs':'https://lh6.googleusercontent.com/-D2Mof1q6jQQ/UI0wneHT8MI/AAAAAAAADUA/FjbtQo6wMy0'},
+{'img':'IMG_7519.JPG', 'dsc':'Very photogenic hindu Prambanan temples', 'pcs':'https://lh4.googleusercontent.com/-A6J5nJwu8to/UI0wr0Krm2I/AAAAAAAADUo/n_FrGj2ypDA'},
+{'img':'IMG_7673.JPG', 'dsc':'Ruins of temple Sewu, northern Prambanan', 'pcs':'https://lh3.googleusercontent.com/-TiF498HCJmA/UI0wyaS4czI/AAAAAAAADVg/e_G3uk_m_wA'},
+{'img':'IMG_8294.JPG', 'dsc':'Indonesia\'s highest mountain Gunung Semeru (3676 m)', 'pcs':'https://lh5.googleusercontent.com/-0SuZqrJUp8k/UI0xNZoyO5I/AAAAAAAADZU/MOvQ8Jt40M0'},
+{'img':'IMG_8386.JPG', 'dsc':'Walk on the rim of the morning\'s Bromo vulcano', 'pcs':'https://lh6.googleusercontent.com/-A0VB_MVyUwE/UI0xUIPUHDI/AAAAAAAADaU/E24ICPMsR6g'},
+{'img':'IMG_8676.JPG', 'dsc':'Kawah Ijen crater where sulfur is actively (and manually) mined', 'pcs':'https://lh4.googleusercontent.com/-BFGGsF3RAXY/UI0xiNA6bdI/AAAAAAAADcQ/yw7sHpA0HmE'},
+{'img':'IMG_8905.JPG', 'dsc':'Beautiful (and well protected) turtle beach', 'pcs':'https://lh6.googleusercontent.com/-z_VBOyVmkTQ/UI0xzUhHfkI/AAAAAAAADek/aX2RWS8UZxM'},
+{'img':'IMG_9083.JPG', 'dsc':'Pair of monkeys in  vehement dialogue', 'pcs':'https://lh5.googleusercontent.com/-4QibMrfIbwg/UI0yAVHaNMI/AAAAAAAADgU/ABYBNGavzr4'},
+{'img':'IMG_9355.JPG', 'dsc':'Ranger climbing on the palm tree in hunt for coconuts', 'pcs':'https://lh3.googleusercontent.com/-3lGKCZ0C9jc/UI0yWyPuETI/AAAAAAAADjI/vrYAl11nCZo'},
+{'img':'IMG_9467.JPG', 'dsc':'Warm morning on Sukamade beach', 'pcs':'https://lh6.googleusercontent.com/-P3x5lItg9jw/UI0ygEM0AfI/AAAAAAAADkU/9HBmF8zeg7k'},
+{'img':'IMG_9711.JPG', 'dsc':'Six hundred years old ficus tree', 'pcs':'https://lh3.googleusercontent.com/-cGUm4FrTmME/UI0yr0NK9nI/AAAAAAAADl8/0acMCNXodro'}
+            ],
+            'bali':[
+{'img':'IMG_9966.JPG', 'dsc':'Water temple of Pura Ulun Danu Bratan', 'pcs':'https://lh6.googleusercontent.com/-80nVo4JZRC4/UI0zHXnH-MI/AAAAAAAADpA/n6aw9TlkoZA'},
+{'img':'KIMG_0040.JPG', 'dsc':'Charming building of temple by Bratan lake', 'pcs':'https://lh6.googleusercontent.com/-Y0wDy1B3v-o/UI0zRXJLH2I/AAAAAAAADqA/T-LTLGK1K7k'},
+{'img':'KIMG_0260.JPG', 'dsc':'The only-lonely but very peaceful buddhist temple on Bali', 'pcs':'https://lh4.googleusercontent.com/-WU6D3eQnUmY/UI0zoCpyQ8I/AAAAAAAADsg/PEWjEIURBFM'},
+{'img':'KIMG_0287.JPG', 'dsc':'Photogenic sunset on northern coast of Bali, Lovina', 'pcs':'https://lh3.googleusercontent.com/--j1bgUiUz9Q/UI0zr5Ruv0I/AAAAAAAADtE/sGw9lkOsahM'},
+{'img':'KIMG_0535.JPG', 'dsc':'Beautiful greenery of Jatiluwih rice field terraces', 'pcs':'https://lh4.googleusercontent.com/-3xsXCPy_hJI/UI0z-HXKWeI/AAAAAAAADvM/UURkghatrY4'},
+{'img':'KIMG_0737.JPG', 'dsc':'Pair of eyes-bulging dancers of Barong epos', 'pcs':'https://lh3.googleusercontent.com/-azdLREs8pQQ/UI00IHQNyYI/AAAAAAAADwQ/A0Rf58by-sg'},
+{'img':'KIMG_1120.JPG', 'dsc':'Bali\s biggest hindu temple, Pura Besakih', 'pcs':'https://lh6.googleusercontent.com/-3QwCtZTKmqk/UI001E6smoI/AAAAAAAAD1E/Lnp_y8hE18I'},
+{'img':'KIMG_1173.JPG', 'dsc':'Lake Danau Batur in the central mountains', 'pcs':'https://lh6.googleusercontent.com/-10EU2-zZcgo/UI005lnW_LI/AAAAAAAAD1k/jGi8Ggj9zlY'},
+{'img':'KIMG_1352.JPG', 'dsc':'Elder peasant in the field near Ubud', 'pcs':'https://lh6.googleusercontent.com/-9-GilPI0cGg/UI01SRw7NpI/AAAAAAAAD4c/fi6ylBuHFyw'},
+{'img':'KIMG_1510.JPG', 'dsc':'Balinesse wedding dresses are very colorful and pretty', 'pcs':'https://lh4.googleusercontent.com/-n3Nvv_Xro5g/UI01nI4C8lI/AAAAAAAAD68/2NLJXBv3SQ8'},
+{'img':'KIMG_1615.JPG', 'dsc':'Monkey thief is savouring its precious coca-cola theft', 'pcs':'https://lh3.googleusercontent.com/-pd8Sv-0c6Ew/UI01t-T62eI/AAAAAAAAD7w/ULiYQLm_7so'},
+{'img':'KIMG_1853.JPG', 'dsc':'Happy macaque family in Sacred Monkey Forrest', 'pcs':'https://lh3.googleusercontent.com/-izCfLskNM6o/UI02A68OGSI/AAAAAAAAD-E/dZJ591-n0dU'},
+{'img':'KIMG_2149.JPG', 'dsc':'Golf course on the eastern coast of Bali', 'pcs':'https://lh4.googleusercontent.com/-K0PfmNJ6rxg/UJQEF0XocmI/AAAAAAAAEks/-qts0zVqGFg'},
+{'img':'KIMG_2157.JPG', 'dsc':'Famous water temple of Tanah Lot', 'pcs':'https://lh4.googleusercontent.com/-SEGZcmTitHI/UI02np4sm6I/AAAAAAAAEC4/FBME0hkbZtY'},
+{'img':'KIMG_2276.JPG', 'dsc':'Offerings to gods on every engine of speedboat', 'pcs':'https://lh6.googleusercontent.com/-DbzKpAf20dQ/UI02vbovYuI/AAAAAAAAED8/ZasU0iTgc2I'}
+            ],
+            'lombok':[
+{'img':'KIMG_2387.JPG', 'dsc':'Only engineless transportation on Gili Meno island', 'pcs':'https://lh4.googleusercontent.com/-wEotxz1_38I/UI02zxwjFjI/AAAAAAAAEEk/MCouWyOgEHY'},
+{'img':'KIMG_2387_IMG_0102.JPG', 'dsc':'Encounter with the wild turle during snorchling', 'pcs':'https://lh5.googleusercontent.com/-aYGmkm88Dss/UI020ntNguI/AAAAAAAAEEs/kkJHxvJfJhY'},
+{'img':'KIMG_2387_IMG_0212.JPG', 'dsc':'Banquet on the beach, if you like', 'pcs':'https://lh4.googleusercontent.com/-jrEH-RlSeTI/UI0263c3yfI/AAAAAAAAEFY/ExIoQjXA8YQ'},
+{'img':'KIMG_2426.JPG', 'dsc':'Hotel on the beach natural decoration', 'pcs':'https://lh6.googleusercontent.com/-RpdoypFC8FE/UI03ElxSm9I/AAAAAAAAEGk/XwgosYvEYo8'},
+{'img':'KIMG_2444.JPG', 'dsc':'Fisherman boats are too narow for our european asses', 'pcs':'https://lh6.googleusercontent.com/-hnc5w8eFLig/UI03FS3rXbI/AAAAAAAAEGo/to5C2GQ_vfw'},
+{'img':'KIMG_2601.JPG', 'dsc':'Nice and very big trees in jungle near Senaru village', 'pcs':'https://lh4.googleusercontent.com/-yCB3cw5egJg/UI03S_qDTPI/AAAAAAAAEIM/oCsD9xvTEjI'},
+{'img':'KIMG_2645.JPG', 'dsc':'On the beginning of three day lasting trek to Gunung Rinjani', 'pcs':'https://lh4.googleusercontent.com/-76O6zYOgc4I/UI03YoQoZgI/AAAAAAAAEI8/T_vhlD3lZC4'},
+{'img':'KIMG_2760.JPG', 'dsc':'Staying overnigh on the rim of Rinjani\'s caldera', 'pcs':'https://lh5.googleusercontent.com/-YzkYbQLPV8M/UI03cvx1keI/AAAAAAAAEJc/iMNGliTsSmI'},
+{'img':'KIMG_2819.JPG', 'dsc':'Exhausted, but on the top of Indonesia second highest mountain Rinjani', 'pcs':'https://lh3.googleusercontent.com/-YQVgiGp9gF4/UI03eOy9THI/AAAAAAAAEJw/072bMH4Bpcw'},
+{'img':'KIMG_2827.JPG', 'dsc':'Slide rock, 45 degrees slope, not easy way up to the top', 'pcs':'https://lh3.googleusercontent.com/-gtIVQGnwKPU/UI03gV4szpI/AAAAAAAAEJ8/pbV2UhnBya0'},
+{'img':'KIMG_2900.JPG', 'dsc':'Caldera of Rinjani is flooded with Segara Anak lake', 'pcs':'https://lh4.googleusercontent.com/-xFbvuz6fBcU/UI03k9KPyzI/AAAAAAAAEKc/HLZebzmwmo8'},
+{'img':'KIMG_2917.JPG', 'dsc':'Boiling acid water in the stream, almost too hot for bath', 'pcs':'https://lh3.googleusercontent.com/-rVPUJ0u0PXw/UI03nLHNumI/AAAAAAAAEKw/y9x0sfSZQZ4'},
+{'img':'KIMG_2935.JPG', 'dsc':'Opposite to hot water in stream, lake has cold, fresh drinkable water', 'pcs':'https://lh5.googleusercontent.com/-2Z2Mc_PJdIk/UI03o8X8NYI/AAAAAAAAEK8/uPT_g8d2D2I'},
+{'img':'KIMG_2946.JPG', 'dsc':'Saying our good bye to the mountains and our trek', 'pcs':'https://lh3.googleusercontent.com/-hRhC7aCrcXA/UI03rxTmP4I/AAAAAAAAELI/ncoeD2cr_hs'},
+{'img':'KIMG_3009.JPG', 'dsc':'Healing our damaged bodies after trek in hotel at Senggigi', 'pcs':'https://lh4.googleusercontent.com/-lhIZ1T-vohA/UI03vSypheI/AAAAAAAAELg/Z7SRZbDKdQQ'}
+            ],
+            'flores':[
+{'img':'KIMG_3190.JPG', 'dsc':'Hostile and dry hills of the Rinca island', 'pcs':'https://lh5.googleusercontent.com/-KpzfoSwuaQQ/UI037_TABaI/AAAAAAAAEM8/If1BBKp4S7k'},
+{'img':'KIMG_3230_IMG_0291.JPG', 'dsc':'Our boat, rented for four days, all inclusive, by sunset', 'pcs':'https://lh4.googleusercontent.com/-1Rh9oiVkOxs/UI04IPTqDZI/AAAAAAAAEOk/3twAZzeVpm8'},
+{'img':'KIMG_3338.JPG', 'dsc':'Rinca island, however innocent it looks, is full of varans', 'pcs':'https://lh3.googleusercontent.com/-iRASw1V0T-U/UI04TlHD1MI/AAAAAAAAEP4/H58ezf6d1cM'},
+{'img':'KIMG_3398.JPG', 'dsc':'Land crabs are very clever, but still common pray to gray macaque monkeys', 'pcs':'https://lh4.googleusercontent.com/-FPYVKL0qBpo/UI04Y9SHb8I/AAAAAAAAEQg/2ZPkiowWLTU'},
+{'img':'KIMG_3503_IMG_0359.JPG', 'dsc':'Coral gardens are the best snorchling experience we have had so far', 'pcs':'https://lh3.googleusercontent.com/-xuqpLzoN_Ug/UI04sgNfWvI/AAAAAAAAETA/jPdgX7pe8Lw'},
+{'img':'KIMG_3663.JPG', 'dsc':'Modest fisherman village Komodo in morning haze', 'pcs':'https://lh6.googleusercontent.com/-gQazzSUznPM/UI04yrOy6zI/AAAAAAAAET0/rtbKimA3xXA'},
+{'img':'KIMG_3715.JPG', 'dsc':'Komodo dragons looks formidable monsters - 3 meters, 90 kilos', 'pcs':'https://lh3.googleusercontent.com/-TofjGquEXFk/UI048GAp_4I/AAAAAAAAEVE/PYQ4UbgGDoU'},
+{'img':'KIMG_3786.JPG', 'dsc':'Colorful snails on the dry shrub, waiting for the raining season', 'pcs':'https://lh6.googleusercontent.com/-Ksd7OTAJsR8/UI05APo4zlI/AAAAAAAAEVk/YouXCcDll1A'},
+{'img':'KIMG_3839.JPG', 'dsc':'Marek and Jane, us, on our four hour lasing trek over Komodo island', 'pcs':'https://lh6.googleusercontent.com/-1tva-wpJFQw/UI05E_HdN7I/AAAAAAAAEWQ/8IQu3CAi7M0'},
+{'img':'KIMG_3845.JPG', 'dsc':'Did you know that Indonesia is spread over more than 17500 islands?', 'pcs':'https://lh3.googleusercontent.com/-zfNYkYIZYsk/UI05F3h6SzI/AAAAAAAAEWU/-7YamqdcUv0'},
+{'img':'KIMG_3938.JPG', 'dsc':'Scube diver yacht is free for rent to everyone', 'pcs':'https://lh4.googleusercontent.com/-XGF2b9bBOng/UI05QPrGbkI/AAAAAAAAEXs/ABWEjB6m1V8'},
+{'img':'KIMG_3940_IMG_0415.JPG', 'dsc':'Flores sea have abundance of both fauna and flora ', 'pcs':'https://lh6.googleusercontent.com/-_qmZJWhxFic/UI05UdxDI_I/AAAAAAAAEYQ/oTmjG_pOUko'},
+{'img':'KIMG_3940_IMG_0432.JPG', 'dsc':'Kanawa island and its paradise-like jetty', 'pcs':'https://lh6.googleusercontent.com/-EjZ2yjj7AMc/UI05W6xFRUI/AAAAAAAAEYo/Opj-cHMq5Tc'},
+{'img':'KIMG_3940_IMG_0457.JPG', 'dsc':'Snorchling is always fun, esp. iif you can touch almost everything', 'pcs':'https://lh5.googleusercontent.com/-vOIfIhxH9dc/UI05ZAeXJfI/AAAAAAAAEZA/YGZ0WNcdBeg'},
+{'img':'KIMG_4089.JPG', 'dsc':'Limestone cave of Batu Cermin near Labuan Bajo, Flores', 'pcs':'https://lh5.googleusercontent.com/-VpxhH91Et6Q/UI051WEGiCI/AAAAAAAAEck/DTrixOBtabI'}
+            ]
+      };
+</script>
+</body>
+</html>
