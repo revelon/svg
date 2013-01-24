@@ -12,30 +12,24 @@
       background-color: black;
       color: white;
       font-family: 'Lucida Grande', Verdana, Arial, sans-serif;
-      font-size: 12px;
+      font-size: 13px;
       overflow: hidden;
     }
 
     .trd {
       -webkit-transform-style: preserve-3d;
-      -moz-transform-style: preserve-3d;
       -ms-transform-style: preserve-3d;
-      -o-transform-style: preserve-3d;
       transform-style: preserve-3d;
     }
 
     #container {
       width: 100%;
       height: 700px;
-      -webkit-perspective: 1700; /* For compatibility with iPhone 3.0, we leave off the units here */
-      -moz-perspective: 1700px;
+      -webkit-perspective: 1700px;
       -ms-perspective: 1700px;
-      -o-perspective: 1700px;
       perspective: 1700px;
       -webkit-perspective-origin: 50% 220px;
-      -moz-perspective-origin: 50% 220px;
       -ms-perspective-origin: 50% 220px;
-      -o-perspective-origin: 50% 220px;
       perspective-origin: 50% 220px;
     }
 
@@ -51,25 +45,19 @@
       height: 300px;
       width: 400px;
       -webkit-animation-play-state: paused;
-      -moz-animation-play-state: paused;
       -ms-animation-play-state: paused;
-      -o-animation-play-state: paused;
       animation-play-state: paused;
     }
     
     #shapel, #shapell {
       -webkit-animation: spinl 30s infinite linear;
-      -moz-animation: spinl 30s infinite linear;
       -ms-animation: spinl 30s infinite linear;
-      -o-animation: spinl 30s infinite linear;
       animation: spinl 30s infinite linear;
     }
 
     #shaper, #shaperr {
       -webkit-animation: spinr 30s infinite linear;
-      -moz-animation: spinr 30s infinite linear;
       -ms-animation: spinr 30s infinite linear;
-      -o-animation: spinr 30s infinite linear;
       animation: spinr 30s infinite linear;
     }
 
@@ -84,28 +72,30 @@
       background-color: gray;
       background-size:100% 100%;
       pointer-events: all;
-      -webkit-animation: fonty 3s infinite linear;
-      -moz-animation: fonty 3s infinite linear;
-      -ms-animation: fonty 3s infinite linear;
-      -o-animation: fonty 3s infinite linear;
-      animation: fonty 3s infinite linear;
+      -webkit-animation: fonty 2s infinite linear;
+      -ms-animation: fonty 2s infinite linear;
+      animation: fonty 2s infinite linear;
       /*-webkit-backface-visibility: hidden;
-      -moz-backface-visibility: hidden;
       -ms-backface-visibility: hidden;
-      -o-backface-visibility: hidden;
       backface-visibility: hidden;*/
+      -webkit-animation-direction:alternate;
+      -ms-animation-direction:alternate;
+      animation-direction:alternate;
     }
 
     @-webkit-keyframes fonty {
       0% { color: white }
-      50% { color: black }
-      100% { color: white }
+      100% { color: black }
     }
 
-    @-moz-keyframes fonty {
+    @-ms-keyframes fonty {
       0% { color: white }
-      50% { color: black }
-      100% { color: white }
+      100% { color: black }
+    }
+
+    @keyframes fonty {
+      0% { color: white }
+      100% { color: black }
     }
 
     @-webkit-keyframes spinl {
@@ -113,19 +103,9 @@
       to   { -webkit-transform: rotateY(360deg); }
     }
 
-    @-moz-keyframes spinl {
-      from { -moz-transform: rotateY(0); }
-      to   { -moz-transform: rotateY(360deg); }
-    }
-
     @-ms-keyframes spinl {
       from { -ms-transform: rotateY(0); }
       to   { -ms-transform: rotateY(360deg); }
-    }
-
-    @-o-keyframes spinl {
-      from { -o-transform: rotateY(0); }
-      to   { -o-transform: rotateY(360deg); }
     }
 
     @keyframes spinl {
@@ -138,19 +118,9 @@
       to   { -webkit-transform: rotateY(-360deg); }
     }
 
-    @-moz-keyframes spinr {
-      from { -moz-transform: rotateY(0); }
-      to   { -moz-transform: rotateY(-360deg); }
-    }
-
     @-ms-keyframes spinr {
       from { -ms-transform: rotateY(0); }
       to   { -ms-transform: rotateY(-360deg); }
-    }
-
-    @-o-keyframes spinr {
-      from { -o-transform: rotateY(0); }
-      to   { -o-transform: rotateY(-360deg); }
     }
 
     @keyframes spinr {
@@ -159,27 +129,94 @@
     }
 
 
-
-    .zoomer {
-      -webkit-animation: zoomin 2s 1 ease-in;
-      animation: zoomin 2s 1 ease-in;
-      -webkit-transform: scale(0.05);
-      transform: scale(0.05);
-      -webkit-animation-play-state: paused;
-      animation-play-state: paused;
+    .zoomerIn {
+      -webkit-animation: zoomIn 1.5s 1 ease-in;
+      -ms-animation: zoomIn 1.5s 1 ease-in;
+      animation: zoomIn 1.5s 1 ease-in;
+      -webkit-transform: scale(0.005);
+      -ms-transform: scale(0.005);
+      transform: scale(0.005);
       -webkit-animation-fill-mode: forwards;
+      -ms-animation-fill-mode: forwards;
       animation-fill-mode: forwards;
     }
 
-    @-webkit-keyframes zoomin {
-      from { -webkit-transform: scale(0.05) rotateX(180deg); }
+    @-webkit-keyframes zoomIn {
+      from { -webkit-transform: scale(0.005) rotateX(180deg); }
       to { -webkit-transform: scale(0.5) rotateX(0deg); }
     }
 
-    @keyframes zoomin {
-      from { transform: scale(0.05) rotateX(180deg); }
+    @-ms-keyframes zoomIn {
+      from { -ms-transform: scale(0.005) rotateX(180deg); }
+      to { -ms-transform: scale(0.5) rotateX(0deg); }
+    }
+
+    @keyframes zoomIn {
+      from { transform: scale(0.005) rotateX(180deg); }
       to { transform: scale(0.5) rotateX(0deg); }
     }
+
+    .zoomerOut {
+      -webkit-animation: zoomOut 1.5s 1 ease-in;
+      -ms-animation: zoomOut 1.5s 1 ease-in;
+      animation: zoomOut 1.5s 1 ease-in;
+      -webkit-transform: scale(0.5);
+      -ms-transform: scale(0.5);
+      transform: scale(0.5);
+      -webkit-animation-fill-mode: forwards;
+      -ms-animation-fill-mode: forwards;
+      animation-fill-mode: forwards;
+    }
+
+    @-webkit-keyframes zoomOut {
+      from { -webkit-transform: scale(0.5) rotateX(0deg); }
+      to { -webkit-transform: scale(0.005) rotateX(180deg); }
+    }
+
+    @-ms-keyframes zoomOut {
+      from { -ms-transform: scale(0.5) rotateX(0deg); }
+      to { -ms-transform: scale(0.005) rotateX(180deg); }
+    }
+
+    @keyframes zoomOut {
+      from { transform: scale(0.5) rotateX(0deg); }
+      to { transform: scale(0.005) rotateX(180deg); }
+    }
+
+    .zoomerOutIn {
+      -webkit-animation: zoomOutIn 3s infinite ease-in;
+      -ms-animation: zoomOutIn 3s infinite ease-in;
+      animation: zoomOutIn 3s infinite ease-in;
+      -webkit-transform: scale(0.5);
+      -ms-transform: scale(0.5);
+      transform: scale(0.5);
+
+      -webkit-animation-play-state: paused;
+      -ms-animation-play-state: paused;
+      animation-play-state: paused;
+
+      -webkit-animation-fill-mode: forwards;
+      -ms-animation-fill-mode: forwards;
+      animation-fill-mode: forwards;
+    }
+
+    @-webkit-keyframes zoomOutIn {
+      0% { -webkit-transform: scale(0.5) rotateX(0deg); }
+      50% { -webkit-transform: scale(0.005) rotateX(180deg); }
+      100% { -webkit-transform: scale(0.5) rotateX(0deg); }
+    }
+
+    @-ms-keyframes zoomOutIn {
+      0% { -ms-transform: scale(0.5) rotateX(0deg); }
+      50% { -ms-transform: scale(0.005) rotateX(180deg); }
+      100% { -ms-transform: scale(0.5) rotateX(0deg); }
+    }
+    @keyframes zoomOutIn {
+      0% { transform: scale(0.5) rotateX(0deg); }
+      50% { transform: scale(0.005) rotateX(180deg); }
+      100% { transform: scale(0.5) rotateX(0deg); }
+    }
+
 
 
     div.controls div {
@@ -215,30 +252,26 @@
         width: 10%;
     }
     div.zoomerControl {
-        left: 30%;
-        top: -12%;
-        width: 60px;
-        height: 100px;
-        display: block;
-        z-index: 100;
         position: absolute;
+        left: 25%;
+        top: 0%;
+        width: 50%;
+        height: 20%;
+        z-index: 100;
     }
-    div.zoomerControl > div {
-        background-color: green;
-        width: 100%;
-        height: 40px;
-        margin-bottom: 4px;
-    }
+
     #detailed {
+        position: absolute;
         left: 0;
         top: 0;
-        margin: auto;
-        width: 1200px;
-        height: 880px;
-        display: block;
+        width: 100%;
+        height: 100%;
         z-index: 110;
-        position: absolute;
         display: none;
+        background-color: rgba(0,0,0,0.8);
+        background-image: none;
+        background-repeat: no-repeat;
+        background-position: center;
     }
   </style>
 
@@ -256,7 +289,7 @@
 <body>
 
     <div id="container">
-        <div class="trd zoomer" id="zoomer">
+        <div class="trd zoomerOutIn" id="zoomer">
             <div class="stage trd">
                 <div id="shaperr" class="shape trd">
                     <div id="shapell" class="shape trd">
@@ -270,20 +303,21 @@
     </div>
 
      <div class="controls">
-         <div class="leftFast" onmouseover="adjustSpeed(1, 1, 0, 0, 0)"></div>
-         <div class="leftSlow" onmouseover="adjustSpeed(0, 1, 0, 0, 0)"></div>
-         <div class="middleStop1" onmouseover="adjustSpeed(0, 0, 0, 0, 1)"></div>
-         <div class="middleStop2" onmouseover="adjustSpeed(0, 0, 0, 0, 1)"></div>
-         <div class="rightSlow" onmouseover="adjustSpeed(0, 0, 1, 0, 0)"></div>
-         <div class="rightFast" onmouseover="adjustSpeed(0, 0, 1, 1, 1)"></div>
+         <div class="leftFast" onmouseover="adjustSpeed(event, 1, 1, 0, 0, 0)" ontouchstart="adjustSpeed(event, 1, 1, 0, 0, 0)"></div>
+         <div class="leftSlow" onmouseover="adjustSpeed(event, 0, 1, 0, 0, 0)" ontouchstart="adjustSpeed(event, 0, 1, 0, 0, 0)"></div>
+         <div class="middleStop1" onmouseover="adjustSpeed(event, 0, 0, 0, 0, 1)" ontouchstart="adjustSpeed(event, 0, 0, 0, 0, 1)"></div>
+         <div class="middleStop2" onmouseover="adjustSpeed(event, 0, 0, 0, 0, 1)" ontouchstart="adjustSpeed(event, 0, 0, 0, 0, 1)"></div>
+         <div class="rightSlow" onmouseover="adjustSpeed(event, 0, 0, 1, 0, 0)" ontouchstart="adjustSpeed(event, 0, 0, 1, 0, 0)"></div>
+         <div class="rightFast" onmouseover="adjustSpeed(event, 0, 0, 1, 1, 1)" ontouchstart="adjustSpeed(event, 0, 0, 1, 1, 1)"></div>
     </div>
 
 
     <div class="zoomerControl">
-<svg xmlns="http://www.w3.org/2000/svg" height="1050" width="744" font-weight="bold" font-size="28px" font-family="sans-serif" stroke-width="1">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="33 130 730 190" width="100%" height="100%" font-weight="bold" font-size="28px" font-family="sans-serif" stroke-width="1">
 <style>
     #java {
         fill: gold;
+        cursor: pointer;
     }
     #java:hover {
         fill: yellow;
@@ -291,6 +325,7 @@
     }
     #bali {
         fill: #b70000;
+        cursor: pointer;
     }
     #bali:hover {
         fill: red;
@@ -298,6 +333,7 @@
     }
     #lombok {
         fill: #20a500;
+        cursor: pointer;
     }
     #lombok:hover {
         fill: darkgreen;
@@ -305,13 +341,14 @@
     }
     #flores {
         fill: #2009e5;
+        cursor: pointer;
     }
     #flores:hover {
         stroke-width: 4px;
         fill: magenta;
     }
 </style>
-<g transform="scale(1.5)">
+<g transform="scale(1.5)" stroke="white">
 <g stroke-dashoffset="0" stroke="#a08070" stroke-miterlimit="4" stroke-dasharray="8, 4, 2, 4" stroke-width="2" fill="none">
 <path d="m298,198s13.8-26.1,15-31.3c1.23-5.17,7.86-27.2,8.62-29.3l1.51-4.29"></path>
 <path d="m391,227s-5.42-14.5-1.97-25.6,1.97-8.12,9.36-18.5c7.39-10.3,6.4-6.89,9.36-15.8,2.95-8.86,5.42-21.7,5.42-21.7"></path>
@@ -323,18 +360,18 @@
 </g>
 
 <g id="java" onclick="setImages('java')">
-<g stroke="#00809e">
+<g>
 <path d="m155,147-1.2-0.401-1.2-0.404-2-0.399-2.21-0.602-2.2-0.803-2.01-0.602-2,0-2.01-0.404-2.2,0.404-2.01-1.81-2.21-0.401-2-0.201-2.01,0.201-2.2,0.602-2.01-0.404-2-0.599-0.401-2.01-2.01,1.61-1.8,0.401-2.21,0.599-2-0.399-2.01,1.2-2,2.01-2.01-0.198-2.2-0.201-2.21-0.203-2.01-0.399-2-0.404-2.2-0.803-2.01,0-1.61-0.399-1.6-1.2-2.01-0.201-2.2-2.21-2.01-1.01-2-1-2.01-0.404-2.01-0.201-2.2,0-2.21-0.602-2-0.399-2.2,0-2.01-0.401-2.21,0-2-0.201-2.01-0.201-2-0.203-2.21,0-2.2-1.2-2-0.203-0.602-2.21,0.399-2,1.81-2.21,2-1.4,0-2.21-2-0.803-2.2,0.803-2.01-0.201-2-1.4-2.01-0.8-2.01-1.41-2.2-0.8-2-0.206-2.21,0.602-2.01,0.404-2.2-0.602-2,0.399-2.21,0.602-2.01-0.198-3.86,1.06-0.348-2.46-2,0.605-0.602-2.01,2.21-1,2-1.21,1,2.01,2,1.2,0.803-2.01,2.01-1.81,0.8-2.21,2.01-1.8,2-0.602,1.4-2.21,0-2.01,0.201-2.21,0.401-2.01,0.602-2.01,1.61-2.21,1.6-2.01,1.4-2,2,1,0.401,2.01,2.01,0.399,2-2.01,2.01,1.2,2.21,0.805,2,0.8,2.01-0.8,2.2,0,2,1.2,1,1.2,2.01,0.201,2.2-0.602,2.01-0.198,0.401-0.407,0-2.01,0.401-2,1.6,0.399,2.01,1.2,2.2-0.201,2.01-0.401,2.01,1.21,1.6,2.21,1.4,2,2,0.602,2.21,1.81,2,0.201,2.01-1,2.2,0.201,0.401,0.401,2.01,1,2.2,1.2,2.01,0.803,2.2-0.201,1.2-2.21,0.803,0.201,2,1,1.61,2.21,2,2,2.01,1.4,0.401,2.21,0.201,2.01,0.602,2.21,2.2,1.01,2.01,1.2,2-0.399,2.21,0.399,0.803,0.803,2.2-1.4,2.21,0.803,2,0.803,2.01,0.404,2.2,0.401,2.21-0.401,2-0.803,2.2,0,2.01,0.399,2.01,0.404,2,0.602,2.01,0.605,2.2,0.399,2.01,0.201,1.2-0.401,2-0.404,2.01-0.803,2.2,1.61,2.21,1.2,2-0.399,2.01-1,1.8-2.01,1-2,0-0.602,0.803-0.803,0.599-2.01,0.401-2.21,0.401-2.01,2.21-1.6,2.01-0.401,2-0.602,2.2,0.803,2.01,0.8,0.602,2.21,0.602,2.01,2,2,1,0.401,2.2,0,2.01,0.201,2-0.803,2.21-1,2.01,0.399,2,2.01,1,0.805,2,0.8,2.21,0.602,2.01-0.8,2,0.8,1.61,2.21,2,0.407,2.21-0.206,2-0.399,2.01-0.404,2.2,0,2.01,1.21,2.21-0.605-0.605,2.01,1,2.21-0.201,1.2,1.81,2-0.401,2.01,2-0.803,2.01,1,0.401,2.01-0.201,2.21-1.4,2.01,0,2,2.21,1.4,2,0.803,2.01,0.803,2.21,0.602,2,1.61,2,0.203,2.21,1.4,2.2-1.01,2.01-0.602,2-0.803,2.01,0.203,2.2,0.201,2.21,0.198,2-1,2.21,0,2.2-1.61,2.01,0,2.21,2,2,0.203,2.01,0.803,2.2,0.399,2.01,1.21,0.599,2.01-0.8,2.01,0,2.21-0.401,2.01-0.201,0.201-0.401,2.01-0.401,2.21-0.602,2.01-0.201,2,1.61,2.21,0,2.01,1.2,2.01,2.21,0.803,2.01,1.4-1.2,2.01-1.2,0-1.81-0.803-2.61,0,0.401-1.01-0.602-2.01-2.2-0.803-2.01,1.01-2-0.602-2.21,0.198-2.01-0.198-2.2-1.4-2-0.803-2.01-0.404-2.01-0.803-2.2-1.6-2.2-0.404-2.01-1.4-2.01-0.805-2-1.4-2.21-0.602-2,0.198-2.21,0.404-2,0.599-1.81,2.01-2.2-0.399-2.01,0.399-2,1-2.01,0-2-0.803-2.21-0.201-2.01-0.602-2-1-2.2,0.399-2.01-1-2,0-2.21-0.401-2.01,0.201-2-1.01-2.21-0.399-2,1.2-0.201,2-2.01-1.2-2.2-0.602-2.01,0.201-2.2-1-2-0.602-2.21,0.201-2.01,0.599-2.2-2-2,1.2-2.01-0.803-0.602-0.201-2.21-0.404-1.2-0.198-2.01,0-2.2-1-2.01-0.602-2-0.602-2.21-1-2.01-1.2-2-0.803-2.01-1.21-2-0.8-2.2-1.2"></path>
 <path d="m234,119-2,0.198-2.01,2.01-2.01,1.41,0,2.21,2.01,1.6,2.21,0.203,2,0.602,2.2,0.404,2.01,0.602,0.201-2.21,2.01,2.01,2-0.201,2.2,0.201,2.01,0.201,2.01-0.201,2,0,1.2-2.01,2-1,2.21,0,2.01,0.201,1.6-2.01,2.21-0.404,2-0.805,2.21-0.8-2.21-1.8-2.2-1.21-2.01,0-2.2,0.602-2.01-0.201-2.2,0.201-2.21,0.198-2.01,0-2-0.198-4.21,0-2,0.198-2.21-0.198-2.01-0.201-2.2,0.201-0.602,0.198"></path>
 </g>
-<g stroke-linejoin="miter" stroke-dashoffset="0" stroke="#a08070" stroke-miterlimit="4" stroke-dasharray="none" stroke-width="2" fill="none">
+<g stroke-linejoin="miter" stroke-dashoffset="0" stroke="#a08070" stroke-width="2" fill="none">
 <path d="m62.1,95.5s-2.61,8.44,1,9.84c3.62,1.41,4.02,2.81,5.83,1s2.41-8.88,2.41-8.88"></path>
 <path d="m64.5,106s-2.61,1.21-5.22,0.603c-2.61-0.603-5.42-1-4.62,3.01,0.804,4.02,1.81,5.02,1.21,7.43-0.603,2.41-1.13,4.4-1.13,4.4"></path>
 <path d="m121,117s-0.091,6.38-1.1,7.98c-1,1.61-12.4,4.03-3.62,9.64,2.21,1.41,1.81,5.48,1.81,5.48"></path>
 <path d="m155,146c3.2-4.43,5.79-7.09,8.25-6.59,2.46,0.492,1.23,1.97,5.17,4.43s5.42,0.246,6.15,3.69c0.739,3.45,0.492,7.18,0.492,7.18"></path>
 <path d="m180,155s-0.894-1.42,0.583-2.16c1.48-0.739,5.91-3.2,5.91-3.2s3.2-2.71,1.48-5.17-0.739,1.72-1.23-4.19c-0.492-5.91-0.492-7.39-0.492-7.39s0.246-3.2,3.69-2.22c3.45,0.985,2.95,1.23,4.68-0.739,1.72-1.97,2.46-1.48,2.71-6.4,0.246-4.92,3.08-8.32,3.08-8.32"></path>
 </g>
-<text transform="matrix(0.96947274,0.24519912,-0.24519912,0.96947274,0,0)" y="93" x="170" fill="black" stroke="none">JAVA</text>
+<text transform="matrix(0.96947274,0.24519912,-0.24519912,0.96947274,0,0)" y="93" x="170" fill="black" stroke-width="1">JAVA</text>
 </g>
 
 <g id="lombok" onclick="setImages('lombok')">
@@ -361,7 +398,7 @@
 
 
 
-    <img src="" id="detailed" width="1200" height="800" onclick="hideDetail()"/>
+    <div id="detailed" onclick="hideDetail()"/>
 
 
 
@@ -375,53 +412,72 @@
       var zoomer = document.getElementById('zoomer');
       var detailed = document.getElementById('detailed');
       var titles = document.getElementsByClassName('agfa');
+      var mode = "";
 
-      function adjustSpeed (a1, a2, a3, a4, a5) {
+      function adjustSpeed (evt, a1, a2, a3, a4, a5) {
+          if (evt.type == "touchstart") evt.preventDefault();
           for (var i = 0; i < titles.length; ++i) {
-              titles[i].style.webkitAnimationPlayState = state[a5];
-              titles[i].style.mozAnimationPlayState = state[a5];
-              titles[i].style.msAnimationPlayState = state[a5];
-              titles[i].style.oAnimationPlayState = state[a5];
-              titles[i].style.animationPlayState = state[a5];
+              stateSwitch(titles[i], state[a5]);
           }
-
-          rings[0].style.webkitAnimationPlayState = state[a1];
-          rings[0].style.mozAnimationPlayState = state[a1];
-          rings[0].style.msAnimationPlayState = state[a1];
-          rings[0].style.oAnimationPlayState = state[a1];
-          rings[0].style.animationPlayState = state[a1];
-
-          rings[1].style.webkitAnimationPlayState = state[a2];
-          rings[1].style.mozAnimationPlayState = state[a2];
-          rings[1].style.msAnimationPlayState = state[a2];
-          rings[1].style.oAnimationPlayState = state[a2];
-          rings[1].style.animationPlayState = state[a2];
-
-          rings[2].style.webkitAnimationPlayState = state[a3];
-          rings[2].style.mozAnimationPlayState = state[a3];
-          rings[2].style.msAnimationPlayState = state[a3];
-          rings[2].style.oAnimationPlayState = state[a3];
-          rings[2].style.animationPlayState = state[a3];
-
-          rings[3].style.webkitAnimationPlayState = state[a4];
-          rings[3].style.mozAnimationPlayState = state[a4];
-          rings[3].style.msAnimationPlayState = state[a4];
-          rings[3].style.oAnimationPlayState = state[a4];
-          rings[3].style.animationPlayState = state[a4];
+          stateSwitch(rings[0], state[a1]);
+          stateSwitch(rings[1], state[a2]);
+          stateSwitch(rings[2], state[a3]);
+          stateSwitch(rings[3], state[a4]);
      }
+
+      function stateSwitch(el, st) {
+          el.style.webkitAnimationPlayState = st;
+          el.style.mozAnimationPlayState = st;
+          el.style.msAnimationPlayState = st;
+          el.style.oAnimationPlayState = st;
+          el.style.animationPlayState = st;
+      }
 
       function showDetail (evt) {
           console.log(evt);
-          detailed.src = evt.target.getAttribute('detail');
+          detailed.style.backgroundImage = 'url(' + evt.target.getAttribute('detail') + ')';
           detailed.style.display = 'block';
       }
 
       function hideDetail () {
-          detailed.src = '';
+          detailed.style.backgroundImage = '';
           detailed.style.display = 'none';
       }
 
+
+      /*function setImages (source) {
+          if (source == mode) return;
+          if (!mode) {
+              zoomer.classList.add('zoomerIn');
+              setImagesReal (source);
+              mode = source;
+              return;
+          }
+          mode = source;
+
+          zoomer.classList.remove('zoomerIn');
+          window.setTimeout(function(){zoomer.classList.add('zoomerOut');}, 100); // necessary timeout
+          window.setTimeout(function(){
+              zoomer.classList.remove('zoomerOut');
+              setImagesReal (source);
+              window.setTimeout(function(){zoomer.classList.add('zoomerIn');}, 100); // necessary timeout
+          }, 1500); // necessary timeout
+
+          //zoomer.style.webkitAnimation = "zoomOutIn 3s 1 ease-in";
+          //zoomer.style.animation = "zoomOutIn 3s 1 ease-in";
+      }*/
+
       function setImages (source) {
+          if (source == mode) return;
+          mode = source;
+          zoomer.addEventListener("webkitAnimationIteration", function(evt){stateSwitch(zoomer, state[0])}, false);
+          zoomer.addEventListener("MSAnimationIteration", function(evt){stateSwitch(zoomer, state[0])}, false);
+          zoomer.addEventListener("animationiteration", function(evt){stateSwitch(zoomer, state[0])}, false);
+          window.setTimeout(function(){setImagesReal (source);}, 1500);
+          stateSwitch(zoomer, state[1]);
+      }
+
+      function setImagesReal (source) {
           while (rings[1].hasChildNodes()) {
               rings[1].removeChild(rings[1].firstChild);
           }
@@ -431,9 +487,7 @@
               poster.className = 'agfa';
               var transform = 'rotateY(' + (posterAngle * i) + 'deg) translateZ(1000px)';
               poster.style.webkitTransform = transform;
-              poster.style.mozTransform = transform;
               poster.style.msTransform = transform;
-              poster.style.oTransform = transform;
               poster.style.transform = transform;
               poster.style.backgroundImage = 'url(pics/' + source + '/'+ data[source][i].img + ')';
               poster.textContent = data[source][i].dsc;
@@ -442,10 +496,8 @@
               poster.addEventListener('click', showDetail, true);
           }
           titles = document.getElementsByClassName('agfa');
-
-          zoomer.style.webkitAnimationPlayState = 'running';
-          zoomer.style.animationPlayState = 'running';
       }
+
 
       var data = {
             'java':[
