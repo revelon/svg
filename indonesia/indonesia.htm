@@ -2,8 +2,7 @@
 <html lang="en">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <title>Indonesia Vacation of Marek and Jana Raida, September 2012</title>
-
+  <title>Indonesia Vacation of Marek and Jana Raida, September 2012, by marek.raida@gmail.com</title>
 
 
   <style type="text/css" media="screen">
@@ -24,7 +23,7 @@
 
     #container {
       width: 100%;
-      height: 700px;
+      height: 100%;
       -webkit-perspective: 1700px;
       -ms-perspective: 1700px;
       perspective: 1700px;
@@ -42,14 +41,12 @@
       position: relative;
       margin: auto;
       padding-top: 80px;
-      height: 300px;
-      width: 400px;
-      -webkit-animation-play-state: paused;
-      -ms-animation-play-state: paused;
-      animation-play-state: paused;
+      height: 150px;
+      width: 200px;
     }
     
     #shapel, #shapell {
+      display: block;
       -webkit-animation: spinl 30s infinite linear;
       -ms-animation: spinl 30s infinite linear;
       animation: spinl 30s infinite linear;
@@ -63,39 +60,19 @@
 
     .agfa {
       position: absolute;
-      height: 300px;
-      width: 400px;
-      border: 1px solid white;
+      height: 150px;
+      width: 200px;
+      border: 2px solid white;
       border-radius: 9px;
       text-align: center;
       color: white;
       background-color: gray;
       background-size:100% 100%;
       pointer-events: all;
-      -webkit-animation: fonty 2s infinite linear;
-      -ms-animation: fonty 2s infinite linear;
-      animation: fonty 2s infinite linear;
-      /*-webkit-backface-visibility: hidden;
-      -ms-backface-visibility: hidden;
-      backface-visibility: hidden;*/
+      cursor: pointer;
       -webkit-animation-direction:alternate;
       -ms-animation-direction:alternate;
       animation-direction:alternate;
-    }
-
-    @-webkit-keyframes fonty {
-      0% { color: white }
-      100% { color: black }
-    }
-
-    @-ms-keyframes fonty {
-      0% { color: white }
-      100% { color: black }
-    }
-
-    @keyframes fonty {
-      0% { color: white }
-      100% { color: black }
     }
 
     @-webkit-keyframes spinl {
@@ -143,85 +120,51 @@
 
     @-webkit-keyframes zoomIn {
       from { -webkit-transform: scale(0.005) rotateX(180deg); }
-      to { -webkit-transform: scale(0.5) rotateX(0deg); }
+      to { -webkit-transform: scale(1) rotateX(0deg); }
     }
 
     @-ms-keyframes zoomIn {
       from { -ms-transform: scale(0.005) rotateX(180deg); }
-      to { -ms-transform: scale(0.5) rotateX(0deg); }
+      to { -ms-transform: scale(1) rotateX(0deg); }
     }
 
     @keyframes zoomIn {
       from { transform: scale(0.005) rotateX(180deg); }
-      to { transform: scale(0.5) rotateX(0deg); }
+      to { transform: scale(1) rotateX(0deg); }
     }
+
 
     .zoomerOut {
       -webkit-animation: zoomOut 1.5s 1 ease-in;
       -ms-animation: zoomOut 1.5s 1 ease-in;
       animation: zoomOut 1.5s 1 ease-in;
-      -webkit-transform: scale(0.5);
-      -ms-transform: scale(0.5);
-      transform: scale(0.5);
+      -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+      transform: scale(1);
       -webkit-animation-fill-mode: forwards;
       -ms-animation-fill-mode: forwards;
       animation-fill-mode: forwards;
     }
 
     @-webkit-keyframes zoomOut {
-      from { -webkit-transform: scale(0.5) rotateX(0deg); }
+      from { -webkit-transform: scale(1) rotateX(0deg); }
       to { -webkit-transform: scale(0.005) rotateX(180deg); }
     }
 
     @-ms-keyframes zoomOut {
-      from { -ms-transform: scale(0.5) rotateX(0deg); }
+      from { -ms-transform: scale(1) rotateX(0deg); }
       to { -ms-transform: scale(0.005) rotateX(180deg); }
     }
 
     @keyframes zoomOut {
-      from { transform: scale(0.5) rotateX(0deg); }
+      from { transform: scale(1) rotateX(0deg); }
       to { transform: scale(0.005) rotateX(180deg); }
     }
-
-    .zoomerOutIn {
-      -webkit-animation: zoomOutIn 3s infinite ease-in;
-      -ms-animation: zoomOutIn 3s infinite ease-in;
-      animation: zoomOutIn 3s infinite ease-in;
-      -webkit-transform: scale(0.5);
-      -ms-transform: scale(0.5);
-      transform: scale(0.5);
-
-      -webkit-animation-play-state: paused;
-      -ms-animation-play-state: paused;
-      animation-play-state: paused;
-
-      -webkit-animation-fill-mode: forwards;
-      -ms-animation-fill-mode: forwards;
-      animation-fill-mode: forwards;
-    }
-
-    @-webkit-keyframes zoomOutIn {
-      0% { -webkit-transform: scale(0.5) rotateX(0deg); }
-      50% { -webkit-transform: scale(0.005) rotateX(180deg); }
-      100% { -webkit-transform: scale(0.5) rotateX(0deg); }
-    }
-
-    @-ms-keyframes zoomOutIn {
-      0% { -ms-transform: scale(0.5) rotateX(0deg); }
-      50% { -ms-transform: scale(0.005) rotateX(180deg); }
-      100% { -ms-transform: scale(0.5) rotateX(0deg); }
-    }
-    @keyframes zoomOutIn {
-      0% { transform: scale(0.5) rotateX(0deg); }
-      50% { transform: scale(0.005) rotateX(180deg); }
-      100% { transform: scale(0.5) rotateX(0deg); }
-    }
-
 
 
     div.controls div {
         position: absolute;
-        border: 1px solid gray;
+        /*border: 1px solid gray;*/
         height: 100%;
         top: 0;
         pointer-events: all;
@@ -229,50 +172,62 @@
   
     .leftFast {
         left: 0;
-        width: 10%;
+        width: 25%;
     }
     .leftSlow {
-        left: 10%;
-        width: 20%;
-    }
-    .middleStop1 {
-        left: 30%;
-        width: 5%;
-    }
-    .middleStop2 {
-        left: 65%;
-        width: 5%;
+        left: 25%;
+        width: 10%;
     }
     .rightSlow {
-        left: 70%;
-        width: 20%;
+        left: 65%;
+        width: 10%;
     }
     .rightFast {
-        left: 90%;
-        width: 10%;
+        left: 75%;
+        width: 25%;
     }
     div.zoomerControl {
         position: absolute;
         left: 25%;
         top: 0%;
         width: 50%;
-        height: 20%;
+        height: 28%;
         z-index: 100;
     }
 
     #detailed {
+        text-align: center;
+        color: white;
+        font-size: 25px;
         position: absolute;
         left: 0;
         top: 0;
         width: 100%;
         height: 100%;
         z-index: 110;
-        display: none;
         background-color: rgba(0,0,0,0.8);
         background-image: none;
         background-repeat: no-repeat;
         background-position: center;
+        -webkit-transition: -webkit-transform 1s ease 0.5s, opacity 1s ease 0.5s;
+        -ms-transition: -ms-transform 1s ease 0.5s, opacity 1s ease 0.5s;
+        transition: transform 1s ease 0.5s, opacity 1s ease 0.5s;
+        -webkit-transform: scale(2);
+        -ms-transform: scale(2);
+        transform: scale(2);
+        opacity: 0;
+        display: none;
+        border: none;
+        cursor: pointer;
     }
+
+    #detailed:focus {
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1);
+        opacity: 1;
+    }
+
   </style>
 
 
@@ -289,12 +244,12 @@
 <body>
 
     <div id="container">
-        <div class="trd zoomerOutIn" id="zoomer">
+        <div class="trd" id="zoomer">
             <div class="stage trd">
                 <div id="shaperr" class="shape trd">
                     <div id="shapell" class="shape trd">
                         <div id="shaper" class="shape trd">
-                            <div id="shapel" class="shape trd"></div>
+                            <div class="shape trd" id="shapel"></div>
                         </div>
                     </div>
                 </div>
@@ -303,12 +258,10 @@
     </div>
 
      <div class="controls">
-         <div class="leftFast" onmouseover="adjustSpeed(event, 1, 1, 0, 0, 0)" ontouchstart="adjustSpeed(event, 1, 1, 0, 0, 0)"></div>
-         <div class="leftSlow" onmouseover="adjustSpeed(event, 0, 1, 0, 0, 0)" ontouchstart="adjustSpeed(event, 0, 1, 0, 0, 0)"></div>
-         <div class="middleStop1" onmouseover="adjustSpeed(event, 0, 0, 0, 0, 1)" ontouchstart="adjustSpeed(event, 0, 0, 0, 0, 1)"></div>
-         <div class="middleStop2" onmouseover="adjustSpeed(event, 0, 0, 0, 0, 1)" ontouchstart="adjustSpeed(event, 0, 0, 0, 0, 1)"></div>
-         <div class="rightSlow" onmouseover="adjustSpeed(event, 0, 0, 1, 0, 0)" ontouchstart="adjustSpeed(event, 0, 0, 1, 0, 0)"></div>
-         <div class="rightFast" onmouseover="adjustSpeed(event, 0, 0, 1, 1, 1)" ontouchstart="adjustSpeed(event, 0, 0, 1, 1, 1)"></div>
+         <div class="leftFast" onmouseover="adjustSpeed(event, 1, 1, 0, 0)" ontouchstart="adjustSpeed(event, 1, 1, 0, 0)"></div>
+         <div class="leftSlow" onmouseover="adjustSpeed(event, 0, 1, 0, 0)" ontouchstart="adjustSpeed(event, 0, 1, 0, 0)"></div>
+         <div class="rightSlow" onmouseover="adjustSpeed(event, 0, 0, 1, 0)" ontouchstart="adjustSpeed(event, 0, 0, 1, 0)"></div>
+         <div class="rightFast" onmouseover="adjustSpeed(event, 0, 0, 1, 1)" ontouchstart="adjustSpeed(event, 0, 0, 1, 1)"></div>
     </div>
 
 
@@ -316,38 +269,72 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="33 130 730 190" width="100%" height="100%" font-weight="bold" font-size="28px" font-family="sans-serif" stroke-width="1">
 <style>
     #java {
-        fill: gold;
+        fill: url(#toJava);
         cursor: pointer;
     }
     #java:hover {
-        fill: yellow;
+        fill: url(#toJavaHi);
         stroke-width: 4px;
     }
     #bali {
-        fill: #b70000;
+        fill: url(#toBali);
         cursor: pointer;
     }
     #bali:hover {
-        fill: red;
+        fill: url(#toBaliHi);
         stroke-width: 4px;
     }
     #lombok {
-        fill: #20a500;
+        fill: url(#toLombok);
         cursor: pointer;
     }
     #lombok:hover {
-        fill: darkgreen;
+        fill: url(#toLombokHi);
         stroke-width: 4px;
     }
     #flores {
-        fill: #2009e5;
+        fill: url(#toFlores);
         cursor: pointer;
     }
     #flores:hover {
+        fill: url(#toFloresHi);
         stroke-width: 4px;
-        fill: magenta;
     }
 </style>
+
+<radialGradient id="toJava" gradientUnits="objectBoundingBox" cx="0.5" cy="0.5">
+<stop offset="0.3" stop-color="green"></stop>
+<stop offset="1" stop-color="white"></stop>
+</radialGradient>
+<radialGradient id="toJavaHi" gradientUnits="objectBoundingBox" cx="0.5" cy="0.5">
+<stop offset="0.3" stop-color="white"></stop>
+<stop offset="1" stop-color="green"></stop>
+</radialGradient>
+<radialGradient id="toBali" gradientUnits="objectBoundingBox" cx="0.5" cy="0.5">
+<stop offset="0.3" stop-color="red"></stop>
+<stop offset="1" stop-color="white"></stop>
+</radialGradient>
+<radialGradient id="toBaliHi" gradientUnits="objectBoundingBox" cx="0.5" cy="0.5">
+<stop offset="0.3" stop-color="white"></stop>
+<stop offset="1" stop-color="red"></stop>
+</radialGradient>
+<radialGradient id="toLombok" gradientUnits="objectBoundingBox" cx="0.5" cy="0.5">
+<stop offset="0.2" stop-color="gold"></stop>
+<stop offset="1" stop-color="white"></stop>
+</radialGradient>
+<radialGradient id="toLombokHi" gradientUnits="objectBoundingBox" cx="0.5" cy="0.5">
+<stop offset="0.5" stop-color="white"></stop>
+<stop offset="0.7" stop-color="gold"></stop>
+</radialGradient>
+<radialGradient id="toFlores" gradientUnits="objectBoundingBox" cx="0.5" cy="0.5">
+<stop offset="0.3" stop-color="blue"></stop>
+<stop offset="1" stop-color="white"></stop>
+</radialGradient>
+<radialGradient id="toFloresHi" gradientUnits="objectBoundingBox" cx="0.5" cy="0.5">
+<stop offset="0.3" stop-color="white"></stop>
+<stop offset="1" stop-color="blue"></stop>
+</radialGradient>
+
 <g transform="scale(1.5)" stroke="white">
 <g stroke-dashoffset="0" stroke="#a08070" stroke-miterlimit="4" stroke-dasharray="8, 4, 2, 4" stroke-width="2" fill="none">
 <path d="m298,198s13.8-26.1,15-31.3c1.23-5.17,7.86-27.2,8.62-29.3l1.51-4.29"></path>
@@ -375,20 +362,20 @@
 </g>
 
 <g id="lombok" onclick="setImages('lombok')">
-<path d="m327,156-2.21,1-2,2.01-2.01,1.61-1.81,2.21,1.2,4.41-0.401,2.01-2.2,1.2-2.01,0.608-2.2-0.404,0.401,2,2,1.01,2.21,1.4,2-1.2,2.21,0.401,2,0.803,2.01,0,2.2,1.4,0.803-2.01,2.01,0.602,2-0.201-1.6-2.01,1.4-2.01,1-2.21,1.2-2.01,0.803-2.21,0.8-2.01,1-2-1.61-2.01-2-0.803-2.01-0.602-2.2-1-2.21-0.404-0.8,0.407" stroke="#00809e"></path>
-<text transform="matrix(0.98938175,-0.1453401,0.1453401,0.98938175,0,0)" y="246" x="232" stroke="black" stroke-width="1">LOMBOK</text>
+<path d="m327,156-2.21,1-2,2.01-2.01,1.61-1.81,2.21,1.2,4.41-0.401,2.01-2.2,1.2-2.01,0.608-2.2-0.404,0.401,2,2,1.01,2.21,1.4,2-1.2,2.21,0.401,2,0.803,2.01,0,2.2,1.4,0.803-2.01,2.01,0.602,2-0.201-1.6-2.01,1.4-2.01,1-2.21,1.2-2.01,0.803-2.21,0.8-2.01,1-2-1.61-2.01-2-0.803-2.01-0.602-2.2-1-2.21-0.404-0.8,0.407"></path>
+<text transform="matrix(0.98938175,-0.1453401,0.1453401,0.98938175,0,0)" y="246" x="232" stroke-width="1">LOMBOK</text>
 </g>
 
-<g id="flores" stroke="#00809e" onclick="setImages('flores')">
+<g id="flores" onclick="setImages('flores')">
 <path d="m427,172,0.602,0,2.21-0.605,2.01-0.401,2,1.4,2.2,0,2.01-0.602,2.01,0,2.2-0.404,2,1.21,2.21,0.803,2.01-1.21,2.01,0.805,1.6,2.01,2.21,0.602,2.01-0.201,2.21-1,2.01-0.198,2.2,0.803,2.01-1.21,1.61-2.01,2.2,0.399,2.01,0.203,2,1.2,2.21,0.404,2.01-0.404,2-1.2,2.01-0.401,2.01-0.605,2.21-1.6,2.01,0,2.2,0.401,2.01,0,2-0.203,2.2-0.602,1.41-0.998,2-0.803,2.01-0.605,2.01-0.401,2.2-0.803-0.602-2.01-0.203-2.01,2.21-0.803,0.605-2.01,2.2-0.198,0.201-2.01-1-2.01-1.4-2.21-2.21-0.8-1.8,2.01,0,2.21,2.01-1,2.01,0.803-2.01,2.01-2.2,1.61-2.01,0.602-2.01,0.201-2,2.01-1,2-1.4,2.01-2.01,0.195-2.2,0.605-2.21-0.198-2.01-1.81-2.01-1.2-1.6-0.203,0.198-2.21-2.2,0.602-2.01,1.21-2.01,0.195-2.2-0.195-2.01-0.201-2,1.2-2.01,1.81-2.2-0.407-2-0.998-1.61-2.01-2.21-0.8-2-0.407-2.01-0.599-2.21-1.81-2,0-2.21-0.401-2.01,0.201-2-1.21-2.2-0.605-2.01-0.399-2,0.198-2.01,0.404-2-0.203-2.21,0.605-2,2.01-2.01,0.605-2.2,1.61-1.6,0.195-2.01-0.602,0.198,2.01-2,2.21,0,4.02,1.4,2.01,2,2.01,2-1.6"></path>
 <path d="m412,161,2.2,1.4,1.4,2.21-2.21,0.407-0.8,2.01-0.602,2-2.01,0.602,0.803-2.21-0.803-2,1.01-2.21,0.602-2,0.401-0.206m4.81,4.62,2.21,1.8,2-1.2-2,2.21,0.198,2-2.01,0,0.404-2-0.803-2.01,0-0.8"></path>
-<text transform="matrix(0.99709349,0.0761877,-0.0761877,0.99709349,0,0)" y="118" x="384" stroke="black" stroke-width="1">FLORES</text>
+<text transform="matrix(0.99709349,0.0761877,-0.0761877,0.99709349,0,0)" y="118" x="384" stroke-width="1">FLORES</text>
 </g>
 
-<g id="bali" stroke="#00809e" onclick="setImages('bali')">
+<g id="bali" onclick="setImages('bali')">
 <path d="m276,152,1.61,1.2,2.01-0.201,2.2,0.404,2.01,0.803,2,0.599,2.2-0.198,2.21,0,2.01-1.4,2-1.8,2.21,0,2,0.803,2.21,0.8,2,0.803,2.21,1.21,1.8,2,2.01,1.81,0.803,2.01-2.01,2-2,0.803-2.01,1.4-2.21,0.602-2,1.01-1.61,2.21-0.803,2-1.2,2.01-0.602,0.198-2.01-0.198,0.401-1.21,1.61-2.01-1.2-2.01-2-2.21-2.01-1.81-2.2-1.4-2.01-0.805-2.2-0.803-2.01-0.198-2.2-0.198-1.81-2.21-1.4-2.01-0.599-2.01,0.599-2.01"></path>
 <path d="m307,172-2-1.01-0.602-2,2-0.805,1.4,2.21-0.803,1.61"></path>
-<text transform="matrix(0.96299159,0.26953144,-0.26953144,0.96299159,0,0)" y="61" x="297" stroke="black" stroke-width="1">BALI</text>
+<text transform="matrix(0.96299159,0.26953144,-0.26953144,0.96299159,0,0)" y="61" x="297" stroke-width="1">BALI</text>
 </g>
 </g>
 </svg>
@@ -398,8 +385,7 @@
 
 
 
-    <div id="detailed" onclick="hideDetail()"/>
-
+    <textarea id="detailed" onclick="hideDetail()" readonly></textarea>
 
 
 
@@ -408,17 +394,13 @@
 
 <script>
       var rings = [document.getElementById('shapell'), document.getElementById('shapel'), document.getElementById('shaper'), document.getElementById('shaperr')];
-      var state = ['paused', 'running'];
       var zoomer = document.getElementById('zoomer');
       var detailed = document.getElementById('detailed');
-      var titles = document.getElementsByClassName('agfa');
       var mode = "";
 
-      function adjustSpeed (evt, a1, a2, a3, a4, a5) {
+      function adjustSpeed (evt, a1, a2, a3, a4) {
+          var state = ['paused', 'running'];
           if (evt.type == "touchstart") evt.preventDefault();
-          for (var i = 0; i < titles.length; ++i) {
-              stateSwitch(titles[i], state[a5]);
-          }
           stateSwitch(rings[0], state[a1]);
           stateSwitch(rings[1], state[a2]);
           stateSwitch(rings[2], state[a3]);
@@ -434,18 +416,21 @@
       }
 
       function showDetail (evt) {
-          console.log(evt);
           detailed.style.backgroundImage = 'url(' + evt.target.getAttribute('detail') + ')';
+          detailed.textContent = evt.target.getAttribute('dsc');
           detailed.style.display = 'block';
+          detailed.focus();
       }
 
       function hideDetail () {
-          detailed.style.backgroundImage = '';
-          detailed.style.display = 'none';
+          detailed.blur();
+          window.setTimeout(function() {
+              detailed.style.backgroundImage = '';
+              detailed.style.display = 'none';
+          }, 1000);
       }
 
-
-      /*function setImages (source) {
+      function setImages (source) {
           if (source == mode) return;
           if (!mode) {
               zoomer.classList.add('zoomerIn');
@@ -456,117 +441,112 @@
           mode = source;
 
           zoomer.classList.remove('zoomerIn');
-          window.setTimeout(function(){zoomer.classList.add('zoomerOut');}, 100); // necessary timeout
+          window.setTimeout(function(){zoomer.classList.add('zoomerOut');}, 0); // necessary timeout workaround
           window.setTimeout(function(){
+              zoomer.style.display = 'none'; 
               zoomer.classList.remove('zoomerOut');
               setImagesReal (source);
-              window.setTimeout(function(){zoomer.classList.add('zoomerIn');}, 100); // necessary timeout
+              window.setTimeout(function(){zoomer.classList.add('zoomerIn'); zoomer.style.display = 'block';}, 0); // necessary timeout workaround
           }, 1500); // necessary timeout
+      }
 
-          //zoomer.style.webkitAnimation = "zoomOutIn 3s 1 ease-in";
-          //zoomer.style.animation = "zoomOutIn 3s 1 ease-in";
-      }*/
-
-      function setImages (source) {
-          if (source == mode) return;
-          mode = source;
-          zoomer.addEventListener("webkitAnimationIteration", function(evt){stateSwitch(zoomer, state[0])}, false);
-          zoomer.addEventListener("MSAnimationIteration", function(evt){stateSwitch(zoomer, state[0])}, false);
-          zoomer.addEventListener("animationiteration", function(evt){stateSwitch(zoomer, state[0])}, false);
-          window.setTimeout(function(){setImagesReal (source);}, 1500);
-          stateSwitch(zoomer, state[1]);
+      // to be at least partially responsive
+      function getZoomImageSize () {
+          if (window.innerWidth > 1300) return 1200;
+          if (window.innerWidth > 1000) return 1024;
+          return 600;
       }
 
       function setImagesReal (source) {
           while (rings[1].hasChildNodes()) {
               rings[1].removeChild(rings[1].firstChild);
           }
+          var detailSize = getZoomImageSize();
           var posterAngle = 360 / 15;
           for (var i = 0; i < 15; i ++) {
               var poster = document.createElement('div');
               poster.className = 'agfa';
-              var transform = 'rotateY(' + (posterAngle * i) + 'deg) translateZ(1000px)';
+              var transform = 'rotateY(' + (posterAngle * i) + 'deg) translateZ(500px)';
               poster.style.webkitTransform = transform;
               poster.style.msTransform = transform;
               poster.style.transform = transform;
               poster.style.backgroundImage = 'url(pics/' + source + '/'+ data[source][i].img + ')';
-              poster.textContent = data[source][i].dsc;
               rings[1].appendChild(poster);
-              poster.setAttribute('detail', data[source][i].pcs + '/s1200/' + data[source][i].img)
+              poster.setAttribute('detail', data[source][i].pcs + '/s' + detailSize + '/' + data[source][i].img);
+              poster.setAttribute('dsc', data[source][i].dsc);
               poster.addEventListener('click', showDetail, true);
           }
-          titles = document.getElementsByClassName('agfa');
       }
 
 
       var data = {
             'java':[
-{'img':'IMG_6478.JPG', 'dsc':'Pretty dancer of Ramayana performance', 'pcs':'https://lh3.googleusercontent.com/-Czy6ALJruds/UI0v-ARNToI/AAAAAAAADOk/WnldDAmxzbQ'},
-{'img':'IMG_6842.JPG', 'dsc':'Playful children near temple Mendut', 'pcs':'https://lh4.googleusercontent.com/-yQROodor9O8/UI0wDrIIusI/AAAAAAAADPU/0dM8XdsTSVA'},
+{'img':'IMG_6478.JPG', 'dsc':'Pretty dancer of Ramayana performance in Prambanan', 'pcs':'https://lh3.googleusercontent.com/-Czy6ALJruds/UI0v-ARNToI/AAAAAAAADOk/WnldDAmxzbQ'},
+{'img':'IMG_6842.JPG', 'dsc':'Playful children near temple Mendut, north of Yogyakarta', 'pcs':'https://lh4.googleusercontent.com/-yQROodor9O8/UI0wDrIIusI/AAAAAAAADPU/0dM8XdsTSVA'},
 {'img':'IMG_6919.JPG', 'dsc':'View from magnificent Borobudur buddhist temple', 'pcs':'https://lh6.googleusercontent.com/-7arEi_QBW_g/UI0wJDyoLII/AAAAAAAADQA/IPDxd-FKNPo'},
 {'img':'IMG_7348.JPG', 'dsc':'Noisy and smelly crater on Dieng plateau', 'pcs':'https://lh6.googleusercontent.com/-LN13ifpyx7Y/UI0wjeXT8nI/AAAAAAAADTg/XTWbF45TtzY'},
-{'img':'IMG_7388.JPG', 'dsc':'Cascading potato fields near Dieng', 'pcs':'https://lh6.googleusercontent.com/-D2Mof1q6jQQ/UI0wneHT8MI/AAAAAAAADUA/FjbtQo6wMy0'},
-{'img':'IMG_7519.JPG', 'dsc':'Very photogenic hindu Prambanan temples', 'pcs':'https://lh4.googleusercontent.com/-A6J5nJwu8to/UI0wr0Krm2I/AAAAAAAADUo/n_FrGj2ypDA'},
-{'img':'IMG_7673.JPG', 'dsc':'Ruins of temple Sewu, northern Prambanan', 'pcs':'https://lh3.googleusercontent.com/-TiF498HCJmA/UI0wyaS4czI/AAAAAAAADVg/e_G3uk_m_wA'},
-{'img':'IMG_8294.JPG', 'dsc':'Indonesia\'s highest mountain Gunung Semeru (3676 m)', 'pcs':'https://lh5.googleusercontent.com/-0SuZqrJUp8k/UI0xNZoyO5I/AAAAAAAADZU/MOvQ8Jt40M0'},
-{'img':'IMG_8386.JPG', 'dsc':'Walk on the rim of the morning\'s Bromo vulcano', 'pcs':'https://lh6.googleusercontent.com/-A0VB_MVyUwE/UI0xUIPUHDI/AAAAAAAADaU/E24ICPMsR6g'},
-{'img':'IMG_8676.JPG', 'dsc':'Kawah Ijen crater where sulfur is actively (and manually) mined', 'pcs':'https://lh4.googleusercontent.com/-BFGGsF3RAXY/UI0xiNA6bdI/AAAAAAAADcQ/yw7sHpA0HmE'},
-{'img':'IMG_8905.JPG', 'dsc':'Beautiful (and well protected) turtle beach', 'pcs':'https://lh6.googleusercontent.com/-z_VBOyVmkTQ/UI0xzUhHfkI/AAAAAAAADek/aX2RWS8UZxM'},
-{'img':'IMG_9083.JPG', 'dsc':'Pair of monkeys in  vehement dialogue', 'pcs':'https://lh5.googleusercontent.com/-4QibMrfIbwg/UI0yAVHaNMI/AAAAAAAADgU/ABYBNGavzr4'},
+{'img':'IMG_7388.JPG', 'dsc':'Cascading potato fields near Dieng, central Java', 'pcs':'https://lh6.googleusercontent.com/-D2Mof1q6jQQ/UI0wneHT8MI/AAAAAAAADUA/FjbtQo6wMy0'},
+{'img':'IMG_7519.JPG', 'dsc':'Very photogenic cluster of hindu Prambanan temples', 'pcs':'https://lh4.googleusercontent.com/-A6J5nJwu8to/UI0wr0Krm2I/AAAAAAAADUo/n_FrGj2ypDA'},
+{'img':'IMG_7673.JPG', 'dsc':'Ruins of temple Sewu, northern part of Prambanan', 'pcs':'https://lh3.googleusercontent.com/-TiF498HCJmA/UI0wyaS4czI/AAAAAAAADVg/e_G3uk_m_wA'},
+{'img':'IMG_8294.JPG', 'dsc':"Indonesia's highest mountain Gunung Semeru (3676 m)", 'pcs':'https://lh5.googleusercontent.com/-0SuZqrJUp8k/UI0xNZoyO5I/AAAAAAAADZU/MOvQ8Jt40M0'},
+{'img':'IMG_8386.JPG', 'dsc':"Walk on the rim of the morning's Bromo vulcano", 'pcs':'https://lh6.googleusercontent.com/-A0VB_MVyUwE/UI0xUIPUHDI/AAAAAAAADaU/E24ICPMsR6g'},
+{'img':'IMG_8676.JPG', 'dsc':'Kawah Ijen crater, where sulfur is actively (and manually) mined', 'pcs':'https://lh4.googleusercontent.com/-BFGGsF3RAXY/UI0xiNA6bdI/AAAAAAAADcQ/yw7sHpA0HmE'},
+{'img':'IMG_8905.JPG', 'dsc':'Beautiful (and well protected) turtle beach, eastern Java', 'pcs':'https://lh6.googleusercontent.com/-z_VBOyVmkTQ/UI0xzUhHfkI/AAAAAAAADek/aX2RWS8UZxM'},
+{'img':'IMG_9083.JPG', 'dsc':'Pair of monkeys in quite vehement dialogue', 'pcs':'https://lh5.googleusercontent.com/-4QibMrfIbwg/UI0yAVHaNMI/AAAAAAAADgU/ABYBNGavzr4'},
 {'img':'IMG_9355.JPG', 'dsc':'Ranger climbing on the palm tree in hunt for coconuts', 'pcs':'https://lh3.googleusercontent.com/-3lGKCZ0C9jc/UI0yWyPuETI/AAAAAAAADjI/vrYAl11nCZo'},
-{'img':'IMG_9467.JPG', 'dsc':'Warm morning on Sukamade beach', 'pcs':'https://lh6.googleusercontent.com/-P3x5lItg9jw/UI0ygEM0AfI/AAAAAAAADkU/9HBmF8zeg7k'},
-{'img':'IMG_9711.JPG', 'dsc':'Six hundred years old ficus tree', 'pcs':'https://lh3.googleusercontent.com/-cGUm4FrTmME/UI0yr0NK9nI/AAAAAAAADl8/0acMCNXodro'}
+{'img':'IMG_9467.JPG', 'dsc':'Warm morning walk on Sukamade beach', 'pcs':'https://lh6.googleusercontent.com/-P3x5lItg9jw/UI0ygEM0AfI/AAAAAAAADkU/9HBmF8zeg7k'},
+{'img':'IMG_9711.JPG', 'dsc':'Six hundred years old ficus tree in the jungle', 'pcs':'https://lh3.googleusercontent.com/-cGUm4FrTmME/UI0yr0NK9nI/AAAAAAAADl8/0acMCNXodro'}
             ],
             'bali':[
 {'img':'IMG_9966.JPG', 'dsc':'Water temple of Pura Ulun Danu Bratan', 'pcs':'https://lh6.googleusercontent.com/-80nVo4JZRC4/UI0zHXnH-MI/AAAAAAAADpA/n6aw9TlkoZA'},
-{'img':'KIMG_0040.JPG', 'dsc':'Charming building of temple by Bratan lake', 'pcs':'https://lh6.googleusercontent.com/-Y0wDy1B3v-o/UI0zRXJLH2I/AAAAAAAADqA/T-LTLGK1K7k'},
+{'img':'KIMG_0040.JPG', 'dsc':'Charming building of water temple by Bratan lake', 'pcs':'https://lh6.googleusercontent.com/-Y0wDy1B3v-o/UI0zRXJLH2I/AAAAAAAADqA/T-LTLGK1K7k'},
 {'img':'KIMG_0260.JPG', 'dsc':'The only-lonely but very peaceful buddhist temple on Bali', 'pcs':'https://lh4.googleusercontent.com/-WU6D3eQnUmY/UI0zoCpyQ8I/AAAAAAAADsg/PEWjEIURBFM'},
 {'img':'KIMG_0287.JPG', 'dsc':'Photogenic sunset on northern coast of Bali, Lovina', 'pcs':'https://lh3.googleusercontent.com/--j1bgUiUz9Q/UI0zr5Ruv0I/AAAAAAAADtE/sGw9lkOsahM'},
 {'img':'KIMG_0535.JPG', 'dsc':'Beautiful greenery of Jatiluwih rice field terraces', 'pcs':'https://lh4.googleusercontent.com/-3xsXCPy_hJI/UI0z-HXKWeI/AAAAAAAADvM/UURkghatrY4'},
-{'img':'KIMG_0737.JPG', 'dsc':'Pair of eyes-bulging dancers of Barong epos', 'pcs':'https://lh3.googleusercontent.com/-azdLREs8pQQ/UI00IHQNyYI/AAAAAAAADwQ/A0Rf58by-sg'},
-{'img':'KIMG_1120.JPG', 'dsc':'Bali\s biggest hindu temple, Pura Besakih', 'pcs':'https://lh6.googleusercontent.com/-3QwCtZTKmqk/UI001E6smoI/AAAAAAAAD1E/Lnp_y8hE18I'},
-{'img':'KIMG_1173.JPG', 'dsc':'Lake Danau Batur in the central mountains', 'pcs':'https://lh6.googleusercontent.com/-10EU2-zZcgo/UI005lnW_LI/AAAAAAAAD1k/jGi8Ggj9zlY'},
-{'img':'KIMG_1352.JPG', 'dsc':'Elder peasant in the field near Ubud', 'pcs':'https://lh6.googleusercontent.com/-9-GilPI0cGg/UI01SRw7NpI/AAAAAAAAD4c/fi6ylBuHFyw'},
+{'img':'KIMG_0737.JPG', 'dsc':'Pair of eyes-bulging dancers of Barong epos, Ubud', 'pcs':'https://lh3.googleusercontent.com/-azdLREs8pQQ/UI00IHQNyYI/AAAAAAAADwQ/A0Rf58by-sg'},
+{'img':'KIMG_1120.JPG', 'dsc':"Bali's biggest hindu temple, Pura Besakih", 'pcs':'https://lh6.googleusercontent.com/-3QwCtZTKmqk/UI001E6smoI/AAAAAAAAD1E/Lnp_y8hE18I'},
+{'img':'KIMG_1173.JPG', 'dsc':"Lake Danau Batur in the Bali's central mountains", 'pcs':'https://lh6.googleusercontent.com/-10EU2-zZcgo/UI005lnW_LI/AAAAAAAAD1k/jGi8Ggj9zlY'},
+{'img':'KIMG_1352.JPG', 'dsc':'Elder peasant in the field near Ubud town', 'pcs':'https://lh6.googleusercontent.com/-9-GilPI0cGg/UI01SRw7NpI/AAAAAAAAD4c/fi6ylBuHFyw'},
 {'img':'KIMG_1510.JPG', 'dsc':'Balinesse wedding dresses are very colorful and pretty', 'pcs':'https://lh4.googleusercontent.com/-n3Nvv_Xro5g/UI01nI4C8lI/AAAAAAAAD68/2NLJXBv3SQ8'},
 {'img':'KIMG_1615.JPG', 'dsc':'Monkey thief is savouring its precious coca-cola theft', 'pcs':'https://lh3.googleusercontent.com/-pd8Sv-0c6Ew/UI01t-T62eI/AAAAAAAAD7w/ULiYQLm_7so'},
 {'img':'KIMG_1853.JPG', 'dsc':'Happy macaque family in Sacred Monkey Forrest', 'pcs':'https://lh3.googleusercontent.com/-izCfLskNM6o/UI02A68OGSI/AAAAAAAAD-E/dZJ591-n0dU'},
 {'img':'KIMG_2149.JPG', 'dsc':'Golf course on the eastern coast of Bali', 'pcs':'https://lh4.googleusercontent.com/-K0PfmNJ6rxg/UJQEF0XocmI/AAAAAAAAEks/-qts0zVqGFg'},
 {'img':'KIMG_2157.JPG', 'dsc':'Famous water temple of Tanah Lot', 'pcs':'https://lh4.googleusercontent.com/-SEGZcmTitHI/UI02np4sm6I/AAAAAAAAEC4/FBME0hkbZtY'},
-{'img':'KIMG_2276.JPG', 'dsc':'Offerings to gods on every engine of speedboat', 'pcs':'https://lh6.googleusercontent.com/-DbzKpAf20dQ/UI02vbovYuI/AAAAAAAAED8/ZasU0iTgc2I'}
+{'img':'KIMG_2276.JPG', 'dsc':'Offerings to Gods on every engine of speedboat', 'pcs':'https://lh6.googleusercontent.com/-DbzKpAf20dQ/UI02vbovYuI/AAAAAAAAED8/ZasU0iTgc2I'}
             ],
             'lombok':[
-{'img':'KIMG_2387.JPG', 'dsc':'Only engineless transportation on Gili Meno island', 'pcs':'https://lh4.googleusercontent.com/-wEotxz1_38I/UI02zxwjFjI/AAAAAAAAEEk/MCouWyOgEHY'},
-{'img':'KIMG_2387_IMG_0102.JPG', 'dsc':'Encounter with the wild turle during snorchling', 'pcs':'https://lh5.googleusercontent.com/-aYGmkm88Dss/UI020ntNguI/AAAAAAAAEEs/kkJHxvJfJhY'},
-{'img':'KIMG_2387_IMG_0212.JPG', 'dsc':'Banquet on the beach, if you like', 'pcs':'https://lh4.googleusercontent.com/-jrEH-RlSeTI/UI0263c3yfI/AAAAAAAAEFY/ExIoQjXA8YQ'},
-{'img':'KIMG_2426.JPG', 'dsc':'Hotel on the beach natural decoration', 'pcs':'https://lh6.googleusercontent.com/-RpdoypFC8FE/UI03ElxSm9I/AAAAAAAAEGk/XwgosYvEYo8'},
+{'img':'KIMG_2387.JPG', 'dsc':'Only engineless transportation is allowed on Gili Meno island', 'pcs':'https://lh4.googleusercontent.com/-wEotxz1_38I/UI02zxwjFjI/AAAAAAAAEEk/MCouWyOgEHY'},
+{'img':'KIMG_2387_IMG_0102.JPG', 'dsc':'Encounter with the wild turle during snorchling, Gili Meno', 'pcs':'https://lh5.googleusercontent.com/-aYGmkm88Dss/UI020ntNguI/AAAAAAAAEEs/kkJHxvJfJhY'},
+{'img':'KIMG_2387_IMG_0212.JPG', 'dsc':'Banquet on the beach, if you would like', 'pcs':'https://lh4.googleusercontent.com/-jrEH-RlSeTI/UI0263c3yfI/AAAAAAAAEFY/ExIoQjXA8YQ'},
+{'img':'KIMG_2426.JPG', 'dsc':"Hotel on the beach and it's pretty natural decoration", 'pcs':'https://lh6.googleusercontent.com/-RpdoypFC8FE/UI03ElxSm9I/AAAAAAAAEGk/XwgosYvEYo8'},
 {'img':'KIMG_2444.JPG', 'dsc':'Fisherman boats are too narow for our european asses', 'pcs':'https://lh6.googleusercontent.com/-hnc5w8eFLig/UI03FS3rXbI/AAAAAAAAEGo/to5C2GQ_vfw'},
-{'img':'KIMG_2601.JPG', 'dsc':'Nice and very big trees in jungle near Senaru village', 'pcs':'https://lh4.googleusercontent.com/-yCB3cw5egJg/UI03S_qDTPI/AAAAAAAAEIM/oCsD9xvTEjI'},
+{'img':'KIMG_2601.JPG', 'dsc':'Nice and very big trees in jungle near Senaru village, Lombok', 'pcs':'https://lh4.googleusercontent.com/-yCB3cw5egJg/UI03S_qDTPI/AAAAAAAAEIM/oCsD9xvTEjI'},
 {'img':'KIMG_2645.JPG', 'dsc':'On the beginning of three day lasting trek to Gunung Rinjani', 'pcs':'https://lh4.googleusercontent.com/-76O6zYOgc4I/UI03YoQoZgI/AAAAAAAAEI8/T_vhlD3lZC4'},
-{'img':'KIMG_2760.JPG', 'dsc':'Staying overnigh on the rim of Rinjani\'s caldera', 'pcs':'https://lh5.googleusercontent.com/-YzkYbQLPV8M/UI03cvx1keI/AAAAAAAAEJc/iMNGliTsSmI'},
+{'img':'KIMG_2760.JPG', 'dsc':"Staying overnight on the rim of Rinjani's caldera", 'pcs':'https://lh5.googleusercontent.com/-YzkYbQLPV8M/UI03cvx1keI/AAAAAAAAEJc/iMNGliTsSmI'},
 {'img':'KIMG_2819.JPG', 'dsc':'Exhausted, but on the top of Indonesia second highest mountain Rinjani', 'pcs':'https://lh3.googleusercontent.com/-YQVgiGp9gF4/UI03eOy9THI/AAAAAAAAEJw/072bMH4Bpcw'},
-{'img':'KIMG_2827.JPG', 'dsc':'Slide rock, 45 degrees slope, not easy way up to the top', 'pcs':'https://lh3.googleusercontent.com/-gtIVQGnwKPU/UI03gV4szpI/AAAAAAAAEJ8/pbV2UhnBya0'},
-{'img':'KIMG_2900.JPG', 'dsc':'Caldera of Rinjani is flooded with Segara Anak lake', 'pcs':'https://lh4.googleusercontent.com/-xFbvuz6fBcU/UI03k9KPyzI/AAAAAAAAEKc/HLZebzmwmo8'},
-{'img':'KIMG_2917.JPG', 'dsc':'Boiling acid water in the stream, almost too hot for bath', 'pcs':'https://lh3.googleusercontent.com/-rVPUJ0u0PXw/UI03nLHNumI/AAAAAAAAEKw/y9x0sfSZQZ4'},
-{'img':'KIMG_2935.JPG', 'dsc':'Opposite to hot water in stream, lake has cold, fresh drinkable water', 'pcs':'https://lh5.googleusercontent.com/-2Z2Mc_PJdIk/UI03o8X8NYI/AAAAAAAAEK8/uPT_g8d2D2I'},
+{'img':'KIMG_2827.JPG', 'dsc':'Slide rock, 45 degrees slope, not an easy way up to the top', 'pcs':'https://lh3.googleusercontent.com/-gtIVQGnwKPU/UI03gV4szpI/AAAAAAAAEJ8/pbV2UhnBya0'},
+{'img':'KIMG_2900.JPG', 'dsc':'Caldera of Rinjani vulcano is flooded with Segara Anak lake', 'pcs':'https://lh4.googleusercontent.com/-xFbvuz6fBcU/UI03k9KPyzI/AAAAAAAAEKc/HLZebzmwmo8'},
+{'img':'KIMG_2917.JPG', 'dsc':'Boiling acidotic water in the stream is almost too hot for a bath', 'pcs':'https://lh3.googleusercontent.com/-rVPUJ0u0PXw/UI03nLHNumI/AAAAAAAAEKw/y9x0sfSZQZ4'},
+{'img':'KIMG_2935.JPG', 'dsc':'Opposite to hot water in the stream, lake has cold and fresh water', 'pcs':'https://lh5.googleusercontent.com/-2Z2Mc_PJdIk/UI03o8X8NYI/AAAAAAAAEK8/uPT_g8d2D2I'},
 {'img':'KIMG_2946.JPG', 'dsc':'Saying our good bye to the mountains and our trek', 'pcs':'https://lh3.googleusercontent.com/-hRhC7aCrcXA/UI03rxTmP4I/AAAAAAAAELI/ncoeD2cr_hs'},
 {'img':'KIMG_3009.JPG', 'dsc':'Healing our damaged bodies after trek in hotel at Senggigi', 'pcs':'https://lh4.googleusercontent.com/-lhIZ1T-vohA/UI03vSypheI/AAAAAAAAELg/Z7SRZbDKdQQ'}
             ],
             'flores':[
-{'img':'KIMG_3190.JPG', 'dsc':'Hostile and dry hills of the Rinca island', 'pcs':'https://lh5.googleusercontent.com/-KpzfoSwuaQQ/UI037_TABaI/AAAAAAAAEM8/If1BBKp4S7k'},
-{'img':'KIMG_3230_IMG_0291.JPG', 'dsc':'Our boat, rented for four days, all inclusive, by sunset', 'pcs':'https://lh4.googleusercontent.com/-1Rh9oiVkOxs/UI04IPTqDZI/AAAAAAAAEOk/3twAZzeVpm8'},
+{'img':'KIMG_3190.JPG', 'dsc':'Hostile and temporarily dry hills of the Rinca island', 'pcs':'https://lh5.googleusercontent.com/-KpzfoSwuaQQ/UI037_TABaI/AAAAAAAAEM8/If1BBKp4S7k'},
+{'img':'KIMG_3230_IMG_0291.JPG', 'dsc':'Our boat, rented for four days, all inclusive, with crew', 'pcs':'https://lh4.googleusercontent.com/-1Rh9oiVkOxs/UI04IPTqDZI/AAAAAAAAEOk/3twAZzeVpm8'},
 {'img':'KIMG_3338.JPG', 'dsc':'Rinca island, however innocent it looks, is full of varans', 'pcs':'https://lh3.googleusercontent.com/-iRASw1V0T-U/UI04TlHD1MI/AAAAAAAAEP4/H58ezf6d1cM'},
 {'img':'KIMG_3398.JPG', 'dsc':'Land crabs are very clever, but still common pray to gray macaque monkeys', 'pcs':'https://lh4.googleusercontent.com/-FPYVKL0qBpo/UI04Y9SHb8I/AAAAAAAAEQg/2ZPkiowWLTU'},
 {'img':'KIMG_3503_IMG_0359.JPG', 'dsc':'Coral gardens are the best snorchling experience we have had so far', 'pcs':'https://lh3.googleusercontent.com/-xuqpLzoN_Ug/UI04sgNfWvI/AAAAAAAAETA/jPdgX7pe8Lw'},
-{'img':'KIMG_3663.JPG', 'dsc':'Modest fisherman village Komodo in morning haze', 'pcs':'https://lh6.googleusercontent.com/-gQazzSUznPM/UI04yrOy6zI/AAAAAAAAET0/rtbKimA3xXA'},
-{'img':'KIMG_3715.JPG', 'dsc':'Komodo dragons looks formidable monsters - 3 meters, 90 kilos', 'pcs':'https://lh3.googleusercontent.com/-TofjGquEXFk/UI048GAp_4I/AAAAAAAAEVE/PYQ4UbgGDoU'},
-{'img':'KIMG_3786.JPG', 'dsc':'Colorful snails on the dry shrub, waiting for the raining season', 'pcs':'https://lh6.googleusercontent.com/-Ksd7OTAJsR8/UI05APo4zlI/AAAAAAAAEVk/YouXCcDll1A'},
-{'img':'KIMG_3839.JPG', 'dsc':'Marek and Jane, us, on our four hour lasing trek over Komodo island', 'pcs':'https://lh6.googleusercontent.com/-1tva-wpJFQw/UI05E_HdN7I/AAAAAAAAEWQ/8IQu3CAi7M0'},
-{'img':'KIMG_3845.JPG', 'dsc':'Did you know that Indonesia is spread over more than 17500 islands?', 'pcs':'https://lh3.googleusercontent.com/-zfNYkYIZYsk/UI05F3h6SzI/AAAAAAAAEWU/-7YamqdcUv0'},
-{'img':'KIMG_3938.JPG', 'dsc':'Scube diver yacht is free for rent to everyone', 'pcs':'https://lh4.googleusercontent.com/-XGF2b9bBOng/UI05QPrGbkI/AAAAAAAAEXs/ABWEjB6m1V8'},
-{'img':'KIMG_3940_IMG_0415.JPG', 'dsc':'Flores sea have abundance of both fauna and flora ', 'pcs':'https://lh6.googleusercontent.com/-_qmZJWhxFic/UI05UdxDI_I/AAAAAAAAEYQ/oTmjG_pOUko'},
+{'img':'KIMG_3663.JPG', 'dsc':'Modest fisherman village of Komodo in the morning haze', 'pcs':'https://lh6.googleusercontent.com/-gQazzSUznPM/UI04yrOy6zI/AAAAAAAAET0/rtbKimA3xXA'},
+{'img':'KIMG_3715.JPG', 'dsc':'Komodo dragons are formidable monsters - 3 meters and 90 kilos', 'pcs':'https://lh3.googleusercontent.com/-TofjGquEXFk/UI048GAp_4I/AAAAAAAAEVE/PYQ4UbgGDoU'},
+{'img':'KIMG_3786.JPG', 'dsc':'Colorful snails on the dry shrub, waiting for the rain season', 'pcs':'https://lh6.googleusercontent.com/-Ksd7OTAJsR8/UI05APo4zlI/AAAAAAAAEVk/YouXCcDll1A'},
+{'img':'KIMG_3839.JPG', 'dsc':'Marek and Jane, us, on our 4 hour lasing trek over Komodo island', 'pcs':'https://lh6.googleusercontent.com/-1tva-wpJFQw/UI05E_HdN7I/AAAAAAAAEWQ/8IQu3CAi7M0'},
+{'img':'KIMG_3845.JPG', 'dsc':'Did you know that Indonesia is spread over more than 17 500 islands?', 'pcs':'https://lh3.googleusercontent.com/-zfNYkYIZYsk/UI05F3h6SzI/AAAAAAAAEWU/-7YamqdcUv0'},
+{'img':'KIMG_3938.JPG', 'dsc':"Scube diver's yacht is free for rent to everyone", 'pcs':'https://lh4.googleusercontent.com/-XGF2b9bBOng/UI05QPrGbkI/AAAAAAAAEXs/ABWEjB6m1V8'},
+{'img':'KIMG_3940_IMG_0415.JPG', 'dsc':'Flores sea have abundance of both fauna and flora', 'pcs':'https://lh6.googleusercontent.com/-_qmZJWhxFic/UI05UdxDI_I/AAAAAAAAEYQ/oTmjG_pOUko'},
 {'img':'KIMG_3940_IMG_0432.JPG', 'dsc':'Kanawa island and its paradise-like jetty', 'pcs':'https://lh6.googleusercontent.com/-EjZ2yjj7AMc/UI05W6xFRUI/AAAAAAAAEYo/Opj-cHMq5Tc'},
-{'img':'KIMG_3940_IMG_0457.JPG', 'dsc':'Snorchling is always fun, esp. iif you can touch almost everything', 'pcs':'https://lh5.googleusercontent.com/-vOIfIhxH9dc/UI05ZAeXJfI/AAAAAAAAEZA/YGZ0WNcdBeg'},
-{'img':'KIMG_4089.JPG', 'dsc':'Limestone cave of Batu Cermin near Labuan Bajo, Flores', 'pcs':'https://lh5.googleusercontent.com/-VpxhH91Et6Q/UI051WEGiCI/AAAAAAAAEck/DTrixOBtabI'}
+{'img':'KIMG_3940_IMG_0457.JPG', 'dsc':'Snorchling is always fun, esp. if you can touch almost everything', 'pcs':'https://lh5.googleusercontent.com/-vOIfIhxH9dc/UI05ZAeXJfI/AAAAAAAAEZA/YGZ0WNcdBeg'},
+{'img':'KIMG_4089.JPG', 'dsc':'Limestone cave of Batu Cermin near Labuan Bajo town, Flores', 'pcs':'https://lh5.googleusercontent.com/-VpxhH91Et6Q/UI051WEGiCI/AAAAAAAAEck/DTrixOBtabI'}
             ]
       };
 </script>
