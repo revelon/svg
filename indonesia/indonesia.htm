@@ -44,18 +44,38 @@
       height: 150px;
       width: 200px;
     }
+
+    #info {
+      position: absolute;
+      display: block;
+      width: 40%;
+      left: 30%;
+      top: 32%;
+      text-align: center;
+      font-size: 17px;
+      color: aquamarine;
+      -webkit-animation: spin 7s infinite linear;
+      -ms-animation: spin 7s infinite linear;
+      animation: spin 7s infinite linear;
+      -webkit-animation-direction:alternate;
+      -ms-animation-direction:alternate;
+      animation-direction:alternate;
+    }
     
     #shapel, #shapell {
       display: block;
-      -webkit-animation: spinl 30s infinite linear;
-      -ms-animation: spinl 30s infinite linear;
-      animation: spinl 30s infinite linear;
+      -webkit-animation: spin 30s infinite linear;
+      -ms-animation: spin 30s infinite linear;
+      animation: spin 30s infinite linear;
     }
 
     #shaper, #shaperr {
-      -webkit-animation: spinr 30s infinite linear;
-      -ms-animation: spinr 30s infinite linear;
-      animation: spinr 30s infinite linear;
+      -webkit-animation: spin 30s infinite linear;
+      -ms-animation: spin 30s infinite linear;
+      animation: spin 30s infinite linear;
+      -webkit-animation-direction: reverse;
+      -ms-animation-direction: reverse;
+      animation-direction: reverse;
     }
 
     .agfa {
@@ -70,41 +90,22 @@
       background-size:100% 100%;
       pointer-events: all;
       cursor: pointer;
-      -webkit-animation-direction:alternate;
-      -ms-animation-direction:alternate;
-      animation-direction:alternate;
     }
 
-    @-webkit-keyframes spinl {
+    @-webkit-keyframes spin {
       from { -webkit-transform: rotateY(0); }
       to   { -webkit-transform: rotateY(360deg); }
     }
 
-    @-ms-keyframes spinl {
+    @-ms-keyframes spin {
       from { -ms-transform: rotateY(0); }
       to   { -ms-transform: rotateY(360deg); }
     }
 
-    @keyframes spinl {
+    @keyframes spin {
       from { transform: rotateY(0); }
       to   { transform: rotateY(360deg); }
     }
-
-    @-webkit-keyframes spinr {
-      from { -webkit-transform: rotateY(0); }
-      to   { -webkit-transform: rotateY(-360deg); }
-    }
-
-    @-ms-keyframes spinr {
-      from { -ms-transform: rotateY(0); }
-      to   { -ms-transform: rotateY(-360deg); }
-    }
-
-    @keyframes spinr {
-      from { transform: rotateY(0); }
-      to   { transform: rotateY(-360deg); }
-    }
-
 
     .zoomerIn {
       -webkit-animation: zoomIn 1.5s 1 ease-in;
@@ -170,49 +171,65 @@
         pointer-events: all;
     }
 
-    div.descr p {
-        position: fixed;
-        bottom: 0;
+    div.controls div p {
+        position: relative;
+        top: 40%;
         height: 1%;
-        text-align: center;
-        font-size: 2.2em;
+        font-size: 3em;
         color: gray;
+        text-align: center;
+        cursor: default;
     }
 
-    .leftFast, p.leftFast {
+    div.controls div.leftFast p {
+        text-align: right;
+    }
+    div.controls div.rightFast p {
+        text-align: left;
+    }
+
+    div.controls div p:hover {
+        color: white;
+    }
+
+    .leftFast {
         left: 0;
-        width: 25%;
+        width: 24%;
+        background-color: black;
+        opacity: 0.8;
+     }
+    .leftSlow {
+        left: 24%;
+        width: 12%;
+        background-color: black;
+        opacity: 0.5;
     }
-    .leftSlow, p.leftSlow {
-        left: 25%;
-        width: 10%;
+    .rightSlow {
+        left: 64%;
+        width: 12%;
+        background-color: black;
+        opacity: 0.5;
     }
-    .middle, p.middle {
-        left: 35%;
-        width: 30%;
-        height: 10%;
-    }
-    .rightSlow, p.rightSlow {
-        left: 65%;
-        width: 10%;
-    }
-    .rightFast, p.rightFast {
-        left: 75%;
-        width: 25%;
+    .rightFast {
+        left: 76%;
+        width: 24%;
+        background-color: black;
+        opacity: 0.8;
     }
     div.zoomerControl {
         position: absolute;
         left: 0;
         top: 0;
         width: 100%;
-        height: 29%;
+        height: 28%;
         z-index: 100;
     }
 
     #detailed {
         text-align: center;
         color: white;
-        font-size: 25px;
+        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+        font-size: 24px;
         position: absolute;
         left: 0;
         top: 0;
@@ -223,16 +240,17 @@
         background-image: none;
         background-repeat: no-repeat;
         background-position: center;
-        -webkit-transition: -webkit-transform 1s ease 0.5s, opacity 1s ease 0.5s;
-        -ms-transition: -ms-transform 1s ease 0.5s, opacity 1s ease 0.5s;
-        transition: transform 1s ease 0.5s, opacity 1s ease 0.5s;
-        -webkit-transform: scale(2);
-        -ms-transform: scale(2);
-        transform: scale(2);
+        -webkit-transition: -webkit-transform 2s ease, opacity 1s ease;
+        -ms-transition: -ms-transform 2s ease, opacity 1s ease;
+        transition: transform 2s ease, opacity 1s ease;
+        -webkit-transform: scale(0.5, 0.05);
+        -ms-transform: scale(0.5, 0.05);
+        transform: scale(0.5, 0.05);
         opacity: 0;
         display: none;
         border: none;
         cursor: pointer;
+        pointer-events: all;
     }
 
     #detailed:focus {
@@ -257,14 +275,6 @@
 </head>
 <body>
 
-     <div class="descr">
-         <p class="leftFast">&lt;&lt;&lt;&lt;</p>
-         <p class="leftSlow">&lt; &lt;</p>
-         <p class="middle">^ ^ ^</p>
-         <p class="rightSlow">&gt; &gt;</p>
-         <p class="rightFast">&gt;&gt;&gt;&gt;</p>
-    </div>
-
     <div id="container">
         <div class="trd" id="zoomer">
             <div class="stage trd">
@@ -279,11 +289,13 @@
         </div>
     </div>
 
-     <div class="controls">
-         <div class="leftFast" onmouseover="adjustSpeed(event, 1, 1, 0, 0)" ontouchstart="adjustSpeed(event, 1, 1, 0, 0)"></div>
-         <div class="leftSlow" onmouseover="adjustSpeed(event, 0, 1, 0, 0)" ontouchstart="adjustSpeed(event, 0, 1, 0, 0)"></div>
-         <div class="rightSlow" onmouseover="adjustSpeed(event, 0, 0, 1, 0)" ontouchstart="adjustSpeed(event, 0, 0, 1, 0)"></div>
-         <div class="rightFast" onmouseover="adjustSpeed(event, 0, 0, 1, 1)" ontouchstart="adjustSpeed(event, 0, 0, 1, 1)"></div>
+    <div id="info">&uarr; &uarr; ...choose some island... &uarr; &uarr;</div>
+
+    <div class="controls">
+        <div class="leftFast" onmouseover="adjustSpeed(event, 1, 1, 0, 0)" ontouchstart="adjustSpeed(event, 1, 1, 0, 0)"><p>&lt;&lt;&lt;&lt;</p></div>
+        <div class="leftSlow" onmouseover="adjustSpeed(event, 0, 1, 0, 0)" ontouchstart="adjustSpeed(event, 0, 1, 0, 0)"><p>&lt; &lt;</p></div>
+        <div class="rightSlow" onmouseover="adjustSpeed(event, 0, 0, 1, 0)" ontouchstart="adjustSpeed(event, 0, 0, 1, 0)"><p>&gt; &gt;</p></div>
+        <div class="rightFast" onmouseover="adjustSpeed(event, 0, 0, 1, 1)" ontouchstart="adjustSpeed(event, 0, 0, 1, 1)"><p>&gt;&gt;&gt;&gt;</p></div>
     </div>
 
     <div class="zoomerControl">
@@ -293,7 +305,7 @@
         fill: url(#toJava);
         cursor: pointer;
     }
-    #java:hover {
+    #java:hover, #java:focus {
         fill: url(#toJavaHi);
         stroke-width: 4px;
     }
@@ -301,7 +313,7 @@
         fill: url(#toBali);
         cursor: pointer;
     }
-    #bali:hover {
+    #bali:hover ,#bali:focus {
         fill: url(#toBaliHi);
         stroke-width: 4px;
     }
@@ -309,7 +321,7 @@
         fill: url(#toLombok);
         cursor: pointer;
     }
-    #lombok:hover {
+    #lombok:hover, #lombok:focus {
         fill: url(#toLombokHi);
         stroke-width: 4px;
     }
@@ -317,7 +329,7 @@
         fill: url(#toFlores);
         cursor: pointer;
     }
-    #flores:hover {
+    #flores:hover, #flores:focus {
         fill: url(#toFloresHi);
         stroke-width: 4px;
     }
@@ -367,7 +379,7 @@
 <path d="m370,175-1.61,0-2,0.401-2.2-0.401-2.01,1.2-2,1.2-2.2,0.602-2.01,0.404-2.01-0.201-2.21-0.605-2.01,1.61-2.2,0.803-2.01-0.404-2.2-0.602-2.01-0.401-2-1.01-0.401-2-0.201-2.01,1.61-2.01-0.602-2.01-0.401-2.21,1-2.01,2-1.41,2.01-0.8,2-1,2-2.01,2.21-0.605,2.01,0.803,2,1.21,2.21,1,2.01-1.4,2.01-0.198,1.8,2.01,0.803,2,2.01,0.407,0.599,2.01,1.8,2,2.21,0.407,2.01,0.195,2.2-2.01,2.01-0.599,2,0.399,2.21-0.8-1.81-2.21-2-1-2.01-1.61-2.01,0.401-2.01-1.21-2.21-1.61-1.8-2-2.01-1.61,0.602-2.2,2.01-1.2,2.2-0.602,2-0.404,2.01,0.8,2.2,0.203,1.4,2,0.998,2.21,2.01,1.81,2.21,0.399,2.01-1.8,2.2-1,2.01,0.599,2.01,1.01,1,2.01-0.203,2,0,2.21,1.21-2.21-0.203-2,2.01-2.21,2.01-0.201,2.2,0,1.4,2.2,1,2.01,0.198,2.01-0.399,2.21,2,1.2,2.01-1.8,0,4.21-2.21,0.803-2,0-2.21-0.803-2,0-2.01-0.203-2.01,1.21,2.01,0.401,2.01,0,2,1.81-2,0.198-2.01-0.805-2.01-0.599-2.2,0.599-2,0.608-2.01,0.602-2.2-0.404-0.803-2.01,1.4-2.01-1-2.21-1.6,2.01-1.4,2.21-2.21,1.4-2,1.2-2.01-0.401-2.2,1-2.01,0.794"></path>
 </g>
 
-<g id="java" onclick="setImages('java')">
+<g id="java" onclick="setImages(evt, 'java')" ontouchstart="(event, 'java')">
 <g>
 <path d="m155,147-1.2-0.401-1.2-0.404-2-0.399-2.21-0.602-2.2-0.803-2.01-0.602-2,0-2.01-0.404-2.2,0.404-2.01-1.81-2.21-0.401-2-0.201-2.01,0.201-2.2,0.602-2.01-0.404-2-0.599-0.401-2.01-2.01,1.61-1.8,0.401-2.21,0.599-2-0.399-2.01,1.2-2,2.01-2.01-0.198-2.2-0.201-2.21-0.203-2.01-0.399-2-0.404-2.2-0.803-2.01,0-1.61-0.399-1.6-1.2-2.01-0.201-2.2-2.21-2.01-1.01-2-1-2.01-0.404-2.01-0.201-2.2,0-2.21-0.602-2-0.399-2.2,0-2.01-0.401-2.21,0-2-0.201-2.01-0.201-2-0.203-2.21,0-2.2-1.2-2-0.203-0.602-2.21,0.399-2,1.81-2.21,2-1.4,0-2.21-2-0.803-2.2,0.803-2.01-0.201-2-1.4-2.01-0.8-2.01-1.41-2.2-0.8-2-0.206-2.21,0.602-2.01,0.404-2.2-0.602-2,0.399-2.21,0.602-2.01-0.198-3.86,1.06-0.348-2.46-2,0.605-0.602-2.01,2.21-1,2-1.21,1,2.01,2,1.2,0.803-2.01,2.01-1.81,0.8-2.21,2.01-1.8,2-0.602,1.4-2.21,0-2.01,0.201-2.21,0.401-2.01,0.602-2.01,1.61-2.21,1.6-2.01,1.4-2,2,1,0.401,2.01,2.01,0.399,2-2.01,2.01,1.2,2.21,0.805,2,0.8,2.01-0.8,2.2,0,2,1.2,1,1.2,2.01,0.201,2.2-0.602,2.01-0.198,0.401-0.407,0-2.01,0.401-2,1.6,0.399,2.01,1.2,2.2-0.201,2.01-0.401,2.01,1.21,1.6,2.21,1.4,2,2,0.602,2.21,1.81,2,0.201,2.01-1,2.2,0.201,0.401,0.401,2.01,1,2.2,1.2,2.01,0.803,2.2-0.201,1.2-2.21,0.803,0.201,2,1,1.61,2.21,2,2,2.01,1.4,0.401,2.21,0.201,2.01,0.602,2.21,2.2,1.01,2.01,1.2,2-0.399,2.21,0.399,0.803,0.803,2.2-1.4,2.21,0.803,2,0.803,2.01,0.404,2.2,0.401,2.21-0.401,2-0.803,2.2,0,2.01,0.399,2.01,0.404,2,0.602,2.01,0.605,2.2,0.399,2.01,0.201,1.2-0.401,2-0.404,2.01-0.803,2.2,1.61,2.21,1.2,2-0.399,2.01-1,1.8-2.01,1-2,0-0.602,0.803-0.803,0.599-2.01,0.401-2.21,0.401-2.01,2.21-1.6,2.01-0.401,2-0.602,2.2,0.803,2.01,0.8,0.602,2.21,0.602,2.01,2,2,1,0.401,2.2,0,2.01,0.201,2-0.803,2.21-1,2.01,0.399,2,2.01,1,0.805,2,0.8,2.21,0.602,2.01-0.8,2,0.8,1.61,2.21,2,0.407,2.21-0.206,2-0.399,2.01-0.404,2.2,0,2.01,1.21,2.21-0.605-0.605,2.01,1,2.21-0.201,1.2,1.81,2-0.401,2.01,2-0.803,2.01,1,0.401,2.01-0.201,2.21-1.4,2.01,0,2,2.21,1.4,2,0.803,2.01,0.803,2.21,0.602,2,1.61,2,0.203,2.21,1.4,2.2-1.01,2.01-0.602,2-0.803,2.01,0.203,2.2,0.201,2.21,0.198,2-1,2.21,0,2.2-1.61,2.01,0,2.21,2,2,0.203,2.01,0.803,2.2,0.399,2.01,1.21,0.599,2.01-0.8,2.01,0,2.21-0.401,2.01-0.201,0.201-0.401,2.01-0.401,2.21-0.602,2.01-0.201,2,1.61,2.21,0,2.01,1.2,2.01,2.21,0.803,2.01,1.4-1.2,2.01-1.2,0-1.81-0.803-2.61,0,0.401-1.01-0.602-2.01-2.2-0.803-2.01,1.01-2-0.602-2.21,0.198-2.01-0.198-2.2-1.4-2-0.803-2.01-0.404-2.01-0.803-2.2-1.6-2.2-0.404-2.01-1.4-2.01-0.805-2-1.4-2.21-0.602-2,0.198-2.21,0.404-2,0.599-1.81,2.01-2.2-0.399-2.01,0.399-2,1-2.01,0-2-0.803-2.21-0.201-2.01-0.602-2-1-2.2,0.399-2.01-1-2,0-2.21-0.401-2.01,0.201-2-1.01-2.21-0.399-2,1.2-0.201,2-2.01-1.2-2.2-0.602-2.01,0.201-2.2-1-2-0.602-2.21,0.201-2.01,0.599-2.2-2-2,1.2-2.01-0.803-0.602-0.201-2.21-0.404-1.2-0.198-2.01,0-2.2-1-2.01-0.602-2-0.602-2.21-1-2.01-1.2-2-0.803-2.01-1.21-2-0.8-2.2-1.2"></path>
 <path d="m234,119-2,0.198-2.01,2.01-2.01,1.41,0,2.21,2.01,1.6,2.21,0.203,2,0.602,2.2,0.404,2.01,0.602,0.201-2.21,2.01,2.01,2-0.201,2.2,0.201,2.01,0.201,2.01-0.201,2,0,1.2-2.01,2-1,2.21,0,2.01,0.201,1.6-2.01,2.21-0.404,2-0.805,2.21-0.8-2.21-1.8-2.2-1.21-2.01,0-2.2,0.602-2.01-0.201-2.2,0.201-2.21,0.198-2.01,0-2-0.198-4.21,0-2,0.198-2.21-0.198-2.01-0.201-2.2,0.201-0.602,0.198"></path>
@@ -382,18 +394,18 @@
 <text transform="matrix(0.96947274,0.24519912,-0.24519912,0.96947274,0,0)" y="93" x="170" fill="black" stroke-width="1">JAVA</text>
 </g>
 
-<g id="lombok" onclick="setImages('lombok')">
+<g id="lombok" onclick="setImages(evt, 'lombok')" ontouchstart="(event, 'lombok')">
 <path d="m327,156-2.21,1-2,2.01-2.01,1.61-1.81,2.21,1.2,4.41-0.401,2.01-2.2,1.2-2.01,0.608-2.2-0.404,0.401,2,2,1.01,2.21,1.4,2-1.2,2.21,0.401,2,0.803,2.01,0,2.2,1.4,0.803-2.01,2.01,0.602,2-0.201-1.6-2.01,1.4-2.01,1-2.21,1.2-2.01,0.803-2.21,0.8-2.01,1-2-1.61-2.01-2-0.803-2.01-0.602-2.2-1-2.21-0.404-0.8,0.407"></path>
 <text transform="matrix(0.98938175,-0.1453401,0.1453401,0.98938175,0,0)" y="246" x="232" stroke-width="1">LOMBOK</text>
 </g>
 
-<g id="flores" onclick="setImages('flores')">
+<g id="flores" onclick="setImages(evt, 'flores')" ontouchstart="(event, 'flores')">
 <path d="m427,172,0.602,0,2.21-0.605,2.01-0.401,2,1.4,2.2,0,2.01-0.602,2.01,0,2.2-0.404,2,1.21,2.21,0.803,2.01-1.21,2.01,0.805,1.6,2.01,2.21,0.602,2.01-0.201,2.21-1,2.01-0.198,2.2,0.803,2.01-1.21,1.61-2.01,2.2,0.399,2.01,0.203,2,1.2,2.21,0.404,2.01-0.404,2-1.2,2.01-0.401,2.01-0.605,2.21-1.6,2.01,0,2.2,0.401,2.01,0,2-0.203,2.2-0.602,1.41-0.998,2-0.803,2.01-0.605,2.01-0.401,2.2-0.803-0.602-2.01-0.203-2.01,2.21-0.803,0.605-2.01,2.2-0.198,0.201-2.01-1-2.01-1.4-2.21-2.21-0.8-1.8,2.01,0,2.21,2.01-1,2.01,0.803-2.01,2.01-2.2,1.61-2.01,0.602-2.01,0.201-2,2.01-1,2-1.4,2.01-2.01,0.195-2.2,0.605-2.21-0.198-2.01-1.81-2.01-1.2-1.6-0.203,0.198-2.21-2.2,0.602-2.01,1.21-2.01,0.195-2.2-0.195-2.01-0.201-2,1.2-2.01,1.81-2.2-0.407-2-0.998-1.61-2.01-2.21-0.8-2-0.407-2.01-0.599-2.21-1.81-2,0-2.21-0.401-2.01,0.201-2-1.21-2.2-0.605-2.01-0.399-2,0.198-2.01,0.404-2-0.203-2.21,0.605-2,2.01-2.01,0.605-2.2,1.61-1.6,0.195-2.01-0.602,0.198,2.01-2,2.21,0,4.02,1.4,2.01,2,2.01,2-1.6"></path>
 <path d="m412,161,2.2,1.4,1.4,2.21-2.21,0.407-0.8,2.01-0.602,2-2.01,0.602,0.803-2.21-0.803-2,1.01-2.21,0.602-2,0.401-0.206m4.81,4.62,2.21,1.8,2-1.2-2,2.21,0.198,2-2.01,0,0.404-2-0.803-2.01,0-0.8"></path>
 <text transform="matrix(0.99709349,0.0761877,-0.0761877,0.99709349,0,0)" y="118" x="384" stroke-width="1">FLORES</text>
 </g>
 
-<g id="bali" onclick="setImages('bali')">
+<g id="bali" onclick="setImages(evt, 'bali')" ontouchstart="(event, 'bali')">
 <path d="m276,152,1.61,1.2,2.01-0.201,2.2,0.404,2.01,0.803,2,0.599,2.2-0.198,2.21,0,2.01-1.4,2-1.8,2.21,0,2,0.803,2.21,0.8,2,0.803,2.21,1.21,1.8,2,2.01,1.81,0.803,2.01-2.01,2-2,0.803-2.01,1.4-2.21,0.602-2,1.01-1.61,2.21-0.803,2-1.2,2.01-0.602,0.198-2.01-0.198,0.401-1.21,1.61-2.01-1.2-2.01-2-2.21-2.01-1.81-2.2-1.4-2.01-0.805-2.2-0.803-2.01-0.198-2.2-0.198-1.81-2.21-1.4-2.01-0.599-2.01,0.599-2.01"></path>
 <path d="m307,172-2-1.01-0.602-2,2-0.805,1.4,2.21-0.803,1.61"></path>
 <text transform="matrix(0.96299159,0.26953144,-0.26953144,0.96299159,0,0)" y="61" x="297" stroke-width="1">BALI</text>
@@ -406,8 +418,8 @@
 
 
 
-    <textarea id="detailed" onclick="hideDetail()" readonly></textarea>
-
+    <!--div id="detailed" tabindex="1" onclick="hideDetail(event)" ontouchstart="hideDetail(event)"></div-->
+    <div id="detailed" tabindex="1"></div>
 
 
 
@@ -420,8 +432,8 @@
       var mode = "";
 
       function adjustSpeed (evt, a1, a2, a3, a4) {
+          if (evt.type && evt.type == "touchstart") evt.preventDefault();
           var state = ['paused', 'running'];
-          if (evt.type == "touchstart") evt.preventDefault();
           stateSwitch(rings[0], state[a1]);
           stateSwitch(rings[1], state[a2]);
           stateSwitch(rings[2], state[a3]);
@@ -430,33 +442,40 @@
 
       function stateSwitch(el, st) {
           el.style.webkitAnimationPlayState = st;
-          el.style.mozAnimationPlayState = st;
           el.style.msAnimationPlayState = st;
-          el.style.oAnimationPlayState = st;
           el.style.animationPlayState = st;
       }
 
       function showDetail (evt) {
+          if (evt.type == "touchstart") evt.preventDefault();
+          evt.stopPropagation();
           detailed.style.backgroundImage = 'url(' + evt.target.getAttribute('detail') + ')';
           detailed.textContent = evt.target.getAttribute('dsc');
           detailed.style.display = 'block';
           detailed.focus();
       }
 
-      function hideDetail () {
+      function hideDetail (evt) {
+          if (evt.type == "touchstart") evt.preventDefault();
+          evt.stopPropagation();
           detailed.blur();
           window.setTimeout(function() {
               detailed.style.backgroundImage = '';
               detailed.style.display = 'none';
+              detailVisible = false;
           }, 1000);
       }
 
-      function setImages (source) {
+      function setImages (evt, source) {
+          if (evt.type == "touchstart") evt.preventDefault();
           if (source == mode) return;
           if (!mode) {
+              document.getElementById('info').style.display = 'none';
               zoomer.classList.add('zoomerIn');
               setImagesReal (source);
               mode = source;
+              detailed.addEventListener('click', hideDetail, false);
+              window.setTimeout(function(){adjustSpeed(this, 0, 1, 0, 0);}, 0);
               return;
           }
           mode = source;
@@ -495,7 +514,8 @@
               rings[1].appendChild(poster);
               poster.setAttribute('detail', data[source][i].pcs + '/s' + detailSize + '/' + data[source][i].img);
               poster.setAttribute('dsc', data[source][i].dsc);
-              poster.addEventListener('click', showDetail, true);
+              poster.addEventListener('click', showDetail, false);
+              //poster.addEventListener('touchstart', showDetail, false);
           }
       }
 
