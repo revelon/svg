@@ -10,11 +10,29 @@
 
 <h1>(not only) SVG | <span>Dedicated blog...</span></h1>
 
-<h2><a href="indonesia/indonesia.htm"><img src="indonesia/teaser.jpg" width="300" height="1840" align="right" alt="Indonesia 2012 Vacation"/>Indonesia 2012 Vacation (presentation)</a></h2>
+<h2><a href="indonesia/indonesia.htm"><img src="indonesia/teaser.jpg" width="300" height="184" align="right" alt="Indonesia 2012 Vacation"/>Indonesia 2012 Vacation (presentation)</a></h2>
 <div class="date">2013-01-29 | html5 | css3  | svg</div>
-<p>More than fourteen days ago I had started my work on interactive web presentation of some best pictures we have taken during our September's vacation last year. I planned not utilize just SVG+SMIL, 
-like I did on many occasions, but try also some tempting new technologies like CSS Animations, CSS 3D Transformations etc.
-</p>
+<p>More than fourteen days ago I had started my work on interactive web presentation of some best pictures we have taken during our September's vacation last year <strong>(lasting four and half week ;-)</strong>. 
+I planned to utilize not just <strong>SVG + SMIL</strong>, like I did on many other occasions, but try also some tempting new technologies like <strong>CSS Animations, CSS 3D Transformations</strong> etc.</p>
+<p>In the end, the demo is very different from the early prototype, and needs to be said, that <em>it is visually much more simple, but inside much more complex, than I had it planned to be</em>...<br/>
+Well, <strong>I sacrificed a lot for the better cross-browser compatibility</strong> and it is still this far, far away, from what I have been hoping for :-(<br/>
+Anyway, some (and not only technological) <em>demo highlights are</em>:</p>
+<ul>
+<li><strong>60 pictures</strong> in this demo, 15 from each major area we have been to</li>
+<li><strong>CSS Animation, CSS Transitions, CSS 3D Transforms, SVG and some JavaScript</strong> is what it is consisting from (and, of course, good old HTML ;-)</li>
+<li>you can: <strong>choose from 4 islands, rotate images in two directions, in two speeds, stop rotation and show/hide details of the images with descriptions</strong></li>
+<li>image details are stored directly on googleusercontent.com cloud and only thumbnails are stored on this site</li>
+<li>because 3D Transforms are at the very basic of this presentation, I was forced to <strong>give up on Opera</strong>, which does not support them</li>
+<li><strong>MSIE 10 supports 3D Transforms, but lacks support for transform-style: preserve-3d</strong>; creating workaround for this is possible for simple cases, but not for multiple animations used in this case, so it's usability is very limited; <em>I only hope for Microsoft to fix it for the MSIE 10 soon</em></li>
+<li>pointer events for Webkit browser were hard to manage and I was forced to use some dirty tricks to tame them; event bubbling nor capturing behaves reasonably in mixed combination of absolute/relative/3D positioning and multiple layers</li>
+<li><strong>I've tried to use native touch-events</strong>, but results were not good and in the end I removed them out completely <em>(but I'll have to improve my skills in this area in the future!)</em></li>
+<li>so <strong>demo compatibility</strong> is good on <strong>up-to-date Firefox</strong> (desktop, with HW acceleration, without it animations are jerky), <strong>Chrome</strong> (desktop) and <strong>Safari</strong> <em>(both desktop and mobile)</em>; I had no chance to test it on mobile Chrome/Firefox yet but it may work, though..</li>
+<li><strong>iPad compatibility</strong> forced me to remove semi-transparency and rotation controls directly over spinning ring, discard some text animations and still, <strong>your touches must be very short to work it well</strong>; iOS also ignores overflow:hidden / meta on document so I was forced to not use zoom-out effect for details</li>
+<li><strong>Chrome has bug for gradients applied to text with additional transforms</strong>, I prepared minimal testcase and submitted bug report to Google and we'll see; it works well in Chromium/Safari, however</li>
+<li>my plan to <strong>listen for CSS Animations Events</strong> and drive the demo based on them <strong>proved to be impossible</strong>, because all browsers seem to be <strong>firing them at random, if even</strong>... so I gave up on making it work on this principle :-(((</li>
+<li>demo is at least <strong>partially responsive</strong> and should be usable on different screen sizes (although a lot could be done to respnsivenes of 3D Transforms, that I know, but it is much harder to achive...)</li>
+</ul>
+<p>I would perhaps try to improve and bugfix it a little more in the near feature, but we'll see when...and if...depends a lot on <strong>feedback</strong>...which <strong>is</strong>, of course... <strong>welcomed!!</strong> :-))</p>
 
 
 <h2>Still Alive and Happy Xmas</h2>
@@ -318,13 +336,13 @@ I had to <strong>update RAF demos to follow later specification (and incompatibl
 <h3>Graphical representation of scaling across different browsers / number of particles + RAF rendering mode CPU demands</h3>
 <table border="0" cellspacing="10">
 <tr><td>
-<image src="partbench/graph-original2.svg" width="300" height="300" alt="Original"/>
+<img src="partbench/graph-original2.svg" width="300" height="300" alt="Original"/>
 </td><td>
-<image src="partbench/graph-suspend2.svg" width="300" height="300" alt="Suspend"/>
+<img src="partbench/graph-suspend2.svg" width="300" height="300" alt="Suspend"/>
 </td><td>
-<image src="partbench/graph-offscreen2.svg" width="300" height="300" alt="Offscreen"/>
+<img src="partbench/graph-offscreen2.svg" width="300" height="300" alt="Offscreen"/>
 </td><td>
-<image src="partbench/graphffcpu2.svg" width="300" height="300" alt="RAF"/>
+<img src="partbench/graphffcpu2.svg" width="300" height="300" alt="RAF"/>
 </td></tr>
 </table>
 <br/>
