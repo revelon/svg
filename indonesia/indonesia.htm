@@ -135,8 +135,8 @@
     div.controls div {
         position: absolute;
         /*border: 1px solid gray;*/
-        height: 100%;
-        top: 0;
+        height: 7%;
+        bottom: 7%;
         pointer-events: all;
         color: gray;
     }
@@ -147,47 +147,31 @@
 
     div.controls div p {
         position: relative;
-        top: 40%;
-        height: 1%;
-        font-size: 3.3em;
+        bottom: 3%;
+        height: 5%;
+        font-size: 2.8em;
         text-align: center;
         cursor: default;
-    }
-
-    div.controls div.leftFast p {
-        text-align: right;
-    }
-
-    div.controls div.rightFast p {
-        text-align: left;
     }
 
     .leftFast {
         left: 0;
         width: 24%;
-        background-color: black;
-        opacity: 0.8;
      }
 
      .leftSlow {
         left: 24%;
         width: 12%;
-        background-color: black;
-        opacity: 0.5;
     }
 
     .rightSlow {
         left: 64%;
         width: 12%;
-        background-color: black;
-        opacity: 0.5;
     }
 
     .rightFast {
         left: 76%;
         width: 24%;
-        background-color: black;
-        opacity: 0.8;
     }
 
     div.zoomerControl {
@@ -196,7 +180,7 @@
         top: 0;
         width: 100%;
         height: 28%;
-        z-index: 100;
+        /*z-index: 80;*/
     }
 
     #detailed {
@@ -209,7 +193,7 @@
         top: 0;
         width: 100%;
         height: 100%;
-        z-index: 110;
+        /*z-index: 110;*/
         background-color: rgba(0,0,0,0.8);
         background-image: none;
         background-repeat: no-repeat;
@@ -396,6 +380,7 @@
         if (!mode) {
             document.getElementById('info').style.color = 'beige';
             document.getElementById('info').textContent = "↓ ↓ ...click for detail... ↓ ↓";
+            window.setTimeout(function(){document.getElementById('info').style.display = 'none';}, 5000);
             zoomer.classList.add('zoomerIn');
             setImagesReal (source);
             mode = source;
