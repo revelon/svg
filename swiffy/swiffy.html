@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
 <meta charset="utf-8">
-<title>Swiffy Utilization For More Compatible Flash Banners</title>
+<title>Swiffy Utilization For More Compatible Flash Banners, by Marek.Raida@gmail.com</title>
 <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet'>
 <style>
   html, .view body { background-color: black; counter-reset: slideidx; }
@@ -380,7 +380,7 @@
   .style.backgroundImage="url(banner.jpg)"; }</strong>
   ...
 </pre>
-<p style="margin-top:5px;font-size:36px">This greatly simplified example counts with <strong>?clickthru=http://somelocation/</strong>, to be the only present GET parameter in URL.</p>
+<p style="margin-top:5px;font-size:34px">This greatly simplified example counts with <strong>?clickthru=http://somelocation/</strong>, to be the only present GET parameter in URL.</p>
 </section>
 
 <section>
@@ -398,6 +398,15 @@
     <ol class="incremental">
         <li>why not to use just <strong>&lt;object&gt; => &lt;img&gt;</strong> fallback? Because Swiffy utilizes JavaScript and it is not allowed to run inside image tag, that's why iframe is better suited for the task</li>
         <li>why not to use direct image fallback like <strong>&lt;object&gt; => &lt;iframe&gt; => &lt;img&gt;</strong> fallback? Because it does not work like this, all browsers more or less understands iframe and fallback to <strong>&lt;img&gt;</strong> will never happen</li>
+    </ol>
+</section>
+
+<section>
+    <h3>Some More General FAQ</h3>
+    <ol class="incremental">
+        <li><strong>why use SWF file at all and not use just Swiffy format?</strong> - if you care for MSIE 8 and lower compatibility, it is not a good approach</li>
+        <li><strong>why not embed Swiffy format directly to the page?</strong> - if you care for data transfer saving and plan to use SWF alongside to Swiffy format, I would not recommend to do it</li>
+        <li><strong>would Swiffy format adopt to different sizes?</strong> - yes, it's vector format and could behave exactly the same way like original SFW</li>
     </ol>
 </section>
 
