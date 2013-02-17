@@ -27,7 +27,7 @@
   }
 
   pre {
-      font-size: 30px;
+      font-size: 28px;
       background-color: lightgray;
   }
 
@@ -300,7 +300,7 @@
         <li><strong>iOS 5+</strong></li>
         <li><strong>Android OS 3.0+</strong></li>
         <li><strong>Windows RT, Windows Phone 8.0+</strong></li>
-        <li><strong>Blackberry 10, FirefoxOS</strong> and possibly others...</li>
+        <li><strong>Blackberry 10, Firefox OS</strong> and possibly others...</li>
     </ul>
     <p>although there is usually problem with support for <strong>filter effects</strong> like Blur, DropShadow etc.</p>
 </section>
@@ -314,7 +314,7 @@
 <section>
     <h3>Some More Catches?</h3>
     <p>There are <strong>more files to be downloaded</strong> <em style="font-size:30px">(Swiffy VM, on CDN, 53kB + Swiffy file)</em> and Swify conversion <em style="font-size:30px">(textual)</em> is <strong>larger</strong> then SWF <em style="font-size:30px">(binary)</em>.<br/>
-    But in common web server set-up, there is usually on-the-fly <strong>compression</strong> of HTML files to <strong>GZip</strong>ped format and then the difference is only about <strong>15% in size</strong>. &nbsp; <em style="font-size:30px">(so you can sleep well about it ;-)</em></p>
+    But in common web server set-up, there is usually on-the-fly <strong>compression</strong> of HTML files to <strong>GZip</strong>ped format and then the difference is approx. <strong>15% in size</strong>. &nbsp; <em style="font-size:30px">(so you can sleep well about it ;-)</em></p>
 </section>
 
 <section>
@@ -330,7 +330,7 @@
 
 <section>
     <h3>Real World LMC Banner Examples</h3>
-    <embed src="banner_st_ag_530x60_4.swf?clickthru=http://www.jobs.cz/" width="530" height="60">
+    <embed src="banner_st_ag_530x60_4.swf?clickthru=http://www.jobs.cz/" width="530" height="60" clickthru="http://www.jobs.cz/" type="application/x-shockwave-flash" allowscriptaccess="always">
     <p>SWF original, 34kB, binary</p>
     <iframe width="530" height="60" src="banner_st_ag_530x60_4.html?clickthru=http://www.jobs.cz/" style="border:none"></iframe>
     <p style="font-size:37px">Swiffy conversion, 90kB textual, 46kB GZip binary</p>
@@ -357,11 +357,11 @@
     <h3>Banner Itself HTML Markup</h3>
 <pre>
 &lt;object type="application/x-shockwave-flash" 
- data="<strong>banner.swf?clickthru=http://target</strong>" 
- width="300" height="300"&gt;
-  <strong>&lt;iframe</strong> width="300" height="300" 
-    src="<strong>banner.htm?clickthru=http://target</strong>" 
-    style="border:none"&gt;&lt;/iframe&gt;
+  data="<strong>banner.swf?clickthru=http://target</strong>" 
+  width="300" height="300"&gt;
+   <strong>&lt;iframe</strong> width="300" height="300" 
+     src="<strong>banner.htm?clickthru=http://target</strong>" 
+     style="border:none"&gt;&lt;/iframe&gt;
 &lt;/object&gt;
 </pre>
 <p>In HTML5 documents is recommended to use rather <strong>&lt;embed&gt;</strong> then <strong>&lt;object&gt;</strong>, but the latter is more compatible with older MSIE browsers.</p>
@@ -370,23 +370,26 @@
 <section>
     <h3>Swiffy Outpup HTML Modifications</h3>
 <pre>
-&lt;div id="swiffycontainer" 
-  style="width:300px; height: 120px; 
-  <strong>background-image:url(banner.jpg); 
-  cursor:hand" onclick="window.top.location=
+&lt;div id="swiffycontainer" style="width:300px; 
+  height:300px; <strong>cursor:hand" 
+  onclick="window.top.location=
   window.location.search.substring(11)"</strong>&gt;
 &lt;/div&gt;
+&lt;script&gt;
+  <strong>window.onerror = function() { document.body
+  .style.backgroundImage="url(banner.jpg)"; }</strong>
+  ...
 </pre>
-<p>This greatly simplified example counts with <strong>?clickthru=http://somelocation/</strong>, to be the only present GET parameter in URL.</p>
+<p style="margin-top:5px;font-size:36px">This greatly simplified example counts with <strong>?clickthru=http://somelocation/</strong>, to be the only present GET parameter in URL.</p>
 </section>
 
 <section>
     <h3>More Information To Previous Example:</h3>
     <ul class="incremental">
         <li>support for <strong>clickthru, clickTAG</strong> etc. are supported by Swiffy natively</li>
-        <li><strong>static image</strong> as background and <strong>click event</strong> are there matter factly for <strong>MSIE 8 and lower without Flash</strong> plug-in</li>
-        <li>or some very old Firefox versions or Android Ginger Bread OS default browser etc.</li>
-        <li>non-standard cursor: hand CSS property is there solely for old MSIEs without Flash <em>(and has no sense on touch devices, right?)</em></li>
+        <li><strong>static image</strong> as background in case of error and <strong>click event</strong> are there matter factly for <strong>MSIE 8 and lower without Flash</strong> plugin <em>(saving data transfer)</em></li>
+        <li>or some very old Firefox versions or Android <strong>Ginger Bread</strong> OS default browser etc.</li>
+        <li>non-standard <strong>cursor: hand</strong> CSS property is there solely for old MSIEs without Flash <em>(and has no sense on touch devices, right?)</em></li>
     </ul>
 </section>
 

@@ -1,0 +1,19 @@
+<Files .htaccess>
+order allow,deny
+deny from all
+</Files>
+
+#AddOutputFilterByType DEFLATE text/html text/css application/x-javascript application/xhtml audio/wave audio/ogg image/svg+xml
+
+# pridani podpory pro SVG
+AddType image/svg+xml svg svgz
+AddType audio/ogg ogg
+AddType audio/wave wav
+AddType application/xhtml+xml xhtml xhtmlz
+AddEncoding x-gzip gz tgz svgz xhtmlz
+
+AddType "text/html;charset=UTF-8" .htmlz
+AddEncoding gzip .htmlz
+
+# Zakázání výpisu obsahu adresáøù
+Options -Indexes
