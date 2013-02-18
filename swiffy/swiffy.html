@@ -309,6 +309,7 @@
     <h3>So Where's The Catch?</h3>
     <p>What are the real <strong>differences</strong> between original SFW and Swiffy format?</p>
     <p>Well, usually <strong>timing</strong> of the animations is not precisely the same, but it should not be worrying you a lot.</p>
+    <p><em style="font-size:30px">And you should have strict DOCTYPE for MSIE browsers set.</em></p>
 </section>
 
 <section>
@@ -330,12 +331,13 @@
 
 <section>
     <h3>Real World LMC Banner Examples</h3>
-    <object type="application/x-shockwave-flash" data="banner_st_ag_530x60_4.swf?clickthru=http://www.jobs.cz/" width="530" height="60">
+    <p style="font-size:28px"><a href="banner.htm">(svg.kvalitne.cz/swiffy/banner.htm)</a></p>
+    <object type="application/x-shockwave-flash" data="banner.swf?clickthru=http://www.jobs.cz/" width="530" height="60">
         <param name="allowscriptaccess" value="always">
-        Your browser do not have Flash plugin installed...
+        <em>...your browser do not have enabled Flash plugin...</em>
     </object>
     <p>SWF original, 34kB, binary</p>
-    <iframe width="530" height="60" src="banner_st_ag_530x60_4.html?clickthru=http://www.jobs.cz/" style="border:none"></iframe>
+    <iframe width="530" height="60" src="banner.html?clickthru=http://www.jobs.cz/" style="border:none"></iframe>
     <p style="font-size:37px">Swiffy conversion, 90kB textual, 46kB GZip binary</p>
 </section>
 
@@ -389,7 +391,7 @@
 <section>
     <h3>More Information To Previous Example:</h3>
     <ul class="incremental">
-        <li>support for <strong>clickthru, clickTAG, clickTag</strong> etc. are supported by Swiffy natively</li>
+        <li>support for <strong>clickthru, clickTAG and clickTag</strong> are supported by Swiffy natively</li>
         <li><strong>static image</strong> as background in case of error and <strong>click event</strong> are there matter factly only for <strong>MSIE 8- without Flash</strong> plugin <em style="font-size:27px">(saving data transfer)</em></li>
         <li>or some very old Firefox versions or Android <strong>Ginger Bread</strong> OS default browser etc.</li>
         <li>non-standard <strong>cursor: hand</strong> CSS property is there solely for old MSIEs without Flash <em>(and has no sense on touch devices, right?)</em></li>
@@ -433,7 +435,7 @@
 <section>
     <h2>Thank You For Your Attention!!</h2>
     <p style="text-align:center"><a href="gallery.html">&gt;&gt; gallery of some converted banner samples &lt;&lt;</a><br/>
-          ( http://svg.kvalitne.cz/swiffy/gallery.html )</p>
+          <em>( svg.kvalitne.cz/swiffy/gallery.html )</em></p>
 </section>
 
 <div id="progress-bar"></div>
@@ -551,7 +553,7 @@
 
   Dz.setupView = function() {
     document.body.addEventListener("click", function ( e ) {
-      if (!Dz.html.classList.contains("view")) return;
+      if (Dz.html.classList && !Dz.html.classList.contains("view")) return;
       if (!e.target || e.target.nodeName != "SECTION") return;
 
       Dz.html.classList.remove("view");
@@ -711,7 +713,7 @@
     }
     if (next) {
       next.setAttribute("aria-selected", "true");
-      if (this.html.classList.contains("view")) {
+      if (this.html.classList && this.html.classList.contains("view")) {
         next.scrollIntoView();
       }
       var video = next.$("video");
@@ -840,7 +842,7 @@
 var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
 document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
 </script>
-<script type="text/javascript">
+<script>
 try {
 var pageTracker = _gat._getTracker("UA-11950721-1");
 pageTracker._trackPageview();
