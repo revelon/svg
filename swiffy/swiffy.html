@@ -237,7 +237,7 @@
 <section>
     <p>Is there better authoring tool for <strong>creative guys</strong>, to create banner-like animations, than Adobe Flash Professional CS?</p>
     <p><em>Probably (or just maybe) not...</em></p>
-    <p>They know it, they are <strong>efficient</strong> using it and its very hard for them to learn HTML/JS animation techniques...</p>
+    <p>They know it, they are <strong>efficient</strong> using it and it's very hard for them to learn HTML/JS animation techniques...</p>
 </section>
 
 <section>
@@ -323,14 +323,17 @@
         <li>tested conversions on <strong>30 different banners</strong></li>
         <li><strong>17</strong> banners were converted <strong>successfully with hint</strong> about missing filter effects on some mobile devices only</li>
         <li><strong>5</strong> banners were converted <strong>flawlessly</strong></li>
-        <li><strong>1</strong> one banner was converted without warnings, but text-aligning <strong>was a mess</strong></li>
+        <li><strong>1</strong> banner was converted without warnings, but text-aligning <strong>was a mess</strong></li>
         <li><strong>7</strong> banners were converted with errors and <strong>were not usable</strong> at all :-(</li>
     </ul>
 </section>
 
 <section>
     <h3>Real World LMC Banner Examples</h3>
-    <embed src="banner_st_ag_530x60_4.swf?clickthru=http://www.jobs.cz/" width="530" height="60" clickthru="http://www.jobs.cz/" type="application/x-shockwave-flash" allowscriptaccess="always">
+    <object type="application/x-shockwave-flash" data="banner_st_ag_530x60_4.swf?clickthru=http://www.jobs.cz/" width="530" height="60">
+        <param name="allowscriptaccess" value="always">
+        Your browser do not have Flash plugin installed...
+    </object>
     <p>SWF original, 34kB, binary</p>
     <iframe width="530" height="60" src="banner_st_ag_530x60_4.html?clickthru=http://www.jobs.cz/" style="border:none"></iframe>
     <p style="font-size:37px">Swiffy conversion, 90kB textual, 46kB GZip binary</p>
@@ -386,8 +389,8 @@
 <section>
     <h3>More Information To Previous Example:</h3>
     <ul class="incremental">
-        <li>support for <strong>clickthru, clickTAG</strong> etc. are supported by Swiffy natively</li>
-        <li><strong>static image</strong> as background in case of error and <strong>click event</strong> are there matter factly for <strong>MSIE 8 and lower without Flash</strong> plugin <em>(saving data transfer)</em></li>
+        <li>support for <strong>clickthru, clickTAG, clickTag</strong> etc. are supported by Swiffy natively</li>
+        <li><strong>static image</strong> as background in case of error and <strong>click event</strong> are there matter factly only for <strong>MSIE 8- without Flash</strong> plugin <em style="font-size:27px">(saving data transfer)</em></li>
         <li>or some very old Firefox versions or Android <strong>Ginger Bread</strong> OS default browser etc.</li>
         <li>non-standard <strong>cursor: hand</strong> CSS property is there solely for old MSIEs without Flash <em>(and has no sense on touch devices, right?)</em></li>
     </ul>
@@ -833,7 +836,7 @@
 </script>
 
 
-<script type="text/javascript">
+<script>
 var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
 document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
 </script>
