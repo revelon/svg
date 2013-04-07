@@ -1,0 +1,17 @@
+<div class="container-float">
+    <button ng-click="moveUp()">Up</button>Player:{{x}}, {{y}} : Adjacent Mines No: {{adjacentMines}}<br>
+    <button ng-click="moveLeft()">Left</button>
+    <button ng-click="moveRight()">Right</button>
+    <button ng-click="moveDown()">Down</button>
+
+    <h2>Level: {{level}}</h2>
+</div>
+
+<table cellspacing="0" cellpadding="0" style="position: absolute;">
+    <tr ng-repeat="row in levelData.data">
+        <td ng-repeat="tile in row">
+            {{tile.mine}}
+        </td>
+    </tr>
+</table>
+<div id="player" style="top:{{y*15+8}}px; left:{{x*15+8}}px;">P</div>
