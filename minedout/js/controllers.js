@@ -18,29 +18,58 @@ function LevelCtrl($scope, $routeParams, Level) {
     $scope.title = 'Level' + $routeParams.levelId;
     $scope.level = $routeParams.levelId;
     $scope.levelData = Level;
-    $scope.x = 1, $scope.y = 1;
+    $scope.x = Def.XSIZE/2, $scope.y = Def.YSIZE-1;
     $scope.adjacentMines = 9;
+    $scope.playerIcon = "P";
+
+    $scope.keypress = function(keyEvent) {
+        console.log('keypress', keyEvent);
+        if (keyEvent.keyCode == 38) $scope.moveUp();
+        else if (keyEvent.keyCode == 40) $scope.moveDown();
+        else if (keyEvent.keyCode == 37) $scope.moveLeft();
+        else if (keyEvent.keyCode == 39) $scope.moveRight();
+    }
+
+    $scope.handleKeyboard = function($event){
+        console.log(123);
+    }
+
+    function setTileVisited() {
+        //console.log($scope.levelData);
+        $scope.levelData.data[$scope.y][$scope.x].mine = Def.VISITED;
+    }
 
     $scope.moveUp = function (){
-        $scope.y--;
+        if ($scope.y) $scope.y--;
         evaluateMovement();
     }
     $scope.moveLeft = function (){
-        $scope.x--;
+        if ($scope.x) $scope.x--;
         evaluateMovement();
     }
     $scope.moveRight = function (){
-        $scope.x++;
+        if ($scope.x < (Def.XSIZE)) $scope.x++;
         evaluateMovement();
     }
     $scope.moveDown = function (){
-        $scope.y++;
+        if ($scope.y < (Def.YSIZE-1)) $scope.y++;
         evaluateMovement();
     }
     function evaluateMovement(){
         $scope.adjacentMines = $scope.levelData.getAdjacentMinesCount($scope.x, $scope.y);
-        console.log("dsadsdas");
+        console.log("Evaluated...");
+        if ($scope.levelData.data[$scope.y][$scope.x].mine === Def.MINE ||
+            $scope.levelData.data[$scope.y][$scope.x].mine === Def.FENCE) {
+            $scope.playerIcon = "X";
+            $scope.adjacentMines = "BOOOOOOOOM";
+        } else if ($scope.y == 0) {
+            $scope.adjacentMines = "VICTORYYYY";
+        } else {
+            setTileVisited();
+        }
     }
+
+    evaluateMovement();
 }
 
 

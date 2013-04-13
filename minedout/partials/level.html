@@ -1,17 +1,18 @@
-<div class="container-float">
+<div class="container-float" ng-keypress="keypress($event)">
     <button ng-click="moveUp()">Up</button>Player:{{x}}, {{y}} : Adjacent Mines No: {{adjacentMines}}<br>
     <button ng-click="moveLeft()">Left</button>
     <button ng-click="moveRight()">Right</button>
     <button ng-click="moveDown()">Down</button>
-
+    <hr/>
     <h2>Level: {{level}}</h2>
+    <input type="text">
 </div>
 
 <table cellspacing="0" cellpadding="0" style="position: absolute;">
     <tr ng-repeat="row in levelData.data">
         <td ng-repeat="tile in row">
-            {{tile.mine}}
+            {{tile.mine | tile}}
         </td>
     </tr>
 </table>
-<div id="player" style="top:{{y*15+8}}px; left:{{x*15+8}}px;">P</div>
+<div id="player" style="top:{{y*15+8}}px; left:{{x*15+8}}px;">{{playerIcon}}</div>

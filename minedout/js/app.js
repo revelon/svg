@@ -2,7 +2,7 @@
 
 /* App Module */
 
-angular.module('minedout', ['levelServices']).
+angular.module('minedout', ['levelServices', 'viewFilters']).
   config(['$routeProvider', function($routeProvider) {
   $routeProvider.
       when('/intro', {templateUrl: 'partials/intro.html',  controller: IntroCtrl}).
@@ -14,8 +14,11 @@ angular.module('minedout', ['levelServices']).
 
 var Def = {
     FREE: 0,
-    MINE : 1,
-    FENCE : 2
+    MINE : 2,
+    FENCE : 4,
+    VISITED : 1,
+    XSIZE : 30,
+    YSIZE : 19
 }
 
 function Tile(content) {
