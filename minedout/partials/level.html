@@ -1,13 +1,15 @@
 <div class="container-float" ng-keypress="keypress($event)">
-    <button ng-click="moveUp()">Up</button>Player:{{x}}, {{y}} : Adjacent Mines No: {{adjacentMines}}<br>
+    <button ng-click="moveUp()">Up</button>Player:{{x}}, {{y}}<br>
     <button ng-click="moveLeft()">Left</button>
     <button ng-click="moveRight()">Right</button>
     <button ng-click="moveDown()">Down</button>
+    Adjacent Mines No: {{adjacentMines}}
     <hr/>
     <h2>Level: {{level}}</h2>
-    <input type="text">
+    <input type="text" autofocus>
 </div>
 
+<div ng-class="getBack()">
 <table cellspacing="0" cellpadding="0" style="position: absolute;">
     <tr ng-repeat="row in levelData.data">
         <td ng-repeat="tile in row">
@@ -15,4 +17,5 @@
         </td>
     </tr>
 </table>
+</div>
 <div id="player" style="top:{{y*15+8}}px; left:{{x*15+8}}px;">{{playerIcon}}</div>

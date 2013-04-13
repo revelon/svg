@@ -14,13 +14,14 @@ function HelpCtrl($scope) {
     $scope.title = 'Help';
 }
 
-function LevelCtrl($scope, $routeParams, Level) {
+function LevelCtrl($scope, $routeParams, $timeout, Level) {
     $scope.title = 'Level' + $routeParams.levelId;
     $scope.level = $routeParams.levelId;
     $scope.levelData = Level;
     $scope.x = Def.XSIZE/2, $scope.y = Def.YSIZE-1;
     $scope.adjacentMines = 9;
     $scope.playerIcon = "P";
+    $scope.elapsedTime = "0";
 
     $scope.keypress = function(keyEvent) {
         console.log('keypress', keyEvent);
@@ -30,13 +31,13 @@ function LevelCtrl($scope, $routeParams, Level) {
         else if (keyEvent.keyCode == 39) $scope.moveRight();
     }
 
-    $scope.handleKeyboard = function($event){
-        console.log(123);
-    }
-
     function setTileVisited() {
         //console.log($scope.levelData);
         $scope.levelData.data[$scope.y][$scope.x].mine = Def.VISITED;
+    }
+
+    $scope.getBack = function (){
+        return "area num" + $scope.adjacentMines;
     }
 
     $scope.moveUp = function (){

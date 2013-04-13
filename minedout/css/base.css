@@ -22,3 +22,24 @@ div#player {
     width: 15px;
     height: 15px;
 }
+
+div.area {
+    width: 900px;
+    height: 500px;
+}
+
+.num0 {
+    background-color: gold;
+}
+
+.num1 {
+    background-color: red;
+}
+
+.num2 {
+    background-color: navy;
+}
+
+.num3 {
+    background-color: magenta;
+}

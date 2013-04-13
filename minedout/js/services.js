@@ -24,7 +24,7 @@ angular.module('levelServices', ['ngResource']).
         this.data = generateMines(this.data, $routeParams.levelId);
 
         function generateMines (data, level) {
-            var minesCount = 50 * level;
+            var minesCount = 60 * level;
             var rowMax = 4;
             var rows = [];
             var maxIters = 10000000;
