@@ -9,6 +9,7 @@ angular.module('minedout', ['levelServices', 'viewFilters']).
       when('/outro', {templateUrl: 'partials/outro.html',  controller: OutroCtrl}).
       when('/help', {templateUrl: 'partials/help.html',  controller: HelpCtrl}).
       when('/level/:levelId', {templateUrl: 'partials/level.html', controller: LevelCtrl}).
+      when('/levelDone/:levelId', {templateUrl: 'partials/leveldone.html',  controller: LevelDoneCtrl}).
       otherwise({redirectTo: '/intro'});
 }]);
 

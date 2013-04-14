@@ -4,27 +4,30 @@
 
 angular.module('levelServices', ['ngResource']).
     factory('Level', function($resource, $routeParams){
-        this.data = [];
-        for (var y = 0; y < Def.YSIZE; y++) {
-            var row = [new Tile(Def.FENCE)];
-            for (var x = 1; x < Def.XSIZE; x++) {
-                if (y === 0 || y === (Def.YSIZE-2)) {
-                    if (x >= (Def.XSIZE/2) && x <= (Def.XSIZE/2+1)) {
-                        row[x] = new Tile(Def.FREE);
+
+        function getBlankArea() {
+            var data = [];
+            for (var y = 0; y < Def.YSIZE; y++) {
+                var row = [new Tile(Def.FENCE)];
+                for (var x = 1; x < Def.XSIZE; x++) {
+                    if (y === 0 || y === (Def.YSIZE-2)) {
+                        if (x >= (Def.XSIZE/2) && x <= (Def.XSIZE/2+1)) {
+                            row[x] = new Tile(Def.FREE);
+                        } else {
+                            row[x] = new Tile(Def.FENCE);
+                        }
                     } else {
-                        row[x] = new Tile(Def.FENCE);
+                        row[x] = new Tile(Def.FREE);
                     }
-                } else {
-                    row[x] = new Tile(Def.FREE);
                 }
+                row.push(new Tile(Def.FENCE));
+                data[y] = row;
             }
-            row.push(new Tile(Def.FENCE));
-            this.data[y] = row;
+            return data;
         }
-        this.data = generateMines(this.data, $routeParams.levelId);
 
         function generateMines (data, level) {
-            var minesCount = 60 * level;
+            var minesCount = 40 * level;
             var rowMax = 4;
             var rows = [];
             var maxIters = 10000000;
@@ -55,13 +58,10 @@ angular.module('levelServices', ['ngResource']).
             return count;
         }
 
+        this.generateLevel = function() {
+            this.data = generateMines(getBlankArea(), $routeParams.levelId);
+        }
+
+        this.generateLevel();
         return this;
     });
-
-
-angular.module('phonecatServices', ['ngResource']).
-    factory('Phone', function($resource){
-  return $resource('phones/:phoneId.json', {}, {
-    query: {method:'GET', params:{phoneId:'phones'}, isArray:true}
-  });
-});

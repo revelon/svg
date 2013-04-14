@@ -3,19 +3,22 @@
     <button ng-click="moveLeft()">Left</button>
     <button ng-click="moveRight()">Right</button>
     <button ng-click="moveDown()">Down</button>
-    Adjacent Mines No: {{adjacentMines}}
+    Adjacent Mines No: {{adjacentMines}}<br>
+    Remaining time: {{remainingTime}}
     <hr/>
     <h2>Level: {{level}}</h2>
-    <input type="text" autofocus>
+    <input type="text"> (mode:<input type="text" ng-model="replayMode" size="2">)
+    <button ng-click="restart()">Restart level</button><hr>
+    {{movementHistory}}
 </div>
 
-<div ng-class="getBack()">
+<div ng-class="getBackground()">
 <table cellspacing="0" cellpadding="0" style="position: absolute;">
     <tr ng-repeat="row in levelData.data">
         <td ng-repeat="tile in row">
-            {{tile.mine | tile}}
+            {{tile.mine | tile:replayMode}}
         </td>
     </tr>
 </table>
 </div>
-<div id="player" style="top:{{y*15+8}}px; left:{{x*15+8}}px;">{{playerIcon}}</div>
+<div id="player" style="top:{{y*15+8}}px; left:{{x*15+8}}px;">{{playerAlive | playerIco}}</div>
