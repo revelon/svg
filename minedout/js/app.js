@@ -24,5 +24,4 @@ var Def = {
 
 function Tile(content) {
     this.mine = content;
-    this.visited = false;
 }
