@@ -20,9 +20,8 @@ function LevelDoneCtrl($scope, $routeParams) {
 };
 
 function LevelCtrl($scope, $routeParams, $timeout, $location) {
-    $scope.title = 'Level' + $routeParams.levelId;
-    $scope.level = $routeParams.levelId;
-    $scope.levelData = new Level();
+    $scope.title = 'Level...';
+    $scope.levelData = new Level($routeParams.levelId);
     $scope.x, $scope.y;
     $scope.adjacentMines;
     $scope.playerAlive = true;
@@ -31,6 +30,9 @@ function LevelCtrl($scope, $routeParams, $timeout, $location) {
     $scope.replayMode = false;
     var playerOrgStatus, stop, nextAction;
 
+    $scope.level = function() {
+        return $routeParams.levelId;
+    };
     $scope.keypress = function(keyEvent) {
         console.log('keypress', keyEvent);
         if (keyEvent.keyCode == 38 || keyEvent.keyCode == 119) $scope.moveUp();
@@ -38,7 +40,6 @@ function LevelCtrl($scope, $routeParams, $timeout, $location) {
         else if (keyEvent.keyCode == 37 || keyEvent.keyCode == 97) $scope.moveLeft();
         else if (keyEvent.keyCode == 39 || keyEvent.keyCode == 100) $scope.moveRight();
     };
-
     $scope.replay = function() {
         for (var i in $scope.movementHistory) {
             var item = $scope.movementHistory[i];
@@ -97,14 +98,14 @@ function LevelCtrl($scope, $routeParams, $timeout, $location) {
             $scope.replay();
         } else if ($scope.y == 0) {
             $scope.adjacentMines = "VICTORYYYY";
-            nextAction = "/levelDone/"+$scope.level;
+            nextAction = "/levelDone/"+(1 * $scope.level() + 1);
             $scope.replay();
         } else {
             setTileVisited();
         }
     };
     $scope.restart = function() {
-        $scope.levelData.generateLevel();
+        $scope.levelData.generateLevel($routeParams.levelId);
         $scope.x = Def.XSIZE/2, $scope.y = Def.YSIZE-1;
         $scope.playerAlive = true;
         setTime();
@@ -121,7 +122,7 @@ function LevelCtrl($scope, $routeParams, $timeout, $location) {
                 $timeout.cancel(stop);
                 $scope.playerAlive = false;
                 $scope.adjacentMines = "TIMEEDOUUUT";
-                nextAction = "/levelDone/"+(1+$scope.level);
+                nextAction = "/outro";
                 $scope.replay();
             }
         }, 1000);
@@ -142,7 +143,7 @@ function LevelCtrl($scope, $routeParams, $timeout, $location) {
     };
 
     function setTime() {
-        $scope.remainingTime = 20 * $scope.level;
+        $scope.remainingTime = 20 * $scope.level();
     };
 
     function doNextAction() {

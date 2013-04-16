@@ -26,7 +26,7 @@ function Tile(content) {
     this.mine = content;
 }
 
-function Level() {
+function Level(level) {
     function getBlankArea() {
         var data = [];
         for (var y = 0; y < Def.YSIZE; y++) {
@@ -84,5 +84,5 @@ function Level() {
         this.data = generateMines(getBlankArea(), level);
     }
 
-    this.generateLevel(1);
+    this.generateLevel(level);
 };
