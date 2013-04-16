@@ -1,6 +1,6 @@
 <Files .htaccess>
 order allow,deny
-deny from all
+#deny from all
 </Files>
 
 #AddOutputFilterByType DEFLATE text/html text/css application/x-javascript application/xhtml audio/wave audio/ogg image/svg+xml
