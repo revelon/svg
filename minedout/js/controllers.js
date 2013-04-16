@@ -19,10 +19,10 @@ function LevelDoneCtrl($scope, $routeParams) {
     $scope.level = $routeParams.levelId;
 };
 
-function LevelCtrl($scope, $routeParams, $timeout, $location, Level) {
+function LevelCtrl($scope, $routeParams, $timeout, $location) {
     $scope.title = 'Level' + $routeParams.levelId;
     $scope.level = $routeParams.levelId;
-    $scope.levelData = Level;
+    $scope.levelData = new Level();
     $scope.x, $scope.y;
     $scope.adjacentMines;
     $scope.playerAlive = true;
