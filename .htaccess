@@ -1,7 +1,7 @@
-<Files .htaccess>
-order allow,deny
+#<Files .htaccess>
+#order allow,deny
 #deny from all
-</Files>
+#</Files>
 
 #AddOutputFilterByType DEFLATE text/html text/css application/x-javascript application/xhtml audio/wave audio/ogg image/svg+xml
 
@@ -15,5 +15,5 @@ AddEncoding x-gzip gz tgz svgz xhtmlz
 AddType "text/html;charset=UTF-8" .htmlz
 AddEncoding gzip .htmlz
 
-# Zakázání výpisu obsahu adresáøù
-Options -Indexes
+# Zakà»¡nëŸ¶ï¿½obsahu adresâ¹¹
+#Options -Indexes

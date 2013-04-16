@@ -5,9 +5,10 @@
     <button ng-click="moveDown()">Down</button>
     Adjacent Mines No: {{adjacentMines}}<br>
     Remaining time: {{remainingTime}}
+    Score: {{getScore()}}
     <hr/>
     <h2>Level: {{level()}} ...</h2>
-    <input type="text"> (mode:<input type="text" ng-model="replayMode" size="2">)
+    <input type="text" focus-me={{remainingTime}}> (mode:<input type="text" ng-model="replayMode" size="2">)
     <button ng-click="restart()">Restart level</button>
     <button ng-click="replay()">Replay level</button><hr>
     {{movementHistory}}

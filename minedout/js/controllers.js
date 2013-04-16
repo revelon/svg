@@ -6,8 +6,9 @@ function IntroCtrl($scope) {
     $scope.title = 'Intro';
 };
 
-function OutroCtrl($scope) {
+function OutroCtrl($scope, Score) {
     $scope.title = 'Outro';
+    Score.reset();
 };
 
 function HelpCtrl($scope) {
@@ -19,7 +20,7 @@ function LevelDoneCtrl($scope, $routeParams) {
     $scope.level = $routeParams.levelId;
 };
 
-function LevelCtrl($scope, $routeParams, $timeout, $location) {
+function LevelCtrl($scope, $routeParams, $timeout, $location, Score) {
     $scope.title = 'Level...';
     $scope.levelData = new Level($routeParams.levelId);
     $scope.x, $scope.y;
@@ -34,12 +35,26 @@ function LevelCtrl($scope, $routeParams, $timeout, $location) {
         return $routeParams.levelId;
     };
     $scope.keypress = function(keyEvent) {
-        console.log('keypress', keyEvent);
-        if (keyEvent.keyCode == 38 || keyEvent.keyCode == 119) $scope.moveUp();
-        else if (keyEvent.keyCode == 40 || keyEvent.keyCode == 115) $scope.moveDown();
-        else if (keyEvent.keyCode == 37 || keyEvent.keyCode == 97) $scope.moveLeft();
-        else if (keyEvent.keyCode == 39 || keyEvent.keyCode == 100) $scope.moveRight();
+        console.log('keypress', keyEvent.keyCode);
+        if (keyEvent.keyCode == 38 || keyEvent.keyCode == 119) {
+            $scope.moveUp();
+            keyEvent.preventDefault();
+        }
+        else if (keyEvent.keyCode == 40 || keyEvent.keyCode == 115) {
+            $scope.moveDown();
+            keyEvent.preventDefault();
+        }
+        else if (keyEvent.keyCode == 37 || keyEvent.keyCode == 97) {
+            $scope.moveLeft();
+            keyEvent.preventDefault();
+        }
+        else if (keyEvent.keyCode == 39 || keyEvent.keyCode == 100) {
+            $scope.moveRight();
+            keyEvent.preventDefault();
+        }
     };
+    //document.onkeydown = $scope.keypress;
+
     $scope.replay = function() {
         for (var i in $scope.movementHistory) {
             var item = $scope.movementHistory[i];
@@ -96,9 +111,14 @@ function LevelCtrl($scope, $routeParams, $timeout, $location) {
             $scope.adjacentMines = "BOOOOOOOOM";
             nextAction = "/outro";
             $scope.replay();
+        } else if ($scope.levelData.data[$scope.y][$scope.x].mine === Def.WORM) {
+            $scope.levelData.data[$scope.y][$scope.x].org = $scope.levelData.data[$scope.y][$scope.x].mine;
+            Score.add(15);
+            setTileVisited();
         } else if ($scope.y == 0) {
             $scope.adjacentMines = "VICTORYYYY";
             nextAction = "/levelDone/"+(1 * $scope.level() + 1);
+            Score.add($scope.remainingTime*10);
             $scope.replay();
         } else {
             setTileVisited();
@@ -112,7 +132,9 @@ function LevelCtrl($scope, $routeParams, $timeout, $location) {
         runningTime();
         evaluateMovement();
     };
-
+    $scope.getScore = function() {
+        return Score.get();
+    };
     function runningTime() {
         stop = $timeout(function() {
             if ($scope.remainingTime && $scope.playerAlive) {
@@ -143,7 +165,7 @@ function LevelCtrl($scope, $routeParams, $timeout, $location) {
     };
 
     function setTime() {
-        $scope.remainingTime = 20 * $scope.level();
+        $scope.remainingTime = 30 * $scope.level();
     };
 
     function doNextAction() {

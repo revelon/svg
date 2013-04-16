@@ -2,7 +2,7 @@
 
 /* App Module */
 
-angular.module('minedout', ['viewFilters']).
+angular.module('minedout', ['scoreServices', 'viewFilters']).
   config(['$routeProvider', function($routeProvider) {
   $routeProvider.
       when('/intro', {templateUrl: 'partials/intro.html',  controller: IntroCtrl}).
@@ -18,13 +18,14 @@ var Def = {
     MINE : 2,
     FENCE : 4,
     VISITED : 1,
+    WORM: 3,
     XSIZE : 30,
     YSIZE : 19
-}
+};
 
 function Tile(content) {
     this.mine = content;
-}
+};
 
 function Level(level) {
     function getBlankArea() {
@@ -46,8 +47,21 @@ function Level(level) {
             data[y] = row;
         }
         return data;
-    }
+    };
 
+    function generateWorms (data) {
+        var span = 14;
+        var y = Math.round(Def.YSIZE/2)-1;
+        var x = Math.round(Def.XSIZE/2) - span/2;
+        data[y][x-1].mine = Def.FREE;
+        data[y][x].mine = Def.WORM;
+        data[y][x+1].mine = Def.FREE;
+        x = x + span;
+        data[y][x-1].mine = Def.FREE;
+        data[y][x].mine = Def.WORM;
+        data[y][x+1].mine = Def.FREE;
+        return data;
+    };
     function generateMines (data, level) {
         var minesCount = 40 * level;
         var rowMax = 4;
@@ -65,11 +79,13 @@ function Level(level) {
             }
             maxIters--;
         }
-        console.log(minesCount);
-        console.log(rows);
-        return data;
+        console.log("Mines count: " + minesCount);
+        if (level > 1) {
+            data = generateWorms(data);
+        }
 
-    }
+        return data;
+    };
 
     this.getAdjacentMinesCount = function(x, y) {
         var count = 0;
@@ -78,11 +94,11 @@ function Level(level) {
         if (this.data[y][x-1] && this.data[y][x-1].mine > 1) count++;
         if (this.data[y][x+1] && this.data[y][x+1].mine > 1) count++;
         return count;
-    }
+    };
 
     this.generateLevel = function(level) {
         this.data = generateMines(getBlankArea(), level);
-    }
+    };
 
     this.generateLevel(level);
 };
