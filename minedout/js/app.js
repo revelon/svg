@@ -123,7 +123,7 @@ function Spreader(){
     };
 };
 
-function Bug(){
+function Bug() {
     this.x = Def.XSIZE;
     this.y = Def.YSIZE-1;
     var beginning = Def.XSIZE-1;
@@ -142,4 +142,48 @@ function Bug(){
             this.y = coords.y;
         }
     };
+};
+
+function Player() {
+    this.x = Def.XSIZE/2;
+    this.y = Def.YSIZE-1;
+    this.alive = true;
+    this.movementHistory = [];
+    this.adjacentMines = 0;
+    var orgStatus;
+
+    this.killed = function(reason) {
+        this.alive = false;
+        this.adjacent = reason;
+    };
+    this.replayMode = function(on) {
+        if (on) {
+            orgStatus = this.status;
+            this.alive = true;
+        } else {
+            this.status = orgStatus;
+            orgStatus = null;
+        }
+    };
+    this.moveUp = function() {
+        if (!this.alive) return false;
+        if (this.y) this.y--;
+        return true;
+    };
+    this.moveLeft = function() {
+        if (!this.alive) return false;
+        if (this.x) this.x--;
+        return true;
+    };
+    this.moveRight = function() {
+        if (!this.alive) return false;
+        if (this.x < (Def.XSIZE)) this.x++;
+        return true;
+    };
+    this.moveDown = function() {
+        if (!this.alive) return false;
+        if (this.y < (Def.YSIZE-1)) this.y++;
+        return true;
+    };
+
 };
