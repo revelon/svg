@@ -16,6 +16,7 @@ angular.module('minedout', ['scoreServices', 'viewFilters']).
 var Def = {
     FREE: 0,
     MINE : 2,
+    VISIBLEMINE : 5,
     FENCE : 4,
     VISITED : 1,
     WORM: 3,
@@ -63,7 +64,7 @@ function Level(level) {
         return data;
     };
     function generateMines (data, level) {
-        var minesCount = 40 * level;
+        var minesCount = 10 + (10 * level);
         var rowMax = 4;
         var rows = [];
         var maxIters = 10000000;
@@ -101,4 +102,44 @@ function Level(level) {
     };
 
     this.generateLevel(level);
+};
+
+function Spreader(){
+    var rowSpan = 5;
+    var yy = 2 + (Math.round(Math.random()*(Def.YSIZE-10)));
+    this.x = 1;
+    this.y = (yy+Math.ceil(rowSpan/2));
+
+    this.generate = function(data) {
+        var delta = Math.round(Math.random()*rowSpan);
+        if (this.x === Def.XSIZE) {
+            this.x = -100;
+            return false;
+        } else if (data[(yy+delta)][this.x].mine === Def.FREE) {
+            return {"x":this.x++, "y":(yy+delta)};
+        } else {
+            return true;
+        }
+    };
+};
+
+function Bug(){
+    this.x = Def.XSIZE;
+    this.y = Def.YSIZE-1;
+    var beginning = Def.XSIZE-1;
+    var stack = [];
+
+    this.addToStack = function(coords) {
+        stack.push(coords);
+    };
+    this.move = function() {
+        if (beginning >= (Def.XSIZE/2)) {
+            this.x--;
+            beginning--;
+        } else if (stack.length) {
+            var coords = stack.shift();
+            this.x = coords.x;
+            this.y = coords.y;
+        }
+    };
 };

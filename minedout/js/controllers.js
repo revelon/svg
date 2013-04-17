@@ -28,8 +28,10 @@ function LevelCtrl($scope, $routeParams, $timeout, $location, Score) {
     $scope.playerAlive = true;
     $scope.movementHistory = [];
     $scope.remainingTime;
+    $scope.spreader;
+    $scope.bug;
     $scope.replayMode = false;
-    var playerOrgStatus, stop, nextAction;
+    var playerOrgStatus, stop, stopSpreader, stopBug, nextAction;
 
     $scope.level = function() {
         return $routeParams.levelId;
@@ -102,14 +104,19 @@ function LevelCtrl($scope, $routeParams, $timeout, $location, Score) {
     };
     function evaluateMovement() {
         $scope.movementHistory.push({x:$scope.x, y:$scope.y});
+        $scope.bug.addToStack({x:$scope.x, y:$scope.y});
         $scope.adjacentMines = $scope.levelData.getAdjacentMinesCount($scope.x, $scope.y);
         console.log("Evaluated...");
         if ($scope.levelData.data[$scope.y][$scope.x].mine === Def.MINE ||
+            $scope.levelData.data[$scope.y][$scope.x].mine === Def.VISIBLEMINE ||
             $scope.levelData.data[$scope.y][$scope.x].mine === Def.FENCE) {
             $scope.levelData.data[$scope.y][$scope.x].org = $scope.levelData.data[$scope.y][$scope.x].mine;
             $scope.playerAlive = false;
             $scope.adjacentMines = "BOOOOOOOOM";
             nextAction = "/outro";
+            if (stopSpreader) {
+                $timeout.cancel(stopSpreader);
+            }
             $scope.replay();
         } else if ($scope.levelData.data[$scope.y][$scope.x].mine === Def.WORM) {
             $scope.levelData.data[$scope.y][$scope.x].org = $scope.levelData.data[$scope.y][$scope.x].mine;
@@ -119,6 +126,9 @@ function LevelCtrl($scope, $routeParams, $timeout, $location, Score) {
             $scope.adjacentMines = "VICTORYYYY";
             nextAction = "/levelDone/"+(1 * $scope.level() + 1);
             Score.add($scope.remainingTime*10);
+            if (stopSpreader) {
+                $timeout.cancel(stopSpreader);
+            }
             $scope.replay();
         } else {
             setTileVisited();
@@ -128,9 +138,21 @@ function LevelCtrl($scope, $routeParams, $timeout, $location, Score) {
         $scope.levelData.generateLevel($routeParams.levelId);
         $scope.x = Def.XSIZE/2, $scope.y = Def.YSIZE-1;
         $scope.playerAlive = true;
+        $scope.bug = new Bug();
         setTime();
         runningTime();
         evaluateMovement();
+        if ($scope.level() > 2) {
+            stopSpreader = $timeout(function() {
+                $scope.spreader = new Spreader();
+                spreaderTime();
+            }, 8000);
+        }
+        if ($scope.level() > 3) {
+            stopBug = $timeout(function() {
+                bugTime();
+            }, 6000);
+        }
     };
     $scope.getScore = function() {
         return Score.get();
@@ -165,7 +187,7 @@ function LevelCtrl($scope, $routeParams, $timeout, $location, Score) {
     };
 
     function setTime() {
-        $scope.remainingTime = 30 * $scope.level();
+        $scope.remainingTime = 50 * $scope.level();
     };
 
     function doNextAction() {
@@ -173,7 +195,36 @@ function LevelCtrl($scope, $routeParams, $timeout, $location, Score) {
             $location.path(nextAction);
             nextAction = null;
         }
-    }
+    };
+
+    function spreaderTime() {
+        stopSpreader = $timeout(function() {
+            var visMine = $scope.spreader.generate($scope.levelData.data);
+            if (visMine === false) {
+                $timeout.cancel(stopSpreader);
+            } else if (visMine !== true) {
+                $scope.levelData.data[visMine.y][visMine.x] = new Tile(Def.VISIBLEMINE);
+                spreaderTime();
+            } else {
+                spreaderTime();
+            }
+        }, 100);
+    };
+
+    function bugTime() {
+        stopBug = $timeout(function() {
+            $scope.bug.move();
+            if ($scope.x === $scope.bug.x && $scope.y === $scope.bug.y) {
+                $timeout.cancel(stopBug);
+                $scope.playerAlive = false;
+                $scope.adjacentMines = "CAAAAAUUUUGHT";
+                nextAction = "/outro";
+                $scope.replay();
+            } else {
+                bugTime();
+            }
+        }, 100);
+    };
 
     $scope.restart();
 }

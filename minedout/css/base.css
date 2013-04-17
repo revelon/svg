@@ -22,6 +22,20 @@ div#player {
     width: 15px;
     height: 15px;
 }
+div#spreader {
+    position: absolute;
+    background-color: darkgreen;
+    font-size: 10px;
+    width: 15px;
+    height: 15px;
+}
+div#bug {
+    position: absolute;
+    background-color: gray;
+    font-size: 10px;
+    width: 15px;
+    height: 15px;
+}
 
 div.area {
     width: 900px;
