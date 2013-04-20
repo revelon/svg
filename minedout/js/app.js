@@ -63,8 +63,9 @@ function Level(level) {
         data[y][x+1].mine = Def.FREE;
         return data;
     };
+
     function generateMines (data, level) {
-        var minesCount = 10 + (10 * level);
+        var minesCount = 2; //10 + (10 * level);
         var rowMax = 4;
         var rows = [];
         var maxIters = 10000000;
@@ -80,7 +81,7 @@ function Level(level) {
             }
             maxIters--;
         }
-        console.log("Mines count: " + minesCount);
+        //console.log("Mines count: " + minesCount);
         if (level > 1) {
             data = generateWorms(data);
         }
@@ -101,23 +102,45 @@ function Level(level) {
         this.data = generateMines(getBlankArea(), level);
     };
 
+    this.prepareReplay = function() {
+        for (var y = 0; y < Def.YSIZE; y++) {
+            for (var x = 0; x < (Def.XSIZE+1); x++) {
+                if (this.data[y][x].mine == Def.VISIBLEMINE) {
+                    this.data[y][x].mine = Def.FREE;
+                } else if (!this.data[y][x].org && this.data[y][x].mine === Def.VISITED) {
+                    this.data[y][x].mine = Def.FREE;
+                } if (this.data[y][x].org) {
+                    this.data[y][x].mine = this.data[y][x].org;
+                }
+            }
+        }
+    };
+
     this.generateLevel(level);
 };
 
 function Spreader(){
     var rowSpan = 5;
     var yy = 2 + (Math.round(Math.random()*(Def.YSIZE-10)));
-    this.x = 1;
-    this.y = (yy+Math.ceil(rowSpan/2));
+    this.x = -1;
+    this.y = -1;
+    this.currentMineY = null;
+
+    this.init = function() {
+        this.x = 1;
+        this.y = (yy+Math.ceil(rowSpan/2));
+    };
 
     this.generate = function(data) {
         var delta = Math.round(Math.random()*rowSpan);
         if (this.x === Def.XSIZE) {
             this.x = -100;
             return false;
-        } else if (data[(yy+delta)][this.x].mine === Def.FREE) {
+        } else if (data[(yy+delta)][this.x].mine === Def.FREE || data[(yy+delta)][this.x].mine === Def.VISITED) {
+            this.currentMineY = yy+delta;
             return {"x":this.x++, "y":(yy+delta)};
         } else {
+            this.currentMineY = null;
             return true;
         }
     };
