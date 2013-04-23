@@ -137,11 +137,10 @@ function Spreader(){
             this.x = -100;
             return false;
         } else if (data[(yy+delta)][this.x].mine === Def.FREE || data[(yy+delta)][this.x].mine === Def.VISITED) {
-            this.currentMineY = yy+delta;
+            this.currentMineY = (yy+delta);
             return {"x":this.x++, "y":(yy+delta)};
         } else {
             this.currentMineY = null;
-            return true;
         }
     };
 };
