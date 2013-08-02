@@ -17,7 +17,7 @@ def[1]['points'] = 2;   def[1]['movement'] = 70;        def[1]['sink'] = '#ship1
 def[1]['speed'] = 1.4;  def[1]['fill'] = "#4B705A";
 def[1]['x1'] = 640;     def[1]['y1'] = 80; // allowed range of initial apperiance
 def[1]['x2'] = 25;      def[1]['y2'] = 145; // corrections to the above values
-def[1]['BBwidth'] = 62; def[1]['BBheight'] = 12; // bouncing box size used to detect collisions
+def[1]['BBwidth'] = 62; def[1]['BBheight'] = 15; // bouncing box size used to detect collisions
 def[1]['fireX'] = 51;   def[1]['fireY'] = -7; // coordinates of cannon/fire position
 // ship 2
 def[2] = new Array();   def[2]['template'] = '#ship2';  def[2]['enemy'] = 1;
@@ -25,7 +25,7 @@ def[2]['points'] = 3;   def[2]['movement'] = 90;        def[2]['sink'] = '#ship2
 def[2]['speed'] = 1.2;  def[2]['fill'] = "#5C647F";
 def[2]['x1'] = 630;     def[2]['y1'] = 75;
 def[2]['x2'] = 25;      def[2]['y2'] = 145;
-def[2]['BBwidth'] = 77; def[2]['BBheight'] = 13;
+def[2]['BBwidth'] = 77; def[2]['BBheight'] = 16;
 def[2]['fireX'] = 23;   def[2]['fireY'] = -8;
 // ship 3
 def[3] = new Array();   def[3]['template'] = '#ship3';  def[3]['enemy'] = 1;
@@ -33,7 +33,7 @@ def[3]['points'] = 4;   def[3]['movement'] = 50;        def[3]['sink'] = '#ship3
 def[3]['speed'] = 1;    def[3]['fill'] = "#4F8661";
 def[3]['x1'] = 600;     def[3]['y1'] = 70;
 def[3]['x2'] = 50;      def[3]['y2'] = 135;
-def[3]['BBwidth'] = 93; def[3]['BBheight'] = 18;
+def[3]['BBwidth'] = 93; def[3]['BBheight'] = 21;
 def[3]['fireX'] = 25;   def[3]['fireY'] = -11;
 // ship 4
 def[4] = new Array();   def[4]['template'] = '#ship4';  def[4]['enemy'] = 1;
@@ -41,7 +41,7 @@ def[4]['points'] = 3;   def[4]['movement'] = 80;        def[4]['sink'] = '#ship4
 def[4]['speed'] = 1.3;  def[4]['fill'] = "#898E9D";
 def[4]['x1'] = 620;     def[4]['y1'] = 80;
 def[4]['x2'] =  20;     def[4]['y2'] = 145;
-def[4]['BBwidth'] = 105;def[4]['BBheight'] = 12;
+def[4]['BBwidth'] = 105;def[4]['BBheight'] = 15;
 def[4]['fireX'] = 76;   def[4]['fireY'] = -10;
 // ship 5
 def[5] = new Array();   def[5]['template'] = '#ship5';  def[5]['enemy'] = 1;
@@ -49,7 +49,7 @@ def[5]['points'] = 2;   def[5]['movement'] = 50;        def[5]['sink'] = '#ship5
 def[5]['speed'] = 1;    def[5]['fill'] = "#00487D";
 def[5]['x1'] = 580;     def[5]['y1'] = 85;
 def[5]['x2'] =  30;     def[5]['y2'] = 145;
-def[5]['BBwidth'] = 115;def[5]['BBheight'] = 11;
+def[5]['BBwidth'] = 115;def[5]['BBheight'] = 14;
 def[5]['fireX'] = 65;   def[5]['fireY'] = -8;
 // ship 6
 def[6] = new Array();   def[6]['template'] = '#ship6';  def[6]['enemy'] = 1;
@@ -57,7 +57,7 @@ def[6]['points'] = 4;   def[6]['movement'] = 66;        def[6]['sink'] = '#ship6
 def[6]['speed'] = 1.1;  def[6]['fill'] = "#550B80";
 def[6]['x1'] = 550;     def[6]['y1'] = 28;
 def[6]['x2'] =  20;     def[6]['y2'] = 145;
-def[6]['BBwidth'] = 142;def[6]['BBheight'] = 7;
+def[6]['BBwidth'] = 142;def[6]['BBheight'] = 11;
 def[6]['fireX'] = 80;   def[6]['fireY'] = -2;
 // ship 7
 def[7] = new Array();   def[7]['template'] = '#ship7';  def[7]['enemy'] = 1;
@@ -65,7 +65,7 @@ def[7]['points'] = 3;   def[7]['movement'] = 70;        def[7]['sink'] = '#ship7
 def[7]['speed'] = 1.2;  def[7]['fill'] = "#385A11";
 def[7]['x1'] = 620;     def[7]['y1'] = 80;
 def[7]['x2'] =  20;     def[7]['y2'] = 145;
-def[7]['BBwidth'] = 77; def[7]['BBheight'] = 12;
+def[7]['BBwidth'] = 77; def[7]['BBheight'] = 15;
 def[7]['fireX'] = 57;   def[7]['fireY'] = -3;
 // ship 8
 def[8] = new Array();   def[8]['template'] = '#ship8';  def[8]['enemy'] = 1;
@@ -73,7 +73,7 @@ def[8]['points'] = 2;   def[8]['movement'] = 40;        def[8]['sink'] = '#ship8
 def[8]['speed'] = 1.1;  def[8]['fill'] = "#7F3E04";
 def[8]['x1'] = 620;     def[8]['y1'] = 80;
 def[8]['x2'] =  20;     def[8]['y2'] = 145;
-def[8]['BBwidth'] = 90; def[8]['BBheight'] = 15;
+def[8]['BBwidth'] = 90; def[8]['BBheight'] = 18;
 def[8]['fireX'] = 80;   def[8]['fireY'] = -4;
 // ship 9
 def[9] = new Array();   def[9]['template'] = '#ship9';  def[9]['enemy'] = 0;
@@ -81,7 +81,7 @@ def[9]['points'] = -15; def[9]['movement'] = 150;       def[9]['sink'] = '#ship9
 def[9]['speed'] = 1;    def[9]['fill'] = "#99714E";
 def[9]['x1'] = 630;     def[9]['y1'] = 70;
 def[9]['x2'] =  20;     def[9]['y2'] = 150;
-def[9]['BBwidth'] = 70; def[9]['BBheight'] = 6;
+def[9]['BBwidth'] = 70; def[9]['BBheight'] = 10;
 def[9]['fireX'] = 0;    def[9]['fireY'] = 0;
 // ship 10
 def[10] = new Array();  def[10]['template'] = '#ship10';def[10]['enemy'] = 1;
@@ -89,7 +89,7 @@ def[10]['points'] = 2;  def[10]['movement'] = 100;      def[10]['sink'] = '#ship
 def[10]['speed'] = 1.1; def[10]['fill'] = "#3F4222";
 def[10]['x1'] = 630;    def[10]['y1'] = 70;
 def[10]['x2'] =  20;    def[10]['y2'] = 145;
-def[10]['BBwidth'] = 80;def[10]['BBheight'] = 12;
+def[10]['BBwidth'] = 80;def[10]['BBheight'] = 15;
 def[10]['fireX'] = 11;  def[10]['fireY'] = -2;
 
 // global initialization after onload
@@ -166,20 +166,20 @@ function keyDown2(evt) {
   var lr = Math.round(evt.beta);
   var fb = Math.round(evt.gamma);
 
-  if (lr > 2) {
+  if (lr > 3) {
     dx = -1; // right
-    withShift = (lr < 7) ? 1 : 0;
-  } else if (lr < -2) {
+    withShift = (lr < 10) ? 1 : 0;
+  } else if (lr < -3) {
     dx = 1; // left
-    withShift = (lr > -7) ? 1 : 0;
+    withShift = (lr > -10) ? 1 : 0;
   } else dx = 0; // reset lr
 
-  if (fb < -44) {
+  if (fb < -45) {
     dy = -1; // up
-    withShift = (fb > -49) ? 1 : 0;
-  } else if (fb > -39) {
+    withShift = (fb > -52) ? 1 : 0;
+  } else if (fb > -38) {
     dy = 1; // down
-    withShift = (fb < -34) ? 1 : 0;
+    withShift = (fb < -31) ? 1 : 0;
   } else dy = 0; // reset fb
   message("data: " + lr + " " + fb + " ;LR = " + dx + " , FB = " + dy);
 }
@@ -450,7 +450,7 @@ Ship.prototype.addWave = function () {
   this.wave = svgDocument.createElementNS(Basics.svgns, "ellipse");
   this.wave.setAttributeNS(null, "fill", "#7c9bfc");
   this.setWaveX();
-  this.wave.setAttributeNS(null, "cy", this.y+def[this.type]['BBheight']-.5);
+  this.wave.setAttributeNS(null, "cy", this.y+def[this.type]['BBheight']-4);
   this.wave.setAttributeNS(null, "rx", 20);
   this.wave.setAttributeNS(null, "ry", 1.5);
   this.wave.setAttributeNS(null, "visibility", "hidden");
@@ -570,7 +570,7 @@ Ship.prototype.fireAnim = function (howMany) {
     message("HIT!");
     enemyShots.removeChild(this.shot);
     this.shot = null;
-    if (destroyed(1)) return IntroOutro.endAnimDest(0 , 1, 1);
+    if (destroyed(8)) return IntroOutro.endAnimDest(0 , 1, 1);
     this.moveGoOn();
   }
 }
@@ -892,7 +892,7 @@ IntroOutro.init = function() {
   this.inputNameBox = svgDocument.getElementById("inputNameBox");
   this.endScreen = svgDocument.getElementById("endScreen");
   this.scoreShow = svgDocument.getElementById("scoreShow");
-  //playSound('introSong');
+  playSound('introSong');
   if (window.DeviceOrientationEvent) {
     window.addEventListener("deviceorientation", keyDown2, false);
   }
@@ -900,7 +900,6 @@ IntroOutro.init = function() {
 
 // initialization of game to start the play
 IntroOutro.start = function() {
-  document.documentElement.removeEventListener("keydown", IntroOutro.writeDown, false);
   document.documentElement.addEventListener("keydown", keyDown, false);
   document.documentElement.addEventListener("keyup", keyUp, false);
   this.introMask.setAttributeNS(null, "fill", "none");
@@ -920,7 +919,7 @@ IntroOutro.start = function() {
   afterLevel(1);
   if (window.DeviceOrientationEvent) {
     document.documentElement.addEventListener("click", fire2, false);
-  }  
+  }
 }
 
 // animation of intro comming
@@ -956,7 +955,6 @@ IntroOutro.end = function() {
   if (window.DeviceOrientationEvent) {
     document.documentElement.removeEventListener("click", fire2, false);
   }
-  document.documentElement.addEventListener("keydown", IntroOutro.writeDown, false);
   this.introMask.setAttributeNS(null, "fill", "none");
   if (score) this.inputNameBox.setAttributeNS(null, "visibility", "visible");
   else this.getHighScore("");
@@ -971,11 +969,10 @@ IntroOutro.end = function() {
 IntroOutro.endAnim = function(howMany, tot, first) {
   if (first && this.introRunning) return;
   if (first) { 
-    playSound('outroSong');
+    playSound('introSong');
     this.introRunning = 1;
     this.inputNameBox.setAttributeNS(null, "visibility", "hidden");
     this.introMask.setAttributeNS(null, "fill", "black");
-    document.documentElement.removeEventListener("keydown", IntroOutro.writeDown, false);
   }
   if ((tot==-1) && (howMany<=.2)) {
     this.introRunning = 0;
@@ -1036,27 +1033,7 @@ IntroOutro.endAnimDest = function(howMany, tot, first) {
 
 // keyboard hanler used to sign in to the Hall of Fame
 IntroOutro.writeDown = function(evt) { // emulation of input element
-  if(evt.preventDefault) evt.preventDefault();
-  var naming = svgDocument.getElementById('inputNameX').firstChild;
-  if (naming.data=="EnterYourNameHere" || naming.data=="Just start typing now...") naming.data = "";
-  var x = evt.keyCode;
-  if (x==27) return IntroOutro.endAnim(0, 1, 1);
-  // skip Shift, left, right, home, end, insert
-  if (x==16 || x==37 || x==39 || x==36 || x==35 || x==155) return 0;
-  if (x==13) { // enter pressed
-    var playerName = naming.data;
-    IntroOutro.getHighScore(playerName);
-    naming.data = "EnterYourNameHere";
-    return document.documentElement.removeEventListener("keydown", IntroOutro.writeDown, false);
-  }
-  if (x==8 || x==46 || x==127) {
-    var prom = naming.data;
-    prom = prom.substring(0, (prom.length-1))
-    naming.data = prom;
-  } else {
-    if (naming.data.length > 14) return 0;
-    naming.data += String.fromCharCode(x);
-  }
+    IntroOutro.getHighScore(document.getElementById('inputNameX').value);
 }
 
 // ajax method used for communication with server to obtain highscore list
@@ -1280,9 +1257,11 @@ function AudioMan () { // constructor
   this.audios = new Array();
   this.sounds = new Array();
 
+  this.enabled = 0;
+  this.type = "";
+
   this.sounds["background"] = "background";
   this.sounds["introSong"] = "ocean";
-  this.sounds["outroSong"] = "ocean";
   this.sounds["uboatCrash"] = "uboatcrash";
   this.sounds["enemyCrash"] = "enemycrash1";
   this.sounds["torpedoFire"] = "torpedo";
@@ -1291,6 +1270,12 @@ function AudioMan () { // constructor
   this.sounds["enemyAlert"] = "enemyalert";
   this.sounds["notAvail"] = "notavail";
   this.sounds["gotBonus"] = "bonus";
+
+  // do some preload
+  //for (var i in this.sounds) {
+    //console.log(this.dirPrefix + this.sounds[i] + this.type);
+    //new Audio(this.dirPrefix + this.sounds[i] + this.type);
+  //}
 }
   
 // method for playing audio sound by given id

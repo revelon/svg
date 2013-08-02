@@ -305,8 +305,16 @@
       <g font-size="17px">
         <text x="314" y="245">Write down your name</text>
         <text x="314" y="265">and confirm by Enter:</text>
-        <rect x="312" y="280" width="207" height="24" fill="white" fill-opacity=".4" stroke="#ccc" stroke-width="2" onclick="IntroOutro.letsWrite()"/>
-        <text id="inputNameX" x="317" y="298" fill="navy">EnterYourNameHere</text>
+        <!--rect x="312" y="280" width="207" height="24" fill="white" fill-opacity=".4" stroke="#ccc" stroke-width="2" onclick="IntroOutro.letsWrite()"/>
+        <text id="inputNameX" x="317" y="298" fill="navy">EnterYourNameHere</text-->
+        <foreignObject x="312" y="280" width="207" height="24">
+          <body>
+            <form onsubmit="IntroOutro.writeDown(evt)">
+              <input type="text" id="inputNameX" maxlength="15" size="20" value=""/>
+              <input type="submit" style="visibility:hidden"/>
+            </form>
+          </body>
+        </foreignObject>
       </g>
     </g>
   </g>
