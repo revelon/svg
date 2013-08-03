@@ -1,4 +1,4 @@
-// SVG Submarine Assault version 1.0
+// SVG Submarine Assault version 2.00
 // move = main view / move step, levelShips = number of ships per level, addEnSpeed = how quickly should enemy be generated
 var Basics = {move:5, levelShips:4, addEnSpeed:8500, maxDamage:30, svgns:"http://www.w3.org/2000/svg", xlinkns:"http://www.w3.org/1999/xlink" };
 var Settings = { all:1, sounds:1, sndAvail:1, clouds:1, quality:1, gradients:1, fullScreen:0, shipAppearNice:1, messages:0, strokes:1, deepAndCompass:1, panels:1, shipWave:1, niceView:1, night:1, note:". Effective to new ships only, not existing ones!" };
@@ -435,7 +435,7 @@ Ship.prototype.thumbOn = function () {
   this.thumb.setAttributeNS(Basics.xlinkns, "href", "#shipIco");
   var corr = (this.id>11) ? 270+42 : 0;
   this.thumb.setAttributeNS(null, "x", 107-corr+this.id*26);
-  this.thumb.setAttributeNS(null, "y", (this.id>11) ? 277 : 270);
+  this.thumb.setAttributeNS(null, "y", (this.id>11) ? 283 : 270);
   this.thumb.setAttributeNS(null, "fill", (def[this.type]['enemy']) ? "green" : "gold");
   eThumbs.appendChild(this.thumb);
 }
@@ -1043,7 +1043,7 @@ IntroOutro.endAnimDest = function(howMany, tot, first) {
 
 // method invoking getting of high-scoe list
 IntroOutro.getHighScore = function(playerName) {
-  var hof = {"hof":[{"name":"Marek","score":"500"},{"name":"Janca","score":"400"},{"name":"Mnouk","score":"300"}]}
+  var hof = {"hof":[{"name":"Marek","score":"300"},{"name":"Janca","score":"200"},{"name":"Mnouk","score":"100"}]}
   if (localStorage) {
     if (localStorage.hallOfFame) {
       hof = JSON.parse(localStorage.hallOfFame);
