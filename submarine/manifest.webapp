@@ -1,0 +1,20 @@
+{
+  "version": "2.0",
+  "name": "Submarine Assault",
+  "description": "Shooting game when submarine defends against enemy ships",
+  "launch_path": "/submarine/submarine2.svg",
+  "appcache_path": "/submarine/manifest.appcache",
+  "developer": {
+    "name": "Marek Raida <marek.raida@gmail.com>",
+    "url": "http://svg.kvalitne.cz/"
+  },
+  "installs_allowed_from": ["*"],
+  "icons": {
+    "128": "/submarine/icons/128.png",
+    "120": "/submarine/icons/120.png",
+    "60": "/submarine/icons/60.png",
+    "32": "/submarine/icons/120.png"
+  },
+  "orientation": "landscape-primary",
+  "fullscreen": "true"
+}

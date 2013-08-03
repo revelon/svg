@@ -1,14 +1,14 @@
 // SVG Submarine Assault version 1.0
 // move = main view / move step, levelShips = number of ships per level, addEnSpeed = how quickly should enemy be generated
-var Basics = {move:5, levelShips:4, addEnSpeed:8000, maxDamage:30, serverScoreScript:"subscore.php", svgns:"http://www.w3.org/2000/svg", xlinkns:"http://www.w3.org/1999/xlink" };
+var Basics = {move:5, levelShips:4, addEnSpeed:8500, maxDamage:30, svgns:"http://www.w3.org/2000/svg", xlinkns:"http://www.w3.org/1999/xlink" };
 var Settings = { all:1, sounds:1, sndAvail:1, clouds:1, quality:1, gradients:1, fullScreen:0, shipAppearNice:1, messages:0, strokes:1, deepAndCompass:1, panels:1, shipWave:1, niceView:1, night:1, note:". Effective to new ships only, not existing ones!" };
 var IntroOutro = { msie:0, introMask:null, startScreen:null, endScreen:null };
 var Torpedo = { arr:null, arrCY:null, arrR:null, arrRY:null, x:0, y:0, r:0, elemens:null, loadInd:null, fly:0 };
 var enemies, destroyedCount, score, hits, worldE, worldF, gameRunning, eNums, enemyShots, eDamage, shipAlertRight, shipAlertLeft, level, withShift, eThumbs, levelReached;
 var svgDocument, world, activeElements, keyHandler, mainPanel1, mainPanel0, eCompass, eDeepMeter, eMessage, eScore, eElapsed, elapsed, eLevel, subDamage;
-var dx = 0; var dy = 0; 
+var dx = 0, dy = 0, baseLR = 0, baseFB = 0;
 var supportsVibrate = "vibrate" in navigator;
-var initLR = initFB = 0;
+var setTilt = false;
 
 // array of definitions of enemies/ships
 var def = new Array();                      // more colors   #9DCEF2
@@ -161,32 +161,38 @@ function keyDown(evt) {
   }
 }
 
-function toMenu() {
-  gameRunning = score = 0;
-  IntroOutro.endAnimDest(0 , 1, 1);
-}
-
 // accelerometer events
 function keyDown2(evt) {
   var lr = Math.round(evt.beta);
   var fb = Math.round(evt.gamma);
 
-  if (lr > 4) {
+  if (setTilt) {
+    baseLR = lr;
+    baseFB = fb;
+    setTilt = false;
+  }
+
+  if (lr > (baseLR+4)) {
     dx = -1; // right
-    withShift = (lr < 11) ? 1 : 0;
-  } else if (lr < -4) {
+    withShift = (lr < (baseLR+11)) ? 1 : 0;
+  } else if (lr < (baseLR-4)) {
     dx = 1; // left
-    withShift = (lr > -11) ? 1 : 0;
+    withShift = (lr > (baseLR-11)) ? 1 : 0;
   } else dx = 0; // reset lr
 
-  if (fb < -46) {
-    dy = -1; // up
-    withShift = (fb > -51) ? 1 : 0;
-  } else if (fb > -37) {
-    dy = 1; // down
-    withShift = (fb < -30) ? 1 : 0;
+  if (fb > (baseFB+4)) {
+    dy = 1; // up
+    withShift = (!withShift && fb < (baseFB+11)) ? 1 : 0;
+  } else if (fb < (baseFB-4)) {
+    dy = -1; // down
+    withShift = (!withShift && fb > (baseFB-11)) ? 1 : 0;
   } else dy = 0; // reset fb
-  message("tilt: " + lr + " " + fb + " ;LR = " + dx + " , FB = " + dy + " , withShift = " + withShift);
+  message("base: " + baseLR + " " + baseFB + ", tilt: " + lr + " " + fb + " ;LR = " + dx + " , FB = " + dy + " , withShift = " + withShift);
+}
+
+function toMenu() {
+  gameRunning = score = 0;
+  IntroOutro.endAnimDest(0 , 1, 1);
 }
 
 // click fire event
@@ -575,7 +581,7 @@ Ship.prototype.fireAnim = function (howMany) {
     message("HIT!");
     enemyShots.removeChild(this.shot);
     this.shot = null;
-    if (destroyed(10)) return IntroOutro.endAnimDest(0 , 1, 1);
+    if (destroyed(1)) return IntroOutro.endAnimDest(0 , 1, 1);
     this.moveGoOn();
   }
 }
@@ -924,6 +930,7 @@ IntroOutro.start = function() {
   afterLevel(1);
   if (window.DeviceOrientationEvent) {
     document.documentElement.addEventListener("click", fire2, false);
+    setTilt = true;
   }
 }
 
