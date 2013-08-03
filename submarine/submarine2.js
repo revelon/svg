@@ -1,13 +1,14 @@
 // SVG Submarine Assault version 1.0
 // move = main view / move step, levelShips = number of ships per level, addEnSpeed = how quickly should enemy be generated
-var Basics = {move:5, levelShips:4, addEnSpeed:6500, maxDamage:30, serverScoreScript:"subscore.php", svgns:"http://www.w3.org/2000/svg", xlinkns:"http://www.w3.org/1999/xlink" };
-var Settings = { all:1, sounds:0, sndAvail:1, clouds:1, quality:1, gradients:1, fullScreen:0, shipAppearNice:1, messages:0, strokes:1, deepAndCompass:1, panels:1, shipWave:1, niceView:1, night:1, note:". Effective to new ships only, not existing ones!" };
-var IntroOutro = { msie:0, introMask:null, startScreen:null, inputNameBox:null, endScreen:null, scoreShow:null };
+var Basics = {move:5, levelShips:4, addEnSpeed:8000, maxDamage:30, serverScoreScript:"subscore.php", svgns:"http://www.w3.org/2000/svg", xlinkns:"http://www.w3.org/1999/xlink" };
+var Settings = { all:1, sounds:1, sndAvail:1, clouds:1, quality:1, gradients:1, fullScreen:0, shipAppearNice:1, messages:0, strokes:1, deepAndCompass:1, panels:1, shipWave:1, niceView:1, night:1, note:". Effective to new ships only, not existing ones!" };
+var IntroOutro = { msie:0, introMask:null, startScreen:null, endScreen:null };
 var Torpedo = { arr:null, arrCY:null, arrR:null, arrRY:null, x:0, y:0, r:0, elemens:null, loadInd:null, fly:0 };
 var enemies, destroyedCount, score, hits, worldE, worldF, gameRunning, eNums, enemyShots, eDamage, shipAlertRight, shipAlertLeft, level, withShift, eThumbs, levelReached;
 var svgDocument, world, activeElements, keyHandler, mainPanel1, mainPanel0, eCompass, eDeepMeter, eMessage, eScore, eElapsed, elapsed, eLevel, subDamage;
 var dx = 0; var dy = 0; 
 var supportsVibrate = "vibrate" in navigator;
+var initLR = initFB = 0;
 
 // array of definitions of enemies/ships
 var def = new Array();                      // more colors   #9DCEF2
@@ -95,7 +96,7 @@ def[10]['fireX'] = 11;  def[10]['fireY'] = -2;
 // global initialization after onload
 function init(evt) {
   svgDocument = evt.target.ownerDocument;                 activeElements = svgDocument.getElementById("activeElements");
-  world = svgDocument.getElementById("world");            enemyShots = svgDocument.getElementById("enemyShots");
+  enemyShots = svgDocument.getElementById("enemyShots");  world = svgDocument.getElementById("world");
   mainPanel1 = svgDocument.getElementById("mainPanel1");  mainPanel0 = svgDocument.getElementById("mainPanel0");
   eCompass = svgDocument.getElementById("compass");       eDeepMeter = svgDocument.getElementById("deepMeter");
   eNums = svgDocument.getElementById("nums").firstChild;  shipAlertLeft = svgDocument.getElementById("shipAlertLeft");
@@ -156,9 +157,13 @@ function keyDown(evt) {
     case 16: // shift
       withShift = 1; break;
     case 27: // esc
-      gameRunning = score = 0;
-      IntroOutro.endAnimDest(0 , 1, 1);
+      toMenu();
   }
+}
+
+function toMenu() {
+  gameRunning = score = 0;
+  IntroOutro.endAnimDest(0 , 1, 1);
 }
 
 // accelerometer events
@@ -166,22 +171,22 @@ function keyDown2(evt) {
   var lr = Math.round(evt.beta);
   var fb = Math.round(evt.gamma);
 
-  if (lr > 3) {
+  if (lr > 4) {
     dx = -1; // right
-    withShift = (lr < 10) ? 1 : 0;
-  } else if (lr < -3) {
+    withShift = (lr < 11) ? 1 : 0;
+  } else if (lr < -4) {
     dx = 1; // left
-    withShift = (lr > -10) ? 1 : 0;
+    withShift = (lr > -11) ? 1 : 0;
   } else dx = 0; // reset lr
 
-  if (fb < -45) {
+  if (fb < -46) {
     dy = -1; // up
-    withShift = (fb > -52) ? 1 : 0;
-  } else if (fb > -38) {
+    withShift = (fb > -51) ? 1 : 0;
+  } else if (fb > -37) {
     dy = 1; // down
-    withShift = (fb < -31) ? 1 : 0;
+    withShift = (fb < -30) ? 1 : 0;
   } else dy = 0; // reset fb
-  message("data: " + lr + " " + fb + " ;LR = " + dx + " , FB = " + dy);
+  message("tilt: " + lr + " " + fb + " ;LR = " + dx + " , FB = " + dy + " , withShift = " + withShift);
 }
 
 // click fire event
@@ -279,7 +284,7 @@ function generateEnemy() {
   enemies[i] = new Ship(i, type);
   enemyStatus();
   var maxCoef = (level>5) ? 5 : level;
-  window.setTimeout("generateEnemy()", Basics.addEnSpeed-maxCoef*750);
+  window.setTimeout("generateEnemy()", Basics.addEnSpeed-maxCoef*700);
 }
 
 // checking function between game levels
@@ -424,7 +429,7 @@ Ship.prototype.thumbOn = function () {
   this.thumb.setAttributeNS(Basics.xlinkns, "href", "#shipIco");
   var corr = (this.id>11) ? 270+42 : 0;
   this.thumb.setAttributeNS(null, "x", 107-corr+this.id*26);
-  this.thumb.setAttributeNS(null, "y", (this.id>11) ? 307: 294);
+  this.thumb.setAttributeNS(null, "y", (this.id>11) ? 277 : 270);
   this.thumb.setAttributeNS(null, "fill", (def[this.type]['enemy']) ? "green" : "gold");
   eThumbs.appendChild(this.thumb);
 }
@@ -450,7 +455,7 @@ Ship.prototype.addWave = function () {
   this.wave = svgDocument.createElementNS(Basics.svgns, "ellipse");
   this.wave.setAttributeNS(null, "fill", "#7c9bfc");
   this.setWaveX();
-  this.wave.setAttributeNS(null, "cy", this.y+def[this.type]['BBheight']-4);
+  this.wave.setAttributeNS(null, "cy", this.y+def[this.type]['BBheight']-3);
   this.wave.setAttributeNS(null, "rx", 20);
   this.wave.setAttributeNS(null, "ry", 1.5);
   this.wave.setAttributeNS(null, "visibility", "hidden");
@@ -459,7 +464,7 @@ Ship.prototype.addWave = function () {
 
 // method for friendly ships, releasing them after a while
 Ship.prototype.rescued = function (by) {
-  if (!this.alive) return;
+  if (!this.alive || !gameRunning) return;
   if (by==20) { // first time
     this.ship.setAttributeNS(null, "stroke", "none");
     if (this.wave) this.wave.setAttributeNS(null, "visibility", "hidden");
@@ -570,7 +575,7 @@ Ship.prototype.fireAnim = function (howMany) {
     message("HIT!");
     enemyShots.removeChild(this.shot);
     this.shot = null;
-    if (destroyed(8)) return IntroOutro.endAnimDest(0 , 1, 1);
+    if (destroyed(10)) return IntroOutro.endAnimDest(0 , 1, 1);
     this.moveGoOn();
   }
 }
@@ -667,11 +672,11 @@ Settings.decOpt = function(evt) {
 }
 
 // method setting on or off debugging messages
-Settings.setMessages = function(e) {
-  e.target.setAttributeNS(null, "fill", this.decode(this.messages = (this.messages) ? 0 : 1));
+Settings.setMessages = function() {
+  this.messages = (this.messages) ? 0 : 1;
   var x = svgDocument.getElementById("message");
   x.setAttributeNS(null, "visibility", (this.messages) ? "visible" : "hidden");
-  if (this.messages) message("Debugging messages are ON (slower)!");
+  if (this.messages) message("Debugging messages are ON");
 }
 
 // method setting on or off real periscope view or rectangular
@@ -871,10 +876,13 @@ Settings.setSounds = function (evt) {
   }
   if (this.sndAvail && this.sounds) {
     this.sounds = 0;
+    audio.enabled = 0;
+    audio.reset();
     if (evt) evt.target.setAttributeNS(null, "fill", "black"); 
     message("Sound effects disabled!");
   } else if (this.sndAvail) {
     this.sounds = 1;
+    audio.enabled = 1;
     if (evt) evt.target.setAttributeNS(null, "fill", "green"); 
     message("Sound effects enabled!");
   }
@@ -889,9 +897,7 @@ IntroOutro.init = function() {
   try { navigator.mimeTypes["image/svg"]; } catch (e) { this.msie = 1; }
   this.introMask = svgDocument.getElementById("introMask");
   this.startScreen = svgDocument.getElementById("startScreen");
-  this.inputNameBox = svgDocument.getElementById("inputNameBox");
   this.endScreen = svgDocument.getElementById("endScreen");
-  this.scoreShow = svgDocument.getElementById("scoreShow");
   playSound('introSong');
   if (window.DeviceOrientationEvent) {
     window.addEventListener("deviceorientation", keyDown2, false);
@@ -911,11 +917,10 @@ IntroOutro.start = function() {
   elapsed = withShift = 0;
   window.setTimeout("timeElapsed()", 2000);
   destroyed(0);
-  var w = world.getCTM();
-  worldE = w.e; worldF = w.f;
+  world.setAttribute("transform", "matrix(1 0 0 1 0 0)");
+  worldE = 0; worldF = 0;
   level = 1;
   eLevel.data = "Level: "+level;
-  //window.setTimeout("generateEnemy()", 1000);
   afterLevel(1);
   if (window.DeviceOrientationEvent) {
     document.documentElement.addEventListener("click", fire2, false);
@@ -944,7 +949,7 @@ IntroOutro.startAnim = function(howMany, tot, first) {
     this.startScreen.setAttributeNS(null, "visibility", "hidden");
     this.introMask.setAttributeNS(null, "stroke", "none");
   }
-  window.setTimeout("IntroOutro.startAnim("+howMany+","+tot+",0)", 40);
+  window.setTimeout("IntroOutro.startAnim("+howMany+","+tot+",0)", 20);
 }
 
 // initialization of game to stop the play
@@ -956,13 +961,13 @@ IntroOutro.end = function() {
     document.documentElement.removeEventListener("click", fire2, false);
   }
   this.introMask.setAttributeNS(null, "fill", "none");
-  if (score) this.inputNameBox.setAttributeNS(null, "visibility", "visible");
-  else this.getHighScore("");
   while (activeElements.hasChildNodes()) activeElements.removeChild(activeElements.firstChild);
   while (enemyShots.hasChildNodes()) enemyShots.removeChild(enemyShots.firstChild);
   while (eThumbs.hasChildNodes()) eThumbs.removeChild(eThumbs.firstChild);
   if (Torpedo.elemens && Torpedo.elemens.hasChildNodes())
     while (Torpedo.elemens.hasChildNodes()) Torpedo.elemens.removeChild(Torpedo.elemens.firstChild);
+  if (score) this.getHighScore(prompt("Your score is " + score + ", write your name, captain", ""));
+  else this.getHighScore("");
 }
 
 // animation of intro comming after outro
@@ -971,7 +976,6 @@ IntroOutro.endAnim = function(howMany, tot, first) {
   if (first) { 
     playSound('introSong');
     this.introRunning = 1;
-    this.inputNameBox.setAttributeNS(null, "visibility", "hidden");
     this.introMask.setAttributeNS(null, "fill", "black");
   }
   if ((tot==-1) && (howMany<=.2)) {
@@ -1024,37 +1028,27 @@ IntroOutro.endAnimDest = function(howMany, tot, first) {
   this.introMask.setAttributeNS(null, "fill-opacity", howMany);
   if((tot==1) && (howMany>=.9)) {
     tot = -1; 
-    this.scoreShow.firstChild.data = "Your score is: "+score;
     this.endScreen.setAttributeNS(null, "visibility", "visible");
     this.introMask.setAttributeNS(null, "stroke", "#000");
   }
   window.setTimeout("IntroOutro.endAnimDest("+howMany+","+tot+",0)", 40);
 }
 
-// keyboard hanler used to sign in to the Hall of Fame
-IntroOutro.writeDown = function(evt) { // emulation of input element
-    IntroOutro.getHighScore(document.getElementById('inputNameX').value);
-}
-
-// ajax method used for communication with server to obtain highscore list
-IntroOutro.send_xmlhttprequest = function(serve, methode, url, content, headers) { 
-  var xmlhttp = (window.XMLHttpRequest ? new XMLHttpRequest : (window.ActiveXObject ? new ActiveXObject("Microsoft.XMLHTTP") : null));
-  if (!xmlhttp) return 0; // MSIE ActiveX/AJAX doesn't work in pure SVG and ASV, so use directly ASV getUrl
-  xmlhttp.open(methode, url);
-  xmlhttp.onreadystatechange = function() { serve(xmlhttp); };
-  if (headers) for(var key in headers) xmlhttp.setRequestHeader(key, headers[key]);
-  xmlhttp.send(content);
-  return 1;
-}
-
 // method invoking getting of high-scoe list
 IntroOutro.getHighScore = function(playerName) {
-  var tmpAdr = Basics.serverScoreScript + ((playerName && score) ? "?name="+this.urlEncode(playerName)+"&score="+score : "");
-  var r = (!this.msie) ? this.send_xmlhttprequest(IntroOutro.showHighScore, "GET", tmpAdr) : getURL(tmpAdr, IntroOutro.showHighScore);
+  var hof = {"hof":[{"name":"Marek","score":"500"},{"name":"Janca","score":"400"},{"name":"Mnouk","score":"300"}]}
+  if (localStorage) {
+    if (localStorage.hallOfFame) {
+      hof = JSON.parse(localStorage.hallOfFame);
+    }
+    if (playerName) {
+      if (playerName.length > 14) playerName = playerName.substring(0, 15);
+      hof.hof.push({"name":playerName,"score":score});
+    }
+    localStorage.hallOfFame = JSON.stringify(hof);
+  }
+  this.showHighScore(hof.hof);
 }
-
-// helper function used to sort high scores
-IntroOutro.sortByInt = function(item1, item2) { return item2 - item1; }
 
 // mouseover highlighting method for some intro boxes
 IntroOutro.over = function(evt, x) {
@@ -1067,80 +1061,36 @@ IntroOutro.over = function(evt, x) {
   }
 }
 
-// helper function letting peoble better understand way in which they should sign in
-IntroOutro.letsWrite = function() {
-  var n = svgDocument.getElementById('inputNameX').firstChild;
-  if (!n.data || (n.data == "EnterYourNameHere"))
-  n.data = "Just start typing now...";
-}
-
-// method called from ajax, real parsing of acquired data and putting them show
-IntroOutro.showHighScore = function(xmlhttp) {
-  var rows = new Array();
-  var hallOfFame = new Array();
-  if ((IntroOutro.msie && !xmlhttp.success) || (!IntroOutro.msie && xmlhttp.readyState != 4)) var incomingData = "000#-|-#No data available";
-  else var incomingData = (IntroOutro.msie) ? xmlhttp.content : xmlhttp.responseText;
-  svgDocument.getElementById("inputNameBox").setAttributeNS(null, "visibility", "hidden");
-  rows = incomingData.split("\n");
-  if (!rows.length) return;
-  if (incomingData.indexOf("#-|-#")==-1) return;
-  for (var i = 0; i < rows.length; i++) {
-    if (rows[i]) hallOfFame[i] = rows[i].split("#-|-#");
-  }
+// method showing high score table
+IntroOutro.showHighScore = function(scores) {
   var fame = svgDocument.getElementById('hallOfFame');
   while (fame.hasChildNodes()) fame.removeChild(fame.firstChild);
-  // resort arrays
-  var tmpArray = new Array();
-  for (var i = hallOfFame.length-1; i>=0; i--) tmpArray[i] = hallOfFame[i][0];
-  tmpArray.sort(IntroOutro.sortByInt);
-  var topTen = (tmpArray.length>15) ? 15 : tmpArray.length;
+  // resort score
+  scores.sort(function (a, b) {
+    if (1*a.score > 1*b.score)
+      return -1;
+    if (1*a.score < 1*b.score)
+      return 1;
+    // a must be equal to b
+    return 0;
+  });
+
+  var topTen = (scores.length>13) ? 13 : scores.length;
   var total = 0;
-  for (var y = 0; y < topTen; y++) {
-    for (var i = 0; i < hallOfFame.length; i++) {
-      if ((hallOfFame[i][0] == tmpArray[y]) && (total<topTen)) {
-        // create text span
-        var fameSpan = svgDocument.createElementNS(Basics.svgns, "tspan");
-        fameSpan.setAttributeNS(null, "x", 48); fameSpan.setAttributeNS(null, "dx", 0);
-        fameSpan.setAttributeNS(null, "dy", 14); fameSpan.appendChild(document.createTextNode(hallOfFame[i][0]));
-        fame.appendChild(fameSpan);
-        fameSpan = svgDocument.createElementNS(Basics.svgns, "tspan");
-        fameSpan.setAttributeNS(null, "x", 48); fameSpan.setAttributeNS(null, "dx", 40);
-        fameSpan.setAttributeNS(null, "dy", 0); fameSpan.appendChild(document.createTextNode('................... '+ hallOfFame[i][1]));
-        fame.appendChild(fameSpan);
-        hallOfFame[i][0] = -1; // some kind of reset
-        total++;
-      }
-    }
+  while (total < topTen) {
+    var sc = scores.shift();
+    // create text span
+    var fameSpan = svgDocument.createElementNS(Basics.svgns, "tspan");
+    fameSpan.setAttributeNS(null, "x", 48); fameSpan.setAttributeNS(null, "dx", 0);
+    fameSpan.setAttributeNS(null, "dy", 16); fameSpan.appendChild(document.createTextNode(sc.score));
+    fame.appendChild(fameSpan);
+    fameSpan = svgDocument.createElementNS(Basics.svgns, "tspan");
+    fameSpan.setAttributeNS(null, "x", 48); fameSpan.setAttributeNS(null, "dx", 40);
+    fameSpan.setAttributeNS(null, "dy", 0); fameSpan.appendChild(document.createTextNode('................... '+ sc.name));
+    fame.appendChild(fameSpan);
+    total++;
   }
   message('Acquiring and showing up high-score list completed...');
-}
-
-// helper function preventing some not-acceptable characters to be entered into highscore list
-IntroOutro.urlEncode = function(plaintext) {
-	var safechars = "0123456789" +					// Numeric
-  	"ABCDEFGHIJKLMNOPQRSTUVWXYZ" +	// Alphabetic
-		"abcdefghijklmnopqrstuvwxyz" +
-		"-_.!~*'()";					// RFC2396 Mark characters 
-	var hex = "0123456789ABCDEF";
-	var encoded = "";
-	for (var i = 0; i < plaintext.length; i++ ) {
-		var ch = plaintext.charAt(i);
-	  if (ch == " ") encoded += "+";				// x-www-urlencoded, rather than %20
-		else if (safechars.indexOf(ch) != -1) encoded += ch;
-    else {
-		  var charCode = ch.charCodeAt(0);
-			if (charCode > 255) {
-			  alert( "Unicode Character '" + ch + "' cannot be encoded using standard URL encoding.\n" +
-				       "(URL encoding only supports 8-bit characters.)\n" + "A space (+) will be substituted." );
-				encoded += "+";
-			} else {
-				encoded += "%";
-				encoded += hex.charAt((charCode >> 4) & 0xF);
-				encoded += hex.charAt(charCode & 0xF);
-			}
-		}
-	}
-	return encoded;
 }
 
 
@@ -1246,19 +1196,17 @@ Torpedo.fireAnim = function() {
 */
 function AudioMan () { // constructor
   this.enabled = 1; // flag, on/off whether sound is enabled
-  try {
+  this.type = ".wav" ;
+  /*try {
     var test = new Audio("");
     this.type = (test.canPlayType && test.canPlayType("audio/mp3")) ? ".mp3" : ".wav";
   } catch (e) {
     this.enabled = 0; // for browsers not supporting it yet
     this.type = "";
-  }
+  }*/
   this.dirPrefix = "sounds/";
   this.audios = new Array();
   this.sounds = new Array();
-
-  this.enabled = 0;
-  this.type = "";
 
   this.sounds["background"] = "background";
   this.sounds["introSong"] = "ocean";
@@ -1272,12 +1220,12 @@ function AudioMan () { // constructor
   this.sounds["gotBonus"] = "bonus";
 
   // do some preload
-  //for (var i in this.sounds) {
-    //console.log(this.dirPrefix + this.sounds[i] + this.type);
-    //new Audio(this.dirPrefix + this.sounds[i] + this.type);
-  //}
+  for (var i in this.sounds) {
+    var a = new Audio(this.dirPrefix + this.sounds[i] + this.type);
+    a.setAttribute("preload", "auto");
+  }
 }
-  
+
 // method for playing audio sound by given id
 AudioMan.prototype.play = function (what, loop) {
   if (!this.enabled || !this.type) return;

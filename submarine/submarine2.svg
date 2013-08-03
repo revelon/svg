@@ -1,5 +1,5 @@
-<svg viewBox="15 25 566 340" width="100%" height="100%" onload="init(evt)" id="svgMain" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" font-family="sans-serif">
-  <title>SVG Submarine Assault 1.01x</title>
+<svg viewBox="24 17 553 321" width="100%" height="100%" onload="init(evt)" id="svgMain" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" font-family="sans-serif">
+  <title>SVG Submarine Assault 2 Touch</title>
   <script type="text/ecmascript" xlink:href="submarine2.js"/>
   <defs>
     <path id="ship2" transform="translate(-150 -264) scale(.5)" stroke-width="3" d="M 264.65997,519.25418 C 302.79323,535.16408 297.48992,553.59936 297.48992,553.59936 L 450.52804,553.59936 L 477.80215,526.32524 L 415.67777,526.83032 L 415.67777,519.00164 L 400.77802,519.00164 L 401.03056,511.67803 L 391.68665,511.93057 L 391.93919,487.43437 L 384.61558,486.92929 L 384.86812,512.68818 L 370.73658,513.6873 L 378.31761,455.48189 L 368.20721,513.71631 L 361.63461,513.95088 L 361.88715,510.1628 L 344.71456,510.92041 L 344.46202,517.48641 L 326.53181,516.98133 L 326.78434,521.27449 L 319.71328,521.02194 L 319.96582,527.58793 L 264.65997,519.25418 z "/>
@@ -97,12 +97,12 @@
     </clipPath>
   </defs>
 
-<rect x="0" y="0" width="600" height="380" fill="#000" stroke="none" id="mainPanel1"/>
+<rect x="-500" y="-500" width="1500" height="1000" fill="#000" stroke="none" id="mainPanel1"/>
 
   <g clip-path="url(#periscope)" id="perisView">
   
     <g id="world" transform="matrix(1 0 0 1 0 0)">
-      <rect x="-70" y="0" width="1030" height="150" fill="url(#daySky)" id="skyRect"/>
+      <rect x="-70" y="-50" width="1030" height="200" fill="url(#daySky)" id="skyRect"/>
       <circle cx="200" cy="150" r="40" fill="red" stroke="orange" stroke-width="3" id="sun"/>
       <rect x="-70" y="150" width="1030" height="180" fill="url(#daySea)" id="seaRect"/>
       <ellipse cx="-70" cy="152" rx="77" ry="10" fill="gold"/>
@@ -159,19 +159,22 @@
   <rect x="102" y="55" width="326" height="190" fill="none" stroke="#445" rx="100" stroke-width="3" id="periOv"/>
 
   <g id="dashboardPanels" fill="#333">
-    <rect x="10" y="190" width="85" height="170" stroke="#445" rx="5" stroke-width="2"/>
-    <rect x="10" y="90" width="85" height="90" stroke="#445" rx="5" stroke-width="2"/>
-    <rect x="434" y="190" width="152" height="170" stroke="#445" rx="5" stroke-width="2"/>
-    <rect x="434" y="90" width="152" height="40" stroke="#445" rx="5" stroke-width="2"/>
-    <rect x="434" y="140" width="152" height="40" stroke="#445" rx="5" stroke-width="2"/>
+    <rect x="25" y="190" width="70" height="146" stroke="#445" rx="5" stroke-width="2"/>
+    <rect x="25" y="90" width="70" height="90" stroke="#445" rx="5" stroke-width="2"/>
+    <rect x="434" y="190" width="142" height="146" stroke="#445" rx="5" stroke-width="2"/>
+    <rect x="434" y="90" width="142" height="40" stroke="#445" rx="5" stroke-width="2"/>
+    <rect x="434" y="140" width="142" height="40" stroke="#445" rx="5" stroke-width="2"/>
     <rect x="125" y="18" width="280" height="31" stroke="#445" rx="5" stroke-width="2"/>
-    <rect x="60" y="18" width="59" height="62" stroke="#445" rx="5" stroke-width="2"/>
     <rect x="411" y="18" width="59" height="62" stroke="#445" rx="5" stroke-width="2"/>
-    <rect x="480" y="18" width="105" height="62" stroke="#445" rx="5" stroke-width="2"/>
-    <rect x="10" y="18" width="41" height="62" stroke="#445" rx="5" stroke-width="2"/>
+    <rect x="477" y="18" width="99" height="62" stroke="#445" rx="5" stroke-width="2"/>
+    <rect x="60" y="18" width="59" height="62" stroke="#445" rx="5" stroke-width="2"/>
+    <g onclick="toMenu()">
+      <rect x="25" y="18" width="29" height="62" stroke="#445" rx="5" stroke-width="2"/>
+      <text x="28" y="50" fill="gold" font-size="12px">ESC</text>
+    </g>
 
-    <rect x="105" y="274" width="320" height="46" stroke="#445" rx="5" stroke-width="2"/>
-    <rect x="105" y="330" width="320" height="30" stroke="#445" rx="5" stroke-width="2"/>
+    <rect x="105" y="250" width="320" height="46" stroke="#445" rx="5" stroke-width="2"/>
+    <rect x="105" y="306" width="320" height="30" stroke="#445" rx="5" stroke-width="2"/>
   </g>
 
   <g stroke-width="1px" stroke="#444" shape-rendering="optimizeSpeed">
@@ -187,9 +190,8 @@
     <circle cx="200" cy="150" r="4" fill="none"/>
   </g>
 
-  <g transform="translate(503 230) scale(.35)" id="compassGroup" visibility="visible">
-    <text x="0" y="-60" fill="#99b" font-size="61px" font-weight="bold">N</text>
-    <circle cx="20" cy="150" r="196" fill="white" stroke="#222" stroke-width="10"/>
+  <g transform="translate(498 210) scale(.35)" id="compassGroup" visibility="visible">
+    <circle cx="20" cy="150" r="196" fill="white" stroke="#222" stroke-width="8"/>
     <circle cx="20" cy="150" r="188" fill="#222"/>
     <circle cx="10" cy="140" r="175" fill="#444"/>
     <ellipse cx="-20" cy="35" rx="120" ry="60" fill="url(#gradComp)" transform="rotate(-30,-20,85)" id="compassGrad"/>
@@ -210,41 +212,39 @@
   </g>
 
   <g id="deepGroup" visibility="visible">
-    <text x="33" y="210" fill="#aca" font-weight="bold">Deep</text>
-    <text x="32" y="333" fill="#aca" font-weight="bold">Meter</text>
-    <rect x="38" y="220" width="30" height="85" fill="url(#deep)" id="deepGrad"/>
-    <rect x="35" y="267" width="36" height="6" fill="none" stroke="gold" stroke-width="2px" id="deepMeter"/>
+    <text x="40" y="210" fill="#aca" font-weight="bold">Deep</text>
+    <text x="39" y="323" fill="#aca" font-weight="bold">Meter</text>
+    <rect x="44" y="220" width="30" height="85" fill="url(#deep)" id="deepGrad"/>
+    <rect x="41" y="267" width="36" height="6" fill="none" stroke="gold" stroke-width="2px" id="deepMeter"/>
   </g>
-
-  <text x="170" y="260" fill="#444" font-size="14px" font-weight="bold">SVG . Submarine . Assault</text>
 
   <g fill="orange" stroke="none" font-weight="bold">
     <g id="thumbs"/>
-    <text x="120" y="290" font-size="15px">Number of sinked ships:</text>
-    <text x="310" y="291" id="nums" font-size="17px">0 of 0 of 0</text>
+    <text x="120" y="266" font-size="15px">Number of sinked ships:</text>
+    <text x="310" y="267" id="nums" font-size="17px">0 of 0 of 0</text>
 
-    <text x="470" y="115" font-size="15px">Score :</text>
-    <text x="540" y="116" id="score" font-size="17px">0</text>
+    <text x="457" y="115" font-size="15px">Score :</text>
+    <text x="527" y="116" id="score" font-size="17px">0</text>
   </g>
 
   <g fill="#ddd" stroke="none" font-weight="bold">
-    <rect x="110" y="331" width="310" height="28" fill="url(#dam)" id="subDamage"/>
-    <text x="150" y="350" font-size="15px">Damage factor of U-Boat:</text>
-    <text x="345" y="351" id="damage" font-size="17px">0 %</text>
+    <rect x="110" y="307" width="310" height="28" fill="url(#dam)" id="subDamage"/>
+    <text x="150" y="326" font-size="15px">Damage factor of U-Boat:</text>
+    <text x="345" y="327" id="damage" font-size="17px">0 %</text>
 
-    <text x="485" y="40" font-size="15px">Time elapsed</text>
-    <text x="525" y="65" id="elapsed" font-size="17px">0 s</text>
+    <text x="478" y="40" font-size="15px">Time elapsed</text>
+    <text x="518" y="65" id="elapsed" font-size="17px">0 s</text>
   </g>
 
   <g stroke="none" font-size="17px" font-weight="bold">
-    <text x="20" y="140" fill="#98F4EC" id="level">Level: 1</text>
-    <text x="442" y="165" id="torpLoad" fill="green">Torpedo ready...</text>
+    <text x="27" y="140" fill="#98F4EC" id="level">Level: 1</text>
+    <text x="437" y="165" id="torpLoad" fill="green">Torpedo ready...</text>
   </g>
 
   <text x="147" y="110" fill="blue" id="levelReached" stroke="white" font-size="33px" font-weight="bold" visibility="hidden">Level 1, day 1</text>
-  <text x="0" y="170" fill="white" id="controls" stroke="black" font-size="23px" font-weight="bold" visibility="hidden">
-    <tspan x="130" dy="0">Game control by cursor</tspan>
-    <tspan x="147" dy="30">keys and Space key!</tspan>
+  <text x="0" y="170" fill="white" id="controls" stroke="black" font-size="22px" font-weight="bold" visibility="hidden">
+    <tspan x="112" dy="0">Control by cursor keys/space</tspan>
+    <tspan x="137" dy="30">or device tilt/screen tap!</tspan>
   </text>
 
   <g visibility="hidden" fill="red" stroke="none" font-size="22px">
@@ -265,57 +265,34 @@
       <text x="310" y="155">Assault</text>
     </g>
     <g fill="black" stroke="black" stroke-width="0" font-size="14px">
-      <text x="25" y="150">by Marek Raida</text>
-      <text x="25" y="172">September 2013 (version 1.01x)</text>
-      <text x="30" y="350" font-size="18px">Game controls: move by cursor keys, shot by Space (plus Shift/Esc)</text>
+      <text x="35" y="150">by Marek Raida</text>
+      <text x="35" y="172">September 2006 / August 2013</text>
+      <text x="28" y="274" font-size="18px">Aim by Cursor Keys or tilt mobile device, fire by Space or Tap screen</text>
     </g>
-    <g font-weight="bold" font-size="16px" fill="#225" stroke="#000" stroke-width=".2">
-      <text x="475" y="257">Start game</text>
-      <rect x="460" y="240" width="110" height="22" stroke-width="2" rx="3" fill="#fff" fill-opacity=".1" onclick="IntroOutro.startAnim(0, 1, 1)" onmouseover="IntroOutro.over(evt, 1)" onmouseout="IntroOutro.over(evt, 0)"/>
+    <g font-weight="bold" font-size="22px" fill="#113" stroke="#000" stroke-width=".2">
+      <text x="225" y="237">Start Game</text>
+      <rect x="220" y="210" width="130" height="40" stroke-width="2" rx="3" fill="#fff" fill-opacity=".1" onclick="IntroOutro.startAnim(0, 1, 1)" onmouseover="IntroOutro.over(evt, 1)" onmouseout="IntroOutro.over(evt, 0)"/>
   
-      <text x="469" y="287">High Scores</text>
-      <rect x="460" y="270" width="110" height="22" stroke-width="2" rx="3" fill="#fff" fill-opacity=".1" onclick="IntroOutro.highScoreDest(0, 1, 1)" onmouseover="IntroOutro.over(evt, 1)" onmouseout="IntroOutro.over(evt, 0)"/>
+      <text x="31" y="312">High Scores</text>
+      <rect x="27" y="290" width="138" height="30" stroke-width="2" rx="3" fill="#fff" fill-opacity=".1" onclick="IntroOutro.highScoreDest(0, 1, 1)" onmouseover="IntroOutro.over(evt, 1)" onmouseout="IntroOutro.over(evt, 0)"/>
   
-      <text x="472" y="317">Information</text>
-      <rect x="460" y="300" width="110" height="22" stroke-width="2" rx="3" fill="#fff" fill-opacity=".1" onclick="document.getElementById('credits').setAttribute('visibility', 'visible')" onmouseover="IntroOutro.over(evt, 1)" onmouseout="IntroOutro.over(evt, 0)"/>
+      <text x="448" y="312">Information</text>
+      <rect x="444" y="290" width="130" height="30" stroke-width="2" rx="3" fill="#fff" fill-opacity=".1" onclick="document.getElementById('credits').setAttribute('visibility', 'visible')" onmouseover="IntroOutro.over(evt, 1)" onmouseout="IntroOutro.over(evt, 0)"/>
 
-      <g fill="black" font-size="14px" font-weight="normal">
-        <text x="353" y="287">Firefox profile</text>
-        <rect x="340" y="270" width="110" height="22" stroke-width="2" rx="3" fill="#fff" fill-opacity=".1" onclick="Settings.setFirefox(evt)" onmouseover="IntroOutro.over(evt, 1)" onmouseout="IntroOutro.over(evt, 0)"/>
-
-        <text x="342" y="317">All options switch</text>
-        <rect x="340" y="300" width="110" height="22" stroke-width="2" rx="3" fill="#fff" fill-opacity=".1" onclick="Settings.setAllOptions(evt)" onmouseover="IntroOutro.over(evt, 1)" onmouseout="IntroOutro.over(evt, 0)"/>
-
-        <text x="230" y="317">Sounds on/off</text>
-        <rect x="220" y="300" width="110" height="22" stroke-width="2" rx="3" fill="#fff" fill-opacity=".1" onclick="Settings.setSounds(evt)" onmouseover="IntroOutro.over(evt, 1)" onmouseout="IntroOutro.over(evt, 0)"/>
-
+      <g fill="black" font-size="18px" font-weight="normal">
+        <text x="229" y="312">Sounds on/off</text>
+        <rect x="220" y="290" width="130" height="30" stroke-width="2" rx="3" fill="#fff" fill-opacity=".1" onclick="Settings.setSounds(evt)" onmouseover="IntroOutro.over(evt, 1)" onmouseout="IntroOutro.over(evt, 0)"/>
       </g>
     </g>
+    <!--rect x="75" y="100" width="24" height="24" stroke-width="0" fill="#fff" fill-opacity=".15" onclick="Settings.setMessages(evt)"/-->
   </g>
 
   <g id="endScreen" visibility="hidden">
     <g onclick="IntroOutro.endAnim(0, 1, 1)">
       <use xlink:href="#outro"/>
       <text x="85" y="105" fill="gray" stroke="white" stroke-width="2" fill-opacity=".5" font-size="72px" font-weight="bold">GAME OVER</text>
-      <rect x="30" y="120" width="270" height="225" fill="white" fill-opacity=".5" stroke="#ddd" stroke-width="5" rx="10"/>
-      <text x="20" y="126" stroke="none" fill="#111" font-weight="bold" id="hallOfFame"> </text>
-    </g>
-    <g id="inputNameBox" visibility="hidden" fill="black" stroke="black" stroke-width=".6" font-weight="bold" font-size="20px" onclick="IntroOutro.letsWrite()">
-      <text x="314" y="220" id="scoreShow">Your score is: 0</text>
-      <g font-size="17px">
-        <text x="314" y="245">Write down your name</text>
-        <text x="314" y="265">and confirm by Enter:</text>
-        <!--rect x="312" y="280" width="207" height="24" fill="white" fill-opacity=".4" stroke="#ccc" stroke-width="2" onclick="IntroOutro.letsWrite()"/>
-        <text id="inputNameX" x="317" y="298" fill="navy">EnterYourNameHere</text-->
-        <foreignObject x="312" y="280" width="207" height="24">
-          <body>
-            <form onsubmit="IntroOutro.writeDown(evt)">
-              <input type="text" id="inputNameX" maxlength="15" size="20" value=""/>
-              <input type="submit" style="visibility:hidden"/>
-            </form>
-          </body>
-        </foreignObject>
-      </g>
+      <rect x="30" y="120" width="270" height="214" fill="white" fill-opacity=".5" stroke="#ddd" stroke-width="5" rx="10"/>
+      <text x="20" y="121" stroke="none" fill="#111" font-size="15px" font-weight="bold" id="hallOfFame"> </text>
     </g>
   </g>
 
@@ -324,38 +301,31 @@
   <g id="credits" visibility="hidden" onclick="document.getElementById('credits').setAttribute('visibility', 'hidden')">
     <rect x="10" y="10" width="580" height="360" stroke="#000" stroke-width="12" rx="15" fill="white" fill-opacity=".8"/>
     <text x="0" y="24" font-size="16px">
-      <tspan x="30" dy="16" font-size="18px" font-weight="bold" fill="red">How to play this game:</tspan>
-      <tspan x="30" dy="20">You're submarine captain. Your submarine is trapped near water surface</tspan>
-      <tspan x="30" dy="16">because of sandbank. You could your U-Boat rotate only, but not move</tspan>
-      <tspan x="30" dy="16">and float away. Once enemy will shot on you, they surely cannot miss you,</tspan>
-      <tspan x="30" dy="16">so send them sinking before they manage to fire! To kill enemy ship you</tspan>
-      <tspan x="30" dy="16">have to <tspan font-weight="bold">aim to the ship hull and not higher!!</tspan></tspan>
-      <tspan x="30" dy="16">You have only one torpedo chamber,</tspan>
-      <tspan x="30" dy="16">so you could fire not several torpedos simultaneously! Watch for enemy alert</tspan>
-      <tspan x="30" dy="16">informing you on which side new enemy appeared and control number of</tspan>
-      <tspan x="30" dy="16">already sinked - already generated - total in level ships on dashboard panels.</tspan>
-      <tspan x="30" dy="16">Ship icons will help you, red ones are sinked already, green ones remaining.</tspan>
-      <tspan x="30" dy="16">Do not kill innocent castaway on raft (has golden icon)! He is not going</tspan>
-      <tspan x="30" dy="16">to harm you. By killing him you lost some points, by letting him live - gain.</tspan>
-      <tspan x="30" dy="16">He will disapper after a while, just let him be...</tspan>
-      <tspan x="30" dy="22" font-weight="bold">Use common CURSOR keys to control</tspan>
-      <tspan x="30" dy="16" font-weight="bold">rotation of your submarine. Hold SHIFT key for more precise aiming.</tspan>
-      <tspan x="30" dy="16" font-weight="bold">By SPACE key you could fire and by ESCAPE key abort game anytime...</tspan>
-      <tspan x="30" dy="22" font-size="12px">If using Adobe Plugin, keep mouse cursor over gamearea to enable keyboard inputs.</tspan>
-      <tspan x="30" dy="14" font-size="12px">Game tested under Firefox, ASV+MSIE, Opera and Squiggle. External sounds done using Flash API.</tspan>
-      <tspan x="30" dy="14" font-size="12px">Any comments, notices, bug reports and everything else welcome at: marek.raida(at)vodafone.com</tspan>
+      <tspan x="30" dy="16" font-size="26px" font-weight="bold" fill="gold">How To Play</tspan>
+      <tspan x="30" dy="21">You're submarine captain. Your submarine is trapped near water surface</tspan>
+      <tspan x="30" dy="18">because of sandbank. You could your U-Boat only rotate, but not move</tspan>
+      <tspan x="30" dy="18">and float away. if enemy will fire on you, they surely cannot miss you,</tspan>
+      <tspan x="30" dy="18">so send them sinking before they manage to fire! To kill enemy ship you</tspan>
+      <tspan x="30" dy="18">have to <tspan font-weight="bold">aim to the ship hull and not higher!!</tspan></tspan>
+      <tspan x="30" dy="18">You have only one torpedo chamber,</tspan>
+      <tspan x="30" dy="18">so you could fire not several torpedos simultaneously! Watch for enemy alert</tspan>
+      <tspan x="30" dy="18">informing you on which side new enemy appeared and control number of</tspan>
+      <tspan x="30" dy="18">already sinked - already generated - total in level ships on dashboard panels.</tspan>
+      <tspan x="30" dy="18">Ship icons will help you, red ones are sinked already, green ones remaining.</tspan>
+      <tspan x="30" dy="18">Do not kill innocent castaway on raft (has golden icon)! He is not going</tspan>
+      <tspan x="30" dy="18">to harm you. By killing him you loose some points, by letting him live - gain.</tspan>
+      <tspan x="30" dy="18">He will disapper after a while, just let him be...</tspan>
+      <tspan x="30" dy="21" font-weight="bold">Use cursor keys or tilt mobile device to control rotation of submarine.</tspan>
+      <tspan x="30" dy="18" font-weight="bold">Hold SHIFT key for more precise aiming. By SPACE key or TAPPING </tspan>
+      <tspan x="30" dy="18" font-weight="bold">screen you could fire and by ESC key abort game anytime...</tspan>
+
     </text>
-      <use xlink:href="#ship2" stroke="black" fill="deepskyblue" x="374" y="130"/><rect x="372" y="129" width="80" height="14" stroke="red" fill="none" stroke-width="2"/>
-      <text x="379" y="140" font-size="12px" fill="red">Aiming area</text>
-      <use xlink:href="#ship9" x="430" y="338" transform="scale(.8)"/>
+      <use xlink:href="#ship2" stroke="black" fill="deepskyblue" x="377" y="140"/><rect x="376" y="139" width="80" height="14" stroke="red" fill="red" stroke-width="2" fill-opacity=".8"/>
+      <text x="384" y="150" font-size="12px" fill="white">Aiming area</text>
+      <use xlink:href="#ship9" x="595" y="430" transform="scale(.66)"/>
   </g>
   
-  <text x="2" y="374" fill="#eee" stroke="none" id="message" visibility="visible" font-family="monospace" font-size="10px" text-rendering="optimizeLegibility">Messages...</text>
-
-  <rect x="0" y="0" width="600" height="13" fill="#007" />
-  <text x="3" y="10" fill="white" font-weight="bold" font-size="11px" id="options" onclick="Settings.decOpt(evt)" text-rendering="optimizeLegibility">
-    <tspan>Debugs</tspan>*<tspan>ShipAppear</tspan>*<tspan>Clouds</tspan>*<tspan>Gradients</tspan>*<tspan>Compass</tspan>*<tspan>Strokes</tspan>*<tspan>Periscope</tspan>*<tspan fill="gray">FullScreen</tspan>*<tspan>ShipWave</tspan>*<tspan>Quality</tspan>*<tspan>Panels</tspan>
-  </text>
+  <text x="24" y="334" fill="#eee" stroke="none" id="message" visibility="hidden" font-family="monospace" font-size="10px" text-rendering="optimizeLegibility">Messages...</text>
 
 <defs>
 <image id="intro" width="580" height="360" x="10" y="10" xlink:href="data:image/jpeg;base64,/9j/4AAQSkZJRgABAgAAZABkAAD/7AARRHVja3kAAQAEAAAAHgAA/+4AIUFkb2JlAGTAAAAAAQMA
@@ -960,4 +930,5 @@ VcpgKy7oqF+q5EDumJomisHKcgvssW6rFYKqd1SqwVTXZNFYrkqB0+AWqcBk5Nu6aMiVR3XIOVaz
 FUThOMU/kFE8SxHzhC2cSdk6/9k="/>
 </defs>
 
+<!--rect x="24" y="17" width="553" height="321" fill="silver" opacity=".6"/-->
 </svg>
