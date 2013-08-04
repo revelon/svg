@@ -1,8 +1,8 @@
-// SVG Submarine Assault version 2.00
+// SVG Submarine Assault version 2.0x
 // move = main view / move step, levelShips = number of ships per level, addEnSpeed = how quickly should enemy be generated
-var Basics = {move:5, levelShips:4, addEnSpeed:8500, maxDamage:30, svgns:"http://www.w3.org/2000/svg", xlinkns:"http://www.w3.org/1999/xlink" };
-var Settings = { all:1, sounds:1, sndAvail:1, clouds:1, quality:1, gradients:1, fullScreen:0, shipAppearNice:1, messages:0, strokes:1, deepAndCompass:1, panels:1, shipWave:1, niceView:1, night:1, note:". Effective to new ships only, not existing ones!" };
-var IntroOutro = { msie:0, introMask:null, startScreen:null, endScreen:null };
+var Basics = { move:5, levelShips:4, addEnSpeed:8500, maxDamage:30, svgns:"http://www.w3.org/2000/svg", xlinkns:"http://www.w3.org/1999/xlink" };
+var Settings = { all:1, sounds:0, sndAvail:1, clouds:1, quality:1, gradients:1, fullScreen:0, shipAppearNice:1, messages:1, strokes:1, deepAndCompass:1, panels:1, shipWave:1, niceView:1, night:1, note:". Effective to new ships only, not existing ones!" };
+var IntroOutro = { introMask:null, startScreen:null, endScreen:null };
 var Torpedo = { arr:null, arrCY:null, arrR:null, arrRY:null, x:0, y:0, r:0, elemens:null, loadInd:null, fly:0 };
 var enemies, destroyedCount, score, hits, worldE, worldF, gameRunning, eNums, enemyShots, eDamage, shipAlertRight, shipAlertLeft, level, withShift, eThumbs, levelReached;
 var svgDocument, world, activeElements, keyHandler, mainPanel1, mainPanel0, eCompass, eDeepMeter, eMessage, eScore, eElapsed, elapsed, eLevel, subDamage;
@@ -643,131 +643,12 @@ Ship.prototype.explosion = function (tx, ty, act) {
 // Settings Object methods
 // ************************************************************************************************
 
-// helper function for highlighting top option menu items
-Settings.decode = function(ex) {
-  return (ex) ? "white" : "gray" ;
-}
-
-// workaround for FFX 1.5 not supporting direct events on tspan elements
-Settings.decOpt = function(evt) {
-  var x = evt.target.firstChild;
-  switch (x.data) {
-    case "Debugs":
-    Settings.setMessages(evt); break;
-    case "ShipAppear":
-    Settings.setShipAppear(evt); break;
-    case "Clouds":
-    Settings.setClouds(evt); break;
-    case "Gradients":
-    Settings.setGradients(evt); break;
-    case "Compass":
-    Settings.setCompass(evt); break;
-    case "Strokes":
-    Settings.setStrokes(evt); break;
-    case "Periscope":    
-    Settings.setView(evt); break;
-    case "FullScreen":
-    Settings.setFullScreen(evt); break;
-    case "ShipWave":
-    Settings.setShipWaves(evt); break;
-    case "Quality":
-    Settings.setQuality(evt); break;
-    case "Panels":
-    Settings.setPanels(evt); break;
-  }
-}
-
 // method setting on or off debugging messages
 Settings.setMessages = function() {
   this.messages = (this.messages) ? 0 : 1;
   var x = svgDocument.getElementById("message");
   x.setAttributeNS(null, "visibility", (this.messages) ? "visible" : "hidden");
   if (this.messages) message("Debugging messages are ON");
-}
-
-// method setting on or off real periscope view or rectangular
-Settings.setView = function(e) {
-  var x = svgDocument.getElementById("perisView");
-  if (this.niceView) {
-    e.target.setAttributeNS(null, "fill", this.decode(this.niceView = 0));
-    x.setAttributeNS(null, "clip-path", "none");
-    mainPanel1.setAttributeNS(null, "visibility", "hidden");
-    mainPanel0.setAttributeNS(null, "visibility", "visible");
-    svgDocument.getElementById("periOv").setAttributeNS(null, "rx", "10");
-    return message("View was set to rectangular one! (faster)");
-  }
-  e.target.setAttributeNS(null, "fill", this.decode(this.niceView = 1));
-  x.setAttributeNS(null, "clip-path", "url(#periscope)");
-  mainPanel1.setAttributeNS(null, "visibility", "visible");
-  mainPanel0.setAttributeNS(null, "visibility", "hidden");
-  svgDocument.getElementById("periOv").setAttributeNS(null, "rx", "100");
-  message("View was set to radial/triedr-based nice one! (slower)");
-}
-
-// method setting on or off nice and fast ship appear methods
-Settings.setShipAppear = function(e) {
-  e.target.setAttributeNS(null, "fill", this.decode(this.shipAppearNice = (this.shipAppearNice) ? 0 : 1)); 
-  var z = (this.shipAppearNice) ? "nice-fade (slower)" : "simple-stroke (faster)"; 
-  message("Ship appearing method switched to " + z + this.note);
-}
-
-// method setting on or off strokes on majority of environment objects
-Settings.setStrokes = function(e) {
-  e.target.setAttributeNS(null, "fill", this.decode(this.strokes = (this.strokes) ? 0 : 1));
-  svgDocument.getElementById("sun").setAttributeNS(null, "stroke", (this.strokes) ? "orange" : "none");
-  var z = (this.strokes) ? "ON (slower)" : "OFF (faster)"; message("Silouhethes of ships and shots switched to: " + z + this.note);
-}
-
-// method setting on or off dashboard panels boxes
-Settings.setPanels = function(e) {
-  e.target.setAttributeNS(null, "fill", this.decode(this.panels = (this.panels) ? 0 : 1));
-  svgDocument.getElementById("dashboardPanels").setAttributeNS(null, "visibility", this.panels ? "visible" : "hidden");
-  var z = (this.panels) ? "ON (slower)" : "OFF (faster)"; message("Dashboard panels switched to: " + z);
-}
-
-// method setting on or off waves behind ships
-Settings.setShipWaves = function(e) {
-  e.target.setAttributeNS(null, "fill", this.decode(this.shipWave = (this.shipWave) ? 0 : 1));
-  var z = (this.shipWave) ? "ON (slower)" : "OFF (faster)"; message("Waves behind ships switched to: " + z + this.note);
-}
-
-// method setting on or off dashboard's compass and deep'o'meter
-Settings.setCompass = function(e) {
-  e.target.setAttributeNS(null, "fill", this.decode(this.deepAndCompass = (this.deepAndCompass) ? 0 : 1)); 
-  svgDocument.getElementById("compassGroup").setAttributeNS(null, "visibility", this.deepAndCompass ? "visible" : "hidden");
-  svgDocument.getElementById("deepGroup").setAttributeNS(null, "visibility", this.deepAndCompass ? "visible" : "hidden");
-  var z =(this.deepAndCompass) ? "ON (slower)" : "OFF (faster)"; message("Compass and deep'o'meter switched to: " + z);
-}
-
-// method setting on or off all the gradients used in this game
-Settings.setGradients = function(e) {
-  var x = svgDocument.getElementById("seaRect");
-  e.target.setAttributeNS(null, "fill", this.decode(this.gradients = (this.gradients) ? 0 : 1)); 
-  x.setAttributeNS(null, "fill", (this.gradients) ? ((this.night) ? "url(#nightSea)" : "url(#daySea)") : ((this.night) ? "#005" : "#00b"));
-  x = svgDocument.getElementById("skyRect");
-  x.setAttributeNS(null, "fill", (this.gradients) ? ((this.night) ? "url(#nightSky)" : "url(#daySky)") : ((this.night) ? "#111" : "#e68519"));
-  x = svgDocument.getElementById("deepGrad");
-  x.setAttributeNS(null, "fill", (this.gradients) ? "url(#deep)" : "#0f0");
-  x = svgDocument.getElementById("compassGrad");
-  x.setAttributeNS(null, "fill", (this.gradients) ? "url(#gradComp)" : "#444");
-  var z = (this.gradients) ? "ON (much slower!)" : "OFF (faster)";
-  message("Gradiens of sky, sea, compass, panels and deep'o'meter switched to: " + z);
-}
-
-// method setting on or off clouds and waves and trees
-Settings.setClouds = function(e) {
-  var cloud = svgDocument.getElementById("clouds");
-  e.target.setAttributeNS(null, "fill", this.decode(this.clouds = (this.clouds) ? 0 : 1)); 
-  if (this.clouds) {
-    cloud.setAttributeNS(null, "visibility", "visible");
-    svgDocument.getElementById("dayEnv").setAttributeNS(null, "visibility", (this.night) ? "hidden" : "visible");
-    svgDocument.getElementById("nightEnv").setAttributeNS(null, "visibility", (!this.night) ? "hidden" : "visible");
-  } else {
-    cloud.setAttributeNS(null, "visibility", "hidden");
-    svgDocument.getElementById("dayEnv").setAttributeNS(null, "visibility", "hidden");
-    svgDocument.getElementById("nightEnv").setAttributeNS(null, "visibility", "hidden");
-  }
-  var z = (this.clouds) ? "visible (slower)" : "hidden (faster)"; message("Clouds, waves and palms visibility switched to: " + z);
 }
 
 // method setting on or off day or night environment based on level during gameplay
@@ -780,88 +661,6 @@ Settings.setNight = function () {
   svgDocument.getElementById("sun").setAttributeNS(null, "visibility", (this.night) ? "hidden" : "visible");
   svgDocument.getElementById("dayEnv").setAttributeNS(null, "visibility", (this.night || !this.clouds) ? "hidden" : "visible");
   svgDocument.getElementById("nightEnv").setAttributeNS(null, "visibility", (!this.night || !this.clouds) ? "hidden" : "visible");
-}
-
-// when possible, switching on and off viebox to the maximal viewbox
-Settings.setFullScreen = function(e) {
-/*
-  var svgMain = svgDocument.getElementById("svgMain");
-  e.target.setAttributeNS(null, "fill", this.decode(this.fullScreen = (this.fullScreen) ? 0 : 1));
-  if (this.fullScreen) {
-    svgMain.setAttributeNS(null, "width", "100%");
-    svgMain.setAttributeNS(null, "height", "100%");
-    return message("Screen size swithed to FullScreen! (much slower!)");
-  }
-  e.target.setAttributeNS(null, "fill", this.decode(0));
-  svgMain.setAttributeNS(null, "width", "600");
-  svgMain.setAttributeNS(null, "height", "380");
-  message("Screen size swithed to original size! (faster)");
-*/
-}
-
-// method degrading/upgrading quality of rendering, depends on SVG viewer capabilities
-Settings.setQuality = function(e) {
-  var svgMain = svgDocument.getElementById("svgMain");
-  e.target.setAttributeNS(null, "fill", this.decode(this.quality = (this.quality) ? 0 : 1));
-  if (!this.quality) {
-    svgMain.setAttributeNS(null, "shape-rendering", "optimizeSpeed");
-    svgMain.setAttributeNS(null, "text-rendering", "optimizeSpeed");
-    svgMain.setAttributeNS(null, "image-rendering", "optimizeSpeed");
-    return message("Quality of antialiasing, text and images degraded to optimize speed");
-  }
-  svgMain.setAttributeNS(null, "shape-rendering", "optimizeQuality");
-  svgMain.setAttributeNS(null, "text-rendering", "geometricPrecision");
-  svgMain.setAttributeNS(null, "image-rendering", "optimizeQuality");
-  message("Quality of antialiasing, text and images upgraded!");
-}
-
-// method setting on or off almost all options of the game
-Settings.setAllOptions = function (evt) {
-  var x = svgDocument.getElementById("options");
-  if (this.all) {
-    this.clouds = this.gradients = this.shipAppearNice = this.messages = this.strokes = 1;
-    this.deepAndCompass = this.panels = this.shipWave = this.niceView = this.quality = this.fullScreen = 1; 
-    this.all = 0;
-  } else {
-    this.clouds = this.gradients = this.shipAppearNice = this.messages = this.strokes = 0;
-    this.deepAndCompass = this.panels = this.shipWave = this.niceView = this.quality = this.fullScreen = 0; 
-    this.all = 1;
-  }
-  this.setClouds(evt);    this.setCompass(evt);
-  this.setGradients(evt); this.setQuality(evt);
-  this.setMessages(evt);  this.setView(evt);
-  this.setStrokes(evt);   this.setShipAppear(evt);
-  this.setPanels(evt);    this.setFullScreen(evt);
-  this.setShipWaves(evt);
-  var to = (this.all) ? "white" : "gray";
-  for( var node = x.firstChild ; node != null ; node = node.nextSibling )
-    if (node.nodeType == 1) node.setAttributeNS(null, "fill", to);
-  message("All visual options switched ON");
-}
-
-// method setting off several options to boost performance for Gecko browsers
-Settings.setFirefox = function (evt) {
-  var x = svgDocument.getElementById("options");
-  // those switch off
-  this.shipAppearNice = this.messages = this.strokes = this.panels = this.fullScreen = this.clouds = this.deepAndCompass = 1;
-  // and those on
-  this.gradients = this.shipWave = this.niceView = this.quality = 0;
-  this.setClouds(evt);    this.setCompass(evt);
-  this.setGradients(evt); this.setQuality(evt);
-  this.setMessages(evt);  this.setView(evt);
-  this.setStrokes(evt);   this.setShipAppear(evt);
-  this.setPanels(evt);    this.setFullScreen(evt);
-  this.setShipWaves(evt);
-  for( var node = x.firstChild ; node != null ; node = node.nextSibling ) {
-    if (node.nodeType == 1) {
-      var n = node.firstChild.data;
-      if (n == "Periscope" || n == "ShipWave" || n == "Quality" || n == "Gradients") 
-        node.setAttributeNS(null, "fill", "white");
-      else 
-        node.setAttributeNS(null, "fill", "gray");
-    }
-  }
-  message("Visual options switched to optimize Firefox/Gecko performance");
 }
 
 // method setting on or off sound effects
@@ -900,7 +699,6 @@ Settings.setSounds = function (evt) {
 
 // intro object constructor
 IntroOutro.init = function() {
-  try { navigator.mimeTypes["image/svg"]; } catch (e) { this.msie = 1; }
   this.introMask = svgDocument.getElementById("introMask");
   this.startScreen = svgDocument.getElementById("startScreen");
   this.endScreen = svgDocument.getElementById("endScreen");
@@ -1203,14 +1001,13 @@ Torpedo.fireAnim = function() {
 */
 function AudioMan () { // constructor
   this.enabled = 1; // flag, on/off whether sound is enabled
-  this.type = ".wav" ;
-  /*try {
-    var test = new Audio("");
-    this.type = (test.canPlayType && test.canPlayType("audio/mp3")) ? ".mp3" : ".wav";
+  try {
+    var test = new Audio();
+    this.type = (test.canPlayType && test.canPlayType("audio/wav")) ? ".wav" : ".mp3";
   } catch (e) {
     this.enabled = 0; // for browsers not supporting it yet
     this.type = "";
-  }*/
+  }
   this.dirPrefix = "sounds/";
   this.audios = new Array();
   this.sounds = new Array();

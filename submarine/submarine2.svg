@@ -1,5 +1,5 @@
 <svg viewBox="24 17 553 321" width="100%" height="100%" onload="init(evt)" id="svgMain" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" font-family="sans-serif" manifest="manifest.appcache">
-  <title>SVG Submarine Assault 2.01 Touch Version</title>
+  <title>SVG Submarine Assault 2.02 Touch Version</title>
   <script type="text/ecmascript" xlink:href="submarine2.js"/>
   <defs>
     <path id="ship2" transform="translate(-150 -264) scale(.5)" stroke-width="3" d="M 264.65997,519.25418 C 302.79323,535.16408 297.48992,553.59936 297.48992,553.59936 L 450.52804,553.59936 L 477.80215,526.32524 L 415.67777,526.83032 L 415.67777,519.00164 L 400.77802,519.00164 L 401.03056,511.67803 L 391.68665,511.93057 L 391.93919,487.43437 L 384.61558,486.92929 L 384.86812,512.68818 L 370.73658,513.6873 L 378.31761,455.48189 L 368.20721,513.71631 L 361.63461,513.95088 L 361.88715,510.1628 L 344.71456,510.92041 L 344.46202,517.48641 L 326.53181,516.98133 L 326.78434,521.27449 L 319.71328,521.02194 L 319.96582,527.58793 L 264.65997,519.25418 z "/>
@@ -267,7 +267,7 @@
     <g fill="black" stroke="black" stroke-width="0" font-size="14px">
       <text x="35" y="150">by Marek Raida</text>
       <text x="35" y="172">September 2006 / August 2013</text>
-      <text x="28" y="274" font-size="18px">Aim by Cursor Keys or tilt mobile device, fire by Space or Tap screen</text>
+      <text x="27" y="274" font-size="18px">Aim by cursor keys or tilt mobile device, fire by Space or Tap screen</text>
     </g>
     <g font-weight="bold" font-size="22px" fill="#113" stroke="#000" stroke-width=".2">
       <text x="225" y="237">Start Game</text>
