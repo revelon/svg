@@ -1,5 +1,5 @@
 {
-  "version": "2.0",
+  "version": "2.03",
   "name": "Submarine Assault",
   "description": "Shooting game when submarine defends against enemy ships",
   "launch_path": "/submarine/submarine2.svg",
@@ -12,8 +12,11 @@
   "icons": {
     "128": "/submarine/icons/128.png",
     "120": "/submarine/icons/120.png",
+    "68": "/submarine/icons/68.png",
+    "64": "/submarine/icons/64.png",
     "60": "/submarine/icons/60.png",
-    "32": "/submarine/icons/120.png"
+    "32": "/submarine/icons/32.png",
+    "30": "/submarine/icons/30.png",
   },
   "orientation": "landscape-primary",
   "fullscreen": "true"

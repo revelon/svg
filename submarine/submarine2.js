@@ -1,6 +1,6 @@
 // SVG Submarine Assault version 2.0x
 // move = main view / move step, levelShips = number of ships per level, addEnSpeed = how quickly should enemy be generated
-var Basics = { move:5, levelShips:4, addEnSpeed:8500, maxDamage:30, svgns:"http://www.w3.org/2000/svg", xlinkns:"http://www.w3.org/1999/xlink" };
+var Basics = { move:7, levelShips:4, addEnSpeed:8500, maxDamage:30, svgns:"http://www.w3.org/2000/svg", xlinkns:"http://www.w3.org/1999/xlink" };
 var Settings = { all:1, sounds:0, sndAvail:1, clouds:1, quality:1, gradients:1, fullScreen:0, shipAppearNice:1, messages:1, strokes:1, deepAndCompass:1, panels:1, shipWave:1, niceView:1, night:1, note:". Effective to new ships only, not existing ones!" };
 var IntroOutro = { introMask:null, startScreen:null, endScreen:null };
 var Torpedo = { arr:null, arrCY:null, arrR:null, arrRY:null, x:0, y:0, r:0, elemens:null, loadInd:null, fly:0 };
@@ -105,6 +105,7 @@ function init(evt) {
   eElapsed = svgDocument.getElementById("elapsed").firstChild; eLevel = svgDocument.getElementById("level").firstChild;
   subDamage = svgDocument.getElementById("subDamage");    eThumbs = svgDocument.getElementById("thumbs");
   levelReached = svgDocument.getElementById("levelReached");
+  
   Settings.setSounds(null);
   IntroOutro.init();
 }
@@ -172,20 +173,20 @@ function keyDown2(evt) {
     setTilt = false;
   }
 
-  if (lr > (baseLR+4)) {
-    dx = -1; // right
-    withShift = (lr < (baseLR+11)) ? 1 : 0;
-  } else if (lr < (baseLR-4)) {
+  if (lr > (baseLR+5)) {
     dx = 1; // left
-    withShift = (lr > (baseLR-11)) ? 1 : 0;
+    withShift = (lr < (baseLR+12)) ? 1 : 0;
+  } else if (lr < (baseLR-5)) {
+    dx = -1; // right
+    withShift = (lr > (baseLR-12)) ? 1 : 0;
   } else dx = 0; // reset lr
 
-  if (fb > (baseFB+4)) {
-    dy = 1; // up
-    withShift = (!withShift && fb < (baseFB+11)) ? 1 : 0;
-  } else if (fb < (baseFB-4)) {
-    dy = -1; // down
-    withShift = (!withShift && fb > (baseFB-11)) ? 1 : 0;
+  if (fb > (baseFB+5)) {
+    dy = -1; // up
+    withShift = (!withShift && fb < (baseFB+12)) ? 1 : 0;
+  } else if (fb < (baseFB-5)) {
+    dy = 1; // down
+    withShift = (!withShift && fb > (baseFB-12)) ? 1 : 0;
   } else dy = 0; // reset fb
   message("base: " + baseLR + " " + baseFB + ", tilt: " + lr + " " + fb + " ;LR = " + dx + " , FB = " + dy + " , withShift = " + withShift);
 }
@@ -207,7 +208,8 @@ function fire2(evt) {
 
 // keyboard evaluation during gameplay - reverse
 function keyUp(evt) {
-  switch(evt.keyCode) {
+  var c = (evt.keyCode) ? evt.keyCode : evt.charCode;
+  switch(c) {
     case 37: // left
     case 63234:
     case 39: // right
@@ -226,7 +228,7 @@ function keyUp(evt) {
 // navigation through environment
 function moveWorld() {
   if (!dx && !dy) return;
-  var x2 = worldE+(dx*(Basics.move-(3*withShift))); var y2 = worldF+(dy*(Basics.move-(3*withShift)));
+  var x2 = worldE+(dx*(Basics.move-(4*withShift))); var y2 = worldF+(dy*(2-(1*withShift)));
   if (x2>183) return message('Reached left zoom limit at '+worldE);
   else if (x2<-540) return message('Reached right zoom limit at '+worldE);
   else if (y2<-90) return message('Reached top zoom limit at '+worldF);
