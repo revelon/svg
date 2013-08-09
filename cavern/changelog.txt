@@ -1,4 +1,4 @@
-2.00
+2.01
 * greatly simplified version for Firefox OS phones
 
 1.03
