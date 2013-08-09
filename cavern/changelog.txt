@@ -1,3 +1,6 @@
+2.00
+* greatly simplified version for Firefox OS phones
+
 1.03
  * made fuel object available more often
  * fixed displaying wrong reason at the game finish
