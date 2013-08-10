@@ -1,6 +1,6 @@
 2.02
 * added hammer.js to support hold for bomb
-* fuel occurency tuned up for slow mobile device
+* fuel occurrency tuned up for slow mobile device
 * hiding fire touch box on non-touch devices
 
 2.01
