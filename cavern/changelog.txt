@@ -1,3 +1,8 @@
+2.02
+* added hammer.js to support hold for bomb
+* fuel occurency tuned up for slow mobile device
+* hiding fire touch box on non-touch devices
+
 2.01
 * greatly simplified version for Firefox OS phones
 
