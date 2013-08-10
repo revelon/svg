@@ -1,5 +1,5 @@
 {
-  "version": "2.01",
+  "version": "2.02",
   "name": "Cavern Fighter",
   "description": "Fly through tunnel and shoot or avoid all enemies or bonuses, remake of good old ZX Speccy game",
   "launch_path": "/cavern.xml",
