@@ -1,0 +1,10 @@
+<div>
+    <h2>Game of Scotland
+        <a href="#/help" class="thumb">Help</a>
+        <a href="#" class="thumb" ng-click="reset(true)">Reset</a>
+    </h2>
+    <span ng-repeat="lvl in levelStatus">
+        <a href="#/level/{{$index}}" ng-if="$index > 0" ng-class="{done: lvl.state !== 0}">Level {{$index}}</a>
+    </span>
+    {{levelStatus}}
+</div>
