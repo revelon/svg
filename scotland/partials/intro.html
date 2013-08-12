@@ -1,7 +1,7 @@
 <div class="intro">
     <h1>Game of Scotland</h1>
     <span ng-repeat="lvl in levelStatus">
-        <a href="#/level/{{$index}}" ng-if="$index > 0" ng-class="{uncovered: (lvl.state !== 0)}">Level {{$index}}</a>
+        <a href="#/level/{{$index}}" ng-if="$index > 0" ng-class="{uncovered: (lvl.state !== 0)}">Photo {{$index}}</a>
     </span>
     <span>
         <a href="#" class="resetitem" ng-click="reset(true)">Reset game</a>

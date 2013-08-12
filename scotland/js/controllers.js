@@ -68,13 +68,13 @@ function LevelCtrl($scope, $routeParams, $location, $store) {
             for (var i = 1; i <= num; i++) {
                 $scope.data[i].uncovered = true;
             }
-            $scope.reason = "My number is bigger than " + num;
+            $scope.reason = "Number is bigger than " + num;
             playAudio("83237__mlestn1__pop");
         } else {
             for (var i = num; i <= 49; i++) {
                 $scope.data[i].uncovered = true;
             }
-            $scope.reason = "My number is smaller than " + num;
+            $scope.reason = "Number is smaller than " + num;
             playAudio("83237__mlestn1__pop");
         }
         if ($scope.tries == 0) {

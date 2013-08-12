@@ -1,8 +1,8 @@
 <div class="contleft">
-    <p>Level: {{level}}</p>
+    <p>Photo: {{level}}</p>
     <p>Guess the number!</p>
-    <p>Number of attempts left: {{tries}}</p>
-    <p><a ng-click="restart()" href="">Restart level</a></p>
+    <p>Number of attempts left: <span>{{tries}}</span></p>
+    <p><a ng-click="restart()" href="">Restart</a></p>
     <p><a href="#/intro">Main menu</a></p>
     <p ng-if="reason">{{reason}}</p>
 </div>
