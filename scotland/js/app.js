@@ -24,18 +24,7 @@ var game = {
   }
 };
 
-function Tile(num, x, y) {
+function Tile(num) {
     this.num = num;
-    this.x = x;
-    this.y = y;
     this.uncovered = false;
-    
-    this.getX = function() {
-        return x * 55;
-    };
-    
-    this.getY = function() {
-        return y * 55;
-    };
-    
 };

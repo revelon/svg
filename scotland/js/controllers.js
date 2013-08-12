@@ -37,12 +37,9 @@ function LevelDoneCtrl($scope, $routeParams, $store, $location) {
 function LevelCtrl($scope, $routeParams, $location, $store) {
 
     function generateGameArea() {
-        var data = [new Tile(0, -10, -10)];
-        var num = 1;
-        for (var y = 0; y < 7; y++) {
-            for (var x = 0; x < 7; x++) {
-                data[num] = new Tile(num++, x, y);
-            }
+        var data = [];
+        for (var i = 0; i < 50; i++) {
+            data[i] = new Tile(i);
         }
         return data;
     };

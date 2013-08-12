@@ -1,11 +1,10 @@
-<div class="container-float">
+<div class="contleft">
     <button ng-click="restart()">Restart level</button>
-    <p>Attempts to guess left: {{tries}}</p>
+    Attempts to guess left: {{tries}}
 </div>
 
-<div ng-repeat="tl in data">
+<span ng-repeat="tl in data">
     <button ng-if="$index > 0" 
-        style="top:{{tl.getY()}}px; left:{{tl.getX()}}px" 
         ng-class="{uncovered: (tl.uncovered===true)}"
         ng-click="tryMe({{tl.num}})">{{tl.num}}</buton>
-</div>
+</span>

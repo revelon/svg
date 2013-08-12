@@ -59,22 +59,19 @@ a.done {
     background-color: rgba(200,87,5,1);
 }
 
-
-div.container-float {
-    position: absolute;
-    width: 40%;
-    right: 0%;
-    background-color: beige;
+div.contleft {
+    border: 1px solid red;
+    width: 30%;
+    float: right;
 }
 
-div button {
-    position: absolute;
+span button {
     width: 10%;
     height: 8%;
     font-size: 1em;
 }
 
-div button.uncovered {
+span button.uncovered {
     background-color: gray;
     -webkit-box-shadow: 0px 9px 0px rgba(170,170,170,1), 0px 9px 25px rgba(0,0,0,.7);
     box-shadow: 0px 9px 0px rgba(100,100,100,1), 0px 9px 25px rgba(0,0,0,.7);
