@@ -28,3 +28,9 @@ function Tile(num) {
     this.num = num;
     this.uncovered = false;
 };
+
+function playAudio(what) {
+  var x = new Audio('sounds/' + what + '.ogg');
+  //docement.body.push(x);
+  x.play();
+}

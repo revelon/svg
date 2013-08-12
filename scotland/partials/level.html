@@ -1,6 +1,10 @@
 <div class="contleft">
-    <button ng-click="restart()">Restart level</button>
-    Attempts to guess left: {{tries}}
+    <p>Level: {{level}}</p>
+    <p>Guess the number!</p>
+    <p>Number of attempts left: {{tries}}</p>
+    <p><a ng-click="restart()" href="">Restart level</a></p>
+    <p><a href="#/intro">Main menu</a></p>
+    <p ng-if="reason">{{reason}}</p>
 </div>
 
 <span ng-repeat="tl in data">

@@ -1,8 +1,21 @@
+@font-face {
+	font-family: florante;
+	src: url('../lib/florante-at-laura/FLORLRG_.ttf');
+}
+
 body {
     margin: 0;
     padding: 0;
-    background-color: #999;
-    font-family: sans-serif;    
+    background-color: white;
+    background-image: url('../img/Flag_of_Scotland_3D.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: florante;
+}
+
+html, body, body div {
+    height: 100%;
+    min-height: 100%;
 }
 
 svg {
@@ -14,66 +27,75 @@ svg {
     left: 0;
     right: 0;
     bottom: 0;
+    cursor: pointer;
 }
 
 svg text {
     fill: white;
     fill-opacity: 0.8;
-    font: bolder 80pt sans-serif;
+    font-weight: bolder;
+    font-size: 80pt;
     stroke: gray;
     stroke-width: 2px;
 }
 
-a, button {
+button, div.intro span a {
 	  display: inline-block;
+	  border: none;
     color: rgba(255,255,255,1);
     text-decoration: none;
     background-color: rgba(219,87,5,1);
     font-weight: 700;
-    font-size: 16px;
+    font-size: 17px;
+    font-family: florante;
     padding: 4px;
     -webkit-border-radius: 8px;
     border-radius: 8px;
     -webkit-box-shadow: 0px 9px 0px rgba(219,31,5,1), 0px 9px 25px rgba(0,0,0,.7);
     box-shadow: 0px 9px 0px rgba(219,31,5,1), 0px 9px 25px rgba(0,0,0,.7);
-    margin: 17px;
+    margin: 1.5% 1%;
 	  width: 15%;
 	  text-align: center;
-	
-  	-webkit-transition: all .1s ease;
-  	-moz-transition: all .1s ease;
-  	-ms-transition: all .1s ease;
-  	-o-transition: all .1s ease;
-  	transition: all .1s ease;
+	  cursor: pointer;
 }
 
-a:active, buton:active {
+buton:active, div.intro span a {
     -webkit-box-shadow: 0px 3px 0px rgba(219,31,5,1), 0px 3px 6px rgba(0,0,0,.9);
     box-shadow: 0px 3px 0px rgba(219,31,5,1), 0px 3px 6px rgba(0,0,0,.9);
 	  display: inline-block;    
     top: 6px;
 }
 
-a.done {
-    color: rgba(205,205,205,1);
-    background-color: rgba(200,87,5,1);
-}
-
 div.contleft {
-    border: 1px solid red;
+    color: #444;
+    border: 0px solid blue;
     width: 30%;
+    height: 300px;
     float: right;
+    margin-right: 5px;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 18px;
 }
 
 span button {
-    width: 10%;
-    height: 8%;
+    width: 7%;
     font-size: 1em;
 }
 
-span button.uncovered {
+span button.uncovered, div.intro span a.uncovered {
     background-color: gray;
     -webkit-box-shadow: 0px 9px 0px rgba(170,170,170,1), 0px 9px 25px rgba(0,0,0,.7);
-    box-shadow: 0px 9px 0px rgba(100,100,100,1), 0px 9px 25px rgba(0,0,0,.7);
+    box-shadow: 0px 9px 0px rgba(170,170,170,1), 0px 9px 25px rgba(0,0,0,.7);
 
+}
+
+div.intro span a.resetitem {
+    color: #229;
+}
+
+h1 {
+    font-size: 3em;
+    text-align: center;
+    margin: 4px;
 }

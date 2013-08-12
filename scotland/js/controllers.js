@@ -20,8 +20,15 @@ function LevelDoneCtrl($scope, $routeParams, $store, $location) {
     $scope.title = 'LevelDone';
     $scope.level = $routeParams.levelId;
     var levels = $store.get('levelStatus');
-    $scope.status = (levels[$routeParams.levelId].state == game.showLimit) ? 0 : 9;
-    $scope.txt = (levels[$routeParams.levelId].state == game.showLimit) ? "Well done!!" : "Keep trying...";
+    if (levels[$routeParams.levelId].state == game.showLimit) {
+        playAudio("60445__jobro__tada3");
+        $scope.status = 0;
+        $scope.txt = "Well done!!";
+    } else {
+        playAudio("135831__davidbain__end-game-fail");
+        $scope.status = 15;
+        $scope.txt = "Keep trying...";
+    }
 
     $scope.getAction = function () {
         var levels = $store.get('levelStatus');
@@ -53,20 +60,26 @@ function LevelCtrl($scope, $routeParams, $location, $store) {
             var levels = $store.get('levelStatus');
             if (levels[$routeParams.levelId].state < game.showLimit) {
                 levels[$routeParams.levelId].state++;
+                $scope.reason = "";
                 $store.set('levelStatus', levels);
             }
             $location.path("/levelDone/" + $routeParams.levelId);
         } else if ($scope.chosenOne > num) {
-            for (var i = 1; i < num; i++) {
+            for (var i = 1; i <= num; i++) {
                 $scope.data[i].uncovered = true;
             }
+            $scope.reason = "My number is bigger than " + num;
+            playAudio("83237__mlestn1__pop");
         } else {
             for (var i = num; i <= 49; i++) {
                 $scope.data[i].uncovered = true;
             }
+            $scope.reason = "My number is smaller than " + num;
+            playAudio("83237__mlestn1__pop");
         }
         if ($scope.tries == 0) {
             $location.path("/levelDone/" + $routeParams.levelId);
+            $scope.reason = "";
         }
     }
 
@@ -76,5 +89,11 @@ function LevelCtrl($scope, $routeParams, $location, $store) {
         $scope.data = generateGameArea();
     }
 
+    var levels = $store.get('levelStatus');
+    if (levels[$routeParams.levelId].state == game.showLimit) {
+        $location.path("/levelDone/" + $routeParams.levelId);
+    }
+
     $scope.restart(1);
+    $scope.level = $routeParams.levelId;
 }
