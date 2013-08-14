@@ -40,7 +40,7 @@ svg text {
 }
 
 div.intro span a {
-    font-size: 1.3em;
+    font-size: 130%;
 }
 
 button, div.intro span a {
@@ -52,12 +52,15 @@ button, div.intro span a {
     font-weight: 700;
     font-family: florante;
     padding: 6px;
+    line-height: 160%;
     -webkit-border-radius: 8px;
     border-radius: 8px;
     -webkit-box-shadow: 0px 9px 0px rgba(219,31,5,1), 0px 9px 25px rgba(0,0,0,.7);
     box-shadow: 0px 9px 0px rgba(219,31,5,1), 0px 9px 25px rgba(0,0,0,.7);
     margin: 1% 0.5%;
 	  width: 15%;
+	  height: 12%;
+    vertical-align: middle;
 	  text-align: center;
 	  cursor: pointer;
 }
@@ -77,15 +80,15 @@ div.contleft {
     margin-right: 5px;
     text-align: center;
     font-weight: bolder;
-    font-size: 19px;
+    font-size: 100%;
     padding: 0;
     line-height: 94%;
 }
 
 span button {
-    width: 7.5%;
-    height: 8%;
-    font-size: 1em;
+    width: 8.5%;
+    height: 11%;
+    font-size: 260%;
 }
 
 span button.uncovered, div.intro span a.uncovered {
@@ -97,7 +100,7 @@ span button.uncovered, div.intro span a.uncovered {
 
 div.intro span a.resetitem {
     color: #229;
-    font-size: 1.2em;    
+    font-size: 130%;    
 }
 
 h1 {
