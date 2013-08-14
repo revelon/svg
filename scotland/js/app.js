@@ -2,13 +2,13 @@
 
 /* App Module */
 
-angular.module('scotland', ['localStorage', 'viewFilters']).
+angular.module('scotland', ['localStorage']).
   config(['$routeProvider', function($routeProvider) {
   $routeProvider.
-      when('/intro', {templateUrl: 'partials/intro.html',  controller: IntroCtrl}).
-      when('/help', {templateUrl: 'partials/help.html',  controller: HelpCtrl}).
-      when('/level/:levelId', {templateUrl: 'partials/level.html', controller: LevelCtrl}).
-      when('/levelDone/:levelId', {templateUrl: 'partials/leveldone.html',  controller: LevelDoneCtrl}).
+      when('/intro', {templateUrl: 'intro.html',  controller: IntroCtrl}).
+      when('/help', {templateUrl: 'help.html',  controller: HelpCtrl}).
+      when('/level/:levelId', {templateUrl: 'level.html', controller: LevelCtrl}).
+      when('/levelDone/:levelId', {templateUrl: 'leveldone.html',  controller: LevelDoneCtrl}).
       otherwise({redirectTo: '/intro'});
 }]);
 
@@ -30,7 +30,6 @@ function Tile(num) {
 };
 
 function playAudio(what) {
-  var x = new Audio('sounds/' + what + '.ogg');
-  //docement.body.push(x);
-  x.play();
+  document.getElementById(what).play();
 }
+

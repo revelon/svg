@@ -4,18 +4,89 @@
   <meta charset="utf-8">
   <title>Game of Scotland, by Marek Raida </title>
   <link rel="stylesheet" href="css/base.css">
-  <script src="lib/angular/angular.js"></script>
+  <script src="lib/angular/angular.min.js"></script>
   <script src="lib/angular-cookies/angular-cookies.min.js"></script>
   <script src="lib/localStorage.js"></script>
-  <script src="lib/hammer/hammer.js"></script> 
-  <script src="js/app.js"></script>
-  <script src="js/controllers.js"></script>
-  <script src="js/filters.js"></script>
-  <script src="js/services.js"></script>
 </head>
 <body>
 
-  <div ng-view></div>
+<script type="text/ng-template" id="intro.html">
+  <div class="intro">
+    <h1>Game of Scotland</h1>
+    <span ng-repeat="lvl in levelStatus">
+      <a href="#/level/{{$index}}" ng-if="$index > 0" ng-class="{uncovered: (lvl.state !== 0)}">Photo {{$index}}</a>
+    </span>
+    <span>
+      <a href="#/help" class="resetitem">Help</a>
+    </span>    
+    <span>
+      <a href="#" class="resetitem" ng-click="reset(true)">Reset game</a>
+    </span>
+  </div>
+</script>
 
+<script type="text/ng-template" id="level.html">
+  <div class="contleft">
+    <p>Photo: {{level}}</p>
+    <p>Guess the number!</p>
+    <p>Attempts left: <span>{{tries}}</span></p>
+    <p><a ng-click="restart()" href="">Restart</a></p>
+    <p><a href="#/intro">Main menu</a></p>
+    <p ng-if="reason">{{reason}}</p>
+  </div>
+  
+  <span ng-repeat="tl in data">
+    <button ng-if="$index > 0" 
+      ng-class="{uncovered: (tl.uncovered===true)}"
+      ng-click="tryMe({{tl.num}})">{{tl.num}}</buton>
+  </span>
+</script>
+
+<script type="text/ng-template" id="leveldone.html">
+  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+    viewBox="0 0 960 540" width="100%" height="100%" style="position:absolute" ng-click="getAction()">
+      <filter id="f1" preserveAspectRatio="xMidYMid slice">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="{{status}}" />
+      </filter>
+    <image width="960" height="540" xlink:href="img/{{level}}.jpg" filter="url(#f1)"/>
+    <text x="50%" y="50%" text-anchor="middle">{{txt}}
+        <animate attributeType="CSS" attributeName="opacity" values=".8;0" begin="1.5s" dur="1.5s" repeatCount="1" fill="freeze"/>
+    </text>
+  </svg>
+</script>
+
+<script type="text/ng-template" id="help.html">
+  <div>
+    <h1>Help screen "{{title}}"</h1>
+    <ul class="menu">
+      <li>
+        <a href="#/intro" class="thumb">Back to Intro</a>
+      </li>
+    </ul>
+    <p>Do this and that...</p>
+  </div>
+</script>
+
+<audio preload id="pop">
+  <source src="sounds/83237__mlestn1__pop.ogg" type="audio/ogg">
+  <source src="sounds/83237__mlestn1__pop.mp3" type="audio/mpeg">
+</audio>
+
+<audio preload id="win">
+  <source src="sounds/60445__jobro__tada3.ogg" type="audio/ogg">
+  <source src="sounds/60445__jobro__tada3.mp3" type="audio/mpeg">
+</audio>
+
+<audio preload id="fail">
+  <source src="sounds/135831__davidbain__end-game-fail.ogg" type="audio/ogg">
+  <source src="sounds/135831__davidbain__end-game-fail.mp3" type="audio/mpeg">
+</audio>
+
+
+  <div ng-view></div>
+  
+  <script src="js/controllers.js"></script>
+  <script src="js/app.js"></script>
+  
 </body>
 </html>

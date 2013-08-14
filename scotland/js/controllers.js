@@ -21,11 +21,11 @@ function LevelDoneCtrl($scope, $routeParams, $store, $location) {
     $scope.level = $routeParams.levelId;
     var levels = $store.get('levelStatus');
     if (levels[$routeParams.levelId].state == game.showLimit) {
-        playAudio("60445__jobro__tada3");
+        playAudio("win");
         $scope.status = 0;
         $scope.txt = "Well done!!";
     } else {
-        playAudio("135831__davidbain__end-game-fail");
+        playAudio("fail");
         $scope.status = 15;
         $scope.txt = "Keep trying...";
     }
@@ -38,11 +38,9 @@ function LevelDoneCtrl($scope, $routeParams, $store, $location) {
             $location.path("/level/" + $routeParams.levelId);
         }
     }
-
 };
 
 function LevelCtrl($scope, $routeParams, $location, $store) {
-
     function generateGameArea() {
         var data = [];
         for (var i = 0; i < 50; i++) {
@@ -50,7 +48,6 @@ function LevelCtrl($scope, $routeParams, $location, $store) {
         }
         return data;
     };
-    
     $scope.tryMe = function (num) {
         if ($scope.data[num].uncovered) {
             return;
@@ -69,13 +66,13 @@ function LevelCtrl($scope, $routeParams, $location, $store) {
                 $scope.data[i].uncovered = true;
             }
             $scope.reason = "Number is bigger than " + num;
-            playAudio("83237__mlestn1__pop");
+            playAudio("pop");
         } else {
             for (var i = num; i <= 49; i++) {
                 $scope.data[i].uncovered = true;
             }
             $scope.reason = "Number is smaller than " + num;
-            playAudio("83237__mlestn1__pop");
+            playAudio("pop");
         }
         if ($scope.tries == 0) {
             $location.path("/levelDone/" + $routeParams.levelId);
