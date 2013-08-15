@@ -1,3 +1,6 @@
+2.03
+* fixed level music to play in loop
+
 2.02
 * added hammer.js to support hold for bomb
 * fuel occurrency tuned up for slow mobile device

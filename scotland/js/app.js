@@ -13,11 +13,11 @@ angular.module('scotland', ['localStorage']).
 }]);
 
 var game = {
-  "picsCount": 24,
+  "picsCount": 21,
   "showLimit": 1,
   "getEmpty" : function (size) {
       var arr = new Array();
-      for (var i = 0; i < size; i++) {
+      for (var i = 0; i <= size; i++) {
           arr[i] = {"state": 0};
       }
       return arr;
