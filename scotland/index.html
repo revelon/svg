@@ -2,6 +2,7 @@
 <html lang="en" ng-app="scotland">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1">
   <title>Game of Scotland, by Marek Raida </title>
   <link rel="stylesheet" href="css/base.css">
   <script src="lib/angular/angular.min.js"></script>
@@ -44,13 +45,13 @@
 
 <script type="text/ng-template" id="leveldone.html">
   <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
-    viewBox="0 0 960 540" width="100%" height="100%" style="position:absolute" ng-click="getAction()">
+    viewBox="0 0 960 540" width="100%" height="100%" style="position:absolute">
       <filter id="f1" preserveAspectRatio="xMidYMid slice">
-        <feGaussianBlur in="SourceGraphic" stdDeviation="{{status}}" />
+        <feGaussianBlur in="SourceGraphic" ng-attr-stdDeviation="{{status}}" />
       </filter>
-    <image width="960" height="540" xlink:href="img/{{level}}.jpg" filter="url(#f1)"/>
-    <text x="50%" y="50%" text-anchor="middle">{{txt}}
-        <animate attributeType="CSS" attributeName="opacity" values=".8;0" begin="1.5s" dur="1.5s" repeatCount="1" fill="freeze"/>
+    <image width="960" height="540" xlink:href="img/{{level}}.jpg" filter="url(#f1)" ng-click="getAction()"/>
+    <text x="50%" y="50%" text-anchor="middle" ng-click="setWallpaper()">{{txt}}
+        <animate attributeType="CSS" attributeName="opacity" values=".8;0" begin="4.5s" dur="1.5s" repeatCount="1" fill="freeze"/>
     </text>
   </svg>
 </script>

@@ -40,35 +40,34 @@ svg text {
 }
 
 div.intro span a {
-    font-size: 130%;
+    font-size: 100%;
 }
 
 button, div.intro span a {
-	  display: inline-block;
-	  border: none;
+    display: inline-block;
+    border: none;
     color: rgba(255,255,255,1);
     text-decoration: none;
     background-color: rgba(219,87,5,1);
     font-weight: 700;
     font-family: florante;
-    padding: 6px;
-    line-height: 160%;
+    padding: 0px;
     -webkit-border-radius: 8px;
     border-radius: 8px;
     -webkit-box-shadow: 0px 9px 0px rgba(219,31,5,1), 0px 9px 25px rgba(0,0,0,.7);
     box-shadow: 0px 9px 0px rgba(219,31,5,1), 0px 9px 25px rgba(0,0,0,.7);
-    margin: 1% 0.5%;
-	  width: 15%;
-	  height: 12%;
+    margin: 1% 0.05%;
+    width: 15%;
+    height: 12%;
     vertical-align: middle;
-	  text-align: center;
-	  cursor: pointer;
+    text-align: center;
+    cursor: pointer;
 }
 
 buton:active, div.intro span a {
     -webkit-box-shadow: 0px 3px 0px rgba(219,31,5,1), 0px 3px 6px rgba(0,0,0,.9);
     box-shadow: 0px 3px 0px rgba(219,31,5,1), 0px 3px 6px rgba(0,0,0,.9);
-	  display: inline-block;    
+    display: inline-block;    
 }
 
 div.contleft {
@@ -80,15 +79,15 @@ div.contleft {
     margin-right: 5px;
     text-align: center;
     font-weight: bolder;
-    font-size: 100%;
+    font-size: 120%;
     padding: 0;
-    line-height: 94%;
+    line-height: 99%;
 }
 
 span button {
     width: 8.5%;
-    height: 11%;
-    font-size: 260%;
+    height: 10%;
+    font-size: 1.5em;
 }
 
 span button.uncovered, div.intro span a.uncovered {

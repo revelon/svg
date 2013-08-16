@@ -33,3 +33,25 @@ function playAudio(what) {
   document.getElementById(what).play();
 }
 
+function setMozWallpaper(which) {
+    alert("MozActivity");
+    var activity = new MozActivity({
+      // Ask for the "pick" activity
+      name: "share",
+    
+      // Provide the data required by the filters of the activity
+      data: {
+        type: "image/jpeg",
+        url: "/scotland/img/3.jpg"
+      }
+    });
+    
+    activity.onsuccess = function() {
+      //var picture = this.result;
+      alert("OK " + this.result);
+    };
+    
+    activity.onerror = function() {
+      alert("KO " + this.error);
+    };
+};

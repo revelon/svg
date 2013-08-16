@@ -30,6 +30,10 @@ function LevelDoneCtrl($scope, $routeParams, $store, $location) {
         $scope.txt = "Keep trying...";
     }
 
+    $scope.setWallpaper = function (which) {
+        setMozWallpaper(which);
+    }
+
     $scope.getAction = function () {
         var levels = $store.get('levelStatus');
         if (levels[$routeParams.levelId].state == game.showLimit) {
