@@ -15,7 +15,7 @@
   <div class="intro">
     <h1>Game of Scotland</h1>
     <span ng-repeat="lvl in levelStatus">
-      <a href="#/level/{{$index}}" ng-if="$index > 0" ng-class="{uncovered: (lvl.state !== 0)}">Photo {{$index}}</a>
+      <a href="#/level/{{$index}}" ng-if="$index > 0" class="uncovered{{lvl.state}}">Photo {{$index}}</a>
     </span>
     <span>
       <a href="#/help" class="resetitem">Help</a>
@@ -28,8 +28,8 @@
 
 <script type="text/ng-template" id="level.html">
   <div class="contleft">
-    <p>Photo: {{level}}</p>
-    <p>Guess the number!</p>
+    <p>Photo: {{level}} (<a href="#/levelDone/{{level}}">Show</a>)</p>
+    <p>Guess the number!  {{chosenOne}}</p>
     <p>Attempts left: <span>{{tries}}</span></p>
     <p><a ng-click="restart()" href="">Restart</a></p>
     <p><a href="#/intro">Main menu</a></p>
@@ -46,12 +46,25 @@
 <script type="text/ng-template" id="leveldone.html">
   <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
     viewBox="0 0 960 540" width="100%" height="100%" style="position:absolute">
-      <filter id="f1" preserveAspectRatio="xMidYMid slice">
-        <feGaussianBlur in="SourceGraphic" ng-attr-stdDeviation="{{status}}" />
+      <filter id="ff0" preserveAspectRatio="xMidYMid slice">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="30" />
       </filter>
-    <image width="960" height="540" xlink:href="img/{{level}}.jpg" filter="url(#f1)" ng-click="getAction()"/>
-    <text x="50%" y="50%" text-anchor="middle" ng-click="setWallpaper()">{{txt}}
-        <animate attributeType="CSS" attributeName="opacity" values=".8;0" begin="4.5s" dur="1.5s" repeatCount="1" fill="freeze"/>
+      <filter id="ff1" preserveAspectRatio="xMidYMid slice">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="10" />
+      </filter>
+      <style>
+        svg image.ft0 {
+            filter: url(index.html#ff0);
+        }
+        svg image.ft1 {
+            filter: url(index.html#ff1);
+        }
+        svg image.ft2 {
+        }
+    </style>
+    <image width="960" height="540" xlink:href="img/{{level}}.jpg" class="ft{{state}}" ng-click="getAction()"/>
+    <text x="50%" y="50%" text-anchor="middle">{{txt}}
+        <animate attributeType="CSS" attributeName="opacity" values=".8;0" begin="1.5s" dur="1.5s" repeatCount="1" fill="freeze"/>
     </text>
   </svg>
 </script>

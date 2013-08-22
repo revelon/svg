@@ -39,10 +39,6 @@ svg text {
     stroke-width: 2px;
 }
 
-div.intro span a {
-    font-size: 100%;
-}
-
 button, div.intro span a {
     display: inline-block;
     border: none;
@@ -87,7 +83,7 @@ div.contleft {
 span button {
     width: 8.5%;
     height: 10%;
-    font-size: 1.5em;
+    font-size: 3em;
 }
 
 span button.uncovered, div.intro span a.uncovered {
@@ -102,6 +98,10 @@ div.intro span a.resetitem {
     font-size: 130%;    
 }
 
+div.intro span a {
+    font-size: 100%;
+}
+
 h1 {
     font-size: 2.8em;
     text-align: center;
@@ -110,4 +110,60 @@ h1 {
 
 p span {
     color: red;
+}
+
+div span a.uncovered0 {
+    background-image: linear-gradient(to right, orange 0%, orange 100%);
+}
+
+div span a.uncovered1 {
+    background-image: linear-gradient(to right, orange 0%, orange 50%, #222 51%, #222 100%);
+}
+
+div span a.uncovered2 {
+    background-image: linear-gradient(to right, #222 0%, #222 100%);
+
+}
+
+@media all and (max-width: 480px) {
+     span button {
+        width: 8.5%;
+        height: 10%;
+        font-size: 1.4em;
+    }
+
+    div.intro span a {
+        font-size: 106%;
+    }
+
+    div.intro span a.resetitem {
+        color: #229;
+        font-size: 90%;
+    }
+}
+
+@media all and (max-width: 320px) {
+     span button {
+        width: 12%;
+        height: 9%;
+        font-size: 1.4em;
+    }
+
+    div.intro span a {
+        font-size: 80%;
+    }
+
+    div.intro span a.resetitem {
+        color: #229;
+        font-size: 90%;
+    }
+
+    div.contleft {
+        width: 100%;
+        height: 120px !important;
+        overflow: scroll;
+        float: none;
+        height: 200px;
+    }
+   
 }
