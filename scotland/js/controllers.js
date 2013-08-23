@@ -13,7 +13,6 @@ function IntroCtrl($scope, $store) {
 };
 
 function HelpCtrl($scope) {
-    $scope.title = 'Help';
 };
 
 function LevelDoneCtrl($scope, $routeParams, $store, $location) {
@@ -28,7 +27,7 @@ function LevelDoneCtrl($scope, $routeParams, $store, $location) {
     } else {
         playAudio("fail");
         $scope.status = 15;
-        $scope.txt = "" + (game.showLimit - levels[$routeParams.levelId].state) + " to show...";
+        $scope.txt = "One more to show";
     }
 
     $scope.getAction = function () {

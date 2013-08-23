@@ -28,11 +28,13 @@
 
 <script type="text/ng-template" id="level.html">
   <div class="contleft">
-    <p>Photo: {{level}} (<a href="#/levelDone/{{level}}">Show</a>)</p>
-    <p>Guess the number!  {{chosenOne}}</p>
+    <p>Photo: {{level}} &nbsp;<a href="#/levelDone/{{level}}">Show&nbsp;it</a></p>
+    <p>Guess the number!</p>
     <p>Attempts left: <span>{{tries}}</span></p>
-    <p><a ng-click="restart()" href="">Restart</a></p>
-    <p><a href="#/intro">Main menu</a></p>
+    <p class="menus"> 
+        <a ng-click="restart()" href="">Restart</a> &nbsp; 
+        <a href="#/intro">Main&nbsp;menu</a>
+    </p>
     <p ng-if="reason">{{reason}}</p>
   </div>
   
@@ -62,38 +64,44 @@
         svg image.ft2 {
         }
     </style>
-    <image width="960" height="540" xlink:href="img/{{level}}.jpg" class="ft{{state}}" ng-click="getAction()"/>
-    <text x="50%" y="50%" text-anchor="middle">{{txt}}
-        <animate attributeType="CSS" attributeName="opacity" values=".8;0" begin="1.5s" dur="1.5s" repeatCount="1" fill="freeze"/>
-    </text>
+    <g ng-click="getAction()">
+      <image width="100%" height="100%" xlink:href="img/{{level}}.jpg" class="ft{{state}}"/>
+      <text x="50%" y="50%" text-anchor="middle">{{txt}}
+          <animate attributeType="CSS" attributeName="opacity" values=".8;0" begin="1.5s" dur="1.5s" repeatCount="1" fill="freeze"/>
+      </text>
+    </g>
   </svg>
 </script>
 
 <script type="text/ng-template" id="help.html">
   <div>
-    <h1>Help screen "{{title}}"</h1>
+    <h1>Game Help</h1>
     <ul class="menu">
+      <li>Try to guess number in range between 1 and 49</li>
+      <li>You've five attempts</li>
+      <li>Your reward would be beautiful photo of Scotland landscape</li>
+      <li>You must succeed twice to fully sharpen blurred Image</li>
+      <li>You can reset your achievements to repeat the fun</li>
       <li>
-        <a href="#/intro" class="thumb">Back to Intro</a>
+        <a href="#/intro" class="thumb">Back to the Menu</a>
       </li>
     </ul>
-    <p>Do this and that...</p>
   </div>
 </script>
 
 <audio preload id="pop">
-  <source src="sounds/83237__mlestn1__pop.ogg" type="audio/ogg">
   <source src="sounds/83237__mlestn1__pop.mp3" type="audio/mpeg">
+  <source src="sounds/83237__mlestn1__pop.ogg" type="audio/ogg">
 </audio>
 
 <audio preload id="win">
-  <source src="sounds/60445__jobro__tada3.ogg" type="audio/ogg">
   <source src="sounds/60445__jobro__tada3.mp3" type="audio/mpeg">
+  <source src="sounds/60445__jobro__tada3.ogg" type="audio/ogg">
 </audio>
 
 <audio preload id="fail">
-  <source src="sounds/135831__davidbain__end-game-fail.ogg" type="audio/ogg">
   <source src="sounds/135831__davidbain__end-game-fail.mp3" type="audio/mpeg">
+  <source src="sounds/135831__davidbain__end-game-fail.ogg" type="audio/ogg">
 </audio>
 
 
