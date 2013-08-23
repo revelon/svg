@@ -54,7 +54,7 @@ button, div.intro span a {
     border: none;
     color: rgba(255,255,255,1);
     text-decoration: none;
-    background-image: radial-gradient(circle farthest-corner at 50px 50px, darkorange, rgba(219,87,5,1));
+    background: rgba(219,87,5,1) radial-gradient(circle farthest-corner at 50px 50px, darkorange, rgba(219,87,5,1));
     font-weight: 700;
     font-family: florante;
     padding: 0px;
@@ -124,15 +124,15 @@ p span {
 }
 
 div span a.uncovered0 {
-    background-image: radial-gradient(circle farthest-corner at 50px 50px, darkorange, rgba(219,87,5,1));
+    background: rgba(219,87,5,1) radial-gradient(circle farthest-corner at 50px 50px, darkorange, rgba(219,87,5,1));
 }
 
 div span a.uncovered1 {
-    background-image: linear-gradient(to top right, rgba(219,87,5,1) 0%, rgba(219,87,5,1) 44%, darkgreen 56%, darkgreen 100%);
+    background-image: gray linear-gradient(to top right, rgba(219,87,5,1) 0%, rgba(219,87,5,1) 44%, darkgreen 56%, darkgreen 100%);
 }
 
 div span a.uncovered2 {
-    background-image: radial-gradient(circle farthest-corner at 50px 50px, lightgreen, darkgreen);
+    background-image: darkgreen radial-gradient(circle farthest-corner at 50px 50px, lightgreen, darkgreen);
 
 }
 
