@@ -1,7 +1,7 @@
 {
-  "version": "1.00",
+  "version": "1.01",
   "name": "Game of Scotland",
-  "description": "Uncover by guessing numbers beautiful photos of Scotland landscape (from our 2013 vacation)",
+  "description": "Discover (by guessing numbers) beautiful photos of Scotland landscape (from 2013 vacation)",
   "launch_path": "/index.html",
   "developer": {
     "name": "Marek Raida <marek.raida@gmail.com>",
@@ -16,5 +16,6 @@
     "32": "/icons/32.png",
     "30": "/icons/30.png"
   },
-  "fullscreen": "true"
+  "fullscreen": "true",
+  "orientation": ["landscape", "portrait-secondary"]
 }

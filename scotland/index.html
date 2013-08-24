@@ -28,8 +28,8 @@
 
 <script type="text/ng-template" id="level.html">
   <div class="contleft">
-    <p>Photo: {{level}} &nbsp;<a href="#/levelDone/{{level}}">Show&nbsp;it</a></p>
-    <p>Guess the number!</p>
+    <p><a href="#/levelDone/{{level}}/justShow" class="lev uncovered{{level}}">Photo {{level}}</a></p>
+    <p>Guess the number! {{chosenOne}}</p>
     <p>Attempts left: <span>{{tries}}</span></p>
     <p class="menus"> 
         <a ng-click="restart()" href="">Restart</a> &nbsp; 

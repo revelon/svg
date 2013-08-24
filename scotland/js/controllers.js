@@ -20,14 +20,26 @@ function LevelDoneCtrl($scope, $routeParams, $store, $location) {
     $scope.level = $routeParams.levelId;
     var levels = $store.get('levelStatus');
     $scope.state = levels[$routeParams.levelId].state;
+    playTada($routeParams.how);
+
     if (levels[$routeParams.levelId].state == game.showLimit) {
-        playAudio("win");
-        $scope.status = 0;
-        $scope.txt = "Well done!!";
+        $scope.txt = ($routeParams.how == "greatSuccess") ? "Excellent guess!" : "Well done!!";
+    } else if (levels[$routeParams.levelId].state === 0) {
+        $scope.txt = "Two more to show";
     } else {
-        playAudio("fail");
-        $scope.status = 15;
         $scope.txt = "One more to show";
+    }
+    
+    function playTada(how) {
+        if (how == "justShow") {
+            return;
+        } else if (how == "success") {
+            playAudio("win");
+        } else if (how == "greatSuccess") {
+            playAudio("win");
+        } else if (how == "fail") {
+            playAudio("fail");
+        }
     }
 
     $scope.getAction = function () {
@@ -52,15 +64,20 @@ function LevelCtrl($scope, $routeParams, $location, $store) {
         if ($scope.data[num].uncovered) {
             return;
         }
+        var levels = $store.get('levelStatus');
+        var veryFirst = ((levels[$routeParams.levelId].state == 0) && ($scope.tries == 5)) ? true : false;
+
         $scope.tries--;
         if ($scope.chosenOne == num) {
-            var levels = $store.get('levelStatus');
             if (levels[$routeParams.levelId].state < game.showLimit) {
                 levels[$routeParams.levelId].state++;
+                if (veryFirst) {
+                    levels[$routeParams.levelId].state++;
+                }
                 $scope.reason = "";
                 $store.set('levelStatus', levels);
             }
-            $location.path("/levelDone/" + $routeParams.levelId);
+            $location.path("/levelDone/" + $routeParams.levelId + (veryFirst ? "/greatSuccess" : "/success"));
         } else if ($scope.chosenOne > num) {
             for (var i = 1; i <= num; i++) {
                 $scope.data[i].uncovered = true;
@@ -75,7 +92,7 @@ function LevelCtrl($scope, $routeParams, $location, $store) {
             playAudio("pop");
         }
         if ($scope.tries == 0) {
-            $location.path("/levelDone/" + $routeParams.levelId);
+            $location.path("/levelDone/" + $routeParams.levelId + "/fail");
             $scope.reason = "";
         }
     }

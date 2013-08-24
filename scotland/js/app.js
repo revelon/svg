@@ -11,7 +11,7 @@ angular.module('scotland', ['localStorage']).
         when('/intro', {templateUrl: 'intro.html',  controller: IntroCtrl}).
         when('/help', {templateUrl: 'help.html',  controller: HelpCtrl}).
         when('/level/:levelId', {templateUrl: 'level.html', controller: LevelCtrl}).
-        when('/levelDone/:levelId', {templateUrl: 'leveldone.html',  controller: LevelDoneCtrl}).
+        when('/levelDone/:levelId/:how', {templateUrl: 'leveldone.html',  controller: LevelDoneCtrl}).
         otherwise({redirectTo: '/intro'});
 }]);
 

@@ -38,7 +38,7 @@ svg text {
     fill: white;
     fill-opacity: 0.8;
     font-weight: bolder;
-    font-size: 64pt;
+    font-size: 56pt;
     stroke: gray;
     stroke-width: 2px;
 }
@@ -49,12 +49,13 @@ ul.menu li {
     font-size: 1.4em;
 }
 
-button, div.intro span a {
+button, div.intro span a, div.contleft p a.lev {
     display: inline-block;
     border: none;
     color: rgba(255,255,255,1);
     text-decoration: none;
-    background: rgba(219,87,5,1) radial-gradient(circle farthest-corner at 50px 50px, darkorange, rgba(219,87,5,1));
+    background-color: rgba(219,87,5,1);
+    background-image: radial-gradient(circle farthest-corner at 50px 50px, darkorange, rgba(219,87,5,1));
     font-weight: 700;
     font-family: florante;
     padding: 0px;
@@ -90,6 +91,11 @@ div.contleft {
     line-height: 99%;
 }
 
+div.contleft p a.lev {
+    width: 90%;
+    margin-top: -10px;
+}
+
 span button {
     width: 8.5%;
     height: 10%;
@@ -123,17 +129,19 @@ p span {
     color: red;
 }
 
-div span a.uncovered0 {
-    background: rgba(219,87,5,1) radial-gradient(circle farthest-corner at 50px 50px, darkorange, rgba(219,87,5,1));
+div span a.uncovered0, div.contleft p a.uncovered0 {
+    background-color: rgba(219,87,5,1);
+    background-image: radial-gradient(circle farthest-corner at 50px 50px, darkorange, rgba(219,87,5,1));
 }
 
-div span a.uncovered1 {
-    background-image: gray linear-gradient(to top right, rgba(219,87,5,1) 0%, rgba(219,87,5,1) 44%, darkgreen 56%, darkgreen 100%);
+div span a.uncovered1, div.contleft p a.uncovered1 {
+    background-color: gray;
+    background-image: linear-gradient(to top right, rgba(219,87,5,1) 0%, rgba(219,87,5,1) 44%, darkgreen 56%, darkgreen 100%);
 }
 
-div span a.uncovered2 {
-    background-image: darkgreen radial-gradient(circle farthest-corner at 50px 50px, lightgreen, darkgreen);
-
+div span a.uncovered2, div.contleft p a.uncovered2 {
+    background-color: darkgreen;
+    background-image: radial-gradient(circle farthest-corner at 50px 50px, lightgreen, darkgreen);
 }
 
 div.intro span a {
@@ -189,7 +197,7 @@ div.contleft p.menus {
     div.intro span a {
         width: 23%;
         height: 10%;
-        font-size: 1.2em;
+        font-size: 1.1em;
         padding-top: 4px;
     }
 
@@ -202,7 +210,7 @@ div.contleft p.menus {
         min-height: 36%;
         height: 36% !important;
         overflow: hidden;
-        line-height: 96%;
+        line-height: 90%;
         font-size: 1.1em;
     }
 
