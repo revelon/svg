@@ -1,5 +1,5 @@
 {
-  "version": "1.01",
+  "version": "1.02",
   "name": "Game of Scotland",
   "description": "Discover (by guessing numbers) beautiful photos of Scotland landscape (from 2013 vacation)",
   "launch_path": "/index.html",
@@ -17,5 +17,5 @@
     "30": "/icons/30.png"
   },
   "fullscreen": "true",
-  "orientation": ["landscape", "portrait-secondary"]
+  "orientation": ["landscape", "portrait"]
 }

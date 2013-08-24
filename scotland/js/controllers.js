@@ -110,4 +110,5 @@ function LevelCtrl($scope, $routeParams, $location, $store) {
 
     $scope.restart(1);
     $scope.level = $routeParams.levelId;
+    $scope.lvlState = levels[$routeParams.levelId].state;
 }
