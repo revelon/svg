@@ -105,7 +105,7 @@ function LevelCtrl($scope, $routeParams, $location, $store) {
 
     var levels = $store.get('levelStatus');
     if (levels[$routeParams.levelId].state == game.showLimit) {
-        $location.path("/levelDone/" + $routeParams.levelId);
+        $location.path("/levelDone/" + $routeParams.levelId + "/justShow");
     }
 
     $scope.restart(1);
