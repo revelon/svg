@@ -103,6 +103,7 @@ span button {
 }
 
 span button.uncovered, div.intro span a.uncovered {
+    background-color: gray;
     background-image: radial-gradient(circle farthest-corner at 50px 50px, gray, #333);
     -webkit-box-shadow: 0px 9px 0px rgba(170,170,170,1), 0px 9px 25px rgba(0,0,0,.7);
     box-shadow: 0px 9px 0px rgba(170,170,170,1), 0px 9px 25px rgba(0,0,0,.7);
@@ -135,7 +136,7 @@ div span a.uncovered0, div.contleft p a.uncovered0 {
 }
 
 div span a.uncovered1, div.contleft p a.uncovered1 {
-    background-color: gray;
+    background-color: gold;
     background-image: linear-gradient(to top right, rgba(219,87,5,1) 0%, rgba(219,87,5,1) 44%, darkgreen 56%, darkgreen 100%);
 }
 
