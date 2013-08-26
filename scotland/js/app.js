@@ -32,6 +32,15 @@ function Tile(num) {
     this.uncovered = false;
 };
 
+var sndEnabled = true;
+try {
+    new Audio();
+} catch (e) {
+    sndEnabled = false;
+}
+  
 function playAudio(what) {
-  document.getElementById(what).cloneNode(true).play();
+    if (sndEnabled) {
+        document.getElementById(what).cloneNode(true).play();
+    }
 }

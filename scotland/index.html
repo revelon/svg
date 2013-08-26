@@ -32,7 +32,6 @@
     <p>Guess the number!</p>
     <p>Attempts left: <span>{{tries}}</span></p>
     <p class="menus"> 
-        <a ng-click="restart()" href="">Restart</a> &nbsp; 
         <a href="#/intro">Main&nbsp;menu</a>
     </p>
     <p ng-if="reason">{{reason}}</p>
@@ -74,7 +73,7 @@
 </script>
 
 <script type="text/ng-template" id="help.html">
-  <div>
+  <div ng-click="toIntro()">
     <h1>Game Help</h1>
     <ul class="menu">
       <li>Try to guess number in range between 1 and 49</li>
@@ -82,9 +81,6 @@
       <li>Your reward would be beautiful photo of Scotland landscape</li>
       <li>You must succeed twice to fully sharpen blurred Image</li>
       <li>You can reset your achievements to repeat the fun</li>
-      <li>
-        <a href="#/intro" class="thumb">Back to the Menu</a>
-      </li>
     </ul>
   </div>
 </script>

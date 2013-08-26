@@ -47,6 +47,7 @@ ul.menu li {
     margin-top: 12px;
     margin-left: -16px;
     font-size: 1.4em;
+    cursor: pointer;
 }
 
 button, div.intro span a, div.contleft p a.lev {

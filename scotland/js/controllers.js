@@ -12,7 +12,10 @@ function IntroCtrl($scope, $store) {
     $scope.reset(false);
 };
 
-function HelpCtrl($scope) {
+function HelpCtrl($scope, $location) {
+    $scope.toIntro = function () {
+        $location.path("/intro/");
+    }
 };
 
 function LevelDoneCtrl($scope, $routeParams, $store, $location) {
