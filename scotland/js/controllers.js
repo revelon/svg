@@ -77,7 +77,7 @@ function LevelCtrl($scope, $routeParams, $location, $store) {
                 $scope.reason = "";
                 $store.set('levelStatus', levels);
             }
-            $location.path("/levelDone/" + $routeParams.levelId + (veryFirst ? "/greatSuccess" : "/success"));
+            return $location.path("/levelDone/" + $routeParams.levelId + (veryFirst ? "/greatSuccess" : "/success"));
         } else if ($scope.chosenOne > num) {
             for (var i = 1; i <= num; i++) {
                 $scope.data[i].uncovered = true;
@@ -92,8 +92,8 @@ function LevelCtrl($scope, $routeParams, $location, $store) {
             playAudio("pop");
         }
         if ($scope.tries == 0) {
-            $location.path("/levelDone/" + $routeParams.levelId + "/fail");
             $scope.reason = "";
+            $location.path("/levelDone/" + $routeParams.levelId + "/fail");
         }
     }
 

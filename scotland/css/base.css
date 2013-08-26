@@ -99,7 +99,7 @@ div.contleft p a.lev {
 span button {
     width: 8.5%;
     height: 10%;
-    font-size: 2em;
+    font-size: 2.5em;
 }
 
 span button.uncovered, div.intro span a.uncovered {
@@ -112,11 +112,7 @@ span button.uncovered, div.intro span a.uncovered {
 
 div.intro span a.resetitem {
     color: #229;
-    font-size: 130%;    
-}
-
-div.intro span a {
-    font-size: 100%;
+    font-size: 2.5em;
 }
 
 h1 {
@@ -147,7 +143,7 @@ div span a.uncovered2, div.contleft p a.uncovered2 {
 
 div.intro span a {
     padding-top: 7px;
-    font-size: 1.5em;
+    font-size: 2.7em;
     height: 15%;
 }
 

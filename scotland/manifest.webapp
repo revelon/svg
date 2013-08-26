@@ -1,5 +1,5 @@
 {
-  "version": "1.02",
+  "version": "1.03",
   "name": "Game of Scotland",
   "description": "Discover (by guessing numbers) beautiful photos of Scotland landscape (from 2013 vacation)",
   "launch_path": "/index.html",
