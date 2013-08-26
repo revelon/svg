@@ -55,7 +55,8 @@ button, div.intro span a, div.contleft p a.lev {
     color: rgba(255,255,255,1);
     text-decoration: none;
     background-color: rgba(219,87,5,1);
-    background-image: radial-gradient(circle farthest-corner at 50px 50px, darkorange, rgba(219,87,5,1));
+    background-image: -webkit-radial-gradient(30% 30%, orange, rgba(219,87,5,1));
+    background-image: radial-gradient(circle farthest-corner at 30% 30%, orange, rgba(219,87,5,1));
     font-weight: 700;
     font-family: florante;
     padding: 0px;
@@ -97,22 +98,22 @@ div.contleft p a.lev {
 }
 
 span button {
-    width: 8.5%;
+    width: 9%;
     height: 10%;
     font-size: 2.5em;
 }
 
 span button.uncovered, div.intro span a.uncovered {
     background-color: gray;
-    background-image: radial-gradient(circle farthest-corner at 50px 50px, gray, #333);
+    background-image: -webkit-radial-gradient(30% 30%, gray, #333);
+    background-image: radial-gradient(circle farthest-corner at 30% 30%, gray, #333);
     -webkit-box-shadow: 0px 9px 0px rgba(170,170,170,1), 0px 9px 25px rgba(0,0,0,.7);
     box-shadow: 0px 9px 0px rgba(170,170,170,1), 0px 9px 25px rgba(0,0,0,.7);
-
 }
 
 div.intro span a.resetitem {
     color: #229;
-    font-size: 2.5em;
+    font-size: 2.2em;
 }
 
 h1 {
@@ -128,22 +129,29 @@ p span {
 
 div span a.uncovered0, div.contleft p a.uncovered0 {
     background-color: rgba(219,87,5,1);
-    background-image: radial-gradient(circle farthest-corner at 50px 50px, darkorange, rgba(219,87,5,1));
+    background-image: -webkit-radial-gradient(30% 30%, orange, rgba(219,87,5,1));
+    background-image: radial-gradient(circle farthest-corner at 30% 30%, orange, rgba(219,87,5,1));
 }
 
 div span a.uncovered1, div.contleft p a.uncovered1 {
     background-color: gold;
-    background-image: linear-gradient(to top right, rgba(219,87,5,1) 0%, rgba(219,87,5,1) 44%, darkgreen 56%, darkgreen 100%);
+    background-image: -webkit-gradient(linear, left bottom, right top, from(orange), to(green));
+    background-image: linear-gradient(to top right, rgba(219,87,5,1) 0%, rgba(219,87,5,1) 44%, green 56%, green 100%);
+    -webkit-box-shadow: 0px 3px 0px gray, 0px 3px 6px rgba(0,0,0,.9);
+    box-shadow: 0px 3px 0px gray, 0px 3px 6px rgba(0,0,0,.9);
 }
 
 div span a.uncovered2, div.contleft p a.uncovered2 {
     background-color: darkgreen;
-    background-image: radial-gradient(circle farthest-corner at 50px 50px, lightgreen, darkgreen);
+    background-image: -webkit-radial-gradient(30% 30%, lightgreen, darkgreen);
+    background-image: radial-gradient(circle farthest-corner at 30% 30%, lightgreen, darkgreen);
+    -webkit-box-shadow: 0px 3px 0px darkgreen, 0px 3px 6px rgba(0,0,0,.9);
+    box-shadow: 0px 3px 0px darkgreen, 0px 3px 6px rgba(0,0,0,.9);
 }
 
 div.intro span a {
     padding-top: 7px;
-    font-size: 2.7em;
+    font-size: 2em;
     height: 15%;
 }
 
@@ -151,16 +159,17 @@ div.contleft p.menus {
     line-height: 136%;
 }
 
-@media all and (max-width: 480px) and (min-width: 480px){
+@media all and (max-width: 640px){
+
      span button {
-        width: 8.5%;
-        height: 11%;
-        font-size: 1.4em;
+        width: 8%;
+        height: 10%;
+        font-size: 1.1em;
     }
 
     div.intro span a {
         padding-top: 7px;
-        font-size: 106%;
+        font-size: 0.9em;
         height: 15%;
     }
     
@@ -200,6 +209,7 @@ div.contleft p.menus {
 
     div.intro span a.resetitem {
         color: #229;
+        font-size: 1.1em;
     }
 
     div.contleft {

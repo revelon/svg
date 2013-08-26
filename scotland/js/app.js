@@ -33,5 +33,5 @@ function Tile(num) {
 };
 
 function playAudio(what) {
-  document.getElementById(what).play();
+  document.getElementById(what).cloneNode(true).play();
 }
