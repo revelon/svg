@@ -15,7 +15,7 @@
   <div class="intro">
     <h1>Game of Scotland</h1>
     <span ng-repeat="lvl in levelStatus">
-      <a href="#/level/{{$index}}" ng-if="$index > 0" class="uncovered{{lvl.state}}">Photo {{$index}}</a>
+      <a href="#/level/{{$index}}" ng-if="$index > 0" class="uncovered{{lvl.state}}" ng-click="myAudio('pop')">Photo {{$index}}</a>
     </span>
     <span>
       <a href="#/help" class="resetitem">Help</a>
@@ -45,31 +45,30 @@
 </script>
 
 <script type="text/ng-template" id="leveldone.html">
+  <div ng-click="getAction()">
   <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
     viewBox="0 0 960 540" width="100%" height="100%" style="position:absolute">
       <filter id="ff0" preserveAspectRatio="xMidYMid slice">
-        <feGaussianBlur in="SourceGraphic" stdDeviation="30" />
+        <feGaussianBlur in="SourceGraphic" stdDeviation="22"/>
       </filter>
       <filter id="ff1" preserveAspectRatio="xMidYMid slice">
-        <feGaussianBlur in="SourceGraphic" stdDeviation="10" />
+        <feGaussianBlur in="SourceGraphic" stdDeviation="10"/>
       </filter>
       <style>
         svg image.ft0 {
             filter: url(#ff0);
         }
         svg image.ft1 {
-            filter: url(#ff1);
         }
         svg image.ft2 {
         }
     </style>
-    <g ng-click="getAction()">
       <image width="100%" height="100%" xlink:href="img/{{level}}.jpg" class="ft{{state}}"/>
       <text x="50%" y="50%" text-anchor="middle">{{txt}}
           <animate attributeType="CSS" attributeName="opacity" values=".8;0" begin="1.5s" dur="1.5s" repeatCount="1" fill="freeze"/>
       </text>
-    </g>
   </svg>
+  </div>
 </script>
 
 <script type="text/ng-template" id="help.html">
@@ -79,7 +78,6 @@
       <li>Try to guess number in range between 1 and 49</li>
       <li>You've five attempts</li>
       <li>Your reward would be beautiful photo of Scotland landscape</li>
-      <li>You must succeed twice to fully sharpen blurred Image</li>
       <li>You can reset your achievements to repeat the fun</li>
     </ul>
   </div>

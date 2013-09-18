@@ -9,6 +9,9 @@ function IntroCtrl($scope, $store) {
         }
         $store.bind($scope, 'levelStatus', game.getEmpty(game.picsCount));
     };
+    $scope.myAudio = function() { 
+        playAudio("pop");
+    }
     $scope.reset(false);
 };
 
@@ -25,12 +28,10 @@ function LevelDoneCtrl($scope, $routeParams, $store, $location) {
     $scope.state = levels[$routeParams.levelId].state;
     playTada($routeParams.how);
 
-    if (levels[$routeParams.levelId].state == game.showLimit) {
+    if (levels[$routeParams.levelId].state >= game.showLimit) {
         $scope.txt = ($routeParams.how == "greatSuccess") ? "Excellent guess!" : "Well done!!";
-    } else if (levels[$routeParams.levelId].state === 0) {
-        $scope.txt = "Two more to show";
     } else {
-        $scope.txt = "One more to show";
+        $scope.txt = "Sorry, try again";
     }
     
     function playTada(how) {
@@ -47,7 +48,7 @@ function LevelDoneCtrl($scope, $routeParams, $store, $location) {
 
     $scope.getAction = function () {
         var levels = $store.get('levelStatus');
-        if (levels[$routeParams.levelId].state == game.showLimit) {
+        if (levels[$routeParams.levelId].state >= game.showLimit) {
             $location.path("/intro/");
         } else {
             $location.path("/level/" + $routeParams.levelId);
@@ -107,7 +108,7 @@ function LevelCtrl($scope, $routeParams, $location, $store) {
     }
 
     var levels = $store.get('levelStatus');
-    if (levels[$routeParams.levelId].state == game.showLimit) {
+    if (levels[$routeParams.levelId].state >= game.showLimit) {
         $location.path("/levelDone/" + $routeParams.levelId + "/justShow");
     }
 

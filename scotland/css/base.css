@@ -15,6 +15,11 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     font-family: florante;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 html, body, body div {
@@ -133,7 +138,7 @@ div span a.uncovered0, div.contleft p a.uncovered0 {
     background-image: -webkit-radial-gradient(30% 30%, orange, rgba(219,87,5,1));
     background-image: radial-gradient(circle farthest-corner at 30% 30%, orange, rgba(219,87,5,1));
 }
-
+/*
 div span a.uncovered1, div.contleft p a.uncovered1 {
     background-color: gold;
     background-image: -webkit-gradient(linear, left bottom, right top, from(orange), to(green));
@@ -141,8 +146,9 @@ div span a.uncovered1, div.contleft p a.uncovered1 {
     -webkit-box-shadow: 0px 3px 0px gray, 0px 3px 6px rgba(0,0,0,.9);
     box-shadow: 0px 3px 0px gray, 0px 3px 6px rgba(0,0,0,.9);
 }
+*/
 
-div span a.uncovered2, div.contleft p a.uncovered2 {
+div span a.uncovered2, div.contleft p a.uncovered2, div span a.uncovered1, div.contleft p a.uncovered1 {
     background-color: darkgreen;
     background-image: -webkit-radial-gradient(30% 30%, lightgreen, darkgreen);
     background-image: radial-gradient(circle farthest-corner at 30% 30%, lightgreen, darkgreen);
