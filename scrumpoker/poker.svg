@@ -1,23 +1,71 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 400 400" width="100%" height="100%" xmlns:html="http://www.w3.org/1999/xhtml">
   <title>Simple Scrum Poker App, by Marek Raida</title>
 
+<style>
+  text, rect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+}
+
+</style>
+
+<defs>
   <linearGradient id="toCard" gradientUnits="objectBoundingBox" x1="0" y1="0" x2="0" y2="1">
     <stop offset="0" stop-color="lightblue"/>
     <stop offset="1" stop-color="blue"/>
   </linearGradient>
 
-  <rect x="-1000" y="-1000" width="3000" height="3000" fill="#333"/>
-  <rect x="0" y="0" width="400" height="400" fill="none" stroke="white"/>
-
-<g transform="translate(100 100)" id="no5">
-  <g style="width:100">
+<g id="template"><g>
+  <g style="width:100px">
     <rect x="-30" y="-40" width="60" height="80" fill="url(#toCard)" rx="10" stroke="white" stroke-width="4"/>
-    <text font-size="40px" font-family="sans-serif" stroke-width="0" stroke="none" fill="white" y="14" x="0" text-anchor="middle" font-weight="bold">5</text>
+    <text font-size="35px" font-family="sans-serif" stroke-width="0" stroke="none" fill="white" y="14" x="0" text-anchor="middle" font-weight="bold">tpl</text>
     <animateTransform id="disappear" attributeName="transform" type="scale" from="1 1" to="0 1" dur="1s" begin="no5.click" repeatCount="1" fill="freeze"/>
     <animateTransform id="appear" attributeName="transform" type="scale" from="1 1" to="0 1" dur="1s" begin="disappear.end+2s" repeatCount="1" fill="freeze"/>
   </g>
-</g>
+</g></g>
+</defs>
 
-<use xlink:href="#no5" transform="translate(250 250)"/>
+  <rect x="-1000" y="-1000" width="3000" height="3000" fill="#333"/>
+  <rect x="0" y="0" width="400" height="400" fill="none" stroke="white"/>
+
+<script>
+var template = document.getElementById("template").firstChild;
+
+var cards = [
+  {"id":"0", "x":50, "y": 50},
+  {"id":"0/5", "x":150, "y": 50},
+  {"id":"1", "x":250, "y": 50},
+  {"id":"2", "x":350, "y": 50},
+  {"id":"3", "x":50, "y": 200},
+  {"id":"5", "x":150, "y": 200},
+  {"id":"8", "x":250, "y": 200},
+  {"id":"13", "x":350, "y": 200},
+  {"id":"20", "x":50, "y": 350},
+  {"id":"40", "x":125, "y": 350},
+  {"id":"100", "x":200, "y": 350},
+  {"id":"?", "x":275, "y": 350},
+  {"id":"cf", "x":350, "y": 350}
+];
+
+
+for (var i = 0; i &lt; cards.length; i++) {
+    var el = document.documentElement.appendChild(template.cloneNode(true));
+    el.setAttribute("transform", "translate("+ cards[i].x +" "+ cards[i].y +")");
+    el.getElementsByTagName("text")[0].firstChild.data = cards[i].id;
+    el.onclick = (function() {
+        var data = cards[i]
+        return function(evt) {
+          console.log(evt.target);
+          console.log(data.id);
+        };
+    })();
+    // http://desandro.github.io/3dtransforms/docs/card-flip.html
+};
+
+</script>
 
 </svg>
