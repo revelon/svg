@@ -19,7 +19,7 @@
     <stop offset="1" stop-color="blue"/>
   </linearGradient>
 
-<g id="template"><g>
+<g id="template"><g outermost="true">
   <g style="width:100px">
     <rect x="-30" y="-40" width="60" height="80" fill="url(#toCard)" rx="10" stroke="white" stroke-width="4"/>
     <text font-size="35px" font-family="sans-serif" stroke-width="0" stroke="none" fill="white" y="14" x="0" text-anchor="middle" font-weight="bold">tpl</text>
@@ -56,13 +56,14 @@ for (var i = 0; i &lt; cards.length; i++) {
     var el = document.documentElement.appendChild(template.cloneNode(true));
     el.setAttribute("transform", "translate("+ cards[i].x +" "+ cards[i].y +")");
     el.getElementsByTagName("text")[0].firstChild.data = cards[i].id;
-    el.onclick = (function() {
+    el.addEventListener("click", (function() {
         var data = cards[i]
         return function(evt) {
+          if (evt.target.outermost)
           console.log(evt.target);
           console.log(data.id);
         };
-    })();
+    })(), false);
     // http://desandro.github.io/3dtransforms/docs/card-flip.html
 };
 
