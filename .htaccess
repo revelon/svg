@@ -16,5 +16,6 @@ AddEncoding x-gzip gz tgz svgz xhtmlz
 AddType "text/html;charset=UTF-8" .htmlz
 AddEncoding gzip .htmlz
 
-# Zak໡n럶�obsahu adres⹹
+AddType application/vnd.android.package-archive .apk
+
 Options -Indexes
